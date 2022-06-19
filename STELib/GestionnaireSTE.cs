@@ -18,10 +18,20 @@ namespace STELib
         public Don[] dons;
         public Prix[] prix;
 
-        //TODO Constructeur par défaut
+        // Constructeur par défaut
+        public GestionnaireSTE()
+        {
+            this.donateurs = new Donateur[8];
+            this.commanditaires = new Commanditaire[8];
+            this.dons = new Don[8];
+            this.prix = new Prix[8];
+
+            //TODO initialisation des prix disponibles;
+
+        }
 
         public void AjouterDonateur(string prenom, string nom, string adresse, string telephone, char typeCarte, string numeroCarte, string dateExpiration) { 
-            
+            //int indice = Donateur.getNb
         }
 
         public void AjouterCommanditaire(string prenom, string nom, string nomEntreprise){
