@@ -31,6 +31,6 @@ namespace STELib
         public new string ToString() {
             return "Identifiant du don : " + idDon + " date du don : " + dateDon + " montant : " + montantDon;
         }
-
+        // TODO GetNbDon
     }
 }

@@ -32,6 +32,7 @@ namespace STELib
             
                 return  "identifiant du commanditaire: "+ nomEntreprise + "  ID(" + idCommanditaire + ")   personne contact->" + base.ToString(); 
         }
+        // TODO GetNbCommanditaire
 
     }
 }
