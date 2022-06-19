@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using STELib;
 
 namespace Telethon
 {
@@ -14,6 +15,8 @@ namespace Telethon
     {
         string nomUtilisateur = "telethon2021";
         string motDePasse = "Don@2021";
+
+        GestionnaireSTE monGestionnaire = new GestionnaireSTE();
         public MonLogin()
         {
             InitializeComponent();
