@@ -2,9 +2,6 @@
 {
     public abstract class Personne
     {
-        //TODO Constructeur par défaut
-        //TODO Constructeur à arguments
-        //TODO  ? Constructeur copie?
         //TODO Commentaires
         //TODO Accesseurs
 
@@ -15,7 +12,7 @@
         {
             return  prenom +" " +nom;
         }
-        
+        // Constructeur à arguments
         public Personne(string prenom, string nom) { 
             this.prenom = prenom;
             this.nom = nom;
