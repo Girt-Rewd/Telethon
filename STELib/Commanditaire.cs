@@ -8,20 +8,19 @@ namespace STELib
 {
     public class Commanditaire : Personne
     {
-        //TODO Constructeur par défaut
-        //TODO Constructeur à arguments
-        //TODO  ? Constructeur copie?
-        //TODO Commentaires
+        /*La classe commanditaire est principalement une classe de données. Elle n’a pas de fonction propre à part Son ToString
+         Les commanditaires sont des entreprises qui donne des produits de leur fabrication. Le téléthon à sont tour offre ces articles
+        en guise de récompense à ses donateurs en remerciement pour leur dons.
+         */
+
         //TODO Accesseurs
-        // New comment
 
         private static int nbCommanditaires = 001;
-        private string idCommanditaire;
-      //  private string nomCommanditaire;
-      //  private string prenomCommanditaire;
-        private string nomEntreprise;
-
-        public Commanditaire(string prenom, string nom, string nomEntreprise):base(prenom, nom)
+        private string idCommanditaire;private string nomEntreprise;
+        
+        
+        // Constructeur à arguments
+        public Commanditaire(string prenom, string nom, string nomEntreprise) : base(prenom, nom)
         {         
             this.idCommanditaire = "CMDT" + nbCommanditaires; 
             this.nomEntreprise = nomEntreprise;           
@@ -33,6 +32,7 @@ namespace STELib
             
                 return  "identifiant du commanditaire: "+ nomEntreprise + "  ID(" + idCommanditaire + ")   personne contact->" + base.ToString(); 
         }
+        // TODO GetNbCommanditaire
 
     }
 }

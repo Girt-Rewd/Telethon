@@ -8,20 +8,29 @@ namespace STELib
 {
     public class Don
     {
-        //TODO Constructeur par défaut
-        //TODO Constructeur à arguments
-        //TODO  ? Constructeur copie?
+        
+        
+        
         //TODO Commentaires
         //TODO Accesseurs
 
         private static int nbDon = 0;
         private string idDon;
-        private string dateDon; //TODO  formatter a l’aide d’une regex
+        private string dateDon; 
         private double montantDon;
+
+        // Constructeur à arguments
+        public Don(string dateDon, double montantDon) {
+            this.idDon = "DON" + nbDon;
+            this.dateDon = dateDon;
+            this.montantDon = montantDon;
+            nbDon++;
+        }
+
 
         public new string ToString() {
             return "Identifiant du don : " + idDon + " date du don : " + dateDon + " montant : " + montantDon;
         }
-
+        // TODO GetNbDon
     }
 }
