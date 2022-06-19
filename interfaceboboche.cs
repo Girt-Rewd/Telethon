@@ -50,8 +50,13 @@ namespace Telethon
                 MessageBox.Show("Vous devez choisir un type de carte", "Attention", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
             gestionnaireSTE.AjouterDonateur(txtPrenomDonateur.Text, txtNomDonateur.Text, txtCourrielDonateur.Text, txtTelephoneDonateur.Text, typeCarte, txtNumeroCarte.Text, dtpExpiration.Value.ToShortDateString());
-            //Donateur ledonateur = new Donateur(txtPrenomDonateur.Text, txtNomDonateur.Text, txtCourrielDonateur.Text, txtTelephoneDonateur.Text, typeCarte, txtNumeroCarte.Text, dtpExpiration.Value.ToShortDateString());
+            
 
+            
+        }
+
+        private void btnAfficherDonateur_Click(object sender, EventArgs e)
+        {
             textBoxOutput.Text = gestionnaireSTE.AfficherDonateur();
         }
     }
