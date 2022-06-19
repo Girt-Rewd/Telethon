@@ -13,9 +13,10 @@ namespace Telethon
 {
     public partial class Interfaceboboche : Form
     {
-        public Interfaceboboche()
+        public Interfaceboboche(GestionnaireSTE legestionnaire)
         {
             InitializeComponent();
+            
         }
 
         private void btnAjouterComm_Click(object sender, EventArgs e)
