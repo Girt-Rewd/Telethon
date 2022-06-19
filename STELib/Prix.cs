@@ -8,9 +8,6 @@ namespace STELib
 {
     public class Prix
     {
-        //TODO Constructeur par défaut
-        //TODO Constructeur à arguments
-        //TODO  ? Constructeur copie?
         //TODO Commentaires
         //TODO Accesseurs
         
@@ -24,6 +21,15 @@ namespace STELib
         private int quantiteActuelle;
         private string idCommanditaire;
 
+
+        //TODO Constructeur à arguments
+        public Prix(string description, double valeur) {
+            idPrix = "PRX" + nbPrix;
+            this.description = description;
+            this.valeur = valeur;
+            nbPrix++;
+        }
+        
         public new string ToString() { 
             return idPrix;//TODO
         }
