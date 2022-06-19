@@ -16,7 +16,7 @@ namespace Telethon
         string nomUtilisateur = "telethon2021";
         string motDePasse = "Don@2021";
 
-        GestionnaireSTE monGestionnaire = new GestionnaireSTE();
+        
         public MonLogin()
         {
             InitializeComponent();
