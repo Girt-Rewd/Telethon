@@ -13,6 +13,7 @@ namespace Telethon
 {
     public partial class Interfaceboboche : Form
     {
+        GestionnaireSTE gestionnaireSTE = new GestionnaireSTE();
         public Interfaceboboche()
         {
             InitializeComponent();
@@ -48,10 +49,10 @@ namespace Telethon
             {
                 MessageBox.Show("Vous devez choisir un type de carte", "Attention", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
+            gestionnaireSTE.AjouterDonateur(txtPrenomDonateur.Text, txtNomDonateur.Text, txtCourrielDonateur.Text, txtTelephoneDonateur.Text, typeCarte, txtNumeroCarte.Text, dtpExpiration.Value.ToShortDateString())
+            //Donateur ledonateur = new Donateur(txtPrenomDonateur.Text, txtNomDonateur.Text, txtCourrielDonateur.Text, txtTelephoneDonateur.Text, typeCarte, txtNumeroCarte.Text, dtpExpiration.Value.ToShortDateString());
 
-            Donateur ledonateur = new Donateur(txtPrenomDonateur.Text, txtNomDonateur.Text, txtCourrielDonateur.Text, txtTelephoneDonateur.Text, typeCarte, txtNumeroCarte.Text, dtpExpiration.Value.ToShortDateString());
-
-            textBoxOutput.Text = ledonateur.ToString();
+            textBoxOutput.Text = gestionnaireSTE.AfficherDonatueur();
         }
     }
     

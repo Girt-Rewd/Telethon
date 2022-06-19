@@ -8,7 +8,6 @@ namespace STELib
 {
     public class GestionnaireSTE
     {
-        //TODO Constructeur par défaut
         //TODO Constructeur à arguments
         //TODO  ? Constructeur copie?
         //TODO Commentaires
@@ -19,8 +18,10 @@ namespace STELib
         public Don[] dons;
         public Prix[] prix;
 
+        //TODO Constructeur par défaut
+
         public void AjouterDonateur(string prenom, string nom, string adresse, string telephone, char typeCarte, string numeroCarte, string dateExpiration) { 
-            //TODO
+            
         }
 
         public void AjouterCommanditaire(string prenom, string nom, string nomEntreprise){
