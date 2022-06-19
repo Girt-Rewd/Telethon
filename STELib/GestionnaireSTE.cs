@@ -8,8 +8,6 @@ namespace STELib
 {
     public class GestionnaireSTE
     {
-        //TODO Constructeur à arguments
-        //TODO  ? Constructeur copie?
         //TODO Commentaires
         //TODO Accesseurs
 
