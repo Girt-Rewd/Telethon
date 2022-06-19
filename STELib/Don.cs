@@ -8,9 +8,9 @@ namespace STELib
 {
     public class Don
     {
-        //TODO Constructeur par défaut
-        //TODO Constructeur à arguments
-        //TODO  ? Constructeur copie?
+        
+        
+        
         //TODO Commentaires
         //TODO Accesseurs
 
@@ -18,6 +18,9 @@ namespace STELib
         private string idDon;
         private string dateDon; //TODO  formatter a l’aide d’une regex
         private double montantDon;
+
+        // Constructeur à arguments
+
 
         public new string ToString() {
             return "Identifiant du don : " + idDon + " date du don : " + dateDon + " montant : " + montantDon;
