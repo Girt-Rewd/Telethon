@@ -20,8 +20,8 @@ namespace Telethon
 
         private void btnAjouterComm_Click(object sender, EventArgs e)
         {
-            Commanditaire Vinenzo = new Commanditaire("Vinceny", "lacroix","VinInc");
-            textBoxOutput.Text = Vinenzo.ToString();
+            Commanditaire leCommanditaire1 = new Commanditaire(txtPrenomCommanditaire.Text, txtNomCommanditaire.Text, txtEntreprise.Text);
+            textBoxOutput.Text = leCommanditaire1.ToString();
         }
 
         private void btnAjoutreDonateur_Click(object sender, EventArgs e)

@@ -13,7 +13,7 @@
 
         public override string ToString()
         {
-            return "Prenom :" + prenom + " Nom : " + nom;
+            return  prenom +" " +nom;
         }
         
         public Personne(string prenom, string nom) { 
