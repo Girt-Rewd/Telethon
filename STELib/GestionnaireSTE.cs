@@ -30,8 +30,8 @@ namespace STELib
 
         }
 
-        public void AjouterDonateur(string prenom, string nom, string adresse, string telephone, char typeCarte, string numeroCarte, string dateExpiration) { 
-            //int indice = Donateur.getNb
+        public void AjouterDonateur(string prenom, string nom, string adresse, string telephone, char typeCarte, string numeroCarte, string dateExpiration) {
+            donateurs[Donateur.GetNbDonateur()] = new Donateur(prenom, nom, adresse, telephone, typeCarte, numeroCarte, dateExpiration);
         }
 
         public void AjouterCommanditaire(string prenom, string nom, string nomEntreprise){
