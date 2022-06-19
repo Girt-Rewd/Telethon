@@ -13,7 +13,7 @@ namespace Telethon
 {
     public partial class Interfaceboboche : Form
     {
-        public Interfaceboboche(GestionnaireSTE legestionnaire)
+        public Interfaceboboche()
         {
             InitializeComponent();
             
