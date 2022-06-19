@@ -31,19 +31,23 @@ namespace STELib
         }
 
         public void AjouterDonateur(string prenom, string nom, string adresse, string telephone, char typeCarte, string numeroCarte, string dateExpiration) {
+            // TODO gérer l’aggrandissement du tableau donateurs
             donateurs[Donateur.GetNbDonateur()] = new Donateur(prenom, nom, adresse, telephone, typeCarte, numeroCarte, dateExpiration);
         }
 
         public void AjouterCommanditaire(string prenom, string nom, string nomEntreprise){
-            //TODO
+            // TODO gérer l’aggrandissement du tableau Commanditaire
+            // TODO
         }
 
         public void AjouterPrix(string description, double valeur, int quatite_originale, string commanditaire)
         {
+            // TODO gérer l’aggrandissement du tableau Prix
             //TODO
         }
         public void AjouterDon(string date, string idDonateur, double montantDon)
         {
+            // TODO gérer l’aggrandissement du tableau dons
             //TODO
         }
 
