@@ -47,10 +47,13 @@ namespace STELib
             //TODO
         }
 
-        public string AfficherDonatueur()
+        public string AfficherDonateur()
         {
-            //TODO
-            return "";
+            string chaine = "";
+            for (int i = 0; i < Donateur.GetNbDonateur(); i++) { 
+                chaine += donateurs[i].ToString() + "\n";
+            }
+            return chaine;
         }
 
         public string AfficherCommanditaires()

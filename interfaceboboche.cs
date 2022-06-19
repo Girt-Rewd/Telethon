@@ -52,7 +52,7 @@ namespace Telethon
             gestionnaireSTE.AjouterDonateur(txtPrenomDonateur.Text, txtNomDonateur.Text, txtCourrielDonateur.Text, txtTelephoneDonateur.Text, typeCarte, txtNumeroCarte.Text, dtpExpiration.Value.ToShortDateString());
             //Donateur ledonateur = new Donateur(txtPrenomDonateur.Text, txtNomDonateur.Text, txtCourrielDonateur.Text, txtTelephoneDonateur.Text, typeCarte, txtNumeroCarte.Text, dtpExpiration.Value.ToShortDateString());
 
-            textBoxOutput.Text = gestionnaireSTE.AfficherDonatueur();
+            textBoxOutput.Text = gestionnaireSTE.AfficherDonateur();
         }
     }
     
