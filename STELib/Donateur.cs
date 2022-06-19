@@ -8,9 +8,7 @@ namespace STELib
 {
     public class Donateur : Personne
     {
-        //TODO Constructeur par défaut
-        //TODO Constructeur à arguments
-        //TODO  ? Constructeur copie?
+        
         //TODO Commentaires
         //TODO Accesseurs
 
@@ -23,6 +21,7 @@ namespace STELib
         private string numeroDeCarte;
         private string dateExpiration;
 
+        // Constructeur à arguments
         public Donateur(string nom, string prenom, string courriel, string telephone, char typeDeCarte, string numeroCarte, string dateExpiration) : base(prenom, nom){
 
             this.idDonateur = "DNTR" + nbDonateurs;
