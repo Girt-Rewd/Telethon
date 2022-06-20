@@ -46,7 +46,7 @@ namespace STELib
         public void AjouterDon(string date, string idDonateur, double montantDon)
         {
             // TODO gérer l’aggrandissement du tableau dons
-            //TODO
+            dons[Don.GetNbDons()] = new Don(date, idDonateur, montantDon);
         }
 
         public string AfficherDonateur()
