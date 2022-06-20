@@ -37,6 +37,9 @@ namespace STELib
         public void Deduire(int quantite) {
             quantiteActuelle -= quantite;
         }
-        // TODO GetNbPrix
+        public static int GetNbPrix()
+        {
+            return nbPrix;
+        }
     }
 }
