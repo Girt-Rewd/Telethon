@@ -26,7 +26,7 @@ namespace Telethon
         {
             if (nomUtilisateur.Equals(txtNom.Text) && motDePasse.Equals(txtMotDePasse.Text))
             {
-                Interfaceboboche monInterface = new Interfaceboboche();
+                interface_temp monInterface = new interface_temp();
                 monInterface.Show();
             }
             else {

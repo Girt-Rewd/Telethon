@@ -1,6 +1,6 @@
 ﻿namespace Telethon
 {
-        partial class Interfaceboboche
+        partial class interface_temp
         {
         /// <summary>
         /// Required designer variable.

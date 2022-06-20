@@ -11,10 +11,10 @@ using STELib;
 
 namespace Telethon
 {
-    public partial class Interfaceboboche : Form
+    public partial class interface_temp : Form
     {
         GestionnaireSTE gestionnaireSTE = new GestionnaireSTE();
-        public Interfaceboboche()
+        public interface_temp()
         {
             InitializeComponent();
             
