@@ -62,7 +62,7 @@ namespace Telethon
 
         private void btnAjouterPrix_Click(object sender, EventArgs e)
         {
-            Prix television = new Prix("Television à écran plat", 10, 10, "Burt1000");
+            Prix television = new Prix(txtDescription.Text, double.Parse(txtValeurPrix.Text) , int.Parse(txtQuatitePrix.Text), "CMDT098");
             textBoxOutput.Text = television.ToString();
 
         }
