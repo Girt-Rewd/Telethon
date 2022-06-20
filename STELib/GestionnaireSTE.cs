@@ -29,24 +29,45 @@ namespace STELib
         }
 
         public void AjouterDonateur(string prenom, string nom, string adresse, string telephone, char typeCarte, string numeroCarte, string dateExpiration) {
-            // TODO gérer l’aggrandissement du tableau donateurs
-            donateurs[Donateur.GetNbDonateur()] = new Donateur(prenom, nom, adresse, telephone, typeCarte, numeroCarte, dateExpiration);
+            if (Donateur.GetNbDonateur() >= donateurs.Length)
+            {
+                // TODO gérer l’aggrandissement du tableau
+            }
+            else { 
+                donateurs[Donateur.GetNbDonateur()] = new Donateur(prenom, nom, adresse, telephone, typeCarte, numeroCarte, dateExpiration);
+            }
         }
 
         public void AjouterCommanditaire(string prenom, string nom, string nomEntreprise){
-            // TODO gérer l’aggrandissement du tableau Commanditaire
-            // TODO
+            if (Commanditaire.GetNbCommanditaires() >= commanditaires.Length) { 
+                // TODO gérer l’aggrandissement du tableau Commanditaire
+            }
+            else { 
+                commanditaires[Commanditaire.GetNbCommanditaires()] = new Commanditaire(prenom, nom, nomEntreprise);
+            }
         }
 
         public void AjouterPrix(string description, double valeur, int quatite_originale, string commanditaire)
         {
-            // TODO gérer l’aggrandissement du tableau Prix
-            //TODO
+            if (Prix.GetNbPrix() >= prix.Length)
+            { 
+                // TODO gérer l’aggrandissement du tableau Prix
+            }
+            else 
+            {
+                prix[Prix.GetNbPrix()] = new Prix(description, valeur, quatite_originale, commanditaire);
+            }
         }
         public void AjouterDon(string date, string idDonateur, double montantDon)
         {
-            // TODO gérer l’aggrandissement du tableau dons
-            //TODO
+            if (Don.GetNbDons() >= dons.Length) 
+            { 
+                // TODO gérer l’aggrandissement du tableau dons
+            }
+            else
+            {
+                dons[Don.GetNbDons()] = new Don(date, idDonateur, montantDon);
+            }
         }
 
         public string AfficherDonateur()

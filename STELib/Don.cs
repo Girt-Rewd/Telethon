@@ -16,15 +16,18 @@ namespace STELib
 
         private static int nbDon = 0;
         private string idDon;
-        private string dateDon; 
+        private string dateDon;
+        private string idDonateur;
         private double montantDon;
 
         // Constructeur à arguments
-        public Don(string dateDon, double montantDon) {
+        public Don(string dateDon, string idDonateur, double montantDon)
+        {
             this.idDon = "DON" + nbDon;
             this.dateDon = dateDon;
             this.montantDon = montantDon;
             nbDon++;
+            this.idDonateur = idDonateur;
         }
 
 
