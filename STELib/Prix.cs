@@ -34,6 +34,7 @@ namespace STELib
         }
         
         public new string ToString() { 
+            string chaine = "idPrix: " + idPrix + "\nDescription: " + description + "\nValeur: "+ valeur +", quantite restante: " + quantiteActuelle + ", idCommanditaire: " + idCommanditaire;
             return idPrix;//TODO
         }
 
