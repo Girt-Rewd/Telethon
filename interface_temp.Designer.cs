@@ -544,6 +544,7 @@
             this.btnAjoutrePrix.TabIndex = 15;
             this.btnAjoutrePrix.Text = "Ajouter un prix";
             this.btnAjoutrePrix.UseVisualStyleBackColor = true;
+            this.btnAjoutrePrix.Click += new System.EventHandler(this.btnAjouterPrix_Click);
             // 
             // btnAfficherComm
             // 
