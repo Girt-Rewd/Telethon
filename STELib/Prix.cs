@@ -22,7 +22,7 @@ namespace STELib
         private string idCommanditaire;
 
 
-        //TODO Constructeur à arguments
+        // Constructeur à arguments
         public Prix(string description, double valeur, int quantite, string idCommanditaire) {
             idPrix = "PRX" + nbPrix;
             this.description = description;
