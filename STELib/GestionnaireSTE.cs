@@ -61,7 +61,7 @@ namespace STELib
         public string AfficherCommanditaires()
         {
             string chaine = "";
-            for (int i = 0; i < Commanditaires.GetNbCommanditaire(); i++)
+            for (int i = 0; i < Commanditaire.GetNbCommanditaires(); i++)
             {
                 chaine += donateurs[i].ToString() + "\n";
             }
