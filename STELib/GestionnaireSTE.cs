@@ -60,23 +60,30 @@ namespace STELib
 
         public string AfficherCommanditaires()
         {
-            //TODO
-            return "";
+            string chaine = "";
+            for (int i = 0; i < Commanditaire.GetNbCommanditaires(); i++)
+            {
+                chaine += commanditaires[i].ToString() + "\n";
+            }
+            return chaine;
         }
         public string AfficherPrix()
         {
-            //TODO
-            return "";
+            string chaine = "";
+            for (int i = 0; i < Prix.GetNbPrix(); i++)
+            {
+                chaine += prix[i].ToString() + "\n";
+            }
+            return chaine;
         }
         public string AfficherDons()
         {
-            //TODO
-            return "";
-        }
-
-        public int AttribuerPrix() { 
-            //TODO
-            return 0;
+            string chaine = "";
+            for (int i = 0; i < Don.GetNbDons(); i++)
+            {
+                chaine += prix[i].ToString() + "\n";
+            }
+            return chaine;
         }
 
         public Boolean EnregistrerDonateur()
