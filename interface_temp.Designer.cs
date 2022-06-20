@@ -71,9 +71,9 @@
             this.btnAfficherComm = new System.Windows.Forms.Button();
             this.btnAjouterComm = new System.Windows.Forms.Button();
             this.txtQuatitePrix = new System.Windows.Forms.TextBox();
-            this.textBox15 = new System.Windows.Forms.TextBox();
+            this.txtValeurPrix = new System.Windows.Forms.TextBox();
             this.txtNomCommanditaire = new System.Windows.Forms.TextBox();
-            this.textBox14 = new System.Windows.Forms.TextBox();
+            this.txtDescription = new System.Windows.Forms.TextBox();
             this.txtPrenomCommanditaire = new System.Windows.Forms.TextBox();
             this.txtIDPrix = new System.Windows.Forms.TextBox();
             this.txtIDCommanditaire = new System.Windows.Forms.TextBox();
@@ -483,9 +483,9 @@
             this.tabCommanditaire.Controls.Add(this.btnAfficherComm);
             this.tabCommanditaire.Controls.Add(this.btnAjouterComm);
             this.tabCommanditaire.Controls.Add(this.txtQuatitePrix);
-            this.tabCommanditaire.Controls.Add(this.textBox15);
+            this.tabCommanditaire.Controls.Add(this.txtValeurPrix);
             this.tabCommanditaire.Controls.Add(this.txtNomCommanditaire);
-            this.tabCommanditaire.Controls.Add(this.textBox14);
+            this.tabCommanditaire.Controls.Add(this.txtDescription);
             this.tabCommanditaire.Controls.Add(this.txtPrenomCommanditaire);
             this.tabCommanditaire.Controls.Add(this.txtIDPrix);
             this.tabCommanditaire.Controls.Add(this.txtIDCommanditaire);
@@ -574,13 +574,13 @@
             this.txtQuatitePrix.Size = new System.Drawing.Size(168, 23);
             this.txtQuatitePrix.TabIndex = 10;
             // 
-            // textBox15
+            // txtValeurPrix
             // 
-            this.textBox15.Location = new System.Drawing.Point(589, 172);
-            this.textBox15.Margin = new System.Windows.Forms.Padding(4);
-            this.textBox15.Name = "textBox15";
-            this.textBox15.Size = new System.Drawing.Size(168, 23);
-            this.textBox15.TabIndex = 11;
+            this.txtValeurPrix.Location = new System.Drawing.Point(589, 172);
+            this.txtValeurPrix.Margin = new System.Windows.Forms.Padding(4);
+            this.txtValeurPrix.Name = "txtValeurPrix";
+            this.txtValeurPrix.Size = new System.Drawing.Size(168, 23);
+            this.txtValeurPrix.TabIndex = 11;
             // 
             // txtNomCommanditaire
             // 
@@ -590,13 +590,13 @@
             this.txtNomCommanditaire.Size = new System.Drawing.Size(168, 23);
             this.txtNomCommanditaire.TabIndex = 11;
             // 
-            // textBox14
+            // txtDescription
             // 
-            this.textBox14.Location = new System.Drawing.Point(589, 137);
-            this.textBox14.Margin = new System.Windows.Forms.Padding(4);
-            this.textBox14.Name = "textBox14";
-            this.textBox14.Size = new System.Drawing.Size(168, 23);
-            this.textBox14.TabIndex = 12;
+            this.txtDescription.Location = new System.Drawing.Point(589, 137);
+            this.txtDescription.Margin = new System.Windows.Forms.Padding(4);
+            this.txtDescription.Name = "txtDescription";
+            this.txtDescription.Size = new System.Drawing.Size(168, 23);
+            this.txtDescription.TabIndex = 12;
             // 
             // txtPrenomCommanditaire
             // 
@@ -628,9 +628,9 @@
             this.lblQuatitePrix.Location = new System.Drawing.Point(490, 210);
             this.lblQuatitePrix.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblQuatitePrix.Name = "lblQuatitePrix";
-            this.lblQuatitePrix.Size = new System.Drawing.Size(52, 15);
+            this.lblQuatitePrix.Size = new System.Drawing.Size(59, 15);
             this.lblQuatitePrix.TabIndex = 4;
-            this.lblQuatitePrix.Text = "Quatité :";
+            this.lblQuatitePrix.Text = "Quantité :";
             // 
             // lblValeur
             // 
@@ -733,7 +733,7 @@
             this.btnQuitter.Text = "Quitter";
             this.btnQuitter.UseVisualStyleBackColor = true;
             // 
-            // Interfaceboboche
+            // interface_temp
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -742,7 +742,7 @@
             this.Controls.Add(this.tabEntrees);
             this.Controls.Add(this.btnQuitter);
             this.Margin = new System.Windows.Forms.Padding(4);
-            this.Name = "Interfaceboboche";
+            this.Name = "interface_temp";
             this.Text = "Form2";
             this.tabEntrees.ResumeLayout(false);
             this.tabDonateur.ResumeLayout(false);
@@ -805,9 +805,9 @@
         private Button btnAfficherComm;
         private Button btnAjouterComm;
         private TextBox txtQuatitePrix;
-        private TextBox textBox15;
+        private TextBox txtValeurPrix;
         private TextBox txtNomCommanditaire;
-        private TextBox textBox14;
+        private TextBox txtDescription;
         private TextBox txtPrenomCommanditaire;
         private TextBox txtIDPrix;
         private TextBox txtIDCommanditaire;
