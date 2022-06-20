@@ -15,7 +15,7 @@ namespace STELib
 
         //TODO Accesseurs
 
-        private static int nbCommanditaires = 001;
+        private static int nbCommanditaires = 0;
         private string idCommanditaire;private string nomEntreprise;
         
         
@@ -32,7 +32,10 @@ namespace STELib
             
                 return  "identifiant du commanditaire: "+ nomEntreprise + "  ID(" + idCommanditaire + ")   personne contact->" + base.ToString(); 
         }
-        // TODO GetNbCommanditaire
+        public int GetNbCommanditaires()
+        {
+            return nbCommanditaires;
+        }
 
     }
 }
