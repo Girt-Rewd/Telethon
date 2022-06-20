@@ -78,13 +78,12 @@ namespace STELib
         }
         public string AfficherDons()
         {
-            //TODO
-            return "";
-        }
-
-        public int AttribuerPrix() { 
-            //TODO
-            return 0;
+            string chaine = "";
+            for (int i = 0; i < Don.GetNbDons(); i++)
+            {
+                chaine += prix[i].ToString() + "\n";
+            }
+            return chaine;
         }
 
         public Boolean EnregistrerDonateur()
