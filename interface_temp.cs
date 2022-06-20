@@ -59,6 +59,13 @@ namespace Telethon
         {
             textBoxOutput.Text = gestionnaireSTE.AfficherDonateur();
         }
+
+        private void btnAjouterPrix_Click(object sender, EventArgs e)
+        {
+            Prix television = new Prix("Television à écran plat", 10, 10, "Burt1000");
+            textBoxOutput.Text = television.ToString();
+
+        }
     }
     
 }

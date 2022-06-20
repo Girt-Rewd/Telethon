@@ -544,6 +544,7 @@
             this.btnAjoutrePrix.TabIndex = 15;
             this.btnAjoutrePrix.Text = "Ajouter un prix";
             this.btnAjoutrePrix.UseVisualStyleBackColor = true;
+            this.btnAjoutrePrix.Click += new System.EventHandler(this.btnAjouterPrix_Click);
             // 
             // btnAfficherComm
             // 
@@ -733,7 +734,7 @@
             this.btnQuitter.Text = "Quitter";
             this.btnQuitter.UseVisualStyleBackColor = true;
             // 
-            // Interfaceboboche
+            // interface_temp
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -742,7 +743,7 @@
             this.Controls.Add(this.tabEntrees);
             this.Controls.Add(this.btnQuitter);
             this.Margin = new System.Windows.Forms.Padding(4);
-            this.Name = "Interfaceboboche";
+            this.Name = "interface_temp";
             this.Text = "Form2";
             this.tabEntrees.ResumeLayout(false);
             this.tabDonateur.ResumeLayout(false);
