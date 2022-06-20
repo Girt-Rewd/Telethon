@@ -23,10 +23,13 @@ namespace STELib
 
 
         //TODO Constructeur à arguments
-        public Prix(string description, double valeur) {
+        public Prix(string description, double valeur, int quantite, string idCommanditaire) {
             idPrix = "PRX" + nbPrix;
             this.description = description;
             this.valeur = valeur;
+            quantiteOriginale = quantite;
+            quantiteActuelle = quantite;
+            this.idCommanditaire = idCommanditaire;
             nbPrix++;
         }
         

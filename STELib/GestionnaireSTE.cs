@@ -35,13 +35,13 @@ namespace STELib
 
         public void AjouterCommanditaire(string prenom, string nom, string nomEntreprise){
             // TODO gérer l’aggrandissement du tableau Commanditaire
-            // TODO
+            commanditaires[Commanditaire.GetNbCommanditaires()] = new Commanditaire(prenom, nom, nomEntreprise);
         }
 
         public void AjouterPrix(string description, double valeur, int quatite_originale, string commanditaire)
         {
             // TODO gérer l’aggrandissement du tableau Prix
-            //TODO
+            prix[Prix.GetNbPrix()] = new Prix(description, valeur, quatite_originale, commanditaire);
         }
         public void AjouterDon(string date, string idDonateur, double montantDon)
         {
