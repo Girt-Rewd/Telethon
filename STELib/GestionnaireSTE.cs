@@ -3,7 +3,9 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-
+// TODO Appliquer les techniques de gestion d'erreurs et de traitement d'exceptions.
+// TODO refaire l’interface de manière à alléger la surcharge d’information et de replacer les boutons aux endroit adéquats.
+// TODO Clarifier que la carte de crédit fait partie des informations du donateur.
 namespace STELib
 {
     public class GestionnaireSTE
@@ -37,6 +39,7 @@ namespace STELib
 
         public void AjouterCommanditaire(string prenom, string nom, string nomEntreprise, int nbCommanditaire)
         {
+            //Tous les champs de saisie doivent être vérifié en cas d’erreur ou de champ vide.
             commanditaires.Add(new Commanditaire(prenom, nom, nomEntreprise, nbCommanditaire));
         }
 
@@ -89,10 +92,26 @@ namespace STELib
             }
             return chaine;
         }
+        public void AttribuerPrix()
+        {
+            // TODO AttribuerPrix() calcule le nombre de points associé au montant du don.  le nombre de point sera affiché dans la case « Quantité » du groupe Box « attribuer prix »
+            // $50 – $199    -> 1 points
+            // $200 – $349   -> 2 points
+            // $350 – $499   -> 3 points
+            // >= $500       -> 5 points
+            // toute tranche additionnelle de 500$ donne droit à 400 points supplémentaires
 
+            // (problème ergonomique sur la codification et nommage : le mot quantité et mal utilisé dans cette partie de l’interface)
+
+            // TODO Ensuite Attribuer prix trouve le prix correspondant au nombre de points récompenses.
+            // Televiseur      20 points
+            // Calendrier       1 point
+            // Repas pour deux 10 points
+            // BBQ             15 points
+            }
         public Boolean EnregistrerDonateur()
         {
-            //TODO
+            //TODO EnregistrerDonateur()
             return true;
         }
 
