@@ -37,6 +37,7 @@
             this.textBox7 = new System.Windows.Forms.TextBox();
             this.btnAjouterDon = new System.Windows.Forms.Button();
             this.pnlInfoDonateur = new System.Windows.Forms.Panel();
+            this.lblMessageDonateur = new System.Windows.Forms.Label();
             this.lblnfoDonateur = new System.Windows.Forms.Label();
             this.lblID = new System.Windows.Forms.Label();
             this.txtID = new System.Windows.Forms.TextBox();
@@ -90,7 +91,7 @@
             this.lblInfoCommanditaire = new System.Windows.Forms.Label();
             this.lblIDCommanditaire = new System.Windows.Forms.Label();
             this.textBoxOutput = new System.Windows.Forms.TextBox();
-            this.lblMessageDonateur = new System.Windows.Forms.Label();
+            this.lblMessageCredit = new System.Windows.Forms.Label();
             this.tabEntrees.SuspendLayout();
             this.tabDonateur.SuspendLayout();
             this.panel1.SuspendLayout();
@@ -191,7 +192,7 @@
             // 
             // pnlInfoDonateur
             // 
-            this.pnlInfoDonateur.BackColor = System.Drawing.Color.IndianRed;
+            this.pnlInfoDonateur.BackColor = System.Drawing.Color.Transparent;
             this.pnlInfoDonateur.Controls.Add(this.lblMessageDonateur);
             this.pnlInfoDonateur.Controls.Add(this.lblnfoDonateur);
             this.pnlInfoDonateur.Controls.Add(this.lblID);
@@ -209,6 +210,17 @@
             this.pnlInfoDonateur.Name = "pnlInfoDonateur";
             this.pnlInfoDonateur.Size = new System.Drawing.Size(456, 241);
             this.pnlInfoDonateur.TabIndex = 3;
+            // 
+            // lblMessageDonateur
+            // 
+            this.lblMessageDonateur.AutoSize = true;
+            this.lblMessageDonateur.ForeColor = System.Drawing.Color.Maroon;
+            this.lblMessageDonateur.Location = new System.Drawing.Point(113, 210);
+            this.lblMessageDonateur.Name = "lblMessageDonateur";
+            this.lblMessageDonateur.Size = new System.Drawing.Size(132, 15);
+            this.lblMessageDonateur.TabIndex = 16;
+            this.lblMessageDonateur.Text = "* Champs obligatoire(s)";
+            this.lblMessageDonateur.Visible = false;
             // 
             // lblnfoDonateur
             // 
@@ -399,6 +411,7 @@
             // 
             // grCarteCredit
             // 
+            this.grCarteCredit.Controls.Add(this.lblMessageCredit);
             this.grCarteCredit.Controls.Add(this.dtpExpiration);
             this.grCarteCredit.Controls.Add(this.grRadioCarte);
             this.grCarteCredit.Controls.Add(this.lblNoCredit);
@@ -417,7 +430,7 @@
             // 
             // dtpExpiration
             // 
-            this.dtpExpiration.Location = new System.Drawing.Point(165, 125);
+            this.dtpExpiration.Location = new System.Drawing.Point(165, 121);
             this.dtpExpiration.Margin = new System.Windows.Forms.Padding(4);
             this.dtpExpiration.Name = "dtpExpiration";
             this.dtpExpiration.Size = new System.Drawing.Size(201, 23);
@@ -476,17 +489,17 @@
             // lblNoCredit
             // 
             this.lblNoCredit.AutoSize = true;
-            this.lblNoCredit.Location = new System.Drawing.Point(34, 92);
+            this.lblNoCredit.Location = new System.Drawing.Point(45, 92);
             this.lblNoCredit.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblNoCredit.Name = "lblNoCredit";
-            this.lblNoCredit.Size = new System.Drawing.Size(57, 15);
+            this.lblNoCredit.Size = new System.Drawing.Size(102, 15);
             this.lblNoCredit.TabIndex = 0;
-            this.lblNoCredit.Text = "Numéro :";
+            this.lblNoCredit.Text = "Numéro de carte :";
             // 
             // lblDateExp
             // 
             this.lblDateExp.AutoSize = true;
-            this.lblDateExp.Location = new System.Drawing.Point(34, 126);
+            this.lblDateExp.Location = new System.Drawing.Point(45, 126);
             this.lblDateExp.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblDateExp.Name = "lblDateExp";
             this.lblDateExp.Size = new System.Drawing.Size(103, 15);
@@ -506,7 +519,7 @@
             // 
             // txtNumeroCarte
             // 
-            this.txtNumeroCarte.Location = new System.Drawing.Point(165, 89);
+            this.txtNumeroCarte.Location = new System.Drawing.Point(165, 88);
             this.txtNumeroCarte.Margin = new System.Windows.Forms.Padding(4);
             this.txtNumeroCarte.Name = "txtNumeroCarte";
             this.txtNumeroCarte.Size = new System.Drawing.Size(201, 23);
@@ -763,16 +776,16 @@
             this.textBoxOutput.Size = new System.Drawing.Size(1092, 158);
             this.textBoxOutput.TabIndex = 0;
             // 
-            // lblMessageDonateur
+            // lblMessageCredit
             // 
-            this.lblMessageDonateur.AutoSize = true;
-            this.lblMessageDonateur.ForeColor = System.Drawing.Color.Maroon;
-            this.lblMessageDonateur.Location = new System.Drawing.Point(113, 210);
-            this.lblMessageDonateur.Name = "lblMessageDonateur";
-            this.lblMessageDonateur.Size = new System.Drawing.Size(132, 15);
-            this.lblMessageDonateur.TabIndex = 16;
-            this.lblMessageDonateur.Text = "* Champs obligatoire(s)";
-            this.lblMessageDonateur.Visible = false;
+            this.lblMessageCredit.AutoSize = true;
+            this.lblMessageCredit.ForeColor = System.Drawing.Color.Maroon;
+            this.lblMessageCredit.Location = new System.Drawing.Point(165, 152);
+            this.lblMessageCredit.Name = "lblMessageCredit";
+            this.lblMessageCredit.Size = new System.Drawing.Size(132, 15);
+            this.lblMessageCredit.TabIndex = 16;
+            this.lblMessageCredit.Text = "* Champs obligatoire(s)";
+            this.lblMessageCredit.Visible = false;
             // 
             // interface_temp
             // 
@@ -873,5 +886,6 @@
         private Button btnSuivant;
         private Panel panel1;
         private Label lblMessageDonateur;
+        private Label lblMessageCredit;
     }
 }
