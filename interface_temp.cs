@@ -75,12 +75,9 @@ namespace Telethon
             if (pnlInfoDonateur.Visible) { 
                 pnlInfoDonateur.Visible = false;
                 grCarteCredit.Visible = true;
+               
             }
-            else
-            {
-                pnlInfoDonateur.Visible = true;
-                grCarteCredit.Visible = false;
-            }
+           
         }
 
         private void tabDonateur_Click(object sender, EventArgs e)
