@@ -58,9 +58,9 @@ namespace STELib
         public string AfficherDonateurs()
         {
             string chaine = "";
-            for (int i = 0; i < donateurs.Count(); i++)
+            foreach (Donateur listDonateurs in donateurs)
             {
-                chaine += donateurs[i].ToString() + "\r\n";// ajout saut de ligne
+                chaine += listDonateurs.ToString() + "\r\n";
             }
             return chaine;
         }
@@ -68,9 +68,9 @@ namespace STELib
         public string AfficherCommanditaires()
         {
             string chaine = "";
-            for (int i = 0; i < commanditaires.Count(); i++)
+            foreach (Commanditaire listCommanditaire in commanditaires)
             {
-                chaine += commanditaires[i].ToString() + "\r\n";// ajout saut de ligne
+                chaine += listCommanditaire.ToString() + "\r\n";
             }
             return chaine;
         }
@@ -78,18 +78,18 @@ namespace STELib
         public string AfficherPrix()
         {
             string chaine = "";
-            for (int i = 0; i < prix.Count(); i++)
+            foreach (Prix listPrix in prix)
             {
-                chaine += prix[i].ToString() + "\r\n";// ajout saut de ligne
+                chaine += listPrix.ToString() + "\r\n";
             }
             return chaine;
         }
         public string AfficherDons()
         {
             string chaine = "";
-            for (int i = 0; i < dons.Count(); i++)
+            foreach (Don listDons in dons)
             {
-                chaine += prix[i].ToString() + "\r\n";// ajout saut de ligne
+                chaine += listDons.ToString() + "\r\n";
             }
             return chaine;
         }

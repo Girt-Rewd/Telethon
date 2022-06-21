@@ -51,7 +51,7 @@ namespace Telethon
             }
 
             
-            gestionnaireSTE.AjouterDonateur(txtPrenomDonateur.Text, txtNomDonateur.Text, txtCourrielDonateur.Text, txtTelephoneDonateur.Text, typeCarte, txtNumeroCarte.Text, dtpExpiration.Value.ToShortDateString()); 
+            gestionnaireSTE.AjouterDonateur(txtPrenomDonateur.Text, txtNomDonateur.Text, txtCourrielDonateur.Text, txtTelephoneDonateur.Text, typeCarte, txtNumeroCarte.Text, dtpExpiration.Value.ToShortDateString(),gestionnaireSTE.donateurs.Count()); 
         }
 
         private void btnAfficherDonateur_Click(object sender, EventArgs e)

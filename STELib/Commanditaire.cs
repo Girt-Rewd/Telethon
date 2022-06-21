@@ -15,28 +15,19 @@ namespace STELib
 
         //TODO Accesseurs
 
-
-        
         private string idCommanditaire;
-        
-        
+  
         
         // Constructeur à arguments
         public Commanditaire(string prenom, string nom, int nbCommanditaire) : base(prenom, nom)
-        {    
-            
-            this.idCommanditaire = "CMDT" + nbCommanditaire; 
-                     
-                      
+        {              
+            this.idCommanditaire = "CMDT" + nbCommanditaire;                                          
         }
-
 
         public override string ToString() { 
-            
+          
                 return  "identifiant du commanditaire: "+  "  ID(" + idCommanditaire + ")   personne contact->" + base.ToString(); 
-
-        }
-      
+        }     
 
     }
 }
