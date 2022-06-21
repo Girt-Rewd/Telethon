@@ -28,16 +28,16 @@ namespace STELib
 
         }
 
-        public void AjouterDonateur(string prenom, string nom, string adresse, string telephone, char typeCarte, string numeroCarte, string dateExpiration)
+        public void AjouterDonateur(string prenom, string nom, string adresse, string telephone, char typeCarte, string numeroCarte, string dateExpiration, int nbDonateur)
         {
 
-            donateurs.Add(new Donateur(prenom, nom, adresse, telephone, typeCarte, numeroCarte, dateExpiration));
+            donateurs.Add(new Donateur(prenom, nom, adresse, telephone, typeCarte, numeroCarte, dateExpiration, nbDonateur));
 
         }
 
-        public void AjouterCommanditaire(string prenom, string nom, string nomEntreprise)
+        public void AjouterCommanditaire(string prenom, string nom, string nomEntreprise, int nbCommanditaire)
         {
-            commanditaires.Add(new Commanditaire(prenom, nom, nomEntreprise));
+            commanditaires.Add(new Commanditaire(prenom, nom, nomEntreprise, nbCommanditaire));
         }
 
 
@@ -46,16 +46,16 @@ namespace STELib
             prix.Add(new Prix(description, valeur, quatite_originale, commanditaire, nbPrix));
         }
 
-        public void AjouterDon(string date, string idDonateur, double montantDon)
+        public void AjouterDon(string date, string idDonateur, double montantDon, int nbDon)
         {
-            dons.Add(new Don(date, idDonateur, montantDon));
+            dons.Add(new Don(date, idDonateur, montantDon, nbDon));
         }
 
 
         public string AfficherDonateur()
         {
             string chaine = "";
-            for (int i = 0; i < Donateur.GetNbDonateur(); i++)
+            for (int i = 0; i < donateurs.Count(); i++)
             {
                 chaine += donateurs[i].ToString() + "\n";
             }
