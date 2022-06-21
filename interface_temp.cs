@@ -82,6 +82,11 @@ namespace Telethon
                 grCarteCredit.Visible = false;
             }
         }
+
+        private void tabDonateur_Click(object sender, EventArgs e)
+        {
+
+        }
     }
     
 }

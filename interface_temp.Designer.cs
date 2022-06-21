@@ -89,7 +89,7 @@
             this.lblIDCommanditaire = new System.Windows.Forms.Label();
             this.textBoxOutput = new System.Windows.Forms.TextBox();
             this.btnQuitter = new System.Windows.Forms.Button();
-            this.btnCacher = new System.Windows.Forms.Button();
+            this.btnSuivant = new System.Windows.Forms.Button();
             this.tabEntrees.SuspendLayout();
             this.tabDonateur.SuspendLayout();
             this.grPrix.SuspendLayout();
@@ -123,7 +123,6 @@
             this.tabDonateur.Controls.Add(this.lblMontant);
             this.tabDonateur.Controls.Add(this.lblIDDon);
             this.tabDonateur.Controls.Add(this.lblInfoDon);
-            this.tabDonateur.Controls.Add(this.pnlInfoDonateur);
             this.tabDonateur.Location = new System.Drawing.Point(4, 24);
             this.tabDonateur.Margin = new System.Windows.Forms.Padding(4);
             this.tabDonateur.Name = "tabDonateur";
@@ -132,6 +131,7 @@
             this.tabDonateur.TabIndex = 0;
             this.tabDonateur.Text = "Donateur";
             this.tabDonateur.UseVisualStyleBackColor = true;
+            this.tabDonateur.Click += new System.EventHandler(this.tabDonateur_Click);
             // 
             // btnAfficherDonateur
             // 
@@ -219,12 +219,13 @@
             // 
             // grCarteCredit
             // 
+            this.grCarteCredit.Controls.Add(this.pnlInfoDonateur);
             this.grCarteCredit.Controls.Add(this.dtpExpiration);
             this.grCarteCredit.Controls.Add(this.grRadioCarte);
             this.grCarteCredit.Controls.Add(this.lblNoCredit);
             this.grCarteCredit.Controls.Add(this.lblDateExp);
             this.grCarteCredit.Controls.Add(this.txtNumeroCarte);
-            this.grCarteCredit.Location = new System.Drawing.Point(20, 12);
+            this.grCarteCredit.Location = new System.Drawing.Point(34, 12);
             this.grCarteCredit.Margin = new System.Windows.Forms.Padding(4);
             this.grCarteCredit.Name = "grCarteCredit";
             this.grCarteCredit.Padding = new System.Windows.Forms.Padding(4);
@@ -372,6 +373,7 @@
             this.pnlInfoDonateur.BackColor = System.Drawing.Color.IndianRed;
             this.pnlInfoDonateur.Controls.Add(this.lblnfoDonateur);
             this.pnlInfoDonateur.Controls.Add(this.lblID);
+            this.pnlInfoDonateur.Controls.Add(this.btnSuivant);
             this.pnlInfoDonateur.Controls.Add(this.txtID);
             this.pnlInfoDonateur.Controls.Add(this.txtPrenomDonateur);
             this.pnlInfoDonateur.Controls.Add(this.lblPrenomDonateur);
@@ -381,7 +383,7 @@
             this.pnlInfoDonateur.Controls.Add(this.txtNomDonateur);
             this.pnlInfoDonateur.Controls.Add(this.txtCourrielDonateur);
             this.pnlInfoDonateur.Controls.Add(this.lblTelephone);
-            this.pnlInfoDonateur.Location = new System.Drawing.Point(20, 12);
+            this.pnlInfoDonateur.Location = new System.Drawing.Point(0, 1);
             this.pnlInfoDonateur.Name = "pnlInfoDonateur";
             this.pnlInfoDonateur.Size = new System.Drawing.Size(456, 241);
             this.pnlInfoDonateur.TabIndex = 3;
@@ -749,16 +751,16 @@
             this.btnQuitter.Text = "Quitter";
             this.btnQuitter.UseVisualStyleBackColor = true;
             // 
-            // btnCacher
+            // btnSuivant
             // 
-            this.btnCacher.Location = new System.Drawing.Point(920, 328);
-            this.btnCacher.Margin = new System.Windows.Forms.Padding(4);
-            this.btnCacher.Name = "btnCacher";
-            this.btnCacher.Size = new System.Drawing.Size(189, 34);
-            this.btnCacher.TabIndex = 2;
-            this.btnCacher.Text = "Cacher le panneau";
-            this.btnCacher.UseVisualStyleBackColor = true;
-            this.btnCacher.Click += new System.EventHandler(this.btnCacher_Click);
+            this.btnSuivant.Location = new System.Drawing.Point(289, 190);
+            this.btnSuivant.Margin = new System.Windows.Forms.Padding(4);
+            this.btnSuivant.Name = "btnSuivant";
+            this.btnSuivant.Size = new System.Drawing.Size(152, 34);
+            this.btnSuivant.TabIndex = 2;
+            this.btnSuivant.Text = "Suivant";
+            this.btnSuivant.UseVisualStyleBackColor = true;
+            this.btnSuivant.Click += new System.EventHandler(this.btnCacher_Click);
             // 
             // interface_temp
             // 
@@ -767,7 +769,6 @@
             this.ClientSize = new System.Drawing.Size(1162, 682);
             this.Controls.Add(this.textBoxOutput);
             this.Controls.Add(this.tabEntrees);
-            this.Controls.Add(this.btnCacher);
             this.Controls.Add(this.btnQuitter);
             this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "interface_temp";
@@ -857,6 +858,6 @@
         private TextBox textEntreprise;
         private TextBox txtEntreprise;
         private Panel pnlInfoDonateur;
-        private Button btnCacher;
+        private Button btnSuivant;
     }
 }
