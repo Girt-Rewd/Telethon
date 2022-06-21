@@ -72,7 +72,14 @@ namespace Telethon
 
         private void btnCacher_Click(object sender, EventArgs e)
         {
-            if (pnlInfoDonateur.Visible) { 
+            if (txtPrenomDonateur.Text == "" || txtNomDonateur.Text == "" || txtTelephoneDonateur.Text == "") { 
+                lblPrenomDonateur.ForeColor = Color.Red;
+                lblPrenomDonateur.Text += "*";
+                lblNomDonateur.ForeColor = Color.Red;
+                lblNomDonateur.Text += "*";
+                lblTelephone.ForeColor = Color.Red;
+                lblTelephone.Text += "*";
+            } else if (pnlInfoDonateur.Visible) { 
                 pnlInfoDonateur.Visible = false;
                 grCarteCredit.Visible = true;
                

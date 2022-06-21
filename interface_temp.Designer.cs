@@ -118,7 +118,6 @@
             this.tabDonateur.Controls.Add(this.btnAfficherDonateur);
             this.tabDonateur.Controls.Add(this.btnQuitter);
             this.tabDonateur.Controls.Add(this.btnAfficheDon);
-            this.tabDonateur.Controls.Add(this.btnAjouterDon);
             this.tabDonateur.Controls.Add(this.grPrix);
             this.tabDonateur.Controls.Add(this.grCarteCredit);
             this.tabDonateur.Controls.Add(this.lblInfoDon);
@@ -137,6 +136,7 @@
             this.panel1.Controls.Add(this.lblMontant);
             this.panel1.Controls.Add(this.txtIDDon);
             this.panel1.Controls.Add(this.textBox7);
+            this.panel1.Controls.Add(this.btnAjouterDon);
             this.panel1.Location = new System.Drawing.Point(34, 274);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(324, 138);
@@ -313,7 +313,7 @@
             // 
             // btnAfficherDonateur
             // 
-            this.btnAfficherDonateur.Location = new System.Drawing.Point(637, 381);
+            this.btnAfficherDonateur.Location = new System.Drawing.Point(816, 311);
             this.btnAfficherDonateur.Margin = new System.Windows.Forms.Padding(4);
             this.btnAfficherDonateur.Name = "btnAfficherDonateur";
             this.btnAfficherDonateur.Size = new System.Drawing.Size(189, 34);
@@ -334,7 +334,7 @@
             // 
             // btnAfficheDon
             // 
-            this.btnAfficheDon.Location = new System.Drawing.Point(637, 300);
+            this.btnAfficheDon.Location = new System.Drawing.Point(816, 269);
             this.btnAfficheDon.Margin = new System.Windows.Forms.Padding(4);
             this.btnAfficheDon.Name = "btnAfficheDon";
             this.btnAfficheDon.Size = new System.Drawing.Size(189, 34);
@@ -344,7 +344,7 @@
             // 
             // btnAjouterDon
             // 
-            this.btnAjouterDon.Location = new System.Drawing.Point(637, 260);
+            this.btnAjouterDon.Location = new System.Drawing.Point(99, 84);
             this.btnAjouterDon.Margin = new System.Windows.Forms.Padding(4);
             this.btnAjouterDon.Name = "btnAjouterDon";
             this.btnAjouterDon.Size = new System.Drawing.Size(189, 34);
@@ -357,18 +357,18 @@
             this.grPrix.Controls.Add(this.btnAfficherPrix);
             this.grPrix.Controls.Add(this.lblqte);
             this.grPrix.Controls.Add(this.txtQtePrix);
-            this.grPrix.Location = new System.Drawing.Point(365, 260);
+            this.grPrix.Location = new System.Drawing.Point(365, 269);
             this.grPrix.Margin = new System.Windows.Forms.Padding(4);
             this.grPrix.Name = "grPrix";
             this.grPrix.Padding = new System.Windows.Forms.Padding(4);
-            this.grPrix.Size = new System.Drawing.Size(255, 152);
+            this.grPrix.Size = new System.Drawing.Size(255, 146);
             this.grPrix.TabIndex = 2;
             this.grPrix.TabStop = false;
             this.grPrix.Text = "Attribution de prix";
             // 
             // btnAfficherPrix
             // 
-            this.btnAfficherPrix.Location = new System.Drawing.Point(38, 61);
+            this.btnAfficherPrix.Location = new System.Drawing.Point(36, 34);
             this.btnAfficherPrix.Margin = new System.Windows.Forms.Padding(4);
             this.btnAfficherPrix.Name = "btnAfficherPrix";
             this.btnAfficherPrix.Size = new System.Drawing.Size(189, 34);
