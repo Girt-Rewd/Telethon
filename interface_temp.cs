@@ -16,14 +16,12 @@ namespace Telethon
         GestionnaireSTE gestionnaireSTE = new GestionnaireSTE();
         public interface_temp()
         {
-            InitializeComponent();
-            
+            InitializeComponent();           
         }
 
         private void btnAjouterComm_Click(object sender, EventArgs e)
-        {
-            Commanditaire leCommanditaire1 = new Commanditaire(txtPrenomCommanditaire.Text, txtNomCommanditaire.Text, txtEntreprise.Text);
-            textBoxOutput.Text = leCommanditaire1.ToString();
+        {           
+            gestionnaireSTE.AjouterCommanditaire(txtPrenomCommanditaire.Text, txtNomCommanditaire.Text, gestionnaireSTE.commanditaires.Count);           
         }
 
         private void btnAjoutreDonateur_Click(object sender, EventArgs e)
@@ -49,22 +47,24 @@ namespace Telethon
             {
                 MessageBox.Show("Vous devez choisir un type de carte", "Attention", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
-            gestionnaireSTE.AjouterDonateur(txtPrenomDonateur.Text, txtNomDonateur.Text, txtCourrielDonateur.Text, txtTelephoneDonateur.Text, typeCarte, txtNumeroCarte.Text, dtpExpiration.Value.ToShortDateString());
             
-
-            
+            gestionnaireSTE.AjouterDonateur(txtPrenomDonateur.Text, txtNomDonateur.Text, txtCourrielDonateur.Text, txtTelephoneDonateur.Text, typeCarte, txtNumeroCarte.Text, dtpExpiration.Value.ToShortDateString()); 
         }
 
         private void btnAfficherDonateur_Click(object sender, EventArgs e)
         {
-            textBoxOutput.Text = gestionnaireSTE.AfficherDonateur();
+            textBoxOutput.Text = gestionnaireSTE.AfficherDonateurs();
         }
+
+        private void btnAfficherCommanditaire_Click(object sender, EventArgs e)
+        {
+            textBoxOutput.Text = gestionnaireSTE.AfficherCommanditaires();        
+        } 
 
         private void btnAjouterPrix_Click(object sender, EventArgs e)
         {
-            Prix television = new Prix(txtDescription.Text, double.Parse(txtValeurPrix.Text) , int.Parse(txtQuatitePrix.Text), "CMDT098");
+            Prix television = new Prix(txtDescription.Text, double.Parse(txtValeurPrix.Text) , int.Parse(txtQuatitePrix.Text), "CMDT098", gestionnaireSTE.prix.Count());
             textBoxOutput.Text = television.ToString();
-
         }
     }
     

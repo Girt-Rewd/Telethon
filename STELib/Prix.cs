@@ -13,7 +13,7 @@ namespace STELib
         
         
         
-        private string idPrix;
+        private string idPrix = "PRX";
         private string description;
         private double valeur;
 
@@ -25,7 +25,7 @@ namespace STELib
         // Constructeur à arguments
         public Prix(string description, double valeur, int quantite, string idCommanditaire, int nbPrix) {
 
-            idPrix = "PRX" + nbPrix;
+            idPrix = ""+(nbPrix);
             this.description = description;
             this.valeur = valeur;
             quantiteOriginale = quantite;

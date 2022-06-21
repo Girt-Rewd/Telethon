@@ -15,27 +15,26 @@ namespace STELib
 
         //TODO Accesseurs
 
-        private static int nbCommanditaires = 0;
-        private string idCommanditaire;private string nomEntreprise;
+        
+        private string idCommanditaire;
+        
         
         
         // Constructeur à arguments
-        public Commanditaire(string prenom, string nom, string nomEntreprise) : base(prenom, nom)
-        {         
-            this.idCommanditaire = "CMDT" + nbCommanditaires; 
-            this.nomEntreprise = nomEntreprise;           
-            nbCommanditaires++;          
+        public Commanditaire(string prenom, string nom, int nbCommanditaire) : base(prenom, nom)
+        {    
+            
+            this.idCommanditaire = "CMDT" + nbCommanditaire; 
+                     
+                      
         }
 
 
         public override string ToString() { 
             
-                return  "identifiant du commanditaire: "+ nomEntreprise + "  ID(" + idCommanditaire + ")   personne contact->" + base.ToString(); 
+                return  "identifiant du commanditaire: "+  "  ID(" + idCommanditaire + ")   personne contact->" + base.ToString(); 
         }
-        public static int GetNbCommanditaires()
-        {
-            return nbCommanditaires;
-        }
+      
 
     }
 }

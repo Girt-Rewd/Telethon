@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -30,14 +31,12 @@ namespace STELib
 
         public void AjouterDonateur(string prenom, string nom, string adresse, string telephone, char typeCarte, string numeroCarte, string dateExpiration)
         {
-
             donateurs.Add(new Donateur(prenom, nom, adresse, telephone, typeCarte, numeroCarte, dateExpiration));
-
         }
 
-        public void AjouterCommanditaire(string prenom, string nom, string nomEntreprise)
+        public void AjouterCommanditaire(string prenom, string nom, int nb)
         {
-            commanditaires.Add(new Commanditaire(prenom, nom, nomEntreprise));
+            commanditaires.Add(new Commanditaire(prenom, nom, nb ));
         }
 
 
@@ -52,12 +51,12 @@ namespace STELib
         }
 
 
-        public string AfficherDonateur()
+        public string AfficherDonateurs()
         {
             string chaine = "";
-            for (int i = 0; i < Donateur.GetNbDonateur(); i++)
+            for (int i = 0; i < donateurs.Count(); i++)
             {
-                chaine += donateurs[i].ToString() + "\n";
+                chaine += donateurs[i].ToString() + "\r\n";// ajout saut de ligne
             }
             return chaine;
         }
@@ -67,16 +66,17 @@ namespace STELib
             string chaine = "";
             for (int i = 0; i < commanditaires.Count(); i++)
             {
-                chaine += commanditaires[i].ToString() + "\n";
+                chaine += commanditaires[i].ToString() + "\r\n";// ajout saut de ligne
             }
             return chaine;
         }
+
         public string AfficherPrix()
         {
             string chaine = "";
             for (int i = 0; i < prix.Count(); i++)
             {
-                chaine += prix[i].ToString() + "\n";
+                chaine += prix[i].ToString() + "\r\n";// ajout saut de ligne
             }
             return chaine;
         }
@@ -85,7 +85,7 @@ namespace STELib
             string chaine = "";
             for (int i = 0; i < dons.Count(); i++)
             {
-                chaine += prix[i].ToString() + "\n";
+                chaine += prix[i].ToString() + "\r\n";// ajout saut de ligne
             }
             return chaine;
         }
