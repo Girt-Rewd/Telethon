@@ -11,7 +11,7 @@ namespace STELib
         //TODO Commentaires
         //TODO Accesseurs
         
-        // private static int prix.lentgh;
+        
         
         private string idPrix;
         private string description;
