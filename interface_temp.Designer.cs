@@ -67,7 +67,6 @@
             this.lblInfoDon = new System.Windows.Forms.Label();
             this.tabCommanditaire = new System.Windows.Forms.TabPage();
             this.txtEntreprise = new System.Windows.Forms.TextBox();
-            this.lblNomEntrepsise = new System.Windows.Forms.Label();
             this.btnAffichePrix02 = new System.Windows.Forms.Button();
             this.btnAjoutrePrix = new System.Windows.Forms.Button();
             this.btnAfficherComm = new System.Windows.Forms.Button();
@@ -504,7 +503,6 @@
             // tabCommanditaire
             // 
             this.tabCommanditaire.Controls.Add(this.txtEntreprise);
-            this.tabCommanditaire.Controls.Add(this.lblNomEntrepsise);
             this.tabCommanditaire.Controls.Add(this.btnAffichePrix02);
             this.tabCommanditaire.Controls.Add(this.btnAjoutrePrix);
             this.tabCommanditaire.Controls.Add(this.btnAfficherComm);
