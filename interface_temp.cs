@@ -74,11 +74,11 @@ namespace Telethon
         {
             if (txtPrenomDonateur.Text == "" || txtNomDonateur.Text == "" || txtTelephoneDonateur.Text == "") 
             { 
-                lblPrenomDonateur.ForeColor = Color.Red;
+                lblPrenomDonateur.ForeColor = Color.Maroon;
                 lblPrenomDonateur.Text += "*";
-                lblNomDonateur.ForeColor = Color.Red;
+                lblNomDonateur.ForeColor = Color.Maroon;
                 lblNomDonateur.Text += "*";
-                lblTelephone.ForeColor = Color.Red;
+                lblTelephone.ForeColor = Color.Maroon;
                 lblTelephone.Text += "*";
                 lblMessageDonateur.Visible = true;
             } 
