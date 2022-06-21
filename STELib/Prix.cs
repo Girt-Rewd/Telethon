@@ -11,7 +11,7 @@ namespace STELib
         //TODO Commentaires
         //TODO Accesseurs
         
-        private static int nbPrix;
+        // private static int prix.lentgh;
         
         private string idPrix;
         private string description;
@@ -23,14 +23,15 @@ namespace STELib
 
 
         // Constructeur à arguments
-        public Prix(string description, double valeur, int quantite, string idCommanditaire) {
+        public Prix(string description, double valeur, int quantite, string idCommanditaire, int nbPrix) {
+
             idPrix = "PRX" + nbPrix;
             this.description = description;
             this.valeur = valeur;
             quantiteOriginale = quantite;
             quantiteActuelle = quantite;
             this.idCommanditaire = idCommanditaire;
-            nbPrix++;
+         
         }
         
         public new string ToString() { 
@@ -42,9 +43,6 @@ namespace STELib
 
             quantiteActuelle -= quantite;
         }
-        public static int GetNbPrix()
-        {
-            return nbPrix;
-        }
+       
     }
 }
