@@ -35,6 +35,7 @@
             this.lblMontant = new System.Windows.Forms.Label();
             this.txtIDDon = new System.Windows.Forms.TextBox();
             this.textBox7 = new System.Windows.Forms.TextBox();
+            this.btnAjouterDon = new System.Windows.Forms.Button();
             this.pnlInfoDonateur = new System.Windows.Forms.Panel();
             this.lblnfoDonateur = new System.Windows.Forms.Label();
             this.lblID = new System.Windows.Forms.Label();
@@ -51,7 +52,6 @@
             this.btnAfficherDonateur = new System.Windows.Forms.Button();
             this.btnQuitter = new System.Windows.Forms.Button();
             this.btnAfficheDon = new System.Windows.Forms.Button();
-            this.btnAjouterDon = new System.Windows.Forms.Button();
             this.grPrix = new System.Windows.Forms.GroupBox();
             this.btnAfficherPrix = new System.Windows.Forms.Button();
             this.lblqte = new System.Windows.Forms.Label();
@@ -90,6 +90,7 @@
             this.lblInfoCommanditaire = new System.Windows.Forms.Label();
             this.lblIDCommanditaire = new System.Windows.Forms.Label();
             this.textBoxOutput = new System.Windows.Forms.TextBox();
+            this.lblMessageDonateur = new System.Windows.Forms.Label();
             this.tabEntrees.SuspendLayout();
             this.tabDonateur.SuspendLayout();
             this.panel1.SuspendLayout();
@@ -118,7 +119,6 @@
             this.tabDonateur.Controls.Add(this.btnAfficherDonateur);
             this.tabDonateur.Controls.Add(this.btnQuitter);
             this.tabDonateur.Controls.Add(this.btnAfficheDon);
-            this.tabDonateur.Controls.Add(this.btnAjouterDon);
             this.tabDonateur.Controls.Add(this.grPrix);
             this.tabDonateur.Controls.Add(this.grCarteCredit);
             this.tabDonateur.Controls.Add(this.lblInfoDon);
@@ -137,6 +137,7 @@
             this.panel1.Controls.Add(this.lblMontant);
             this.panel1.Controls.Add(this.txtIDDon);
             this.panel1.Controls.Add(this.textBox7);
+            this.panel1.Controls.Add(this.btnAjouterDon);
             this.panel1.Location = new System.Drawing.Point(34, 274);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(324, 138);
@@ -178,9 +179,20 @@
             this.textBox7.Size = new System.Drawing.Size(168, 23);
             this.textBox7.TabIndex = 7;
             // 
+            // btnAjouterDon
+            // 
+            this.btnAjouterDon.Location = new System.Drawing.Point(99, 84);
+            this.btnAjouterDon.Margin = new System.Windows.Forms.Padding(4);
+            this.btnAjouterDon.Name = "btnAjouterDon";
+            this.btnAjouterDon.Size = new System.Drawing.Size(189, 34);
+            this.btnAjouterDon.TabIndex = 8;
+            this.btnAjouterDon.Text = "Ajouter un don";
+            this.btnAjouterDon.UseVisualStyleBackColor = true;
+            // 
             // pnlInfoDonateur
             // 
             this.pnlInfoDonateur.BackColor = System.Drawing.Color.IndianRed;
+            this.pnlInfoDonateur.Controls.Add(this.lblMessageDonateur);
             this.pnlInfoDonateur.Controls.Add(this.lblnfoDonateur);
             this.pnlInfoDonateur.Controls.Add(this.lblID);
             this.pnlInfoDonateur.Controls.Add(this.txtID);
@@ -213,7 +225,7 @@
             // 
             this.lblID.AutoSize = true;
             this.lblID.BackColor = System.Drawing.Color.Transparent;
-            this.lblID.Location = new System.Drawing.Point(14, 59);
+            this.lblID.Location = new System.Drawing.Point(33, 59);
             this.lblID.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblID.Name = "lblID";
             this.lblID.Size = new System.Drawing.Size(24, 15);
@@ -230,10 +242,10 @@
             // 
             // btnSuivant
             // 
-            this.btnSuivant.Location = new System.Drawing.Point(296, 187);
+            this.btnSuivant.Location = new System.Drawing.Point(313, 173);
             this.btnSuivant.Margin = new System.Windows.Forms.Padding(4);
             this.btnSuivant.Name = "btnSuivant";
-            this.btnSuivant.Size = new System.Drawing.Size(152, 34);
+            this.btnSuivant.Size = new System.Drawing.Size(101, 34);
             this.btnSuivant.TabIndex = 2;
             this.btnSuivant.Text = "Suivant";
             this.btnSuivant.UseVisualStyleBackColor = true;
@@ -241,7 +253,7 @@
             // 
             // txtPrenomDonateur
             // 
-            this.txtPrenomDonateur.Location = new System.Drawing.Point(113, 91);
+            this.txtPrenomDonateur.Location = new System.Drawing.Point(113, 88);
             this.txtPrenomDonateur.Margin = new System.Windows.Forms.Padding(4);
             this.txtPrenomDonateur.Name = "txtPrenomDonateur";
             this.txtPrenomDonateur.Size = new System.Drawing.Size(168, 23);
@@ -250,7 +262,7 @@
             // lblPrenomDonateur
             // 
             this.lblPrenomDonateur.AutoSize = true;
-            this.lblPrenomDonateur.Location = new System.Drawing.Point(14, 94);
+            this.lblPrenomDonateur.Location = new System.Drawing.Point(33, 91);
             this.lblPrenomDonateur.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblPrenomDonateur.Name = "lblPrenomDonateur";
             this.lblPrenomDonateur.Size = new System.Drawing.Size(55, 15);
@@ -260,7 +272,7 @@
             // lblNomDonateur
             // 
             this.lblNomDonateur.AutoSize = true;
-            this.lblNomDonateur.Location = new System.Drawing.Point(14, 126);
+            this.lblNomDonateur.Location = new System.Drawing.Point(33, 123);
             this.lblNomDonateur.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblNomDonateur.Name = "lblNomDonateur";
             this.lblNomDonateur.Size = new System.Drawing.Size(43, 15);
@@ -270,7 +282,7 @@
             // lblCourriel
             // 
             this.lblCourriel.AutoSize = true;
-            this.lblCourriel.Location = new System.Drawing.Point(14, 162);
+            this.lblCourriel.Location = new System.Drawing.Point(33, 155);
             this.lblCourriel.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblCourriel.Name = "lblCourriel";
             this.lblCourriel.Size = new System.Drawing.Size(55, 15);
@@ -279,15 +291,16 @@
             // 
             // txtTelephoneDonateur
             // 
-            this.txtTelephoneDonateur.Location = new System.Drawing.Point(113, 197);
+            this.txtTelephoneDonateur.Location = new System.Drawing.Point(113, 184);
             this.txtTelephoneDonateur.Margin = new System.Windows.Forms.Padding(4);
             this.txtTelephoneDonateur.Name = "txtTelephoneDonateur";
             this.txtTelephoneDonateur.Size = new System.Drawing.Size(168, 23);
             this.txtTelephoneDonateur.TabIndex = 5;
+            this.txtTelephoneDonateur.TextChanged += new System.EventHandler(this.txtTelephoneDonateur_TextChanged);
             // 
             // txtNomDonateur
             // 
-            this.txtNomDonateur.Location = new System.Drawing.Point(113, 123);
+            this.txtNomDonateur.Location = new System.Drawing.Point(113, 120);
             this.txtNomDonateur.Margin = new System.Windows.Forms.Padding(4);
             this.txtNomDonateur.Name = "txtNomDonateur";
             this.txtNomDonateur.Size = new System.Drawing.Size(168, 23);
@@ -295,7 +308,7 @@
             // 
             // txtCourrielDonateur
             // 
-            this.txtCourrielDonateur.Location = new System.Drawing.Point(113, 162);
+            this.txtCourrielDonateur.Location = new System.Drawing.Point(113, 152);
             this.txtCourrielDonateur.Margin = new System.Windows.Forms.Padding(4);
             this.txtCourrielDonateur.Name = "txtCourrielDonateur";
             this.txtCourrielDonateur.Size = new System.Drawing.Size(168, 23);
@@ -304,7 +317,7 @@
             // lblTelephone
             // 
             this.lblTelephone.AutoSize = true;
-            this.lblTelephone.Location = new System.Drawing.Point(14, 197);
+            this.lblTelephone.Location = new System.Drawing.Point(33, 187);
             this.lblTelephone.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblTelephone.Name = "lblTelephone";
             this.lblTelephone.Size = new System.Drawing.Size(67, 15);
@@ -313,7 +326,7 @@
             // 
             // btnAfficherDonateur
             // 
-            this.btnAfficherDonateur.Location = new System.Drawing.Point(637, 381);
+            this.btnAfficherDonateur.Location = new System.Drawing.Point(816, 311);
             this.btnAfficherDonateur.Margin = new System.Windows.Forms.Padding(4);
             this.btnAfficherDonateur.Name = "btnAfficherDonateur";
             this.btnAfficherDonateur.Size = new System.Drawing.Size(189, 34);
@@ -334,7 +347,7 @@
             // 
             // btnAfficheDon
             // 
-            this.btnAfficheDon.Location = new System.Drawing.Point(637, 300);
+            this.btnAfficheDon.Location = new System.Drawing.Point(816, 269);
             this.btnAfficheDon.Margin = new System.Windows.Forms.Padding(4);
             this.btnAfficheDon.Name = "btnAfficheDon";
             this.btnAfficheDon.Size = new System.Drawing.Size(189, 34);
@@ -342,33 +355,23 @@
             this.btnAfficheDon.Text = "Afficher les dons";
             this.btnAfficheDon.UseVisualStyleBackColor = true;
             // 
-            // btnAjouterDon
-            // 
-            this.btnAjouterDon.Location = new System.Drawing.Point(637, 260);
-            this.btnAjouterDon.Margin = new System.Windows.Forms.Padding(4);
-            this.btnAjouterDon.Name = "btnAjouterDon";
-            this.btnAjouterDon.Size = new System.Drawing.Size(189, 34);
-            this.btnAjouterDon.TabIndex = 8;
-            this.btnAjouterDon.Text = "Ajouter un don";
-            this.btnAjouterDon.UseVisualStyleBackColor = true;
-            // 
             // grPrix
             // 
             this.grPrix.Controls.Add(this.btnAfficherPrix);
             this.grPrix.Controls.Add(this.lblqte);
             this.grPrix.Controls.Add(this.txtQtePrix);
-            this.grPrix.Location = new System.Drawing.Point(365, 260);
+            this.grPrix.Location = new System.Drawing.Point(365, 269);
             this.grPrix.Margin = new System.Windows.Forms.Padding(4);
             this.grPrix.Name = "grPrix";
             this.grPrix.Padding = new System.Windows.Forms.Padding(4);
-            this.grPrix.Size = new System.Drawing.Size(255, 152);
+            this.grPrix.Size = new System.Drawing.Size(255, 146);
             this.grPrix.TabIndex = 2;
             this.grPrix.TabStop = false;
             this.grPrix.Text = "Attribution de prix";
             // 
             // btnAfficherPrix
             // 
-            this.btnAfficherPrix.Location = new System.Drawing.Point(38, 61);
+            this.btnAfficherPrix.Location = new System.Drawing.Point(36, 34);
             this.btnAfficherPrix.Margin = new System.Windows.Forms.Padding(4);
             this.btnAfficherPrix.Name = "btnAfficherPrix";
             this.btnAfficherPrix.Size = new System.Drawing.Size(189, 34);
@@ -760,6 +763,17 @@
             this.textBoxOutput.Size = new System.Drawing.Size(1092, 158);
             this.textBoxOutput.TabIndex = 0;
             // 
+            // lblMessageDonateur
+            // 
+            this.lblMessageDonateur.AutoSize = true;
+            this.lblMessageDonateur.ForeColor = System.Drawing.Color.Maroon;
+            this.lblMessageDonateur.Location = new System.Drawing.Point(113, 210);
+            this.lblMessageDonateur.Name = "lblMessageDonateur";
+            this.lblMessageDonateur.Size = new System.Drawing.Size(132, 15);
+            this.lblMessageDonateur.TabIndex = 16;
+            this.lblMessageDonateur.Text = "* Champs obligatoire(s)";
+            this.lblMessageDonateur.Visible = false;
+            // 
             // interface_temp
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
@@ -858,5 +872,6 @@
         private Panel pnlInfoDonateur;
         private Button btnSuivant;
         private Panel panel1;
+        private Label lblMessageDonateur;
     }
 }
