@@ -69,6 +69,17 @@ namespace Telethon
             Prix television = new Prix(txtDescription.Text, double.Parse(txtValeurPrix.Text) , int.Parse(txtQuatitePrix.Text), "CMDT098", gestionnaireSTE.prix.Count());
             textBoxOutput.Text = television.ToString();
         }
+
+        private void btnCacher_Click(object sender, EventArgs e)
+        {
+            if (pnlInfoDonateur.Visible) { 
+                pnlInfoDonateur.Visible = false;
+            }
+            else
+            {
+                pnlInfoDonateur.Visible = true;
+            }
+        }
     }
     
 }
