@@ -87,6 +87,10 @@ namespace Telethon
            
         }
 
+        private void txtTelephoneDonateur_TextChanged(object sender, EventArgs e)
+        {
+
+        }
 
     }
     

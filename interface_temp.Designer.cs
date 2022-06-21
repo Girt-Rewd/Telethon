@@ -35,6 +35,7 @@
             this.lblMontant = new System.Windows.Forms.Label();
             this.txtIDDon = new System.Windows.Forms.TextBox();
             this.textBox7 = new System.Windows.Forms.TextBox();
+            this.btnAjouterDon = new System.Windows.Forms.Button();
             this.pnlInfoDonateur = new System.Windows.Forms.Panel();
             this.lblnfoDonateur = new System.Windows.Forms.Label();
             this.lblID = new System.Windows.Forms.Label();
@@ -51,7 +52,6 @@
             this.btnAfficherDonateur = new System.Windows.Forms.Button();
             this.btnQuitter = new System.Windows.Forms.Button();
             this.btnAfficheDon = new System.Windows.Forms.Button();
-            this.btnAjouterDon = new System.Windows.Forms.Button();
             this.grPrix = new System.Windows.Forms.GroupBox();
             this.btnAfficherPrix = new System.Windows.Forms.Button();
             this.lblqte = new System.Windows.Forms.Label();
@@ -178,6 +178,16 @@
             this.textBox7.Size = new System.Drawing.Size(168, 23);
             this.textBox7.TabIndex = 7;
             // 
+            // btnAjouterDon
+            // 
+            this.btnAjouterDon.Location = new System.Drawing.Point(99, 84);
+            this.btnAjouterDon.Margin = new System.Windows.Forms.Padding(4);
+            this.btnAjouterDon.Name = "btnAjouterDon";
+            this.btnAjouterDon.Size = new System.Drawing.Size(189, 34);
+            this.btnAjouterDon.TabIndex = 8;
+            this.btnAjouterDon.Text = "Ajouter un don";
+            this.btnAjouterDon.UseVisualStyleBackColor = true;
+            // 
             // pnlInfoDonateur
             // 
             this.pnlInfoDonateur.BackColor = System.Drawing.Color.IndianRed;
@@ -279,11 +289,12 @@
             // 
             // txtTelephoneDonateur
             // 
-            this.txtTelephoneDonateur.Location = new System.Drawing.Point(113, 197);
+            this.txtTelephoneDonateur.Location = new System.Drawing.Point(113, 187);
             this.txtTelephoneDonateur.Margin = new System.Windows.Forms.Padding(4);
             this.txtTelephoneDonateur.Name = "txtTelephoneDonateur";
             this.txtTelephoneDonateur.Size = new System.Drawing.Size(168, 23);
             this.txtTelephoneDonateur.TabIndex = 5;
+            this.txtTelephoneDonateur.TextChanged += new System.EventHandler(this.txtTelephoneDonateur_TextChanged);
             // 
             // txtNomDonateur
             // 
@@ -304,7 +315,7 @@
             // lblTelephone
             // 
             this.lblTelephone.AutoSize = true;
-            this.lblTelephone.Location = new System.Drawing.Point(14, 197);
+            this.lblTelephone.Location = new System.Drawing.Point(14, 190);
             this.lblTelephone.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblTelephone.Name = "lblTelephone";
             this.lblTelephone.Size = new System.Drawing.Size(67, 15);
@@ -341,16 +352,6 @@
             this.btnAfficheDon.TabIndex = 9;
             this.btnAfficheDon.Text = "Afficher les dons";
             this.btnAfficheDon.UseVisualStyleBackColor = true;
-            // 
-            // btnAjouterDon
-            // 
-            this.btnAjouterDon.Location = new System.Drawing.Point(99, 84);
-            this.btnAjouterDon.Margin = new System.Windows.Forms.Padding(4);
-            this.btnAjouterDon.Name = "btnAjouterDon";
-            this.btnAjouterDon.Size = new System.Drawing.Size(189, 34);
-            this.btnAjouterDon.TabIndex = 8;
-            this.btnAjouterDon.Text = "Ajouter un don";
-            this.btnAjouterDon.UseVisualStyleBackColor = true;
             // 
             // grPrix
             // 
