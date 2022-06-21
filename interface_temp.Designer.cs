@@ -263,7 +263,7 @@
             this.radAmex.Margin = new System.Windows.Forms.Padding(4);
             this.radAmex.Name = "radAmex";
             this.radAmex.Size = new System.Drawing.Size(56, 19);
-            this.radAmex.TabIndex = 0;
+            this.radAmex.TabIndex = 2;
             this.radAmex.TabStop = true;
             this.radAmex.Text = "Amex";
             this.radAmex.UseVisualStyleBackColor = true;
@@ -275,7 +275,7 @@
             this.radMC.Margin = new System.Windows.Forms.Padding(4);
             this.radMC.Name = "radMC";
             this.radMC.Size = new System.Drawing.Size(44, 19);
-            this.radMC.TabIndex = 2;
+            this.radMC.TabIndex = 1;
             this.radMC.TabStop = true;
             this.radMC.Text = "MC";
             this.radMC.UseVisualStyleBackColor = true;
@@ -287,7 +287,7 @@
             this.radVisa.Margin = new System.Windows.Forms.Padding(4);
             this.radVisa.Name = "radVisa";
             this.radVisa.Size = new System.Drawing.Size(46, 19);
-            this.radVisa.TabIndex = 1;
+            this.radVisa.TabIndex = 0;
             this.radVisa.TabStop = true;
             this.radVisa.Text = "Visa";
             this.radVisa.UseVisualStyleBackColor = true;
