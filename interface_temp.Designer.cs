@@ -542,16 +542,6 @@
             this.txtEntreprise.Size = new System.Drawing.Size(168, 23);
             this.txtEntreprise.TabIndex = 19;
             // 
-            // lblNomEntrepsise
-            // 
-            this.lblNomEntrepsise.AutoSize = true;
-            this.lblNomEntrepsise.Location = new System.Drawing.Point(47, 214);
-            this.lblNomEntrepsise.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.lblNomEntrepsise.Name = "lblNomEntrepsise";
-            this.lblNomEntrepsise.Size = new System.Drawing.Size(95, 15);
-            this.lblNomEntrepsise.TabIndex = 18;
-            this.lblNomEntrepsise.Text = "NomEntreprise : ";
-            // 
             // btnAffichePrix02
             // 
             this.btnAffichePrix02.Location = new System.Drawing.Point(608, 336);
@@ -865,7 +855,6 @@
         private Label lblIDCommanditaire;
         private TextBox textBox1;
         private Label label1;
-        private Label lblNomEntrepsise;
         private TextBox textBoxEntreprise;
         private TextBox textEntreprise;
         private TextBox txtEntreprise;
