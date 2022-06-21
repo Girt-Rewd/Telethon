@@ -22,7 +22,7 @@ namespace Telethon
 
         private void btnAjouterComm_Click(object sender, EventArgs e)
         {
-            Commanditaire leCommanditaire1 = new Commanditaire(txtPrenomCommanditaire.Text, txtNomCommanditaire.Text, txtEntreprise.Text);
+            Commanditaire leCommanditaire1 = new Commanditaire(txtPrenomCommanditaire.Text, txtNomCommanditaire.Text, txtEntreprise.Text, gestionnaireSTE.prix.Count());
             textBoxOutput.Text = leCommanditaire1.ToString();
         }
 
@@ -62,7 +62,7 @@ namespace Telethon
 
         private void btnAjouterPrix_Click(object sender, EventArgs e)
         {
-            Prix television = new Prix(txtDescription.Text, double.Parse(txtValeurPrix.Text) , int.Parse(txtQuatitePrix.Text), "CMDT098");
+            Prix television = new Prix(txtDescription.Text, double.Parse(txtValeurPrix.Text) , int.Parse(txtQuatitePrix.Text), "CMDT098", gestionnaireSTE.prix.Count());
             textBoxOutput.Text = television.ToString();
 
         }
