@@ -470,7 +470,7 @@
             // lblID
             // 
             this.lblID.AutoSize = true;
-            this.lblID.BackColor = System.Drawing.Color.IndianRed;
+            this.lblID.BackColor = System.Drawing.Color.Transparent;
             this.lblID.Location = new System.Drawing.Point(34, 71);
             this.lblID.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblID.Name = "lblID";
@@ -480,6 +480,7 @@
             // 
             // pnlInfoDonateur
             // 
+            this.pnlInfoDonateur.BackColor = System.Drawing.Color.IndianRed;
             this.pnlInfoDonateur.Controls.Add(this.lblnfoDonateur);
             this.pnlInfoDonateur.Location = new System.Drawing.Point(20, 12);
             this.pnlInfoDonateur.Name = "pnlInfoDonateur";
