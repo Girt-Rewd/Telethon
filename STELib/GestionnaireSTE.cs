@@ -4,7 +4,9 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-
+// TODO Appliquer les techniques de gestion d'erreurs et de traitement d'exceptions.
+// TODO refaire l’interface de manière à alléger la surcharge d’information et de replacer les boutons aux endroit adéquats.
+// TODO Clarifier que la carte de crédit fait partie des informations du donateur.
 namespace STELib
 {
     public class GestionnaireSTE
@@ -29,14 +31,16 @@ namespace STELib
 
         }
 
-        public void AjouterDonateur(string prenom, string nom, string adresse, string telephone, char typeCarte, string numeroCarte, string dateExpiration)
+        public void AjouterDonateur(string prenom, string nom, string adresse, string telephone, char typeCarte, string numeroCarte, string dateExpiration, int nbDonateur)
         {
+
             donateurs.Add(new Donateur(prenom, nom, adresse, telephone, typeCarte, numeroCarte, dateExpiration));
         }
 
         public void AjouterCommanditaire(string prenom, string nom, int nb)
         {
             commanditaires.Add(new Commanditaire(prenom, nom, nb ));
+
         }
 
 
@@ -45,9 +49,9 @@ namespace STELib
             prix.Add(new Prix(description, valeur, quatite_originale, commanditaire, nbPrix));
         }
 
-        public void AjouterDon(string date, string idDonateur, double montantDon)
+        public void AjouterDon(string date, string idDonateur, double montantDon, int nbDon)
         {
-            dons.Add(new Don(date, idDonateur, montantDon));
+            dons.Add(new Don(date, idDonateur, montantDon, nbDon));
         }
 
 
@@ -89,10 +93,26 @@ namespace STELib
             }
             return chaine;
         }
+        public void AttribuerPrix()
+        {
+            // TODO AttribuerPrix() calcule le nombre de points associé au montant du don.  le nombre de point sera affiché dans la case « Quantité » du groupe Box « attribuer prix »
+            // $50 – $199    -> 1 points
+            // $200 – $349   -> 2 points
+            // $350 – $499   -> 3 points
+            // >= $500       -> 5 points
+            // toute tranche additionnelle de 500$ donne droit à 400 points supplémentaires
 
+            // (problème ergonomique sur la codification et nommage : le mot quantité et mal utilisé dans cette partie de l’interface)
+
+            // TODO Ensuite Attribuer prix trouve le prix correspondant au nombre de points récompenses.
+            // Televiseur      20 points
+            // Calendrier       1 point
+            // Repas pour deux 10 points
+            // BBQ             15 points
+            }
         public Boolean EnregistrerDonateur()
         {
-            //TODO
+            //TODO EnregistrerDonateur()
             return true;
         }
 

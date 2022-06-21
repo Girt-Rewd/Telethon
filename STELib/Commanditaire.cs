@@ -15,6 +15,7 @@ namespace STELib
 
         //TODO Accesseurs
 
+
         
         private string idCommanditaire;
         
@@ -33,6 +34,7 @@ namespace STELib
         public override string ToString() { 
             
                 return  "identifiant du commanditaire: "+  "  ID(" + idCommanditaire + ")   personne contact->" + base.ToString(); 
+
         }
       
 

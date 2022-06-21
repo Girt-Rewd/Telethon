@@ -12,8 +12,6 @@ namespace STELib
         //TODO Commentaires
         //TODO Accesseurs
 
-        private static int nbDonateurs;
-
         private string idDonateur;
         private string courriel;
         private string telephone;
@@ -22,7 +20,7 @@ namespace STELib
         private string dateExpiration;
 
         // Constructeur à arguments
-        public Donateur(string nom, string prenom, string courriel, string telephone, char typeDeCarte, string numeroCarte, string dateExpiration) : base(prenom, nom){
+        public Donateur(string nom, string prenom, string courriel, string telephone, char typeDeCarte, string numeroCarte, string dateExpiration, int nbDonateurs) : base(prenom, nom){
 
             this.idDonateur = "DNTR" + nbDonateurs;
             nbDonateurs++;
@@ -37,8 +35,6 @@ namespace STELib
              
             return "identifiant du donateur : " + idDonateur + " " + base.ToString(); 
         }
-        public static int GetNbDonateur() { 
-            return nbDonateurs;
-        }
+        
     }
 }

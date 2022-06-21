@@ -20,8 +20,10 @@ namespace Telethon
         }
 
         private void btnAjouterComm_Click(object sender, EventArgs e)
+
         {           
             gestionnaireSTE.AjouterCommanditaire(txtPrenomCommanditaire.Text, txtNomCommanditaire.Text, gestionnaireSTE.commanditaires.Count);           
+
         }
 
         private void btnAjoutreDonateur_Click(object sender, EventArgs e)
@@ -47,6 +49,7 @@ namespace Telethon
             {
                 MessageBox.Show("Vous devez choisir un type de carte", "Attention", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
+
             
             gestionnaireSTE.AjouterDonateur(txtPrenomDonateur.Text, txtNomDonateur.Text, txtCourrielDonateur.Text, txtTelephoneDonateur.Text, typeCarte, txtNumeroCarte.Text, dtpExpiration.Value.ToShortDateString()); 
         }
