@@ -80,10 +80,9 @@ namespace Telethon
            
         }
 
-        private void tabDonateur_Click(object sender, EventArgs e)
-        {
+   
 
-        }
+
     }
     
 }
