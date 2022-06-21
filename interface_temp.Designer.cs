@@ -224,11 +224,11 @@
             this.grCarteCredit.Controls.Add(this.lblNoCredit);
             this.grCarteCredit.Controls.Add(this.lblDateExp);
             this.grCarteCredit.Controls.Add(this.txtNumeroCarte);
-            this.grCarteCredit.Location = new System.Drawing.Point(365, 46);
+            this.grCarteCredit.Location = new System.Drawing.Point(20, 12);
             this.grCarteCredit.Margin = new System.Windows.Forms.Padding(4);
             this.grCarteCredit.Name = "grCarteCredit";
             this.grCarteCredit.Padding = new System.Windows.Forms.Padding(4);
-            this.grCarteCredit.Size = new System.Drawing.Size(456, 206);
+            this.grCarteCredit.Size = new System.Drawing.Size(456, 241);
             this.grCarteCredit.TabIndex = 2;
             this.grCarteCredit.TabStop = false;
             this.grCarteCredit.Text = "Carte de crédit";
@@ -383,7 +383,7 @@
             this.pnlInfoDonateur.Controls.Add(this.lblTelephone);
             this.pnlInfoDonateur.Location = new System.Drawing.Point(20, 12);
             this.pnlInfoDonateur.Name = "pnlInfoDonateur";
-            this.pnlInfoDonateur.Size = new System.Drawing.Size(298, 240);
+            this.pnlInfoDonateur.Size = new System.Drawing.Size(456, 241);
             this.pnlInfoDonateur.TabIndex = 3;
             // 
             // lblnfoDonateur
