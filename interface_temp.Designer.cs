@@ -90,6 +90,7 @@
             this.lblInfoCommanditaire = new System.Windows.Forms.Label();
             this.lblIDCommanditaire = new System.Windows.Forms.Label();
             this.textBoxOutput = new System.Windows.Forms.TextBox();
+            this.lblMessageDonateur = new System.Windows.Forms.Label();
             this.tabEntrees.SuspendLayout();
             this.tabDonateur.SuspendLayout();
             this.panel1.SuspendLayout();
@@ -191,6 +192,7 @@
             // pnlInfoDonateur
             // 
             this.pnlInfoDonateur.BackColor = System.Drawing.Color.IndianRed;
+            this.pnlInfoDonateur.Controls.Add(this.lblMessageDonateur);
             this.pnlInfoDonateur.Controls.Add(this.lblnfoDonateur);
             this.pnlInfoDonateur.Controls.Add(this.lblID);
             this.pnlInfoDonateur.Controls.Add(this.txtID);
@@ -223,7 +225,7 @@
             // 
             this.lblID.AutoSize = true;
             this.lblID.BackColor = System.Drawing.Color.Transparent;
-            this.lblID.Location = new System.Drawing.Point(14, 59);
+            this.lblID.Location = new System.Drawing.Point(33, 59);
             this.lblID.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblID.Name = "lblID";
             this.lblID.Size = new System.Drawing.Size(24, 15);
@@ -240,10 +242,10 @@
             // 
             // btnSuivant
             // 
-            this.btnSuivant.Location = new System.Drawing.Point(296, 187);
+            this.btnSuivant.Location = new System.Drawing.Point(313, 173);
             this.btnSuivant.Margin = new System.Windows.Forms.Padding(4);
             this.btnSuivant.Name = "btnSuivant";
-            this.btnSuivant.Size = new System.Drawing.Size(152, 34);
+            this.btnSuivant.Size = new System.Drawing.Size(101, 34);
             this.btnSuivant.TabIndex = 2;
             this.btnSuivant.Text = "Suivant";
             this.btnSuivant.UseVisualStyleBackColor = true;
@@ -260,7 +262,7 @@
             // lblPrenomDonateur
             // 
             this.lblPrenomDonateur.AutoSize = true;
-            this.lblPrenomDonateur.Location = new System.Drawing.Point(14, 94);
+            this.lblPrenomDonateur.Location = new System.Drawing.Point(33, 91);
             this.lblPrenomDonateur.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblPrenomDonateur.Name = "lblPrenomDonateur";
             this.lblPrenomDonateur.Size = new System.Drawing.Size(55, 15);
@@ -270,7 +272,7 @@
             // lblNomDonateur
             // 
             this.lblNomDonateur.AutoSize = true;
-            this.lblNomDonateur.Location = new System.Drawing.Point(14, 126);
+            this.lblNomDonateur.Location = new System.Drawing.Point(33, 123);
             this.lblNomDonateur.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblNomDonateur.Name = "lblNomDonateur";
             this.lblNomDonateur.Size = new System.Drawing.Size(43, 15);
@@ -280,7 +282,7 @@
             // lblCourriel
             // 
             this.lblCourriel.AutoSize = true;
-            this.lblCourriel.Location = new System.Drawing.Point(14, 162);
+            this.lblCourriel.Location = new System.Drawing.Point(33, 155);
             this.lblCourriel.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblCourriel.Name = "lblCourriel";
             this.lblCourriel.Size = new System.Drawing.Size(55, 15);
@@ -315,7 +317,7 @@
             // lblTelephone
             // 
             this.lblTelephone.AutoSize = true;
-            this.lblTelephone.Location = new System.Drawing.Point(14, 190);
+            this.lblTelephone.Location = new System.Drawing.Point(33, 187);
             this.lblTelephone.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblTelephone.Name = "lblTelephone";
             this.lblTelephone.Size = new System.Drawing.Size(67, 15);
@@ -761,6 +763,17 @@
             this.textBoxOutput.Size = new System.Drawing.Size(1092, 158);
             this.textBoxOutput.TabIndex = 0;
             // 
+            // lblMessageDonateur
+            // 
+            this.lblMessageDonateur.AutoSize = true;
+            this.lblMessageDonateur.ForeColor = System.Drawing.Color.Maroon;
+            this.lblMessageDonateur.Location = new System.Drawing.Point(113, 210);
+            this.lblMessageDonateur.Name = "lblMessageDonateur";
+            this.lblMessageDonateur.Size = new System.Drawing.Size(132, 15);
+            this.lblMessageDonateur.TabIndex = 16;
+            this.lblMessageDonateur.Text = "* Champs obligatoire(s)";
+            this.lblMessageDonateur.Visible = false;
+            // 
             // interface_temp
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
@@ -859,5 +872,6 @@
         private Panel pnlInfoDonateur;
         private Button btnSuivant;
         private Panel panel1;
+        private Label lblMessageDonateur;
     }
 }
