@@ -251,7 +251,7 @@
             // 
             // txtPrenomDonateur
             // 
-            this.txtPrenomDonateur.Location = new System.Drawing.Point(113, 91);
+            this.txtPrenomDonateur.Location = new System.Drawing.Point(113, 88);
             this.txtPrenomDonateur.Margin = new System.Windows.Forms.Padding(4);
             this.txtPrenomDonateur.Name = "txtPrenomDonateur";
             this.txtPrenomDonateur.Size = new System.Drawing.Size(168, 23);
@@ -289,7 +289,7 @@
             // 
             // txtTelephoneDonateur
             // 
-            this.txtTelephoneDonateur.Location = new System.Drawing.Point(113, 187);
+            this.txtTelephoneDonateur.Location = new System.Drawing.Point(113, 184);
             this.txtTelephoneDonateur.Margin = new System.Windows.Forms.Padding(4);
             this.txtTelephoneDonateur.Name = "txtTelephoneDonateur";
             this.txtTelephoneDonateur.Size = new System.Drawing.Size(168, 23);
@@ -298,7 +298,7 @@
             // 
             // txtNomDonateur
             // 
-            this.txtNomDonateur.Location = new System.Drawing.Point(113, 123);
+            this.txtNomDonateur.Location = new System.Drawing.Point(113, 120);
             this.txtNomDonateur.Margin = new System.Windows.Forms.Padding(4);
             this.txtNomDonateur.Name = "txtNomDonateur";
             this.txtNomDonateur.Size = new System.Drawing.Size(168, 23);
@@ -306,7 +306,7 @@
             // 
             // txtCourrielDonateur
             // 
-            this.txtCourrielDonateur.Location = new System.Drawing.Point(113, 162);
+            this.txtCourrielDonateur.Location = new System.Drawing.Point(113, 152);
             this.txtCourrielDonateur.Margin = new System.Windows.Forms.Padding(4);
             this.txtCourrielDonateur.Name = "txtCourrielDonateur";
             this.txtCourrielDonateur.Size = new System.Drawing.Size(168, 23);
