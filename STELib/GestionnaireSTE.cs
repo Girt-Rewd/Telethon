@@ -105,10 +105,10 @@ namespace STELib
             // (problème ergonomique sur la codification et nommage : le mot quantité et mal utilisé dans cette partie de l’interface)
 
             // TODO Ensuite Attribuer prix trouve le prix correspondant au nombre de points récompenses.
-            // Televiseur      20 points
-            // Calendrier       1 point
-            // Repas pour deux 10 points
-            // BBQ             15 points
+            // Televiseur       20 points
+            // Calendrier        1 point
+            // Repas pour deux  10 points
+            // BBQ              15 points
             }
         public Boolean EnregistrerDonateur()
         {
