@@ -244,10 +244,10 @@
             // 
             // dtpExpiration
             // 
-            this.dtpExpiration.Location = new System.Drawing.Point(215, 127);
+            this.dtpExpiration.Location = new System.Drawing.Point(279, 127);
             this.dtpExpiration.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.dtpExpiration.Name = "dtpExpiration";
-            this.dtpExpiration.Size = new System.Drawing.Size(201, 23);
+            this.dtpExpiration.Size = new System.Drawing.Size(137, 23);
             this.dtpExpiration.TabIndex = 2;
             // 
             // lblNoCredit
@@ -888,10 +888,10 @@
             // 
             // txtNumeroCarte
             // 
-            this.txtNumeroCarte.Location = new System.Drawing.Point(215, 95);
+            this.txtNumeroCarte.Location = new System.Drawing.Point(279, 95);
             this.txtNumeroCarte.Mask = "0000 0000 0000 0000";
             this.txtNumeroCarte.Name = "txtNumeroCarte";
-            this.txtNumeroCarte.Size = new System.Drawing.Size(100, 23);
+            this.txtNumeroCarte.Size = new System.Drawing.Size(137, 23);
             this.txtNumeroCarte.TabIndex = 17;
             // 
             // interface_temp
