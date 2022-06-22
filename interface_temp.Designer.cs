@@ -30,12 +30,13 @@
         {
             this.tabEntrees = new System.Windows.Forms.TabControl();
             this.tabDonateur = new System.Windows.Forms.TabPage();
-            this.panel1 = new System.Windows.Forms.Panel();
+            this.pnlDon = new System.Windows.Forms.Panel();
             this.lblIDDon = new System.Windows.Forms.Label();
             this.lblMontant = new System.Windows.Forms.Label();
             this.txtIDDon = new System.Windows.Forms.TextBox();
             this.textBox7 = new System.Windows.Forms.TextBox();
             this.btnAjouterDon = new System.Windows.Forms.Button();
+            this.lblInfoDon = new System.Windows.Forms.Label();
             this.pnlInfoDonateur = new System.Windows.Forms.Panel();
             this.lblMessageDonateur = new System.Windows.Forms.Label();
             this.lblnfoDonateur = new System.Windows.Forms.Label();
@@ -58,6 +59,7 @@
             this.lblqte = new System.Windows.Forms.Label();
             this.txtQtePrix = new System.Windows.Forms.TextBox();
             this.grCarteCredit = new System.Windows.Forms.GroupBox();
+            this.lblMessageCredit = new System.Windows.Forms.Label();
             this.dtpExpiration = new System.Windows.Forms.DateTimePicker();
             this.grRadioCarte = new System.Windows.Forms.GroupBox();
             this.radAmex = new System.Windows.Forms.RadioButton();
@@ -67,7 +69,6 @@
             this.lblDateExp = new System.Windows.Forms.Label();
             this.btnAjoutreDonateur = new System.Windows.Forms.Button();
             this.txtNumeroCarte = new System.Windows.Forms.TextBox();
-            this.lblInfoDon = new System.Windows.Forms.Label();
             this.tabCommanditaire = new System.Windows.Forms.TabPage();
             this.txtEntreprise = new System.Windows.Forms.TextBox();
             this.btnAffichePrix02 = new System.Windows.Forms.Button();
@@ -91,10 +92,9 @@
             this.lblInfoCommanditaire = new System.Windows.Forms.Label();
             this.lblIDCommanditaire = new System.Windows.Forms.Label();
             this.textBoxOutput = new System.Windows.Forms.TextBox();
-            this.lblMessageCredit = new System.Windows.Forms.Label();
             this.tabEntrees.SuspendLayout();
             this.tabDonateur.SuspendLayout();
-            this.panel1.SuspendLayout();
+            this.pnlDon.SuspendLayout();
             this.pnlInfoDonateur.SuspendLayout();
             this.grPrix.SuspendLayout();
             this.grCarteCredit.SuspendLayout();
@@ -115,14 +115,13 @@
             // 
             // tabDonateur
             // 
-            this.tabDonateur.Controls.Add(this.panel1);
+            this.tabDonateur.Controls.Add(this.pnlDon);
             this.tabDonateur.Controls.Add(this.pnlInfoDonateur);
             this.tabDonateur.Controls.Add(this.btnAfficherDonateur);
             this.tabDonateur.Controls.Add(this.btnQuitter);
             this.tabDonateur.Controls.Add(this.btnAfficheDon);
             this.tabDonateur.Controls.Add(this.grPrix);
             this.tabDonateur.Controls.Add(this.grCarteCredit);
-            this.tabDonateur.Controls.Add(this.lblInfoDon);
             this.tabDonateur.Location = new System.Drawing.Point(4, 24);
             this.tabDonateur.Margin = new System.Windows.Forms.Padding(4);
             this.tabDonateur.Name = "tabDonateur";
@@ -132,22 +131,24 @@
             this.tabDonateur.Text = "Donateur";
             this.tabDonateur.UseVisualStyleBackColor = true;
             // 
-            // panel1
+            // pnlDon
             // 
-            this.panel1.Controls.Add(this.lblIDDon);
-            this.panel1.Controls.Add(this.lblMontant);
-            this.panel1.Controls.Add(this.txtIDDon);
-            this.panel1.Controls.Add(this.textBox7);
-            this.panel1.Controls.Add(this.btnAjouterDon);
-            this.panel1.Location = new System.Drawing.Point(34, 274);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(324, 138);
-            this.panel1.TabIndex = 12;
+            this.pnlDon.Controls.Add(this.lblIDDon);
+            this.pnlDon.Controls.Add(this.lblMontant);
+            this.pnlDon.Controls.Add(this.txtIDDon);
+            this.pnlDon.Controls.Add(this.textBox7);
+            this.pnlDon.Controls.Add(this.btnAjouterDon);
+            this.pnlDon.Controls.Add(this.lblInfoDon);
+            this.pnlDon.Location = new System.Drawing.Point(34, 259);
+            this.pnlDon.Name = "pnlDon";
+            this.pnlDon.Size = new System.Drawing.Size(324, 153);
+            this.pnlDon.TabIndex = 12;
+            this.pnlDon.Visible = false;
             // 
             // lblIDDon
             // 
             this.lblIDDon.AutoSize = true;
-            this.lblIDDon.Location = new System.Drawing.Point(21, 14);
+            this.lblIDDon.Location = new System.Drawing.Point(21, 38);
             this.lblIDDon.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblIDDon.Name = "lblIDDon";
             this.lblIDDon.Size = new System.Drawing.Size(48, 15);
@@ -157,7 +158,7 @@
             // lblMontant
             // 
             this.lblMontant.AutoSize = true;
-            this.lblMontant.Location = new System.Drawing.Point(21, 48);
+            this.lblMontant.Location = new System.Drawing.Point(21, 72);
             this.lblMontant.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblMontant.Name = "lblMontant";
             this.lblMontant.Size = new System.Drawing.Size(59, 15);
@@ -166,7 +167,7 @@
             // 
             // txtIDDon
             // 
-            this.txtIDDon.Location = new System.Drawing.Point(120, 10);
+            this.txtIDDon.Location = new System.Drawing.Point(120, 34);
             this.txtIDDon.Margin = new System.Windows.Forms.Padding(4);
             this.txtIDDon.Name = "txtIDDon";
             this.txtIDDon.Size = new System.Drawing.Size(168, 23);
@@ -174,7 +175,7 @@
             // 
             // textBox7
             // 
-            this.textBox7.Location = new System.Drawing.Point(120, 45);
+            this.textBox7.Location = new System.Drawing.Point(120, 69);
             this.textBox7.Margin = new System.Windows.Forms.Padding(4);
             this.textBox7.Name = "textBox7";
             this.textBox7.Size = new System.Drawing.Size(168, 23);
@@ -182,13 +183,24 @@
             // 
             // btnAjouterDon
             // 
-            this.btnAjouterDon.Location = new System.Drawing.Point(99, 84);
+            this.btnAjouterDon.Location = new System.Drawing.Point(113, 99);
             this.btnAjouterDon.Margin = new System.Windows.Forms.Padding(4);
             this.btnAjouterDon.Name = "btnAjouterDon";
             this.btnAjouterDon.Size = new System.Drawing.Size(189, 34);
             this.btnAjouterDon.TabIndex = 8;
             this.btnAjouterDon.Text = "Ajouter un don";
             this.btnAjouterDon.UseVisualStyleBackColor = true;
+            // 
+            // lblInfoDon
+            // 
+            this.lblInfoDon.AutoSize = true;
+            this.lblInfoDon.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.lblInfoDon.Location = new System.Drawing.Point(14, 11);
+            this.lblInfoDon.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lblInfoDon.Name = "lblInfoDon";
+            this.lblInfoDon.Size = new System.Drawing.Size(110, 15);
+            this.lblInfoDon.TabIndex = 0;
+            this.lblInfoDon.Text = "Information Don";
             // 
             // pnlInfoDonateur
             // 
@@ -372,14 +384,15 @@
             this.grPrix.Controls.Add(this.btnAfficherPrix);
             this.grPrix.Controls.Add(this.lblqte);
             this.grPrix.Controls.Add(this.txtQtePrix);
-            this.grPrix.Location = new System.Drawing.Point(365, 269);
+            this.grPrix.Location = new System.Drawing.Point(365, 260);
             this.grPrix.Margin = new System.Windows.Forms.Padding(4);
             this.grPrix.Name = "grPrix";
             this.grPrix.Padding = new System.Windows.Forms.Padding(4);
-            this.grPrix.Size = new System.Drawing.Size(255, 146);
+            this.grPrix.Size = new System.Drawing.Size(254, 152);
             this.grPrix.TabIndex = 2;
             this.grPrix.TabStop = false;
             this.grPrix.Text = "Attribution de prix";
+            this.grPrix.Visible = false;
             // 
             // btnAfficherPrix
             // 
@@ -427,6 +440,17 @@
             this.grCarteCredit.TabStop = false;
             this.grCarteCredit.Text = "Carte de crédit";
             this.grCarteCredit.Visible = false;
+            // 
+            // lblMessageCredit
+            // 
+            this.lblMessageCredit.AutoSize = true;
+            this.lblMessageCredit.ForeColor = System.Drawing.Color.Maroon;
+            this.lblMessageCredit.Location = new System.Drawing.Point(165, 152);
+            this.lblMessageCredit.Name = "lblMessageCredit";
+            this.lblMessageCredit.Size = new System.Drawing.Size(132, 15);
+            this.lblMessageCredit.TabIndex = 16;
+            this.lblMessageCredit.Text = "* Champs obligatoire(s)";
+            this.lblMessageCredit.Visible = false;
             // 
             // dtpExpiration
             // 
@@ -524,17 +548,6 @@
             this.txtNumeroCarte.Name = "txtNumeroCarte";
             this.txtNumeroCarte.Size = new System.Drawing.Size(201, 23);
             this.txtNumeroCarte.TabIndex = 1;
-            // 
-            // lblInfoDon
-            // 
-            this.lblInfoDon.AutoSize = true;
-            this.lblInfoDon.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.lblInfoDon.Location = new System.Drawing.Point(34, 257);
-            this.lblInfoDon.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.lblInfoDon.Name = "lblInfoDon";
-            this.lblInfoDon.Size = new System.Drawing.Size(110, 15);
-            this.lblInfoDon.TabIndex = 0;
-            this.lblInfoDon.Text = "Information Don";
             // 
             // tabCommanditaire
             // 
@@ -776,17 +789,6 @@
             this.textBoxOutput.Size = new System.Drawing.Size(1092, 158);
             this.textBoxOutput.TabIndex = 0;
             // 
-            // lblMessageCredit
-            // 
-            this.lblMessageCredit.AutoSize = true;
-            this.lblMessageCredit.ForeColor = System.Drawing.Color.Maroon;
-            this.lblMessageCredit.Location = new System.Drawing.Point(165, 152);
-            this.lblMessageCredit.Name = "lblMessageCredit";
-            this.lblMessageCredit.Size = new System.Drawing.Size(132, 15);
-            this.lblMessageCredit.TabIndex = 16;
-            this.lblMessageCredit.Text = "* Champs obligatoire(s)";
-            this.lblMessageCredit.Visible = false;
-            // 
             // interface_temp
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
@@ -799,9 +801,8 @@
             this.Text = "Form2";
             this.tabEntrees.ResumeLayout(false);
             this.tabDonateur.ResumeLayout(false);
-            this.tabDonateur.PerformLayout();
-            this.panel1.ResumeLayout(false);
-            this.panel1.PerformLayout();
+            this.pnlDon.ResumeLayout(false);
+            this.pnlDon.PerformLayout();
             this.pnlInfoDonateur.ResumeLayout(false);
             this.pnlInfoDonateur.PerformLayout();
             this.grPrix.ResumeLayout(false);
@@ -884,7 +885,7 @@
         private TextBox txtEntreprise;
         private Panel pnlInfoDonateur;
         private Button btnSuivant;
-        private Panel panel1;
+        private Panel pnlDon;
         private Label lblMessageDonateur;
         private Label lblMessageCredit;
     }
