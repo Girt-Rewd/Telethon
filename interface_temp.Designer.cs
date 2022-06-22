@@ -39,8 +39,14 @@
             this.radVisa = new System.Windows.Forms.RadioButton();
             this.dtpExpiration = new System.Windows.Forms.DateTimePicker();
             this.lblNoCredit = new System.Windows.Forms.Label();
+            this.lblCarteCredit = new System.Windows.Forms.Label();
             this.txtNumeroCarte = new System.Windows.Forms.TextBox();
             this.lblDateExp = new System.Windows.Forms.Label();
+            this.pnlPrix = new System.Windows.Forms.Panel();
+            this.lblqte = new System.Windows.Forms.Label();
+            this.txtQtePrix = new System.Windows.Forms.TextBox();
+            this.btnAfficherPrix = new System.Windows.Forms.Button();
+            this.label2 = new System.Windows.Forms.Label();
             this.pnlDon = new System.Windows.Forms.Panel();
             this.lblIDDon = new System.Windows.Forms.Label();
             this.lblMontant = new System.Windows.Forms.Label();
@@ -88,20 +94,14 @@
             this.lblInfoCommanditaire = new System.Windows.Forms.Label();
             this.lblIDCommanditaire = new System.Windows.Forms.Label();
             this.textBoxOutput = new System.Windows.Forms.TextBox();
-            this.lblCarteCredit = new System.Windows.Forms.Label();
-            this.pnlPrix = new System.Windows.Forms.Panel();
-            this.label2 = new System.Windows.Forms.Label();
-            this.txtQtePrix = new System.Windows.Forms.TextBox();
-            this.lblqte = new System.Windows.Forms.Label();
-            this.btnAfficherPrix = new System.Windows.Forms.Button();
             this.tabEntrees.SuspendLayout();
             this.tabDonateur.SuspendLayout();
             this.pnlCarteCredit.SuspendLayout();
             this.grRadioCarte.SuspendLayout();
+            this.pnlPrix.SuspendLayout();
             this.pnlDon.SuspendLayout();
             this.pnlInfoDonateur.SuspendLayout();
             this.tabCommanditaire.SuspendLayout();
-            this.pnlPrix.SuspendLayout();
             this.SuspendLayout();
             // 
             // tabEntrees
@@ -112,7 +112,7 @@
             this.tabEntrees.Margin = new System.Windows.Forms.Padding(4);
             this.tabEntrees.Name = "tabEntrees";
             this.tabEntrees.SelectedIndex = 0;
-            this.tabEntrees.Size = new System.Drawing.Size(1052, 467);
+            this.tabEntrees.Size = new System.Drawing.Size(806, 341);
             this.tabEntrees.TabIndex = 1;
             // 
             // tabDonateur
@@ -128,7 +128,7 @@
             this.tabDonateur.Margin = new System.Windows.Forms.Padding(4);
             this.tabDonateur.Name = "tabDonateur";
             this.tabDonateur.Padding = new System.Windows.Forms.Padding(4);
-            this.tabDonateur.Size = new System.Drawing.Size(1044, 439);
+            this.tabDonateur.Size = new System.Drawing.Size(798, 313);
             this.tabDonateur.TabIndex = 0;
             this.tabDonateur.Text = "Donateur";
             this.tabDonateur.UseVisualStyleBackColor = true;
@@ -239,6 +239,17 @@
             this.lblNoCredit.TabIndex = 0;
             this.lblNoCredit.Text = "Numéro de carte :";
             // 
+            // lblCarteCredit
+            // 
+            this.lblCarteCredit.AutoSize = true;
+            this.lblCarteCredit.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.lblCarteCredit.Location = new System.Drawing.Point(14, 9);
+            this.lblCarteCredit.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lblCarteCredit.Name = "lblCarteCredit";
+            this.lblCarteCredit.Size = new System.Drawing.Size(117, 15);
+            this.lblCarteCredit.TabIndex = 0;
+            this.lblCarteCredit.Text = "Informations Don";
+            // 
             // txtNumeroCarte
             // 
             this.txtNumeroCarte.Location = new System.Drawing.Point(215, 94);
@@ -256,6 +267,57 @@
             this.lblDateExp.Size = new System.Drawing.Size(103, 15);
             this.lblDateExp.TabIndex = 0;
             this.lblDateExp.Text = "Date d’expiration :";
+            // 
+            // pnlPrix
+            // 
+            this.pnlPrix.Controls.Add(this.lblqte);
+            this.pnlPrix.Controls.Add(this.txtQtePrix);
+            this.pnlPrix.Controls.Add(this.btnAfficherPrix);
+            this.pnlPrix.Controls.Add(this.label2);
+            this.pnlPrix.Location = new System.Drawing.Point(294, 12);
+            this.pnlPrix.Name = "pnlPrix";
+            this.pnlPrix.Size = new System.Drawing.Size(248, 153);
+            this.pnlPrix.TabIndex = 12;
+            this.pnlPrix.Visible = false;
+            // 
+            // lblqte
+            // 
+            this.lblqte.AutoSize = true;
+            this.lblqte.Location = new System.Drawing.Point(46, 99);
+            this.lblqte.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lblqte.Name = "lblqte";
+            this.lblqte.Size = new System.Drawing.Size(59, 15);
+            this.lblqte.TabIndex = 0;
+            this.lblqte.Text = "Quantité :";
+            // 
+            // txtQtePrix
+            // 
+            this.txtQtePrix.Location = new System.Drawing.Point(113, 96);
+            this.txtQtePrix.Margin = new System.Windows.Forms.Padding(4);
+            this.txtQtePrix.Name = "txtQtePrix";
+            this.txtQtePrix.Size = new System.Drawing.Size(104, 23);
+            this.txtQtePrix.TabIndex = 2;
+            // 
+            // btnAfficherPrix
+            // 
+            this.btnAfficherPrix.Location = new System.Drawing.Point(46, 40);
+            this.btnAfficherPrix.Margin = new System.Windows.Forms.Padding(4);
+            this.btnAfficherPrix.Name = "btnAfficherPrix";
+            this.btnAfficherPrix.Size = new System.Drawing.Size(171, 34);
+            this.btnAfficherPrix.TabIndex = 0;
+            this.btnAfficherPrix.Text = "Afficher les prix";
+            this.btnAfficherPrix.UseVisualStyleBackColor = true;
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.label2.Location = new System.Drawing.Point(14, 11);
+            this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(91, 15);
+            this.label2.TabIndex = 0;
+            this.label2.Text = "Récompense";
             // 
             // pnlDon
             // 
@@ -476,7 +538,7 @@
             // 
             // btnAfficherDonateur
             // 
-            this.btnAfficherDonateur.Location = new System.Drawing.Point(816, 311);
+            this.btnAfficherDonateur.Location = new System.Drawing.Point(573, 150);
             this.btnAfficherDonateur.Margin = new System.Windows.Forms.Padding(4);
             this.btnAfficherDonateur.Name = "btnAfficherDonateur";
             this.btnAfficherDonateur.Size = new System.Drawing.Size(189, 34);
@@ -487,7 +549,7 @@
             // 
             // btnQuitter
             // 
-            this.btnQuitter.Location = new System.Drawing.Point(847, 381);
+            this.btnQuitter.Location = new System.Drawing.Point(573, 220);
             this.btnQuitter.Margin = new System.Windows.Forms.Padding(4);
             this.btnQuitter.Name = "btnQuitter";
             this.btnQuitter.Size = new System.Drawing.Size(189, 34);
@@ -497,7 +559,7 @@
             // 
             // btnAfficheDon
             // 
-            this.btnAfficheDon.Location = new System.Drawing.Point(816, 269);
+            this.btnAfficheDon.Location = new System.Drawing.Point(573, 108);
             this.btnAfficheDon.Margin = new System.Windows.Forms.Padding(4);
             this.btnAfficheDon.Name = "btnAfficheDon";
             this.btnAfficheDon.Size = new System.Drawing.Size(189, 34);
@@ -738,74 +800,13 @@
             // 
             // textBoxOutput
             // 
-            this.textBoxOutput.Location = new System.Drawing.Point(38, 510);
+            this.textBoxOutput.Location = new System.Drawing.Point(32, 363);
             this.textBoxOutput.Margin = new System.Windows.Forms.Padding(4);
             this.textBoxOutput.Multiline = true;
             this.textBoxOutput.Name = "textBoxOutput";
-            this.textBoxOutput.Size = new System.Drawing.Size(1092, 158);
+            this.textBoxOutput.Size = new System.Drawing.Size(806, 251);
             this.textBoxOutput.TabIndex = 0;
-            // 
-            // lblCarteCredit
-            // 
-            this.lblCarteCredit.AutoSize = true;
-            this.lblCarteCredit.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.lblCarteCredit.Location = new System.Drawing.Point(14, 9);
-            this.lblCarteCredit.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.lblCarteCredit.Name = "lblCarteCredit";
-            this.lblCarteCredit.Size = new System.Drawing.Size(117, 15);
-            this.lblCarteCredit.TabIndex = 0;
-            this.lblCarteCredit.Text = "Informations Don";
-            // 
-            // pnlPrix
-            // 
-            this.pnlPrix.Controls.Add(this.lblqte);
-            this.pnlPrix.Controls.Add(this.txtQtePrix);
-            this.pnlPrix.Controls.Add(this.btnAfficherPrix);
-            this.pnlPrix.Controls.Add(this.label2);
-            this.pnlPrix.Location = new System.Drawing.Point(294, 12);
-            this.pnlPrix.Name = "pnlPrix";
-            this.pnlPrix.Size = new System.Drawing.Size(248, 153);
-            this.pnlPrix.TabIndex = 12;
-            this.pnlPrix.Visible = false;
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.label2.Location = new System.Drawing.Point(14, 11);
-            this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(91, 15);
-            this.label2.TabIndex = 0;
-            this.label2.Text = "Récompense";
-            // 
-            // txtQtePrix
-            // 
-            this.txtQtePrix.Location = new System.Drawing.Point(113, 96);
-            this.txtQtePrix.Margin = new System.Windows.Forms.Padding(4);
-            this.txtQtePrix.Name = "txtQtePrix";
-            this.txtQtePrix.Size = new System.Drawing.Size(104, 23);
-            this.txtQtePrix.TabIndex = 2;
-            // 
-            // lblqte
-            // 
-            this.lblqte.AutoSize = true;
-            this.lblqte.Location = new System.Drawing.Point(46, 99);
-            this.lblqte.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.lblqte.Name = "lblqte";
-            this.lblqte.Size = new System.Drawing.Size(59, 15);
-            this.lblqte.TabIndex = 0;
-            this.lblqte.Text = "Quantité :";
-            // 
-            // btnAfficherPrix
-            // 
-            this.btnAfficherPrix.Location = new System.Drawing.Point(46, 40);
-            this.btnAfficherPrix.Margin = new System.Windows.Forms.Padding(4);
-            this.btnAfficherPrix.Name = "btnAfficherPrix";
-            this.btnAfficherPrix.Size = new System.Drawing.Size(171, 34);
-            this.btnAfficherPrix.TabIndex = 0;
-            this.btnAfficherPrix.Text = "Afficher les prix";
-            this.btnAfficherPrix.UseVisualStyleBackColor = true;
+            this.textBoxOutput.TextChanged += new System.EventHandler(this.textBoxOutput_TextChanged);
             // 
             // interface_temp
             // 
@@ -823,14 +824,14 @@
             this.pnlCarteCredit.PerformLayout();
             this.grRadioCarte.ResumeLayout(false);
             this.grRadioCarte.PerformLayout();
+            this.pnlPrix.ResumeLayout(false);
+            this.pnlPrix.PerformLayout();
             this.pnlDon.ResumeLayout(false);
             this.pnlDon.PerformLayout();
             this.pnlInfoDonateur.ResumeLayout(false);
             this.pnlInfoDonateur.PerformLayout();
             this.tabCommanditaire.ResumeLayout(false);
             this.tabCommanditaire.PerformLayout();
-            this.pnlPrix.ResumeLayout(false);
-            this.pnlPrix.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 

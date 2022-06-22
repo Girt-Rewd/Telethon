@@ -106,7 +106,10 @@ namespace Telethon
 
         }
 
+        private void textBoxOutput_TextChanged(object sender, EventArgs e)
+        {
 
+        }
     }
 
 }
