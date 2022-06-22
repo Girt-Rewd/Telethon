@@ -61,7 +61,7 @@ namespace Telethon
                 }
               
 
-                gestionnaireSTE.AjouterDonateur(txtPrenomDonateur.Text, txtNomDonateur.Text, txtCourrielDonateur.Text, txtTelephoneDonateur.Text, typeCarte, txtNumeroCarte.Text, dtpExpiration.Value.ToShortDateString(), gestionnaireSTE.donateurs.Count());
+                gestionnaireSTE.AjouterDonateur(txtPrenomDonateur.Text, txtNomDonateur.Text, txtCourrielDonateur.Text, mskTxtBoxTel.Text, typeCarte, txtNumeroCarte.Text, dtpExpiration.Value.ToShortDateString(), gestionnaireSTE.donateurs.Count());
                 pnlDon.Visible = true;
                 pnlPrix.Visible = true;
                 pnlCarteCredit.Visible = false;
@@ -93,22 +93,22 @@ namespace Telethon
 
         private void btnCacher_Click(object sender, EventArgs e)
         {
-            if (txtPrenomDonateur.Text == "" || txtNomDonateur.Text == "")// || txtTelephoneDonateur.Text == "")
+            if (txtPrenomDonateur.Text == "" || txtNomDonateur.Text == "" || mskTxtBoxTel.Text == "")
             {
                 lblPrenomDonateur.ForeColor = Color.Maroon;
                 lblPrenomDonateur.Text += "*";
                 lblNomDonateur.ForeColor = Color.Maroon;
                 lblNomDonateur.Text += "*";
-                //lblTelephone.ForeColor = Color.Maroon;
-               // lblTelephone.Text += "*";
+                lblTelephone.ForeColor = Color.Maroon;
+                lblTelephone.Text += "*";
                 lblMessageDonateur.Visible = true;
             }
             Regex telRegex = new Regex(@"^\(\d{3}\) \d{3}\-\d{4}$");
             if (!telRegex.IsMatch(mskTxtBoxTel.Text))
             {
                 MessageBox.Show("!! Le # de Téléphone ne respect pas le format (XXX)-XXX-XXXX !!");
-                txtTelephoneDonateur.Text = "";
-                txtTelephoneDonateur.Focus();
+                mskTxtBoxTel.Text = "";
+                mskTxtBoxTel.Focus();
                 lblTelephone.ForeColor = Color.Maroon;
                 lblMessageDonateur.Visible = true;
             }
@@ -118,7 +118,7 @@ namespace Telethon
                 pnlCarteCredit.Visible = true;
 
             }
-            textBoxOutput.Text = mskTxtBoxTel.Text;
+          
 
         }
 
@@ -135,6 +135,20 @@ namespace Telethon
         private void btnQuitter_Click(object sender, EventArgs e)
         {
             this.Close();
+        }
+
+        private void mskTxtBoxTel_Enter(object sender, EventArgs e)
+        {
+           
+           
+        }
+
+        private void mskTxtBoxTel_Click(object sender, EventArgs e)
+        {
+            mskTxtBoxTel.Focus(); if (mskTxtBoxTel != null)
+            {
+                mskTxtBoxTel.Select(0, 0);
+            }
         }
     }
 

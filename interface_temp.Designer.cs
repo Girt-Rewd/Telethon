@@ -67,7 +67,6 @@
             this.lblPrenomDonateur = new System.Windows.Forms.Label();
             this.lblNomDonateur = new System.Windows.Forms.Label();
             this.lblCourriel = new System.Windows.Forms.Label();
-            this.txtTelephoneDonateur = new System.Windows.Forms.TextBox();
             this.txtNomDonateur = new System.Windows.Forms.TextBox();
             this.txtCourrielDonateur = new System.Windows.Forms.TextBox();
             this.lblTelephone = new System.Windows.Forms.Label();
@@ -428,7 +427,6 @@
             this.pnlInfoDonateur.Controls.Add(this.lblPrenomDonateur);
             this.pnlInfoDonateur.Controls.Add(this.lblNomDonateur);
             this.pnlInfoDonateur.Controls.Add(this.lblCourriel);
-            this.pnlInfoDonateur.Controls.Add(this.txtTelephoneDonateur);
             this.pnlInfoDonateur.Controls.Add(this.txtNomDonateur);
             this.pnlInfoDonateur.Controls.Add(this.txtCourrielDonateur);
             this.pnlInfoDonateur.Controls.Add(this.lblTelephone);
@@ -440,11 +438,13 @@
             // 
             // mskTxtBoxTel
             // 
-            this.mskTxtBoxTel.Location = new System.Drawing.Point(3, 280);
+            this.mskTxtBoxTel.Location = new System.Drawing.Point(129, 250);
             this.mskTxtBoxTel.Mask = "\\(000\\) 000\\-0000";
             this.mskTxtBoxTel.Name = "mskTxtBoxTel";
-            this.mskTxtBoxTel.Size = new System.Drawing.Size(125, 27);
+            this.mskTxtBoxTel.Size = new System.Drawing.Size(191, 27);
             this.mskTxtBoxTel.TabIndex = 17;
+            this.mskTxtBoxTel.Click += new System.EventHandler(this.mskTxtBoxTel_Click);
+            this.mskTxtBoxTel.Enter += new System.EventHandler(this.mskTxtBoxTel_Enter);
             // 
             // lblMessageDonateur
             // 
@@ -535,15 +535,6 @@
             this.lblCourriel.Size = new System.Drawing.Size(68, 20);
             this.lblCourriel.TabIndex = 0;
             this.lblCourriel.Text = "Courriel :";
-            // 
-            // txtTelephoneDonateur
-            // 
-            this.txtTelephoneDonateur.Location = new System.Drawing.Point(129, 245);
-            this.txtTelephoneDonateur.Margin = new System.Windows.Forms.Padding(5);
-            this.txtTelephoneDonateur.Name = "txtTelephoneDonateur";
-            this.txtTelephoneDonateur.Size = new System.Drawing.Size(191, 27);
-            this.txtTelephoneDonateur.TabIndex = 5;
-            this.txtTelephoneDonateur.TextChanged += new System.EventHandler(this.txtTelephoneDonateur_TextChanged);
             // 
             // txtNomDonateur
             // 
@@ -952,7 +943,6 @@
         private Label lblDateExp;
         private TextBox txtNumeroCarte;
         private TextBox txtMontant;
-        private TextBox txtTelephoneDonateur;
         private TextBox txtIDDon;
         private TextBox txtCourrielDonateur;
         private TextBox txtNomDonateur;
