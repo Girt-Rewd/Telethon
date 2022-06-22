@@ -5,6 +5,7 @@ using System.Data;
 using System.Drawing;
 using System.Linq;
 using System.Text;
+using System.Text.RegularExpressions;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using STELib;
@@ -58,6 +59,8 @@ namespace Telethon
                 {
                     typeCarte = 'V';
                 }
+              
+
                 gestionnaireSTE.AjouterDonateur(txtPrenomDonateur.Text, txtNomDonateur.Text, txtCourrielDonateur.Text, txtTelephoneDonateur.Text, typeCarte, txtNumeroCarte.Text, dtpExpiration.Value.ToShortDateString(), gestionnaireSTE.donateurs.Count());
                 pnlDon.Visible = true;
                 pnlPrix.Visible = true;
@@ -90,14 +93,23 @@ namespace Telethon
 
         private void btnCacher_Click(object sender, EventArgs e)
         {
-            if (txtPrenomDonateur.Text == "" || txtNomDonateur.Text == "" || txtTelephoneDonateur.Text == "")
+            if (txtPrenomDonateur.Text == "" || txtNomDonateur.Text == "")// || txtTelephoneDonateur.Text == "")
             {
                 lblPrenomDonateur.ForeColor = Color.Maroon;
                 lblPrenomDonateur.Text += "*";
                 lblNomDonateur.ForeColor = Color.Maroon;
                 lblNomDonateur.Text += "*";
+                //lblTelephone.ForeColor = Color.Maroon;
+               // lblTelephone.Text += "*";
+                lblMessageDonateur.Visible = true;
+            }
+            Regex telRegex = new Regex(@"^\(\d{3}\) \d{3}\-\d{4}$");
+            if (!telRegex.IsMatch(mskTxtBoxTel.Text))
+            {
+                MessageBox.Show("!! Le # de Téléphone ne respect pas le format (XXX)-XXX-XXXX !!");
+                txtTelephoneDonateur.Text = "";
+                txtTelephoneDonateur.Focus();
                 lblTelephone.ForeColor = Color.Maroon;
-                lblTelephone.Text += "*";
                 lblMessageDonateur.Visible = true;
             }
             else if (pnlInfoDonateur.Visible)
@@ -106,6 +118,7 @@ namespace Telethon
                 pnlCarteCredit.Visible = true;
 
             }
+            textBoxOutput.Text = mskTxtBoxTel.Text;
 
         }
 
