@@ -147,8 +147,24 @@ namespace STELib
         ///     1. calculer les points gagnés par un donateur en fonction de son don
         ///     2. Attribuer un prix correspondant au nombre de points
         /// </summary>
-        public void AttribuerPrix()
+        public void AttribuerPrix(double montant)
         {
+            int points = 0;
+            if (montant >= 50 && montant < 200)
+            {
+                points = 1;
+            }
+            else if (montant >= 200 && montant < 350)
+            {
+                points = 2;
+            }
+            else if (montant >= 350 && montant < 500)
+            {
+                points = 3;
+            }
+            else { 
+                points = 5 + 4*(int)(montant/500);
+            }
             // TODO AttribuerPrix() calcule le nombre de points associé au montant du don.  le nombre de point sera affiché dans la case « Quantité » du groupe Box « attribuer prix »
             // $50 – $199    -> 1 points
             // $200 – $349   -> 2 points
@@ -175,7 +191,8 @@ namespace STELib
             //TODO EnregistrerDonateur()
             return true;
         }
-
+        // TODO Effacer cette fonction . Elle ne sert qu’à faire un test
+        public 
 
 
 
