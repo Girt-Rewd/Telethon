@@ -265,9 +265,9 @@
             this.pnlDon.Controls.Add(this.textBox7);
             this.pnlDon.Controls.Add(this.btnAjouterDon);
             this.pnlDon.Controls.Add(this.lblInfoDon);
-            this.pnlDon.Location = new System.Drawing.Point(34, 259);
+            this.pnlDon.Location = new System.Drawing.Point(34, 12);
             this.pnlDon.Name = "pnlDon";
-            this.pnlDon.Size = new System.Drawing.Size(261, 153);
+            this.pnlDon.Size = new System.Drawing.Size(248, 153);
             this.pnlDon.TabIndex = 12;
             this.pnlDon.Visible = false;
             // 
@@ -762,9 +762,9 @@
             this.pnlPrix.Controls.Add(this.txtQtePrix);
             this.pnlPrix.Controls.Add(this.btnAfficherPrix);
             this.pnlPrix.Controls.Add(this.label2);
-            this.pnlPrix.Location = new System.Drawing.Point(301, 259);
+            this.pnlPrix.Location = new System.Drawing.Point(294, 12);
             this.pnlPrix.Name = "pnlPrix";
-            this.pnlPrix.Size = new System.Drawing.Size(261, 153);
+            this.pnlPrix.Size = new System.Drawing.Size(248, 153);
             this.pnlPrix.TabIndex = 12;
             this.pnlPrix.Visible = false;
             // 
@@ -781,10 +781,10 @@
             // 
             // txtQtePrix
             // 
-            this.txtQtePrix.Location = new System.Drawing.Point(125, 96);
+            this.txtQtePrix.Location = new System.Drawing.Point(113, 96);
             this.txtQtePrix.Margin = new System.Windows.Forms.Padding(4);
             this.txtQtePrix.Name = "txtQtePrix";
-            this.txtQtePrix.Size = new System.Drawing.Size(112, 23);
+            this.txtQtePrix.Size = new System.Drawing.Size(104, 23);
             this.txtQtePrix.TabIndex = 2;
             // 
             // lblqte
@@ -799,10 +799,10 @@
             // 
             // btnAfficherPrix
             // 
-            this.btnAfficherPrix.Location = new System.Drawing.Point(52, 34);
+            this.btnAfficherPrix.Location = new System.Drawing.Point(46, 40);
             this.btnAfficherPrix.Margin = new System.Windows.Forms.Padding(4);
             this.btnAfficherPrix.Name = "btnAfficherPrix";
-            this.btnAfficherPrix.Size = new System.Drawing.Size(189, 34);
+            this.btnAfficherPrix.Size = new System.Drawing.Size(171, 34);
             this.btnAfficherPrix.TabIndex = 0;
             this.btnAfficherPrix.Text = "Afficher les prix";
             this.btnAfficherPrix.UseVisualStyleBackColor = true;
