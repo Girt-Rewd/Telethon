@@ -46,7 +46,7 @@
             this.lblqte = new System.Windows.Forms.Label();
             this.txtQtePrix = new System.Windows.Forms.TextBox();
             this.btnCalculRecompense = new System.Windows.Forms.Button();
-            this.label2 = new System.Windows.Forms.Label();
+            this.lblRecompense = new System.Windows.Forms.Label();
             this.pnlDon = new System.Windows.Forms.Panel();
             this.lblIDDon = new System.Windows.Forms.Label();
             this.lblMontant = new System.Windows.Forms.Label();
@@ -273,7 +273,7 @@
             this.pnlPrix.Controls.Add(this.lblqte);
             this.pnlPrix.Controls.Add(this.txtQtePrix);
             this.pnlPrix.Controls.Add(this.btnCalculRecompense);
-            this.pnlPrix.Controls.Add(this.label2);
+            this.pnlPrix.Controls.Add(this.lblRecompense);
             this.pnlPrix.Location = new System.Drawing.Point(294, 12);
             this.pnlPrix.Name = "pnlPrix";
             this.pnlPrix.Size = new System.Drawing.Size(248, 153);
@@ -308,16 +308,16 @@
             this.btnCalculRecompense.Text = "Afficher les prix";
             this.btnCalculRecompense.UseVisualStyleBackColor = true;
             // 
-            // label2
+            // lblRecompense
             // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.label2.Location = new System.Drawing.Point(14, 11);
-            this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(91, 15);
-            this.label2.TabIndex = 0;
-            this.label2.Text = "Récompense";
+            this.lblRecompense.AutoSize = true;
+            this.lblRecompense.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.lblRecompense.Location = new System.Drawing.Point(14, 11);
+            this.lblRecompense.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lblRecompense.Name = "lblRecompense";
+            this.lblRecompense.Size = new System.Drawing.Size(91, 15);
+            this.lblRecompense.TabIndex = 0;
+            this.lblRecompense.Text = "Récompense";
             // 
             // pnlDon
             // 
@@ -906,7 +906,7 @@
         private Panel pnlCarteCredit;
         private Label lblCarteCredit;
         private Panel pnlPrix;
-        private Label label2;
+        private Label lblRecompense;
         private Label lblqte;
         private TextBox txtQtePrix;
         private Button btnCalculRecompense;
