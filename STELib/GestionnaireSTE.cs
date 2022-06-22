@@ -8,8 +8,6 @@ using System.Threading.Tasks;
 // TODO Le préposé doit être redirigé par l’interface s’il y a une erreur de frappe ou un champ non saisi (guidage en ergonomie)
 // TODO L’ajout du Donateur, Commanditaire ou Don n’est valide que si tous leschamps sont saisis sauf l’E-mail qui n’est pas obligatoire
 // TODO refaire l’interface de manière à alléger la surcharge d’information et de replacer les boutons aux endroit adéquats.
-// TODO Clarifier que la carte de crédit fait partie des informations du donateur.
-// TODO Ajouter un bouton ou un onglet sur l’interface qui décrit votre projet et son fonctionnement, en mentionnant dans l’en tête les participantsdu projet (nom et prénom des étudiant du groupe).
 // TODO Mettre des info-bulles aux besoins pour le guidage de l’utilisateur
 namespace STELib
 {
