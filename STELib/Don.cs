@@ -17,8 +17,8 @@ namespace STELib
         
         private string idDon;
         private string dateDon;
-        private string idDonateur;
         private double montantDon;
+        private string idDonateur;
 
         // Constructeur à arguments
         public Don(string dateDon, string idDonateur, double montantDon, int nbDon)
