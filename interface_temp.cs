@@ -56,8 +56,8 @@ namespace Telethon
                 }
                 gestionnaireSTE.AjouterDonateur(txtPrenomDonateur.Text, txtNomDonateur.Text, txtCourrielDonateur.Text, txtTelephoneDonateur.Text, typeCarte, txtNumeroCarte.Text, dtpExpiration.Value.ToShortDateString(), gestionnaireSTE.donateurs.Count());
                 pnlDon.Visible = true;
-                grPrix.Visible = true;
-                grCarteCredit.Visible = false;
+                pnlPrix.Visible = true;
+                pnlCarteCredit.Visible = false;
             }
         }
 
@@ -95,7 +95,7 @@ namespace Telethon
             else if (pnlInfoDonateur.Visible)
             {
                 pnlInfoDonateur.Visible = false;
-                grCarteCredit.Visible = true;
+                pnlCarteCredit.Visible = true;
 
             }
 
