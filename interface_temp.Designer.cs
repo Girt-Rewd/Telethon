@@ -594,7 +594,7 @@
             this.tabCommanditaire.Margin = new System.Windows.Forms.Padding(4);
             this.tabCommanditaire.Name = "tabCommanditaire";
             this.tabCommanditaire.Padding = new System.Windows.Forms.Padding(4);
-            this.tabCommanditaire.Size = new System.Drawing.Size(1095, 313);
+            this.tabCommanditaire.Size = new System.Drawing.Size(798, 313);
             this.tabCommanditaire.TabIndex = 1;
             this.tabCommanditaire.Text = "Commanditaires";
             this.tabCommanditaire.UseVisualStyleBackColor = true;
@@ -609,7 +609,7 @@
             // 
             // btnAffichePrix
             // 
-            this.btnAffichePrix.Location = new System.Drawing.Point(613, 252);
+            this.btnAffichePrix.Location = new System.Drawing.Point(595, 252);
             this.btnAffichePrix.Margin = new System.Windows.Forms.Padding(4);
             this.btnAffichePrix.Name = "btnAffichePrix";
             this.btnAffichePrix.Size = new System.Drawing.Size(182, 41);
@@ -619,7 +619,7 @@
             // 
             // btnAjouterPrix
             // 
-            this.btnAjouterPrix.Location = new System.Drawing.Point(423, 252);
+            this.btnAjouterPrix.Location = new System.Drawing.Point(405, 252);
             this.btnAjouterPrix.Margin = new System.Windows.Forms.Padding(4);
             this.btnAjouterPrix.Name = "btnAjouterPrix";
             this.btnAjouterPrix.Size = new System.Drawing.Size(182, 41);
@@ -630,7 +630,7 @@
             // 
             // btnAfficherComm
             // 
-            this.btnAfficherComm.Location = new System.Drawing.Point(231, 252);
+            this.btnAfficherComm.Location = new System.Drawing.Point(215, 252);
             this.btnAfficherComm.Margin = new System.Windows.Forms.Padding(4);
             this.btnAfficherComm.Name = "btnAfficherComm";
             this.btnAfficherComm.Size = new System.Drawing.Size(182, 41);
@@ -641,7 +641,7 @@
             // 
             // btnAjouterComm
             // 
-            this.btnAjouterComm.Location = new System.Drawing.Point(41, 252);
+            this.btnAjouterComm.Location = new System.Drawing.Point(25, 252);
             this.btnAjouterComm.Margin = new System.Windows.Forms.Padding(4);
             this.btnAjouterComm.Name = "btnAjouterComm";
             this.btnAjouterComm.Size = new System.Drawing.Size(182, 41);
