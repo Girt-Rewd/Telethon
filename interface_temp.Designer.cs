@@ -812,7 +812,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1162, 682);
+            this.ClientSize = new System.Drawing.Size(867, 682);
             this.Controls.Add(this.textBoxOutput);
             this.Controls.Add(this.tabEntrees);
             this.Margin = new System.Windows.Forms.Padding(4);
