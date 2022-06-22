@@ -127,20 +127,9 @@ namespace Telethon
 
         }
 
-        private void textBoxOutput_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
         private void btnQuitter_Click(object sender, EventArgs e)
         {
             this.Close();
-        }
-
-        private void mskTxtBoxTel_Enter(object sender, EventArgs e)
-        {
-           
-           
         }
 
         private void mskTxtBoxTel_Click(object sender, EventArgs e)
