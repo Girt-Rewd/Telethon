@@ -56,6 +56,7 @@
             this.btnAjouterDon = new System.Windows.Forms.Button();
             this.lblInfoDon = new System.Windows.Forms.Label();
             this.pnlInfoDonateur = new System.Windows.Forms.Panel();
+            this.mskTxtBoxTel = new System.Windows.Forms.MaskedTextBox();
             this.lblMessageDonateur = new System.Windows.Forms.Label();
             this.lblnfoDonateur = new System.Windows.Forms.Label();
             this.lblID = new System.Windows.Forms.Label();
@@ -65,7 +66,6 @@
             this.lblPrenomDonateur = new System.Windows.Forms.Label();
             this.lblNomDonateur = new System.Windows.Forms.Label();
             this.lblCourriel = new System.Windows.Forms.Label();
-            this.txtTelephoneDonateur = new System.Windows.Forms.TextBox();
             this.txtNomDonateur = new System.Windows.Forms.TextBox();
             this.txtCourrielDonateur = new System.Windows.Forms.TextBox();
             this.lblTelephone = new System.Windows.Forms.Label();
@@ -329,7 +329,7 @@
             this.lblRecompense.Location = new System.Drawing.Point(12, 8);
             this.lblRecompense.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblRecompense.Name = "lblRecompense";
-            this.lblRecompense.Size = new System.Drawing.Size(91, 15);
+            this.lblRecompense.Size = new System.Drawing.Size(107, 18);
             this.lblRecompense.TabIndex = 0;
             this.lblRecompense.Text = "Récompense";
             // 
@@ -408,6 +408,7 @@
             // pnlInfoDonateur
             // 
             this.pnlInfoDonateur.BackColor = System.Drawing.Color.Transparent;
+            this.pnlInfoDonateur.Controls.Add(this.mskTxtBoxTel);
             this.pnlInfoDonateur.Controls.Add(this.lblMessageDonateur);
             this.pnlInfoDonateur.Controls.Add(this.lblnfoDonateur);
             this.pnlInfoDonateur.Controls.Add(this.lblID);
@@ -417,7 +418,6 @@
             this.pnlInfoDonateur.Controls.Add(this.lblPrenomDonateur);
             this.pnlInfoDonateur.Controls.Add(this.lblNomDonateur);
             this.pnlInfoDonateur.Controls.Add(this.lblCourriel);
-            this.pnlInfoDonateur.Controls.Add(this.txtTelephoneDonateur);
             this.pnlInfoDonateur.Controls.Add(this.txtNomDonateur);
             this.pnlInfoDonateur.Controls.Add(this.txtCourrielDonateur);
             this.pnlInfoDonateur.Controls.Add(this.lblTelephone);
@@ -425,6 +425,16 @@
             this.pnlInfoDonateur.Name = "pnlInfoDonateur";
             this.pnlInfoDonateur.Size = new System.Drawing.Size(508, 241);
             this.pnlInfoDonateur.TabIndex = 3;
+            // 
+            // mskTxtBoxTel
+            // 
+            this.mskTxtBoxTel.Location = new System.Drawing.Point(129, 250);
+            this.mskTxtBoxTel.Mask = "\\(000\\) 000\\-0000";
+            this.mskTxtBoxTel.Name = "mskTxtBoxTel";
+            this.mskTxtBoxTel.Size = new System.Drawing.Size(191, 27);
+            this.mskTxtBoxTel.TabIndex = 17;
+            this.mskTxtBoxTel.Click += new System.EventHandler(this.mskTxtBoxTel_Click);
+            this.mskTxtBoxTel.Enter += new System.EventHandler(this.mskTxtBoxTel_Enter);
             // 
             // lblMessageDonateur
             // 
@@ -515,15 +525,6 @@
             this.lblCourriel.Size = new System.Drawing.Size(55, 15);
             this.lblCourriel.TabIndex = 0;
             this.lblCourriel.Text = "Courriel :";
-            // 
-            // txtTelephoneDonateur
-            // 
-            this.txtTelephoneDonateur.Location = new System.Drawing.Point(113, 184);
-            this.txtTelephoneDonateur.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.txtTelephoneDonateur.Name = "txtTelephoneDonateur";
-            this.txtTelephoneDonateur.Size = new System.Drawing.Size(168, 23);
-            this.txtTelephoneDonateur.TabIndex = 5;
-            this.txtTelephoneDonateur.TextChanged += new System.EventHandler(this.txtTelephoneDonateur_TextChanged);
             // 
             // txtNomDonateur
             // 
@@ -864,7 +865,7 @@
             this.lblFred.AutoSize = true;
             this.lblFred.Location = new System.Drawing.Point(82, 71);
             this.lblFred.Name = "lblFred";
-            this.lblFred.Size = new System.Drawing.Size(87, 15);
+            this.lblFred.Size = new System.Drawing.Size(109, 20);
             this.lblFred.TabIndex = 0;
             this.lblFred.Text = "Frédérick Faidit";
             // 
@@ -887,12 +888,19 @@
             this.lblInfoProjetSTE.Text = "STE v1.0";
             // 
             // txtNumeroCarte
+            // lblInfoProjetSTE
             // 
             this.txtNumeroCarte.Location = new System.Drawing.Point(279, 95);
             this.txtNumeroCarte.Mask = "0000 0000 0000 0000";
             this.txtNumeroCarte.Name = "txtNumeroCarte";
             this.txtNumeroCarte.Size = new System.Drawing.Size(137, 23);
             this.txtNumeroCarte.TabIndex = 17;
+            this.lblInfoProjetSTE.AutoSize = true;
+            this.lblInfoProjetSTE.Location = new System.Drawing.Point(48, 36);
+            this.lblInfoProjetSTE.Name = "lblInfoProjetSTE";
+            this.lblInfoProjetSTE.Size = new System.Drawing.Size(63, 20);
+            this.lblInfoProjetSTE.TabIndex = 0;
+            this.lblInfoProjetSTE.Text = "STE v1.0";
             // 
             // interface_temp
             // 
@@ -941,7 +949,6 @@
         private Label lblNoCredit;
         private Label lblDateExp;
         private TextBox txtMontant;
-        private TextBox txtTelephoneDonateur;
         private TextBox txtIDDon;
         private TextBox txtCourrielDonateur;
         private TextBox txtNomDonateur;
@@ -1002,5 +1009,6 @@
         private Label lblFred;
         private Label lblAuteur01;
         private MaskedTextBox txtNumeroCarte;
+        private MaskedTextBox mskTxtBoxTel;
     }
 }
