@@ -45,7 +45,7 @@
             this.pnlPrix = new System.Windows.Forms.Panel();
             this.lblqte = new System.Windows.Forms.Label();
             this.txtQtePrix = new System.Windows.Forms.TextBox();
-            this.btnAfficherPrix = new System.Windows.Forms.Button();
+            this.btnCalculRecompense = new System.Windows.Forms.Button();
             this.label2 = new System.Windows.Forms.Label();
             this.pnlDon = new System.Windows.Forms.Panel();
             this.lblIDDon = new System.Windows.Forms.Label();
@@ -73,8 +73,8 @@
             this.btnAfficheDon = new System.Windows.Forms.Button();
             this.tabCommanditaire = new System.Windows.Forms.TabPage();
             this.txtEntreprise = new System.Windows.Forms.TextBox();
-            this.btnAffichePrix02 = new System.Windows.Forms.Button();
-            this.btnAjoutrePrix = new System.Windows.Forms.Button();
+            this.btnAffichePrix = new System.Windows.Forms.Button();
+            this.btnAjouterPrix = new System.Windows.Forms.Button();
             this.btnAfficherComm = new System.Windows.Forms.Button();
             this.btnAjouterComm = new System.Windows.Forms.Button();
             this.txtQuatitePrix = new System.Windows.Forms.TextBox();
@@ -273,7 +273,7 @@
             // 
             this.pnlPrix.Controls.Add(this.lblqte);
             this.pnlPrix.Controls.Add(this.txtQtePrix);
-            this.pnlPrix.Controls.Add(this.btnAfficherPrix);
+            this.pnlPrix.Controls.Add(this.btnCalculRecompense);
             this.pnlPrix.Controls.Add(this.label2);
             this.pnlPrix.Location = new System.Drawing.Point(336, 16);
             this.pnlPrix.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
@@ -300,15 +300,15 @@
             this.txtQtePrix.Size = new System.Drawing.Size(118, 27);
             this.txtQtePrix.TabIndex = 2;
             // 
-            // btnAfficherPrix
+            // btnCalculRecompense
             // 
-            this.btnAfficherPrix.Location = new System.Drawing.Point(53, 53);
-            this.btnAfficherPrix.Margin = new System.Windows.Forms.Padding(5);
-            this.btnAfficherPrix.Name = "btnAfficherPrix";
-            this.btnAfficherPrix.Size = new System.Drawing.Size(195, 45);
-            this.btnAfficherPrix.TabIndex = 0;
-            this.btnAfficherPrix.Text = "Afficher les prix";
-            this.btnAfficherPrix.UseVisualStyleBackColor = true;
+            this.btnCalculRecompense.Location = new System.Drawing.Point(46, 40);
+            this.btnCalculRecompense.Margin = new System.Windows.Forms.Padding(4);
+            this.btnCalculRecompense.Name = "btnCalculRecompense";
+            this.btnCalculRecompense.Size = new System.Drawing.Size(171, 34);
+            this.btnCalculRecompense.TabIndex = 0;
+            this.btnCalculRecompense.Text = "Afficher les prix";
+            this.btnCalculRecompense.UseVisualStyleBackColor = true;
             // 
             // label2
             // 
@@ -561,6 +561,7 @@
             this.btnQuitter.TabIndex = 2;
             this.btnQuitter.Text = "Quitter";
             this.btnQuitter.UseVisualStyleBackColor = true;
+            this.btnQuitter.Click += new System.EventHandler(this.btnQuitter_Click);
             // 
             // btnAfficheDon
             // 
@@ -576,8 +577,8 @@
             // tabCommanditaire
             // 
             this.tabCommanditaire.Controls.Add(this.txtEntreprise);
-            this.tabCommanditaire.Controls.Add(this.btnAffichePrix02);
-            this.tabCommanditaire.Controls.Add(this.btnAjoutrePrix);
+            this.tabCommanditaire.Controls.Add(this.btnAffichePrix);
+            this.tabCommanditaire.Controls.Add(this.btnAjouterPrix);
             this.tabCommanditaire.Controls.Add(this.btnAfficherComm);
             this.tabCommanditaire.Controls.Add(this.btnAjouterComm);
             this.tabCommanditaire.Controls.Add(this.txtQuatitePrix);
@@ -599,8 +600,8 @@
             this.tabCommanditaire.Location = new System.Drawing.Point(4, 29);
             this.tabCommanditaire.Margin = new System.Windows.Forms.Padding(5);
             this.tabCommanditaire.Name = "tabCommanditaire";
-            this.tabCommanditaire.Padding = new System.Windows.Forms.Padding(5);
-            this.tabCommanditaire.Size = new System.Drawing.Size(913, 422);
+            this.tabCommanditaire.Padding = new System.Windows.Forms.Padding(4);
+            this.tabCommanditaire.Size = new System.Drawing.Size(798, 313);
             this.tabCommanditaire.TabIndex = 1;
             this.tabCommanditaire.Text = "Commanditaires";
             this.tabCommanditaire.UseVisualStyleBackColor = true;
@@ -613,31 +614,31 @@
             this.txtEntreprise.Size = new System.Drawing.Size(191, 27);
             this.txtEntreprise.TabIndex = 19;
             // 
-            // btnAffichePrix02
+            // btnAffichePrix
             // 
-            this.btnAffichePrix02.Location = new System.Drawing.Point(695, 448);
-            this.btnAffichePrix02.Margin = new System.Windows.Forms.Padding(5);
-            this.btnAffichePrix02.Name = "btnAffichePrix02";
-            this.btnAffichePrix02.Size = new System.Drawing.Size(208, 55);
-            this.btnAffichePrix02.TabIndex = 14;
-            this.btnAffichePrix02.Text = "Afficher les prix";
-            this.btnAffichePrix02.UseVisualStyleBackColor = true;
+            this.btnAffichePrix.Location = new System.Drawing.Point(595, 252);
+            this.btnAffichePrix.Margin = new System.Windows.Forms.Padding(4);
+            this.btnAffichePrix.Name = "btnAffichePrix";
+            this.btnAffichePrix.Size = new System.Drawing.Size(182, 41);
+            this.btnAffichePrix.TabIndex = 14;
+            this.btnAffichePrix.Text = "Afficher les prix";
+            this.btnAffichePrix.UseVisualStyleBackColor = true;
             // 
-            // btnAjoutrePrix
+            // btnAjouterPrix
             // 
-            this.btnAjoutrePrix.Location = new System.Drawing.Point(477, 448);
-            this.btnAjoutrePrix.Margin = new System.Windows.Forms.Padding(5);
-            this.btnAjoutrePrix.Name = "btnAjoutrePrix";
-            this.btnAjoutrePrix.Size = new System.Drawing.Size(208, 55);
-            this.btnAjoutrePrix.TabIndex = 15;
-            this.btnAjoutrePrix.Text = "Ajouter un prix";
-            this.btnAjoutrePrix.UseVisualStyleBackColor = true;
-            this.btnAjoutrePrix.Click += new System.EventHandler(this.btnAjouterPrix_Click);
+            this.btnAjouterPrix.Location = new System.Drawing.Point(405, 252);
+            this.btnAjouterPrix.Margin = new System.Windows.Forms.Padding(4);
+            this.btnAjouterPrix.Name = "btnAjouterPrix";
+            this.btnAjouterPrix.Size = new System.Drawing.Size(182, 41);
+            this.btnAjouterPrix.TabIndex = 15;
+            this.btnAjouterPrix.Text = "Ajouter un prix";
+            this.btnAjouterPrix.UseVisualStyleBackColor = true;
+            this.btnAjouterPrix.Click += new System.EventHandler(this.btnAjouterPrix_Click);
             // 
             // btnAfficherComm
             // 
-            this.btnAfficherComm.Location = new System.Drawing.Point(261, 448);
-            this.btnAfficherComm.Margin = new System.Windows.Forms.Padding(5);
+            this.btnAfficherComm.Location = new System.Drawing.Point(215, 252);
+            this.btnAfficherComm.Margin = new System.Windows.Forms.Padding(4);
             this.btnAfficherComm.Name = "btnAfficherComm";
             this.btnAfficherComm.Size = new System.Drawing.Size(208, 55);
             this.btnAfficherComm.TabIndex = 16;
@@ -647,8 +648,8 @@
             // 
             // btnAjouterComm
             // 
-            this.btnAjouterComm.Location = new System.Drawing.Point(43, 448);
-            this.btnAjouterComm.Margin = new System.Windows.Forms.Padding(5);
+            this.btnAjouterComm.Location = new System.Drawing.Point(25, 252);
+            this.btnAjouterComm.Margin = new System.Windows.Forms.Padding(4);
             this.btnAjouterComm.Name = "btnAjouterComm";
             this.btnAjouterComm.Size = new System.Drawing.Size(208, 55);
             this.btnAjouterComm.TabIndex = 17;
@@ -806,11 +807,11 @@
             // 
             // textBoxOutput
             // 
-            this.textBoxOutput.Location = new System.Drawing.Point(37, 484);
-            this.textBoxOutput.Margin = new System.Windows.Forms.Padding(5);
+            this.textBoxOutput.Location = new System.Drawing.Point(32, 359);
+            this.textBoxOutput.Margin = new System.Windows.Forms.Padding(4);
             this.textBoxOutput.Multiline = true;
             this.textBoxOutput.Name = "textBoxOutput";
-            this.textBoxOutput.Size = new System.Drawing.Size(921, 333);
+            this.textBoxOutput.Size = new System.Drawing.Size(804, 240);
             this.textBoxOutput.TabIndex = 0;
             this.textBoxOutput.TextChanged += new System.EventHandler(this.textBoxOutput_TextChanged);
             // 
@@ -818,7 +819,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1328, 909);
+            this.ClientSize = new System.Drawing.Size(867, 682);
             this.Controls.Add(this.textBoxOutput);
             this.Controls.Add(this.tabEntrees);
             this.Margin = new System.Windows.Forms.Padding(5);
@@ -878,8 +879,8 @@
         private Label lblID;
         private TextBox textBoxOutput;
         private Button btnQuitter;
-        private Button btnAffichePrix02;
-        private Button btnAjoutrePrix;
+        private Button btnAffichePrix;
+        private Button btnAjouterPrix;
         private Button btnAfficherComm;
         private Button btnAjouterComm;
         private TextBox txtQuatitePrix;
@@ -914,6 +915,6 @@
         private Label label2;
         private Label lblqte;
         private TextBox txtQtePrix;
-        private Button btnAfficherPrix;
+        private Button btnCalculRecompense;
     }
 }
