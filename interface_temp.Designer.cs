@@ -112,11 +112,12 @@
             this.tabEntrees.Margin = new System.Windows.Forms.Padding(5);
             this.tabEntrees.Name = "tabEntrees";
             this.tabEntrees.SelectedIndex = 0;
-            this.tabEntrees.Size = new System.Drawing.Size(921, 455);
+            this.tabEntrees.Size = new System.Drawing.Size(1294, 991);
             this.tabEntrees.TabIndex = 1;
             // 
             // tabDonateur
             // 
+            this.tabDonateur.Controls.Add(this.textBoxOutput);
             this.tabDonateur.Controls.Add(this.pnlCarteCredit);
             this.tabDonateur.Controls.Add(this.pnlPrix);
             this.tabDonateur.Controls.Add(this.pnlDon);
@@ -128,7 +129,7 @@
             this.tabDonateur.Margin = new System.Windows.Forms.Padding(5);
             this.tabDonateur.Name = "tabDonateur";
             this.tabDonateur.Padding = new System.Windows.Forms.Padding(5);
-            this.tabDonateur.Size = new System.Drawing.Size(913, 422);
+            this.tabDonateur.Size = new System.Drawing.Size(1286, 958);
             this.tabDonateur.TabIndex = 0;
             this.tabDonateur.Text = "Donateur";
             this.tabDonateur.UseVisualStyleBackColor = true;
@@ -143,10 +144,10 @@
             this.pnlCarteCredit.Controls.Add(this.lblCarteCredit);
             this.pnlCarteCredit.Controls.Add(this.txtNumeroCarte);
             this.pnlCarteCredit.Controls.Add(this.lblDateExp);
-            this.pnlCarteCredit.Location = new System.Drawing.Point(202, 69);
+            this.pnlCarteCredit.Location = new System.Drawing.Point(746, 520);
             this.pnlCarteCredit.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.pnlCarteCredit.Name = "pnlCarteCredit";
-            this.pnlCarteCredit.Size = new System.Drawing.Size(581, 632);
+            this.pnlCarteCredit.Size = new System.Drawing.Size(492, 417);
             this.pnlCarteCredit.TabIndex = 13;
             this.pnlCarteCredit.Visible = false;
             // 
@@ -601,7 +602,7 @@
             this.tabCommanditaire.Margin = new System.Windows.Forms.Padding(5);
             this.tabCommanditaire.Name = "tabCommanditaire";
             this.tabCommanditaire.Padding = new System.Windows.Forms.Padding(4);
-            this.tabCommanditaire.Size = new System.Drawing.Size(798, 313);
+            this.tabCommanditaire.Size = new System.Drawing.Size(1286, 958);
             this.tabCommanditaire.TabIndex = 1;
             this.tabCommanditaire.Text = "Commanditaires";
             this.tabCommanditaire.UseVisualStyleBackColor = true;
@@ -807,7 +808,7 @@
             // 
             // textBoxOutput
             // 
-            this.textBoxOutput.Location = new System.Drawing.Point(32, 359);
+            this.textBoxOutput.Location = new System.Drawing.Point(9, 339);
             this.textBoxOutput.Margin = new System.Windows.Forms.Padding(4);
             this.textBoxOutput.Multiline = true;
             this.textBoxOutput.Name = "textBoxOutput";
@@ -819,14 +820,14 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(867, 682);
-            this.Controls.Add(this.textBoxOutput);
+            this.ClientSize = new System.Drawing.Size(1345, 1024);
             this.Controls.Add(this.tabEntrees);
             this.Margin = new System.Windows.Forms.Padding(5);
             this.Name = "interface_temp";
             this.Text = "Form2";
             this.tabEntrees.ResumeLayout(false);
             this.tabDonateur.ResumeLayout(false);
+            this.tabDonateur.PerformLayout();
             this.pnlCarteCredit.ResumeLayout(false);
             this.pnlCarteCredit.PerformLayout();
             this.grRadioCarte.ResumeLayout(false);
@@ -840,7 +841,6 @@
             this.tabCommanditaire.ResumeLayout(false);
             this.tabCommanditaire.PerformLayout();
             this.ResumeLayout(false);
-            this.PerformLayout();
 
         }
 

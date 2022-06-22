@@ -65,8 +65,6 @@ namespace Telethon
             }
         }
 
-        
-
 
 
         private void btnAfficherDonateur_Click(object sender, EventArgs e)
