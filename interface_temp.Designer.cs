@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(interface_temp));
             this.tabEntrees = new System.Windows.Forms.TabControl();
             this.tabDonateur = new System.Windows.Forms.TabPage();
             this.pnlCarteCredit = new System.Windows.Forms.Panel();
@@ -46,7 +47,7 @@
             this.lblqte = new System.Windows.Forms.Label();
             this.txtQtePrix = new System.Windows.Forms.TextBox();
             this.btnCalculRecompense = new System.Windows.Forms.Button();
-            this.label2 = new System.Windows.Forms.Label();
+            this.lblRecompense = new System.Windows.Forms.Label();
             this.pnlDon = new System.Windows.Forms.Panel();
             this.lblIDDon = new System.Windows.Forms.Label();
             this.lblMontant = new System.Windows.Forms.Label();
@@ -94,6 +95,13 @@
             this.lblInfoCommanditaire = new System.Windows.Forms.Label();
             this.lblIDCommanditaire = new System.Windows.Forms.Label();
             this.textBoxOutput = new System.Windows.Forms.TextBox();
+            this.tabAPropos = new System.Windows.Forms.TabPage();
+            this.lblInfoProjetSTE = new System.Windows.Forms.Label();
+            this.lblAuteur01 = new System.Windows.Forms.Label();
+            this.lblFred = new System.Windows.Forms.Label();
+            this.lblCatherine = new System.Windows.Forms.Label();
+            this.lblOlivier = new System.Windows.Forms.Label();
+            this.richTextBox1 = new System.Windows.Forms.RichTextBox();
             this.tabEntrees.SuspendLayout();
             this.tabDonateur.SuspendLayout();
             this.pnlCarteCredit.SuspendLayout();
@@ -102,14 +110,16 @@
             this.pnlDon.SuspendLayout();
             this.pnlInfoDonateur.SuspendLayout();
             this.tabCommanditaire.SuspendLayout();
+            this.tabAPropos.SuspendLayout();
             this.SuspendLayout();
             // 
             // tabEntrees
             // 
             this.tabEntrees.Controls.Add(this.tabDonateur);
             this.tabEntrees.Controls.Add(this.tabCommanditaire);
-            this.tabEntrees.Location = new System.Drawing.Point(37, 19);
-            this.tabEntrees.Margin = new System.Windows.Forms.Padding(5);
+            this.tabEntrees.Controls.Add(this.tabAPropos);
+            this.tabEntrees.Location = new System.Drawing.Point(32, 14);
+            this.tabEntrees.Margin = new System.Windows.Forms.Padding(4);
             this.tabEntrees.Name = "tabEntrees";
             this.tabEntrees.SelectedIndex = 0;
             this.tabEntrees.Size = new System.Drawing.Size(1294, 991);
@@ -275,9 +285,8 @@
             this.pnlPrix.Controls.Add(this.lblqte);
             this.pnlPrix.Controls.Add(this.txtQtePrix);
             this.pnlPrix.Controls.Add(this.btnCalculRecompense);
-            this.pnlPrix.Controls.Add(this.label2);
-            this.pnlPrix.Location = new System.Drawing.Point(336, 16);
-            this.pnlPrix.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.pnlPrix.Controls.Add(this.lblRecompense);
+            this.pnlPrix.Location = new System.Drawing.Point(294, 12);
             this.pnlPrix.Name = "pnlPrix";
             this.pnlPrix.Size = new System.Drawing.Size(283, 204);
             this.pnlPrix.TabIndex = 12;
@@ -311,16 +320,16 @@
             this.btnCalculRecompense.Text = "Afficher les prix";
             this.btnCalculRecompense.UseVisualStyleBackColor = true;
             // 
-            // label2
+            // lblRecompense
             // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.label2.Location = new System.Drawing.Point(16, 15);
-            this.label2.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(107, 18);
-            this.label2.TabIndex = 0;
-            this.label2.Text = "Récompense";
+            this.lblRecompense.AutoSize = true;
+            this.lblRecompense.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.lblRecompense.Location = new System.Drawing.Point(14, 11);
+            this.lblRecompense.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lblRecompense.Name = "lblRecompense";
+            this.lblRecompense.Size = new System.Drawing.Size(91, 15);
+            this.lblRecompense.TabIndex = 0;
+            this.lblRecompense.Text = "Récompense";
             // 
             // pnlDon
             // 
@@ -816,6 +825,75 @@
             this.textBoxOutput.TabIndex = 0;
             this.textBoxOutput.TextChanged += new System.EventHandler(this.textBoxOutput_TextChanged);
             // 
+            // tabAPropos
+            // 
+            this.tabAPropos.Controls.Add(this.richTextBox1);
+            this.tabAPropos.Controls.Add(this.lblOlivier);
+            this.tabAPropos.Controls.Add(this.lblCatherine);
+            this.tabAPropos.Controls.Add(this.lblFred);
+            this.tabAPropos.Controls.Add(this.lblAuteur01);
+            this.tabAPropos.Controls.Add(this.lblInfoProjetSTE);
+            this.tabAPropos.Location = new System.Drawing.Point(4, 24);
+            this.tabAPropos.Name = "tabAPropos";
+            this.tabAPropos.Padding = new System.Windows.Forms.Padding(3);
+            this.tabAPropos.Size = new System.Drawing.Size(798, 313);
+            this.tabAPropos.TabIndex = 2;
+            this.tabAPropos.Text = "À propros";
+            this.tabAPropos.UseVisualStyleBackColor = true;
+            // 
+            // lblInfoProjetSTE
+            // 
+            this.lblInfoProjetSTE.AutoSize = true;
+            this.lblInfoProjetSTE.Location = new System.Drawing.Point(48, 36);
+            this.lblInfoProjetSTE.Name = "lblInfoProjetSTE";
+            this.lblInfoProjetSTE.Size = new System.Drawing.Size(49, 15);
+            this.lblInfoProjetSTE.TabIndex = 0;
+            this.lblInfoProjetSTE.Text = "STE v1.0";
+            // 
+            // lblAuteur01
+            // 
+            this.lblAuteur01.AutoSize = true;
+            this.lblAuteur01.Location = new System.Drawing.Point(48, 70);
+            this.lblAuteur01.Name = "lblAuteur01";
+            this.lblAuteur01.Size = new System.Drawing.Size(54, 15);
+            this.lblAuteur01.TabIndex = 0;
+            this.lblAuteur01.Text = "Auteurs :";
+            // 
+            // lblFred
+            // 
+            this.lblFred.AutoSize = true;
+            this.lblFred.Location = new System.Drawing.Point(94, 95);
+            this.lblFred.Name = "lblFred";
+            this.lblFred.Size = new System.Drawing.Size(87, 15);
+            this.lblFred.TabIndex = 0;
+            this.lblFred.Text = "Frédérick Faidit";
+            // 
+            // lblCatherine
+            // 
+            this.lblCatherine.AutoSize = true;
+            this.lblCatherine.Location = new System.Drawing.Point(94, 120);
+            this.lblCatherine.Name = "lblCatherine";
+            this.lblCatherine.Size = new System.Drawing.Size(93, 15);
+            this.lblCatherine.TabIndex = 0;
+            this.lblCatherine.Text = "Catherine Godin";
+            // 
+            // lblOlivier
+            // 
+            this.lblOlivier.AutoSize = true;
+            this.lblOlivier.Location = new System.Drawing.Point(94, 147);
+            this.lblOlivier.Name = "lblOlivier";
+            this.lblOlivier.Size = new System.Drawing.Size(95, 15);
+            this.lblOlivier.TabIndex = 0;
+            this.lblOlivier.Text = "Olivier Raymond";
+            // 
+            // richTextBox1
+            // 
+            this.richTextBox1.Location = new System.Drawing.Point(207, 33);
+            this.richTextBox1.Name = "richTextBox1";
+            this.richTextBox1.Size = new System.Drawing.Size(562, 251);
+            this.richTextBox1.TabIndex = 1;
+            this.richTextBox1.Text = resources.GetString("richTextBox1.Text");
+            // 
             // interface_temp
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
@@ -840,6 +918,8 @@
             this.pnlInfoDonateur.PerformLayout();
             this.tabCommanditaire.ResumeLayout(false);
             this.tabCommanditaire.PerformLayout();
+            this.tabAPropos.ResumeLayout(false);
+            this.tabAPropos.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -900,7 +980,7 @@
         private Label lblInfoCommanditaire;
         private Label lblIDCommanditaire;
         private TextBox textBox1;
-        private Label label1;
+        private Label lblInfoProjetSTE;
         private TextBox textBoxEntreprise;
         private TextBox textEntreprise;
         private TextBox txtEntreprise;
@@ -912,9 +992,15 @@
         private Panel pnlCarteCredit;
         private Label lblCarteCredit;
         private Panel pnlPrix;
-        private Label label2;
+        private Label lblRecompense;
         private Label lblqte;
         private TextBox txtQtePrix;
         private Button btnCalculRecompense;
+        private TabPage tabAPropos;
+        private RichTextBox richTextBox1;
+        private Label lblOlivier;
+        private Label lblCatherine;
+        private Label lblFred;
+        private Label lblAuteur01;
     }
 }
