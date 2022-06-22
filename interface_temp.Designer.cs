@@ -152,7 +152,7 @@
             this.textBoxOutput.Name = "textBoxOutput";
             this.textBoxOutput.Size = new System.Drawing.Size(610, 316);
             this.textBoxOutput.TabIndex = 0;
-            this.textBoxOutput.TextChanged += new System.EventHandler(this.textBoxOutput_TextChanged);
+
             // 
             // pnlCarteCredit
             // 
@@ -446,7 +446,7 @@
             this.mskTxtBoxTel.Size = new System.Drawing.Size(191, 27);
             this.mskTxtBoxTel.TabIndex = 17;
             this.mskTxtBoxTel.Click += new System.EventHandler(this.mskTxtBoxTel_Click);
-            this.mskTxtBoxTel.Enter += new System.EventHandler(this.mskTxtBoxTel_Enter);
+
             // 
             // lblMessageDonateur
             // 
