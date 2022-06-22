@@ -2,12 +2,17 @@
 {
     public abstract class Personne
     {
-        //TODO Commentaires
-        //TODO Accesseurs
+        /// <summary>
+        /// Classe abstraite qui permet de créer les classes Commanditaire et Donateur
+        /// </summary>
 
         private string prenom;
         private string nom;
 
+        /// <summary>
+        /// Retourne le nom complet de la personne
+        /// </summary>
+        /// <returns>string</returns>
         public override string ToString()
         {
             return  prenom +" " +nom;
