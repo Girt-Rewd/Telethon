@@ -13,7 +13,7 @@ namespace STELib
         en guise de récompense à ses donateurs en remerciement pour leur dons.
          */
 
-        //TODO Accesseurs
+        
 
         private string idCommanditaire;
   
@@ -23,7 +23,10 @@ namespace STELib
         {              
             this.idCommanditaire = "CMDT" + nbCommanditaire;                                          
         }
-
+        /// <summary>
+        /// Cette fonction ToString retourne les informations pertinentes d’un commanditaire sous forme de chaîne de caractères
+        /// </summary>
+        /// <returns>string</returns>
         public override string ToString() { 
           
                 return  "identifiant du commanditaire: "+  "  ID(" + idCommanditaire + ")   personne contact->" + base.ToString(); 
