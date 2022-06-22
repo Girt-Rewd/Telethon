@@ -9,8 +9,9 @@ namespace STELib
     public class Donateur : Personne
     {
         
-        //TODO Commentaires
-        //TODO Accesseurs
+        /// <summary>
+        /// Classe qui sert a garder en mémoire les données qui permettent d’identifier les donateurs durant le fonctionnement de l’application avant que ces données ne soient remisées
+        /// </summary>
 
         private string idDonateur;
         private string courriel;
@@ -31,6 +32,10 @@ namespace STELib
             this.dateExpiration = dateExpiration;
              
         }
+        /// <summary>
+        /// ToString retourne les informations pertinentes d’un donateur sous forme de string
+        /// </summary>
+        /// <returns>string</returns>
         public new string ToString() {
              
             return "identifiant du donateur : " + idDonateur + " " + base.ToString(); 
