@@ -20,10 +20,13 @@ namespace Telethon
         }
 
         private void btnAjouterComm_Click(object sender, EventArgs e)
-
         {
             gestionnaireSTE.AjouterCommanditaire(txtPrenomCommanditaire.Text, txtNomCommanditaire.Text, gestionnaireSTE.commanditaires.Count);
+        }
 
+        private void btnAjouterDon_Click(object sender, EventArgs e)
+        {
+            gestionnaireSTE.AjouterDon(dtpExpiration.Text, txtIDDon.Text, double.Parse(txtMontant.Text), gestionnaireSTE.dons.Count);
         }
 
         private void btnAjoutreDonateur_Click(object sender, EventArgs e)
@@ -48,6 +51,7 @@ namespace Telethon
                 }
                 else if (radMC.Checked)
                 {
+      
                     typeCarte = 'M';
                 }
                 else if (radVisa.Checked)
@@ -61,12 +65,18 @@ namespace Telethon
             }
         }
 
+        
 
 
 
         private void btnAfficherDonateur_Click(object sender, EventArgs e)
         {
             textBoxOutput.Text = gestionnaireSTE.AfficherDonateurs();
+        }
+
+        private void btnAfficheDon_Click(object sender, EventArgs e)
+        {
+            textBoxOutput.Text = gestionnaireSTE.AfficherDons();
         }
 
         private void btnAfficherCommanditaire_Click(object sender, EventArgs e)
@@ -110,6 +120,7 @@ namespace Telethon
         {
 
         }
+
     }
 
 }

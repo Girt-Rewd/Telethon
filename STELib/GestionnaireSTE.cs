@@ -44,9 +44,7 @@ namespace STELib
         public void AjouterCommanditaire(string prenom, string nom, int nb)
         {
             commanditaires.Add(new Commanditaire(prenom, nom, nb ));
-
         }
-
 
         public void AjouterPrix(string description, double valeur, int quatite_originale, string commanditaire, int nbPrix)
         {
@@ -57,7 +55,6 @@ namespace STELib
         {
             dons.Add(new Don(date, idDonateur, montantDon, nbDon));
         }
-
 
         public string AfficherDonateurs()
         {
