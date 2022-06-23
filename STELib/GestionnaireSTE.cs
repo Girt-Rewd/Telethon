@@ -147,7 +147,7 @@ namespace STELib
         ///     1. calculer les points gagnés par un donateur en fonction de son don
         ///     2. Attribuer un prix correspondant au nombre de points
         /// </summary>
-        public void AttribuerPrix(double montant)
+        public string AttribuerPrix(double montant)
         {
             int points = 0;
             if (montant >= 50 && montant < 200)
@@ -179,6 +179,7 @@ namespace STELib
             // Calendrier        1 point
             // Repas pour deux  10 points
             // BBQ              15 points
+            return "" + points;
             }
 
         /// <summary>
@@ -191,10 +192,5 @@ namespace STELib
             //TODO EnregistrerDonateur()
             return true;
         }
-        // TODO Effacer cette fonction . Elle ne sert qu’à faire un test
-        public 
-
-
-
     }
 }
