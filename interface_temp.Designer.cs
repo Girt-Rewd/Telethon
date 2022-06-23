@@ -212,6 +212,7 @@
             this.mskTxtNumeroCarte.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.mskTxtNumeroCarte.Mask = "0000 0000 0000 0000";
             this.mskTxtNumeroCarte.Name = "mskTxtNumeroCarte";
+            this.mskTxtNumeroCarte.PromptChar = ' ';
             this.mskTxtNumeroCarte.Size = new System.Drawing.Size(138, 23);
             this.mskTxtNumeroCarte.TabIndex = 17;
             this.mskTxtNumeroCarte.Click += new System.EventHandler(this.txtNumeroCarte_Click);
