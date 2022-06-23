@@ -128,6 +128,7 @@
             // 
             // tabDonateur
             // 
+            this.tabDonateur.BackColor = System.Drawing.Color.LightSalmon;
             this.tabDonateur.Controls.Add(this.textBoxOutput);
             this.tabDonateur.Controls.Add(this.pnlCarteCredit);
             this.tabDonateur.Controls.Add(this.pnlPrix);
@@ -143,7 +144,6 @@
             this.tabDonateur.Size = new System.Drawing.Size(1124, 715);
             this.tabDonateur.TabIndex = 0;
             this.tabDonateur.Text = "Donateur";
-            this.tabDonateur.UseVisualStyleBackColor = true;
             // 
             // textBoxOutput
             // 
