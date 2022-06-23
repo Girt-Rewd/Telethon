@@ -10,6 +10,8 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using STELib;
 
+//TODO continuer infoCarte de credit... validation CVC et dateEXp nouveaux format mm/aa
+
 namespace Telethon
 {
     public partial class interface_temp : Form
@@ -27,7 +29,7 @@ namespace Telethon
 
         private void btnAjouterDon_Click(object sender, EventArgs e)
         {
-            gestionnaireSTE.AjouterDon(dtpExpiration.Text, txtIDDon.Text, double.Parse(txtMontant.Text), gestionnaireSTE.dons.Count);
+            gestionnaireSTE.AjouterDon(txtBoxDateExpCarte.Text, txtIDDon.Text, double.Parse(txtMontant.Text), gestionnaireSTE.dons.Count);
         }
 
         private void btnAjoutreDonateur_Click(object sender, EventArgs e)
@@ -38,7 +40,7 @@ namespace Telethon
                 MessageBox.Show("Vous devez choisir un type de carte", "Attention", MessageBoxButtons.OK, MessageBoxIcon.Information);
 
             }
-            else if (txtNumeroCarte.Text == "")
+            else if (mskTxtNumeroCarte.Text == "")
             {
                 lblNoCredit.ForeColor = Color.Maroon;
                 lblNoCredit.Text = lblNoCredit.Text + "*";
@@ -52,16 +54,16 @@ namespace Telethon
                 }
                 else if (radMC.Checked)
                 {
-      
+
                     typeCarte = 'M';
                 }
                 else if (radVisa.Checked)
                 {
                     typeCarte = 'V';
                 }
-              
 
-                gestionnaireSTE.AjouterDonateur(txtPrenomDonateur.Text, txtNomDonateur.Text, txtCourrielDonateur.Text, mskTxtBoxTel.Text, typeCarte, txtNumeroCarte.Text, dtpExpiration.Value.ToShortDateString(), gestionnaireSTE.donateurs.Count());
+
+                gestionnaireSTE.AjouterDonateur(txtPrenomDonateur.Text, txtNomDonateur.Text, txtCourrielDonateur.Text, mskTxtBoxTel.Text, typeCarte, mskTxtNumeroCarte.Text, txtBoxDateExpCarte.Text, gestionnaireSTE.donateurs.Count());
                 pnlDon.Visible = true;
                 pnlPrix.Visible = true;
                 pnlCarteCredit.Visible = false;
@@ -91,40 +93,67 @@ namespace Telethon
             textBoxOutput.Text = television.ToString();
         }
 
-        private void btnCacher_Click(object sender, EventArgs e)
+        private void btnCacher_Click(object sender, EventArgs e)//TODO Essayer d'
         {
+            Regex courrielRegex = new Regex(@"^([\w]+)@([\w]+)\.([\w]+)((\.([\w]+))+)$");
+            Regex telephoneRegex = new Regex(@"^\(\d{3}\) \d{3}\-\d{4}$");
+            lblMessageDonateur.Visible = true;
+
+
             if (txtPrenomDonateur.Text == "" || txtNomDonateur.Text == "" || mskTxtBoxTel.Text == "")
             {
-                lblPrenomDonateur.ForeColor = Color.Maroon;
-                lblPrenomDonateur.Text += "*";
-                lblNomDonateur.ForeColor = Color.Maroon;
-                lblNomDonateur.Text += "*";
-                lblTelephone.ForeColor = Color.Maroon;
-                lblTelephone.Text += "*";
-                lblMessageDonateur.Visible = true;
+
+                if (txtPrenomDonateur.Text == String.Empty)
+                {
+                    lblPrenomDonateur.ForeColor = Color.Maroon;
+                    lblPrenomDonateur.Text += "*";
+                }
+                else
+                {
+                    lblPrenomDonateur.ForeColor = Color.Black;
+                    lblPrenomDonateur.Text = "Prénom :";
+                }
+                if (txtNomDonateur.Text == String.Empty)
+                {
+                    lblNomDonateur.ForeColor = Color.Maroon;
+                    lblNomDonateur.Text += "*";
+                }
+                else
+                {
+                    lblNomDonateur.ForeColor = Color.Black;
+                    lblNomDonateur.Text = "Nom :";
+                }
+                if (mskTxtBoxTel.Text == String.Empty)
+                {
+                    lblTelephone.ForeColor = Color.Maroon;
+                    lblTelephone.Text += "*";
+                }
+                else
+                {
+                    lblTelephone.ForeColor = Color.Black;
+                    lblTelephone.Text = "Téléphone :";
+                }
             }
-            Regex telRegex = new Regex(@"^\(\d{3}\) \d{3}\-\d{4}$");
-            if (!telRegex.IsMatch(mskTxtBoxTel.Text))
+            else if (!telephoneRegex.IsMatch(mskTxtBoxTel.Text))
             {
-                MessageBox.Show("!! Le # de Téléphone ne respect pas le format (XXX)-XXX-XXXX !!");
+                MessageBox.Show("!! Il manque un ou des chiffres au #Téléphone !!");
                 mskTxtBoxTel.Text = "";
                 mskTxtBoxTel.Focus();
                 lblTelephone.ForeColor = Color.Maroon;
+                lblMessageDonateur.Visible = true;
+            }
+            else if (!courrielRegex.IsMatch(txtCourrielDonateur.Text) && txtCourrielDonateur.Text != String.Empty)
+            {
+                MessageBox.Show("Format de Courriel invalide\n\ressayer de nouveaux ou laisser le champ vide.");
+                txtCourrielDonateur.Text = "";
+                txtCourrielDonateur.Focus();
                 lblMessageDonateur.Visible = true;
             }
             else if (pnlInfoDonateur.Visible)
             {
                 pnlInfoDonateur.Visible = false;
                 pnlCarteCredit.Visible = true;
-
             }
-          
-
-        }
-
-        private void txtTelephoneDonateur_TextChanged(object sender, EventArgs e)
-        {
-
         }
 
         private void btnQuitter_Click(object sender, EventArgs e)
@@ -134,10 +163,12 @@ namespace Telethon
 
         private void mskTxtBoxTel_Click(object sender, EventArgs e)
         {
-            mskTxtBoxTel.Focus(); if (mskTxtBoxTel != null)
-            {
-                mskTxtBoxTel.Select(0, 0);
-            }
+            mskTxtBoxTel.Select(0, 0);
+        }
+
+        private void txtNumeroCarte_Click(object sender, EventArgs e)
+        {
+            mskTxtNumeroCarte.Select(0, 0);
         }
 
         private void btnCalculRecompense_Click(object sender, EventArgs e)
