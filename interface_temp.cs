@@ -1,13 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Text.RegularExpressions;
-using System.Threading.Tasks;
-using System.Windows.Forms;
+﻿using System.Text.RegularExpressions;
 using STELib;
 
 //TODO continuer infoCarte de credit... validation CVC et dateEXp nouveaux format mm/aa
@@ -16,7 +7,7 @@ namespace Telethon
 {
     public partial class interface_temp : Form
     {
-        GestionnaireSTE gestionnaireSTE = new GestionnaireSTE();
+        GestionnaireSTE gestionnaireSTE = new();
         public interface_temp()
         {
             InitializeComponent();
@@ -80,7 +71,7 @@ namespace Telethon
                 }
 
 
-                gestionnaireSTE.AjouterDonateur(txtPrenomDonateur.Text, txtNomDonateur.Text, txtCourrielDonateur.Text, mskTxtBoxTel.Text, typeCarte, mskTxtNumeroCarte.Text, txtBoxDateExpCarte.Text, gestionnaireSTE.donateurs.Count());
+                gestionnaireSTE.AjouterDonateur(txtPrenomDonateur.Text, txtNomDonateur.Text, txtCourrielDonateur.Text, mskTxtBoxTel.Text, typeCarte, mskTxtNumeroCarte.Text, txtBoxDateExpCarte.Text, gestionnaireSTE.donateurs.Count);
                 pnlDon.Visible = true;
                 pnlPrix.Visible = true;
                 pnlCarteCredit.Visible = false;
@@ -104,13 +95,13 @@ namespace Telethon
             textBoxOutput.Text = gestionnaireSTE.AfficherCommanditaires();
         }
 
-        private void btnAjouterPrix_Click(object sender, EventArgs e)
+        private void BtnAjouterPrix_Click(object sender, EventArgs e)
         {
-            Prix television = new Prix(txtDescription.Text, double.Parse(txtValeurPrix.Text), int.Parse(txtQuatitePrix.Text), "CMDT098", gestionnaireSTE.prix.Count());
+            Prix television = new Prix(txtDescription.Text, double.Parse(txtValeurPrix.Text), int.Parse(txtQuatitePrix.Text), "CMDT098", gestionnaireSTE.prix.Count);
             textBoxOutput.Text = television.ToString();
         }
 
-        private void btnCacher_Click(object sender, EventArgs e)//TODO Essayer d'
+        private void BtnCacher_Click(object sender, EventArgs e)//TODO Essayer d'
         {
             Regex courrielRegex = new Regex(@"^([\w]+)@([\w]+)(\.([\w])+)+$");
             Regex telephoneRegex = new Regex(@"^\(\d{3}\) \d{3}\-\d{4}$");
@@ -151,7 +142,7 @@ namespace Telethon
                     lblTelephone.Text = "Téléphone :";
                 }
             }
-            else if(false)/* (!telephoneRegex.IsMatch(mskTxtBoxTel.Text))*/
+            else if(false)/* HACK(!telephoneRegex.IsMatch(mskTxtBoxTel.Text))*/
             {
 
                 mskTxtBoxTel.Focus();
@@ -161,7 +152,7 @@ namespace Telethon
 
                 lblMessageDonateur.Visible = true;
             }
-            else if (false)/* (!courrielRegex.IsMatch(txtCourrielDonateur.Text) && txtCourrielDonateur.Text != String.Empty)*/
+            else if (false)/* HACK(!courrielRegex.IsMatch(txtCourrielDonateur.Text) && txtCourrielDonateur.Text != String.Empty)*/
             {
                 MessageBox.Show("Format de Courriel invalide\n\ressayer de nouveaux ou laisser le champ vide.");
                 //txtCourrielDonateur.Text = "";
