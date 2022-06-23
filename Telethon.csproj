@@ -9,8 +9,11 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <Compile Remove="NouvelleInterface\**" />
     <Compile Remove="STELib\**" />
+    <EmbeddedResource Remove="NouvelleInterface\**" />
     <EmbeddedResource Remove="STELib\**" />
+    <None Remove="NouvelleInterface\**" />
     <None Remove="STELib\**" />
   </ItemGroup>
 
