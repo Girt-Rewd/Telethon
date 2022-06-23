@@ -149,8 +149,11 @@ namespace STELib
         /// </summary>
         public string AttribuerPrix(double montant)
         {
+            string recompense = "rien";
             int points = 0;
-            if (montant >= 50 && montant < 200)
+            if (montant < 50) { 
+            }
+            else if (montant >= 50 && montant < 200)
             {
                 points = 1;
             }
@@ -163,23 +166,32 @@ namespace STELib
                 points = 3;
             }
             else { 
-                points = 5 + 4*(int)(montant/500);
+                points = 5 + 4*((int)(montant/500)-1);
             }
-            // TODO AttribuerPrix() calcule le nombre de points associé au montant du don.  le nombre de point sera affiché dans la case « Quantité » du groupe Box « attribuer prix »
-            // $50 – $199    -> 1 points
-            // $200 – $349   -> 2 points
-            // $350 – $499   -> 3 points
-            // >= $500       -> 5 points
-            // toute tranche additionnelle de 500$ donne droit à 400 points supplémentaires
+            
+            if (points >= 20)
+            {
+                recompense = "Téléviseur";
+            }
+            else if (points >= 15)
+            {
+                recompense = "BBQ";
 
-            // (problème ergonomique sur la codification et nommage : le mot quantité et mal utilisé dans cette partie de l’interface)
+            }
+            else if (points >= 10)
+            {
+                recompense = "Repas pour deux";
 
-            // TODO Ensuite Attribuer prix trouve le prix correspondant au nombre de points récompenses.
-            // Televiseur       20 points
-            // Calendrier        1 point
-            // Repas pour deux  10 points
-            // BBQ              15 points
-            return "" + points;
+            }
+            else if (points >= 1)
+            {
+                recompense = "Calendrier";
+            }
+            else { 
+                recompense = String.Empty;
+            }
+
+            return recompense;
             }
 
         /// <summary>

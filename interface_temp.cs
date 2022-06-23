@@ -139,6 +139,11 @@ namespace Telethon
                 mskTxtBoxTel.Select(0, 0);
             }
         }
+
+        private void btnCalculRecompense_Click(object sender, EventArgs e)
+        {
+            textBoxOutput.Text = gestionnaireSTE.AttribuerPrix(double.Parse(txtMontant.Text));
+        }
     }
 
 }
