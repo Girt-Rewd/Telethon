@@ -35,7 +35,6 @@
             this.pnlCarteCredit = new System.Windows.Forms.Panel();
             this.txtBoxCvc = new System.Windows.Forms.TextBox();
             this.lblCVC = new System.Windows.Forms.Label();
-            this.txtBoxDateExpCarte = new System.Windows.Forms.TextBox();
             this.mskTxtNumeroCarte = new System.Windows.Forms.MaskedTextBox();
             this.btnAjoutreDonateur = new System.Windows.Forms.Button();
             this.lblMessageCredit = new System.Windows.Forms.Label();
@@ -103,6 +102,10 @@
             this.lblFred = new System.Windows.Forms.Label();
             this.lblAuteur01 = new System.Windows.Forms.Label();
             this.lblInfoProjetSTE = new System.Windows.Forms.Label();
+            this.numMois = new System.Windows.Forms.NumericUpDown();
+            this.numAnnee = new System.Windows.Forms.NumericUpDown();
+            this.lblMoisExpiration = new System.Windows.Forms.Label();
+            this.lblAnneeExpiration = new System.Windows.Forms.Label();
             this.tabEntrees.SuspendLayout();
             this.tabDonateur.SuspendLayout();
             this.pnlCarteCredit.SuspendLayout();
@@ -112,6 +115,8 @@
             this.pnlInfoDonateur.SuspendLayout();
             this.tabCommanditaire.SuspendLayout();
             this.tabAPropos.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.numMois)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numAnnee)).BeginInit();
             this.SuspendLayout();
             // 
             // tabEntrees
@@ -156,9 +161,12 @@
             // 
             // pnlCarteCredit
             // 
+            this.pnlCarteCredit.Controls.Add(this.lblAnneeExpiration);
+            this.pnlCarteCredit.Controls.Add(this.lblMoisExpiration);
+            this.pnlCarteCredit.Controls.Add(this.numAnnee);
+            this.pnlCarteCredit.Controls.Add(this.numMois);
             this.pnlCarteCredit.Controls.Add(this.txtBoxCvc);
             this.pnlCarteCredit.Controls.Add(this.lblCVC);
-            this.pnlCarteCredit.Controls.Add(this.txtBoxDateExpCarte);
             this.pnlCarteCredit.Controls.Add(this.mskTxtNumeroCarte);
             this.pnlCarteCredit.Controls.Add(this.btnAjoutreDonateur);
             this.pnlCarteCredit.Controls.Add(this.lblMessageCredit);
@@ -175,54 +183,42 @@
             // txtBoxCvc
             // 
             this.txtBoxCvc.ForeColor = System.Drawing.SystemColors.WindowText;
-            this.txtBoxCvc.Location = new System.Drawing.Point(279, 162);
+            this.txtBoxCvc.Location = new System.Drawing.Point(341, 162);
             this.txtBoxCvc.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txtBoxCvc.MaxLength = 4;
             this.txtBoxCvc.Name = "txtBoxCvc";
             this.txtBoxCvc.PasswordChar = '*';
-            this.txtBoxCvc.Size = new System.Drawing.Size(56, 23);
+            this.txtBoxCvc.Size = new System.Drawing.Size(75, 23);
             this.txtBoxCvc.TabIndex = 20;
             this.txtBoxCvc.Tag = "";
             // 
             // lblCVC
             // 
             this.lblCVC.AutoSize = true;
-            this.lblCVC.Location = new System.Drawing.Point(170, 162);
+            this.lblCVC.Location = new System.Drawing.Point(298, 165);
             this.lblCVC.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblCVC.Name = "lblCVC";
             this.lblCVC.Size = new System.Drawing.Size(36, 15);
             this.lblCVC.TabIndex = 19;
             this.lblCVC.Text = "CVC :";
             // 
-            // txtBoxDateExpCarte
-            // 
-            this.txtBoxDateExpCarte.ForeColor = System.Drawing.SystemColors.WindowText;
-            this.txtBoxDateExpCarte.Location = new System.Drawing.Point(279, 130);
-            this.txtBoxDateExpCarte.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.txtBoxDateExpCarte.MaxLength = 5;
-            this.txtBoxDateExpCarte.Name = "txtBoxDateExpCarte";
-            this.txtBoxDateExpCarte.PlaceholderText = "mm/aa";
-            this.txtBoxDateExpCarte.Size = new System.Drawing.Size(56, 23);
-            this.txtBoxDateExpCarte.TabIndex = 18;
-            this.txtBoxDateExpCarte.Tag = "mm/aa";
-            // 
             // mskTxtNumeroCarte
             // 
-            this.mskTxtNumeroCarte.Location = new System.Drawing.Point(279, 96);
+            this.mskTxtNumeroCarte.Location = new System.Drawing.Point(239, 96);
             this.mskTxtNumeroCarte.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.mskTxtNumeroCarte.Mask = "0000 0000 0000 0000";
             this.mskTxtNumeroCarte.Name = "mskTxtNumeroCarte";
             this.mskTxtNumeroCarte.PromptChar = ' ';
-            this.mskTxtNumeroCarte.Size = new System.Drawing.Size(138, 23);
+            this.mskTxtNumeroCarte.Size = new System.Drawing.Size(178, 23);
             this.mskTxtNumeroCarte.TabIndex = 17;
             this.mskTxtNumeroCarte.Click += new System.EventHandler(this.txtNumeroCarte_Click);
             // 
             // btnAjoutreDonateur
             // 
-            this.btnAjoutreDonateur.Location = new System.Drawing.Point(215, 230);
+            this.btnAjoutreDonateur.Location = new System.Drawing.Point(239, 219);
             this.btnAjoutreDonateur.Margin = new System.Windows.Forms.Padding(4);
             this.btnAjoutreDonateur.Name = "btnAjoutreDonateur";
-            this.btnAjoutreDonateur.Size = new System.Drawing.Size(189, 34);
+            this.btnAjoutreDonateur.Size = new System.Drawing.Size(177, 34);
             this.btnAjoutreDonateur.TabIndex = 10;
             this.btnAjoutreDonateur.Text = "Ajouter un Donateur";
             this.btnAjoutreDonateur.UseVisualStyleBackColor = true;
@@ -232,7 +228,7 @@
             // 
             this.lblMessageCredit.AutoSize = true;
             this.lblMessageCredit.ForeColor = System.Drawing.Color.Maroon;
-            this.lblMessageCredit.Location = new System.Drawing.Point(215, 201);
+            this.lblMessageCredit.Location = new System.Drawing.Point(239, 257);
             this.lblMessageCredit.Name = "lblMessageCredit";
             this.lblMessageCredit.Size = new System.Drawing.Size(132, 15);
             this.lblMessageCredit.TabIndex = 16;
@@ -918,6 +914,68 @@
             this.lblInfoProjetSTE.TabIndex = 0;
             this.lblInfoProjetSTE.Text = "STE v1.0";
             // 
+            // numMois
+            // 
+            this.numMois.Location = new System.Drawing.Point(279, 130);
+            this.numMois.Maximum = new decimal(new int[] {
+            12,
+            0,
+            0,
+            0});
+            this.numMois.Minimum = new decimal(new int[] {
+            1,
+            0,
+            0,
+            0});
+            this.numMois.Name = "numMois";
+            this.numMois.Size = new System.Drawing.Size(35, 23);
+            this.numMois.TabIndex = 21;
+            this.numMois.Value = new decimal(new int[] {
+            1,
+            0,
+            0,
+            0});
+            // 
+            // numAnnee
+            // 
+            this.numAnnee.Location = new System.Drawing.Point(382, 130);
+            this.numAnnee.Maximum = new decimal(new int[] {
+            99,
+            0,
+            0,
+            0});
+            this.numAnnee.Minimum = new decimal(new int[] {
+            22,
+            0,
+            0,
+            0});
+            this.numAnnee.Name = "numAnnee";
+            this.numAnnee.Size = new System.Drawing.Size(35, 23);
+            this.numAnnee.TabIndex = 21;
+            this.numAnnee.Value = new decimal(new int[] {
+            22,
+            0,
+            0,
+            0});
+            // 
+            // lblMoisExpiration
+            // 
+            this.lblMoisExpiration.AutoSize = true;
+            this.lblMoisExpiration.Location = new System.Drawing.Point(239, 132);
+            this.lblMoisExpiration.Name = "lblMoisExpiration";
+            this.lblMoisExpiration.Size = new System.Drawing.Size(39, 15);
+            this.lblMoisExpiration.TabIndex = 22;
+            this.lblMoisExpiration.Text = "Mois :";
+            // 
+            // lblAnneeExpiration
+            // 
+            this.lblAnneeExpiration.AutoSize = true;
+            this.lblAnneeExpiration.Location = new System.Drawing.Point(335, 132);
+            this.lblAnneeExpiration.Name = "lblAnneeExpiration";
+            this.lblAnneeExpiration.Size = new System.Drawing.Size(47, 15);
+            this.lblAnneeExpiration.TabIndex = 22;
+            this.lblAnneeExpiration.Text = "Année :";
+            // 
             // interface_temp
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
@@ -945,6 +1003,8 @@
             this.tabCommanditaire.PerformLayout();
             this.tabAPropos.ResumeLayout(false);
             this.tabAPropos.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.numMois)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numAnnee)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -1025,8 +1085,11 @@
         private Label lblAuteur01;
         private MaskedTextBox mskTxtNumeroCarte;
         private MaskedTextBox mskTxtBoxTel;
-        private TextBox txtBoxDateExpCarte;
         private TextBox txtBoxCvc;
         private Label lblCVC;
+        private Label lblAnneeExpiration;
+        private Label lblMoisExpiration;
+        private NumericUpDown numAnnee;
+        private NumericUpDown numMois;
     }
 }
