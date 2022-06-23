@@ -33,6 +33,10 @@
             this.tabDonateur = new System.Windows.Forms.TabPage();
             this.textBoxOutput = new System.Windows.Forms.TextBox();
             this.pnlCarteCredit = new System.Windows.Forms.Panel();
+            this.lblAnneeExpiration = new System.Windows.Forms.Label();
+            this.lblMoisExpiration = new System.Windows.Forms.Label();
+            this.numAnnee = new System.Windows.Forms.NumericUpDown();
+            this.numMois = new System.Windows.Forms.NumericUpDown();
             this.txtBoxCvc = new System.Windows.Forms.TextBox();
             this.lblCVC = new System.Windows.Forms.Label();
             this.mskTxtNumeroCarte = new System.Windows.Forms.MaskedTextBox();
@@ -102,21 +106,17 @@
             this.lblFred = new System.Windows.Forms.Label();
             this.lblAuteur01 = new System.Windows.Forms.Label();
             this.lblInfoProjetSTE = new System.Windows.Forms.Label();
-            this.numMois = new System.Windows.Forms.NumericUpDown();
-            this.numAnnee = new System.Windows.Forms.NumericUpDown();
-            this.lblMoisExpiration = new System.Windows.Forms.Label();
-            this.lblAnneeExpiration = new System.Windows.Forms.Label();
             this.tabEntrees.SuspendLayout();
             this.tabDonateur.SuspendLayout();
             this.pnlCarteCredit.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.numAnnee)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numMois)).BeginInit();
             this.grRadioCarte.SuspendLayout();
             this.pnlPrix.SuspendLayout();
             this.pnlDon.SuspendLayout();
             this.pnlInfoDonateur.SuspendLayout();
             this.tabCommanditaire.SuspendLayout();
             this.tabAPropos.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.numMois)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numAnnee)).BeginInit();
             this.SuspendLayout();
             // 
             // tabEntrees
@@ -129,7 +129,7 @@
             this.tabEntrees.Name = "tabEntrees";
             this.tabEntrees.SelectedIndex = 0;
             this.tabEntrees.Size = new System.Drawing.Size(1132, 743);
-            this.tabEntrees.TabIndex = 1;
+            this.tabEntrees.TabIndex = 0;
             // 
             // tabDonateur
             // 
@@ -157,7 +157,7 @@
             this.textBoxOutput.Multiline = true;
             this.textBoxOutput.Name = "textBoxOutput";
             this.textBoxOutput.Size = new System.Drawing.Size(534, 238);
-            this.textBoxOutput.TabIndex = 0;
+            this.textBoxOutput.TabIndex = 3;
             // 
             // pnlCarteCredit
             // 
@@ -179,6 +179,68 @@
             this.pnlCarteCredit.Size = new System.Drawing.Size(430, 313);
             this.pnlCarteCredit.TabIndex = 13;
             this.pnlCarteCredit.Visible = false;
+            // 
+            // lblAnneeExpiration
+            // 
+            this.lblAnneeExpiration.AutoSize = true;
+            this.lblAnneeExpiration.Location = new System.Drawing.Point(335, 132);
+            this.lblAnneeExpiration.Name = "lblAnneeExpiration";
+            this.lblAnneeExpiration.Size = new System.Drawing.Size(47, 15);
+            this.lblAnneeExpiration.TabIndex = 22;
+            this.lblAnneeExpiration.Text = "Année :";
+            // 
+            // lblMoisExpiration
+            // 
+            this.lblMoisExpiration.AutoSize = true;
+            this.lblMoisExpiration.Location = new System.Drawing.Point(239, 132);
+            this.lblMoisExpiration.Name = "lblMoisExpiration";
+            this.lblMoisExpiration.Size = new System.Drawing.Size(39, 15);
+            this.lblMoisExpiration.TabIndex = 22;
+            this.lblMoisExpiration.Text = "Mois :";
+            // 
+            // numAnnee
+            // 
+            this.numAnnee.Location = new System.Drawing.Point(382, 130);
+            this.numAnnee.Maximum = new decimal(new int[] {
+            99,
+            0,
+            0,
+            0});
+            this.numAnnee.Minimum = new decimal(new int[] {
+            22,
+            0,
+            0,
+            0});
+            this.numAnnee.Name = "numAnnee";
+            this.numAnnee.Size = new System.Drawing.Size(35, 23);
+            this.numAnnee.TabIndex = 21;
+            this.numAnnee.Value = new decimal(new int[] {
+            22,
+            0,
+            0,
+            0});
+            // 
+            // numMois
+            // 
+            this.numMois.Location = new System.Drawing.Point(279, 130);
+            this.numMois.Maximum = new decimal(new int[] {
+            12,
+            0,
+            0,
+            0});
+            this.numMois.Minimum = new decimal(new int[] {
+            1,
+            0,
+            0,
+            0});
+            this.numMois.Name = "numMois";
+            this.numMois.Size = new System.Drawing.Size(35, 23);
+            this.numMois.TabIndex = 21;
+            this.numMois.Value = new decimal(new int[] {
+            1,
+            0,
+            0,
+            0});
             // 
             // txtBoxCvc
             // 
@@ -210,12 +272,12 @@
             this.mskTxtNumeroCarte.Name = "mskTxtNumeroCarte";
             this.mskTxtNumeroCarte.PromptChar = ' ';
             this.mskTxtNumeroCarte.Size = new System.Drawing.Size(178, 23);
-            this.mskTxtNumeroCarte.TabIndex = 17;
+            this.mskTxtNumeroCarte.TabIndex = 4;
             this.mskTxtNumeroCarte.Click += new System.EventHandler(this.txtNumeroCarte_Click);
             // 
             // btnAjoutreDonateur
             // 
-            this.btnAjoutreDonateur.Location = new System.Drawing.Point(239, 219);
+            this.btnAjoutreDonateur.Location = new System.Drawing.Point(240, 251);
             this.btnAjoutreDonateur.Margin = new System.Windows.Forms.Padding(4);
             this.btnAjoutreDonateur.Name = "btnAjoutreDonateur";
             this.btnAjoutreDonateur.Size = new System.Drawing.Size(177, 34);
@@ -228,7 +290,7 @@
             // 
             this.lblMessageCredit.AutoSize = true;
             this.lblMessageCredit.ForeColor = System.Drawing.Color.Maroon;
-            this.lblMessageCredit.Location = new System.Drawing.Point(239, 257);
+            this.lblMessageCredit.Location = new System.Drawing.Point(285, 187);
             this.lblMessageCredit.Name = "lblMessageCredit";
             this.lblMessageCredit.Size = new System.Drawing.Size(132, 15);
             this.lblMessageCredit.TabIndex = 16;
@@ -326,7 +388,7 @@
             this.pnlPrix.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.pnlPrix.Name = "pnlPrix";
             this.pnlPrix.Size = new System.Drawing.Size(248, 153);
-            this.pnlPrix.TabIndex = 12;
+            this.pnlPrix.TabIndex = 5;
             this.pnlPrix.Visible = false;
             // 
             // lblqte
@@ -366,7 +428,7 @@
             this.lblRecompense.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblRecompense.Name = "lblRecompense";
             this.lblRecompense.Size = new System.Drawing.Size(91, 15);
-            this.lblRecompense.TabIndex = 0;
+            this.lblRecompense.TabIndex = 2;
             this.lblRecompense.Text = "Récompense";
             // 
             // pnlDon
@@ -380,7 +442,7 @@
             this.pnlDon.Location = new System.Drawing.Point(34, 285);
             this.pnlDon.Name = "pnlDon";
             this.pnlDon.Size = new System.Drawing.Size(248, 153);
-            this.pnlDon.TabIndex = 12;
+            this.pnlDon.TabIndex = 5;
             this.pnlDon.Visible = false;
             // 
             // lblIDDon
@@ -417,7 +479,7 @@
             this.txtMontant.Margin = new System.Windows.Forms.Padding(4);
             this.txtMontant.Name = "txtMontant";
             this.txtMontant.Size = new System.Drawing.Size(125, 23);
-            this.txtMontant.TabIndex = 7;
+            this.txtMontant.TabIndex = 1;
             // 
             // btnAjouterDon
             // 
@@ -460,7 +522,7 @@
             this.pnlInfoDonateur.Location = new System.Drawing.Point(34, 12);
             this.pnlInfoDonateur.Name = "pnlInfoDonateur";
             this.pnlInfoDonateur.Size = new System.Drawing.Size(508, 241);
-            this.pnlInfoDonateur.TabIndex = 3;
+            this.pnlInfoDonateur.TabIndex = 0;
             // 
             // mskTxtBoxTel
             // 
@@ -468,14 +530,14 @@
             this.mskTxtBoxTel.Mask = "\\(000\\) 000\\-0000";
             this.mskTxtBoxTel.Name = "mskTxtBoxTel";
             this.mskTxtBoxTel.Size = new System.Drawing.Size(168, 23);
-            this.mskTxtBoxTel.TabIndex = 17;
+            this.mskTxtBoxTel.TabIndex = 4;
             this.mskTxtBoxTel.Click += new System.EventHandler(this.mskTxtBoxTel_Click);
             // 
             // lblMessageDonateur
             // 
             this.lblMessageDonateur.AutoSize = true;
             this.lblMessageDonateur.ForeColor = System.Drawing.Color.Maroon;
-            this.lblMessageDonateur.Location = new System.Drawing.Point(113, 217);
+            this.lblMessageDonateur.Location = new System.Drawing.Point(149, 217);
             this.lblMessageDonateur.Name = "lblMessageDonateur";
             this.lblMessageDonateur.Size = new System.Drawing.Size(132, 15);
             this.lblMessageDonateur.TabIndex = 16;
@@ -490,7 +552,7 @@
             this.lblnfoDonateur.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblnfoDonateur.Name = "lblnfoDonateur";
             this.lblnfoDonateur.Size = new System.Drawing.Size(150, 15);
-            this.lblnfoDonateur.TabIndex = 14;
+            this.lblnfoDonateur.TabIndex = 4;
             this.lblnfoDonateur.Text = "Informations Donateur";
             // 
             // lblID
@@ -510,7 +572,7 @@
             this.txtID.Margin = new System.Windows.Forms.Padding(4);
             this.txtID.Name = "txtID";
             this.txtID.Size = new System.Drawing.Size(168, 23);
-            this.txtID.TabIndex = 1;
+            this.txtID.TabIndex = 0;
             // 
             // btnSuivant
             // 
@@ -518,7 +580,7 @@
             this.btnSuivant.Margin = new System.Windows.Forms.Padding(4);
             this.btnSuivant.Name = "btnSuivant";
             this.btnSuivant.Size = new System.Drawing.Size(101, 34);
-            this.btnSuivant.TabIndex = 2;
+            this.btnSuivant.TabIndex = 5;
             this.btnSuivant.Text = "Suivant";
             this.btnSuivant.UseVisualStyleBackColor = true;
             this.btnSuivant.Click += new System.EventHandler(this.btnCacher_Click);
@@ -529,7 +591,7 @@
             this.txtPrenomDonateur.Margin = new System.Windows.Forms.Padding(4);
             this.txtPrenomDonateur.Name = "txtPrenomDonateur";
             this.txtPrenomDonateur.Size = new System.Drawing.Size(168, 23);
-            this.txtPrenomDonateur.TabIndex = 2;
+            this.txtPrenomDonateur.TabIndex = 1;
             // 
             // lblPrenomDonateur
             // 
@@ -567,7 +629,7 @@
             this.txtNomDonateur.Margin = new System.Windows.Forms.Padding(4);
             this.txtNomDonateur.Name = "txtNomDonateur";
             this.txtNomDonateur.Size = new System.Drawing.Size(168, 23);
-            this.txtNomDonateur.TabIndex = 3;
+            this.txtNomDonateur.TabIndex = 2;
             // 
             // txtCourrielDonateur
             // 
@@ -576,7 +638,7 @@
             this.txtCourrielDonateur.Name = "txtCourrielDonateur";
             this.txtCourrielDonateur.PlaceholderText = "aaaaaa@domain.com";
             this.txtCourrielDonateur.Size = new System.Drawing.Size(168, 23);
-            this.txtCourrielDonateur.TabIndex = 4;
+            this.txtCourrielDonateur.TabIndex = 3;
             // 
             // lblTelephone
             // 
@@ -616,7 +678,7 @@
             this.btnAfficheDon.Margin = new System.Windows.Forms.Padding(4);
             this.btnAfficheDon.Name = "btnAfficheDon";
             this.btnAfficheDon.Size = new System.Drawing.Size(189, 34);
-            this.btnAfficheDon.TabIndex = 9;
+            this.btnAfficheDon.TabIndex = 1;
             this.btnAfficheDon.Text = "Afficher les dons";
             this.btnAfficheDon.UseVisualStyleBackColor = true;
             this.btnAfficheDon.Click += new System.EventHandler(this.btnAfficheDon_Click);
@@ -914,68 +976,6 @@
             this.lblInfoProjetSTE.TabIndex = 0;
             this.lblInfoProjetSTE.Text = "STE v1.0";
             // 
-            // numMois
-            // 
-            this.numMois.Location = new System.Drawing.Point(279, 130);
-            this.numMois.Maximum = new decimal(new int[] {
-            12,
-            0,
-            0,
-            0});
-            this.numMois.Minimum = new decimal(new int[] {
-            1,
-            0,
-            0,
-            0});
-            this.numMois.Name = "numMois";
-            this.numMois.Size = new System.Drawing.Size(35, 23);
-            this.numMois.TabIndex = 21;
-            this.numMois.Value = new decimal(new int[] {
-            1,
-            0,
-            0,
-            0});
-            // 
-            // numAnnee
-            // 
-            this.numAnnee.Location = new System.Drawing.Point(382, 130);
-            this.numAnnee.Maximum = new decimal(new int[] {
-            99,
-            0,
-            0,
-            0});
-            this.numAnnee.Minimum = new decimal(new int[] {
-            22,
-            0,
-            0,
-            0});
-            this.numAnnee.Name = "numAnnee";
-            this.numAnnee.Size = new System.Drawing.Size(35, 23);
-            this.numAnnee.TabIndex = 21;
-            this.numAnnee.Value = new decimal(new int[] {
-            22,
-            0,
-            0,
-            0});
-            // 
-            // lblMoisExpiration
-            // 
-            this.lblMoisExpiration.AutoSize = true;
-            this.lblMoisExpiration.Location = new System.Drawing.Point(239, 132);
-            this.lblMoisExpiration.Name = "lblMoisExpiration";
-            this.lblMoisExpiration.Size = new System.Drawing.Size(39, 15);
-            this.lblMoisExpiration.TabIndex = 22;
-            this.lblMoisExpiration.Text = "Mois :";
-            // 
-            // lblAnneeExpiration
-            // 
-            this.lblAnneeExpiration.AutoSize = true;
-            this.lblAnneeExpiration.Location = new System.Drawing.Point(335, 132);
-            this.lblAnneeExpiration.Name = "lblAnneeExpiration";
-            this.lblAnneeExpiration.Size = new System.Drawing.Size(47, 15);
-            this.lblAnneeExpiration.TabIndex = 22;
-            this.lblAnneeExpiration.Text = "Année :";
-            // 
             // interface_temp
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
@@ -991,6 +991,8 @@
             this.tabDonateur.PerformLayout();
             this.pnlCarteCredit.ResumeLayout(false);
             this.pnlCarteCredit.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.numAnnee)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numMois)).EndInit();
             this.grRadioCarte.ResumeLayout(false);
             this.grRadioCarte.PerformLayout();
             this.pnlPrix.ResumeLayout(false);
@@ -1003,8 +1005,6 @@
             this.tabCommanditaire.PerformLayout();
             this.tabAPropos.ResumeLayout(false);
             this.tabAPropos.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.numMois)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numAnnee)).EndInit();
             this.ResumeLayout(false);
 
         }
