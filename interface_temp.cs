@@ -17,6 +17,7 @@ namespace Telethon
     public partial class interface_temp : Form
     {
         GestionnaireSTE gestionnaireSTE = new GestionnaireSTE();
+        string dateExpiration;
         public interface_temp()
         {
             InitializeComponent();
@@ -29,7 +30,9 @@ namespace Telethon
 
         private void btnAjouterDon_Click(object sender, EventArgs e)
         {
-            gestionnaireSTE.AjouterDon(txtBoxDateExpCarte.Text, txtIDDon.Text, double.Parse(txtMontant.Text), gestionnaireSTE.dons.Count);
+            dateExpiration = numMois.ToString() + "/" + numAnnee.ToString();
+            textBoxOutput.Text = dateExpiration;
+            gestionnaireSTE.AjouterDon(dateExpiration, txtIDDon.Text, double.Parse(txtMontant.Text), gestionnaireSTE.dons.Count);
         }
 
         private void btnAjoutreDonateur_Click(object sender, EventArgs e)
@@ -80,7 +83,7 @@ namespace Telethon
                 }
 
 
-                gestionnaireSTE.AjouterDonateur(txtPrenomDonateur.Text, txtNomDonateur.Text, txtCourrielDonateur.Text, mskTxtBoxTel.Text, typeCarte, mskTxtNumeroCarte.Text, txtBoxDateExpCarte.Text, gestionnaireSTE.donateurs.Count());
+                gestionnaireSTE.AjouterDonateur(txtPrenomDonateur.Text, txtNomDonateur.Text, txtCourrielDonateur.Text, mskTxtBoxTel.Text, typeCarte, mskTxtNumeroCarte.Text, dateExpiration, gestionnaireSTE.donateurs.Count());
                 pnlDon.Visible = true;
                 pnlPrix.Visible = true;
                 pnlCarteCredit.Visible = false;
@@ -119,7 +122,7 @@ namespace Telethon
 
             if(false == true)//HACK (txtPrenomDonateur.Text == "" || txtNomDonateur.Text == "" || mskTxtBoxTel.Text == "(   )    -")
             {
-
+                // Mise en évidence des champs vides
                 if (txtPrenomDonateur.Text == String.Empty)
                 {
                     lblPrenomDonateur.ForeColor = Color.Maroon;
@@ -130,6 +133,7 @@ namespace Telethon
                     lblPrenomDonateur.ForeColor = Color.Black;
                     lblPrenomDonateur.Text = "Prénom :";
                 }
+
                 if (txtNomDonateur.Text == String.Empty)
                 {
                     lblNomDonateur.ForeColor = Color.Maroon;
@@ -140,6 +144,7 @@ namespace Telethon
                     lblNomDonateur.ForeColor = Color.Black;
                     lblNomDonateur.Text = "Nom :";
                 }
+
                 if (mskTxtBoxTel.Text == "(   )    -")
                 {
                     lblTelephone.ForeColor = Color.Maroon;
@@ -151,7 +156,7 @@ namespace Telethon
                     lblTelephone.Text = "Téléphone :";
                 }
             }
-            else if(false)/* (!telephoneRegex.IsMatch(mskTxtBoxTel.Text))*/
+            else if(false)//HACK (!telephoneRegex.IsMatch(mskTxtBoxTel.Text))
             {
 
                 mskTxtBoxTel.Focus();
@@ -161,7 +166,7 @@ namespace Telethon
 
                 lblMessageDonateur.Visible = true;
             }
-            else if (false)/* (!courrielRegex.IsMatch(txtCourrielDonateur.Text) && txtCourrielDonateur.Text != String.Empty)*/
+            else if (false)//HACK (!courrielRegex.IsMatch(txtCourrielDonateur.Text) && txtCourrielDonateur.Text != String.Empty)
             {
                 MessageBox.Show("Format de Courriel invalide\n\ressayer de nouveaux ou laisser le champ vide.");
                 //txtCourrielDonateur.Text = "";
