@@ -34,18 +34,35 @@ namespace Telethon
 
         private void btnAjoutreDonateur_Click(object sender, EventArgs e)
         {
+            
+            
             char typeCarte = 'O';
-            if (!(radAmex.Checked || radMC.Checked || radVisa.Checked))
-            {
-                MessageBox.Show("Vous devez choisir un type de carte", "Attention", MessageBoxButtons.OK, MessageBoxIcon.Information);
 
-            }
-            else if (mskTxtNumeroCarte.Text == "")
+            if (!(radAmex.Checked || radMC.Checked || radVisa.Checked) || mskTxtNumeroCarte.Text == "               " || !mskTxtNumeroCarte.MaskCompleted)
             {
-                lblNoCredit.ForeColor = Color.Maroon;
-                lblNoCredit.Text = lblNoCredit.Text + "*";
-                lblMessageCredit.Visible = true;
+                if (!(radAmex.Checked || radMC.Checked || radVisa.Checked))
+                {
+                    grRadioCarte.ForeColor = Color.Maroon;
+                    if (grRadioCarte.Text == "Type de carte")
+                        grRadioCarte.Text += "*";
+                    MessageBox.Show("Vous devez choisir un type de carte", "Attention", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    lblMessageCredit.Visible = true;
+                }
+
+                if (mskTxtNumeroCarte.Text == "               ")
+                {
+                    lblNoCredit.ForeColor = Color.Maroon;
+                    if (lblNoCredit.Text == "Numéro de carte :")
+                        lblNoCredit.Text += "*";
+                    lblMessageCredit.Visible = true;
+                }
+                else if (!mskTxtNumeroCarte.MaskCompleted)
+                {
+                    MessageBox.Show("Veuillez compléter le numéro de la carte", "Attention", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    mskTxtNumeroCarte.Focus();
+                } 
             }
+            else
             {
 
                 if (radAmex.Checked)
@@ -100,9 +117,9 @@ namespace Telethon
             lblMessageDonateur.Visible = true;
 
 
-            if (txtPrenomDonateur.Text == "" || txtNomDonateur.Text == "" || mskTxtBoxTel.Text == "(   )    -")
+            if(false == true)//HACK (txtPrenomDonateur.Text == "" || txtNomDonateur.Text == "" || mskTxtBoxTel.Text == "(   )    -")
             {
-                
+
                 if (txtPrenomDonateur.Text == String.Empty)
                 {
                     lblPrenomDonateur.ForeColor = Color.Maroon;
@@ -134,17 +151,17 @@ namespace Telethon
                     lblTelephone.Text = "Téléphone :";
                 }
             }
-            else if (!telephoneRegex.IsMatch(mskTxtBoxTel.Text))
+            else if(false)/* (!telephoneRegex.IsMatch(mskTxtBoxTel.Text))*/
             {
-                
+
                 mskTxtBoxTel.Focus();
                 lblTelephone.ForeColor = Color.Maroon;
                 MessageBox.Show("!! Il manque un ou des chiffres au #Téléphone !!");
                 //mskTxtBoxTel.Text = "";
-                
+
                 lblMessageDonateur.Visible = true;
             }
-            else if (!courrielRegex.IsMatch(txtCourrielDonateur.Text) && txtCourrielDonateur.Text != String.Empty)
+            else if (false)/* (!courrielRegex.IsMatch(txtCourrielDonateur.Text) && txtCourrielDonateur.Text != String.Empty)*/
             {
                 MessageBox.Show("Format de Courriel invalide\n\ressayer de nouveaux ou laisser le champ vide.");
                 //txtCourrielDonateur.Text = "";
