@@ -95,14 +95,14 @@ namespace Telethon
 
         private void btnCacher_Click(object sender, EventArgs e)//TODO Essayer d'
         {
-            Regex courrielRegex = new Regex(@"^([\w]+)@([\w]+)\.([\w]+)((\.([\w]+))+)$");
+            Regex courrielRegex = new Regex(@"^([\w]+)@([\w]+)(\.([\w])+)+$");
             Regex telephoneRegex = new Regex(@"^\(\d{3}\) \d{3}\-\d{4}$");
             lblMessageDonateur.Visible = true;
 
 
-            if (txtPrenomDonateur.Text == "" || txtNomDonateur.Text == "" || mskTxtBoxTel.Text == "")
+            if (txtPrenomDonateur.Text == "" || txtNomDonateur.Text == "" || mskTxtBoxTel.Text == "(   )    -")
             {
-
+                
                 if (txtPrenomDonateur.Text == String.Empty)
                 {
                     lblPrenomDonateur.ForeColor = Color.Maroon;
@@ -123,7 +123,7 @@ namespace Telethon
                     lblNomDonateur.ForeColor = Color.Black;
                     lblNomDonateur.Text = "Nom :";
                 }
-                if (mskTxtBoxTel.Text == String.Empty)
+                if (mskTxtBoxTel.Text == "(   )    -")
                 {
                     lblTelephone.ForeColor = Color.Maroon;
                     lblTelephone.Text += "*";
@@ -136,16 +136,18 @@ namespace Telethon
             }
             else if (!telephoneRegex.IsMatch(mskTxtBoxTel.Text))
             {
-                MessageBox.Show("!! Il manque un ou des chiffres au #Téléphone !!");
-                mskTxtBoxTel.Text = "";
+                
                 mskTxtBoxTel.Focus();
                 lblTelephone.ForeColor = Color.Maroon;
+                MessageBox.Show("!! Il manque un ou des chiffres au #Téléphone !!");
+                //mskTxtBoxTel.Text = "";
+                
                 lblMessageDonateur.Visible = true;
             }
             else if (!courrielRegex.IsMatch(txtCourrielDonateur.Text) && txtCourrielDonateur.Text != String.Empty)
             {
                 MessageBox.Show("Format de Courriel invalide\n\ressayer de nouveaux ou laisser le champ vide.");
-                txtCourrielDonateur.Text = "";
+                //txtCourrielDonateur.Text = "";
                 txtCourrielDonateur.Focus();
                 lblMessageDonateur.Visible = true;
             }
