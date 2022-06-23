@@ -926,6 +926,7 @@
             this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "interface_temp";
             this.Text = "Form2";
+            this.Load += new System.EventHandler(this.interface_temp_Load);
             this.tabEntrees.ResumeLayout(false);
             this.tabDonateur.ResumeLayout(false);
             this.tabDonateur.PerformLayout();

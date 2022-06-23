@@ -12,10 +12,10 @@ using STELib;
 
 namespace NouvelleInterface
 {
-    public partial class interface_temp : Form
+    public partial class InterfacePrincipale : Form
     {
         GestionnaireSTE gestionnaireSTE = new GestionnaireSTE();
-        public interface_temp()
+        public InterfacePrincipale()
         {
             InitializeComponent();
         }

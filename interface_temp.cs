@@ -194,6 +194,11 @@ namespace Telethon
         {
             txtRecompense.Text = gestionnaireSTE.AttribuerPrix(double.Parse(txtMontant.Text));
         }
+
+        private void interface_temp_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 
 }
