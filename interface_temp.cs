@@ -10,6 +10,8 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using STELib;
 
+//TODO continuer infoCarte de credit... validation CVC et dateEXp nouveaux format mm/aa
+
 namespace Telethon
 {
     public partial class interface_temp : Form
@@ -27,7 +29,7 @@ namespace Telethon
 
         private void btnAjouterDon_Click(object sender, EventArgs e)
         {
-            gestionnaireSTE.AjouterDon(dtpExpiration.Text, txtIDDon.Text, double.Parse(txtMontant.Text), gestionnaireSTE.dons.Count);
+            gestionnaireSTE.AjouterDon(txtBoxDateExpCarte.Text, txtIDDon.Text, double.Parse(txtMontant.Text), gestionnaireSTE.dons.Count);
         }
 
         private void btnAjoutreDonateur_Click(object sender, EventArgs e)
@@ -61,7 +63,7 @@ namespace Telethon
                 }
 
 
-                gestionnaireSTE.AjouterDonateur(txtPrenomDonateur.Text, txtNomDonateur.Text, txtCourrielDonateur.Text, mskTxtBoxTel.Text, typeCarte, mskTxtNumeroCarte.Text, dtpExpiration.Value.ToShortDateString(), gestionnaireSTE.donateurs.Count());
+                gestionnaireSTE.AjouterDonateur(txtPrenomDonateur.Text, txtNomDonateur.Text, txtCourrielDonateur.Text, mskTxtBoxTel.Text, typeCarte, mskTxtNumeroCarte.Text, txtBoxDateExpCarte.Text, gestionnaireSTE.donateurs.Count());
                 pnlDon.Visible = true;
                 pnlPrix.Visible = true;
                 pnlCarteCredit.Visible = false;
