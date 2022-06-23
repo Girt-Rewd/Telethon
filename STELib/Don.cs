@@ -9,10 +9,13 @@ namespace STELib
     public class Don
     {
         
+        /// <summary>
+        /// La classe Don sert principalement de structure de données pour enregistrer les dons en argent entrants avant que ceux-ci ne soient 
+        /// remisé dans un fichier txt (et éventuellement dans une base de donnée
+        /// </summary>
         
         
-        //TODO Commentaires
-        //TODO Accesseurs
+        
 
         
         private string idDon;
@@ -29,7 +32,10 @@ namespace STELib
             this.idDonateur = idDonateur;
         }
 
-
+        /// <summary>
+        /// La fonction ToString présente les informations pertinentes d’un don sous forme de chaine de caractère
+        /// </summary>
+        /// <returns>string</returns>
         public new string ToString() {
             return "Identifiant du don : " + idDon + " date du don : " + dateDon + " montant : " + montantDon;
         }

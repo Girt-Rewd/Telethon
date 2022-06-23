@@ -8,11 +8,9 @@ namespace STELib
 {
     public class Prix
     {
-        //TODO Commentaires
-        //TODO Accesseurs
-        
-        
-        
+        /// <summary>
+        /// Classe qui sert a garder en mémoire les données qui permettent d’identifier les prix durant le fonctionnement de l’application avant que ces données ne soient remisées
+        /// </summary>
         private string idPrix = "PRX";
         private string description;
         private double valeur;
@@ -33,12 +31,20 @@ namespace STELib
             this.idCommanditaire = idCommanditaire;
          
         }
-        
+
+        /// <summary>
+        /// ToString retourne les informations pertinentes d’un prix sous forme de string
+        /// </summary>
+        /// <returns>string</returns>
         public new string ToString() { 
             string chaine = "idPrix: " + idPrix + ", description: " + description + ", valeur: "+ valeur +", quantite restante: " + quantiteActuelle + ", idCommanditaire: " + idCommanditaire;
             return chaine;
         }
 
+        /// <summary>
+        /// Permet de mettre à jour l’inventaire des prix suite à une attribution
+        /// </summary>
+        /// <param name="quantite"></param>
         public void Deduire(int quantite) {
 
             quantiteActuelle -= quantite;

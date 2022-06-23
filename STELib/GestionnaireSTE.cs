@@ -8,15 +8,15 @@ using System.Threading.Tasks;
 // TODO Le préposé doit être redirigé par l’interface s’il y a une erreur de frappe ou un champ non saisi (guidage en ergonomie)
 // TODO L’ajout du Donateur, Commanditaire ou Don n’est valide que si tous leschamps sont saisis sauf l’E-mail qui n’est pas obligatoire
 // TODO refaire l’interface de manière à alléger la surcharge d’information et de replacer les boutons aux endroit adéquats.
-// TODO Clarifier que la carte de crédit fait partie des informations du donateur.
-// TODO Ajouter un bouton ou un onglet sur l’interface qui décrit votre projet et son fonctionnement, en mentionnant dans l’en tête les participantsdu projet (nom et prénom des étudiant du groupe).
 // TODO Mettre des info-bulles aux besoins pour le guidage de l’utilisateur
 namespace STELib
 {
     public class GestionnaireSTE
     {
-        //TODO Commentaires
-        //TODO Accesseurs
+        /// <summary>
+        /// La classe Gestionnaire est le moteur de ce projet. On y retrouve l’ensemble des fonctions qui permettent l’ajout et l’affichage des 
+        /// éléments du projets.  Elle stocke les données jusqu’à leur remisage. Elle contient aussi des méthodes de calcul qui lient les autres objets
+        /// </summary>
 
         public List<Donateur> donateurs;
         public List<Commanditaire> commanditaires;
@@ -34,28 +34,62 @@ namespace STELib
             //TODO initialisation des prix disponibles;
 
         }
-
+        /// <summary>
+        /// Permet d’ajouter un donateur au tableau donateur. 
+        /// </summary>
+        /// <param name="prenom"></param>
+        /// <param name="nom"></param>
+        /// <param name="adresse"></param>
+        /// <param name="telephone"></param>
+        /// <param name="typeCarte"></param>
+        /// <param name="numeroCarte"></param>
+        /// <param name="dateExpiration"></param>
+        /// <param name="nbDonateur"></param>
         public void AjouterDonateur(string prenom, string nom, string adresse, string telephone, char typeCarte, string numeroCarte, string dateExpiration, int nbDonateur)
         {
 
             donateurs.Add(new Donateur(prenom, nom, adresse, telephone, typeCarte, numeroCarte, dateExpiration, nbDonateur));
         }
 
+        /// <summary>
+        /// Crée et ajoute un commanditaire au tableau commanditaires. 
+        /// </summary>
+        /// <param name="prenom"></param>
+        /// <param name="nom"></param>
+        /// <param name="nb"></param>
         public void AjouterCommanditaire(string prenom, string nom, int nb)
         {
             commanditaires.Add(new Commanditaire(prenom, nom, nb ));
         }
-
+        /// <summary>
+        /// Crée et ajoute un prix au tableau prix. 
+        /// </summary>
+        /// <param name="description"></param>
+        /// <param name="valeur"></param>
+        /// <param name="quatite_originale"></param>
+        /// <param name="commanditaire"></param>
+        /// <param name="nbPrix"></param>
         public void AjouterPrix(string description, double valeur, int quatite_originale, string commanditaire, int nbPrix)
         {
             prix.Add(new Prix(description, valeur, quatite_originale, commanditaire, nbPrix));
         }
 
+        /// <summary>
+        /// Crée et ajoute un don au tableau dons. 
+        /// </summary>
+        /// <param name="date"></param>
+        /// <param name="idDonateur"></param>
+        /// <param name="montantDon"></param>
+        /// <param name="nbDon"></param>
         public void AjouterDon(string date, string idDonateur, double montantDon, int nbDon)
         {
             dons.Add(new Don(date, idDonateur, montantDon, nbDon));
         }
 
+        /// <summary>
+        /// Affiche tous les donateurs enregistrés
+        /// </summary>
+        /// <returns>string</returns>
         public string AfficherDonateurs()
         {
             string chaine = "";
@@ -66,6 +100,10 @@ namespace STELib
             return chaine;
         }
 
+        /// <summary>
+        /// Affiche tous les commanditaires enregistrés
+        /// </summary>
+        /// <returns></returns>
         public string AfficherCommanditaires()
         {
             string chaine = "";
@@ -76,6 +114,10 @@ namespace STELib
             return chaine;
         }
 
+        /// <summary>
+        /// Affiche tous les prix enregistrés
+        /// </summary>
+        /// <returns>string</returns>
         public string AfficherPrix()
         {
             string chaine = "";
@@ -85,6 +127,11 @@ namespace STELib
             }
             return chaine;
         }
+
+        /// <summary>
+        /// Affiche tous les dons enregistrés
+        /// </summary>
+        /// <returns></returns>
         public string AfficherDons()
         {
             string chaine = "";
@@ -94,31 +141,68 @@ namespace STELib
             }
             return chaine;
         }
-        public void AttribuerPrix()
+
+        /// <summary>
+        /// Permet de 
+        ///     1. calculer les points gagnés par un donateur en fonction de son don
+        ///     2. Attribuer un prix correspondant au nombre de points
+        /// </summary>
+        public string AttribuerPrix(double montant)
         {
-            // TODO AttribuerPrix() calcule le nombre de points associé au montant du don.  le nombre de point sera affiché dans la case « Quantité » du groupe Box « attribuer prix »
-            // $50 – $199    -> 1 points
-            // $200 – $349   -> 2 points
-            // $350 – $499   -> 3 points
-            // >= $500       -> 5 points
-            // toute tranche additionnelle de 500$ donne droit à 400 points supplémentaires
-
-            // (problème ergonomique sur la codification et nommage : le mot quantité et mal utilisé dans cette partie de l’interface)
-
-            // TODO Ensuite Attribuer prix trouve le prix correspondant au nombre de points récompenses.
-            // Televiseur       20 points
-            // Calendrier        1 point
-            // Repas pour deux  10 points
-            // BBQ              15 points
+            string recompense = "rien";
+            int points = 0;
+            if (montant < 50) { 
             }
+            else if (montant >= 50 && montant < 200)
+            {
+                points = 1;
+            }
+            else if (montant >= 200 && montant < 350)
+            {
+                points = 2;
+            }
+            else if (montant >= 350 && montant < 500)
+            {
+                points = 3;
+            }
+            else { 
+                points = 5 + 4*((int)(montant/500)-1);
+            }
+            
+            if (points >= 20)
+            {
+                recompense = "Téléviseur";
+            }
+            else if (points >= 15)
+            {
+                recompense = "BBQ";
+
+            }
+            else if (points >= 10)
+            {
+                recompense = "Repas pour deux";
+
+            }
+            else if (points >= 1)
+            {
+                recompense = "Calendrier";
+            }
+            else { 
+                recompense = String.Empty;
+            }
+
+            return recompense;
+            }
+
+        /// <summary>
+        /// TODO Commentair EnregistrerDonateur()
+        /// On enregistre les donateurs dans un fichier?
+        /// </summary>
+        /// <returns></returns>
         public Boolean EnregistrerDonateur()
         {
             //TODO EnregistrerDonateur()
             return true;
         }
-
-
-
-
     }
 }
