@@ -95,7 +95,7 @@ namespace Telethon
 
         private void btnCacher_Click(object sender, EventArgs e)//TODO Essayer d'
         {
-            Regex courrielRegex = new Regex(@"^([\w]+)@([\w]+)\.([\w]+)((\.([\w]+))+)$");
+            Regex courrielRegex = new Regex(@"^([\w]+)@([\w]+)(\.([\w])+)+$");
             Regex telephoneRegex = new Regex(@"^\(\d{3}\) \d{3}\-\d{4}$");
             lblMessageDonateur.Visible = true;
 
