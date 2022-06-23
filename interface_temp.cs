@@ -30,7 +30,7 @@ namespace Telethon
 
         private void btnAjouterDon_Click(object sender, EventArgs e)
         {
-            dateExpiration = numMois.ToString() + "/" + numAnnee.ToString();
+            dateExpiration = numMois.Value.ToString("00") + "/" + numAnnee.Value.ToString();
             textBoxOutput.Text = dateExpiration;
             gestionnaireSTE.AjouterDon(dateExpiration, txtIDDon.Text, double.Parse(txtMontant.Text), gestionnaireSTE.dons.Count);
         }
