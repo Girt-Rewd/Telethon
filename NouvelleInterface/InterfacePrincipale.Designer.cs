@@ -1,7 +1,7 @@
-﻿namespace Telethon
+﻿namespace NouvelleInterface
 {
-        partial class interface_temp
-        {
+    partial class InterfacePrincipale
+    {
         /// <summary>
         /// Required designer variable.
         /// </summary>
@@ -28,7 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(interface_temp));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(InterfacePrincipale));
             this.tabEntrees = new System.Windows.Forms.TabControl();
             this.tabDonateur = new System.Windows.Forms.TabPage();
             this.textBoxOutput = new System.Windows.Forms.TextBox();
@@ -926,7 +926,6 @@
             this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "interface_temp";
             this.Text = "Form2";
-            this.Load += new System.EventHandler(this.interface_temp_Load);
             this.tabEntrees.ResumeLayout(false);
             this.tabDonateur.ResumeLayout(false);
             this.tabDonateur.PerformLayout();

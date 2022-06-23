@@ -10,14 +10,12 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using STELib;
 
-//TODO continuer infoCarte de credit... validation CVC et dateEXp nouveaux format mm/aa
-
-namespace Telethon
+namespace NouvelleInterface
 {
-    public partial class interface_temp : Form
+    public partial class InterfacePrincipale : Form
     {
         GestionnaireSTE gestionnaireSTE = new GestionnaireSTE();
-        public interface_temp()
+        public InterfacePrincipale()
         {
             InitializeComponent();
         }
@@ -34,8 +32,8 @@ namespace Telethon
 
         private void btnAjoutreDonateur_Click(object sender, EventArgs e)
         {
-            
-            
+
+
             char typeCarte = 'O';
 
             if (!(radAmex.Checked || radMC.Checked || radVisa.Checked) || mskTxtNumeroCarte.Text == "               " || !mskTxtNumeroCarte.MaskCompleted)
@@ -60,7 +58,7 @@ namespace Telethon
                 {
                     MessageBox.Show("Veuillez compléter le numéro de la carte", "Attention", MessageBoxButtons.OK, MessageBoxIcon.Error);
                     mskTxtNumeroCarte.Focus();
-                } 
+                }
             }
             else
             {
@@ -117,7 +115,7 @@ namespace Telethon
             lblMessageDonateur.Visible = true;
 
 
-            if(false == true)//HACK (txtPrenomDonateur.Text == "" || txtNomDonateur.Text == "" || mskTxtBoxTel.Text == "(   )    -")
+            if (false == true)//HACK (txtPrenomDonateur.Text == "" || txtNomDonateur.Text == "" || mskTxtBoxTel.Text == "(   )    -")
             {
 
                 if (txtPrenomDonateur.Text == String.Empty)
@@ -151,7 +149,7 @@ namespace Telethon
                     lblTelephone.Text = "Téléphone :";
                 }
             }
-            else if(false)/* (!telephoneRegex.IsMatch(mskTxtBoxTel.Text))*/
+            else if (false)/* (!telephoneRegex.IsMatch(mskTxtBoxTel.Text))*/
             {
 
                 mskTxtBoxTel.Focus();
@@ -193,11 +191,6 @@ namespace Telethon
         private void btnCalculRecompense_Click(object sender, EventArgs e)
         {
             txtRecompense.Text = gestionnaireSTE.AttribuerPrix(double.Parse(txtMontant.Text));
-        }
-
-        private void interface_temp_Load(object sender, EventArgs e)
-        {
-
         }
     }
 
