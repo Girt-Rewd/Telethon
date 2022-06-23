@@ -5,10 +5,10 @@ using STELib;
 
 namespace Telethon
 {
-    public partial class interface_temp : Form
+    public partial class Interface_temp : Form
     {
         GestionnaireSTE gestionnaireSTE = new();
-        public interface_temp()
+        public Interface_temp()
         {
             InitializeComponent();
         }
@@ -97,7 +97,7 @@ namespace Telethon
 
         private void BtnAjouterPrix_Click(object sender, EventArgs e)
         {
-            Prix television = new Prix(txtDescription.Text, double.Parse(txtValeurPrix.Text), int.Parse(txtQuatitePrix.Text), "CMDT098", gestionnaireSTE.prix.Count);
+            Prix television = new(txtDescription.Text, double.Parse(txtValeurPrix.Text), int.Parse(txtQuatitePrix.Text), "CMDT098", gestionnaireSTE.prix.Count);
             textBoxOutput.Text = television.ToString();
         }
 
