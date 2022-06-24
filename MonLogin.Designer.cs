@@ -52,7 +52,8 @@
             this.txtNom.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.txtNom.Name = "txtNom";
             this.txtNom.Size = new System.Drawing.Size(252, 23);
-            this.txtNom.TabIndex = 1;
+            this.txtNom.TabIndex = 0;
+            this.txtNom.Text = "Telethon2022";
             // 
             // lblMotDePasse
             // 
@@ -71,6 +72,7 @@
             this.txtMotDePasse.Name = "txtMotDePasse";
             this.txtMotDePasse.Size = new System.Drawing.Size(252, 23);
             this.txtMotDePasse.TabIndex = 1;
+            this.txtMotDePasse.Text = "Don@2022";
             // 
             // btnOk
             // 
@@ -89,7 +91,7 @@
             this.btnAnnuler.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.btnAnnuler.Name = "btnAnnuler";
             this.btnAnnuler.Size = new System.Drawing.Size(88, 27);
-            this.btnAnnuler.TabIndex = 2;
+            this.btnAnnuler.TabIndex = 3;
             this.btnAnnuler.Text = "Annuler";
             this.btnAnnuler.UseVisualStyleBackColor = true;
             this.btnAnnuler.Click += new System.EventHandler(this.BtnAnnuler_Click);

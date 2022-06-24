@@ -126,7 +126,7 @@ namespace Telethon
             lblMessageDonateur.Visible = true;
 
 
-            if(false == true)//HACK (txtPrenomDonateur.Text == "" || txtNomDonateur.Text == "" || mskTxtBoxTel.Text == "(   )    -")
+            if(txtPrenomDonateur.Text == "" || txtNomDonateur.Text == "" || mskTxtBoxTel.Text == "(   )    -")
             {
                 // Mise en évidence des champs vides
                 if (txtPrenomDonateur.Text == String.Empty)
@@ -162,20 +162,17 @@ namespace Telethon
                     lblTelephone.Text = "Téléphone :";
                 }
             }
-            else if(false)//HACK (!telephoneRegex.IsMatch(mskTxtBoxTel.Text))
+            else if(!telephoneRegex.IsMatch(mskTxtBoxTel.Text))
             {
-
                 mskTxtBoxTel.Focus();
                 lblTelephone.ForeColor = Color.Maroon;
                 MessageBox.Show("!! Il manque un ou des chiffres au #Téléphone !!");
-                //mskTxtBoxTel.Text = "";
 
                 lblMessageDonateur.Visible = true;
             }
-            else if (false)//HACK (!courrielRegex.IsMatch(txtCourrielDonateur.Text) && txtCourrielDonateur.Text != String.Empty)
+            else if (!courrielRegex.IsMatch(txtCourrielDonateur.Text) && txtCourrielDonateur.Text != String.Empty)
             {
                 MessageBox.Show("Format de Courriel invalide\n\ressayer de nouveaux ou laisser le champ vide.");
-                //txtCourrielDonateur.Text = "";
                 txtCourrielDonateur.Focus();
                 lblMessageDonateur.Visible = true;
             }
