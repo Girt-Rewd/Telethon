@@ -39,40 +39,45 @@
             // lblNom
             // 
             this.lblNom.AutoSize = true;
-            this.lblNom.Location = new System.Drawing.Point(96, 39);
+            this.lblNom.Location = new System.Drawing.Point(112, 45);
+            this.lblNom.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblNom.Name = "lblNom";
-            this.lblNom.Size = new System.Drawing.Size(91, 13);
+            this.lblNom.Size = new System.Drawing.Size(105, 15);
             this.lblNom.TabIndex = 0;
             this.lblNom.Text = "Nom d’utilisateur :";
             // 
             // txtNom
             // 
-            this.txtNom.Location = new System.Drawing.Point(204, 36);
+            this.txtNom.Location = new System.Drawing.Point(238, 42);
+            this.txtNom.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.txtNom.Name = "txtNom";
-            this.txtNom.Size = new System.Drawing.Size(217, 20);
+            this.txtNom.Size = new System.Drawing.Size(252, 23);
             this.txtNom.TabIndex = 1;
             // 
             // lblMotDePasse
             // 
             this.lblMotDePasse.AutoSize = true;
-            this.lblMotDePasse.Location = new System.Drawing.Point(96, 90);
+            this.lblMotDePasse.Location = new System.Drawing.Point(112, 104);
+            this.lblMotDePasse.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblMotDePasse.Name = "lblMotDePasse";
-            this.lblMotDePasse.Size = new System.Drawing.Size(77, 13);
+            this.lblMotDePasse.Size = new System.Drawing.Size(83, 15);
             this.lblMotDePasse.TabIndex = 0;
             this.lblMotDePasse.Text = "Mot de passe :";
             // 
             // txtMotDePasse
             // 
-            this.txtMotDePasse.Location = new System.Drawing.Point(204, 87);
+            this.txtMotDePasse.Location = new System.Drawing.Point(238, 100);
+            this.txtMotDePasse.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.txtMotDePasse.Name = "txtMotDePasse";
-            this.txtMotDePasse.Size = new System.Drawing.Size(217, 20);
+            this.txtMotDePasse.Size = new System.Drawing.Size(252, 23);
             this.txtMotDePasse.TabIndex = 1;
             // 
             // btnOk
             // 
-            this.btnOk.Location = new System.Drawing.Point(204, 142);
+            this.btnOk.Location = new System.Drawing.Point(238, 164);
+            this.btnOk.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.btnOk.Name = "btnOk";
-            this.btnOk.Size = new System.Drawing.Size(75, 23);
+            this.btnOk.Size = new System.Drawing.Size(88, 27);
             this.btnOk.TabIndex = 2;
             this.btnOk.Text = "Ok";
             this.btnOk.UseVisualStyleBackColor = true;
@@ -80,24 +85,27 @@
             // 
             // btnAnnuler
             // 
-            this.btnAnnuler.Location = new System.Drawing.Point(346, 142);
+            this.btnAnnuler.Location = new System.Drawing.Point(404, 164);
+            this.btnAnnuler.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.btnAnnuler.Name = "btnAnnuler";
-            this.btnAnnuler.Size = new System.Drawing.Size(75, 23);
+            this.btnAnnuler.Size = new System.Drawing.Size(88, 27);
             this.btnAnnuler.TabIndex = 2;
             this.btnAnnuler.Text = "Annuler";
             this.btnAnnuler.UseVisualStyleBackColor = true;
+            this.btnAnnuler.Click += new System.EventHandler(this.BtnAnnuler_Click);
             // 
             // MonLogin
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(665, 255);
+            this.ClientSize = new System.Drawing.Size(776, 294);
             this.Controls.Add(this.btnAnnuler);
             this.Controls.Add(this.btnOk);
             this.Controls.Add(this.txtMotDePasse);
             this.Controls.Add(this.txtNom);
             this.Controls.Add(this.lblMotDePasse);
             this.Controls.Add(this.lblNom);
+            this.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.Name = "MonLogin";
             this.Text = "Accueil";
             this.ResumeLayout(false);

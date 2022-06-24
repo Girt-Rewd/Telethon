@@ -33,5 +33,14 @@ namespace Telethon
                 Console.WriteLine("pas ok");
             }
         }
+        /// <summary>
+        /// BtnAnnuler_Click vide les champs de l’interface login
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        private void BtnAnnuler_Click(object sender, EventArgs e)
+        {
+            // TODO BtnAnnuler_Click
+        }
     }
 }
