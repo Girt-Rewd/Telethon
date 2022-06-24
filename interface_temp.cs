@@ -12,8 +12,8 @@ namespace Telethon
         /// Bloc de déclaration des variables globales
         /// </summary>
         GestionnaireSTE gestionnaireSTE = new();
-        string  dateExpiration ="";
-        
+        string dateExpiration = "";
+
         /// <summary>
         /// Constructeur
         /// </summary>
@@ -55,7 +55,7 @@ namespace Telethon
                 {
                     MessageBox.Show("Veuillez compléter le numéro de la carte", "Attention", MessageBoxButtons.OK, MessageBoxIcon.Error);
                     mskTxtNumeroCarte.Focus();
-                } 
+                }
             }
             else
             {
@@ -95,12 +95,13 @@ namespace Telethon
             {
                 gestionnaireSTE.AjouterDon(dateExpiration, txtIDDon.Text, double.Parse(txtMontant.Text), gestionnaireSTE.dons.Count);
             }
-            catch (FormatException) {
-                MessageBox.Show("Veuillez utiliser une virgule pour les décimales","Attention", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            catch (FormatException)
+            {
+                MessageBox.Show("Veuillez utiliser une virgule pour les décimales", "Attention", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 txtMontant.Focus();
             }
         }
-        
+
         //TODO Commentaire BtnAjouterComm_Click
         /// <summary>
         /// BtnAjouterComm_Click appelle la fonction qui crée une nouvelle instance de la classe Commanditaire à partir des paramètres fournis par l’utilisateur
@@ -110,10 +111,36 @@ namespace Telethon
         /// <param name="e"></param>
         private void BtnAjouterComm_Click(object sender, EventArgs e)
         {
-            // TODO Validations BtnAjouterComm_Click
-            gestionnaireSTE.AjouterCommanditaire(txtPrenomCommanditaire.Text, txtNomCommanditaire.Text, gestionnaireSTE.commanditaires.Count);
+            if (txtPrenomCommanditaire.Text == "" || txtNomCommanditaire.Text == "")
+            {
+                if (txtPrenomCommanditaire.Text == "")
+                {
+                    lblPrenomCommanditaire.ForeColor = Color.Maroon;
+                    if (lblPrenomCommanditaire.Text == "Type de carte")
+                        grRadioCarte.Text += "*";
+                    MessageBox.Show("Veuillez entrer le prénom du commanditaire", "Attention", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    lblMessageCommanditaire.Visible = true;
+                }
+                else
+                { 
+                
+                }
+
+                if (txtNomCommanditaire.Text == "")
+                {
+
+                }
+                else
+                {
+
+                }
+            }
+            else
+            {
+                gestionnaireSTE.AjouterCommanditaire(txtPrenomCommanditaire.Text, txtNomCommanditaire.Text, gestionnaireSTE.commanditaires.Count);
+            }
         }
-        
+
         /// <summary>
         /// BtnAjouterPrix_Click vérifier les champs des prix donnés par les commanditaire et enregistre un objet correspondant dans le tableau approprié
         /// </summary>
@@ -125,7 +152,7 @@ namespace Telethon
             Prix television = new(txtDescription.Text, double.Parse(txtValeurPrix.Text), int.Parse(txtQuatitePrix.Text), "CMDT098", gestionnaireSTE.prix.Count);
             textBoxOutput.Text = television.ToString();
         }
-        
+
         /// <summary>
         /// BtnAfficherDonateur_Click affiche la liste des donateurs temporairement stockés par l’application dans la RAM
         /// </summary>
@@ -156,7 +183,7 @@ namespace Telethon
             textBoxOutput.Text = gestionnaireSTE.AfficherCommanditaires();
         }
 
-        
+
         /// <summary>
         /// BtnSuivantDonateur_Click effectue un ensemble de validation sur la complétude et le format des informations personnelles du donateurs. Si les critères sont bien
         /// observés, elle cache le sous-formulaire des informations personnelles et révèle le sous-formulaire de la carte de crédit.
@@ -170,7 +197,7 @@ namespace Telethon
             lblMessageDonateur.Visible = true;
 
 
-            if(txtPrenomDonateur.Text == "" || txtNomDonateur.Text == "" || mskTxtBoxTel.Text == "(   )    -")
+            if (txtPrenomDonateur.Text == "" || txtNomDonateur.Text == "" || mskTxtBoxTel.Text == "(   )    -")
             {
                 // Mise en évidence des champs vides
                 if (txtPrenomDonateur.Text == String.Empty)
@@ -207,7 +234,7 @@ namespace Telethon
                 }
             }
 
-            else if(!telephoneRegex.IsMatch(mskTxtBoxTel.Text))
+            else if (!telephoneRegex.IsMatch(mskTxtBoxTel.Text))
             {
                 mskTxtBoxTel.Focus();
                 lblTelephone.ForeColor = Color.Maroon;
@@ -239,7 +266,7 @@ namespace Telethon
             this.Close();
         }
 
-        
+
         /// <summary>
         /// MskTxtBoxTel_Click positionne le curseur au début du la boîte de texte du numéro de téléphone
         /// </summary>
@@ -250,7 +277,7 @@ namespace Telethon
             mskTxtBoxTel.Select(0, 0);
         }
 
-        
+
         /// <summary>
         /// TxtNumeroCarte_Click place la petite patente qui indique où on est rendu au début du rectangle de capture du numéro de carte de crédit
         /// </summary>
@@ -261,7 +288,7 @@ namespace Telethon
             mskTxtNumeroCarte.Select(0, 0);
         }
 
-        
+
         /// <summary>
         /// BtnCalculRecompense_Click Bouton Calcule Récompense 
         /// </summary>
@@ -272,7 +299,7 @@ namespace Telethon
             txtRecompense.Text = GestionnaireSTE.AttribuerPrix(double.Parse(txtMontant.Text));
         }
 
-        
+
         /// <summary>
         /// Interface_temp_Load Fonction qui gère ce qui doit être fait au moment du chargement de notre formulaire
         /// </summary>
