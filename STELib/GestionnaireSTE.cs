@@ -6,7 +6,7 @@ using System.Text;
 using System.Threading.Tasks;
 // TODO Appliquer les techniques de gestion d'erreurs et de traitement d'exceptions.
 // TODO Le préposé doit être redirigé par l’interface s’il y a une erreur de frappe ou un champ non saisi (guidage en ergonomie)
-// TODO Mettre des info-bulles aux besoins pour le guidage de l’utilisateur
+
 namespace STELib
 {
     public class GestionnaireSTE
