@@ -5,7 +5,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 // TODO Appliquer les techniques de gestion d'erreurs et de traitement d'exceptions.
-// TODO Le préposé doit être redirigé par l’interface s’il y a une erreur de frappe ou un champ non saisi (guidage en ergonomie)
+
 
 namespace STELib
 {
@@ -29,7 +29,12 @@ namespace STELib
             this.dons = new List<Don>();
             this.prix = new List<Prix>();
 
-            //TODO initialisation des prix disponibles;
+            // initialisation des prix disponibles;
+            prix.Add(new Prix("Calendrier", 10.00, 2000, "CMDT10000", prix.Count));
+            prix.Add(new Prix("Repas pour deux", 100.00, 200, "CMDT10000", prix.Count));
+            prix.Add(new Prix("BBQ", 300, 30, "CMDT10000", prix.Count));
+            prix.Add(new Prix("Téléviseur", 1000, 20, "CMDT10000", prix.Count));
+
 
         }
         /// <summary>

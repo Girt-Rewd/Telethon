@@ -536,7 +536,7 @@
             this.mskTxtBoxTel.Name = "mskTxtBoxTel";
             this.mskTxtBoxTel.Size = new System.Drawing.Size(168, 23);
             this.mskTxtBoxTel.TabIndex = 4;
-            this.mskTxtBoxTel.Text = "5141112222"; // TODO mskTxtBoxTel enlever juste avant de remettre 
+            this.mskTxtBoxTel.Text = "5141112222"; // TODO enlever juste avant de remettre mskTxtBoxTel
             this.mskTxtBoxTel.Click += new System.EventHandler(this.MskTxtBoxTel_Click);
             // 
             // lblMessageDonateur
