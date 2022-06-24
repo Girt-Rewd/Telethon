@@ -1,7 +1,7 @@
 ﻿using System.Text.RegularExpressions;
 using STELib;
 
-//TODO continuer infoCarte de credit... validation CVC et dateEXp nouveaux format mm/aa
+//TODO continuer infoCarte de credit... validation CVC 
 
 namespace Telethon
 {

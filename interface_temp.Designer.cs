@@ -275,7 +275,7 @@
             this.mskTxtNumeroCarte.PromptChar = ' ';
             this.mskTxtNumeroCarte.Size = new System.Drawing.Size(178, 23);
             this.mskTxtNumeroCarte.TabIndex = 4;
-            this.mskTxtNumeroCarte.Text = "1234123412341234"; // HACK mskTxtNumeroCarte
+            this.mskTxtNumeroCarte.Text = "1234123412341234";
             this.mskTxtNumeroCarte.Click += new System.EventHandler(this.TxtNumeroCarte_Click);
             // 
             // btnAjoutreDonateur
@@ -339,7 +339,7 @@
             // radVisa
             // 
             this.radVisa.AutoSize = true;
-            this.radVisa.Checked = true; // HACK radVisa
+            this.radVisa.Checked = true;
             this.radVisa.Location = new System.Drawing.Point(22, 22);
             this.radVisa.Margin = new System.Windows.Forms.Padding(4);
             this.radVisa.Name = "radVisa";
@@ -482,7 +482,7 @@
             this.txtMontant.Name = "txtMontant";
             this.txtMontant.Size = new System.Drawing.Size(125, 23);
             this.txtMontant.TabIndex = 1;
-            this.txtMontant.Text = "2500"; // HACK txtMontant
+            this.txtMontant.Text = "2500";
             // 
             // btnAjouterDon
             // 
@@ -534,7 +534,7 @@
             this.mskTxtBoxTel.Name = "mskTxtBoxTel";
             this.mskTxtBoxTel.Size = new System.Drawing.Size(168, 23);
             this.mskTxtBoxTel.TabIndex = 4;
-            this.mskTxtBoxTel.Text = "5141112222"; // HACK mskTxtBoxTel
+            this.mskTxtBoxTel.Text = "5141112222";
             this.mskTxtBoxTel.Click += new System.EventHandler(this.MskTxtBoxTel_Click);
             // 
             // lblMessageDonateur
@@ -596,7 +596,7 @@
             this.txtPrenomDonateur.Name = "txtPrenomDonateur";
             this.txtPrenomDonateur.Size = new System.Drawing.Size(168, 23);
             this.txtPrenomDonateur.TabIndex = 1;
-            this.txtPrenomDonateur.Text = "Cafredoli"; // HACK txtPrenomDonateur
+            this.txtPrenomDonateur.Text = "Cafredoli";
             // 
             // lblPrenomDonateur
             // 
@@ -635,7 +635,7 @@
             this.txtNomDonateur.Name = "txtNomDonateur";
             this.txtNomDonateur.Size = new System.Drawing.Size(168, 23);
             this.txtNomDonateur.TabIndex = 2;
-            this.txtNomDonateur.Text = "Godfaimond"; // HACK txtNomDonateur
+            this.txtNomDonateur.Text = "Godfaimond";
             // 
             // txtCourrielDonateur
             // 
@@ -991,7 +991,7 @@
             this.Controls.Add(this.tabEntrees);
             this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "Interface_temp";
-            this.Text = "Form2";
+            this.Text = "Système de téléthon électronique";
             this.Load += new System.EventHandler(this.Interface_temp_Load);
             this.tabEntrees.ResumeLayout(false);
             this.tabDonateur.ResumeLayout(false);
