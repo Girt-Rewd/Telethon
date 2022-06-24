@@ -80,6 +80,7 @@
             this.btnQuitter = new System.Windows.Forms.Button();
             this.btnAfficheDon = new System.Windows.Forms.Button();
             this.tabCommanditaire = new System.Windows.Forms.TabPage();
+            this.lblMessagePrix = new System.Windows.Forms.Label();
             this.lblMessageCommanditaire = new System.Windows.Forms.Label();
             this.btnAffichePrix = new System.Windows.Forms.Button();
             this.btnAjouterPrix = new System.Windows.Forms.Button();
@@ -109,7 +110,6 @@
             this.lblAuteur01 = new System.Windows.Forms.Label();
             this.lblInfoProjetSTE = new System.Windows.Forms.Label();
             this.infoBulle = new System.Windows.Forms.ToolTip(this.components);
-            this.lblMessagePrix = new System.Windows.Forms.Label();
             this.tabEntrees.SuspendLayout();
             this.tabDonateur.SuspendLayout();
             this.pnlCarteCredit.SuspendLayout();
@@ -599,6 +599,7 @@
             this.txtPrenomDonateur.Size = new System.Drawing.Size(168, 23);
             this.txtPrenomDonateur.TabIndex = 1;
             this.txtPrenomDonateur.Text = "Cafredoli";
+            this.txtPrenomDonateur.Click += new System.EventHandler(this.txtPrenomDonateurNoir_Click);
             this.txtPrenomDonateur.MouseHover += new System.EventHandler(this.txtPrenomDonateur_MouseHover);
             // 
             // lblPrenomDonateur
@@ -639,6 +640,7 @@
             this.txtNomDonateur.Size = new System.Drawing.Size(168, 23);
             this.txtNomDonateur.TabIndex = 2;
             this.txtNomDonateur.Text = "Godfaimond";
+            this.txtNomDonateur.Click += new System.EventHandler(this.txtNomDonateur_Click);
             // 
             // txtCourrielDonateur
             // 
@@ -649,6 +651,7 @@
             this.txtCourrielDonateur.Size = new System.Drawing.Size(168, 23);
             this.txtCourrielDonateur.TabIndex = 3;
             this.txtCourrielDonateur.Text = "votrenom@domain.com";
+            this.txtCourrielDonateur.Click += new System.EventHandler(this.txtCourrielDonateur_Click);
             // 
             // lblTelephone
             // 
@@ -726,6 +729,17 @@
             this.tabCommanditaire.TabIndex = 1;
             this.tabCommanditaire.Text = "Commanditaires";
             // 
+            // lblMessagePrix
+            // 
+            this.lblMessagePrix.AutoSize = true;
+            this.lblMessagePrix.ForeColor = System.Drawing.Color.Maroon;
+            this.lblMessagePrix.Location = new System.Drawing.Point(589, 234);
+            this.lblMessagePrix.Name = "lblMessagePrix";
+            this.lblMessagePrix.Size = new System.Drawing.Size(111, 15);
+            this.lblMessagePrix.TabIndex = 18;
+            this.lblMessagePrix.Text = "*Champ obligatoire";
+            this.lblMessagePrix.Visible = false;
+            // 
             // lblMessageCommanditaire
             // 
             this.lblMessageCommanditaire.AutoSize = true;
@@ -787,6 +801,7 @@
             this.txtQuantitePrix.Name = "txtQuantitePrix";
             this.txtQuantitePrix.Size = new System.Drawing.Size(168, 23);
             this.txtQuantitePrix.TabIndex = 10;
+            this.txtQuantitePrix.Click += new System.EventHandler(this.txtQuantitePrix_Click);
             // 
             // txtValeurPrix
             // 
@@ -795,6 +810,7 @@
             this.txtValeurPrix.Name = "txtValeurPrix";
             this.txtValeurPrix.Size = new System.Drawing.Size(168, 23);
             this.txtValeurPrix.TabIndex = 11;
+            this.txtValeurPrix.Click += new System.EventHandler(this.txtValeurPrix_Click);
             // 
             // txtNomCommanditaire
             // 
@@ -803,6 +819,7 @@
             this.txtNomCommanditaire.Name = "txtNomCommanditaire";
             this.txtNomCommanditaire.Size = new System.Drawing.Size(168, 23);
             this.txtNomCommanditaire.TabIndex = 11;
+            this.txtNomCommanditaire.Click += new System.EventHandler(this.txtNomCommanditaire_Click);
             // 
             // txtDescription
             // 
@@ -811,6 +828,7 @@
             this.txtDescription.Name = "txtDescription";
             this.txtDescription.Size = new System.Drawing.Size(168, 23);
             this.txtDescription.TabIndex = 12;
+            this.txtDescription.Click += new System.EventHandler(this.txtDescription_Click);
             // 
             // txtPrenomCommanditaire
             // 
@@ -819,6 +837,7 @@
             this.txtPrenomCommanditaire.Name = "txtPrenomCommanditaire";
             this.txtPrenomCommanditaire.Size = new System.Drawing.Size(168, 23);
             this.txtPrenomCommanditaire.TabIndex = 12;
+            this.txtPrenomCommanditaire.Click += new System.EventHandler(this.txtPrenomCommanditaire_Click);
             // 
             // txtIDPrix
             // 
@@ -998,17 +1017,6 @@
             this.lblInfoProjetSTE.Size = new System.Drawing.Size(49, 15);
             this.lblInfoProjetSTE.TabIndex = 0;
             this.lblInfoProjetSTE.Text = "STE v1.0";
-            // 
-            // lblMessagePrix
-            // 
-            this.lblMessagePrix.AutoSize = true;
-            this.lblMessagePrix.ForeColor = System.Drawing.Color.Maroon;
-            this.lblMessagePrix.Location = new System.Drawing.Point(589, 234);
-            this.lblMessagePrix.Name = "lblMessagePrix";
-            this.lblMessagePrix.Size = new System.Drawing.Size(111, 15);
-            this.lblMessagePrix.TabIndex = 18;
-            this.lblMessagePrix.Text = "*Champ obligatoire";
-            this.lblMessagePrix.Visible = false;
             // 
             // Interface_temp
             // 

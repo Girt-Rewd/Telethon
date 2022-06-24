@@ -248,6 +248,7 @@ namespace Telethon
         /// <param name="e"></param>
         private void MskTxtBoxTel_Click(object sender, EventArgs e)
         {
+            TxtNoir(lblTelephone, "Téléphone :");
             mskTxtBoxTel.Select(0, 0);
         }
 
@@ -259,6 +260,7 @@ namespace Telethon
         /// <param name="e"></param>
         private void TxtNumeroCarte_Click(object sender, EventArgs e)
         {
+            TxtNoir(lblNoCredit, "Numéro de carte :");
             mskTxtNumeroCarte.Select(0, 0);
         }
 
@@ -315,5 +317,55 @@ namespace Telethon
             }
 
         }
+        private void TxtNoir(Control lblAchange, string chaineAchange) {
+            lblAchange.ForeColor = Color.Black;
+            lblAchange.Text = chaineAchange;
+        }
+
+        private void txtPrenomDonateurNoir_Click(object sender, EventArgs e)
+        {
+            TxtNoir(lblPrenomDonateur, "Prénom :");
+        }
+
+        private void txtNomDonateur_Click(object sender, EventArgs e)
+        {
+            TxtNoir(lblNomDonateur, "Nom :");
+        }
+
+        private void txtCourrielDonateur_Click(object sender, EventArgs e)
+        {
+            TxtNoir(lblCourriel, "Courriel :");
+        }
+
+        private void mskTxtNumeroCarte_MaskInputRejected(object sender, MaskInputRejectedEventArgs e)
+        {
+
+        }
+        #region ensemble de fonction qui remette le texte des labels des champs erronés en Noir et qui réinitialise leur valeur
+        private void txtPrenomCommanditaire_Click(object sender, EventArgs e)
+        {
+            TxtNoir(lblPrenomCommanditaire, "Prénom :");
+        }
+
+        private void txtNomCommanditaire_Click(object sender, EventArgs e)
+        {
+            TxtNoir(lblNomCommanditaire, "Nom :");
+        }
+
+        private void txtDescription_Click(object sender, EventArgs e)
+        {
+            TxtNoir(lblDescPrix, "Description :");
+        }
+
+        private void txtValeurPrix_Click(object sender, EventArgs e)
+        {
+            TxtNoir(lblValeur, "Valeur unitaire :");
+        }
+
+        private void txtQuantitePrix_Click(object sender, EventArgs e)
+        {
+            TxtNoir(lblQuatitePrix, "Quantité :");
+        }
+        #endregion
     }
 }
