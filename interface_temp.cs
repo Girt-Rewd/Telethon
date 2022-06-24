@@ -106,7 +106,8 @@ namespace Telethon
         
         //TODO Commentaire BtnAjouterComm_Click
         /// <summary>
-        /// BtnAjouterComm_Click
+        /// BtnAjouterComm_Click appelle la fonction qui crée une nouvelle instance de la classe Commanditaire à partir des paramètres fournis par l’utilisateur
+        /// via l’interface. Elle est activée par l’événement click du bouton btnAjouterComm
         /// </summary>
         /// <param name="sender"></param>
         /// <param name="e"></param>
