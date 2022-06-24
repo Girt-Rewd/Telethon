@@ -121,7 +121,7 @@ namespace Telethon
         }
 
 
-        private void BtnSuivantDonateur_Click(object sender, EventArgs e)//TODO Essayer d'
+        private void BtnSuivantDonateur_Click(object sender, EventArgs e)
         {
             Regex courrielRegex = new(@"^([\w]+)@([\w]+)(\.([\w])+)+$");
             Regex telephoneRegex = new(@"^\(\d{3}\) \d{3}\-\d{4}$");

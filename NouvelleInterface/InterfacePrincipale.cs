@@ -108,7 +108,7 @@ namespace NouvelleInterface
             textBoxOutput.Text = television.ToString();
         }
 
-        private void BtnCacher_Click(object sender, EventArgs e)//TODO Essayer d'
+        private void BtnCacher_Click(object sender, EventArgs e)
         {
             Regex courrielRegex = new(@"^([\w]+)@([\w]+)(\.([\w])+)+$");
             Regex telephoneRegex = new(@"^\(\d{3}\) \d{3}\-\d{4}$");

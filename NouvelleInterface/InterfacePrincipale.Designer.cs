@@ -214,6 +214,7 @@
             this.mskTxtNumeroCarte.Size = new System.Drawing.Size(138, 23);
             this.mskTxtNumeroCarte.TabIndex = 17;
             this.mskTxtNumeroCarte.Click += new System.EventHandler(this.TxtNumeroCarte_Click);
+            this.mskTxtNumeroCarte.Text = "1234123412341234"; // HACK mskTxtNumeroCarte
             // 
             // btnAjouterDonateur
             // 
