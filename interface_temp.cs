@@ -17,7 +17,7 @@ namespace Telethon
     public partial class interface_temp : Form
     {
         GestionnaireSTE gestionnaireSTE = new GestionnaireSTE();
-        string dateExpiration;
+        string  dateExpiration ="";
         public interface_temp()
         {
             InitializeComponent();
@@ -31,7 +31,6 @@ namespace Telethon
         private void btnAjouterDon_Click(object sender, EventArgs e)
         {
             dateExpiration = numMois.Value.ToString("00") + "/" + numAnnee.Value.ToString();
-            textBoxOutput.Text = dateExpiration;
             gestionnaireSTE.AjouterDon(dateExpiration, txtIDDon.Text, double.Parse(txtMontant.Text), gestionnaireSTE.dons.Count);
         }
 
@@ -201,6 +200,11 @@ namespace Telethon
         }
 
         private void interface_temp_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void txtMontant_TextChanged(object sender, EventArgs e)
         {
 
         }

@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(interface_temp));
             this.tabEntrees = new System.Windows.Forms.TabControl();
             this.tabDonateur = new System.Windows.Forms.TabPage();
@@ -106,6 +107,7 @@
             this.lblFred = new System.Windows.Forms.Label();
             this.lblAuteur01 = new System.Windows.Forms.Label();
             this.lblInfoProjetSTE = new System.Windows.Forms.Label();
+            this.toolTip1 = new System.Windows.Forms.ToolTip(this.components);
             this.tabEntrees.SuspendLayout();
             this.tabDonateur.SuspendLayout();
             this.pnlCarteCredit.SuspendLayout();
@@ -480,6 +482,7 @@
             this.txtMontant.Name = "txtMontant";
             this.txtMontant.Size = new System.Drawing.Size(125, 23);
             this.txtMontant.TabIndex = 1;
+            this.txtMontant.TextChanged += new System.EventHandler(this.txtMontant_TextChanged);
             // 
             // btnAjouterDon
             // 
@@ -552,7 +555,7 @@
             this.lblnfoDonateur.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblnfoDonateur.Name = "lblnfoDonateur";
             this.lblnfoDonateur.Size = new System.Drawing.Size(150, 15);
-            this.lblnfoDonateur.TabIndex = 4;
+            this.lblnfoDonateur.TabIndex = 6;
             this.lblnfoDonateur.Text = "Informations Donateur";
             // 
             // lblID
@@ -563,7 +566,7 @@
             this.lblID.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblID.Name = "lblID";
             this.lblID.Size = new System.Drawing.Size(24, 15);
-            this.lblID.TabIndex = 15;
+            this.lblID.TabIndex = 7;
             this.lblID.Text = "ID :";
             // 
             // txtID
@@ -1091,5 +1094,6 @@
         private Label lblMoisExpiration;
         private NumericUpDown numAnnee;
         private NumericUpDown numMois;
+        private ToolTip toolTip1;
     }
 }
