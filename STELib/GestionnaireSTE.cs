@@ -6,9 +6,7 @@ using System.Text;
 using System.Threading.Tasks;
 // TODO Appliquer les techniques de gestion d'erreurs et de traitement d'exceptions.
 // TODO Le préposé doit être redirigé par l’interface s’il y a une erreur de frappe ou un champ non saisi (guidage en ergonomie)
-// TODO L’ajout du Donateur, Commanditaire ou Don n’est valide que si tous leschamps sont saisis sauf l’E-mail qui n’est pas obligatoire
-// TODO refaire l’interface de manière à alléger la surcharge d’information et de replacer les boutons aux endroit adéquats.
-// TODO Mettre des info-bulles aux besoins pour le guidage de l’utilisateur
+
 namespace STELib
 {
     public class GestionnaireSTE
@@ -147,9 +145,8 @@ namespace STELib
         ///     1. calculer les points gagnés par un donateur en fonction de son don
         ///     2. Attribuer un prix correspondant au nombre de points
         /// </summary>
-        public string AttribuerPrix(double montant)
+        public static string AttribuerPrix(double montant)
         {
-            string recompense = "rien";
             int points = 0;
             if (montant < 50) { 
             }
@@ -168,7 +165,8 @@ namespace STELib
             else { 
                 points = 5 + 4*((int)(montant/500)-1);
             }
-            
+
+            string recompense;
             if (points >= 20)
             {
                 recompense = "Téléviseur";
@@ -187,7 +185,8 @@ namespace STELib
             {
                 recompense = "Calendrier";
             }
-            else { 
+            else
+            {
                 recompense = String.Empty;
             }
 
@@ -195,11 +194,11 @@ namespace STELib
             }
 
         /// <summary>
-        /// TODO Commentair EnregistrerDonateur()
+        /// TODO Commentaire EnregistrerDonateur()
         /// On enregistre les donateurs dans un fichier?
         /// </summary>
         /// <returns></returns>
-        public Boolean EnregistrerDonateur()
+        public static Boolean EnregistrerDonateur()
         {
             //TODO EnregistrerDonateur()
             return true;
