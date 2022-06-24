@@ -21,6 +21,10 @@ namespace Telethon
         /// </summary>
         GestionnaireSTE gestionnaireSTE = new GestionnaireSTE();
         string  dateExpiration ="";
+        
+        /// <summary>
+        /// Constructeur
+        /// </summary>
         public interface_temp()
         {
             InitializeComponent();
