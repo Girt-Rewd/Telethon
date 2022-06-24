@@ -38,7 +38,13 @@ namespace Telethon
         private void BtnAjouterDon_Click(object sender, EventArgs e)
         {
             dateExpiration = numMois.Value.ToString("00") + "/" + numAnnee.Value.ToString();
-            gestionnaireSTE.AjouterDon(dateExpiration, txtIDDon.Text, double.Parse(txtMontant.Text), gestionnaireSTE.dons.Count);
+            try
+            {
+                gestionnaireSTE.AjouterDon(dateExpiration, txtIDDon.Text, double.Parse(txtMontant.Text), gestionnaireSTE.dons.Count);
+            }
+            catch (FormatException) {
+                MessageBox.Show("Veuillez utiliser une virgule pour les décimales","Attention", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
         }
 
         private void BtnAjouterDonateur_Click(object sender, EventArgs e)
