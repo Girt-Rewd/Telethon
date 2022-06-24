@@ -320,7 +320,7 @@ namespace Telethon
             }
 
         }
-        private void TxtNoir(Control lblAchange, string chaineAchange) {
+        private void  TxtNoir(Control lblAchange, string chaineAchange) {
             lblAchange.ForeColor = Color.Black;
             lblAchange.Text = chaineAchange;
         }
