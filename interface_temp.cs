@@ -162,7 +162,7 @@ namespace Telethon
                     lblTelephone.Text = "Téléphone :";
                 }
             }
-            else if((!telephoneRegex.IsMatch(mskTxtBoxTel.Text)
+            else if(!telephoneRegex.IsMatch(mskTxtBoxTel.Text))
             {
                 mskTxtBoxTel.Focus();
                 lblTelephone.ForeColor = Color.Maroon;
