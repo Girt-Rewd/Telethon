@@ -23,24 +23,12 @@ namespace Telethon
             InitializeComponent();
         }
 
-        private void BtnAjouterComm_Click(object sender, EventArgs e)
-        {
-            gestionnaireSTE.AjouterCommanditaire(txtPrenomCommanditaire.Text, txtNomCommanditaire.Text, gestionnaireSTE.commanditaires.Count);
-        }
-
-        private void BtnAjouterDon_Click(object sender, EventArgs e)
-        {
-            dateExpiration = numMois.Value.ToString("00") + "/" + numAnnee.Value.ToString();
-            try
-            {
-                gestionnaireSTE.AjouterDon(dateExpiration, txtIDDon.Text, double.Parse(txtMontant.Text), gestionnaireSTE.dons.Count);
-            }
-            catch (FormatException) {
-                MessageBox.Show("Veuillez utiliser une virgule pour les décimales","Attention", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                txtMontant.Focus();
-            }
-        }
-
+        // TODO BtnAjouterDonateur_Click Commentaire
+        /// <summary>
+        /// BtnAjouterDonateur_Click 
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void BtnAjouterDonateur_Click(object sender, EventArgs e)
         {
             
@@ -97,30 +85,89 @@ namespace Telethon
             }
         }
 
-
-
+        //TODO Commentaire BtnAjouterDon_Click
+        /// <summary>
+        /// BtnAjouterDon_Click
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        private void BtnAjouterDon_Click(object sender, EventArgs e)
+        {
+            dateExpiration = numMois.Value.ToString("00") + "/" + numAnnee.Value.ToString();
+            try
+            {
+                gestionnaireSTE.AjouterDon(dateExpiration, txtIDDon.Text, double.Parse(txtMontant.Text), gestionnaireSTE.dons.Count);
+            }
+            catch (FormatException) {
+                MessageBox.Show("Veuillez utiliser une virgule pour les décimales","Attention", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                txtMontant.Focus();
+            }
+        }
+        
+        //TODO Commentaire BtnAjouterComm_Click
+        /// <summary>
+        /// BtnAjouterComm_Click
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        private void BtnAjouterComm_Click(object sender, EventArgs e)
+        {
+            // TODO Validations BtnAjouterComm_Click
+            gestionnaireSTE.AjouterCommanditaire(txtPrenomCommanditaire.Text, txtNomCommanditaire.Text, gestionnaireSTE.commanditaires.Count);
+        }
+        
+        //TODO Commentaire BtnAjouterPrix_Click
+        /// <summary>
+        /// BtnAjouterPrix_Click
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        private void BtnAjouterPrix_Click(object sender, EventArgs e)
+        {
+            // TODO Validations BtnAjouterPrix_Click
+            Prix television = new(txtDescription.Text, double.Parse(txtValeurPrix.Text), int.Parse(txtQuatitePrix.Text), "CMDT098", gestionnaireSTE.prix.Count);
+            textBoxOutput.Text = television.ToString();
+        }
+        
+        //TODO Commentaire BtnAfficherDonateur_Click
+        /// <summary>
+        /// BtnAfficherDonateur_Click
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void BtnAfficherDonateur_Click(object sender, EventArgs e)
         {
             textBoxOutput.Text = gestionnaireSTE.AfficherDonateurs();
         }
 
+        //TODO Commentaire BtnAfficheDon_Click
+        /// <summary>
+        /// BtnAfficheDon_Click
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void BtnAfficheDon_Click(object sender, EventArgs e)
         {
             textBoxOutput.Text = gestionnaireSTE.AfficherDons();
         }
 
+        //TODO Commentaire BtnAfficherCommanditaire_Click
+        /// <summary>
+        /// BtnAfficherCommanditaire_Click
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void BtnAfficherCommanditaire_Click(object sender, EventArgs e)
         {
             textBoxOutput.Text = gestionnaireSTE.AfficherCommanditaires();
         }
 
-        private void BtnAjouterPrix_Click(object sender, EventArgs e)
-        {
-            Prix television = new(txtDescription.Text, double.Parse(txtValeurPrix.Text), int.Parse(txtQuatitePrix.Text), "CMDT098", gestionnaireSTE.prix.Count);
-            textBoxOutput.Text = television.ToString();
-        }
-
-
+        //TODO Commentaire BtnSuivantDonateur_Click
+        /// <summary>
+        /// BtnSuivantDonateur_Click
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void BtnSuivantDonateur_Click(object sender, EventArgs e)
         {
             Regex courrielRegex = new(@"^([\w]+)@([\w]+)(\.([\w])+)+$");
@@ -187,26 +234,56 @@ namespace Telethon
             }
         }
 
+        //TODO Commentaire BtnQuitter_Click
+        /// <summary>
+        /// BtnQuitter_Click
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void BtnQuitter_Click(object sender, EventArgs e)
         {
             this.Close();
         }
 
+        //TODO Commentaire MskTxtBoxTel_Click
+        /// <summary>
+        /// MskTxtBoxTel_Click
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void MskTxtBoxTel_Click(object sender, EventArgs e)
         {
             mskTxtBoxTel.Select(0, 0);
         }
 
+        //TODO Commentaire TxtNumeroCarte_Click
+        /// <summary>
+        /// TxtNumeroCarte_Click
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void TxtNumeroCarte_Click(object sender, EventArgs e)
         {
             mskTxtNumeroCarte.Select(0, 0);
         }
 
+        //TODO Commentaire BtnCalculRecompense_Click
+        /// <summary>
+        /// BtnCalculRecompense_Click
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void BtnCalculRecompense_Click(object sender, EventArgs e)
         {
             txtRecompense.Text = GestionnaireSTE.AttribuerPrix(double.Parse(txtMontant.Text));
         }
 
+        //TODO Commentaire Interface_temp_Load
+        /// <summary>
+        /// Interface_temp_Load
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void Interface_temp_Load(object sender, EventArgs e)
         {
 
