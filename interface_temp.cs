@@ -148,9 +148,8 @@ namespace Telethon
                     lblPrenomDonateur.ForeColor = Color.Maroon;
                     if(lblMessageDonateur.Text=="Prénom :") lblPrenomDonateur.Text += "*";
                     
-                }
-
-                else
+                } 
+                catch (FormatException)
                 {
                     MessageBox.Show("Veuillez utiliser une virgule pour les décimales", "Attention", MessageBoxButtons.OK, MessageBoxIcon.Error);
                     txtValeurPrix.Focus();
@@ -291,7 +290,7 @@ namespace Telethon
         }
 
         // TODO consulter cet exemple d’utilisation de l’infoBulle
-        // TODO bouton désactiver/Activer Infobulle (on pourrait faire un onglet "option de l’interface"  avec ce bouton et le bouton dark mode par exemple)
+        
         private void txtPrenomDonateur_MouseHover(object sender, EventArgs e)
         {
             infoBulle.SetToolTip(txtPrenomDonateur, "Champ obligatoire");
