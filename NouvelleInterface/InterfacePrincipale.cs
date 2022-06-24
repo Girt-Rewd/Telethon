@@ -14,7 +14,7 @@ namespace NouvelleInterface
 {
     public partial class InterfacePrincipale : Form
     {
-        GestionnaireSTE gestionnaireSTE = new GestionnaireSTE();
+        GestionnaireSTE gestionnaireSTE = new();
         public InterfacePrincipale()
         {
             InitializeComponent();
@@ -104,14 +104,14 @@ namespace NouvelleInterface
 
         private void btnAjouterPrix_Click(object sender, EventArgs e)
         {
-            Prix television = new Prix(txtDescription.Text, double.Parse(txtValeurPrix.Text), int.Parse(txtQuatitePrix.Text), "CMDT098", gestionnaireSTE.prix.Count());
+            Prix television = new(txtDescription.Text, double.Parse(txtValeurPrix.Text), int.Parse(txtQuatitePrix.Text), "CMDT098", gestionnaireSTE.prix.Count());
             textBoxOutput.Text = television.ToString();
         }
 
         private void btnCacher_Click(object sender, EventArgs e)//TODO Essayer d'
         {
-            Regex courrielRegex = new Regex(@"^([\w]+)@([\w]+)(\.([\w])+)+$");
-            Regex telephoneRegex = new Regex(@"^\(\d{3}\) \d{3}\-\d{4}$");
+            Regex courrielRegex = new(@"^([\w]+)@([\w]+)(\.([\w])+)+$");
+            Regex telephoneRegex = new(@"^\(\d{3}\) \d{3}\-\d{4}$");
             lblMessageDonateur.Visible = true;
 
 

@@ -482,7 +482,6 @@
             this.txtMontant.Name = "txtMontant";
             this.txtMontant.Size = new System.Drawing.Size(125, 23);
             this.txtMontant.TabIndex = 1;
-            this.txtMontant.TextChanged += new System.EventHandler(this.txtMontant_TextChanged);
             // 
             // btnAjouterDon
             // 

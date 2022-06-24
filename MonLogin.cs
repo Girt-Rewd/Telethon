@@ -24,7 +24,7 @@ namespace Telethon
 
         private void btnOk_Click(object sender, EventArgs e)
         {
-            if (true/*nomUtilisateur.Equals(txtNom.Text) && motDePasse.Equals(txtMotDePasse.Text)*/)
+            if (true)// HACK nomUtilisateur.Equals(txtNom.Text) && motDePasse.Equals(txtMotDePasse.Text))
             {
                 interface_temp monInterface = new interface_temp();
                 monInterface.Show();

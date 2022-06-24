@@ -19,7 +19,7 @@ namespace Telethon
         /// <summary>
         /// Bloc de déclaration des variables globales
         /// </summary>
-        GestionnaireSTE gestionnaireSTE = new GestionnaireSTE();
+        GestionnaireSTE gestionnaireSTE = new();
         string  dateExpiration ="";
         
         /// <summary>
@@ -121,8 +121,8 @@ namespace Telethon
 
         private void btnCacher_Click(object sender, EventArgs e)//TODO Essayer d'
         {
-            Regex courrielRegex = new Regex(@"^([\w]+)@([\w]+)(\.([\w])+)+$");
-            Regex telephoneRegex = new Regex(@"^\(\d{3}\) \d{3}\-\d{4}$");
+            Regex courrielRegex = new(@"^([\w]+)@([\w]+)(\.([\w])+)+$");
+            Regex telephoneRegex = new(@"^\(\d{3}\) \d{3}\-\d{4}$");
             lblMessageDonateur.Visible = true;
 
 
@@ -211,10 +211,7 @@ namespace Telethon
 
         }
 
-        private void txtMontant_TextChanged(object sender, EventArgs e)
-        {
-
-        }
+       
     }
 
 }
