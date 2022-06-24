@@ -287,7 +287,7 @@ namespace Telethon
         // TODO bouton désactiver/Activer Infobulle (on pourrait faire un onglet "option de l’interface"  avec ce bouton et le bouton dark mode par exemple)
         private void txtPrenomDonateur_MouseHover(object sender, EventArgs e)
         {
-            infoBulle.SetToolTip(txtPrenomDonateur, "Entrez le nom du donateur");
+            infoBulle.SetToolTip(txtPrenomDonateur, "Champ obligatoire");
         }
     }
 }
