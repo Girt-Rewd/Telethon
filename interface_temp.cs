@@ -17,22 +17,20 @@ namespace Telethon
         /// <summary>
         /// Constructeur
         /// </summary>
-
         public Interface_temp()
         {
             InitializeComponent();
         }
 
-        // TODO BtnAjouterDonateur_Click Commentaire
         /// <summary>
-        /// BtnAjouterDonateur_Click 
+        /// BtnAjouterDonateur_Click effectue un ensemble de validation sur des champs correspondants aux informations de la carte de crédit, tant au niveau
+        /// de leur complétude que de leur format. Si les critères nécessaires sont remplis elle crée l’objet donateur correspondant aux informations personnelles 
+        /// fournies par l’utilisateur et affiche les sous-formulaires ayant trait au don.
         /// </summary>
         /// <param name="sender"></param>
         /// <param name="e"></param>
         private void BtnAjouterDonateur_Click(object sender, EventArgs e)
         {
-            
-            
             char typeCarte = 'O';
 
             if (!(radAmex.Checked || radMC.Checked || radVisa.Checked) || mskTxtNumeroCarte.Text == "               " || !mskTxtNumeroCarte.MaskCompleted)
@@ -85,9 +83,8 @@ namespace Telethon
             }
         }
 
-        //TODO Commentaire BtnAjouterDon_Click
         /// <summary>
-        /// BtnAjouterDon_Click
+        /// BtnAjouterDon_Click effectue un ensemble de validation par rapport à un don avant de le transférer dans le tableau aménagé à cet effet
         /// </summary>
         /// <param name="sender"></param>
         /// <param name="e"></param>
@@ -117,9 +114,8 @@ namespace Telethon
             gestionnaireSTE.AjouterCommanditaire(txtPrenomCommanditaire.Text, txtNomCommanditaire.Text, gestionnaireSTE.commanditaires.Count);
         }
         
-        //TODO Commentaire BtnAjouterPrix_Click
         /// <summary>
-        /// BtnAjouterPrix_Click
+        /// BtnAjouterPrix_Click vérifier les champs des prix donnés par les commanditaire et enregistre un objet correspondant dans le tableau approprié
         /// </summary>
         /// <param name="sender"></param>
         /// <param name="e"></param>
@@ -130,9 +126,8 @@ namespace Telethon
             textBoxOutput.Text = television.ToString();
         }
         
-        //TODO Commentaire BtnAfficherDonateur_Click
         /// <summary>
-        /// BtnAfficherDonateur_Click
+        /// BtnAfficherDonateur_Click affiche la liste des donateurs temporairement stockés par l’application dans la RAM
         /// </summary>
         /// <param name="sender"></param>
         /// <param name="e"></param>
@@ -141,9 +136,8 @@ namespace Telethon
             textBoxOutput.Text = gestionnaireSTE.AfficherDonateurs();
         }
 
-        //TODO Commentaire BtnAfficheDon_Click
         /// <summary>
-        /// BtnAfficheDon_Click
+        /// BtnAfficheDon_Click affiche tous les dons recueillis durant la session de l’utilisateur
         /// </summary>
         /// <param name="sender"></param>
         /// <param name="e"></param>
@@ -152,9 +146,8 @@ namespace Telethon
             textBoxOutput.Text = gestionnaireSTE.AfficherDons();
         }
 
-        //TODO Commentaire BtnAfficherCommanditaire_Click
         /// <summary>
-        /// BtnAfficherCommanditaire_Click
+        /// BtnAfficherCommanditaire_Click présente la liste de tous les commanditaires préservés en mémoire vive sous la forme d’une sympatiques chaine de caractères
         /// </summary>
         /// <param name="sender"></param>
         /// <param name="e"></param>
@@ -163,9 +156,10 @@ namespace Telethon
             textBoxOutput.Text = gestionnaireSTE.AfficherCommanditaires();
         }
 
-        //TODO Commentaire BtnSuivantDonateur_Click
+        
         /// <summary>
-        /// BtnSuivantDonateur_Click
+        /// BtnSuivantDonateur_Click effectue un ensemble de validation sur la complétude et le format des informations personnelles du donateurs. Si les critères sont bien
+        /// observés, elle cache le sous-formulaire des informations personnelles et révèle le sous-formulaire de la carte de crédit.
         /// </summary>
         /// <param name="sender"></param>
         /// <param name="e"></param>
@@ -235,9 +229,8 @@ namespace Telethon
             }
         }
 
-        //TODO Commentaire BtnQuitter_Click
         /// <summary>
-        /// BtnQuitter_Click
+        /// BtnQuitter_Click quitte l’application vers la fenêtre de login
         /// </summary>
         /// <param name="sender"></param>
         /// <param name="e"></param>
@@ -246,9 +239,9 @@ namespace Telethon
             this.Close();
         }
 
-        //TODO Commentaire MskTxtBoxTel_Click
+        
         /// <summary>
-        /// MskTxtBoxTel_Click
+        /// MskTxtBoxTel_Click positionne le curseur au début du la boîte de texte du numéro de téléphone
         /// </summary>
         /// <param name="sender"></param>
         /// <param name="e"></param>
@@ -257,9 +250,9 @@ namespace Telethon
             mskTxtBoxTel.Select(0, 0);
         }
 
-        //TODO Commentaire TxtNumeroCarte_Click
+        
         /// <summary>
-        /// TxtNumeroCarte_Click
+        /// TxtNumeroCarte_Click place la petite patente qui indique où on est rendu au début du rectangle de capture du numéro de carte de crédit
         /// </summary>
         /// <param name="sender"></param>
         /// <param name="e"></param>
@@ -268,9 +261,9 @@ namespace Telethon
             mskTxtNumeroCarte.Select(0, 0);
         }
 
-        //TODO Commentaire BtnCalculRecompense_Click
+        
         /// <summary>
-        /// BtnCalculRecompense_Click
+        /// BtnCalculRecompense_Click Bouton Calcule Récompense 
         /// </summary>
         /// <param name="sender"></param>
         /// <param name="e"></param>
@@ -279,9 +272,9 @@ namespace Telethon
             txtRecompense.Text = GestionnaireSTE.AttribuerPrix(double.Parse(txtMontant.Text));
         }
 
-        //TODO Commentaire Interface_temp_Load
+        
         /// <summary>
-        /// Interface_temp_Load
+        /// Interface_temp_Load Fonction qui gère ce qui doit être fait au moment du chargement de notre formulaire
         /// </summary>
         /// <param name="sender"></param>
         /// <param name="e"></param>
@@ -297,5 +290,4 @@ namespace Telethon
             infoBulle.SetToolTip(txtPrenomDonateur, "Entrez le nom du donateur");
         }
     }
-
 }
