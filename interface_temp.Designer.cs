@@ -600,8 +600,8 @@
             this.txtPrenomDonateur.TabIndex = 1;
             this.txtPrenomDonateur.Text = "Cafredoli"; // TODO enlever la valeur par défaut juste avant la remise txtPrenomDonateur
             this.txtPrenomDonateur.Text = "Cafredoli";
-            this.txtPrenomDonateur.Click += new System.EventHandler(this.txtPrenomDonateurNoir_Click);
-            this.txtPrenomDonateur.MouseHover += new System.EventHandler(this.txtPrenomDonateur_MouseHover);
+            this.txtPrenomDonateur.Click += new System.EventHandler(this.TxtPrenomDonateurNoir_Click);
+            this.txtPrenomDonateur.MouseHover += new System.EventHandler(this.TxtPrenomDonateur_MouseHover);
             // 
             // lblPrenomDonateur
             // 
@@ -642,7 +642,7 @@
             this.txtNomDonateur.TabIndex = 2;
             this.txtNomDonateur.Text = "Godfaimond"; // TODO enlever la valeur par défaut juste avant la remise txtNomDonateur
             this.txtNomDonateur.Text = "Godfaimond";
-            this.txtNomDonateur.Click += new System.EventHandler(this.txtNomDonateur_Click);
+            this.txtNomDonateur.Click += new System.EventHandler(this.TxtNomDonateur_Click);
             // 
             // txtCourrielDonateur
             // 
@@ -653,7 +653,7 @@
             this.txtCourrielDonateur.Size = new System.Drawing.Size(168, 23);
             this.txtCourrielDonateur.TabIndex = 3;
             this.txtCourrielDonateur.Text = "votrenom@domain.com";
-            this.txtCourrielDonateur.Click += new System.EventHandler(this.txtCourrielDonateur_Click);
+            this.txtCourrielDonateur.Click += new System.EventHandler(this.TxtCourrielDonateur_Click);
             // 
             // lblTelephone
             // 
@@ -804,7 +804,7 @@
             this.txtQuantitePrix.Size = new System.Drawing.Size(168, 23);
             this.txtQuantitePrix.TabIndex = 10;
             this.txtQuantitePrix.Text = "12"; // TODO enlever la valeur par défaut juste avant la remise txtQuantitePrix
-            this.txtQuantitePrix.Click += new System.EventHandler(this.txtQuantitePrix_Click);
+            this.txtQuantitePrix.Click += new System.EventHandler(this.TxtQuantitePrix_Click);
             // 
             // txtValeurPrix
             // 
@@ -814,7 +814,7 @@
             this.txtValeurPrix.Size = new System.Drawing.Size(168, 23);
             this.txtValeurPrix.TabIndex = 11;
             this.txtValeurPrix.Text = "500"; // TODO enlever la valeur par défaut juste avant la remise txtValeurPrix
-            this.txtValeurPrix.Click += new System.EventHandler(this.txtValeurPrix_Click);
+            this.txtValeurPrix.Click += new System.EventHandler(this.TxtValeurPrix_Click);
             // 
             // txtNomCommanditaire
             // 
@@ -824,7 +824,7 @@
             this.txtNomCommanditaire.Size = new System.Drawing.Size(168, 23);
             this.txtNomCommanditaire.TabIndex = 11;
             this.txtNomCommanditaire.Text = "Descartes"; // TODO enlever la valeur par défaut de txtNomCommanditaire juste avant la remise
-            this.txtNomCommanditaire.Click += new System.EventHandler(this.txtNomCommanditaire_Click);
+            this.txtNomCommanditaire.Click += new System.EventHandler(this.TxtNomCommanditaire_Click);
             // 
             // txtDescription
             // 
@@ -834,7 +834,7 @@
             this.txtDescription.Size = new System.Drawing.Size(168, 23);
             this.txtDescription.TabIndex = 12;
             this.txtDescription.Text = "Téléviseur"; // TODO enlever la valeur par défaut juste avant la remise txtDescription
-            this.txtDescription.Click += new System.EventHandler(this.txtDescription_Click);
+            this.txtDescription.Click += new System.EventHandler(this.TxtDescription_Click);
             // 
             // txtPrenomCommanditaire
             // 
@@ -844,7 +844,7 @@
             this.txtPrenomCommanditaire.Size = new System.Drawing.Size(168, 23);
             this.txtPrenomCommanditaire.TabIndex = 12;
             this.txtPrenomCommanditaire.Text = "Jacquier"; // TODO enlever la valeur par défaut juste avant la remise txtPrenomCommanditaire
-            this.txtPrenomCommanditaire.Click += new System.EventHandler(this.txtPrenomCommanditaire_Click);
+            this.txtPrenomCommanditaire.Click += new System.EventHandler(this.TxtPrenomCommanditaire_Click);
             // 
             // txtIDPrix
             // 

@@ -47,7 +47,7 @@ namespace Telethon
                 }
 
                 #region Test de complétude et validation du numéro de la carte de crédit
-                signalerIncompletude(mskTxtNumeroCarte, "               ", lblNoCredit, lblMessageCredit, "Numéro de carte :");
+                SignalerIncompletude(mskTxtNumeroCarte, "               ", lblNoCredit, lblMessageCredit, "Numéro de carte :");
                 
                 if (!mskTxtNumeroCarte.MaskCompleted)
                 {
@@ -116,8 +116,8 @@ namespace Telethon
         {
             if (txtPrenomCommanditaire.Text == "" || txtNomCommanditaire.Text == "")
             {
-                signalerIncompletude(txtNomCommanditaire, "", lblNomCommanditaire, lblMessageCommanditaire, "Nom :");
-                signalerIncompletude(txtPrenomCommanditaire, "", lblPrenomCommanditaire, lblMessageCommanditaire, "Prénom :");
+                SignalerIncompletude(txtNomCommanditaire, "", lblNomCommanditaire, lblMessageCommanditaire, "Nom :");
+                SignalerIncompletude(txtPrenomCommanditaire, "", lblPrenomCommanditaire, lblMessageCommanditaire, "Prénom :");
                
             }
             else
@@ -136,9 +136,9 @@ namespace Telethon
             //insister pour que les champs relatifs aux prix soient complets
             if (txtDescription.Text == "" || txtValeurPrix.Text == "" || txtQuantitePrix.Text == "") {
 
-                signalerIncompletude(txtQuantitePrix, "", lblQuatitePrix, lblMessagePrix, "Quantité :");
-                signalerIncompletude(txtValeurPrix, "", lblValeur, lblMessagePrix, "Valeur unitaire :");
-                signalerIncompletude(txtDescription, "", lblDescPrix, lblMessagePrix, "Description :");
+                SignalerIncompletude(txtQuantitePrix, "", lblQuatitePrix, lblMessagePrix, "Quantité :");
+                SignalerIncompletude(txtValeurPrix, "", lblValeur, lblMessagePrix, "Valeur unitaire :");
+                SignalerIncompletude(txtDescription, "", lblDescPrix, lblMessagePrix, "Description :");
             }
             else
             {
@@ -205,9 +205,9 @@ namespace Telethon
             if (txtPrenomDonateur.Text == "" || txtNomDonateur.Text == "" || mskTxtBoxTel.Text == "(   )    -")
             {
                 // Mise en évidence des champs vides
-                signalerIncompletude(mskTxtBoxTel, "(   )    -", lblTelephone, lblMessageDonateur, "Téléphone :");
-                signalerIncompletude(txtNomDonateur, "", lblNomDonateur, lblMessageDonateur, "Nom :");
-                signalerIncompletude(txtPrenomDonateur, "", lblPrenomDonateur, lblMessageDonateur, "Prénom :");
+                SignalerIncompletude(mskTxtBoxTel, "(   )    -", lblTelephone, lblMessageDonateur, "Téléphone :");
+                SignalerIncompletude(txtNomDonateur, "", lblNomDonateur, lblMessageDonateur, "Nom :");
+                SignalerIncompletude(txtPrenomDonateur, "", lblPrenomDonateur, lblMessageDonateur, "Prénom :");
                 
             }
 
@@ -291,7 +291,7 @@ namespace Telethon
 
         // TODO consulter cet exemple d’utilisation de l’infoBulle
         
-        private void txtPrenomDonateur_MouseHover(object sender, EventArgs e)
+        private void TxtPrenomDonateur_MouseHover(object sender, EventArgs e)
         {
             infoBulle.SetToolTip(txtPrenomDonateur, "Champ obligatoire");
         }
@@ -304,7 +304,7 @@ namespace Telethon
         /// <param name="monLbl"></param> le label qui identifie monTxt sur le formulaire. On en change la couleur
         /// <param name="monMessage"></param> le label de message que nous affichons si monTxt est vide
         /// <param name="etiquette"></param> une chaine de caractère qui correspond à la valeur attendue de monMessage si le champ est n’est pas vide
-        private void signalerIncompletude(Control monTxt, string chaineVide, Control monLbl, Control monMessage, string etiquette){
+        private void SignalerIncompletude(Control monTxt, string chaineVide, Control monLbl, Control monMessage, string etiquette){
             if (monTxt.Text == chaineVide)
             {
                 monLbl.ForeColor = Color.Maroon;
@@ -325,47 +325,47 @@ namespace Telethon
             lblAchange.Text = chaineAchange;
         }
 
-        private void txtPrenomDonateurNoir_Click(object sender, EventArgs e)
+        private void TxtPrenomDonateurNoir_Click(object sender, EventArgs e)
         {
             TxtNoir(lblPrenomDonateur, "Prénom :");
         }
 
-        private void txtNomDonateur_Click(object sender, EventArgs e)
+        private void TxtNomDonateur_Click(object sender, EventArgs e)
         {
             TxtNoir(lblNomDonateur, "Nom :");
         }
 
-        private void txtCourrielDonateur_Click(object sender, EventArgs e)
+        private void TxtCourrielDonateur_Click(object sender, EventArgs e)
         {
             TxtNoir(lblCourriel, "Courriel :");
         }
 
-        private void mskTxtNumeroCarte_MaskInputRejected(object sender, MaskInputRejectedEventArgs e)
+        private void MskTxtNumeroCarte_MaskInputRejected(object sender, MaskInputRejectedEventArgs e)
         {
 
         }
         #region ensemble de fonction qui remette le texte des labels des champs erronés en Noir et qui réinitialise leur valeur
-        private void txtPrenomCommanditaire_Click(object sender, EventArgs e)
+        private void TxtPrenomCommanditaire_Click(object sender, EventArgs e)
         {
             TxtNoir(lblPrenomCommanditaire, "Prénom :");
         }
 
-        private void txtNomCommanditaire_Click(object sender, EventArgs e)
+        private void TxtNomCommanditaire_Click(object sender, EventArgs e)
         {
             TxtNoir(lblNomCommanditaire, "Nom :");
         }
 
-        private void txtDescription_Click(object sender, EventArgs e)
+        private void TxtDescription_Click(object sender, EventArgs e)
         {
             TxtNoir(lblDescPrix, "Description :");
         }
 
-        private void txtValeurPrix_Click(object sender, EventArgs e)
+        private void TxtValeurPrix_Click(object sender, EventArgs e)
         {
             TxtNoir(lblValeur, "Valeur unitaire :");
         }
 
-        private void txtQuantitePrix_Click(object sender, EventArgs e)
+        private void TxtQuantitePrix_Click(object sender, EventArgs e)
         {
             TxtNoir(lblQuatitePrix, "Quantité :");
         }
