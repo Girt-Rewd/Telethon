@@ -482,7 +482,7 @@
             this.txtMontant.Name = "txtMontant";
             this.txtMontant.Size = new System.Drawing.Size(125, 23);
             this.txtMontant.TabIndex = 1;
-            this.txtMontant.Text = "2500";
+            this.txtMontant.Text = "2500"; //HACK txtMontant
             // 
             // btnAjouterDon
             // 
