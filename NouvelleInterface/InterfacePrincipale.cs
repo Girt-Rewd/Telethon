@@ -149,7 +149,7 @@ namespace NouvelleInterface
                     lblTelephone.Text = "Téléphone :";
                 }
             }
-            else if (false)/* (!telephoneRegex.IsMatch(mskTxtBoxTel.Text))*/
+            else if (false)// HACK (!telephoneRegex.IsMatch(mskTxtBoxTel.Text))
             {
 
                 mskTxtBoxTel.Focus();
@@ -159,7 +159,7 @@ namespace NouvelleInterface
 
                 lblMessageDonateur.Visible = true;
             }
-            else if (false)/* (!courrielRegex.IsMatch(txtCourrielDonateur.Text) && txtCourrielDonateur.Text != String.Empty)*/
+            else if (false)// HACK  (!courrielRegex.IsMatch(txtCourrielDonateur.Text) && txtCourrielDonateur.Text != String.Empty)
             {
                 MessageBox.Show("Format de Courriel invalide\n\ressayer de nouveaux ou laisser le champ vide.");
                 //txtCourrielDonateur.Text = "";
@@ -190,7 +190,7 @@ namespace NouvelleInterface
 
         private void BtnCalculRecompense_Click(object sender, EventArgs e)
         {
-            txtRecompense.Text = gestionnaireSTE.AttribuerPrix(double.Parse(txtMontant.Text));
+            txtRecompense.Text = GestionnaireSTE.AttribuerPrix(double.Parse(txtMontant.Text));
         }
     }
 
