@@ -32,9 +32,11 @@ namespace Telethon
         private void BtnAjouterDonateur_Click(object sender, EventArgs e)
         {
             char typeCarte = 'O';
-
+            // Si l’un des champs des infomations sont laissés vides
             if (!(radAmex.Checked || radMC.Checked || radVisa.Checked) || mskTxtNumeroCarte.Text == "               " || !mskTxtNumeroCarte.MaskCompleted)
             {
+                
+                // Afficher un message d’erreur si aucun type de carte n’a été choisi
                 if (!(radAmex.Checked || radMC.Checked || radVisa.Checked))
                 {
                     grRadioCarte.ForeColor = Color.Maroon;
@@ -44,22 +46,19 @@ namespace Telethon
                     lblMessageCredit.Visible = true;
                 }
 
-                if (mskTxtNumeroCarte.Text == "               ")
-                {
-                    lblNoCredit.ForeColor = Color.Maroon;
-                    if (lblNoCredit.Text == "Numéro de carte :")
-                        lblNoCredit.Text += "*";
-                    lblMessageCredit.Visible = true;
-                }
-                else if (!mskTxtNumeroCarte.MaskCompleted)
+                #region //Validation du numéro de la carte de crédit et test de complétude
+                Validation(mskTxtNumeroCarte, "               ", lblNoCredit, lblMessageCredit, "Numéro de carte :");
+                
+                if (!mskTxtNumeroCarte.MaskCompleted)
                 {
                     MessageBox.Show("Veuillez compléter le numéro de la carte", "Attention", MessageBoxButtons.OK, MessageBoxIcon.Error);
                     mskTxtNumeroCarte.Focus();
                 }
+                #endregion
             }
             else
             {
-
+                //Récupère le type de carte choisi
                 if (radAmex.Checked)
                 {
                     typeCarte = 'A';
@@ -74,9 +73,9 @@ namespace Telethon
                     typeCarte = 'V';
                 }
 
-
                 gestionnaireSTE.AjouterDonateur(txtPrenomDonateur.Text, txtNomDonateur.Text, txtCourrielDonateur.Text, mskTxtBoxTel.Text, typeCarte, mskTxtNumeroCarte.Text, dateExpiration, gestionnaireSTE.donateurs.Count);
 
+                //Passage au prochain sous menu
                 pnlDon.Visible = true;
                 pnlPrix.Visible = true;
                 pnlCarteCredit.Visible = false;
@@ -113,24 +112,9 @@ namespace Telethon
         {
             if (txtPrenomCommanditaire.Text == "" || txtNomCommanditaire.Text == "")
             {
-                Validation(txtPrenomCommanditaire, lblPrenomCommanditaire, lblMessageCommanditaire, "Prénom :", "Veuillez entrer le prénom du commanditaire");
-                Validation(txtNomCommanditaire, lblNomCommanditaire, lblMessageCommanditaire, "Nom :", "Veuillez entrer le Nom du commanditaire");
-                /*
-                if (txtNomCommanditaire.Text == "")
-                {
-                    lblNomCommanditaire.ForeColor = Color.Maroon;
-                    if (lblNomCommanditaire.Text == "Nom :")
-                        lblNomCommanditaire.Text += "*";
-                    MessageBox.Show("Veuillez entrer le Nom du commanditaire", "Attention", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                    lblMessageCommanditaire.Visible = true;
-                    txtNomCommanditaire.Focus();
-                }
-                else
-                {
-                    lblNomCommanditaire.ForeColor = Color.Black;
-                    lblNomCommanditaire.Text = "Prénom :";
-                    txtNomCommanditaire.Focus();
-                }*/
+                Validation(txtPrenomCommanditaire, "", lblPrenomCommanditaire, lblMessageCommanditaire, "Prénom :");
+                Validation(txtNomCommanditaire, "", lblNomCommanditaire, lblMessageCommanditaire, "Nom :");
+               
             }
             else
             {
@@ -193,42 +177,13 @@ namespace Telethon
             Regex telephoneRegex = new(@"^\(\d{3}\) \d{3}\-\d{4}$");
             lblMessageDonateur.Visible = true;
 
-
             if (txtPrenomDonateur.Text == "" || txtNomDonateur.Text == "" || mskTxtBoxTel.Text == "(   )    -")
             {
                 // Mise en évidence des champs vides
-                if (txtPrenomDonateur.Text == String.Empty)
-                {
-                    lblPrenomDonateur.ForeColor = Color.Maroon;
-                    lblPrenomDonateur.Text += "*";
-                }
-                else
-                {
-                    lblPrenomDonateur.ForeColor = Color.Black;
-                    lblPrenomDonateur.Text = "Prénom :";
-                }
-
-                if (txtNomDonateur.Text == String.Empty)
-                {
-                    lblNomDonateur.ForeColor = Color.Maroon;
-                    lblNomDonateur.Text += "*";
-                }
-                else
-                {
-                    lblNomDonateur.ForeColor = Color.Black;
-                    lblNomDonateur.Text = "Nom :";
-                }
-
-                if (mskTxtBoxTel.Text == "(   )    -")
-                {
-                    lblTelephone.ForeColor = Color.Maroon;
-                    lblTelephone.Text += "*";
-                }
-                else
-                {
-                    lblTelephone.ForeColor = Color.Black;
-                    lblTelephone.Text = "Téléphone :";
-                }
+                Validation(txtPrenomDonateur, "", lblPrenomDonateur, lblMessageDonateur, "Prénom :");
+                Validation(txtNomDonateur, "", lblNomDonateur, lblMessageDonateur, "Nom :");
+                Validation(mskTxtBoxTel, "(   )    -", lblTelephone, lblMessageDonateur, "Téléphone :");
+                
             }
 
             else if (!telephoneRegex.IsMatch(mskTxtBoxTel.Text))
@@ -242,9 +197,9 @@ namespace Telethon
 
             else if (!courrielRegex.IsMatch(txtCourrielDonateur.Text) && txtCourrielDonateur.Text != String.Empty)
             {
-                MessageBox.Show("Format de Courriel invalide\n\ressayer de nouveaux ou laisser le champ vide.");
                 txtCourrielDonateur.Focus();
                 lblMessageDonateur.Visible = true;
+                MessageBox.Show("Format de Courriel invalide\n\ressayer de nouveaux ou laisser le champ vide.");
             }
             else if (pnlInfoDonateur.Visible)
             {
@@ -314,13 +269,12 @@ namespace Telethon
             infoBulle.SetToolTip(txtPrenomDonateur, "Champ obligatoire");
         }
 
-        private void Validation(Control monTxt, Control monLbl, Control monMessage, string etiquette, string message){
-            if (monTxt.Text == "")
+        private void Validation(Control monTxt, string chaineComparaison, Control monLbl, Control monMessage, string etiquette){
+            if (monTxt.Text == chaineComparaison)
             {
                 monLbl.ForeColor = Color.Maroon;
                 if (monLbl.Text == etiquette)
                     monLbl.Text += "*";
-                MessageBox.Show(message, "Attention", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 monMessage.Visible = true;
                 monTxt.Focus();
             }
