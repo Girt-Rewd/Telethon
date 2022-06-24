@@ -133,9 +133,27 @@ namespace Telethon
         /// <param name="e"></param>
         private void BtnAjouterPrix_Click(object sender, EventArgs e)
         {
-            // TODO Validations BtnAjouterPrix_Click
-            Prix television = new(txtDescription.Text, double.Parse(txtValeurPrix.Text), int.Parse(txtQuatitePrix.Text), "CMDT098", gestionnaireSTE.prix.Count);
-            textBoxOutput.Text = television.ToString();
+            //insister pour que les champs relatifs aux prix soient complets
+            if (txtDescription.Text == "" || txtValeurPrix.Text == "" || txtQuantitePrix.Text == "") {
+
+                signalerIncompletude(txtDescription, "", lblDescPrix, lblMessagePrix, "Description :");
+                signalerIncompletude(txtValeurPrix, "", lblValeur, lblMessagePrix, "Valeur unitaire :");
+                signalerIncompletude(txtQuantitePrix, "", lblQuatitePrix, lblMessagePrix, "Quantité :");
+            }
+            else
+            {
+                try
+                {
+                    gestionnaireSTE.AjouterPrix(txtDescription.Text, double.Parse(txtValeurPrix.Text), int.Parse(txtQuantitePrix.Text), "CMDT098", gestionnaireSTE.prix.Count);
+                }
+                catch (FormatException)
+                {
+                    MessageBox.Show("Veuillez utiliser une virgule pour les décimales", "Attention", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    txtValeurPrix.Focus();
+                }
+                
+            }
+            
         }
 
         /// <summary>
@@ -273,8 +291,16 @@ namespace Telethon
             infoBulle.SetToolTip(txtPrenomDonateur, "Champ obligatoire");
         }
 
-        private void signalerIncompletude(Control monTxt, string chaineComparaison, Control monLbl, Control monMessage, string etiquette){
-            if (monTxt.Text == chaineComparaison)
+        /// <summary>
+        /// signalerIncompletude permet de mettre en évidence un champ de type Textbox obligatoire qui est rester vide
+        /// </summary>
+        /// <param name="monTxt"></param> le champ dont on teste la complétude
+        /// <param name="chaineVide"></param> une chaine de caractère qui correspond au champ laisser intouché (utile surtout pour les maskedTextbox qui ne sont pas vide lorsque rien n’y a été entré)
+        /// <param name="monLbl"></param> le label qui identifie monTxt sur le formulaire. On en change la couleur
+        /// <param name="monMessage"></param> le label de message que nous affichons si monTxt est vide
+        /// <param name="etiquette"></param> une chaine de caractère qui correspond à la valeur attendue de monMessage si le champ est n’est pas vide
+        private void signalerIncompletude(Control monTxt, string chaineVide, Control monLbl, Control monMessage, string etiquette){
+            if (monTxt.Text == chaineVide)
             {
                 monLbl.ForeColor = Color.Maroon;
                 if (monLbl.Text == etiquette)

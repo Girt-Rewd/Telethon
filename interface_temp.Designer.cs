@@ -85,7 +85,7 @@
             this.btnAjouterPrix = new System.Windows.Forms.Button();
             this.btnAfficherComm = new System.Windows.Forms.Button();
             this.btnAjouterComm = new System.Windows.Forms.Button();
-            this.txtQuatitePrix = new System.Windows.Forms.TextBox();
+            this.txtQuantitePrix = new System.Windows.Forms.TextBox();
             this.txtValeurPrix = new System.Windows.Forms.TextBox();
             this.txtNomCommanditaire = new System.Windows.Forms.TextBox();
             this.txtDescription = new System.Windows.Forms.TextBox();
@@ -109,6 +109,7 @@
             this.lblAuteur01 = new System.Windows.Forms.Label();
             this.lblInfoProjetSTE = new System.Windows.Forms.Label();
             this.infoBulle = new System.Windows.Forms.ToolTip(this.components);
+            this.lblMessagePrix = new System.Windows.Forms.Label();
             this.tabEntrees.SuspendLayout();
             this.tabDonateur.SuspendLayout();
             this.pnlCarteCredit.SuspendLayout();
@@ -694,12 +695,14 @@
             // 
             // tabCommanditaire
             // 
+            this.tabCommanditaire.BackColor = System.Drawing.Color.PaleGreen;
+            this.tabCommanditaire.Controls.Add(this.lblMessagePrix);
             this.tabCommanditaire.Controls.Add(this.lblMessageCommanditaire);
             this.tabCommanditaire.Controls.Add(this.btnAffichePrix);
             this.tabCommanditaire.Controls.Add(this.btnAjouterPrix);
             this.tabCommanditaire.Controls.Add(this.btnAfficherComm);
             this.tabCommanditaire.Controls.Add(this.btnAjouterComm);
-            this.tabCommanditaire.Controls.Add(this.txtQuatitePrix);
+            this.tabCommanditaire.Controls.Add(this.txtQuantitePrix);
             this.tabCommanditaire.Controls.Add(this.txtValeurPrix);
             this.tabCommanditaire.Controls.Add(this.txtNomCommanditaire);
             this.tabCommanditaire.Controls.Add(this.txtDescription);
@@ -722,7 +725,6 @@
             this.tabCommanditaire.Size = new System.Drawing.Size(1124, 715);
             this.tabCommanditaire.TabIndex = 1;
             this.tabCommanditaire.Text = "Commanditaires";
-            this.tabCommanditaire.UseVisualStyleBackColor = true;
             // 
             // lblMessageCommanditaire
             // 
@@ -778,13 +780,13 @@
             this.btnAjouterComm.UseVisualStyleBackColor = true;
             this.btnAjouterComm.Click += new System.EventHandler(this.BtnAjouterComm_Click);
             // 
-            // txtQuatitePrix
+            // txtQuantitePrix
             // 
-            this.txtQuatitePrix.Location = new System.Drawing.Point(589, 206);
-            this.txtQuatitePrix.Margin = new System.Windows.Forms.Padding(4);
-            this.txtQuatitePrix.Name = "txtQuatitePrix";
-            this.txtQuatitePrix.Size = new System.Drawing.Size(168, 23);
-            this.txtQuatitePrix.TabIndex = 10;
+            this.txtQuantitePrix.Location = new System.Drawing.Point(589, 206);
+            this.txtQuantitePrix.Margin = new System.Windows.Forms.Padding(4);
+            this.txtQuantitePrix.Name = "txtQuantitePrix";
+            this.txtQuantitePrix.Size = new System.Drawing.Size(168, 23);
+            this.txtQuantitePrix.TabIndex = 10;
             // 
             // txtValeurPrix
             // 
@@ -997,6 +999,17 @@
             this.lblInfoProjetSTE.TabIndex = 0;
             this.lblInfoProjetSTE.Text = "STE v1.0";
             // 
+            // lblMessagePrix
+            // 
+            this.lblMessagePrix.AutoSize = true;
+            this.lblMessagePrix.ForeColor = System.Drawing.Color.Maroon;
+            this.lblMessagePrix.Location = new System.Drawing.Point(589, 234);
+            this.lblMessagePrix.Name = "lblMessagePrix";
+            this.lblMessagePrix.Size = new System.Drawing.Size(111, 15);
+            this.lblMessagePrix.TabIndex = 18;
+            this.lblMessagePrix.Text = "*Champ obligatoire";
+            this.lblMessagePrix.Visible = false;
+            // 
             // Interface_temp
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
@@ -1066,7 +1079,7 @@
         private Button btnAjouterPrix;
         private Button btnAfficherComm;
         private Button btnAjouterComm;
-        private TextBox txtQuatitePrix;
+        private TextBox txtQuantitePrix;
         private TextBox txtValeurPrix;
         private TextBox txtNomCommanditaire;
         private TextBox txtDescription;
@@ -1111,5 +1124,6 @@
         private NumericUpDown numMois;
         private ToolTip infoBulle;
         private Label lblMessageCommanditaire;
+        private Label lblMessagePrix;
     }
 }
