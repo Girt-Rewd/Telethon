@@ -46,13 +46,13 @@ namespace Telethon
                     lblMessageCredit.Visible = true;
                 }
 
-                #region //Validation du numéro de la carte de crédit et test de complétude
+                #region Test de complétude et validation du numéro de la carte de crédit
                 Validation(mskTxtNumeroCarte, "               ", lblNoCredit, lblMessageCredit, "Numéro de carte :");
                 
                 if (!mskTxtNumeroCarte.MaskCompleted)
                 {
                     MessageBox.Show("Veuillez compléter le numéro de la carte", "Attention", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                    lblMessageCredit.Text = "*Incomplet";
+                    lblMessageCredit.Text = "* Incomplet";
                     lblMessageCredit.Visible = true;
                     mskTxtNumeroCarte.Focus();
                 }
