@@ -13,8 +13,8 @@ namespace Telethon
 {
     public partial class MonLogin : Form
     {
-        string nomUtilisateur = "telethon2021";
-        string motDePasse = "Don@2021";
+        string nomUtilisateur = "Telethon2022";
+        string motDePasse = "Don@2022";
 
         
         public MonLogin()
@@ -24,14 +24,24 @@ namespace Telethon
 
         private void btnOk_Click(object sender, EventArgs e)
         {
-            if (true/*nomUtilisateur.Equals(txtNom.Text) && motDePasse.Equals(txtMotDePasse.Text)*/)
+            if (nomUtilisateur.Equals(txtNom.Text) && motDePasse.Equals(txtMotDePasse.Text))
             {
                 Interface_temp monInterface = new Interface_temp();
                 monInterface.Show();
             }
             else {
-                Console.WriteLine("pas ok");
+               MessageBox.Show("Identifiant ou mot de passe invalide", "Attention", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
+        }
+        /// <summary>
+        /// BtnAnnuler_Click vide les champs de l’interface login
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        private void BtnAnnuler_Click(object sender, EventArgs e)
+        {
+            txtNom.Text = "";
+            txtMotDePasse.Text = "";
         }
     }
 }

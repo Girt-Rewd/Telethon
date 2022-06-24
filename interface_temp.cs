@@ -7,23 +7,41 @@ namespace Telethon
 {
     public partial class Interface_temp : Form
     {
+
+        /// <summary>
+        /// Bloc de déclaration des variables globales
+        /// </summary>
         GestionnaireSTE gestionnaireSTE = new();
+        string  dateExpiration ="";
+        
+        /// <summary>
+        /// Constructeur
+        /// </summary>
+
         public Interface_temp()
         {
             InitializeComponent();
         }
 
-        private void btnAjouterComm_Click(object sender, EventArgs e)
+        private void BtnAjouterComm_Click(object sender, EventArgs e)
         {
             gestionnaireSTE.AjouterCommanditaire(txtPrenomCommanditaire.Text, txtNomCommanditaire.Text, gestionnaireSTE.commanditaires.Count);
         }
 
-        private void btnAjouterDon_Click(object sender, EventArgs e)
+        private void BtnAjouterDon_Click(object sender, EventArgs e)
         {
-            gestionnaireSTE.AjouterDon(txtBoxDateExpCarte.Text, txtIDDon.Text, double.Parse(txtMontant.Text), gestionnaireSTE.dons.Count);
+            dateExpiration = numMois.Value.ToString("00") + "/" + numAnnee.Value.ToString();
+            try
+            {
+                gestionnaireSTE.AjouterDon(dateExpiration, txtIDDon.Text, double.Parse(txtMontant.Text), gestionnaireSTE.dons.Count);
+            }
+            catch (FormatException) {
+                MessageBox.Show("Veuillez utiliser une virgule pour les décimales","Attention", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                txtMontant.Focus();
+            }
         }
 
-        private void btnAjoutreDonateur_Click(object sender, EventArgs e)
+        private void BtnAjouterDonateur_Click(object sender, EventArgs e)
         {
             
             
@@ -71,7 +89,8 @@ namespace Telethon
                 }
 
 
-                gestionnaireSTE.AjouterDonateur(txtPrenomDonateur.Text, txtNomDonateur.Text, txtCourrielDonateur.Text, mskTxtBoxTel.Text, typeCarte, mskTxtNumeroCarte.Text, txtBoxDateExpCarte.Text, gestionnaireSTE.donateurs.Count);
+                gestionnaireSTE.AjouterDonateur(txtPrenomDonateur.Text, txtNomDonateur.Text, txtCourrielDonateur.Text, mskTxtBoxTel.Text, typeCarte, mskTxtNumeroCarte.Text, dateExpiration, gestionnaireSTE.donateurs.Count);
+
                 pnlDon.Visible = true;
                 pnlPrix.Visible = true;
                 pnlCarteCredit.Visible = false;
@@ -80,17 +99,17 @@ namespace Telethon
 
 
 
-        private void btnAfficherDonateur_Click(object sender, EventArgs e)
+        private void BtnAfficherDonateur_Click(object sender, EventArgs e)
         {
             textBoxOutput.Text = gestionnaireSTE.AfficherDonateurs();
         }
 
-        private void btnAfficheDon_Click(object sender, EventArgs e)
+        private void BtnAfficheDon_Click(object sender, EventArgs e)
         {
             textBoxOutput.Text = gestionnaireSTE.AfficherDons();
         }
 
-        private void btnAfficherCommanditaire_Click(object sender, EventArgs e)
+        private void BtnAfficherCommanditaire_Click(object sender, EventArgs e)
         {
             textBoxOutput.Text = gestionnaireSTE.AfficherCommanditaires();
         }
@@ -101,16 +120,17 @@ namespace Telethon
             textBoxOutput.Text = television.ToString();
         }
 
-        private void BtnCacher_Click(object sender, EventArgs e)//TODO Essayer d'
+
+        private void BtnSuivantDonateur_Click(object sender, EventArgs e)//TODO Essayer d'
         {
-            Regex courrielRegex = new Regex(@"^([\w]+)@([\w]+)(\.([\w])+)+$");
-            Regex telephoneRegex = new Regex(@"^\(\d{3}\) \d{3}\-\d{4}$");
+            Regex courrielRegex = new(@"^([\w]+)@([\w]+)(\.([\w])+)+$");
+            Regex telephoneRegex = new(@"^\(\d{3}\) \d{3}\-\d{4}$");
             lblMessageDonateur.Visible = true;
 
 
-            if(false == true)//HACK (txtPrenomDonateur.Text == "" || txtNomDonateur.Text == "" || mskTxtBoxTel.Text == "(   )    -")
+            if(txtPrenomDonateur.Text == "" || txtNomDonateur.Text == "" || mskTxtBoxTel.Text == "(   )    -")
             {
-
+                // Mise en évidence des champs vides
                 if (txtPrenomDonateur.Text == String.Empty)
                 {
                     lblPrenomDonateur.ForeColor = Color.Maroon;
@@ -121,6 +141,7 @@ namespace Telethon
                     lblPrenomDonateur.ForeColor = Color.Black;
                     lblPrenomDonateur.Text = "Prénom :";
                 }
+
                 if (txtNomDonateur.Text == String.Empty)
                 {
                     lblNomDonateur.ForeColor = Color.Maroon;
@@ -131,6 +152,7 @@ namespace Telethon
                     lblNomDonateur.ForeColor = Color.Black;
                     lblNomDonateur.Text = "Nom :";
                 }
+
                 if (mskTxtBoxTel.Text == "(   )    -")
                 {
                     lblTelephone.ForeColor = Color.Maroon;
@@ -142,20 +164,19 @@ namespace Telethon
                     lblTelephone.Text = "Téléphone :";
                 }
             }
-            else if(false)/* HACK(!telephoneRegex.IsMatch(mskTxtBoxTel.Text))*/
-            {
 
+            else if(!telephoneRegex.IsMatch(mskTxtBoxTel.Text))
+            {
                 mskTxtBoxTel.Focus();
                 lblTelephone.ForeColor = Color.Maroon;
                 MessageBox.Show("!! Il manque un ou des chiffres au #Téléphone !!");
-                //mskTxtBoxTel.Text = "";
 
                 lblMessageDonateur.Visible = true;
             }
-            else if (false)/* HACK(!courrielRegex.IsMatch(txtCourrielDonateur.Text) && txtCourrielDonateur.Text != String.Empty)*/
+
+            else if (!courrielRegex.IsMatch(txtCourrielDonateur.Text) && txtCourrielDonateur.Text != String.Empty)
             {
                 MessageBox.Show("Format de Courriel invalide\n\ressayer de nouveaux ou laisser le champ vide.");
-                //txtCourrielDonateur.Text = "";
                 txtCourrielDonateur.Focus();
                 lblMessageDonateur.Visible = true;
             }
@@ -166,30 +187,32 @@ namespace Telethon
             }
         }
 
-        private void btnQuitter_Click(object sender, EventArgs e)
+        private void BtnQuitter_Click(object sender, EventArgs e)
         {
             this.Close();
         }
 
-        private void mskTxtBoxTel_Click(object sender, EventArgs e)
+        private void MskTxtBoxTel_Click(object sender, EventArgs e)
         {
             mskTxtBoxTel.Select(0, 0);
         }
 
-        private void txtNumeroCarte_Click(object sender, EventArgs e)
+        private void TxtNumeroCarte_Click(object sender, EventArgs e)
         {
             mskTxtNumeroCarte.Select(0, 0);
         }
 
-        private void btnCalculRecompense_Click(object sender, EventArgs e)
+        private void BtnCalculRecompense_Click(object sender, EventArgs e)
         {
-            txtRecompense.Text = gestionnaireSTE.AttribuerPrix(double.Parse(txtMontant.Text));
+            txtRecompense.Text = GestionnaireSTE.AttribuerPrix(double.Parse(txtMontant.Text));
         }
 
-        private void interface_temp_Load(object sender, EventArgs e)
+        private void Interface_temp_Load(object sender, EventArgs e)
         {
 
         }
+
+       
     }
 
 }

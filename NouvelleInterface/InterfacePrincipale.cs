@@ -14,23 +14,23 @@ namespace NouvelleInterface
 {
     public partial class InterfacePrincipale : Form
     {
-        GestionnaireSTE gestionnaireSTE = new GestionnaireSTE();
+        GestionnaireSTE gestionnaireSTE = new();
         public InterfacePrincipale()
         {
             InitializeComponent();
         }
 
-        private void btnAjouterComm_Click(object sender, EventArgs e)
+        private void BtnAjouterComm_Click(object sender, EventArgs e)
         {
             gestionnaireSTE.AjouterCommanditaire(txtPrenomCommanditaire.Text, txtNomCommanditaire.Text, gestionnaireSTE.commanditaires.Count);
         }
 
-        private void btnAjouterDon_Click(object sender, EventArgs e)
+        private void BtnAjouterDon_Click(object sender, EventArgs e)
         {
             gestionnaireSTE.AjouterDon(txtBoxDateExpCarte.Text, txtIDDon.Text, double.Parse(txtMontant.Text), gestionnaireSTE.dons.Count);
         }
 
-        private void btnAjoutreDonateur_Click(object sender, EventArgs e)
+        private void BtnAjouterDonateur_Click(object sender, EventArgs e)
         {
 
 
@@ -78,7 +78,7 @@ namespace NouvelleInterface
                 }
 
 
-                gestionnaireSTE.AjouterDonateur(txtPrenomDonateur.Text, txtNomDonateur.Text, txtCourrielDonateur.Text, mskTxtBoxTel.Text, typeCarte, mskTxtNumeroCarte.Text, txtBoxDateExpCarte.Text, gestionnaireSTE.donateurs.Count());
+                gestionnaireSTE.AjouterDonateur(txtPrenomDonateur.Text, txtNomDonateur.Text, txtCourrielDonateur.Text, mskTxtBoxTel.Text, typeCarte, mskTxtNumeroCarte.Text, txtBoxDateExpCarte.Text, gestionnaireSTE.donateurs.Count);
                 pnlDon.Visible = true;
                 pnlPrix.Visible = true;
                 pnlCarteCredit.Visible = false;
@@ -87,35 +87,35 @@ namespace NouvelleInterface
 
 
 
-        private void btnAfficherDonateur_Click(object sender, EventArgs e)
+        private void BtnAfficherDonateur_Click(object sender, EventArgs e)
         {
             textBoxOutput.Text = gestionnaireSTE.AfficherDonateurs();
         }
 
-        private void btnAfficheDon_Click(object sender, EventArgs e)
+        private void BtnAfficheDon_Click(object sender, EventArgs e)
         {
             textBoxOutput.Text = gestionnaireSTE.AfficherDons();
         }
 
-        private void btnAfficherCommanditaire_Click(object sender, EventArgs e)
+        private void BtnAfficherCommanditaire_Click(object sender, EventArgs e)
         {
             textBoxOutput.Text = gestionnaireSTE.AfficherCommanditaires();
         }
 
-        private void btnAjouterPrix_Click(object sender, EventArgs e)
+        private void BtnAjouterPrix_Click(object sender, EventArgs e)
         {
-            Prix television = new Prix(txtDescription.Text, double.Parse(txtValeurPrix.Text), int.Parse(txtQuatitePrix.Text), "CMDT098", gestionnaireSTE.prix.Count());
+            Prix television = new(txtDescription.Text, double.Parse(txtValeurPrix.Text), int.Parse(txtQuatitePrix.Text), "CMDT098", gestionnaireSTE.prix.Count);
             textBoxOutput.Text = television.ToString();
         }
 
-        private void btnCacher_Click(object sender, EventArgs e)//TODO Essayer d'
+        private void BtnCacher_Click(object sender, EventArgs e)//TODO Essayer d'
         {
-            Regex courrielRegex = new Regex(@"^([\w]+)@([\w]+)(\.([\w])+)+$");
-            Regex telephoneRegex = new Regex(@"^\(\d{3}\) \d{3}\-\d{4}$");
+            Regex courrielRegex = new(@"^([\w]+)@([\w]+)(\.([\w])+)+$");
+            Regex telephoneRegex = new(@"^\(\d{3}\) \d{3}\-\d{4}$");
             lblMessageDonateur.Visible = true;
 
 
-            if (false == true)//HACK (txtPrenomDonateur.Text == "" || txtNomDonateur.Text == "" || mskTxtBoxTel.Text == "(   )    -")
+            if (txtPrenomDonateur.Text == "" || txtNomDonateur.Text == "" || mskTxtBoxTel.Text == "(   )    -")
             {
 
                 if (txtPrenomDonateur.Text == String.Empty)
@@ -149,20 +149,18 @@ namespace NouvelleInterface
                     lblTelephone.Text = "Téléphone :";
                 }
             }
-            else if (false)/* (!telephoneRegex.IsMatch(mskTxtBoxTel.Text))*/
+            else if (!telephoneRegex.IsMatch(mskTxtBoxTel.Text))
             {
 
                 mskTxtBoxTel.Focus();
                 lblTelephone.ForeColor = Color.Maroon;
                 MessageBox.Show("!! Il manque un ou des chiffres au #Téléphone !!");
-                //mskTxtBoxTel.Text = "";
 
                 lblMessageDonateur.Visible = true;
             }
-            else if (false)/* (!courrielRegex.IsMatch(txtCourrielDonateur.Text) && txtCourrielDonateur.Text != String.Empty)*/
+            else if (courrielRegex.IsMatch(txtCourrielDonateur.Text) && txtCourrielDonateur.Text != String.Empty)
             {
                 MessageBox.Show("Format de Courriel invalide\n\ressayer de nouveaux ou laisser le champ vide.");
-                //txtCourrielDonateur.Text = "";
                 txtCourrielDonateur.Focus();
                 lblMessageDonateur.Visible = true;
             }
@@ -173,25 +171,26 @@ namespace NouvelleInterface
             }
         }
 
-        private void btnQuitter_Click(object sender, EventArgs e)
+        private void BtnQuitter_Click(object sender, EventArgs e)
         {
             this.Close();
         }
 
-        private void mskTxtBoxTel_Click(object sender, EventArgs e)
+        private void MskTxtBoxTel_Click(object sender, EventArgs e)
         {
             mskTxtBoxTel.Select(0, 0);
         }
 
-        private void txtNumeroCarte_Click(object sender, EventArgs e)
+        private void TxtNumeroCarte_Click(object sender, EventArgs e)
         {
             mskTxtNumeroCarte.Select(0, 0);
         }
 
-        private void btnCalculRecompense_Click(object sender, EventArgs e)
+        private void BtnCalculRecompense_Click(object sender, EventArgs e)
         {
-            txtRecompense.Text = gestionnaireSTE.AttribuerPrix(double.Parse(txtMontant.Text));
+            txtRecompense.Text = GestionnaireSTE.AttribuerPrix(double.Parse(txtMontant.Text));
         }
+
     }
 
 }
