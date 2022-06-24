@@ -803,6 +803,7 @@
             this.txtQuantitePrix.Name = "txtQuantitePrix";
             this.txtQuantitePrix.Size = new System.Drawing.Size(168, 23);
             this.txtQuantitePrix.TabIndex = 10;
+            this.txtQuantitePrix.Text = "12"; //HACK txtQuantitePrix
             this.txtQuantitePrix.Click += new System.EventHandler(this.txtQuantitePrix_Click);
             // 
             // txtValeurPrix
@@ -812,6 +813,7 @@
             this.txtValeurPrix.Name = "txtValeurPrix";
             this.txtValeurPrix.Size = new System.Drawing.Size(168, 23);
             this.txtValeurPrix.TabIndex = 11;
+            this.txtValeurPrix.Text = "500"; // HACK txtValeurPrix
             this.txtValeurPrix.Click += new System.EventHandler(this.txtValeurPrix_Click);
             // 
             // txtNomCommanditaire
@@ -821,6 +823,7 @@
             this.txtNomCommanditaire.Name = "txtNomCommanditaire";
             this.txtNomCommanditaire.Size = new System.Drawing.Size(168, 23);
             this.txtNomCommanditaire.TabIndex = 11;
+            this.txtNomCommanditaire.Text = "Descartes"; //HACK txtPrenomCommanditaire
             this.txtNomCommanditaire.Click += new System.EventHandler(this.txtNomCommanditaire_Click);
             // 
             // txtDescription
@@ -830,6 +833,7 @@
             this.txtDescription.Name = "txtDescription";
             this.txtDescription.Size = new System.Drawing.Size(168, 23);
             this.txtDescription.TabIndex = 12;
+            this.txtDescription.Text = "Téléviseur"; // HACK txtDescription
             this.txtDescription.Click += new System.EventHandler(this.txtDescription_Click);
             // 
             // txtPrenomCommanditaire
@@ -839,6 +843,7 @@
             this.txtPrenomCommanditaire.Name = "txtPrenomCommanditaire";
             this.txtPrenomCommanditaire.Size = new System.Drawing.Size(168, 23);
             this.txtPrenomCommanditaire.TabIndex = 12;
+            this.txtPrenomCommanditaire.Text = "Jacquier"; //HACK txtPrenomCommanditaire
             this.txtPrenomCommanditaire.Click += new System.EventHandler(this.txtPrenomCommanditaire_Click);
             // 
             // txtIDPrix
