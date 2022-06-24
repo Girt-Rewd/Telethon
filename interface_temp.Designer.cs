@@ -1064,10 +1064,7 @@
         private Label lblIDPrix;
         private Label lblInfoCommanditaire;
         private Label lblIDCommanditaire;
-        private TextBox textBox1;
         private Label lblInfoProjetSTE;
-        private TextBox textBoxEntreprise;
-        private TextBox textEntreprise;
         private Panel pnlInfoDonateur;
         private Button btnSuivant;
         private Panel pnlDon;
