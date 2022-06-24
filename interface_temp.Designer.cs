@@ -28,9 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-
             this.components = new System.ComponentModel.Container();
-
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Interface_temp));
             this.tabEntrees = new System.Windows.Forms.TabControl();
             this.tabDonateur = new System.Windows.Forms.TabPage();
@@ -277,7 +275,7 @@
             this.mskTxtNumeroCarte.PromptChar = ' ';
             this.mskTxtNumeroCarte.Size = new System.Drawing.Size(178, 23);
             this.mskTxtNumeroCarte.TabIndex = 4;
-            this.mskTxtNumeroCarte.Text = "1234123412341234"; // HACK mskTxtNumeroCarte
+            this.mskTxtNumeroCarte.Text = "1234123412341234";
             this.mskTxtNumeroCarte.Click += new System.EventHandler(this.TxtNumeroCarte_Click);
             // 
             // btnAjoutreDonateur
@@ -484,6 +482,7 @@
             this.txtMontant.Name = "txtMontant";
             this.txtMontant.Size = new System.Drawing.Size(125, 23);
             this.txtMontant.TabIndex = 1;
+            this.txtMontant.Text = "2500"; // HACK txtMontant
             // 
             // btnAjouterDon
             // 
@@ -588,9 +587,7 @@
             this.btnSuivant.TabIndex = 5;
             this.btnSuivant.Text = "Suivant";
             this.btnSuivant.UseVisualStyleBackColor = true;
-
             this.btnSuivant.Click += new System.EventHandler(this.BtnSuivantDonateur_Click);
-
             // 
             // txtPrenomDonateur
             // 
