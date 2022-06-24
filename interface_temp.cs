@@ -30,18 +30,18 @@ namespace Telethon
             InitializeComponent();
         }
 
-        private void btnAjouterComm_Click(object sender, EventArgs e)
+        private void BtnAjouterComm_Click(object sender, EventArgs e)
         {
             gestionnaireSTE.AjouterCommanditaire(txtPrenomCommanditaire.Text, txtNomCommanditaire.Text, gestionnaireSTE.commanditaires.Count);
         }
 
-        private void btnAjouterDon_Click(object sender, EventArgs e)
+        private void BtnAjouterDon_Click(object sender, EventArgs e)
         {
             dateExpiration = numMois.Value.ToString("00") + "/" + numAnnee.Value.ToString();
             gestionnaireSTE.AjouterDon(dateExpiration, txtIDDon.Text, double.Parse(txtMontant.Text), gestionnaireSTE.dons.Count);
         }
 
-        private void btnAjoutreDonateur_Click(object sender, EventArgs e)
+        private void BtnAjouterDonateur_Click(object sender, EventArgs e)
         {
             
             

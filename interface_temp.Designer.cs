@@ -286,7 +286,7 @@
             this.btnAjoutreDonateur.TabIndex = 10;
             this.btnAjoutreDonateur.Text = "Ajouter un Donateur";
             this.btnAjoutreDonateur.UseVisualStyleBackColor = true;
-            this.btnAjoutreDonateur.Click += new System.EventHandler(this.btnAjoutreDonateur_Click);
+            this.btnAjoutreDonateur.Click += new System.EventHandler(this.BtnAjouterDonateur_Click);
             // 
             // lblMessageCredit
             // 
@@ -493,7 +493,7 @@
             this.btnAjouterDon.TabIndex = 8;
             this.btnAjouterDon.Text = "Ajouter un don";
             this.btnAjouterDon.UseVisualStyleBackColor = true;
-            this.btnAjouterDon.Click += new System.EventHandler(this.btnAjouterDon_Click);
+            this.btnAjouterDon.Click += new System.EventHandler(this.BtnAjouterDon_Click);
             // 
             // lblInfoDon
             // 
@@ -758,7 +758,7 @@
             this.btnAjouterComm.TabIndex = 17;
             this.btnAjouterComm.Text = "Ajouter un Commanditaire";
             this.btnAjouterComm.UseVisualStyleBackColor = true;
-            this.btnAjouterComm.Click += new System.EventHandler(this.btnAjouterComm_Click);
+            this.btnAjouterComm.Click += new System.EventHandler(this.BtnAjouterComm_Click);
             // 
             // txtQuatitePrix
             // 
