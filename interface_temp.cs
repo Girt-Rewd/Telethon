@@ -116,23 +116,31 @@ namespace Telethon
                 if (txtPrenomCommanditaire.Text == "")
                 {
                     lblPrenomCommanditaire.ForeColor = Color.Maroon;
-                    if (lblPrenomCommanditaire.Text == "Type de carte")
-                        grRadioCarte.Text += "*";
+                    if (lblPrenomCommanditaire.Text == "Prénom :")
+                        lblPrenomCommanditaire.Text += "*";
                     MessageBox.Show("Veuillez entrer le prénom du commanditaire", "Attention", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                     lblMessageCommanditaire.Visible = true;
+                    txtPrenomCommanditaire.Focus();
                 }
                 else
-                { 
-                
+                {
+                    lblPrenomCommanditaire.ForeColor = Color.Black;
+                    lblPrenomCommanditaire.Text = "Prénom :";
                 }
 
                 if (txtNomCommanditaire.Text == "")
                 {
-
+                    lblNomCommanditaire.ForeColor = Color.Maroon;
+                    if (lblNomCommanditaire.Text == "Prénom :")
+                        lblNomCommanditaire.Text += "*";
+                    MessageBox.Show("Veuillez entrer le Nom du commanditaire", "Attention", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    lblMessageCommanditaire.Visible = true;
                 }
                 else
                 {
-
+                    lblNomCommanditaire.ForeColor = Color.Black;
+                    lblNomCommanditaire.Text = "Prénom :";
+                    txtNomCommanditaire.Focus();
                 }
             }
             else

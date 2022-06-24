@@ -80,6 +80,7 @@
             this.btnQuitter = new System.Windows.Forms.Button();
             this.btnAfficheDon = new System.Windows.Forms.Button();
             this.tabCommanditaire = new System.Windows.Forms.TabPage();
+            this.lblMessageCommanditaire = new System.Windows.Forms.Label();
             this.btnAffichePrix = new System.Windows.Forms.Button();
             this.btnAjouterPrix = new System.Windows.Forms.Button();
             this.btnAfficherComm = new System.Windows.Forms.Button();
@@ -275,7 +276,7 @@
             this.mskTxtNumeroCarte.PromptChar = ' ';
             this.mskTxtNumeroCarte.Size = new System.Drawing.Size(178, 23);
             this.mskTxtNumeroCarte.TabIndex = 4;
-            this.mskTxtNumeroCarte.Text = "1234123412341234"; // HACK mskTxtNumeroCarte
+            this.mskTxtNumeroCarte.Text = "1234123412341234";
             this.mskTxtNumeroCarte.Click += new System.EventHandler(this.TxtNumeroCarte_Click);
             // 
             // btnAjoutreDonateur
@@ -339,7 +340,7 @@
             // radVisa
             // 
             this.radVisa.AutoSize = true;
-            this.radVisa.Checked = true; // HACK radVisa
+            this.radVisa.Checked = true;
             this.radVisa.Location = new System.Drawing.Point(22, 22);
             this.radVisa.Margin = new System.Windows.Forms.Padding(4);
             this.radVisa.Name = "radVisa";
@@ -482,7 +483,7 @@
             this.txtMontant.Name = "txtMontant";
             this.txtMontant.Size = new System.Drawing.Size(125, 23);
             this.txtMontant.TabIndex = 1;
-            this.txtMontant.Text = "2500"; //HACK txtMontant
+            this.txtMontant.Text = "2500";
             // 
             // btnAjouterDon
             // 
@@ -534,7 +535,7 @@
             this.mskTxtBoxTel.Name = "mskTxtBoxTel";
             this.mskTxtBoxTel.Size = new System.Drawing.Size(168, 23);
             this.mskTxtBoxTel.TabIndex = 4;
-            this.mskTxtBoxTel.Text = "5141112222"; // HACK mskTxtBoxTel
+            this.mskTxtBoxTel.Text = "5141112222";
             this.mskTxtBoxTel.Click += new System.EventHandler(this.MskTxtBoxTel_Click);
             // 
             // lblMessageDonateur
@@ -596,7 +597,6 @@
             this.txtPrenomDonateur.Name = "txtPrenomDonateur";
             this.txtPrenomDonateur.Size = new System.Drawing.Size(168, 23);
             this.txtPrenomDonateur.TabIndex = 1;
-            this.txtPrenomDonateur.Text = "Cafredoli"; // HACK txtPrenomDonateur
             this.txtPrenomDonateur.Text = "Cafredoli";
             this.txtPrenomDonateur.MouseHover += new System.EventHandler(this.txtPrenomDonateur_MouseHover);
             // 
@@ -637,7 +637,7 @@
             this.txtNomDonateur.Name = "txtNomDonateur";
             this.txtNomDonateur.Size = new System.Drawing.Size(168, 23);
             this.txtNomDonateur.TabIndex = 2;
-            this.txtNomDonateur.Text = "Godfaimond"; // HACK txtNomDonateur
+            this.txtNomDonateur.Text = "Godfaimond";
             // 
             // txtCourrielDonateur
             // 
@@ -694,6 +694,7 @@
             // 
             // tabCommanditaire
             // 
+            this.tabCommanditaire.Controls.Add(this.lblMessageCommanditaire);
             this.tabCommanditaire.Controls.Add(this.btnAffichePrix);
             this.tabCommanditaire.Controls.Add(this.btnAjouterPrix);
             this.tabCommanditaire.Controls.Add(this.btnAfficherComm);
@@ -723,12 +724,23 @@
             this.tabCommanditaire.Text = "Commanditaires";
             this.tabCommanditaire.UseVisualStyleBackColor = true;
             // 
+            // lblMessageCommanditaire
+            // 
+            this.lblMessageCommanditaire.AutoSize = true;
+            this.lblMessageCommanditaire.ForeColor = System.Drawing.Color.Maroon;
+            this.lblMessageCommanditaire.Location = new System.Drawing.Point(158, 206);
+            this.lblMessageCommanditaire.Name = "lblMessageCommanditaire";
+            this.lblMessageCommanditaire.Size = new System.Drawing.Size(111, 15);
+            this.lblMessageCommanditaire.TabIndex = 18;
+            this.lblMessageCommanditaire.Text = "*Champ obligatoire";
+            this.lblMessageCommanditaire.Visible = false;
+            // 
             // btnAffichePrix
             // 
             this.btnAffichePrix.Location = new System.Drawing.Point(597, 299);
             this.btnAffichePrix.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.btnAffichePrix.Name = "btnAffichePrix";
-            this.btnAffichePrix.Size = new System.Drawing.Size(159, 31);
+            this.btnAffichePrix.Size = new System.Drawing.Size(182, 41);
             this.btnAffichePrix.TabIndex = 14;
             this.btnAffichePrix.Text = "Afficher les prix";
             this.btnAffichePrix.UseVisualStyleBackColor = true;
@@ -738,7 +750,7 @@
             this.btnAjouterPrix.Location = new System.Drawing.Point(597, 252);
             this.btnAjouterPrix.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.btnAjouterPrix.Name = "btnAjouterPrix";
-            this.btnAjouterPrix.Size = new System.Drawing.Size(159, 31);
+            this.btnAjouterPrix.Size = new System.Drawing.Size(182, 41);
             this.btnAjouterPrix.TabIndex = 15;
             this.btnAjouterPrix.Text = "Ajouter un prix";
             this.btnAjouterPrix.UseVisualStyleBackColor = true;
@@ -746,7 +758,7 @@
             // 
             // btnAfficherComm
             // 
-            this.btnAfficherComm.Location = new System.Drawing.Point(145, 277);
+            this.btnAfficherComm.Location = new System.Drawing.Point(146, 309);
             this.btnAfficherComm.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.btnAfficherComm.Name = "btnAfficherComm";
             this.btnAfficherComm.Size = new System.Drawing.Size(182, 41);
@@ -757,7 +769,7 @@
             // 
             // btnAjouterComm
             // 
-            this.btnAjouterComm.Location = new System.Drawing.Point(145, 210);
+            this.btnAjouterComm.Location = new System.Drawing.Point(146, 262);
             this.btnAjouterComm.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.btnAjouterComm.Name = "btnAjouterComm";
             this.btnAjouterComm.Size = new System.Drawing.Size(182, 41);
@@ -984,7 +996,6 @@
             this.lblInfoProjetSTE.Size = new System.Drawing.Size(49, 15);
             this.lblInfoProjetSTE.TabIndex = 0;
             this.lblInfoProjetSTE.Text = "STE v1.0";
-            
             // 
             // Interface_temp
             // 
@@ -1099,5 +1110,6 @@
         private NumericUpDown numAnnee;
         private NumericUpDown numMois;
         private ToolTip infoBulle;
+        private Label lblMessageCommanditaire;
     }
 }
