@@ -110,7 +110,7 @@ namespace Telethon
             textBoxOutput.Text = television.ToString();
         }
 
-        private void btnCacher_Click(object sender, EventArgs e)//TODO Essayer d'
+        private void btnCacher_Click(object sender, EventArgs e)
         {
             Regex courrielRegex = new Regex(@"^([\w]+)@([\w]+)(\.([\w])+)+$");
             Regex telephoneRegex = new Regex(@"^\(\d{3}\) \d{3}\-\d{4}$");
@@ -123,13 +123,16 @@ namespace Telethon
                 if (txtPrenomDonateur.Text == String.Empty)
                 {
                     lblPrenomDonateur.ForeColor = Color.Maroon;
-                    lblPrenomDonateur.Text += "*";
+                    if(lblMessageDonateur.Text=="Prénom :") lblPrenomDonateur.Text += "*";
+                    
                 }
+
                 else
                 {
                     lblPrenomDonateur.ForeColor = Color.Black;
                     lblPrenomDonateur.Text = "Prénom :";
                 }
+
                 if (txtNomDonateur.Text == String.Empty)
                 {
                     lblNomDonateur.ForeColor = Color.Maroon;
@@ -140,6 +143,7 @@ namespace Telethon
                     lblNomDonateur.ForeColor = Color.Black;
                     lblNomDonateur.Text = "Nom :";
                 }
+
                 if (mskTxtBoxTel.Text == "(   )    -")
                 {
                     lblTelephone.ForeColor = Color.Maroon;
@@ -151,20 +155,18 @@ namespace Telethon
                     lblTelephone.Text = "Téléphone :";
                 }
             }
-            else if(false)/* (!telephoneRegex.IsMatch(mskTxtBoxTel.Text))*/
+            else if(false)// (!telephoneRegex.IsMatch(mskTxtBoxTel.Text))
             {
-
                 mskTxtBoxTel.Focus();
                 lblTelephone.ForeColor = Color.Maroon;
                 MessageBox.Show("!! Il manque un ou des chiffres au #Téléphone !!");
-                //mskTxtBoxTel.Text = "";
+               
 
                 lblMessageDonateur.Visible = true;
             }
             else if (false)/* (!courrielRegex.IsMatch(txtCourrielDonateur.Text) && txtCourrielDonateur.Text != String.Empty)*/
             {
                 MessageBox.Show("Format de Courriel invalide\n\ressayer de nouveaux ou laisser le champ vide.");
-                //txtCourrielDonateur.Text = "";
                 txtCourrielDonateur.Focus();
                 lblMessageDonateur.Visible = true;
             }
