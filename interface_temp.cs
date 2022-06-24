@@ -113,21 +113,9 @@ namespace Telethon
         {
             if (txtPrenomCommanditaire.Text == "" || txtNomCommanditaire.Text == "")
             {
-                if (txtPrenomCommanditaire.Text == "")
-                {
-                    lblPrenomCommanditaire.ForeColor = Color.Maroon;
-                    if (lblPrenomCommanditaire.Text == "Prénom :")
-                        lblPrenomCommanditaire.Text += "*";
-                    MessageBox.Show("Veuillez entrer le prénom du commanditaire", "Attention", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                    lblMessageCommanditaire.Visible = true;
-                    txtPrenomCommanditaire.Focus();
-                }
-                else
-                {
-                    lblPrenomCommanditaire.ForeColor = Color.Black;
-                    lblPrenomCommanditaire.Text = "Prénom :";
-                }
-
+                Validation(txtPrenomCommanditaire, lblPrenomCommanditaire, lblMessageCommanditaire, "Prénom :", "Veuillez entrer le prénom du commanditaire");
+                Validation(txtNomCommanditaire, lblNomCommanditaire, lblMessageCommanditaire, "Nom :", "Veuillez entrer le Nom du commanditaire");
+                /*
                 if (txtNomCommanditaire.Text == "")
                 {
                     lblNomCommanditaire.ForeColor = Color.Maroon;
@@ -142,7 +130,7 @@ namespace Telethon
                     lblNomCommanditaire.ForeColor = Color.Black;
                     lblNomCommanditaire.Text = "Prénom :";
                     txtNomCommanditaire.Focus();
-                }
+                }*/
             }
             else
             {
@@ -324,6 +312,24 @@ namespace Telethon
         private void txtPrenomDonateur_MouseHover(object sender, EventArgs e)
         {
             infoBulle.SetToolTip(txtPrenomDonateur, "Champ obligatoire");
+        }
+
+        private void Validation(Control monTxt, Control monLbl, Control monMessage, string etiquette, string message){
+            if (monTxt.Text == "")
+            {
+                monLbl.ForeColor = Color.Maroon;
+                if (monLbl.Text == etiquette)
+                    monLbl.Text += "*";
+                MessageBox.Show(message, "Attention", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                monMessage.Visible = true;
+                monTxt.Focus();
+            }
+            else
+            {
+                monLbl.ForeColor = Color.Black;
+                monLbl.Text = etiquette;
+            }
+
         }
     }
 }
