@@ -275,6 +275,7 @@
             this.mskTxtNumeroCarte.PromptChar = ' ';
             this.mskTxtNumeroCarte.Size = new System.Drawing.Size(178, 23);
             this.mskTxtNumeroCarte.TabIndex = 4;
+            this.mskTxtNumeroCarte.Text = "1234123412341234"; // HACK mskTxtNumeroCarte
             this.mskTxtNumeroCarte.Click += new System.EventHandler(this.TxtNumeroCarte_Click);
             // 
             // btnAjoutreDonateur
@@ -321,7 +322,6 @@
             this.radAmex.Name = "radAmex";
             this.radAmex.Size = new System.Drawing.Size(56, 19);
             this.radAmex.TabIndex = 2;
-            this.radAmex.TabStop = true;
             this.radAmex.Text = "Amex";
             this.radAmex.UseVisualStyleBackColor = true;
             // 
@@ -333,13 +333,13 @@
             this.radMC.Name = "radMC";
             this.radMC.Size = new System.Drawing.Size(44, 19);
             this.radMC.TabIndex = 1;
-            this.radMC.TabStop = true;
             this.radMC.Text = "MC";
             this.radMC.UseVisualStyleBackColor = true;
             // 
             // radVisa
             // 
             this.radVisa.AutoSize = true;
+            this.radVisa.Checked = true;
             this.radVisa.Location = new System.Drawing.Point(22, 22);
             this.radVisa.Margin = new System.Windows.Forms.Padding(4);
             this.radVisa.Name = "radVisa";
@@ -532,8 +532,8 @@
             this.mskTxtBoxTel.Mask = "\\(000\\) 000\\-0000";
             this.mskTxtBoxTel.Name = "mskTxtBoxTel";
             this.mskTxtBoxTel.Size = new System.Drawing.Size(168, 23);
-            this.mskTxtBoxTel.Text = "5141112222";// HACK mskTxtBoxTel
             this.mskTxtBoxTel.TabIndex = 4;
+            this.mskTxtBoxTel.Text = "5141112222";
             this.mskTxtBoxTel.Click += new System.EventHandler(this.MskTxtBoxTel_Click);
             // 
             // lblMessageDonateur
@@ -595,6 +595,7 @@
             this.txtPrenomDonateur.Name = "txtPrenomDonateur";
             this.txtPrenomDonateur.Size = new System.Drawing.Size(168, 23);
             this.txtPrenomDonateur.TabIndex = 1;
+            this.txtPrenomDonateur.Text = "Cafredoli";
             // 
             // lblPrenomDonateur
             // 
@@ -633,7 +634,7 @@
             this.txtNomDonateur.Name = "txtNomDonateur";
             this.txtNomDonateur.Size = new System.Drawing.Size(168, 23);
             this.txtNomDonateur.TabIndex = 2;
-            this.txtNomDonateur.Text = "Cafredoli"; // HACK tytNomDonateur
+            this.txtNomDonateur.Text = "Godfaimond";
             // 
             // txtCourrielDonateur
             // 
@@ -643,8 +644,7 @@
             this.txtCourrielDonateur.PlaceholderText = "votrenom@domain.com";
             this.txtCourrielDonateur.Size = new System.Drawing.Size(168, 23);
             this.txtCourrielDonateur.TabIndex = 3;
-            this.txtCourrielDonateur.Text = "votrenom@domain.com"; // HACK txtCourrielDonateur
-
+            this.txtCourrielDonateur.Text = "votrenom@domain.com";
             // 
             // lblTelephone
             // 
@@ -982,14 +982,14 @@
             this.lblInfoProjetSTE.TabIndex = 0;
             this.lblInfoProjetSTE.Text = "STE v1.0";
             // 
-            // interface_temp
+            // Interface_temp
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1177, 768);
             this.Controls.Add(this.tabEntrees);
             this.Margin = new System.Windows.Forms.Padding(4);
-            this.Name = "interface_temp";
+            this.Name = "Interface_temp";
             this.Text = "Form2";
             this.Load += new System.EventHandler(this.Interface_temp_Load);
             this.tabEntrees.ResumeLayout(false);
