@@ -28,7 +28,9 @@
         /// </summary>
         private void InitializeComponent()
         {
+
             this.components = new System.ComponentModel.Container();
+
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Interface_temp));
             this.tabEntrees = new System.Windows.Forms.TabControl();
             this.tabDonateur = new System.Windows.Forms.TabPage();
@@ -586,7 +588,9 @@
             this.btnSuivant.TabIndex = 5;
             this.btnSuivant.Text = "Suivant";
             this.btnSuivant.UseVisualStyleBackColor = true;
+
             this.btnSuivant.Click += new System.EventHandler(this.BtnSuivantDonateur_Click);
+
             // 
             // txtPrenomDonateur
             // 

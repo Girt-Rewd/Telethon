@@ -1,13 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Text.RegularExpressions;
-using System.Threading.Tasks;
-using System.Windows.Forms;
+﻿using System.Text.RegularExpressions;
 using STELib;
 
 //TODO continuer infoCarte de credit... validation CVC et dateEXp nouveaux format mm/aa
@@ -16,6 +7,7 @@ namespace Telethon
 {
     public partial class Interface_temp : Form
     {
+
         /// <summary>
         /// Bloc de déclaration des variables globales
         /// </summary>
@@ -25,6 +17,7 @@ namespace Telethon
         /// <summary>
         /// Constructeur
         /// </summary>
+
         public Interface_temp()
         {
             InitializeComponent();
@@ -97,6 +90,7 @@ namespace Telethon
 
 
                 gestionnaireSTE.AjouterDonateur(txtPrenomDonateur.Text, txtNomDonateur.Text, txtCourrielDonateur.Text, mskTxtBoxTel.Text, typeCarte, mskTxtNumeroCarte.Text, dateExpiration, gestionnaireSTE.donateurs.Count);
+
                 pnlDon.Visible = true;
                 pnlPrix.Visible = true;
                 pnlCarteCredit.Visible = false;
@@ -125,6 +119,7 @@ namespace Telethon
             Prix television = new(txtDescription.Text, double.Parse(txtValeurPrix.Text), int.Parse(txtQuatitePrix.Text), "CMDT098", gestionnaireSTE.prix.Count);
             textBoxOutput.Text = television.ToString();
         }
+
 
         private void BtnSuivantDonateur_Click(object sender, EventArgs e)//TODO Essayer d'
         {
@@ -169,6 +164,7 @@ namespace Telethon
                     lblTelephone.Text = "Téléphone :";
                 }
             }
+
             else if(!telephoneRegex.IsMatch(mskTxtBoxTel.Text))
             {
                 mskTxtBoxTel.Focus();
@@ -177,6 +173,7 @@ namespace Telethon
 
                 lblMessageDonateur.Visible = true;
             }
+
             else if (!courrielRegex.IsMatch(txtCourrielDonateur.Text) && txtCourrielDonateur.Text != String.Empty)
             {
                 MessageBox.Show("Format de Courriel invalide\n\ressayer de nouveaux ou laisser le champ vide.");
