@@ -471,6 +471,7 @@
             this.mskTxtBoxTel.Name = "mskTxtBoxTel";
             this.mskTxtBoxTel.Size = new System.Drawing.Size(168, 23);
             this.mskTxtBoxTel.TabIndex = 17;
+            this.mskTxtBoxTel.Text = "5141112222";// HACK msktxtBoxTel
             this.mskTxtBoxTel.Click += new System.EventHandler(this.MskTxtBoxTel_Click);
             // 
             // lblMessageDonateur
@@ -532,6 +533,7 @@
             this.txtPrenomDonateur.Name = "txtPrenomDonateur";
             this.txtPrenomDonateur.Size = new System.Drawing.Size(168, 23);
             this.txtPrenomDonateur.TabIndex = 2;
+            this.txtPrenomDonateur.Text = "Fredolicath";
             // 
             // lblPrenomDonateur
             // 
@@ -570,6 +572,7 @@
             this.txtNomDonateur.Name = "txtNomDonateur";
             this.txtNomDonateur.Size = new System.Drawing.Size(168, 23);
             this.txtNomDonateur.TabIndex = 3;
+            this.txtNomDonateur.Text = "Gofaimond";
             // 
             // txtCourrielDonateur
             // 

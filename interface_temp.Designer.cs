@@ -532,6 +532,7 @@
             this.mskTxtBoxTel.Mask = "\\(000\\) 000\\-0000";
             this.mskTxtBoxTel.Name = "mskTxtBoxTel";
             this.mskTxtBoxTel.Size = new System.Drawing.Size(168, 23);
+            this.mskTxtBoxTel.Text = "5141112222";// HACK mskTxtBoxTel
             this.mskTxtBoxTel.TabIndex = 4;
             this.mskTxtBoxTel.Click += new System.EventHandler(this.MskTxtBoxTel_Click);
             // 
@@ -632,15 +633,18 @@
             this.txtNomDonateur.Name = "txtNomDonateur";
             this.txtNomDonateur.Size = new System.Drawing.Size(168, 23);
             this.txtNomDonateur.TabIndex = 2;
+            this.txtNomDonateur.Text = "Cafredoli"; // HACK tytNomDonateur
             // 
             // txtCourrielDonateur
             // 
             this.txtCourrielDonateur.Location = new System.Drawing.Point(113, 152);
             this.txtCourrielDonateur.Margin = new System.Windows.Forms.Padding(4);
             this.txtCourrielDonateur.Name = "txtCourrielDonateur";
-            this.txtCourrielDonateur.PlaceholderText = "aaaaaa@domain.com";
+            this.txtCourrielDonateur.PlaceholderText = "votrenom@domain.com";
             this.txtCourrielDonateur.Size = new System.Drawing.Size(168, 23);
             this.txtCourrielDonateur.TabIndex = 3;
+            this.txtCourrielDonateur.Text = "votrenom@domain.com"; // HACK txtCourrielDonateur
+
             // 
             // lblTelephone
             // 
