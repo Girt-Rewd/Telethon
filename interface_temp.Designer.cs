@@ -277,7 +277,7 @@
             this.mskTxtNumeroCarte.PromptChar = ' ';
             this.mskTxtNumeroCarte.Size = new System.Drawing.Size(178, 23);
             this.mskTxtNumeroCarte.TabIndex = 4;
-            this.mskTxtNumeroCarte.Text = "1234123412341234";
+            this.mskTxtNumeroCarte.Text = "1234123412341234"; // HACK _mskTxtNumeroCarte
             this.mskTxtNumeroCarte.Click += new System.EventHandler(this.TxtNumeroCarte_Click);
             // 
             // btnAjoutreDonateur
