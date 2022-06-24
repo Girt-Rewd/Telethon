@@ -147,7 +147,7 @@ namespace STELib
         ///     1. calculer les points gagnés par un donateur en fonction de son don
         ///     2. Attribuer un prix correspondant au nombre de points
         /// </summary>
-        public string AttribuerPrix(double montant)
+        public static string AttribuerPrix(double montant)
         {
             int points = 0;
             if (montant < 50) { 
@@ -200,7 +200,7 @@ namespace STELib
         /// On enregistre les donateurs dans un fichier?
         /// </summary>
         /// <returns></returns>
-        public Boolean EnregistrerDonateur()
+        public static Boolean EnregistrerDonateur()
         {
             //TODO EnregistrerDonateur()
             return true;
