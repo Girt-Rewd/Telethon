@@ -860,9 +860,9 @@
             this.lblNomCommanditaire.Location = new System.Drawing.Point(105, 177);
             this.lblNomCommanditaire.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblNomCommanditaire.Name = "lblNomCommanditaire";
-            this.lblNomCommanditaire.Size = new System.Drawing.Size(43, 15);
+            this.lblNomCommanditaire.Size = new System.Drawing.Size(40, 15);
             this.lblNomCommanditaire.TabIndex = 5;
-            this.lblNomCommanditaire.Text = "Nom : ";
+            this.lblNomCommanditaire.Text = "Nom :";
             // 
             // lblDescPrix
             // 

@@ -131,10 +131,11 @@ namespace Telethon
                 if (txtNomCommanditaire.Text == "")
                 {
                     lblNomCommanditaire.ForeColor = Color.Maroon;
-                    if (lblNomCommanditaire.Text == "Prénom :")
+                    if (lblNomCommanditaire.Text == "Nom :")
                         lblNomCommanditaire.Text += "*";
                     MessageBox.Show("Veuillez entrer le Nom du commanditaire", "Attention", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                     lblMessageCommanditaire.Visible = true;
+                    txtNomCommanditaire.Focus();
                 }
                 else
                 {
