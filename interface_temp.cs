@@ -32,7 +32,7 @@ namespace Telethon
         private void BtnAjouterDonateur_Click(object sender, EventArgs e)
         {
             char typeCarte = 'O';
-            // Si l’un des champs des infomations sont laissés vides
+            // insister sur la complétude des champs des informations de la carte de crédit
             if (!(radAmex.Checked || radMC.Checked || radVisa.Checked) || mskTxtNumeroCarte.Text == "               " || !mskTxtNumeroCarte.MaskCompleted)
             {
                 
@@ -52,10 +52,14 @@ namespace Telethon
                 if (!mskTxtNumeroCarte.MaskCompleted)
                 {
                     MessageBox.Show("Veuillez compléter le numéro de la carte", "Attention", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    lblMessageCredit.Text = "*Incomplet";
+                    lblMessageCredit.Visible = true;
                     mskTxtNumeroCarte.Focus();
                 }
                 #endregion
             }
+            
+            // Tous le champs sont complets et valides
             else
             {
                 //Récupère le type de carte choisi
