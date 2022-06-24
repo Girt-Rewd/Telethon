@@ -16,6 +16,9 @@ namespace Telethon
 {
     public partial class interface_temp : Form
     {
+        /// <summary>
+        /// Bloc de déclaration des variables globales
+        /// </summary>
         GestionnaireSTE gestionnaireSTE = new GestionnaireSTE();
         string  dateExpiration ="";
         public interface_temp()
