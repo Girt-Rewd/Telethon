@@ -28,7 +28,6 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(InterfacePrincipale));
             this.tabEntrees = new System.Windows.Forms.TabControl();
             this.tabDonateur = new System.Windows.Forms.TabPage();
             this.textBoxOutput = new System.Windows.Forms.TextBox();
@@ -37,7 +36,7 @@
             this.lblCVC = new System.Windows.Forms.Label();
             this.txtBoxDateExpCarte = new System.Windows.Forms.TextBox();
             this.mskTxtNumeroCarte = new System.Windows.Forms.MaskedTextBox();
-            this.btnAjoutreDonateur = new System.Windows.Forms.Button();
+            this.btnAjouterDonateur = new System.Windows.Forms.Button();
             this.lblMessageCredit = new System.Windows.Forms.Label();
             this.grRadioCarte = new System.Windows.Forms.GroupBox();
             this.radAmex = new System.Windows.Forms.RadioButton();
@@ -160,7 +159,7 @@
             this.pnlCarteCredit.Controls.Add(this.lblCVC);
             this.pnlCarteCredit.Controls.Add(this.txtBoxDateExpCarte);
             this.pnlCarteCredit.Controls.Add(this.mskTxtNumeroCarte);
-            this.pnlCarteCredit.Controls.Add(this.btnAjoutreDonateur);
+            this.pnlCarteCredit.Controls.Add(this.btnAjouterDonateur);
             this.pnlCarteCredit.Controls.Add(this.lblMessageCredit);
             this.pnlCarteCredit.Controls.Add(this.grRadioCarte);
             this.pnlCarteCredit.Controls.Add(this.lblNoCredit);
@@ -216,16 +215,16 @@
             this.mskTxtNumeroCarte.TabIndex = 17;
             this.mskTxtNumeroCarte.Click += new System.EventHandler(this.TxtNumeroCarte_Click);
             // 
-            // btnAjoutreDonateur
+            // btnAjouterDonateur
             // 
-            this.btnAjoutreDonateur.Location = new System.Drawing.Point(215, 230);
-            this.btnAjoutreDonateur.Margin = new System.Windows.Forms.Padding(4);
-            this.btnAjoutreDonateur.Name = "btnAjoutreDonateur";
-            this.btnAjoutreDonateur.Size = new System.Drawing.Size(189, 34);
-            this.btnAjoutreDonateur.TabIndex = 10;
-            this.btnAjoutreDonateur.Text = "Ajouter un Donateur";
-            this.btnAjoutreDonateur.UseVisualStyleBackColor = true;
-            this.btnAjoutreDonateur.Click += new System.EventHandler(this.btnAjoutreDonateur_Click);
+            this.btnAjouterDonateur.Location = new System.Drawing.Point(215, 230);
+            this.btnAjouterDonateur.Margin = new System.Windows.Forms.Padding(4);
+            this.btnAjouterDonateur.Name = "btnAjouterDonateur";
+            this.btnAjouterDonateur.Size = new System.Drawing.Size(189, 34);
+            this.btnAjouterDonateur.TabIndex = 10;
+            this.btnAjouterDonateur.Text = "Ajouter un Donateur";
+            this.btnAjouterDonateur.UseVisualStyleBackColor = true;
+            this.btnAjouterDonateur.Click += new System.EventHandler(this.BtnAjouterDonateur_Click);
             // 
             // lblMessageCredit
             // 
@@ -870,7 +869,7 @@
             this.richTextBox1.Name = "richTextBox1";
             this.richTextBox1.Size = new System.Drawing.Size(492, 189);
             this.richTextBox1.TabIndex = 1;
-            this.richTextBox1.Text = resources.GetString("richTextBox1.Text");
+            this.richTextBox1.Text = "";
             // 
             // lblOlivier
             // 
@@ -917,14 +916,14 @@
             this.lblInfoProjetSTE.TabIndex = 0;
             this.lblInfoProjetSTE.Text = "STE v1.0";
             // 
-            // interface_temp
+            // InterfacePrincipale
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1177, 768);
             this.Controls.Add(this.tabEntrees);
             this.Margin = new System.Windows.Forms.Padding(4);
-            this.Name = "interface_temp";
+            this.Name = "InterfacePrincipale";
             this.Text = "Form2";
             this.tabEntrees.ResumeLayout(false);
             this.tabDonateur.ResumeLayout(false);
@@ -953,7 +952,7 @@
         private TabPage tabDonateur;
         private TabPage tabCommanditaire;
         private Button btnAfficherDonateur;
-        private Button btnAjoutreDonateur;
+        private Button btnAjouterDonateur;
         private Button btnAfficheDon;
         private Button btnAjouterDon;
         private GroupBox grRadioCarte;

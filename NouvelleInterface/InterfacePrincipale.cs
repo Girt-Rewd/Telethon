@@ -30,7 +30,7 @@ namespace NouvelleInterface
             gestionnaireSTE.AjouterDon(txtBoxDateExpCarte.Text, txtIDDon.Text, double.Parse(txtMontant.Text), gestionnaireSTE.dons.Count);
         }
 
-        private void BtnAjoutreDonateur_Click(object sender, EventArgs e)
+        private void BtnAjouterDonateur_Click(object sender, EventArgs e)
         {
 
 
@@ -192,6 +192,7 @@ namespace NouvelleInterface
         {
             txtRecompense.Text = GestionnaireSTE.AttribuerPrix(double.Parse(txtMontant.Text));
         }
+
     }
 
 }
