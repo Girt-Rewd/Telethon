@@ -214,7 +214,7 @@
             this.mskTxtNumeroCarte.Name = "mskTxtNumeroCarte";
             this.mskTxtNumeroCarte.Size = new System.Drawing.Size(138, 23);
             this.mskTxtNumeroCarte.TabIndex = 17;
-            this.mskTxtNumeroCarte.Click += new System.EventHandler(this.txtNumeroCarte_Click);
+            this.mskTxtNumeroCarte.Click += new System.EventHandler(this.TxtNumeroCarte_Click);
             // 
             // btnAjoutreDonateur
             // 
@@ -359,7 +359,7 @@
             this.btnCalculRecompense.TabIndex = 0;
             this.btnCalculRecompense.Text = "Afficher la récompense";
             this.btnCalculRecompense.UseVisualStyleBackColor = true;
-            this.btnCalculRecompense.Click += new System.EventHandler(this.btnCalculRecompense_Click);
+            this.btnCalculRecompense.Click += new System.EventHandler(this.BtnCalculRecompense_Click);
             // 
             // lblRecompense
             // 
@@ -431,7 +431,7 @@
             this.btnAjouterDon.TabIndex = 8;
             this.btnAjouterDon.Text = "Ajouter un don";
             this.btnAjouterDon.UseVisualStyleBackColor = true;
-            this.btnAjouterDon.Click += new System.EventHandler(this.btnAjouterDon_Click);
+            this.btnAjouterDon.Click += new System.EventHandler(this.BtnAjouterDon_Click);
             // 
             // lblInfoDon
             // 
@@ -472,7 +472,7 @@
             this.mskTxtBoxTel.Name = "mskTxtBoxTel";
             this.mskTxtBoxTel.Size = new System.Drawing.Size(168, 23);
             this.mskTxtBoxTel.TabIndex = 17;
-            this.mskTxtBoxTel.Click += new System.EventHandler(this.mskTxtBoxTel_Click);
+            this.mskTxtBoxTel.Click += new System.EventHandler(this.MskTxtBoxTel_Click);
             // 
             // lblMessageDonateur
             // 
@@ -600,7 +600,7 @@
             this.btnAfficherDonateur.TabIndex = 11;
             this.btnAfficherDonateur.Text = "Afficher les donateurs";
             this.btnAfficherDonateur.UseVisualStyleBackColor = true;
-            this.btnAfficherDonateur.Click += new System.EventHandler(this.btnAfficherDonateur_Click);
+            this.btnAfficherDonateur.Click += new System.EventHandler(this.BtnAfficherDonateur_Click);
             // 
             // btnQuitter
             // 
@@ -611,7 +611,7 @@
             this.btnQuitter.TabIndex = 2;
             this.btnQuitter.Text = "Quitter";
             this.btnQuitter.UseVisualStyleBackColor = true;
-            this.btnQuitter.Click += new System.EventHandler(this.btnQuitter_Click);
+            this.btnQuitter.Click += new System.EventHandler(this.BtnQuitter_Click);
             // 
             // btnAfficheDon
             // 
@@ -696,7 +696,7 @@
             this.btnAjouterComm.TabIndex = 17;
             this.btnAjouterComm.Text = "Ajouter un Commanditaire";
             this.btnAjouterComm.UseVisualStyleBackColor = true;
-            this.btnAjouterComm.Click += new System.EventHandler(this.btnAjouterComm_Click);
+            this.btnAjouterComm.Click += new System.EventHandler(this.BtnAjouterComm_Click);
             // 
             // txtQuatitePrix
             // 

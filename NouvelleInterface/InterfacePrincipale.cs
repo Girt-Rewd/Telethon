@@ -20,17 +20,17 @@ namespace NouvelleInterface
             InitializeComponent();
         }
 
-        private void btnAjouterComm_Click(object sender, EventArgs e)
+        private void BtnAjouterComm_Click(object sender, EventArgs e)
         {
             gestionnaireSTE.AjouterCommanditaire(txtPrenomCommanditaire.Text, txtNomCommanditaire.Text, gestionnaireSTE.commanditaires.Count);
         }
 
-        private void btnAjouterDon_Click(object sender, EventArgs e)
+        private void BtnAjouterDon_Click(object sender, EventArgs e)
         {
             gestionnaireSTE.AjouterDon(txtBoxDateExpCarte.Text, txtIDDon.Text, double.Parse(txtMontant.Text), gestionnaireSTE.dons.Count);
         }
 
-        private void btnAjoutreDonateur_Click(object sender, EventArgs e)
+        private void BtnAjoutreDonateur_Click(object sender, EventArgs e)
         {
 
 
@@ -87,7 +87,7 @@ namespace NouvelleInterface
 
 
 
-        private void btnAfficherDonateur_Click(object sender, EventArgs e)
+        private void BtnAfficherDonateur_Click(object sender, EventArgs e)
         {
             textBoxOutput.Text = gestionnaireSTE.AfficherDonateurs();
         }
@@ -173,22 +173,22 @@ namespace NouvelleInterface
             }
         }
 
-        private void btnQuitter_Click(object sender, EventArgs e)
+        private void BtnQuitter_Click(object sender, EventArgs e)
         {
             this.Close();
         }
 
-        private void mskTxtBoxTel_Click(object sender, EventArgs e)
+        private void MskTxtBoxTel_Click(object sender, EventArgs e)
         {
             mskTxtBoxTel.Select(0, 0);
         }
 
-        private void txtNumeroCarte_Click(object sender, EventArgs e)
+        private void TxtNumeroCarte_Click(object sender, EventArgs e)
         {
             mskTxtNumeroCarte.Select(0, 0);
         }
 
-        private void btnCalculRecompense_Click(object sender, EventArgs e)
+        private void BtnCalculRecompense_Click(object sender, EventArgs e)
         {
             txtRecompense.Text = gestionnaireSTE.AttribuerPrix(double.Parse(txtMontant.Text));
         }

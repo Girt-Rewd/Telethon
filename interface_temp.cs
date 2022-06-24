@@ -14,7 +14,7 @@ using STELib;
 
 namespace Telethon
 {
-    public partial class interface_temp : Form
+    public partial class Interface_temp : Form
     {
         /// <summary>
         /// Bloc de déclaration des variables globales
@@ -25,7 +25,7 @@ namespace Telethon
         /// <summary>
         /// Constructeur
         /// </summary>
-        public interface_temp()
+        public Interface_temp()
         {
             InitializeComponent();
         }

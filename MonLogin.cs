@@ -26,7 +26,7 @@ namespace Telethon
         {
             if (true)// HACK nomUtilisateur.Equals(txtNom.Text) && motDePasse.Equals(txtMotDePasse.Text))
             {
-                interface_temp monInterface = new interface_temp();
+                Interface_temp monInterface = new Interface_temp();
                 monInterface.Show();
             }
             else {
