@@ -116,8 +116,8 @@ namespace Telethon
         {
             if (txtPrenomCommanditaire.Text == "" || txtNomCommanditaire.Text == "")
             {
-                signalerIncompletude(txtPrenomCommanditaire, "", lblPrenomCommanditaire, lblMessageCommanditaire, "Prénom :");
                 signalerIncompletude(txtNomCommanditaire, "", lblNomCommanditaire, lblMessageCommanditaire, "Nom :");
+                signalerIncompletude(txtPrenomCommanditaire, "", lblPrenomCommanditaire, lblMessageCommanditaire, "Prénom :");
                
             }
             else
@@ -136,9 +136,9 @@ namespace Telethon
             //insister pour que les champs relatifs aux prix soient complets
             if (txtDescription.Text == "" || txtValeurPrix.Text == "" || txtQuantitePrix.Text == "") {
 
-                signalerIncompletude(txtDescription, "", lblDescPrix, lblMessagePrix, "Description :");
-                signalerIncompletude(txtValeurPrix, "", lblValeur, lblMessagePrix, "Valeur unitaire :");
                 signalerIncompletude(txtQuantitePrix, "", lblQuatitePrix, lblMessagePrix, "Quantité :");
+                signalerIncompletude(txtValeurPrix, "", lblValeur, lblMessagePrix, "Valeur unitaire :");
+                signalerIncompletude(txtDescription, "", lblDescPrix, lblMessagePrix, "Description :");
             }
             else
             {
