@@ -44,6 +44,7 @@ namespace Telethon
             }
             catch (FormatException) {
                 MessageBox.Show("Veuillez utiliser une virgule pour les décimales","Attention", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                txtMontant.Focus();
             }
         }
 
