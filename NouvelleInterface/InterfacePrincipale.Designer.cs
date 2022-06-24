@@ -214,7 +214,7 @@
             this.mskTxtNumeroCarte.Size = new System.Drawing.Size(138, 23);
             this.mskTxtNumeroCarte.TabIndex = 17;
             this.mskTxtNumeroCarte.Click += new System.EventHandler(this.TxtNumeroCarte_Click);
-            this.mskTxtNumeroCarte.Text = "1234123412341234"; // HACK mskTxtNumeroCarte
+            this.mskTxtNumeroCarte.Text = "1234123412341234"; // HACK _mskTxtNumeroCarte
             // 
             // btnAjouterDonateur
             // 
@@ -280,6 +280,7 @@
             // 
             this.radVisa.AutoSize = true;
             this.radVisa.Location = new System.Drawing.Point(22, 22);
+            this.radVisa.Checked = true; // HACK _radVisa
             this.radVisa.Margin = new System.Windows.Forms.Padding(4);
             this.radVisa.Name = "radVisa";
             this.radVisa.Size = new System.Drawing.Size(46, 19);
@@ -420,6 +421,7 @@
             this.txtMontant.Margin = new System.Windows.Forms.Padding(4);
             this.txtMontant.Name = "txtMontant";
             this.txtMontant.Size = new System.Drawing.Size(125, 23);
+            this.txtMontant.Text = "2500"; // HACK _txtMontant
             this.txtMontant.TabIndex = 7;
             // 
             // btnAjouterDon
@@ -472,7 +474,7 @@
             this.mskTxtBoxTel.Name = "mskTxtBoxTel";
             this.mskTxtBoxTel.Size = new System.Drawing.Size(168, 23);
             this.mskTxtBoxTel.TabIndex = 17;
-            this.mskTxtBoxTel.Text = "5141112222";// HACK msktxtBoxTel
+            this.mskTxtBoxTel.Text = "5141112222";// HACK _msktxtBoxTel
             this.mskTxtBoxTel.Click += new System.EventHandler(this.MskTxtBoxTel_Click);
             // 
             // lblMessageDonateur
@@ -534,7 +536,7 @@
             this.txtPrenomDonateur.Name = "txtPrenomDonateur";
             this.txtPrenomDonateur.Size = new System.Drawing.Size(168, 23);
             this.txtPrenomDonateur.TabIndex = 2;
-            this.txtPrenomDonateur.Text = "Fredolicath";
+            this.txtPrenomDonateur.Text = "Fredolicath"; //HACK _txtPrenomDonateur
             // 
             // lblPrenomDonateur
             // 
@@ -573,7 +575,7 @@
             this.txtNomDonateur.Name = "txtNomDonateur";
             this.txtNomDonateur.Size = new System.Drawing.Size(168, 23);
             this.txtNomDonateur.TabIndex = 3;
-            this.txtNomDonateur.Text = "Gofaimond";
+            this.txtNomDonateur.Text = "Gofaimond"; //HACK _txtNomDonateur
             // 
             // txtCourrielDonateur
             // 
