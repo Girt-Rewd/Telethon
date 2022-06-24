@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Interface_temp));
             this.tabEntrees = new System.Windows.Forms.TabControl();
             this.tabDonateur = new System.Windows.Forms.TabPage();
@@ -106,6 +107,7 @@
             this.lblFred = new System.Windows.Forms.Label();
             this.lblAuteur01 = new System.Windows.Forms.Label();
             this.lblInfoProjetSTE = new System.Windows.Forms.Label();
+            this.infoBulle = new System.Windows.Forms.ToolTip(this.components);
             this.tabEntrees.SuspendLayout();
             this.tabDonateur.SuspendLayout();
             this.pnlCarteCredit.SuspendLayout();
@@ -595,6 +597,7 @@
             this.txtPrenomDonateur.Size = new System.Drawing.Size(168, 23);
             this.txtPrenomDonateur.TabIndex = 1;
             this.txtPrenomDonateur.Text = "Cafredoli";
+            this.txtPrenomDonateur.MouseHover += new System.EventHandler(this.txtPrenomDonateur_MouseHover);
             // 
             // lblPrenomDonateur
             // 
@@ -980,6 +983,7 @@
             this.lblInfoProjetSTE.Size = new System.Drawing.Size(49, 15);
             this.lblInfoProjetSTE.TabIndex = 0;
             this.lblInfoProjetSTE.Text = "STE v1.0";
+            
             // 
             // Interface_temp
             // 
@@ -1093,5 +1097,6 @@
         private Label lblMoisExpiration;
         private NumericUpDown numAnnee;
         private NumericUpDown numMois;
+        private ToolTip infoBulle;
     }
 }
