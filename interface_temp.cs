@@ -47,7 +47,7 @@ namespace Telethon
                 }
 
                 #region Test de complétude et validation du numéro de la carte de crédit
-                Validation(mskTxtNumeroCarte, "               ", lblNoCredit, lblMessageCredit, "Numéro de carte :");
+                signalerIncompletude(mskTxtNumeroCarte, "               ", lblNoCredit, lblMessageCredit, "Numéro de carte :");
                 
                 if (!mskTxtNumeroCarte.MaskCompleted)
                 {
@@ -116,8 +116,8 @@ namespace Telethon
         {
             if (txtPrenomCommanditaire.Text == "" || txtNomCommanditaire.Text == "")
             {
-                Validation(txtPrenomCommanditaire, "", lblPrenomCommanditaire, lblMessageCommanditaire, "Prénom :");
-                Validation(txtNomCommanditaire, "", lblNomCommanditaire, lblMessageCommanditaire, "Nom :");
+                signalerIncompletude(txtPrenomCommanditaire, "", lblPrenomCommanditaire, lblMessageCommanditaire, "Prénom :");
+                signalerIncompletude(txtNomCommanditaire, "", lblNomCommanditaire, lblMessageCommanditaire, "Nom :");
                
             }
             else
@@ -184,9 +184,9 @@ namespace Telethon
             if (txtPrenomDonateur.Text == "" || txtNomDonateur.Text == "" || mskTxtBoxTel.Text == "(   )    -")
             {
                 // Mise en évidence des champs vides
-                Validation(txtPrenomDonateur, "", lblPrenomDonateur, lblMessageDonateur, "Prénom :");
-                Validation(txtNomDonateur, "", lblNomDonateur, lblMessageDonateur, "Nom :");
-                Validation(mskTxtBoxTel, "(   )    -", lblTelephone, lblMessageDonateur, "Téléphone :");
+                signalerIncompletude(txtPrenomDonateur, "", lblPrenomDonateur, lblMessageDonateur, "Prénom :");
+                signalerIncompletude(txtNomDonateur, "", lblNomDonateur, lblMessageDonateur, "Nom :");
+                signalerIncompletude(mskTxtBoxTel, "(   )    -", lblTelephone, lblMessageDonateur, "Téléphone :");
                 
             }
 
@@ -273,7 +273,7 @@ namespace Telethon
             infoBulle.SetToolTip(txtPrenomDonateur, "Champ obligatoire");
         }
 
-        private void Validation(Control monTxt, string chaineComparaison, Control monLbl, Control monMessage, string etiquette){
+        private void signalerIncompletude(Control monTxt, string chaineComparaison, Control monLbl, Control monMessage, string etiquette){
             if (monTxt.Text == chaineComparaison)
             {
                 monLbl.ForeColor = Color.Maroon;
