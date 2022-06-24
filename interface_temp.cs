@@ -89,7 +89,7 @@ namespace Telethon
                 }
 
 
-                gestionnaireSTE.AjouterDonateur(txtPrenomDonateur.Text, txtNomDonateur.Text, txtCourrielDonateur.Text, mskTxtBoxTel.Text, typeCarte, mskTxtNumeroCarte.Text, dateExpiration, gestionnaireSTE.donateurs.Count());
+                gestionnaireSTE.AjouterDonateur(txtPrenomDonateur.Text, txtNomDonateur.Text, txtCourrielDonateur.Text, mskTxtBoxTel.Text, typeCarte, mskTxtNumeroCarte.Text, dateExpiration, gestionnaireSTE.donateurs.Count);
                 pnlDon.Visible = true;
                 pnlPrix.Visible = true;
                 pnlCarteCredit.Visible = false;
@@ -98,28 +98,28 @@ namespace Telethon
 
 
 
-        private void btnAfficherDonateur_Click(object sender, EventArgs e)
+        private void BtnAfficherDonateur_Click(object sender, EventArgs e)
         {
             textBoxOutput.Text = gestionnaireSTE.AfficherDonateurs();
         }
 
-        private void btnAfficheDon_Click(object sender, EventArgs e)
+        private void BtnAfficheDon_Click(object sender, EventArgs e)
         {
             textBoxOutput.Text = gestionnaireSTE.AfficherDons();
         }
 
-        private void btnAfficherCommanditaire_Click(object sender, EventArgs e)
+        private void BtnAfficherCommanditaire_Click(object sender, EventArgs e)
         {
             textBoxOutput.Text = gestionnaireSTE.AfficherCommanditaires();
         }
 
-        private void btnAjouterPrix_Click(object sender, EventArgs e)
+        private void BtnAjouterPrix_Click(object sender, EventArgs e)
         {
-            Prix television = new Prix(txtDescription.Text, double.Parse(txtValeurPrix.Text), int.Parse(txtQuatitePrix.Text), "CMDT098", gestionnaireSTE.prix.Count());
+            Prix television = new(txtDescription.Text, double.Parse(txtValeurPrix.Text), int.Parse(txtQuatitePrix.Text), "CMDT098", gestionnaireSTE.prix.Count);
             textBoxOutput.Text = television.ToString();
         }
 
-        private void btnCacher_Click(object sender, EventArgs e)//TODO Essayer d'
+        private void BtnSuivantDonateur_Click(object sender, EventArgs e)//TODO Essayer d'
         {
             Regex courrielRegex = new(@"^([\w]+)@([\w]+)(\.([\w])+)+$");
             Regex telephoneRegex = new(@"^\(\d{3}\) \d{3}\-\d{4}$");
@@ -186,27 +186,27 @@ namespace Telethon
             }
         }
 
-        private void btnQuitter_Click(object sender, EventArgs e)
+        private void BtnQuitter_Click(object sender, EventArgs e)
         {
             this.Close();
         }
 
-        private void mskTxtBoxTel_Click(object sender, EventArgs e)
+        private void MskTxtBoxTel_Click(object sender, EventArgs e)
         {
             mskTxtBoxTel.Select(0, 0);
         }
 
-        private void txtNumeroCarte_Click(object sender, EventArgs e)
+        private void TxtNumeroCarte_Click(object sender, EventArgs e)
         {
             mskTxtNumeroCarte.Select(0, 0);
         }
 
-        private void btnCalculRecompense_Click(object sender, EventArgs e)
+        private void BtnCalculRecompense_Click(object sender, EventArgs e)
         {
             txtRecompense.Text = gestionnaireSTE.AttribuerPrix(double.Parse(txtMontant.Text));
         }
 
-        private void interface_temp_Load(object sender, EventArgs e)
+        private void Interface_temp_Load(object sender, EventArgs e)
         {
 
         }

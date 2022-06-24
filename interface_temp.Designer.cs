@@ -275,7 +275,7 @@
             this.mskTxtNumeroCarte.PromptChar = ' ';
             this.mskTxtNumeroCarte.Size = new System.Drawing.Size(178, 23);
             this.mskTxtNumeroCarte.TabIndex = 4;
-            this.mskTxtNumeroCarte.Click += new System.EventHandler(this.txtNumeroCarte_Click);
+            this.mskTxtNumeroCarte.Click += new System.EventHandler(this.TxtNumeroCarte_Click);
             // 
             // btnAjoutreDonateur
             // 
@@ -420,7 +420,7 @@
             this.btnCalculRecompense.TabIndex = 0;
             this.btnCalculRecompense.Text = "Afficher la récompense";
             this.btnCalculRecompense.UseVisualStyleBackColor = true;
-            this.btnCalculRecompense.Click += new System.EventHandler(this.btnCalculRecompense_Click);
+            this.btnCalculRecompense.Click += new System.EventHandler(this.BtnCalculRecompense_Click);
             // 
             // lblRecompense
             // 
@@ -533,7 +533,7 @@
             this.mskTxtBoxTel.Name = "mskTxtBoxTel";
             this.mskTxtBoxTel.Size = new System.Drawing.Size(168, 23);
             this.mskTxtBoxTel.TabIndex = 4;
-            this.mskTxtBoxTel.Click += new System.EventHandler(this.mskTxtBoxTel_Click);
+            this.mskTxtBoxTel.Click += new System.EventHandler(this.MskTxtBoxTel_Click);
             // 
             // lblMessageDonateur
             // 
@@ -585,7 +585,7 @@
             this.btnSuivant.TabIndex = 5;
             this.btnSuivant.Text = "Suivant";
             this.btnSuivant.UseVisualStyleBackColor = true;
-            this.btnSuivant.Click += new System.EventHandler(this.btnCacher_Click);
+            this.btnSuivant.Click += new System.EventHandler(this.BtnSuivantDonateur_Click);
             // 
             // txtPrenomDonateur
             // 
@@ -661,7 +661,7 @@
             this.btnAfficherDonateur.TabIndex = 11;
             this.btnAfficherDonateur.Text = "Afficher les donateurs";
             this.btnAfficherDonateur.UseVisualStyleBackColor = true;
-            this.btnAfficherDonateur.Click += new System.EventHandler(this.btnAfficherDonateur_Click);
+            this.btnAfficherDonateur.Click += new System.EventHandler(this.BtnAfficherDonateur_Click);
             // 
             // btnQuitter
             // 
@@ -672,7 +672,7 @@
             this.btnQuitter.TabIndex = 2;
             this.btnQuitter.Text = "Quitter";
             this.btnQuitter.UseVisualStyleBackColor = true;
-            this.btnQuitter.Click += new System.EventHandler(this.btnQuitter_Click);
+            this.btnQuitter.Click += new System.EventHandler(this.BtnQuitter_Click);
             // 
             // btnAfficheDon
             // 
@@ -683,7 +683,7 @@
             this.btnAfficheDon.TabIndex = 1;
             this.btnAfficheDon.Text = "Afficher les dons";
             this.btnAfficheDon.UseVisualStyleBackColor = true;
-            this.btnAfficheDon.Click += new System.EventHandler(this.btnAfficheDon_Click);
+            this.btnAfficheDon.Click += new System.EventHandler(this.BtnAfficheDon_Click);
             // 
             // tabCommanditaire
             // 
@@ -735,7 +735,7 @@
             this.btnAjouterPrix.TabIndex = 15;
             this.btnAjouterPrix.Text = "Ajouter un prix";
             this.btnAjouterPrix.UseVisualStyleBackColor = true;
-            this.btnAjouterPrix.Click += new System.EventHandler(this.btnAjouterPrix_Click);
+            this.btnAjouterPrix.Click += new System.EventHandler(this.BtnAjouterPrix_Click);
             // 
             // btnAfficherComm
             // 
@@ -746,7 +746,7 @@
             this.btnAfficherComm.TabIndex = 16;
             this.btnAfficherComm.Text = "Afficher les Commanditaires";
             this.btnAfficherComm.UseVisualStyleBackColor = true;
-            this.btnAfficherComm.Click += new System.EventHandler(this.btnAfficherCommanditaire_Click);
+            this.btnAfficherComm.Click += new System.EventHandler(this.BtnAfficherCommanditaire_Click);
             // 
             // btnAjouterComm
             // 
@@ -987,7 +987,7 @@
             this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "interface_temp";
             this.Text = "Form2";
-            this.Load += new System.EventHandler(this.interface_temp_Load);
+            this.Load += new System.EventHandler(this.Interface_temp_Load);
             this.tabEntrees.ResumeLayout(false);
             this.tabDonateur.ResumeLayout(false);
             this.tabDonateur.PerformLayout();

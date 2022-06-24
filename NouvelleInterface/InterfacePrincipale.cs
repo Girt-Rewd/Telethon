@@ -78,7 +78,7 @@ namespace NouvelleInterface
                 }
 
 
-                gestionnaireSTE.AjouterDonateur(txtPrenomDonateur.Text, txtNomDonateur.Text, txtCourrielDonateur.Text, mskTxtBoxTel.Text, typeCarte, mskTxtNumeroCarte.Text, txtBoxDateExpCarte.Text, gestionnaireSTE.donateurs.Count());
+                gestionnaireSTE.AjouterDonateur(txtPrenomDonateur.Text, txtNomDonateur.Text, txtCourrielDonateur.Text, mskTxtBoxTel.Text, typeCarte, mskTxtNumeroCarte.Text, txtBoxDateExpCarte.Text, gestionnaireSTE.donateurs.Count);
                 pnlDon.Visible = true;
                 pnlPrix.Visible = true;
                 pnlCarteCredit.Visible = false;
@@ -92,23 +92,23 @@ namespace NouvelleInterface
             textBoxOutput.Text = gestionnaireSTE.AfficherDonateurs();
         }
 
-        private void btnAfficheDon_Click(object sender, EventArgs e)
+        private void BtnAfficheDon_Click(object sender, EventArgs e)
         {
             textBoxOutput.Text = gestionnaireSTE.AfficherDons();
         }
 
-        private void btnAfficherCommanditaire_Click(object sender, EventArgs e)
+        private void BtnAfficherCommanditaire_Click(object sender, EventArgs e)
         {
             textBoxOutput.Text = gestionnaireSTE.AfficherCommanditaires();
         }
 
-        private void btnAjouterPrix_Click(object sender, EventArgs e)
+        private void BtnAjouterPrix_Click(object sender, EventArgs e)
         {
-            Prix television = new(txtDescription.Text, double.Parse(txtValeurPrix.Text), int.Parse(txtQuatitePrix.Text), "CMDT098", gestionnaireSTE.prix.Count());
+            Prix television = new(txtDescription.Text, double.Parse(txtValeurPrix.Text), int.Parse(txtQuatitePrix.Text), "CMDT098", gestionnaireSTE.prix.Count);
             textBoxOutput.Text = television.ToString();
         }
 
-        private void btnCacher_Click(object sender, EventArgs e)//TODO Essayer d'
+        private void BtnCacher_Click(object sender, EventArgs e)//TODO Essayer d'
         {
             Regex courrielRegex = new(@"^([\w]+)@([\w]+)(\.([\w])+)+$");
             Regex telephoneRegex = new(@"^\(\d{3}\) \d{3}\-\d{4}$");

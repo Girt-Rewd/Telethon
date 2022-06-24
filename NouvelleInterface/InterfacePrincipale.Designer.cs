@@ -524,7 +524,7 @@
             this.btnSuivant.TabIndex = 2;
             this.btnSuivant.Text = "Suivant";
             this.btnSuivant.UseVisualStyleBackColor = true;
-            this.btnSuivant.Click += new System.EventHandler(this.btnCacher_Click);
+            this.btnSuivant.Click += new System.EventHandler(this.BtnCacher_Click);
             // 
             // txtPrenomDonateur
             // 
@@ -622,7 +622,7 @@
             this.btnAfficheDon.TabIndex = 9;
             this.btnAfficheDon.Text = "Afficher les dons";
             this.btnAfficheDon.UseVisualStyleBackColor = true;
-            this.btnAfficheDon.Click += new System.EventHandler(this.btnAfficheDon_Click);
+            this.btnAfficheDon.Click += new System.EventHandler(this.BtnAfficheDon_Click);
             // 
             // tabCommanditaire
             // 
@@ -674,7 +674,7 @@
             this.btnAjouterPrix.TabIndex = 15;
             this.btnAjouterPrix.Text = "Ajouter un prix";
             this.btnAjouterPrix.UseVisualStyleBackColor = true;
-            this.btnAjouterPrix.Click += new System.EventHandler(this.btnAjouterPrix_Click);
+            this.btnAjouterPrix.Click += new System.EventHandler(this.BtnAjouterPrix_Click);
             // 
             // btnAfficherComm
             // 
@@ -685,7 +685,7 @@
             this.btnAfficherComm.TabIndex = 16;
             this.btnAfficherComm.Text = "Afficher les Commanditaires";
             this.btnAfficherComm.UseVisualStyleBackColor = true;
-            this.btnAfficherComm.Click += new System.EventHandler(this.btnAfficherCommanditaire_Click);
+            this.btnAfficherComm.Click += new System.EventHandler(this.BtnAfficherCommanditaire_Click);
             // 
             // btnAjouterComm
             // 
