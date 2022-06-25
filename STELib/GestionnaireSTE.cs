@@ -208,5 +208,11 @@ namespace STELib
             //TODO EnregistrerDonateur()
             return true;
         }
+
+        public void chercherPrix(string prixDeterminer) { 
+            //Chercher dans le tableau prix la chaine prix determiner
+            //Si le prix est trouvé
+            //Si le 
+        }
     }
 }
