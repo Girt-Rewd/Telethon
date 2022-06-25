@@ -216,7 +216,7 @@ namespace STELib
             //pour chaque éléments de prix[]
             for (int i = 0; i < prix.Count; i++)
             {
-                if (prixCherche == prix[i].description) { 
+                if (prixCherche == prix[i].Descripition) { 
                 
                 }
             }
