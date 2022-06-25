@@ -209,10 +209,27 @@ namespace STELib
             return true;
         }
 
-        public void chercherPrix(string prixDeterminer) { 
+        public string chercherPrix(string prixCherche) {
+            string prixTrouve = "";
+
             //Chercher dans le tableau prix la chaine prix determiner
+            //pour chaque éléments de prix[]
+            for (int i = 0; i < prix.Count; i++)
+            {
+                if prixCherche = prix[i].getDescription;
+            }
+                    //Je compare la chaine du prix[i] à la chaine du prixCherché
+                    // Si ça matche
+                        //vérifier l’inventaire
+                            //Si l’inventaire est supérieur à 0
+                                // le prix est trouvé
+                                // on garde l’indice de ce prix en mémoire
+                                // la recherche se termine
+                            //Sinon la recherche se poursuit
             //Si le prix est trouvé
-            //Si le 
+                //Déduire le prix de l’inventaire
+            //Si le prix n’est pas trouvé
+            return prixTrouve;
         }
     }
 }
