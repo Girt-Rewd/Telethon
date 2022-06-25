@@ -12,7 +12,7 @@ namespace STELib
         /// Classe qui sert a garder en mémoire les données qui permettent d’identifier les prix durant le fonctionnement de l’application avant que ces données ne soient remisées
         /// </summary>
         private string idPrix = "PRX";
-        private string description;
+        private string description { get; }
         private double valeur;
 
         private int quantiteOriginale;

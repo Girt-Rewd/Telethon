@@ -216,7 +216,9 @@ namespace STELib
             //pour chaque éléments de prix[]
             for (int i = 0; i < prix.Count; i++)
             {
-                if prixCherche = prix[i].getDescription;
+                if (prixCherche == prix[i].description) { 
+                
+                }
             }
                     //Je compare la chaine du prix[i] à la chaine du prixCherché
                     // Si ça matche
