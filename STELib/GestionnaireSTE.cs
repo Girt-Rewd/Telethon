@@ -200,8 +200,7 @@ namespace STELib
             }
 
         /// <summary>
-        /// TODO Commentaire EnregistrerDonateur()
-        /// On enregistre les donateurs dans un fichier?
+        /// On enregistre les donateurs dans un fichier pour qu’ils soient disponibles à la prochaine session
         /// </summary>
         /// <returns></returns>
         public static Boolean EnregistrerDonateur()
@@ -210,6 +209,12 @@ namespace STELib
             return true;
         }
 
+        /// <summary>
+        /// ChercherPrix : On fournit le plus haut prix auquel le donateur aurait droit. La méthode cherche si cette récompense est toujours disponible
+        /// dans l’inventaire. Si c’est le cas elle renvoie la mếme récompense. Sinon elle renvoie la plus haute récompense disponible d’une moindre valeur
+        /// </summary>
+        /// <param name="prixCherche"></param>
+        /// <returns></returns>
         public string chercherPrix(string prixCherche) {
             string[] prixPossible = { "Téléviseur", "BBQ", "Repas pour deux", "Calendrier" };
             int indicePrix = Array.IndexOf(prixPossible, prixCherche);
