@@ -150,25 +150,25 @@ namespace STELib
         ///     1. calculer les points gagnés par un donateur en fonction de son don
         ///     2. Attribuer un prix correspondant au nombre de points
         /// </summary>
-        public static string AttribuerPrix(double montant)
+        public static string AttribuerPrix(double montantDon)
         {
             int points = 0;
-            if (montant < 50) { 
+            if (montantDon < 50) { 
             }
-            else if (montant >= 50 && montant < 200)
+            else if (montantDon >= 50 && montantDon < 200)
             {
                 points = 1;
             }
-            else if (montant >= 200 && montant < 350)
+            else if (montantDon >= 200 && montantDon < 350)
             {
                 points = 2;
             }
-            else if (montant >= 350 && montant < 500)
+            else if (montantDon >= 350 && montantDon < 500)
             {
                 points = 3;
             }
             else { 
-                points = 5 + 4*((int)(montant/500)-1);
+                points = 5 + 4*((int)(montantDon/500)-1);
             }
 
             string recompense;
