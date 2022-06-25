@@ -210,28 +210,27 @@ namespace STELib
         }
 
         public string chercherPrix(string prixCherche) {
-            string prixTrouve = "";
+            string[] prixPossible = { "Téléviseur", "BBQ", "Repas pour deux", "Calendrier" };
+            int indicePrix = Array.IndexOf(prixPossible, prixCherche);
+            string prixNonTrouve = "Désolé nous n’avons plus de récompenses";
 
             //Chercher dans le tableau prix la chaine prix determiner
             //pour chaque éléments de prix[]
-            for (int i = 0; i < prix.Count; i++)
+            for(int j = indicePrix; j < prixPossible.Length; j++)
             {
-                if (prixCherche == prix[i].Descripition) { 
-                
+                for (int i = 0; i < prix.Count; i++)
+                {
+                    if (prixPossible[j] == prix[i].Descripition) {
+                        if (prix[i].QuantiteActuelle > 0) {
+                            prix[i].Deduire(1);
+                            return prixPossible[j];
+                            
+                        }
+                    }
                 }
             }
-                    //Je compare la chaine du prix[i] à la chaine du prixCherché
-                    // Si ça matche
-                        //vérifier l’inventaire
-                            //Si l’inventaire est supérieur à 0
-                                // le prix est trouvé
-                                // on garde l’indice de ce prix en mémoire
-                                // la recherche se termine
-                            //Sinon la recherche se poursuit
-            //Si le prix est trouvé
-                //Déduire le prix de l’inventaire
-            //Si le prix n’est pas trouvé
-            return prixTrouve;
+            
+            return prixNonTrouve;
         }
     }
 }
