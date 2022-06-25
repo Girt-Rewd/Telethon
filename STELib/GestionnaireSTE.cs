@@ -150,7 +150,7 @@ namespace STELib
         ///     1. calculer les points gagnés par un donateur en fonction de son don
         ///     2. Attribuer un prix correspondant au nombre de points
         /// </summary>
-        public static string AttribuerPrix(double montantDon)
+        public  string AttribuerPrix(double montantDon)
         {
             int points = 0;
             if (montantDon < 50) { 
@@ -195,6 +195,7 @@ namespace STELib
                 recompense = String.Empty;
             }
 
+            recompense = chercherPrix(recompense);
             return recompense;
             }
 
@@ -207,6 +208,30 @@ namespace STELib
         {
             //TODO EnregistrerDonateur()
             return true;
+        }
+
+        public string chercherPrix(string prixCherche) {
+            string[] prixPossible = { "Téléviseur", "BBQ", "Repas pour deux", "Calendrier" };
+            int indicePrix = Array.IndexOf(prixPossible, prixCherche);
+            string prixNonTrouve = "Désolé nous n’avons plus de récompenses";
+
+            //Chercher dans le tableau prix la chaine prix determiner
+            //pour chaque éléments de prix[]
+            for(int j = indicePrix; j < prixPossible.Length; j++)
+            {
+                for (int i = 0; i < prix.Count; i++)
+                {
+                    if (prixPossible[j] == prix[i].Descripition) {
+                        if (prix[i].QuantiteActuelle > 0) {
+                            prix[i].Deduire(1);
+                            return prixPossible[j];
+                            
+                        }
+                    }
+                }
+            }
+            
+            return prixNonTrouve;
         }
     }
 }

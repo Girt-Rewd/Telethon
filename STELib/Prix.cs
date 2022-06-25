@@ -13,10 +13,21 @@ namespace STELib
         /// </summary>
         private string idPrix = "PRX";
         private string description;
+
+        public string Descripition
+        { 
+            get => description;
+            set => description = value;
+        }
         private double valeur;
 
         private int quantiteOriginale;
         private int quantiteActuelle;
+        public int QuantiteActuelle { 
+            get => quantiteActuelle;
+            set => quantiteActuelle = value;
+        }
+
         private string idCommanditaire;
 
 
