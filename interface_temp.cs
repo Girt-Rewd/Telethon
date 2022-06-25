@@ -275,7 +275,7 @@ namespace Telethon
         /// <param name="e"></param>
         private void BtnCalculRecompense_Click(object sender, EventArgs e)
         {
-            txtRecompense.Text = GestionnaireSTE.AttribuerPrix(double.Parse(txtMontant.Text));
+            txtRecompense.Text = gestionnaireSTE.AttribuerPrix(double.Parse(txtMontant.Text));
         }
 
 
