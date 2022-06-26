@@ -125,7 +125,6 @@
             this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.arbreProgression1 = new NouvelleInterface.ArbreProgression();
             this.tabEntrees.SuspendLayout();
             this.tabDonateur.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvDonateurs)).BeginInit();
@@ -155,7 +154,6 @@
             // tabDonateur
             // 
             this.tabDonateur.BackColor = System.Drawing.Color.LightSalmon;
-            this.tabDonateur.Controls.Add(this.arbreProgression1);
             this.tabDonateur.Controls.Add(this.btnEnregistre);
             this.tabDonateur.Controls.Add(this.dgvDonateurs);
             this.tabDonateur.Controls.Add(this.pnlCarteCredit);
@@ -1165,22 +1163,6 @@
             this.Column4.Width = 125;
             
             // 
-            // arbreProgression1
-            // 
-            this.arbreProgression1.AutoScrollMargin = new System.Drawing.Size(0, 0);
-            this.arbreProgression1.AutoScrollMinSize = new System.Drawing.Size(0, 0);
-            this.arbreProgression1.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
-            this.arbreProgression1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
-            this.arbreProgression1.ImageCompleted = null;
-            this.arbreProgression1.ImageUncompleted = null;
-            this.arbreProgression1.Location = new System.Drawing.Point(516, 92);
-            this.arbreProgression1.Max = 100;
-            this.arbreProgression1.Min = 0;
-            this.arbreProgression1.Name = "arbreProgression1";
-            this.arbreProgression1.Size = new System.Drawing.Size(311, 381);
-            this.arbreProgression1.TabIndex = 24;
-            this.arbreProgression1.Value = 50;
-            // 
             // Interface_temp
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
@@ -1311,6 +1293,5 @@
         private DataGridViewTextBoxColumn Column3;
         private DataGridViewTextBoxColumn Column4;
         private Button btnEnregistre;
-        private NouvelleInterface.ArbreProgression arbreProgression1;
     }
 }
