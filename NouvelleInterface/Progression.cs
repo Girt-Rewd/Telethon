@@ -19,6 +19,10 @@ namespace NouvelleInterface
 
         private void button1_Click(object sender, EventArgs e)
         {
+            Point position;
+            int wide;
+            int tall;
+            
             if (numericUpDown1.Value >= 0 && numericUpDown1.Value < 20) {
                 
 
@@ -29,15 +33,15 @@ namespace NouvelleInterface
                 pictureBox5.Visible = false;
                 pictureBox6.Visible = false;
 
-                int wide = 72/20 * (int)(numericUpDown1.Value+1);
-                int tall = 116/20 *((int)(numericUpDown1.Value +1));
+                wide = 72/20 * (int)(numericUpDown1.Value+1);
+                tall = 116/20 *((int)(numericUpDown1.Value +1));
                 pictureBox1.Width = wide;
                 pictureBox1.Height = tall;
 
-                Point p2 = pictureBox1.Location;
-                p2.Y = 216 - tall;
-                p2.X = (324 - wide) / 2;
-                pictureBox1.Location = p2;
+                position = pictureBox1.Location;
+                position.Y = 391 - tall;
+                position.X = (324 - wide) / 2;
+                pictureBox1.Location = position;
 
             } else if(numericUpDown1.Value < 40)
             {
@@ -47,6 +51,9 @@ namespace NouvelleInterface
                 pictureBox4.Visible = false;
                 pictureBox5.Visible = false;
                 pictureBox6.Visible = false;
+
+                Point p2 = pictureBox2.Location;
+                p2
 
             }
             else if (numericUpDown1.Value < 60)
