@@ -21,7 +21,7 @@ namespace Telethon
         {
             InitializeComponent();
         }
-        #region Methodes Ajouter des objets du projet,inclue validation des entrée.
+        
         /// <summary>
         /// BtnAjouterDonateur_Click effectue un ensemble de validation sur des champs correspondants aux informations de la carte de crédit, tant au niveau
         /// de leur complétude que de leur format. Si les critères nécessaires sont remplis elle crée l’objet donateur correspondant aux informations personnelles 
@@ -296,8 +296,7 @@ namespace Telethon
 
         }
 
-        // TODO consulter cet exemple d’utilisation de l’infoBulle
-        // TODO bouton désactiver/Activer Infobulle (on pourrait faire un onglet "option de l’interface"  avec ce bouton et le bouton dark mode par exemple)
+        // TODO ’infoBulle
         /// <summary>
         /// Permet d'afficher une infoBulle , lorsque le curseur survol les textbox des champs obligatoires, info donnateur.
         /// </summary>

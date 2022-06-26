@@ -698,8 +698,7 @@
             this.txtPrenomDonateur.Size = new System.Drawing.Size(191, 27);
             this.txtPrenomDonateur.TabIndex = 1;
             this.txtPrenomDonateur.Text = "Cafredoli"; // TODO enlever la valeur par défaut juste avant la remise txtPrenomDonateur
-            this.txtPrenomDonateur.Text = "Cafredoli";
-            this.txtPrenomDonateur.Click += new System.EventHandler(this.txtPrenomDonateurNoir_Click);
+            this.txtPrenomDonateur.Click += new System.EventHandler(this.TxtPrenomDonateurNoir_Click);
             this.txtPrenomDonateur.MouseHover += new System.EventHandler(this.txtDonnateurChampsObligatoire_mouseHover);
             // 
             // lblPrenomDonateur
