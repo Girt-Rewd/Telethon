@@ -29,10 +29,16 @@ namespace NouvelleInterface
                 pictureBox5.Visible = false;
                 pictureBox6.Visible = false;
 
-                //int wide = 72/20 * (int)(numericUpDown1.Value+1);
-                //int large = 116/20 *((int)(numericUpDown1.Value +1));
-                //pictureBox1.Width = wide;
-                //pictureBox1.Height = large;
+                int wide = 72/20 * (int)(numericUpDown1.Value+1);
+                int tall = 116/20 *((int)(numericUpDown1.Value +1));
+                pictureBox1.Width = wide;
+                pictureBox1.Height = tall;
+
+                Point p2 = pictureBox1.Location;
+                p2.Y = 216 - tall;
+                p2.X = (324 - wide) / 2;
+                pictureBox1.Location = p2;
+
             } else if(numericUpDown1.Value < 40)
             {
                 pictureBox1.Visible = false;
