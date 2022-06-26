@@ -32,7 +32,7 @@ namespace NouvelleInterface
                 pictureBox4.Visible = false;
                 pictureBox5.Visible = false;
                 pictureBox6.Visible = false;
-
+            
                 wide = 36 + 36/20 * (int)(numericUpDown1.Value + 1);
                 tall = 58 + 58/20 * ((int)(numericUpDown1.Value + 1));
                 pictureBox1.Width = wide;
