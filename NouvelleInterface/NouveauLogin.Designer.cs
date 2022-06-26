@@ -19,6 +19,8 @@
             }
             base.Dispose(disposing);
         }
+
+
         #region Windows Form Designer generated code
 
         /// <summary>
@@ -82,7 +84,7 @@
             this.btnOk.TabIndex = 2;
             this.btnOk.Text = "Ok";
             this.btnOk.UseVisualStyleBackColor = true;
-            this.btnOk.Click += new System.EventHandler(this.btnOkOnClick);
+            this.btnOk.Click += new System.EventHandler(this.btnOk_Click);
             // 
             // btnAnnuler
             // 
@@ -93,7 +95,7 @@
             this.btnAnnuler.TabIndex = 3;
             this.btnAnnuler.Text = "Annuler";
             this.btnAnnuler.UseVisualStyleBackColor = true;
-            this.btnAnnuler.Click += new System.EventHandler(this.BtnAnnulerOnclick);
+            this.btnAnnuler.Click += new System.EventHandler(this.BtnAnnuler_Click);
             // 
             // MonLogin
             // 
@@ -122,9 +124,9 @@
         private System.Windows.Forms.TextBox txtMotDePasse;
         private System.Windows.Forms.Button btnOk;
         private System.Windows.Forms.Button btnAnnuler;
-        private EventHandler btnOkOnClick;
+        private EventHandler btnOk_Click;
 
-        public EventHandler BtnAnnulerOnclick { get; private set; }
+        public EventHandler BtnAnnuler_Click { get; private set; }
     }
 
 }

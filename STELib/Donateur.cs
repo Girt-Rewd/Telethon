@@ -24,7 +24,6 @@ namespace STELib
         public Donateur(string nom, string prenom, string courriel, string telephone, char typeDeCarte, string numeroCarte, string dateExpiration, int nbDonateurs) : base(prenom, nom){
 
             this.idDonateur = "DNTR" + nbDonateurs;
-            nbDonateurs++;
             this.courriel = courriel;
             this.telephone = telephone;
             this.typeDeCarte = typeDeCarte;
