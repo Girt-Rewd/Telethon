@@ -45,7 +45,7 @@ namespace STELib
         /// <param name="nbDonateur"></param>
         public void AjouterDonateur(string prenom, string nom, string adresse, string telephone, char typeCarte, string numeroCarte, string dateExpiration, int nbDonateur)
         {
-
+         
             donateurs.Add(new Donateur(prenom, nom, adresse, telephone, typeCarte, numeroCarte, dateExpiration, nbDonateur));
         }
 
