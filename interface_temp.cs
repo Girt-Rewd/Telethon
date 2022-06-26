@@ -182,7 +182,7 @@ namespace Telethon
         /// <param name="e"></param>
         private void BtnAfficheDon_Click(object sender, EventArgs e)
         {
-        //    textBoxOutput.Text = gestionnaireSTE.AfficherDons();
+            textBoxOutput.Text = gestionnaireSTE.AfficherDons();
         }
 
         /// <summary>
