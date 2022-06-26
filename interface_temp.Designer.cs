@@ -180,7 +180,7 @@
             this.btnEnregistre.TabIndex = 23;
             this.btnEnregistre.Text = "Enregister";
             this.btnEnregistre.UseVisualStyleBackColor = true;
-            this.btnEnregistre.Click += new System.EventHandler(this.btnEnregistre_Click);
+            this.btnEnregistre.Click += new System.EventHandler(this.BtnEnregistre_Click);
             // 
             // dgvDonateurs
             // 
@@ -697,7 +697,7 @@
             this.txtPrenomDonateur.TabIndex = 1;
             this.txtPrenomDonateur.Text = "Cafredoli";
             this.txtPrenomDonateur.Click += new System.EventHandler(this.TxtPrenomDonateurNoir_Click);
-            this.txtPrenomDonateur.MouseHover += new System.EventHandler(this.txtDonnateurChampsObligatoire_mouseHover);
+            this.txtPrenomDonateur.MouseHover += new System.EventHandler(this.TxtDonnateurChampsObligatoire_mouseHover);
             // 
             // lblPrenomDonateur
             // 

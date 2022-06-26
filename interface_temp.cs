@@ -302,7 +302,7 @@ namespace Telethon
         /// </summary>
         /// <param name="sender"></param>
         /// <param name="e"></param>
-        private void txtDonnateurChampsObligatoire_mouseHover(object sender, EventArgs e)
+        private void TxtDonnateurChampsObligatoire_mouseHover(object sender, EventArgs e)
         {
             infoBulle.SetToolTip(txtPrenomDonateur, "Prénom obligatoire");
             infoBulle.SetToolTip(txtNomDonateur, "Nom obligatoire");
@@ -385,7 +385,7 @@ namespace Telethon
         }
         #endregion
 
-        private void btnEnregistre_Click(object sender, EventArgs e)
+        private void BtnEnregistre_Click(object sender, EventArgs e)
         {
 
             StreamWriter saveListDonateurs = new StreamWriter("ListeDonateurs.txt", false);
@@ -400,6 +400,7 @@ namespace Telethon
                 string typeDeCarte = colonne.Cells[5].Value.ToString();
                 string numeroDeCarte = colonne.Cells[6].Value.ToString();
                 string dateDexpiration = colonne.Cells[7].Value.ToString();
+                //if(nom !=null)
                 saveListDonateurs.WriteLine(IDD+"/"+nom + "/" + prenom + "/" + telephone + "/" + courriel + "/" + typeDeCarte + "/" + numeroDeCarte+"/"+dateDexpiration);
             }
             saveListDonateurs.Close();
