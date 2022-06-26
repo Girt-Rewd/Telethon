@@ -23,6 +23,7 @@
   </ItemGroup>
 
   <ItemGroup>
+    <ProjectReference Include="NouvelleInterface\NouvelleInterface.csproj" />
     <ProjectReference Include="STELib\STELib.csproj" />
   </ItemGroup>
 
