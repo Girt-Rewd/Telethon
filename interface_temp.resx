@@ -81,6 +81,9 @@
   <metadata name="Column12.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>True</value>
   </metadata>
+  <metadata name="cvc.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
   <data name="richTextBox1.Text" xml:space="preserve">
     <value>Ce programme sert à la gestion d’un événement téléthon. L’utilisateur ciblé est un téléphoniste dont le travail sera:
     1. Entrer les informations personnelle d’un donateur (personne qui contribue avec un don en argent)  

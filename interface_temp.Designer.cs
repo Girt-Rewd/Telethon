@@ -42,6 +42,7 @@
             this.ColumnCompCredit = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column11 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column12 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.cvc = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.pnlCarteCredit = new System.Windows.Forms.Panel();
             this.lblAnneeExpiration = new System.Windows.Forms.Label();
             this.lblMoisExpiration = new System.Windows.Forms.Label();
@@ -76,7 +77,6 @@
             this.lblMessageDonateur = new System.Windows.Forms.Label();
             this.lblnfoDonateur = new System.Windows.Forms.Label();
             this.lblID = new System.Windows.Forms.Label();
-            this.txtID = new System.Windows.Forms.TextBox();
             this.btnSuivant = new System.Windows.Forms.Button();
             this.txtPrenomDonateur = new System.Windows.Forms.TextBox();
             this.lblPrenomDonateur = new System.Windows.Forms.Label();
@@ -193,9 +193,11 @@
             this.Column9,
             this.ColumnCompCredit,
             this.Column11,
-            this.Column12});
+            this.Column12,
+            this.cvc});
             this.dgvDonateurs.Location = new System.Drawing.Point(39, 630);
             this.dgvDonateurs.Name = "dgvDonateurs";
+            this.dgvDonateurs.ReadOnly = true;
             this.dgvDonateurs.RowHeadersWidth = 51;
             this.dgvDonateurs.RowTemplate.Height = 29;
             this.dgvDonateurs.Size = new System.Drawing.Size(686, 245);
@@ -203,9 +205,11 @@
             // 
             // Column5
             // 
+            this.Column5.DataPropertyName = "idd";
             this.Column5.HeaderText = "IDD";
             this.Column5.MinimumWidth = 6;
             this.Column5.Name = "Column5";
+            this.Column5.ReadOnly = true;
             this.Column5.Width = 125;
             // 
             // Column6
@@ -213,6 +217,7 @@
             this.Column6.HeaderText = "Nom";
             this.Column6.MinimumWidth = 6;
             this.Column6.Name = "Column6";
+            this.Column6.ReadOnly = true;
             this.Column6.Width = 125;
             // 
             // Column7
@@ -220,6 +225,7 @@
             this.Column7.HeaderText = "Prénom";
             this.Column7.MinimumWidth = 6;
             this.Column7.Name = "Column7";
+            this.Column7.ReadOnly = true;
             this.Column7.Width = 125;
             // 
             // Column8
@@ -227,6 +233,7 @@
             this.Column8.HeaderText = "# Téléphone";
             this.Column8.MinimumWidth = 6;
             this.Column8.Name = "Column8";
+            this.Column8.ReadOnly = true;
             this.Column8.Width = 125;
             // 
             // Column9
@@ -234,6 +241,7 @@
             this.Column9.HeaderText = "Courriel";
             this.Column9.MinimumWidth = 6;
             this.Column9.Name = "Column9";
+            this.Column9.ReadOnly = true;
             this.Column9.Width = 125;
             // 
             // ColumnCompCredit
@@ -242,6 +250,7 @@
             this.ColumnCompCredit.MaxInputLength = 5;
             this.ColumnCompCredit.MinimumWidth = 6;
             this.ColumnCompCredit.Name = "ColumnCompCredit";
+            this.ColumnCompCredit.ReadOnly = true;
             this.ColumnCompCredit.Width = 125;
             // 
             // Column11
@@ -249,6 +258,7 @@
             this.Column11.HeaderText = "# CCrédit";
             this.Column11.MinimumWidth = 6;
             this.Column11.Name = "Column11";
+            this.Column11.ReadOnly = true;
             this.Column11.Width = 125;
             // 
             // Column12
@@ -256,13 +266,23 @@
             this.Column12.HeaderText = "Date Exp.Crédit";
             this.Column12.MinimumWidth = 6;
             this.Column12.Name = "Column12";
+            this.Column12.ReadOnly = true;
             this.Column12.Width = 125;
+            // 
+            // cvc
+            // 
+            this.cvc.HeaderText = "CVC";
+            this.cvc.MinimumWidth = 6;
+            this.cvc.Name = "cvc";
+            this.cvc.ReadOnly = true;
+            this.cvc.Width = 125;
             // 
             // pnlCarteCredit
             // 
             this.pnlCarteCredit.Controls.Add(this.lblAnneeExpiration);
             this.pnlCarteCredit.Controls.Add(this.lblMoisExpiration);
             this.pnlCarteCredit.Controls.Add(this.numAnnee);
+            this.pnlCarteCredit.Controls.Add(this.lblID);
             this.pnlCarteCredit.Controls.Add(this.numMois);
             this.pnlCarteCredit.Controls.Add(this.txtBoxCvc);
             this.pnlCarteCredit.Controls.Add(this.lblCVC);
@@ -611,8 +631,6 @@
             this.pnlInfoDonateur.Controls.Add(this.mskTxtBoxTel);
             this.pnlInfoDonateur.Controls.Add(this.lblMessageDonateur);
             this.pnlInfoDonateur.Controls.Add(this.lblnfoDonateur);
-            this.pnlInfoDonateur.Controls.Add(this.lblID);
-            this.pnlInfoDonateur.Controls.Add(this.txtID);
             this.pnlInfoDonateur.Controls.Add(this.btnSuivant);
             this.pnlInfoDonateur.Controls.Add(this.txtPrenomDonateur);
             this.pnlInfoDonateur.Controls.Add(this.lblPrenomDonateur);
@@ -664,20 +682,12 @@
             // 
             this.lblID.AutoSize = true;
             this.lblID.BackColor = System.Drawing.Color.Transparent;
-            this.lblID.Location = new System.Drawing.Point(38, 79);
+            this.lblID.Location = new System.Drawing.Point(23, 249);
             this.lblID.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
             this.lblID.Name = "lblID";
             this.lblID.Size = new System.Drawing.Size(31, 20);
             this.lblID.TabIndex = 7;
             this.lblID.Text = "ID :";
-            // 
-            // txtID
-            // 
-            this.txtID.Location = new System.Drawing.Point(129, 75);
-            this.txtID.Margin = new System.Windows.Forms.Padding(5);
-            this.txtID.Name = "txtID";
-            this.txtID.Size = new System.Drawing.Size(191, 27);
-            this.txtID.TabIndex = 0;
             // 
             // btnSuivant
             // 
@@ -1215,7 +1225,6 @@
         private TextBox txtCourrielDonateur;
         private TextBox txtNomDonateur;
         private TextBox txtPrenomDonateur;
-        private TextBox txtID;
         private Label lblMontant;
         private Label lblTelephone;
         private Label lblCourriel;
@@ -1277,6 +1286,13 @@
         private Label lblMessageCommanditaire;
         private Label lblMessagePrix;
         private DataGridView dgvDonateurs;
+        private DataGridViewTextBoxColumn Column1;
+        private DataGridViewTextBoxColumn ColumnNom;
+        private DataGridViewTextBoxColumn dataGridViewTextBoxColumn1;
+        private DataGridViewTextBoxColumn Column2;
+        private DataGridViewTextBoxColumn Column3;
+        private DataGridViewTextBoxColumn Column4;
+        private Button btnEnregistre;
         private DataGridViewTextBoxColumn Column5;
         private DataGridViewTextBoxColumn Column6;
         private DataGridViewTextBoxColumn Column7;
@@ -1285,12 +1301,6 @@
         private DataGridViewTextBoxColumn ColumnCompCredit;
         private DataGridViewTextBoxColumn Column11;
         private DataGridViewTextBoxColumn Column12;
-        private DataGridViewTextBoxColumn Column1;
-        private DataGridViewTextBoxColumn ColumnNom;
-        private DataGridViewTextBoxColumn dataGridViewTextBoxColumn1;
-        private DataGridViewTextBoxColumn Column2;
-        private DataGridViewTextBoxColumn Column3;
-        private DataGridViewTextBoxColumn Column4;
-        private Button btnEnregistre;
+        private DataGridViewTextBoxColumn cvc;
     }
 }

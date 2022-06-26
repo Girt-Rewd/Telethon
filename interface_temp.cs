@@ -12,7 +12,7 @@ namespace Telethon
         /// Bloc de déclaration des variables globales
         /// </summary>
         GestionnaireSTE gestionnaireSTE = new();
-        string dateExpiration = "";
+      
 
         /// <summary>
         /// Constructeur
@@ -20,6 +20,17 @@ namespace Telethon
         public Interface_temp()
         {
             InitializeComponent();
+
+            StreamReader readList = new StreamReader("listeDonateurs.txt");
+            string ligne = string.Empty;
+            while ((ligne = readList.ReadLine()) != null)
+            {
+                string[] tabLigne = ligne.Split('/');
+
+                dgvDonateurs.Rows.Add(tabLigne);
+
+            }
+            readList.Close();
         }
         #region Methodes Ajouter des objets du projet,inclue validation des entrée.
         /// <summary>
@@ -35,7 +46,7 @@ namespace Telethon
             // insister sur la complétude des champs des informations de la carte de crédit
             if (!(radAmex.Checked || radMC.Checked || radVisa.Checked) || mskTxtNumeroCarte.Text == "               " || !mskTxtNumeroCarte.MaskCompleted)
             {
-                
+
                 // Afficher un message d’erreur si aucun type de carte n’a été choisi
                 if (!(radAmex.Checked || radMC.Checked || radVisa.Checked))
                 {
@@ -46,9 +57,9 @@ namespace Telethon
                     lblMessageCredit.Visible = true;
                 }
 
-              
+
                 signalerIncompletude(mskTxtNumeroCarte, "               ", lblNoCredit, lblMessageCredit, "Numéro de carte :");
-                
+
                 if (!mskTxtNumeroCarte.MaskCompleted)
                 {
                     MessageBox.Show("Veuillez compléter le numéro de la carte", "Attention", MessageBoxButtons.OK, MessageBoxIcon.Error);
@@ -56,9 +67,9 @@ namespace Telethon
                     lblMessageCredit.Visible = true;
                     mskTxtNumeroCarte.Focus();
                 }
-              
+
             }
-            
+
             // Tous le champs sont complets et valides
             else
             {
@@ -76,16 +87,20 @@ namespace Telethon
                 {
                     typeCarte = 'V';
                 }
-        
 
-                gestionnaireSTE.AjouterDonateur(txtNomDonateur.Text, txtPrenomDonateur.Text, txtCourrielDonateur.Text, mskTxtBoxTel.Text, typeCarte, mskTxtNumeroCarte.Text, dateExpiration, gestionnaireSTE.donateurs.Count);
+                dgvDonateurs.Rows.Add("DNTR" + dgvDonateurs.RowCount + 1, txtNomDonateur.Text, txtPrenomDonateur.Text, mskTxtBoxTel.Text, txtCourrielDonateur.Text, typeCarte, mskTxtNumeroCarte.Text, numMois.Text + "/" + numAnnee.Text, txtBoxCvc.Text);
+                MessageBox.Show("Donateur créer.");
+              
+                gestionnaireSTE.AjouterDonateur(txtNomDonateur.Text, txtPrenomDonateur.Text, txtCourrielDonateur.Text, mskTxtBoxTel.Text, typeCarte, mskTxtNumeroCarte.Text, numMois.Text + "/" + numAnnee.Text, dgvDonateurs.RowCount + 1);
 
-                dgvDonateurs.Rows.Add("DNTR"+ gestionnaireSTE.donateurs.Count,txtNomDonateur.Text, txtPrenomDonateur.Text, mskTxtBoxTel.Text, txtCourrielDonateur.Text, typeCarte, mskTxtNumeroCarte.Text, numMois.Text+"/"+numAnnee.Text);
+            
+               
 
                 //Passage au prochain sous menu
                 pnlDon.Visible = true;
                 pnlPrix.Visible = true;
                 pnlCarteCredit.Visible = false;
+
             }
         }
 
@@ -96,7 +111,7 @@ namespace Telethon
         /// <param name="e"></param>
         private void BtnAjouterDon_Click(object sender, EventArgs e)
         {
-            dateExpiration = numMois.Value.ToString("00") + "/" + numAnnee.Value.ToString();
+            string dateExpiration = numMois.Value.ToString("00") + "/" + numAnnee.Value.ToString();
             try
             {
                 gestionnaireSTE.AjouterDon(dateExpiration, txtIDDon.Text, double.Parse(txtMontant.Text), gestionnaireSTE.dons.Count);
@@ -237,6 +252,7 @@ namespace Telethon
             {
                 pnlInfoDonateur.Visible = false;
                 pnlCarteCredit.Visible = true;
+                lblID.Text = "ID Temp : DNTR" + (dgvDonateurs.RowCount + 1)+"\n\rNom :"+txtPrenomDonateur.Text;
             }
         }
 
@@ -401,10 +417,12 @@ namespace Telethon
                 string typeDeCarte = colonne.Cells[5].Value.ToString();
                 string numeroDeCarte = colonne.Cells[6].Value.ToString();
                 string dateDexpiration = colonne.Cells[7].Value.ToString();
-                //if(nom !=null)
-                saveListDonateurs.WriteLine(IDD+"/"+nom + "/" + prenom + "/" + telephone + "/" + courriel + "/" + typeDeCarte + "/" + numeroDeCarte+"/"+dateDexpiration);
+                string cvc = colonne.Cells[8].Value.ToString();
+                saveListDonateurs.WriteLine(IDD+"/"+nom + "/" + prenom + "/" + telephone + "/" + courriel + "/" + typeDeCarte + "/" + numeroDeCarte+"/"+dateDexpiration+"/"+cvc);
             }
             saveListDonateurs.Close();
         }
+
     }
-}
+    }
+
