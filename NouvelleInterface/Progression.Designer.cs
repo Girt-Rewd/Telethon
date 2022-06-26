@@ -85,7 +85,7 @@
             // 
             this.pictureBox4.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
             this.pictureBox4.Image = global::NouvelleInterface.Properties.Resources.Arbre4;
-            this.pictureBox4.Location = new System.Drawing.Point(66, 112);
+            this.pictureBox4.Location = new System.Drawing.Point(63, 112);
             this.pictureBox4.Name = "pictureBox4";
             this.pictureBox4.Size = new System.Drawing.Size(209, 279);
             this.pictureBox4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -97,7 +97,7 @@
             // 
             this.pictureBox5.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
             this.pictureBox5.Image = global::NouvelleInterface.Properties.Resources.Arbre5;
-            this.pictureBox5.Location = new System.Drawing.Point(40, 66);
+            this.pictureBox5.Location = new System.Drawing.Point(36, 65);
             this.pictureBox5.Name = "pictureBox5";
             this.pictureBox5.Size = new System.Drawing.Size(270, 325);
             this.pictureBox5.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -109,9 +109,9 @@
             // 
             this.pictureBox6.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
             this.pictureBox6.Image = global::NouvelleInterface.Properties.Resources.Arbre6;
-            this.pictureBox6.Location = new System.Drawing.Point(17, 7);
+            this.pictureBox6.Location = new System.Drawing.Point(32, 51);
             this.pictureBox6.Name = "pictureBox6";
-            this.pictureBox6.Size = new System.Drawing.Size(293, 384);
+            this.pictureBox6.Size = new System.Drawing.Size(280, 340);
             this.pictureBox6.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox6.TabIndex = 0;
             this.pictureBox6.TabStop = false;
@@ -139,8 +139,8 @@
             this.panel1.Controls.Add(this.pictureBox1);
             this.panel1.Controls.Add(this.pictureBox2);
             this.panel1.Controls.Add(this.pictureBox3);
-            this.panel1.Controls.Add(this.pictureBox4);
             this.panel1.Controls.Add(this.pictureBox5);
+            this.panel1.Controls.Add(this.pictureBox4);
             this.panel1.Controls.Add(this.pictureBox6);
             this.panel1.Location = new System.Drawing.Point(389, 12);
             this.panel1.Name = "panel1";
@@ -157,6 +157,7 @@
             this.Controls.Add(this.numericUpDown1);
             this.Name = "Progression";
             this.Text = "Progression";
+            this.Load += new System.EventHandler(this.Progression_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
