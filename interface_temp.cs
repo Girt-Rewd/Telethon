@@ -80,7 +80,7 @@ namespace Telethon
 
                 gestionnaireSTE.AjouterDonateur(txtNomDonateur.Text, txtPrenomDonateur.Text, txtCourrielDonateur.Text, mskTxtBoxTel.Text, typeCarte, mskTxtNumeroCarte.Text, dateExpiration, gestionnaireSTE.donateurs.Count);
 
-                dgvDonateurs.Rows.Add(txtNomDonateur.Text, txtPrenomDonateur.Text, txtCourrielDonateur.Text, mskTxtBoxTel.Text, typeCarte, mskTxtNumeroCarte.Text, numMois.Text+"/"+numAnnee.Text);
+                dgvDonateurs.Rows.Add("DNTR"+ gestionnaireSTE.donateurs.Count,txtNomDonateur.Text, txtPrenomDonateur.Text, mskTxtBoxTel.Text, txtCourrielDonateur.Text, typeCarte, mskTxtNumeroCarte.Text, numMois.Text+"/"+numAnnee.Text);
 
                 //Passage au prochain sous menu
                 pnlDon.Visible = true;
