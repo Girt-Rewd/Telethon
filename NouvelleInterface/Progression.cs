@@ -20,13 +20,19 @@ namespace NouvelleInterface
         private void button1_Click(object sender, EventArgs e)
         {
             if (numericUpDown1.Value >= 0 && numericUpDown1.Value < 20) {
+                
+
                 pictureBox1.Visible = true;
                 pictureBox2.Visible = false;
                 pictureBox3.Visible = false;
                 pictureBox4.Visible = false;
                 pictureBox5.Visible = false;
                 pictureBox6.Visible = false;
-            
+
+                //int wide = 72/20 * (int)(numericUpDown1.Value+1);
+                //int large = 116/20 *((int)(numericUpDown1.Value +1));
+                //pictureBox1.Width = wide;
+                //pictureBox1.Height = large;
             } else if(numericUpDown1.Value < 40)
             {
                 pictureBox1.Visible = false;
@@ -77,6 +83,11 @@ namespace NouvelleInterface
                 pictureBox6.Visible = true;
 
             }
+
+        }
+
+        private void pictureBox1_Click(object sender, EventArgs e)
+        {
 
         }
     }
