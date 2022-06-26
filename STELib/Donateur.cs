@@ -13,7 +13,7 @@ namespace STELib
         /// Classe qui sert a garder en mémoire les données qui permettent d’identifier les donateurs durant le fonctionnement de l’application avant que ces données ne soient remisées
         /// </summary>
 
-        private string idDonateur;
+        private string idDonateur ;
         private string courriel;
         private string telephone;
         private char typeDeCarte;
@@ -40,6 +40,7 @@ namespace STELib
              
             return "identifiant du donateur : " + idDonateur + " " + base.ToString(); 
         }
+    
         
     }
 }

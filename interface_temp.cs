@@ -21,7 +21,7 @@ namespace Telethon
         {
             InitializeComponent();
         }
-
+        #region Methodes Ajouter des objets du projet,inclue validation des entrée.
         /// <summary>
         /// BtnAjouterDonateur_Click effectue un ensemble de validation sur des champs correspondants aux informations de la carte de crédit, tant au niveau
         /// de leur complétude que de leur format. Si les critères nécessaires sont remplis elle crée l’objet donateur correspondant aux informations personnelles 
@@ -56,7 +56,7 @@ namespace Telethon
                     lblMessageCredit.Visible = true;
                     mskTxtNumeroCarte.Focus();
                 }
-                #endregion
+              
             }
             
             // Tous le champs sont complets et valides
@@ -76,8 +76,11 @@ namespace Telethon
                 {
                     typeCarte = 'V';
                 }
+        
 
-                gestionnaireSTE.AjouterDonateur(txtPrenomDonateur.Text, txtNomDonateur.Text, txtCourrielDonateur.Text, mskTxtBoxTel.Text, typeCarte, mskTxtNumeroCarte.Text, dateExpiration, gestionnaireSTE.donateurs.Count);
+                gestionnaireSTE.AjouterDonateur(txtNomDonateur.Text, txtPrenomDonateur.Text, txtCourrielDonateur.Text, mskTxtBoxTel.Text, typeCarte, mskTxtNumeroCarte.Text, dateExpiration, gestionnaireSTE.donateurs.Count);
+
+                dgvDonateurs.Rows.Add(txtNomDonateur.Text, txtPrenomDonateur.Text, txtCourrielDonateur.Text, mskTxtBoxTel.Text, typeCarte, mskTxtNumeroCarte.Text, numMois.Text+"/"+numAnnee.Text);
 
                 //Passage au prochain sous menu
                 pnlDon.Visible = true;
@@ -146,9 +149,10 @@ namespace Telethon
                 {
                     gestionnaireSTE.AjouterPrix(txtDescription.Text, double.Parse(txtValeurPrix.Text), int.Parse(txtQuantitePrix.Text), "CMDT098", gestionnaireSTE.prix.Count);
                     lblPrenomDonateur.ForeColor = Color.Maroon;
-                    if(lblMessageDonateur.Text=="Prénom :") lblPrenomDonateur.Text += "*";
-                    
-                } 
+                    if (lblMessageDonateur.Text == "Prénom :") lblPrenomDonateur.Text += "*";
+
+                }
+
                 catch (FormatException)
                 {
                     MessageBox.Show("Veuillez utiliser une virgule pour les décimales", "Attention", MessageBoxButtons.OK, MessageBoxIcon.Error);
@@ -158,7 +162,9 @@ namespace Telethon
             }
             
         }
-
+        #endregion
+        // TODO boutton afficher prix.
+        #region Affiche les objets.
         /// <summary>
         /// BtnAfficherDonateur_Click affiche la liste des donateurs temporairement stockés par l’application dans la RAM
         /// </summary>
@@ -166,7 +172,7 @@ namespace Telethon
         /// <param name="e"></param>
         private void BtnAfficherDonateur_Click(object sender, EventArgs e)
         {
-            textBoxOutput.Text = gestionnaireSTE.AfficherDonateurs();
+         //   textBoxOutput.Text = gestionnaireSTE.AfficherDonateurs();
         }
 
         /// <summary>
@@ -176,7 +182,7 @@ namespace Telethon
         /// <param name="e"></param>
         private void BtnAfficheDon_Click(object sender, EventArgs e)
         {
-            textBoxOutput.Text = gestionnaireSTE.AfficherDons();
+        //    textBoxOutput.Text = gestionnaireSTE.AfficherDons();
         }
 
         /// <summary>
@@ -186,9 +192,10 @@ namespace Telethon
         /// <param name="e"></param>
         private void BtnAfficherCommanditaire_Click(object sender, EventArgs e)
         {
-            textBoxOutput.Text = gestionnaireSTE.AfficherCommanditaires();
+         //   textBoxOutput.Text = gestionnaireSTE.AfficherCommanditaires();
         }
 
+        #endregion//TODO 
 
         /// <summary>
         /// BtnSuivantDonateur_Click effectue un ensemble de validation sur la complétude et le format des informations personnelles du donateurs. Si les critères sont bien
@@ -290,10 +297,18 @@ namespace Telethon
         }
 
         // TODO consulter cet exemple d’utilisation de l’infoBulle
-        
-        private void TxtPrenomDonateur_MouseHover(object sender, EventArgs e)
+        // TODO bouton désactiver/Activer Infobulle (on pourrait faire un onglet "option de l’interface"  avec ce bouton et le bouton dark mode par exemple)
+        /// <summary>
+        /// Permet d'afficher une infoBulle , lorsque le curseur survol les textbox des champs obligatoires, info donnateur.
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        private void txtDonnateurChampsObligatoire_mouseHover(object sender, EventArgs e)
         {
-            infoBulle.SetToolTip(txtPrenomDonateur, "Champ obligatoire");
+            infoBulle.SetToolTip(txtPrenomDonateur, "Prénom obligatoire");
+            infoBulle.SetToolTip(txtNomDonateur, "Nom obligatoire");
+            infoBulle.SetToolTip(mskTxtBoxTel, "Téléphone obligatoire");
+            
         }
 
         /// <summary>
@@ -370,5 +385,26 @@ namespace Telethon
             TxtNoir(lblQuatitePrix, "Quantité :");
         }
         #endregion
+
+        private void btnEnregistre_Click(object sender, EventArgs e)
+        {
+
+            StreamWriter saveListDonateurs = new StreamWriter("ListeDonateurs.txt", false);
+
+            foreach (DataGridViewRow colonne in dgvDonateurs.Rows)
+            {
+                string IDD = colonne.Cells[0].Value.ToString();
+                string nom = colonne.Cells[1].Value.ToString();
+                string prenom = colonne.Cells[2].Value.ToString();
+                string telephone = colonne.Cells[4].Value.ToString();
+                string courriel = colonne.Cells[3].Value.ToString();
+                string typeDeCarte = colonne.Cells[5].Value.ToString();
+                string numeroDeCarte = colonne.Cells[6].Value.ToString();
+                string dateDexpiration = colonne.Cells[7].Value.ToString();
+                //if(nom !=null)
+                saveListDonateurs.WriteLine(IDD+"/"+nom + "/" + prenom + "/" + telephone + "/" + courriel + "/" + typeDeCarte + "/" + numeroDeCarte+"/"+dateDexpiration);
+            }
+            saveListDonateurs.Close();
+        }
     }
 }
