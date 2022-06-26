@@ -374,7 +374,7 @@
             this.mskTxtNumeroCarte.PromptChar = ' ';
             this.mskTxtNumeroCarte.Size = new System.Drawing.Size(203, 27);
             this.mskTxtNumeroCarte.TabIndex = 4;
-            this.mskTxtNumeroCarte.Text = "1234123412341234";
+            this.mskTxtNumeroCarte.Text = "1234123412341234"; // TODO enlever la valeur par défaut de mskTxtNumeroCarte juste avant la remise
             this.mskTxtNumeroCarte.Click += new System.EventHandler(this.TxtNumeroCarte_Click);
             // 
             // btnAjoutreDonateur
@@ -438,9 +438,9 @@
             // radVisa
             // 
             this.radVisa.AutoSize = true;
-            this.radVisa.Checked = true;
-            this.radVisa.Location = new System.Drawing.Point(25, 29);
-            this.radVisa.Margin = new System.Windows.Forms.Padding(5);
+            this.radVisa.Checked = true; // TODO enlever la valeur par défaut de radVisa juste avant la remise 
+            this.radVisa.Location = new System.Drawing.Point(22, 22);
+            this.radVisa.Margin = new System.Windows.Forms.Padding(4);
             this.radVisa.Name = "radVisa";
             this.radVisa.Size = new System.Drawing.Size(57, 24);
             this.radVisa.TabIndex = 0;
@@ -581,7 +581,7 @@
             this.txtMontant.Name = "txtMontant";
             this.txtMontant.Size = new System.Drawing.Size(142, 27);
             this.txtMontant.TabIndex = 1;
-            this.txtMontant.Text = "2500";
+            this.txtMontant.Text = "2500"; // TODO enlever la valeur par défaut juste avant la remise txtMontant
             // 
             // btnAjouterDon
             // 
@@ -635,7 +635,7 @@
             this.mskTxtBoxTel.Name = "mskTxtBoxTel";
             this.mskTxtBoxTel.Size = new System.Drawing.Size(191, 27);
             this.mskTxtBoxTel.TabIndex = 4;
-            this.mskTxtBoxTel.Text = "5141112222";
+            this.mskTxtBoxTel.Text = "5141112222"; // TODO enlever juste avant de remettre mskTxtBoxTel
             this.mskTxtBoxTel.Click += new System.EventHandler(this.MskTxtBoxTel_Click);
             // 
             // lblMessageDonateur
@@ -697,8 +697,8 @@
             this.txtPrenomDonateur.Name = "txtPrenomDonateur";
             this.txtPrenomDonateur.Size = new System.Drawing.Size(191, 27);
             this.txtPrenomDonateur.TabIndex = 1;
-            this.txtPrenomDonateur.Text = "Cafredoli";
-            this.txtPrenomDonateur.Click += new System.EventHandler(this.txtPrenomDonateurNoir_Click);
+            this.txtPrenomDonateur.Text = "Cafredoli"; // TODO enlever la valeur par défaut juste avant la remise txtPrenomDonateur
+            this.txtPrenomDonateur.Click += new System.EventHandler(this.TxtPrenomDonateurNoir_Click);
             this.txtPrenomDonateur.MouseHover += new System.EventHandler(this.txtDonnateurChampsObligatoire_mouseHover);
             // 
             // lblPrenomDonateur
@@ -738,8 +738,9 @@
             this.txtNomDonateur.Name = "txtNomDonateur";
             this.txtNomDonateur.Size = new System.Drawing.Size(191, 27);
             this.txtNomDonateur.TabIndex = 2;
+            this.txtNomDonateur.Text = "Godfaimond"; // TODO enlever la valeur par défaut juste avant la remise txtNomDonateur
             this.txtNomDonateur.Text = "Godfaimond";
-            this.txtNomDonateur.Click += new System.EventHandler(this.txtNomDonateur_Click);
+            this.txtNomDonateur.Click += new System.EventHandler(this.TxtNomDonateur_Click);
             // 
             // txtCourrielDonateur
             // 
@@ -750,7 +751,7 @@
             this.txtCourrielDonateur.Size = new System.Drawing.Size(191, 27);
             this.txtCourrielDonateur.TabIndex = 3;
             this.txtCourrielDonateur.Text = "votrenom@domain.com";
-            this.txtCourrielDonateur.Click += new System.EventHandler(this.txtCourrielDonateur_Click);
+            this.txtCourrielDonateur.Click += new System.EventHandler(this.TxtCourrielDonateur_Click);
             // 
             // lblTelephone
             // 
@@ -900,8 +901,8 @@
             this.txtQuantitePrix.Name = "txtQuantitePrix";
             this.txtQuantitePrix.Size = new System.Drawing.Size(191, 27);
             this.txtQuantitePrix.TabIndex = 10;
-            this.txtQuantitePrix.Text = "12";
-            this.txtQuantitePrix.Click += new System.EventHandler(this.txtQuantitePrix_Click);
+            this.txtQuantitePrix.Text = "12"; // TODO enlever la valeur par défaut juste avant la remise txtQuantitePrix
+            this.txtQuantitePrix.Click += new System.EventHandler(this.TxtQuantitePrix_Click);
             // 
             // txtValeurPrix
             // 
@@ -910,8 +911,8 @@
             this.txtValeurPrix.Name = "txtValeurPrix";
             this.txtValeurPrix.Size = new System.Drawing.Size(191, 27);
             this.txtValeurPrix.TabIndex = 11;
-            this.txtValeurPrix.Text = "500";
-            this.txtValeurPrix.Click += new System.EventHandler(this.txtValeurPrix_Click);
+            this.txtValeurPrix.Text = "500"; // TODO enlever la valeur par défaut juste avant la remise txtValeurPrix
+            this.txtValeurPrix.Click += new System.EventHandler(this.TxtValeurPrix_Click);
             // 
             // txtNomCommanditaire
             // 
@@ -920,8 +921,8 @@
             this.txtNomCommanditaire.Name = "txtNomCommanditaire";
             this.txtNomCommanditaire.Size = new System.Drawing.Size(191, 27);
             this.txtNomCommanditaire.TabIndex = 11;
-            this.txtNomCommanditaire.Text = "Descartes";
-            this.txtNomCommanditaire.Click += new System.EventHandler(this.txtNomCommanditaire_Click);
+            this.txtNomCommanditaire.Text = "Descartes"; // TODO enlever la valeur par défaut de txtNomCommanditaire juste avant la remise
+            this.txtNomCommanditaire.Click += new System.EventHandler(this.TxtNomCommanditaire_Click);
             // 
             // txtDescription
             // 
@@ -930,8 +931,8 @@
             this.txtDescription.Name = "txtDescription";
             this.txtDescription.Size = new System.Drawing.Size(191, 27);
             this.txtDescription.TabIndex = 12;
-            this.txtDescription.Text = "Téléviseur";
-            this.txtDescription.Click += new System.EventHandler(this.txtDescription_Click);
+            this.txtDescription.Text = "Téléviseur"; // TODO enlever la valeur par défaut juste avant la remise txtDescription
+            this.txtDescription.Click += new System.EventHandler(this.TxtDescription_Click);
             // 
             // txtPrenomCommanditaire
             // 
@@ -940,8 +941,8 @@
             this.txtPrenomCommanditaire.Name = "txtPrenomCommanditaire";
             this.txtPrenomCommanditaire.Size = new System.Drawing.Size(191, 27);
             this.txtPrenomCommanditaire.TabIndex = 12;
-            this.txtPrenomCommanditaire.Text = "Jacquier";
-            this.txtPrenomCommanditaire.Click += new System.EventHandler(this.txtPrenomCommanditaire_Click);
+            this.txtPrenomCommanditaire.Text = "Jacquier"; // TODO enlever la valeur par défaut juste avant la remise txtPrenomCommanditaire
+            this.txtPrenomCommanditaire.Click += new System.EventHandler(this.TxtPrenomCommanditaire_Click);
             // 
             // txtIDPrix
             // 

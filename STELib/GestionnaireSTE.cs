@@ -5,7 +5,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 // TODO Appliquer les techniques de gestion d'erreurs et de traitement d'exceptions.
-// TODO Le préposé doit être redirigé par l’interface s’il y a une erreur de frappe ou un champ non saisi (guidage en ergonomie)
+
 
 namespace STELib
 {
@@ -29,7 +29,12 @@ namespace STELib
             this.dons = new List<Don>();
             this.prix = new List<Prix>();
 
-            //TODO initialisation des prix disponibles;
+            // initialisation des prix disponibles;
+            prix.Add(new Prix("Calendrier", 10.00, 2000, "CMDT10000", prix.Count));
+            prix.Add(new Prix("Repas pour deux", 100.00, 200, "CMDT10000", prix.Count));
+            prix.Add(new Prix("BBQ", 300, 30, "CMDT10000", prix.Count));
+            prix.Add(new Prix("Téléviseur", 1000, 20, "CMDT10000", prix.Count));
+
 
         }
         /// <summary>
@@ -145,25 +150,25 @@ namespace STELib
         ///     1. calculer les points gagnés par un donateur en fonction de son don
         ///     2. Attribuer un prix correspondant au nombre de points
         /// </summary>
-        public static string AttribuerPrix(double montant)
+        public  string AttribuerPrix(double montantDon)
         {
             int points = 0;
-            if (montant < 50) { 
+            if (montantDon < 50) { 
             }
-            else if (montant >= 50 && montant < 200)
+            else if (montantDon >= 50 && montantDon < 200)
             {
                 points = 1;
             }
-            else if (montant >= 200 && montant < 350)
+            else if (montantDon >= 200 && montantDon < 350)
             {
                 points = 2;
             }
-            else if (montant >= 350 && montant < 500)
+            else if (montantDon >= 350 && montantDon < 500)
             {
                 points = 3;
             }
             else { 
-                points = 5 + 4*((int)(montant/500)-1);
+                points = 5 + 4*((int)(montantDon/500)-1);
             }
 
             string recompense;
@@ -190,18 +195,48 @@ namespace STELib
                 recompense = String.Empty;
             }
 
+            recompense = chercherPrix(recompense);
             return recompense;
             }
 
         /// <summary>
-        /// TODO Commentaire EnregistrerDonateur()
-        /// On enregistre les donateurs dans un fichier?
+        /// On enregistre les donateurs dans un fichier pour qu’ils soient disponibles à la prochaine session
         /// </summary>
         /// <returns></returns>
         public static Boolean EnregistrerDonateur()
         {
             //TODO EnregistrerDonateur()
             return true;
+        }
+
+        /// <summary>
+        /// ChercherPrix : On fournit le plus haut prix auquel le donateur aurait droit. La méthode cherche si cette récompense est toujours disponible
+        /// dans l’inventaire. Si c’est le cas elle renvoie la mếme récompense. Sinon elle renvoie la plus haute récompense disponible d’une moindre valeur
+        /// </summary>
+        /// <param name="prixCherche"></param>
+        /// <returns></returns>
+        public string chercherPrix(string prixCherche) {
+            string[] prixPossible = { "Téléviseur", "BBQ", "Repas pour deux", "Calendrier" };
+            int indicePrix = Array.IndexOf(prixPossible, prixCherche);
+            string prixNonTrouve = "Désolé nous n’avons plus de récompenses";
+
+            //Chercher dans le tableau prix la chaine prix determiner
+            //pour chaque éléments de prix[]
+            for(int j = indicePrix; j < prixPossible.Length; j++)
+            {
+                for (int i = 0; i < prix.Count; i++)
+                {
+                    if (prixPossible[j] == prix[i].Descripition) {
+                        if (prix[i].QuantiteActuelle > 0) {
+                            prix[i].Deduire(1);
+                            return prixPossible[j];
+                            
+                        }
+                    }
+                }
+            }
+            
+            return prixNonTrouve;
         }
     }
 }

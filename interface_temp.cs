@@ -21,7 +21,7 @@ namespace Telethon
         {
             InitializeComponent();
         }
-        #region Methodes Ajouter des objets du projet,inclue validation des entrée.
+        
         /// <summary>
         /// BtnAjouterDonateur_Click effectue un ensemble de validation sur des champs correspondants aux informations de la carte de crédit, tant au niveau
         /// de leur complétude que de leur format. Si les critères nécessaires sont remplis elle crée l’objet donateur correspondant aux informations personnelles 
@@ -46,8 +46,8 @@ namespace Telethon
                     lblMessageCredit.Visible = true;
                 }
 
-              
-                signalerIncompletude(mskTxtNumeroCarte, "               ", lblNoCredit, lblMessageCredit, "Numéro de carte :");
+                #region Test de complétude et validation du numéro de la carte de crédit
+                SignalerIncompletude(mskTxtNumeroCarte, "               ", lblNoCredit, lblMessageCredit, "Numéro de carte :");
                 
                 if (!mskTxtNumeroCarte.MaskCompleted)
                 {
@@ -119,8 +119,8 @@ namespace Telethon
         {
             if (txtPrenomCommanditaire.Text == "" || txtNomCommanditaire.Text == "")
             {
-                signalerIncompletude(txtNomCommanditaire, "", lblNomCommanditaire, lblMessageCommanditaire, "Nom :");
-                signalerIncompletude(txtPrenomCommanditaire, "", lblPrenomCommanditaire, lblMessageCommanditaire, "Prénom :");
+                SignalerIncompletude(txtNomCommanditaire, "", lblNomCommanditaire, lblMessageCommanditaire, "Nom :");
+                SignalerIncompletude(txtPrenomCommanditaire, "", lblPrenomCommanditaire, lblMessageCommanditaire, "Prénom :");
                
             }
             else
@@ -139,9 +139,9 @@ namespace Telethon
             //insister pour que les champs relatifs aux prix soient complets
             if (txtDescription.Text == "" || txtValeurPrix.Text == "" || txtQuantitePrix.Text == "") {
 
-                signalerIncompletude(txtQuantitePrix, "", lblQuatitePrix, lblMessagePrix, "Quantité :");
-                signalerIncompletude(txtValeurPrix, "", lblValeur, lblMessagePrix, "Valeur unitaire :");
-                signalerIncompletude(txtDescription, "", lblDescPrix, lblMessagePrix, "Description :");
+                SignalerIncompletude(txtQuantitePrix, "", lblQuatitePrix, lblMessagePrix, "Quantité :");
+                SignalerIncompletude(txtValeurPrix, "", lblValeur, lblMessagePrix, "Valeur unitaire :");
+                SignalerIncompletude(txtDescription, "", lblDescPrix, lblMessagePrix, "Description :");
             }
             else
             {
@@ -212,9 +212,9 @@ namespace Telethon
             if (txtPrenomDonateur.Text == "" || txtNomDonateur.Text == "" || mskTxtBoxTel.Text == "(   )    -")
             {
                 // Mise en évidence des champs vides
-                signalerIncompletude(mskTxtBoxTel, "(   )    -", lblTelephone, lblMessageDonateur, "Téléphone :");
-                signalerIncompletude(txtNomDonateur, "", lblNomDonateur, lblMessageDonateur, "Nom :");
-                signalerIncompletude(txtPrenomDonateur, "", lblPrenomDonateur, lblMessageDonateur, "Prénom :");
+                SignalerIncompletude(mskTxtBoxTel, "(   )    -", lblTelephone, lblMessageDonateur, "Téléphone :");
+                SignalerIncompletude(txtNomDonateur, "", lblNomDonateur, lblMessageDonateur, "Nom :");
+                SignalerIncompletude(txtPrenomDonateur, "", lblPrenomDonateur, lblMessageDonateur, "Prénom :");
                 
             }
 
@@ -282,7 +282,7 @@ namespace Telethon
         /// <param name="e"></param>
         private void BtnCalculRecompense_Click(object sender, EventArgs e)
         {
-            txtRecompense.Text = GestionnaireSTE.AttribuerPrix(double.Parse(txtMontant.Text));
+            txtRecompense.Text = gestionnaireSTE.AttribuerPrix(double.Parse(txtMontant.Text));
         }
 
 
@@ -296,8 +296,7 @@ namespace Telethon
 
         }
 
-        // TODO consulter cet exemple d’utilisation de l’infoBulle
-        // TODO bouton désactiver/Activer Infobulle (on pourrait faire un onglet "option de l’interface"  avec ce bouton et le bouton dark mode par exemple)
+        // TODO ’infoBulle
         /// <summary>
         /// Permet d'afficher une infoBulle , lorsque le curseur survol les textbox des champs obligatoires, info donnateur.
         /// </summary>
@@ -319,7 +318,7 @@ namespace Telethon
         /// <param name="monLbl"></param> le label qui identifie monTxt sur le formulaire. On en change la couleur
         /// <param name="monMessage"></param> le label de message que nous affichons si monTxt est vide
         /// <param name="etiquette"></param> une chaine de caractère qui correspond à la valeur attendue de monMessage si le champ est n’est pas vide
-        private void signalerIncompletude(Control monTxt, string chaineVide, Control monLbl, Control monMessage, string etiquette){
+        private void SignalerIncompletude(Control monTxt, string chaineVide, Control monLbl, Control monMessage, string etiquette){
             if (monTxt.Text == chaineVide)
             {
                 monLbl.ForeColor = Color.Maroon;
@@ -335,52 +334,52 @@ namespace Telethon
             }
 
         }
-        private void TxtNoir(Control lblAchange, string chaineAchange) {
+        private void  TxtNoir(Control lblAchange, string chaineAchange) {
             lblAchange.ForeColor = Color.Black;
             lblAchange.Text = chaineAchange;
         }
 
-        private void txtPrenomDonateurNoir_Click(object sender, EventArgs e)
+        private void TxtPrenomDonateurNoir_Click(object sender, EventArgs e)
         {
             TxtNoir(lblPrenomDonateur, "Prénom :");
         }
 
-        private void txtNomDonateur_Click(object sender, EventArgs e)
+        private void TxtNomDonateur_Click(object sender, EventArgs e)
         {
             TxtNoir(lblNomDonateur, "Nom :");
         }
 
-        private void txtCourrielDonateur_Click(object sender, EventArgs e)
+        private void TxtCourrielDonateur_Click(object sender, EventArgs e)
         {
             TxtNoir(lblCourriel, "Courriel :");
         }
 
-        private void mskTxtNumeroCarte_MaskInputRejected(object sender, MaskInputRejectedEventArgs e)
+        private void MskTxtNumeroCarte_MaskInputRejected(object sender, MaskInputRejectedEventArgs e)
         {
 
         }
         #region ensemble de fonction qui remette le texte des labels des champs erronés en Noir et qui réinitialise leur valeur
-        private void txtPrenomCommanditaire_Click(object sender, EventArgs e)
+        private void TxtPrenomCommanditaire_Click(object sender, EventArgs e)
         {
             TxtNoir(lblPrenomCommanditaire, "Prénom :");
         }
 
-        private void txtNomCommanditaire_Click(object sender, EventArgs e)
+        private void TxtNomCommanditaire_Click(object sender, EventArgs e)
         {
             TxtNoir(lblNomCommanditaire, "Nom :");
         }
 
-        private void txtDescription_Click(object sender, EventArgs e)
+        private void TxtDescription_Click(object sender, EventArgs e)
         {
             TxtNoir(lblDescPrix, "Description :");
         }
 
-        private void txtValeurPrix_Click(object sender, EventArgs e)
+        private void TxtValeurPrix_Click(object sender, EventArgs e)
         {
             TxtNoir(lblValeur, "Valeur unitaire :");
         }
 
-        private void txtQuantitePrix_Click(object sender, EventArgs e)
+        private void TxtQuantitePrix_Click(object sender, EventArgs e)
         {
             TxtNoir(lblQuatitePrix, "Quantité :");
         }
