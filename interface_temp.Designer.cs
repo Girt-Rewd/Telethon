@@ -125,7 +125,6 @@
             this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.roundedButton1 = new NouvelleInterface.RoundedButton();
             this.tabEntrees.SuspendLayout();
             this.tabDonateur.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvDonateurs)).BeginInit();
@@ -155,8 +154,6 @@
             // tabDonateur
             // 
             this.tabDonateur.BackColor = System.Drawing.Color.LightSalmon;
-            this.tabDonateur.Controls.Add(this.roundedButton1);
-            this.tabDonateur.Controls.Add(this.textBoxOutput);
             this.tabDonateur.Controls.Add(this.btnEnregistre);
             this.tabDonateur.Controls.Add(this.dgvDonateurs);
             this.tabDonateur.Controls.Add(this.pnlCarteCredit);

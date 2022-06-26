@@ -400,7 +400,6 @@ namespace Telethon
                 string typeDeCarte = colonne.Cells[5].Value.ToString();
                 string numeroDeCarte = colonne.Cells[6].Value.ToString();
                 string dateDexpiration = colonne.Cells[7].Value.ToString();
-                //if(nom !=null)
                 saveListDonateurs.WriteLine(IDD+"/"+nom + "/" + prenom + "/" + telephone + "/" + courriel + "/" + typeDeCarte + "/" + numeroDeCarte+"/"+dateDexpiration);
             }
             saveListDonateurs.Close();
