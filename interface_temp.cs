@@ -76,24 +76,12 @@ namespace Telethon
                 {
                     typeCarte = 'V';
                 }
-                dateExpiration = numMois.Value.ToString() + "/" + numAnnee.Value.ToString();
-                gestionnaireSTE.AjouterDonateur(txtPrenomDonateur.Text, txtNomDonateur.Text, txtCourrielDonateur.Text, mskTxtBoxTel.Text, typeCarte, mskTxtNumeroCarte.Text, dateExpiration, gestionnaireSTE.donateurs.Count);
-                dgvDonateurs.Rows.Add(txtPrenomDonateur.Text, txtNomDonateur.Text, txtCourrielDonateur.Text, mskTxtBoxTel.Text, typeCarte, mskTxtNumeroCarte.Text, dateExpiration);
+        
 
-                StreamWriter saveListDonateurs = new StreamWriter("listeDonateurs.txt", false);
-              
-                foreach (DataGridViewRow colonne in dgvDonateurs.Rows)
-                {
-           
-                    string nom = colonne.Cells[1].Value.ToString();
-                    string prenom = colonne.Cells[2].Value.ToString();
-                    string telephone = colonne.Cells[4].Value.ToString();
-                    string courriel = colonne.Cells[3].Value.ToString();               
-                     string typeDeCarte = colonne.Cells[5].Value.ToString();
-                     string numeroDeCarte = colonne.Cells[6].Value.ToString();
-                
-                    saveListDonateurs.WriteLine(nom+"/"+prenom+"/"+"courriel"+telephone+"/"+typeDeCarte+"/"+numeroDeCarte);
-                }
+                gestionnaireSTE.AjouterDonateur(txtNomDonateur.Text, txtPrenomDonateur.Text, txtCourrielDonateur.Text, mskTxtBoxTel.Text, typeCarte, mskTxtNumeroCarte.Text, dateExpiration, gestionnaireSTE.donateurs.Count);
+
+                dgvDonateurs.Rows.Add(txtNomDonateur.Text, txtPrenomDonateur.Text, txtCourrielDonateur.Text, mskTxtBoxTel.Text, typeCarte, mskTxtNumeroCarte.Text, numMois.Text+"/"+numAnnee.Text);
+
                 //Passage au prochain sous menu
                 pnlDon.Visible = true;
                 pnlPrix.Visible = true;
@@ -397,5 +385,26 @@ namespace Telethon
             TxtNoir(lblQuatitePrix, "Quantité :");
         }
         #endregion
+
+        private void btnEnregistre_Click(object sender, EventArgs e)
+        {
+
+            StreamWriter saveListDonateurs = new StreamWriter("ListeDonateurs.txt", false);
+
+            foreach (DataGridViewRow colonne in dgvDonateurs.Rows)
+            {
+                string IDD = colonne.Cells[0].Value.ToString();
+                string nom = colonne.Cells[1].Value.ToString();
+                string prenom = colonne.Cells[2].Value.ToString();
+                string telephone = colonne.Cells[4].Value.ToString();
+                string courriel = colonne.Cells[3].Value.ToString();
+                string typeDeCarte = colonne.Cells[5].Value.ToString();
+                string numeroDeCarte = colonne.Cells[6].Value.ToString();
+                string dateDexpiration = colonne.Cells[7].Value.ToString();
+                //if(nom !=null)
+                saveListDonateurs.WriteLine(IDD+"/"+nom + "/" + prenom + "/" + telephone + "/" + courriel + "/" + typeDeCarte + "/" + numeroDeCarte+"/"+dateDexpiration);
+            }
+            saveListDonateurs.Close();
+        }
     }
 }

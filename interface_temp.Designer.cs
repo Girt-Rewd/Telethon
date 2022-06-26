@@ -32,6 +32,7 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Interface_temp));
             this.tabEntrees = new System.Windows.Forms.TabControl();
             this.tabDonateur = new System.Windows.Forms.TabPage();
+            this.btnEnregistre = new System.Windows.Forms.Button();
             this.dgvDonateurs = new System.Windows.Forms.DataGridView();
             this.Column5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column6 = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -153,6 +154,7 @@
             // tabDonateur
             // 
             this.tabDonateur.BackColor = System.Drawing.Color.LightSalmon;
+            this.tabDonateur.Controls.Add(this.btnEnregistre);
             this.tabDonateur.Controls.Add(this.dgvDonateurs);
             this.tabDonateur.Controls.Add(this.pnlCarteCredit);
             this.tabDonateur.Controls.Add(this.pnlPrix);
@@ -169,8 +171,19 @@
             this.tabDonateur.TabIndex = 0;
             this.tabDonateur.Text = "Donateur";
             // 
+            // btnEnregistre
+            // 
+            this.btnEnregistre.Location = new System.Drawing.Point(474, 497);
+            this.btnEnregistre.Name = "btnEnregistre";
+            this.btnEnregistre.Size = new System.Drawing.Size(94, 29);
+            this.btnEnregistre.TabIndex = 23;
+            this.btnEnregistre.Text = "Enregister";
+            this.btnEnregistre.UseVisualStyleBackColor = true;
+            this.btnEnregistre.Click += new System.EventHandler(this.btnEnregistre_Click);
+            // 
             // dgvDonateurs
             // 
+            this.dgvDonateurs.AllowUserToAddRows = false;
             this.dgvDonateurs.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvDonateurs.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.Column5,
@@ -1278,5 +1291,6 @@
         private DataGridViewTextBoxColumn Column2;
         private DataGridViewTextBoxColumn Column3;
         private DataGridViewTextBoxColumn Column4;
+        private Button btnEnregistre;
     }
 }
