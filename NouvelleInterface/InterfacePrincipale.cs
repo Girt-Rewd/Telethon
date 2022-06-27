@@ -27,7 +27,7 @@ namespace NouvelleInterface
         public InterfacePrincipale()
         {
             InitializeComponent();
-      
+
         }
 
         /// <summary>
@@ -160,17 +160,19 @@ namespace NouvelleInterface
             {
                 try
                 {
-                    gestionnaireSTE.AjouterPrix(txtDescription.Text, double.Parse(txtValeurPrix.Text), int.Parse(txtQuantitePrix.Text), "CMDT098", gestionnaireSTE.prix.Count);
+                    gestionnaireSTE.AjouterPrix(txtDescription.Text, double.Parse(txtValeurPrix.Text), int.Parse(txtQuantitePrix.Text), "CMDT098", dgvCommanditaires.RowCount + 1);
                     lblPrenomDonateur.ForeColor = Color.Maroon;
                     if (lblMessageDonateur.Text == "Prénom :") lblPrenomDonateur.Text += "*";
 
-                }
+                }              
 
                 catch (FormatException)
                 {
                     MessageBox.Show("Veuillez utiliser une virgule pour les décimales", "Attention", MessageBoxButtons.OK, MessageBoxIcon.Error);
                     txtValeurPrix.Focus();
                 }
+               // dgvCommanditaires.Rows.Add(Commanditaire.ToString(), int.Parse(txtValeurPrix.Text)*int.Parse(txtQuantitePrix.Text)+"$");
+                MessageBox.Show("Commandite créer.");
 
             }
 
@@ -185,7 +187,20 @@ namespace NouvelleInterface
         /// <param name="e"></param>
         private void BtnAfficherDonateur_Click(object sender, EventArgs e)
         {
-            //   textBoxOutput.Text = gestionnaireSTE.AfficherDonateurs();
+            if (dgvDonateurs.Visible == false)
+            {
+                StreamReader readList = new StreamReader("listeDonateurs.txt");
+                string ligne = string.Empty;
+                while ((ligne = readList.ReadLine()) != null)
+                {
+                    string[] tabLigne = ligne.Split('/');
+
+                    dgvDonateurs.Rows.Add(tabLigne);
+
+                }
+                readList.Close();
+                dgvDonateurs.Visible = true;
+            }
         }
 
         /// <summary>
@@ -208,7 +223,7 @@ namespace NouvelleInterface
             //   textBoxOutput.Text = gestionnaireSTE.AfficherCommanditaires();
         }
 
-        #endregion//TODO 
+        #endregion 
 
         /// <summary>
         /// BtnSuivantDonateur_Click effectue un ensemble de validation sur la complétude et le format des informations personnelles du donateurs. Si les critères sont bien
@@ -307,16 +322,7 @@ namespace NouvelleInterface
         /// <param name="e"></param>
         private void Interface_temp_Load(object sender, EventArgs e)
         {
-            StreamReader readList = new StreamReader("listeDonateurs.txt");
-            string ligne = string.Empty;
-            while ((ligne = readList.ReadLine()) != null)
-            {
-                string[] tabLigne = ligne.Split('/');
-
-                dgvDonateurs.Rows.Add(tabLigne);
-
-            }
-            readList.Close();
+      
         }
 
         // TODO ’infoBulle
@@ -473,10 +479,12 @@ namespace NouvelleInterface
                     typeDeCarte != "" ||
                     numeroDeCarte != "" ||
                     dateDexpiration != "")
-
+                   
                     saveListDonateurs.WriteLine(IDD + "/" + nom + "/" + prenom + "/" + telephone + "/" + courriel + "/" + typeDeCarte + "/" + numeroDeCarte + "/" + dateDexpiration);
             }
+            saveListDonateurs.Close();
         }
+
     }
 
 }
