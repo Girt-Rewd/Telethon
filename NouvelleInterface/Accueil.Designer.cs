@@ -137,7 +137,7 @@
             this.txtAccueilDons.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.txtAccueilDons.Size = new System.Drawing.Size(243, 48);
             this.txtAccueilDons.TabIndex = 3;
-            this.txtAccueilDons.Text = "Dons recus :";
+            this.txtAccueilDons.Text = "Dons reçus :";
             this.txtAccueilDons.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.txtAccueilDons.UseMnemonic = false;
             // 
@@ -153,7 +153,6 @@
             this.txtMontant.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.txtMontant.Size = new System.Drawing.Size(285, 73);
             this.txtMontant.TabIndex = 4;
-            this.txtMontant.Text = "5 000 500";
             // 
             // contourMontant
             // 
