@@ -27,17 +27,7 @@ namespace NouvelleInterface
         public InterfacePrincipale()
         {
             InitializeComponent();
-
-            StreamReader readList = new StreamReader("listeDonateurs.txt");
-            string ligne = string.Empty;
-            while ((ligne = readList.ReadLine()) != null)
-            {
-                string[] tabLigne = ligne.Split('/');
-
-                dgvDonateurs.Rows.Add(tabLigne);
-
-            }
-            readList.Close();
+      
         }
 
         /// <summary>
@@ -317,7 +307,16 @@ namespace NouvelleInterface
         /// <param name="e"></param>
         private void Interface_temp_Load(object sender, EventArgs e)
         {
+            StreamReader readList = new StreamReader("listeDonateurs.txt");
+            string ligne = string.Empty;
+            while ((ligne = readList.ReadLine()) != null)
+            {
+                string[] tabLigne = ligne.Split('/');
 
+                dgvDonateurs.Rows.Add(tabLigne);
+
+            }
+            readList.Close();
         }
 
         // TODO ’infoBulle
