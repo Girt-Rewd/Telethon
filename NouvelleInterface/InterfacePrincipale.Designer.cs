@@ -128,13 +128,13 @@
             // tabDonateur
             // 
             this.tabDonateur.Controls.Add(this.textBoxOutput);
-            this.tabDonateur.Controls.Add(this.pnlPrix);
-            this.tabDonateur.Controls.Add(this.pnlDon);
             this.tabDonateur.Controls.Add(this.pnlInfoDonateur);
             this.tabDonateur.Controls.Add(this.btnAfficherDonateur);
             this.tabDonateur.Controls.Add(this.btnQuitter);
             this.tabDonateur.Controls.Add(this.btnAfficheDon);
             this.tabDonateur.Controls.Add(this.pnlCarteCredit);
+            this.tabDonateur.Controls.Add(this.pnlPrix);
+            this.tabDonateur.Controls.Add(this.pnlDon);
             this.tabDonateur.Location = new System.Drawing.Point(4, 24);
             this.tabDonateur.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.tabDonateur.Name = "tabDonateur";
