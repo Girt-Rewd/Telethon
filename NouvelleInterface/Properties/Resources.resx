@@ -124,15 +124,56 @@
   <data name="Arbre2" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Arbre2.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="panneAccueil" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\panneAccueil.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Ecolothon" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Ecolothon.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Arbre1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Arbre1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="Arbre3" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Arbre3.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="pannelAccueil" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\pannelAccueil.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="btnInscription" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\btnInscription.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Arbre6" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Arbre6.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="Arbre4" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Arbre4.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="icoCadenas" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\icoCadenas.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="panelLogin" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\panelLogin.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Logo150ppi" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Logo150ppi.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="Arbre5" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Arbre5.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="Background150pp" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Background150pp.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Logo2_150ppi" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Logo2_150ppi.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="pannelAccueil1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\pannelAccueil1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="icoUser" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\icoUser.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Fichier 17150ppi" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Fichier 17150ppi.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   <data name="Arbre6" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Arbre6.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
