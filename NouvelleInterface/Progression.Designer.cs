@@ -141,6 +141,7 @@
             this.panel1.Controls.Add(this.pictureBox3);
             this.panel1.Controls.Add(this.pictureBox5);
             this.panel1.Controls.Add(this.pictureBox4);
+            this.panel1.Controls.Add(this.pictureBox5);
             this.panel1.Controls.Add(this.pictureBox6);
             this.panel1.Location = new System.Drawing.Point(389, 12);
             this.panel1.Name = "panel1";
