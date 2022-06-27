@@ -165,7 +165,7 @@
         private System.Windows.Forms.TextBox txtMotDePasse;
         private System.Windows.Forms.Button btnOk;
         private System.Windows.Forms.Button btnAnnuler;
-        private EventHandler btnOk_Click;
+      //  private EventHandler btnOk_Click;
         private Panel panelLogin;
         private PictureBox LogoEcoLogin;
         private PictureBox icoCadenas;
