@@ -12,6 +12,9 @@ namespace NouvelleInterface
 {
     public partial class NouveauLogin : Form
     {
+        string nomUtilisateur = "Telethon2022";
+        string motDePasse = "Don@2022";
+        
         public NouveauLogin()
         {
             InitializeComponent();
@@ -24,7 +27,15 @@ namespace NouvelleInterface
 
         private void btnOk_Click(object sender, EventArgs e)
         {
-
+            if (nomUtilisateur.Equals(txtNom.Text) && motDePasse.Equals(txtMotDePasse.Text))
+            {
+                Accueil monAccueil = new();
+                monAccueil.Show();
+            }
+            else
+            {
+                MessageBox.Show("Identifiant ou mot de passe invalide", "Attention", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
         }
     }
 }//
