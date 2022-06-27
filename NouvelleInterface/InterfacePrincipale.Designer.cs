@@ -128,13 +128,13 @@
             // tabDonateur
             // 
             this.tabDonateur.Controls.Add(this.textBoxOutput);
-            this.tabDonateur.Controls.Add(this.pnlCarteCredit);
-            this.tabDonateur.Controls.Add(this.pnlPrix);
-            this.tabDonateur.Controls.Add(this.pnlDon);
             this.tabDonateur.Controls.Add(this.pnlInfoDonateur);
             this.tabDonateur.Controls.Add(this.btnAfficherDonateur);
             this.tabDonateur.Controls.Add(this.btnQuitter);
             this.tabDonateur.Controls.Add(this.btnAfficheDon);
+            this.tabDonateur.Controls.Add(this.pnlCarteCredit);
+            this.tabDonateur.Controls.Add(this.pnlPrix);
+            this.tabDonateur.Controls.Add(this.pnlDon);
             this.tabDonateur.Location = new System.Drawing.Point(4, 24);
             this.tabDonateur.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.tabDonateur.Name = "tabDonateur";
@@ -165,9 +165,9 @@
             this.pnlCarteCredit.Controls.Add(this.lblNoCredit);
             this.pnlCarteCredit.Controls.Add(this.lblCarteCredit);
             this.pnlCarteCredit.Controls.Add(this.lblDateExp);
-            this.pnlCarteCredit.Location = new System.Drawing.Point(653, 390);
+            this.pnlCarteCredit.Location = new System.Drawing.Point(34, 12);
             this.pnlCarteCredit.Name = "pnlCarteCredit";
-            this.pnlCarteCredit.Size = new System.Drawing.Size(430, 313);
+            this.pnlCarteCredit.Size = new System.Drawing.Size(508, 267);
             this.pnlCarteCredit.TabIndex = 13;
             this.pnlCarteCredit.Visible = false;
             // 
@@ -326,7 +326,7 @@
             this.pnlPrix.Controls.Add(this.txtRecompense);
             this.pnlPrix.Controls.Add(this.btnCalculRecompense);
             this.pnlPrix.Controls.Add(this.lblRecompense);
-            this.pnlPrix.Location = new System.Drawing.Point(594, 12);
+            this.pnlPrix.Location = new System.Drawing.Point(293, 12);
             this.pnlPrix.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.pnlPrix.Name = "pnlPrix";
             this.pnlPrix.Size = new System.Drawing.Size(248, 153);
@@ -381,7 +381,7 @@
             this.pnlDon.Controls.Add(this.txtMontant);
             this.pnlDon.Controls.Add(this.btnAjouterDon);
             this.pnlDon.Controls.Add(this.lblInfoDon);
-            this.pnlDon.Location = new System.Drawing.Point(34, 285);
+            this.pnlDon.Location = new System.Drawing.Point(34, 12);
             this.pnlDon.Name = "pnlDon";
             this.pnlDon.Size = new System.Drawing.Size(248, 153);
             this.pnlDon.TabIndex = 12;
@@ -464,7 +464,7 @@
             this.pnlInfoDonateur.Controls.Add(this.lblTelephone);
             this.pnlInfoDonateur.Location = new System.Drawing.Point(34, 12);
             this.pnlInfoDonateur.Name = "pnlInfoDonateur";
-            this.pnlInfoDonateur.Size = new System.Drawing.Size(508, 241);
+            this.pnlInfoDonateur.Size = new System.Drawing.Size(508, 267);
             this.pnlInfoDonateur.TabIndex = 3;
             // 
             // mskTxtBoxTel
@@ -926,8 +926,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackgroundImage = global::NouvelleInterface.Properties.Resources.Background150pp;
-            this.ClientSize = new System.Drawing.Size(1177, 686);
+            this.ClientSize = new System.Drawing.Size(1177, 768);
             this.Controls.Add(this.tabEntrees);
             this.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.Name = "InterfacePrincipale";
