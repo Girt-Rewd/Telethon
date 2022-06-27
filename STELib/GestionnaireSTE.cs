@@ -238,5 +238,11 @@ namespace STELib
             
             return prixNonTrouve;
         }
+        public int SommeDons() {
+            int total = 0;
+
+
+            return total;
+        }
     }
 }

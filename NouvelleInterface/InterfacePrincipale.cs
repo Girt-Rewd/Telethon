@@ -14,6 +14,7 @@ namespace NouvelleInterface
 {
     public partial class InterfacePrincipale : Form
     {
+        public static string TotalDon = "0";
 
         /// <summary>
         /// Bloc de déclaration des variables globales
