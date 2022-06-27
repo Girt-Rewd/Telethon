@@ -10,14 +10,24 @@ using System.Windows.Forms;
 
 namespace NouvelleInterface
 {
-    public partial class NouveauLogin : Form
+    public partial class Accueil : Form
     {
-        public NouveauLogin()
+        public Accueil()
         {
             InitializeComponent();
         }
 
-        private void NouveauLogin_Load(object sender, EventArgs e)
+        private void Accueil_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnInscription_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label1_Click(object sender, EventArgs e)
         {
 
         }
