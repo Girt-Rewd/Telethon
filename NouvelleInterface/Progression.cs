@@ -17,7 +17,7 @@ namespace NouvelleInterface
             InitializeComponent();
         }
 
-        private void button1_Click(object sender, EventArgs e)
+        private void Button1_Click(object sender, EventArgs e)
         {
             Point position;
             int wide;
@@ -135,30 +135,6 @@ namespace NouvelleInterface
 
             }
 
-        }
-
-        }
-
-        private void pictureBox1_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void Progression_Load(object sender, EventArgs e)
-        {
-            int wide;
-            int tall;
-            Point position;
-
-            wide = 36 + 36 / 20 * (int)(numericUpDown1.Value + 1);
-            tall = 58 + 58 / 20 * ((int)(numericUpDown1.Value + 1));
-            pictureBox1.Width = wide;
-            pictureBox1.Height = tall;
-
-            position = pictureBox1.Location;
-            position.Y = 391 - tall;
-            position.X = (324 - wide) / 2;
-            pictureBox1.Location = position;
         }
 
         private void Progression_Load(object sender, EventArgs e)

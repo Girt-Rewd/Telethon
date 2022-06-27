@@ -318,7 +318,7 @@ namespace Telethon
         /// <param name="monLbl"></param> le label qui identifie monTxt sur le formulaire. On en change la couleur
         /// <param name="monMessage"></param> le label de message que nous affichons si monTxt est vide
         /// <param name="etiquette"></param> une chaine de caractère qui correspond à la valeur attendue de monMessage si le champ est n’est pas vide
-        private void SignalerIncompletude(Control monTxt, string chaineVide, Control monLbl, Control monMessage, string etiquette){
+        private static void SignalerIncompletude(Control monTxt, string chaineVide, Control monLbl, Control monMessage, string etiquette){
             if (monTxt.Text == chaineVide)
             {
                 monLbl.ForeColor = Color.Maroon;
@@ -334,6 +334,7 @@ namespace Telethon
             }
 
         }
+        // TODO Commentaire
         private void  TxtNoir(Control lblAchange, string chaineAchange) {
             lblAchange.ForeColor = Color.Black;
             lblAchange.Text = chaineAchange;
@@ -388,19 +389,68 @@ namespace Telethon
         private void BtnEnregistre_Click(object sender, EventArgs e)
         {
 
-            StreamWriter saveListDonateurs = new StreamWriter("ListeDonateurs.txt", false);
+            StreamWriter saveListDonateurs = new("ListeDonateurs.txt", false);
 
             foreach (DataGridViewRow colonne in dgvDonateurs.Rows)
             {
-                string IDD = colonne.Cells[0].Value.ToString();
-                string nom = colonne.Cells[1].Value.ToString();
-                string prenom = colonne.Cells[2].Value.ToString();
-                string telephone = colonne.Cells[4].Value.ToString();
-                string courriel = colonne.Cells[3].Value.ToString();
-                string typeDeCarte = colonne.Cells[5].Value.ToString();
-                string numeroDeCarte = colonne.Cells[6].Value.ToString();
-                string dateDexpiration = colonne.Cells[7].Value.ToString();
-                saveListDonateurs.WriteLine(IDD+"/"+nom + "/" + prenom + "/" + telephone + "/" + courriel + "/" + typeDeCarte + "/" + numeroDeCarte+"/"+dateDexpiration);
+                string? IDD;
+                string? nom;
+                string? prenom;
+                string? telephone;
+                string? courriel;
+                string? typeDeCarte;
+                string? numeroDeCarte;
+                string? dateDexpiration;
+
+                if (colonne.Cells[0].Value.ToString() != null)
+                    IDD = colonne.Cells[0].Value.ToString();
+                else
+                    IDD = "";
+
+                if (colonne.Cells[1].Value.ToString() != null)
+                    nom = colonne.Cells[1].Value.ToString();
+                else
+                    nom = "";
+
+                if (colonne.Cells[2].Value.ToString() != null)
+                    prenom = colonne.Cells[2].Value.ToString();
+                else
+                    prenom = "";
+
+                if (colonne.Cells[2].Value.ToString() != null)
+                    telephone = colonne.Cells[4].Value.ToString();
+                else
+                    telephone = "";
+
+                if (colonne.Cells[2].Value.ToString() != null)
+                    courriel = colonne.Cells[3].Value.ToString();
+                else
+                    courriel = "";
+
+                if (colonne.Cells[2].Value.ToString() != null)
+                    typeDeCarte = colonne.Cells[5].Value.ToString();
+                else
+                    typeDeCarte = "";
+
+                if (colonne.Cells[2].Value.ToString() != null)
+                    numeroDeCarte = colonne.Cells[6].Value.ToString();
+                else
+                    numeroDeCarte = "";
+
+                if (colonne.Cells[2].Value.ToString() != null)
+                    dateDexpiration = colonne.Cells[7].Value.ToString();
+                else
+                    dateDexpiration = "";
+                if (IDD != "" ||
+                    nom != "" ||
+                    prenom != "" ||
+                    telephone != "" ||
+                    typeDeCarte != "" ||
+                    numeroDeCarte != "" ||
+                    dateDexpiration != "")
+                {
+                    saveListDonateurs.WriteLine(IDD + "/" + nom + "/" + prenom + "/" + telephone + "/" + courriel + "/" + typeDeCarte + "/" + numeroDeCarte + "/" + dateDexpiration);
+                }
             }
             saveListDonateurs.Close();
         }
