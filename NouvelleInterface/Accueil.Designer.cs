@@ -76,7 +76,7 @@
             this.logoEcoHor.Image = global::NouvelleInterface.Properties.Resources.Logo2_150ppi;
             this.logoEcoHor.Location = new System.Drawing.Point(52, 72);
             this.logoEcoHor.Name = "logoEcoHor";
-            this.logoEcoHor.Size = new System.Drawing.Size(377, 78);
+            this.logoEcoHor.Size = new System.Drawing.Size(368, 72);
             this.logoEcoHor.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.logoEcoHor.TabIndex = 0;
             this.logoEcoHor.TabStop = false;
