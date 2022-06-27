@@ -299,6 +299,7 @@
             this.btnInscription.TabIndex = 1;
             this.btnInscription.Text = "&INSCRIPTION\r\nDons et Commandites";
             this.btnInscription.UseVisualStyleBackColor = false;
+            this.btnInscription.Click += new System.EventHandler(this.btnInscription_Click_1);
             // 
             // Accueil
             // 
