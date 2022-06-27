@@ -12,7 +12,7 @@ namespace Telethon
         /// Bloc de déclaration des variables globales
         /// </summary>
         GestionnaireSTE gestionnaireSTE = new();
-      
+
 
         /// <summary>
         /// Constructeur
@@ -32,7 +32,7 @@ namespace Telethon
             }
             readList.Close();
         }
-        
+
         /// <summary>
         /// BtnAjouterDonateur_Click effectue un ensemble de validation sur des champs correspondants aux informations de la carte de crédit, tant au niveau
         /// de leur complétude que de leur format. Si les critères nécessaires sont remplis elle crée l’objet donateur correspondant aux informations personnelles 
@@ -59,7 +59,7 @@ namespace Telethon
 
                 #region Test de complétude et validation du numéro de la carte de crédit
                 SignalerIncompletude(mskTxtNumeroCarte, "               ", lblNoCredit, lblMessageCredit, "Numéro de carte :");
-                
+
                 if (!mskTxtNumeroCarte.MaskCompleted)
                 {
                     MessageBox.Show("Veuillez compléter le numéro de la carte", "Attention", MessageBoxButtons.OK, MessageBoxIcon.Error);
@@ -90,11 +90,11 @@ namespace Telethon
 
                 dgvDonateurs.Rows.Add("DNTR" + dgvDonateurs.RowCount + 1, txtNomDonateur.Text, txtPrenomDonateur.Text, mskTxtBoxTel.Text, txtCourrielDonateur.Text, typeCarte, mskTxtNumeroCarte.Text, numMois.Text + "/" + numAnnee.Text, txtBoxCvc.Text);
                 MessageBox.Show("Donateur créer.");
-              
+
                 gestionnaireSTE.AjouterDonateur(txtNomDonateur.Text, txtPrenomDonateur.Text, txtCourrielDonateur.Text, mskTxtBoxTel.Text, typeCarte, mskTxtNumeroCarte.Text, numMois.Text + "/" + numAnnee.Text, dgvDonateurs.RowCount + 1);
 
-            
-               
+
+
 
                 //Passage au prochain sous menu
                 pnlDon.Visible = true;
@@ -123,7 +123,7 @@ namespace Telethon
             }
         }
 
-        
+
         /// <summary>
         /// BtnAjouterComm_Click appelle la fonction qui crée une nouvelle instance de la classe Commanditaire à partir des paramètres fournis par l’utilisateur
         /// via l’interface. Elle est activée par l’événement click du bouton btnAjouterComm
@@ -136,7 +136,7 @@ namespace Telethon
             {
                 SignalerIncompletude(txtNomCommanditaire, "", lblNomCommanditaire, lblMessageCommanditaire, "Nom :");
                 SignalerIncompletude(txtPrenomCommanditaire, "", lblPrenomCommanditaire, lblMessageCommanditaire, "Prénom :");
-               
+
             }
             else
             {
@@ -152,7 +152,8 @@ namespace Telethon
         private void BtnAjouterPrix_Click(object sender, EventArgs e)
         {
             //insister pour que les champs relatifs aux prix soient complets
-            if (txtDescription.Text == "" || txtValeurPrix.Text == "" || txtQuantitePrix.Text == "") {
+            if (txtDescription.Text == "" || txtValeurPrix.Text == "" || txtQuantitePrix.Text == "")
+            {
 
                 SignalerIncompletude(txtQuantitePrix, "", lblQuatitePrix, lblMessagePrix, "Quantité :");
                 SignalerIncompletude(txtValeurPrix, "", lblValeur, lblMessagePrix, "Valeur unitaire :");
@@ -173,9 +174,9 @@ namespace Telethon
                     MessageBox.Show("Veuillez utiliser une virgule pour les décimales", "Attention", MessageBoxButtons.OK, MessageBoxIcon.Error);
                     txtValeurPrix.Focus();
                 }
-                
+
             }
-            
+
         }
         #endregion
         // TODO boutton afficher prix.
@@ -187,7 +188,7 @@ namespace Telethon
         /// <param name="e"></param>
         private void BtnAfficherDonateur_Click(object sender, EventArgs e)
         {
-         //   textBoxOutput.Text = gestionnaireSTE.AfficherDonateurs();
+            //   textBoxOutput.Text = gestionnaireSTE.AfficherDonateurs();
         }
 
         /// <summary>
@@ -207,7 +208,7 @@ namespace Telethon
         /// <param name="e"></param>
         private void BtnAfficherCommanditaire_Click(object sender, EventArgs e)
         {
-         //   textBoxOutput.Text = gestionnaireSTE.AfficherCommanditaires();
+            //   textBoxOutput.Text = gestionnaireSTE.AfficherCommanditaires();
         }
 
         #endregion//TODO 
@@ -230,7 +231,7 @@ namespace Telethon
                 SignalerIncompletude(mskTxtBoxTel, "(   )    -", lblTelephone, lblMessageDonateur, "Téléphone :");
                 SignalerIncompletude(txtNomDonateur, "", lblNomDonateur, lblMessageDonateur, "Nom :");
                 SignalerIncompletude(txtPrenomDonateur, "", lblPrenomDonateur, lblMessageDonateur, "Prénom :");
-                
+
             }
 
             else if (!telephoneRegex.IsMatch(mskTxtBoxTel.Text))
@@ -252,7 +253,7 @@ namespace Telethon
             {
                 pnlInfoDonateur.Visible = false;
                 pnlCarteCredit.Visible = true;
-                lblID.Text = "ID Temp : DNTR" + (dgvDonateurs.RowCount + 1)+"\n\rNom :"+txtPrenomDonateur.Text;
+                lblID.Text = "ID Temp : DNTR" + (dgvDonateurs.RowCount + 1) + "\n\rNom :" + txtPrenomDonateur.Text;
             }
         }
 
@@ -323,7 +324,7 @@ namespace Telethon
             infoBulle.SetToolTip(txtPrenomDonateur, "Prénom obligatoire");
             infoBulle.SetToolTip(txtNomDonateur, "Nom obligatoire");
             infoBulle.SetToolTip(mskTxtBoxTel, "Téléphone obligatoire");
-            
+
         }
 
         /// <summary>
@@ -334,7 +335,8 @@ namespace Telethon
         /// <param name="monLbl"></param> le label qui identifie monTxt sur le formulaire. On en change la couleur
         /// <param name="monMessage"></param> le label de message que nous affichons si monTxt est vide
         /// <param name="etiquette"></param> une chaine de caractère qui correspond à la valeur attendue de monMessage si le champ est n’est pas vide
-        private static void SignalerIncompletude(Control monTxt, string chaineVide, Control monLbl, Control monMessage, string etiquette){
+        private static void SignalerIncompletude(Control monTxt, string chaineVide, Control monLbl, Control monMessage, string etiquette)
+        {
             if (monTxt.Text == chaineVide)
             {
                 monLbl.ForeColor = Color.Maroon;
@@ -351,7 +353,8 @@ namespace Telethon
 
         }
         // TODO Commentaire
-        private void  TxtNoir(Control lblAchange, string chaineAchange) {
+        private void TxtNoir(Control lblAchange, string chaineAchange)
+        {
             lblAchange.ForeColor = Color.Black;
             lblAchange.Text = chaineAchange;
         }
@@ -464,23 +467,11 @@ namespace Telethon
                     typeDeCarte != "" ||
                     numeroDeCarte != "" ||
                     dateDexpiration != "")
-                {
-                    saveListDonateurs.WriteLine(IDD + "/" + nom + "/" + prenom + "/" + telephone + "/" + courriel + "/" + typeDeCarte + "/" + numeroDeCarte + "/" + dateDexpiration);
-                }
-                string IDD = colonne.Cells[0].Value.ToString();
-                string nom = colonne.Cells[1].Value.ToString();
-                string prenom = colonne.Cells[2].Value.ToString();
-                string telephone = colonne.Cells[4].Value.ToString();
-                string courriel = colonne.Cells[3].Value.ToString();
-                string typeDeCarte = colonne.Cells[5].Value.ToString();
-                string numeroDeCarte = colonne.Cells[6].Value.ToString();
-                string dateDexpiration = colonne.Cells[7].Value.ToString();
-                string cvc = colonne.Cells[8].Value.ToString();
-                saveListDonateurs.WriteLine(IDD+"/"+nom + "/" + prenom + "/" + telephone + "/" + courriel + "/" + typeDeCarte + "/" + numeroDeCarte+"/"+dateDexpiration+"/"+cvc);
-            }
-            saveListDonateurs.Close();
-        }
 
+                    saveListDonateurs.WriteLine(IDD + "/" + nom + "/" + prenom + "/" + telephone + "/" + courriel + "/" + typeDeCarte + "/" + numeroDeCarte + "/" + dateDexpiration);
+            }
+        }
     }
-    }
+}
+   
 
