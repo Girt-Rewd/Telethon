@@ -23,6 +23,11 @@ namespace STELib
         private double montantDon;
         private string idDonateur;
 
+        public double MontantDon { 
+            get { return montantDon; }
+            set { montantDon = value; }
+        }
+
         // Constructeur à arguments
         public Don(string dateDon, string idDonateur, double montantDon, int nbDon)
         {

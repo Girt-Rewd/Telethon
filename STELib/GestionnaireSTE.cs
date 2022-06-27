@@ -240,8 +240,12 @@ namespace STELib
         }
         public int SommeDons() {
             int total = 0;
-
-
+            
+            for (int i = 0; i < dons.Count; i++)
+                {
+                total += dons[i].getMontantDon();
+            }
+                        
             return total;
         }
     }
