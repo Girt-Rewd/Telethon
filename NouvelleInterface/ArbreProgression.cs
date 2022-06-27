@@ -10,11 +10,11 @@ using System.Windows.Forms;
 
 namespace NouvelleInterface
 {
-    public partial class NouveauLogin : Form
+    public partial class ArbreProgression : UserControl
     {
-        public NouveauLogin()
+        public ArbreProgression()
         {
             InitializeComponent();
         }
     }
-}//
+}
