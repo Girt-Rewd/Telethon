@@ -39,6 +39,10 @@ namespace STELib
              
             return "identifiant du donateur : " + idDonateur + " " + base.ToString(); 
         }
+        public string getId()
+        {
+            return idDonateur;
+        }
     
         
     }
