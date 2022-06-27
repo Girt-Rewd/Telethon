@@ -238,12 +238,12 @@ namespace STELib
             
             return prixNonTrouve;
         }
-        public int SommeDons() {
-            int total = 0;
+        public double SommeDons() {
+            double total = 0;
             
             for (int i = 0; i < dons.Count; i++)
                 {
-                total += dons[i].getMontantDon();
+                total += dons[i].MontantDon;
             }
                         
             return total;
