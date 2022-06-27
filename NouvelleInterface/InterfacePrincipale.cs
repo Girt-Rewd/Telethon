@@ -119,6 +119,10 @@ namespace NouvelleInterface
         /// <param name="e"></param>
         private void BtnAjouterDon_Click(object sender, EventArgs e)
         {
+            if (txtMontant.Text != null) {
+                Accueil parent = (Accueil)this.Owner;
+                parent.GetTotalDon(txtMontant.Text);
+            }
             string dateExpiration = numMois.Value.ToString("00") + "/" + numAnnee.Value.ToString();
             try
             {

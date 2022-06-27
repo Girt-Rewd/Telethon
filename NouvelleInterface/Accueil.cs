@@ -163,5 +163,9 @@ namespace NouvelleInterface
             InterfacePrincipale monPrincipal = new();
             monPrincipal.Show();
         }
+
+        public void GetTotalDon(string reponse) { 
+            txtMontant.Text = reponse;  
+        }
     }
 }
