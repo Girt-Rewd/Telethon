@@ -89,7 +89,7 @@ namespace NouvelleInterface
 
  
                 gestionnaireSTE.AjouterDonateur(txtNomDonateur.Text, txtPrenomDonateur.Text, txtCourrielDonateur.Text, mskTxtBoxTel.Text, typeCarte, mskTxtNumeroCarte.Text, numMois.Text + "/" + numAnnee.Text, dgvDonateurs.RowCount + 1, txtBoxCvc.Text);
-                MessageBox.Show(gestionnaireSTE.donateurs.Last().ToString());
+                MessageBox.Show("VALIDER INFO DU DONATEUR \n\r\r" + gestionnaireSTE.donateurs.Last().ToString());
 
 
 
@@ -294,6 +294,7 @@ namespace NouvelleInterface
         /// <param name="e"></param>
         private void BtnQuitter_Click(object sender, EventArgs e)
         {
+            StreamWriter saveListdonateur = new("ListeDDonateur.txt", false);//autre methode,stand-by
             StreamWriter saveListDon = new("ListeDon.txt", false);
             StreamWriter saveListDonateurs = new("ListeDonateurs.txt", false);
 
@@ -357,13 +358,20 @@ namespace NouvelleInterface
 
                     saveListDonateurs.WriteLine(IDD + "/" + nom + "/" + prenom + "/" + telephone + "/" + courriel + "/" + typeDeCarte + "/" + numeroDeCarte + "/" + dateDexpiration);
             }
+            foreach (Donateur listDonateur in gestionnaireSTE.donateurs)//autre methode,stand-by
+            {
+                string donateur = listDonateur.ToString();
+                saveListdonateur.WriteLine(donateur);
+            }
+           
+
             double total=0;
             foreach (Don listDons in gestionnaireSTE.dons)
             {              
                 total += listDons.getMontantDon();
             }
             saveListDon.WriteLine(total.ToString());
-
+            saveListdonateur.Close();//autre methode,stand-by
             saveListDon.Close();
             saveListDonateurs.Close();
             this.Close();
@@ -514,7 +522,7 @@ namespace NouvelleInterface
             txtCourrielDonateur.Text= string.Empty;
             mskTxtBoxTel.Text= string.Empty;
             mskTxtNumeroCarte.Text= string.Empty;
-             pnlCarteCredit.Visible = false;
+            pnlCarteCredit.Visible = false;
             pnlDon.Visible = false;
             pnlInfoDonateur.Visible = true;
             pnlPrix.Visible = false; 
