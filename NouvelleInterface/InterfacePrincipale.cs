@@ -177,8 +177,8 @@ namespace NouvelleInterface
                     MessageBox.Show("Veuillez utiliser une virgule pour les décimales", "Attention", MessageBoxButtons.OK, MessageBoxIcon.Error);
                     txtValeurPrix.Focus();
                 }
-              //  dgvCommanditaires.Rows.Add("CMDT"+gestionnaireSTE.commanditaires.Count,txtPrenomCommanditaire.Text, txtNomCommanditaire.Text, int.Parse(txtValeurPrix.Text)*int.Parse(txtQuantitePrix.Text)+"$");
-              //  MessageBox.Show("Commandite créer.");
+                
+                  MessageBox.Show("CMDT"+gestionnaireSTE.commanditaires.Last()+"Valeur de commandite "+ int.Parse(txtValeurPrix.Text)*int.Parse(txtQuantitePrix.Text)+"$");
 
             }
 
@@ -226,20 +226,7 @@ namespace NouvelleInterface
         /// <param name="e"></param>
         private void BtnAfficherCommanditaire_Click(object sender, EventArgs e)
         {
-            if (dgvCommanditaires.Visible == false)
-            {
-                StreamReader readList = new StreamReader("listecommanditaires.txt");
-                string ligne = string.Empty;
-                while ((ligne = readList.ReadLine()) != null)
-                {
-                    string[] tabLigne = ligne.Split('/');
-
-                    dgvCommanditaires.Rows.Add(tabLigne);
-
-                }
-                readList.Close();
-                dgvDonateurs.Visible = true;
-            }
+            txtBoxCommanditaires.Text= gestionnaireSTE.AfficherCommanditaires();
         }
 
         #endregion 

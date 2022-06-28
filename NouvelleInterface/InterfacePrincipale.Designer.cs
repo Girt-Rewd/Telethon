@@ -84,6 +84,8 @@
             this.btnQuitter = new System.Windows.Forms.Button();
             this.btnAfficheDon = new System.Windows.Forms.Button();
             this.tabCommanditaire = new System.Windows.Forms.TabPage();
+            this.txtBoxCommanditaires = new System.Windows.Forms.RichTextBox();
+            this.richTextBox2 = new System.Windows.Forms.RichTextBox();
             this.cbbPrix = new System.Windows.Forms.ComboBox();
             this.lblMessagePrix = new System.Windows.Forms.Label();
             this.lblMessageCommanditaire = new System.Windows.Forms.Label();
@@ -118,8 +120,6 @@
             this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.richTextBox2 = new System.Windows.Forms.RichTextBox();
-            this.richTextBox3 = new System.Windows.Forms.RichTextBox();
             this.tabEntrees.SuspendLayout();
             this.tabDonateur.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvDonateurs)).BeginInit();
@@ -142,7 +142,7 @@
             this.tabEntrees.Margin = new System.Windows.Forms.Padding(5, 4, 5, 4);
             this.tabEntrees.Name = "tabEntrees";
             this.tabEntrees.SelectedIndex = 0;
-            this.tabEntrees.Size = new System.Drawing.Size(985, 802);
+            this.tabEntrees.Size = new System.Drawing.Size(1422, 935);
             this.tabEntrees.TabIndex = 0;
             // 
             // tabDonateur
@@ -159,7 +159,7 @@
             this.tabDonateur.Margin = new System.Windows.Forms.Padding(5);
             this.tabDonateur.Name = "tabDonateur";
             this.tabDonateur.Padding = new System.Windows.Forms.Padding(5);
-            this.tabDonateur.Size = new System.Drawing.Size(1407, 896);
+            this.tabDonateur.Size = new System.Drawing.Size(1414, 902);
             this.tabDonateur.TabIndex = 0;
             this.tabDonateur.Text = "Donateur";
             // 
@@ -331,12 +331,13 @@
             // 
             this.lblID.AutoSize = true;
             this.lblID.BackColor = System.Drawing.Color.Transparent;
-            this.lblID.Location = new System.Drawing.Point(50, 221);
+            this.lblID.Location = new System.Drawing.Point(173, 9);
             this.lblID.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
             this.lblID.Name = "lblID";
             this.lblID.Size = new System.Drawing.Size(31, 20);
             this.lblID.TabIndex = 7;
             this.lblID.Text = "ID :";
+            this.lblID.Visible = false;
             // 
             // numMois
             // 
@@ -770,7 +771,7 @@
             // tabCommanditaire
             // 
             this.tabCommanditaire.BackColor = System.Drawing.Color.PaleGreen;
-            this.tabCommanditaire.Controls.Add(this.richTextBox3);
+            this.tabCommanditaire.Controls.Add(this.txtBoxCommanditaires);
             this.tabCommanditaire.Controls.Add(this.richTextBox2);
             this.tabCommanditaire.Controls.Add(this.cbbPrix);
             this.tabCommanditaire.Controls.Add(this.lblMessagePrix);
@@ -796,9 +797,25 @@
             this.tabCommanditaire.Margin = new System.Windows.Forms.Padding(5);
             this.tabCommanditaire.Name = "tabCommanditaire";
             this.tabCommanditaire.Padding = new System.Windows.Forms.Padding(5, 4, 5, 4);
-            this.tabCommanditaire.Size = new System.Drawing.Size(977, 769);
+            this.tabCommanditaire.Size = new System.Drawing.Size(1414, 902);
             this.tabCommanditaire.TabIndex = 1;
             this.tabCommanditaire.Text = "Commanditaires";
+            // 
+            // txtBoxCommanditaires
+            // 
+            this.txtBoxCommanditaires.Location = new System.Drawing.Point(421, 80);
+            this.txtBoxCommanditaires.Name = "txtBoxCommanditaires";
+            this.txtBoxCommanditaires.Size = new System.Drawing.Size(494, 159);
+            this.txtBoxCommanditaires.TabIndex = 22;
+            this.txtBoxCommanditaires.Text = "";
+            // 
+            // richTextBox2
+            // 
+            this.richTextBox2.Location = new System.Drawing.Point(421, 414);
+            this.richTextBox2.Name = "richTextBox2";
+            this.richTextBox2.Size = new System.Drawing.Size(494, 145);
+            this.richTextBox2.TabIndex = 21;
+            this.richTextBox2.Text = "";
             // 
             // cbbPrix
             // 
@@ -1029,7 +1046,7 @@
             this.tabAPropos.Margin = new System.Windows.Forms.Padding(4, 2, 4, 2);
             this.tabAPropos.Name = "tabAPropos";
             this.tabAPropos.Padding = new System.Windows.Forms.Padding(4, 2, 4, 2);
-            this.tabAPropos.Size = new System.Drawing.Size(1407, 896);
+            this.tabAPropos.Size = new System.Drawing.Size(1414, 902);
             this.tabAPropos.TabIndex = 2;
             this.tabAPropos.Text = "À propros";
             this.tabAPropos.UseVisualStyleBackColor = true;
@@ -1134,22 +1151,6 @@
             this.Column4.MinimumWidth = 6;
             this.Column4.Name = "Column4";
             this.Column4.Width = 125;
-            // 
-            // richTextBox2
-            // 
-            this.richTextBox2.Location = new System.Drawing.Point(421, 414);
-            this.richTextBox2.Name = "richTextBox2";
-            this.richTextBox2.Size = new System.Drawing.Size(494, 145);
-            this.richTextBox2.TabIndex = 21;
-            this.richTextBox2.Text = "";
-            // 
-            // richTextBox3
-            // 
-            this.richTextBox3.Location = new System.Drawing.Point(421, 80);
-            this.richTextBox3.Name = "richTextBox3";
-            this.richTextBox3.Size = new System.Drawing.Size(494, 159);
-            this.richTextBox3.TabIndex = 22;
-            this.richTextBox3.Text = "";
             // 
             // InterfacePrincipale
             // 
@@ -1273,7 +1274,7 @@
         private DataGridViewTextBoxColumn Column12;
         private DataGridViewTextBoxColumn cvc;
         private ComboBox cbbPrix;
-        private RichTextBox richTextBox3;
+        private RichTextBox txtBoxCommanditaires;
         private RichTextBox richTextBox2;
     }
 }

@@ -29,7 +29,7 @@ namespace STELib
         /// <returns>string</returns>
         public override string ToString() { 
           
-                return  "identifiant du commanditaire: "+  "  ID(" + idCommanditaire + ")   personne contact->" + base.ToString(); 
+                return  "IDC: " + idCommanditaire + "  " + base.ToString(); 
         }     
 
     }
