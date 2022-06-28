@@ -883,7 +883,7 @@
             this.txtQuantitePrix.Location = new System.Drawing.Point(122, 391);
             this.txtQuantitePrix.Margin = new System.Windows.Forms.Padding(5);
             this.txtQuantitePrix.Name = "txtQuantitePrix";
-            this.txtQuantitePrix.Size = new System.Drawing.Size(92, 27);
+            this.txtQuantitePrix.Size = new System.Drawing.Size(92, 23);
             this.txtQuantitePrix.TabIndex = 10;
             this.txtQuantitePrix.Text = "12";
             this.txtQuantitePrix.Click += new System.EventHandler(this.TxtQuantitePrix_Click);
@@ -955,10 +955,9 @@
             this.lblChoixPrix.Location = new System.Drawing.Point(17, 259);
             this.lblChoixPrix.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
             this.lblChoixPrix.Name = "lblChoixPrix";
-            this.lblChoixPrix.Size = new System.Drawing.Size(81, 20);
+            this.lblChoixPrix.Size = new System.Drawing.Size(67, 15);
             this.lblChoixPrix.TabIndex = 6;
             this.lblChoixPrix.Text = "Choix Prix :";
-
             // 
             // lblPrenomCommanditaire
             // 
@@ -1038,6 +1037,7 @@
             this.richTextBox1.Size = new System.Drawing.Size(492, 189);
             this.richTextBox1.TabIndex = 1;
             this.richTextBox1.Text = "";
+            this.richTextBox1.TextChanged += new System.EventHandler(this.richTextBox1_TextChanged);
             // 
             // lblOlivier
             // 
