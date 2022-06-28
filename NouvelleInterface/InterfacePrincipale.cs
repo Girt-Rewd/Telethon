@@ -488,6 +488,11 @@ namespace NouvelleInterface
         {
 
         }
+
+        private void pnInfoDonTitre2_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
     }
 
 }
