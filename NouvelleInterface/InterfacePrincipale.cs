@@ -95,7 +95,7 @@ namespace NouvelleInterface
 
                 //Passage au prochain sous menu
                 pnlDon.Visible = true;
-                pnlPrix.Visible = true;
+               
                 pnlCarteCredit.Visible = false;
 
             }
@@ -526,10 +526,6 @@ namespace NouvelleInterface
            
         }
 
-        private void lblRecompense_Click(object sender, EventArgs e)
-        {
-
-        }
     }
 
 }

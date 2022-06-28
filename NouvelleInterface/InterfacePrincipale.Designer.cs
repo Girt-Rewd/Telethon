@@ -31,7 +31,6 @@
             this.components = new System.ComponentModel.Container();
             this.tabEntrees = new System.Windows.Forms.TabControl();
             this.tabDonateur = new System.Windows.Forms.TabPage();
-            this.btnEnregistre = new System.Windows.Forms.Button();
             this.dgvDonateurs = new System.Windows.Forms.DataGridView();
             this.Column5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column6 = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -60,12 +59,13 @@
             this.lblNoCredit = new System.Windows.Forms.Label();
             this.lblCarteCredit = new System.Windows.Forms.Label();
             this.lblDateExp = new System.Windows.Forms.Label();
-            this.txtRecompense = new System.Windows.Forms.TextBox();
-            this.btnCalculRecompense = new System.Windows.Forms.Button();
-            this.lblRecompense = new System.Windows.Forms.Label();
             this.pnlDon = new System.Windows.Forms.Panel();
+            this.btnEnregistre = new System.Windows.Forms.Button();
+            this.txtRecompense = new System.Windows.Forms.TextBox();
             this.lblMontant = new System.Windows.Forms.Label();
+            this.btnCalculRecompense = new System.Windows.Forms.Button();
             this.txtMontant = new System.Windows.Forms.TextBox();
+            this.lblRecompense = new System.Windows.Forms.Label();
             this.btnAjouterDon = new System.Windows.Forms.Button();
             this.lblInfoDon = new System.Windows.Forms.Label();
             this.pnlInfoDonateur = new System.Windows.Forms.Panel();
@@ -168,16 +168,6 @@
             this.tabDonateur.Size = new System.Drawing.Size(1286, 958);
             this.tabDonateur.TabIndex = 0;
             this.tabDonateur.Text = "Donateur";
-            // 
-            // btnEnregistre
-            // 
-            this.btnEnregistre.Location = new System.Drawing.Point(473, 152);
-            this.btnEnregistre.Name = "btnEnregistre";
-            this.btnEnregistre.Size = new System.Drawing.Size(108, 36);
-            this.btnEnregistre.TabIndex = 23;
-            this.btnEnregistre.Text = "Enregister";
-            this.btnEnregistre.UseVisualStyleBackColor = true;
-            this.btnEnregistre.Click += new System.EventHandler(this.BtnEnregistre_Click);
             // 
             // dgvDonateurs
             // 
@@ -509,37 +499,6 @@
             this.lblDateExp.TabIndex = 0;
             this.lblDateExp.Text = "Date d’expiration :";
             // 
-            // txtRecompense
-            // 
-            this.txtRecompense.Location = new System.Drawing.Point(261, 113);
-            this.txtRecompense.Margin = new System.Windows.Forms.Padding(5);
-            this.txtRecompense.Name = "txtRecompense";
-            this.txtRecompense.Size = new System.Drawing.Size(118, 27);
-            this.txtRecompense.TabIndex = 2;
-            // 
-            // btnCalculRecompense
-            // 
-            this.btnCalculRecompense.Location = new System.Drawing.Point(261, 152);
-            this.btnCalculRecompense.Margin = new System.Windows.Forms.Padding(5, 4, 5, 4);
-            this.btnCalculRecompense.Name = "btnCalculRecompense";
-            this.btnCalculRecompense.Size = new System.Drawing.Size(171, 35);
-            this.btnCalculRecompense.TabIndex = 0;
-            this.btnCalculRecompense.Text = "Afficher récompense";
-            this.btnCalculRecompense.UseVisualStyleBackColor = true;
-            this.btnCalculRecompense.Click += new System.EventHandler(this.BtnCalculRecompense_Click);
-            // 
-            // lblRecompense
-            // 
-            this.lblRecompense.AutoSize = true;
-            this.lblRecompense.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.lblRecompense.Location = new System.Drawing.Point(261, 73);
-            this.lblRecompense.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
-            this.lblRecompense.Name = "lblRecompense";
-            this.lblRecompense.Size = new System.Drawing.Size(107, 18);
-            this.lblRecompense.TabIndex = 2;
-            this.lblRecompense.Text = "Récompense";
-            this.lblRecompense.Click += new System.EventHandler(this.lblRecompense_Click);
-            // 
             // pnlDon
             // 
             this.pnlDon.Controls.Add(this.btnEnregistre);
@@ -557,6 +516,24 @@
             this.pnlDon.TabIndex = 5;
             this.pnlDon.Visible = false;
             // 
+            // btnEnregistre
+            // 
+            this.btnEnregistre.Location = new System.Drawing.Point(473, 152);
+            this.btnEnregistre.Name = "btnEnregistre";
+            this.btnEnregistre.Size = new System.Drawing.Size(108, 36);
+            this.btnEnregistre.TabIndex = 23;
+            this.btnEnregistre.Text = "Valider";
+            this.btnEnregistre.UseVisualStyleBackColor = true;
+            this.btnEnregistre.Click += new System.EventHandler(this.BtnEnregistre_Click);
+            // 
+            // txtRecompense
+            // 
+            this.txtRecompense.Location = new System.Drawing.Point(261, 113);
+            this.txtRecompense.Margin = new System.Windows.Forms.Padding(5);
+            this.txtRecompense.Name = "txtRecompense";
+            this.txtRecompense.Size = new System.Drawing.Size(118, 27);
+            this.txtRecompense.TabIndex = 2;
+            // 
             // lblMontant
             // 
             this.lblMontant.AutoSize = true;
@@ -567,6 +544,17 @@
             this.lblMontant.TabIndex = 0;
             this.lblMontant.Text = "Montant :";
             // 
+            // btnCalculRecompense
+            // 
+            this.btnCalculRecompense.Location = new System.Drawing.Point(261, 152);
+            this.btnCalculRecompense.Margin = new System.Windows.Forms.Padding(5, 4, 5, 4);
+            this.btnCalculRecompense.Name = "btnCalculRecompense";
+            this.btnCalculRecompense.Size = new System.Drawing.Size(171, 35);
+            this.btnCalculRecompense.TabIndex = 0;
+            this.btnCalculRecompense.Text = "Afficher récompense";
+            this.btnCalculRecompense.UseVisualStyleBackColor = true;
+            this.btnCalculRecompense.Click += new System.EventHandler(this.BtnCalculRecompense_Click);
+            // 
             // txtMontant
             // 
             this.txtMontant.Location = new System.Drawing.Point(98, 54);
@@ -575,6 +563,18 @@
             this.txtMontant.Size = new System.Drawing.Size(130, 27);
             this.txtMontant.TabIndex = 1;
             this.txtMontant.Text = "2500";
+            // 
+            // lblRecompense
+            // 
+            this.lblRecompense.AutoSize = true;
+            this.lblRecompense.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.lblRecompense.Location = new System.Drawing.Point(261, 73);
+            this.lblRecompense.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
+            this.lblRecompense.Name = "lblRecompense";
+            this.lblRecompense.Size = new System.Drawing.Size(107, 18);
+            this.lblRecompense.TabIndex = 2;
+            this.lblRecompense.Text = "Récompense";
+            this.lblRecompense.Click += new System.EventHandler(this.lblRecompense_Click);
             // 
             // btnAjouterDon
             // 
