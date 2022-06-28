@@ -11,6 +11,7 @@ using System.Windows.Forms;
 
 namespace NouvelleInterface
 {
+    //Ce code a été pris https://social.msdn.microsoft.com/Forums/windows/en-US/206e15d0-af99-420d-a890-0f0f5d30b999/how-to-make-rounded-corner-button-in-win-form-cnet?forum=winforms
     public partial class RoundedButton : Button
     {
         public RoundedButton()
