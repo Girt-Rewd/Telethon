@@ -157,12 +157,10 @@ namespace NouvelleInterface
         private void BtnAjouterPrix_Click(object sender, EventArgs e)
         {
             //insister pour que les champs relatifs aux prix soient complets
-            if (txtValeurPrix.Text == "" || txtQuantitePrix.Text == "")
+            if (txtQuantitePrix.Text == "")
             {
-
                 SignalerIncompletude(txtQuantitePrix, "", lblQuatitePrix, lblMessagePrix, "Quantité :");
-                SignalerIncompletude(txtValeurPrix, "", lblValeur, lblMessagePrix, "Valeur unitaire :");
-               
+              
             }
             else
             {
@@ -535,6 +533,27 @@ namespace NouvelleInterface
             pnlDon.Visible = false;
             pnlInfoDonateur.Visible = true;
            
+        }
+
+        private void cbbPrix_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            //cbbPrix.Select();
+            //switch ()
+            //{
+            //    case "Calendrier":
+            //        txtValeurPrix.Text =case "$";
+            //        break;
+            //    case "Repas pour 2":
+            //        txtValeurPrix.Text =case "$";
+            //        break;
+            //    case "BBQ":
+            //        txtValeurPrix.Text =case "$";
+            //        break;
+            //    case "Téléviseur":
+            //        txtValeurPrix.Text =case "$";
+            //        break;
+            //}
+                
         }
     }
 

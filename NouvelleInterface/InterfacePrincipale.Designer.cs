@@ -84,6 +84,7 @@
             this.btnQuitter = new System.Windows.Forms.Button();
             this.btnAfficheDon = new System.Windows.Forms.Button();
             this.tabCommanditaire = new System.Windows.Forms.TabPage();
+            this.cbbPrix = new System.Windows.Forms.ComboBox();
             this.dgvCommanditaires = new System.Windows.Forms.DataGridView();
             this.dataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -100,7 +101,6 @@
             this.txtNomCommanditaire = new System.Windows.Forms.TextBox();
             this.txtPrenomCommanditaire = new System.Windows.Forms.TextBox();
             this.txtIDPrix = new System.Windows.Forms.TextBox();
-            this.txtIDCommanditaire = new System.Windows.Forms.TextBox();
             this.lblQuatitePrix = new System.Windows.Forms.Label();
             this.lblValeur = new System.Windows.Forms.Label();
             this.lblNomCommanditaire = new System.Windows.Forms.Label();
@@ -124,7 +124,6 @@
             this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.cbbPrix = new System.Windows.Forms.ComboBox();
             this.tabEntrees.SuspendLayout();
             this.tabDonateur.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvDonateurs)).BeginInit();
@@ -789,7 +788,6 @@
             this.tabCommanditaire.Controls.Add(this.txtNomCommanditaire);
             this.tabCommanditaire.Controls.Add(this.txtPrenomCommanditaire);
             this.tabCommanditaire.Controls.Add(this.txtIDPrix);
-            this.tabCommanditaire.Controls.Add(this.txtIDCommanditaire);
             this.tabCommanditaire.Controls.Add(this.lblQuatitePrix);
             this.tabCommanditaire.Controls.Add(this.lblValeur);
             this.tabCommanditaire.Controls.Add(this.lblNomCommanditaire);
@@ -807,6 +805,22 @@
             this.tabCommanditaire.TabIndex = 1;
             this.tabCommanditaire.Text = "Commanditaires";
             // 
+            // cbbPrix
+            // 
+            this.cbbPrix.FormattingEnabled = true;
+            this.cbbPrix.Items.AddRange(new object[] {
+            "Calendrier",
+            "Repas pour 2",
+            "BBQ",
+            "Téléviseur 32\"",
+            ""});
+            this.cbbPrix.Location = new System.Drawing.Point(736, 176);
+            this.cbbPrix.Name = "cbbPrix";
+            this.cbbPrix.Size = new System.Drawing.Size(209, 28);
+            this.cbbPrix.TabIndex = 20;
+            this.cbbPrix.Text = "choisir...";
+            this.cbbPrix.SelectedIndexChanged += new System.EventHandler(this.cbbPrix_SelectedIndexChanged);
+            // 
             // dgvCommanditaires
             // 
             this.dgvCommanditaires.AllowUserToAddRows = false;
@@ -822,7 +836,7 @@
             this.dgvCommanditaires.ReadOnly = true;
             this.dgvCommanditaires.RowHeadersWidth = 51;
             this.dgvCommanditaires.RowTemplate.Height = 29;
-            this.dgvCommanditaires.Size = new System.Drawing.Size(608, 230);
+            this.dgvCommanditaires.Size = new System.Drawing.Size(552, 230);
             this.dgvCommanditaires.TabIndex = 19;
             // 
             // dataGridViewTextBoxColumn2
@@ -972,14 +986,6 @@
             this.txtIDPrix.Name = "txtIDPrix";
             this.txtIDPrix.Size = new System.Drawing.Size(209, 27);
             this.txtIDPrix.TabIndex = 13;
-            // 
-            // txtIDCommanditaire
-            // 
-            this.txtIDCommanditaire.Location = new System.Drawing.Point(200, 129);
-            this.txtIDCommanditaire.Margin = new System.Windows.Forms.Padding(5);
-            this.txtIDCommanditaire.Name = "txtIDCommanditaire";
-            this.txtIDCommanditaire.Size = new System.Drawing.Size(209, 27);
-            this.txtIDCommanditaire.TabIndex = 13;
             // 
             // lblQuatitePrix
             // 
@@ -1191,21 +1197,6 @@
             this.Column4.Name = "Column4";
             this.Column4.Width = 125;
             // 
-            // cbbPrix
-            // 
-            this.cbbPrix.FormattingEnabled = true;
-            this.cbbPrix.Items.AddRange(new object[] {
-            "Calendrier",
-            "Repas pour 2",
-            "BBQ",
-            "Téléviseur 32\"",
-            ""});
-            this.cbbPrix.Location = new System.Drawing.Point(736, 176);
-            this.cbbPrix.Name = "cbbPrix";
-            this.cbbPrix.Size = new System.Drawing.Size(209, 28);
-            this.cbbPrix.TabIndex = 20;
-            this.cbbPrix.Text = "choisir...";
-            // 
             // InterfacePrincipale
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(120F, 120F);
@@ -1275,7 +1266,6 @@
         private TextBox txtNomCommanditaire;
         private TextBox txtPrenomCommanditaire;
         private TextBox txtIDPrix;
-        private TextBox txtIDCommanditaire;
         private Label lblQuatitePrix;
         private Label lblValeur;
         private Label lblNomCommanditaire;
