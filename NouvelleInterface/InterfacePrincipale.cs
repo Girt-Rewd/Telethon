@@ -517,6 +517,7 @@ namespace NouvelleInterface
 
         private void BtnEnregistre_Click(object sender, EventArgs e)
         {
+            txtBoxCvc.Text = string.Empty;
             txtNomDonateur.Text = string.Empty;
             txtPrenomDonateur.Text= string.Empty;
             txtCourrielDonateur.Text= string.Empty;
