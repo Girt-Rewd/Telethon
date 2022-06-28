@@ -30,7 +30,11 @@ namespace STELib
         public override string ToString() { 
           
                 return  "IDC: " + idCommanditaire + "  " + base.ToString(); 
-        }     
+        }
 
+        public string getIdc()
+        {
+            return idCommanditaire;
+        }
     }
 }

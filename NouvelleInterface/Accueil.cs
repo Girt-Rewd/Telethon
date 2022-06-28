@@ -12,12 +12,24 @@ namespace NouvelleInterface
 {
     public partial class Accueil : Form
     {
-        public static string montantPasse = "0";
+        public static string montantPasse;
         public Accueil()
         {
             InitializeComponent();
             
-            montantPasse = InterfacePrincipale.TotalDon; 
+            
+            try
+            {
+                StreamReader readList = new StreamReader("listeDon.txt");
+                montantPasse = (readList.ReadLine());
+                readList.Close();
+            }
+            catch (Exception ex)
+            {
+                montantPasse = "0";
+
+            }
+            txtMontant.Text = montantPasse;
         }
 
         private void Accueil_Load(object sender, EventArgs e)
