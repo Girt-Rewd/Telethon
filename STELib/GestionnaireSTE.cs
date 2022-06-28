@@ -4,8 +4,6 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-// TODO Appliquer les techniques de gestion d'erreurs et de traitement d'exceptions.
-//
 
 namespace STELib
 {
