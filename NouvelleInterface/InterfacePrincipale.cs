@@ -177,8 +177,8 @@ namespace NouvelleInterface
                     MessageBox.Show("Veuillez utiliser une virgule pour les décimales", "Attention", MessageBoxButtons.OK, MessageBoxIcon.Error);
                     txtValeurPrix.Focus();
                 }
-                dgvCommanditaires.Rows.Add("CMDT"+gestionnaireSTE.commanditaires.Count,txtPrenomCommanditaire.Text, txtNomCommanditaire.Text, int.Parse(txtValeurPrix.Text)*int.Parse(txtQuantitePrix.Text)+"$");
-                MessageBox.Show("Commandite créer.");
+              //  dgvCommanditaires.Rows.Add("CMDT"+gestionnaireSTE.commanditaires.Count,txtPrenomCommanditaire.Text, txtNomCommanditaire.Text, int.Parse(txtValeurPrix.Text)*int.Parse(txtQuantitePrix.Text)+"$");
+              //  MessageBox.Show("Commandite créer.");
 
             }
 
