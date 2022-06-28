@@ -157,18 +157,18 @@ namespace NouvelleInterface
         private void BtnAjouterPrix_Click(object sender, EventArgs e)
         {
             //insister pour que les champs relatifs aux prix soient complets
-            if (txtDescription.Text == "" || txtValeurPrix.Text == "" || txtQuantitePrix.Text == "")
+            if (txtValeurPrix.Text == "" || txtQuantitePrix.Text == "")
             {
 
                 SignalerIncompletude(txtQuantitePrix, "", lblQuatitePrix, lblMessagePrix, "Quantité :");
                 SignalerIncompletude(txtValeurPrix, "", lblValeur, lblMessagePrix, "Valeur unitaire :");
-                SignalerIncompletude(txtDescription, "", lblDescPrix, lblMessagePrix, "Description :");
+               
             }
             else
             {
                 try
                 {
-                    gestionnaireSTE.AjouterPrix(txtDescription.Text, double.Parse(txtValeurPrix.Text), int.Parse(txtQuantitePrix.Text), "CMDT098",  gestionnaireSTE.commanditaires.Count);
+                    gestionnaireSTE.AjouterPrix(cbbPrix.Text, double.Parse(txtValeurPrix.Text), int.Parse(txtQuantitePrix.Text), "CMDT098",  gestionnaireSTE.commanditaires.Count);
                     lblPrenomDonateur.ForeColor = Color.Maroon;
                     if (lblMessageDonateur.Text == "Prénom :") lblPrenomDonateur.Text += "*";
 

@@ -98,7 +98,6 @@
             this.txtQuantitePrix = new System.Windows.Forms.TextBox();
             this.txtValeurPrix = new System.Windows.Forms.TextBox();
             this.txtNomCommanditaire = new System.Windows.Forms.TextBox();
-            this.txtDescription = new System.Windows.Forms.TextBox();
             this.txtPrenomCommanditaire = new System.Windows.Forms.TextBox();
             this.txtIDPrix = new System.Windows.Forms.TextBox();
             this.txtIDCommanditaire = new System.Windows.Forms.TextBox();
@@ -125,6 +124,7 @@
             this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.cbbPrix = new System.Windows.Forms.ComboBox();
             this.tabEntrees.SuspendLayout();
             this.tabDonateur.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvDonateurs)).BeginInit();
@@ -776,6 +776,7 @@
             // tabCommanditaire
             // 
             this.tabCommanditaire.BackColor = System.Drawing.Color.PaleGreen;
+            this.tabCommanditaire.Controls.Add(this.cbbPrix);
             this.tabCommanditaire.Controls.Add(this.dgvCommanditaires);
             this.tabCommanditaire.Controls.Add(this.lblMessagePrix);
             this.tabCommanditaire.Controls.Add(this.lblMessageCommanditaire);
@@ -786,7 +787,6 @@
             this.tabCommanditaire.Controls.Add(this.txtQuantitePrix);
             this.tabCommanditaire.Controls.Add(this.txtValeurPrix);
             this.tabCommanditaire.Controls.Add(this.txtNomCommanditaire);
-            this.tabCommanditaire.Controls.Add(this.txtDescription);
             this.tabCommanditaire.Controls.Add(this.txtPrenomCommanditaire);
             this.tabCommanditaire.Controls.Add(this.txtIDPrix);
             this.tabCommanditaire.Controls.Add(this.txtIDCommanditaire);
@@ -954,16 +954,6 @@
             this.txtNomCommanditaire.TabIndex = 11;
             this.txtNomCommanditaire.Text = "Descartes";
             this.txtNomCommanditaire.Click += new System.EventHandler(this.TxtNomCommanditaire_Click);
-            // 
-            // txtDescription
-            // 
-            this.txtDescription.Location = new System.Drawing.Point(736, 171);
-            this.txtDescription.Margin = new System.Windows.Forms.Padding(5);
-            this.txtDescription.Name = "txtDescription";
-            this.txtDescription.Size = new System.Drawing.Size(209, 27);
-            this.txtDescription.TabIndex = 12;
-            this.txtDescription.Text = "Téléviseur";
-            this.txtDescription.Click += new System.EventHandler(this.TxtDescription_Click);
             // 
             // txtPrenomCommanditaire
             // 
@@ -1201,6 +1191,21 @@
             this.Column4.Name = "Column4";
             this.Column4.Width = 125;
             // 
+            // cbbPrix
+            // 
+            this.cbbPrix.FormattingEnabled = true;
+            this.cbbPrix.Items.AddRange(new object[] {
+            "Calendrier",
+            "Repas pour 2",
+            "BBQ",
+            "Téléviseur 32\"",
+            ""});
+            this.cbbPrix.Location = new System.Drawing.Point(736, 176);
+            this.cbbPrix.Name = "cbbPrix";
+            this.cbbPrix.Size = new System.Drawing.Size(209, 28);
+            this.cbbPrix.TabIndex = 20;
+            this.cbbPrix.Text = "choisir...";
+            // 
             // InterfacePrincipale
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(120F, 120F);
@@ -1268,7 +1273,6 @@
         private TextBox txtQuantitePrix;
         private TextBox txtValeurPrix;
         private TextBox txtNomCommanditaire;
-        private TextBox txtDescription;
         private TextBox txtPrenomCommanditaire;
         private TextBox txtIDPrix;
         private TextBox txtIDCommanditaire;
@@ -1331,5 +1335,6 @@
         private DataGridViewTextBoxColumn dataGridViewTextBoxColumn3;
         private DataGridViewTextBoxColumn dataGridViewTextBoxColumn4;
         private DataGridViewTextBoxColumn dataGridViewTextBoxColumn10;
+        private ComboBox cbbPrix;
     }
 }
