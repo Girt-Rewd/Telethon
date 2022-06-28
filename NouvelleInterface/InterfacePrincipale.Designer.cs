@@ -29,6 +29,7 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(InterfacePrincipale));
             this.tabEntrees = new System.Windows.Forms.TabControl();
             this.tabDonateur = new System.Windows.Forms.TabPage();
             this.dgvDonateurs = new System.Windows.Forms.DataGridView();
@@ -897,6 +898,7 @@
             this.txtQuantitePrix.Location = new System.Drawing.Point(152, 489);
             this.txtQuantitePrix.Margin = new System.Windows.Forms.Padding(6);
             this.txtQuantitePrix.Name = "txtQuantitePrix";
+            this.txtQuantitePrix.Size = new System.Drawing.Size(92, 23);
             this.txtQuantitePrix.Size = new System.Drawing.Size(114, 27);
             this.txtQuantitePrix.TabIndex = 10;
             this.txtQuantitePrix.Text = "12";
@@ -969,7 +971,7 @@
             this.lblChoixPrix.Location = new System.Drawing.Point(21, 324);
             this.lblChoixPrix.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
             this.lblChoixPrix.Name = "lblChoixPrix";
-            this.lblChoixPrix.Size = new System.Drawing.Size(81, 20);
+            this.lblChoixPrix.Size = new System.Drawing.Size(67, 15);
             this.lblChoixPrix.TabIndex = 6;
             this.lblChoixPrix.Text = "Choix Prix :";
             // 
@@ -1050,7 +1052,8 @@
             this.richTextBox1.Name = "richTextBox1";
             this.richTextBox1.Size = new System.Drawing.Size(614, 235);
             this.richTextBox1.TabIndex = 1;
-            this.richTextBox1.Text = "";
+            this.richTextBox1.Text = resources.GetString("richTextBox1.Text");
+            this.richTextBox1.TextChanged += new System.EventHandler(this.richTextBox1_TextChanged);
             // 
             // lblOlivier
             // 

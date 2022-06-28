@@ -57,6 +57,18 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
+  <data name="richTextBox1.Text" xml:space="preserve">
+    <value>Ce programme sert à la gestion d’un événement téléthon. L’utilisateur ciblé est un téléphoniste dont le travail sera:
+    1. Entrer les informations personnelle d’un donateur (personne qui contribue avec un don 
+        en argent)  
+    2. Entrer les informations sur les dons en argent
+    3. Entrer les informations sur les commanditaires ( Personne ou organisme qui contribue 
+        sous forme de don de produits ou services)
+    4. Entrer les informations sur les dons sous forme de produits
+
+Un système de récompenses est établi et gérer par l’application pour encourager les donateurs.
+ </value>
+  </data>
   <metadata name="infoBulle.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>17, 17</value>
   </metadata>

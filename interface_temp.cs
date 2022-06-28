@@ -471,6 +471,11 @@ namespace Telethon
                     saveListDonateurs.WriteLine(IDD + "/" + nom + "/" + prenom + "/" + telephone + "/" + courriel + "/" + typeDeCarte + "/" + numeroDeCarte + "/" + dateDexpiration);
             }
         }
+
+        private void richTextBox1_TextChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }
    
