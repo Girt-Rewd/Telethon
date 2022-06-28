@@ -19,6 +19,7 @@ namespace NouvelleInterface
         /// Bloc de déclaration des variables globales
         /// </summary>
         GestionnaireSTE gestionnaireSTE = new();
+    
 
 
         /// <summary>
@@ -288,6 +289,78 @@ namespace NouvelleInterface
         /// <param name="e"></param>
         private void BtnQuitter_Click(object sender, EventArgs e)
         {
+            StreamWriter saveListDon = new("ListeDon.txt", false);
+            StreamWriter saveListDonateurs = new("ListeDonateurs.txt", false);
+
+            foreach (DataGridViewRow colonne in dgvDonateurs.Rows)
+            {
+                string? IDD;
+                string? nom;
+                string? prenom;
+                string? telephone;
+                string? courriel;
+                string? typeDeCarte;
+                string? numeroDeCarte;
+                string? dateDexpiration;
+
+                if (colonne.Cells[0].Value.ToString() != null)
+                    IDD = colonne.Cells[0].Value.ToString();
+                else
+                    IDD = "";
+
+                if (colonne.Cells[1].Value.ToString() != null)
+                    nom = colonne.Cells[1].Value.ToString();
+                else
+                    nom = "";
+
+                if (colonne.Cells[2].Value.ToString() != null)
+                    prenom = colonne.Cells[2].Value.ToString();
+                else
+                    prenom = "";
+
+                if (colonne.Cells[2].Value.ToString() != null)
+                    telephone = colonne.Cells[4].Value.ToString();
+                else
+                    telephone = "";
+
+                if (colonne.Cells[2].Value.ToString() != null)
+                    courriel = colonne.Cells[3].Value.ToString();
+                else
+                    courriel = "";
+
+                if (colonne.Cells[2].Value.ToString() != null)
+                    typeDeCarte = colonne.Cells[5].Value.ToString();
+                else
+                    typeDeCarte = "";
+
+                if (colonne.Cells[2].Value.ToString() != null)
+                    numeroDeCarte = colonne.Cells[6].Value.ToString();
+                else
+                    numeroDeCarte = "";
+
+                if (colonne.Cells[2].Value.ToString() != null)
+                    dateDexpiration = colonne.Cells[7].Value.ToString();
+                else
+                    dateDexpiration = "";
+                if (IDD != "" ||
+                    nom != "" ||
+                    prenom != "" ||
+                    telephone != "" ||
+                    typeDeCarte != "" ||
+                    numeroDeCarte != "" ||
+                    dateDexpiration != "")
+
+                    saveListDonateurs.WriteLine(IDD + "/" + nom + "/" + prenom + "/" + telephone + "/" + courriel + "/" + typeDeCarte + "/" + numeroDeCarte + "/" + dateDexpiration);
+            }
+            double total=0;
+            foreach (Don listDons in gestionnaireSTE.dons)
+            {              
+                total += listDons.getMontantDon();
+            }
+            saveListDon.WriteLine(total.ToString());
+
+            saveListDon.Close();
+            saveListDonateurs.Close();
             this.Close();
         }
 
@@ -439,7 +512,8 @@ namespace NouvelleInterface
              pnlCarteCredit.Visible = false;
             pnlDon.Visible = false;
             pnlInfoDonateur.Visible = true;
-            pnlPrix.Visible = false;    
+            pnlPrix.Visible = false; 
+            
 
            
         }

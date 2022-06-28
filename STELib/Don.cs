@@ -8,16 +8,16 @@ namespace STELib
 {
     public class Don
     {
-        
+
         /// <summary>
         /// La classe Don sert principalement de structure de données pour enregistrer les dons en argent entrants avant que ceux-ci ne soient 
         /// remisé dans un fichier txt (et éventuellement dans une base de donnée
         /// </summary>
-        
-        
-        
 
-        
+
+
+
+
         private string idDon;
         private string dateDon;
         private double montantDon;
@@ -38,6 +38,10 @@ namespace STELib
         /// <returns>string</returns>
         public new string ToString() {
             return "Identifiant du don : " + idDon + " date du don : " + dateDon + " montant : " + montantDon;
+        }
+        public double getMontantDon()
+        {
+            return montantDon;
         }
     }
 }

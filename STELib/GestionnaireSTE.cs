@@ -21,9 +21,13 @@ namespace STELib
         public List<Don> dons;
         public List<Prix> prix;
 
+
         // Constructeur par défaut
         public GestionnaireSTE()
         {
+            StreamReader readList = new StreamReader("listeDons.txt");
+            double DonsEnregistrer = double.Parse(readList.ReadLine());
+            readList.Close();
             this.donateurs = new List<Donateur>();
             this.commanditaires = new List<Commanditaire>();
             this.dons = new List<Don>();
@@ -87,6 +91,7 @@ namespace STELib
         public void AjouterDon(string date, string idDonateur, double montantDon, int nbDon)
         {
             dons.Add(new Don(date, idDonateur, montantDon, nbDon));
+            
         }
 
         /// <summary>
@@ -136,11 +141,12 @@ namespace STELib
         /// </summary>
         /// <returns></returns>
         public string AfficherDons()
-        {
+        { 
             string chaine = "";
             foreach (Don listDons in dons)
             {
                 chaine += listDons.ToString() + "\r\n";
+             
             }
             return chaine;
         }
