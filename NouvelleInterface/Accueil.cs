@@ -37,7 +37,7 @@ namespace NouvelleInterface
 
         private void txtMontant_TextChanged(object sender, EventArgs e)
         {
-            double facteurConversion = 1010 / (double)panelAccueil.Width;
+            double facteurConversion =  (double)panelAccueil.Width / 1010;
             if (txtMontant.Text == null) {
                 txtMontant.Text = "0";
             }
