@@ -110,7 +110,7 @@ namespace NouvelleInterface
         {
             if (txtMontant.Text != null) {
                 Accueil parent = (Accueil)this.Owner;
-                parent.GetTotalDon(txtMontant.Text);
+                parent.GetTotalDon("" + gestionnaireSTE.SommeDons());
             }
             string dateExpiration = numMois.Value.ToString("00") + "/" + numAnnee.Value.ToString();
             try
