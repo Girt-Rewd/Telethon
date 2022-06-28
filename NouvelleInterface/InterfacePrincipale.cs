@@ -95,7 +95,7 @@ namespace NouvelleInterface
 
                 //Passage au prochain sous menu
                 pnlDon.Visible = true;
-                pnlPrix.Visible = true;
+               
                 pnlCarteCredit.Visible = false;
 
             }
@@ -115,15 +115,18 @@ namespace NouvelleInterface
             string dateExpiration = numMois.Value.ToString("00") + "/" + numAnnee.Value.ToString();
             try
             {
-                gestionnaireSTE.AjouterDon(dateExpiration, txtIDDon.Text, double.Parse(txtMontant.Text), gestionnaireSTE.dons.Count);
+                gestionnaireSTE.AjouterDon(dateExpiration,  double.Parse(txtMontant.Text), gestionnaireSTE.dons.Count);
             }
             catch (FormatException)
             {
                 MessageBox.Show("Veuillez utiliser une virgule pour les décimales", "Attention", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 txtMontant.Focus();
             }
+           
+
             dgvDonateurs.Rows.Add("DNTR" + dgvDonateurs.RowCount + 1, txtNomDonateur.Text, txtPrenomDonateur.Text, mskTxtBoxTel.Text, txtCourrielDonateur.Text, typeCarte, mskTxtNumeroCarte.Text, numMois.Text + "/" + numAnnee.Text, txtBoxCvc.Text);
         }
+
 
 
         /// <summary>
@@ -154,18 +157,18 @@ namespace NouvelleInterface
         private void BtnAjouterPrix_Click(object sender, EventArgs e)
         {
             //insister pour que les champs relatifs aux prix soient complets
-            if (txtDescription.Text == "" || txtValeurPrix.Text == "" || txtQuantitePrix.Text == "")
+            if (txtValeurPrix.Text == "" || txtQuantitePrix.Text == "")
             {
 
                 SignalerIncompletude(txtQuantitePrix, "", lblQuatitePrix, lblMessagePrix, "Quantité :");
                 SignalerIncompletude(txtValeurPrix, "", lblValeur, lblMessagePrix, "Valeur unitaire :");
-                SignalerIncompletude(txtDescription, "", lblDescPrix, lblMessagePrix, "Description :");
+               
             }
             else
             {
                 try
                 {
-                    gestionnaireSTE.AjouterPrix(txtDescription.Text, double.Parse(txtValeurPrix.Text), int.Parse(txtQuantitePrix.Text), "CMDT098",  gestionnaireSTE.commanditaires.Count);
+                    gestionnaireSTE.AjouterPrix(cbbPrix.Text, double.Parse(txtValeurPrix.Text), int.Parse(txtQuantitePrix.Text), "CMDT098",  gestionnaireSTE.commanditaires.Count);
                     lblPrenomDonateur.ForeColor = Color.Maroon;
                     if (lblMessageDonateur.Text == "Prénom :") lblPrenomDonateur.Text += "*";
 
@@ -263,6 +266,7 @@ namespace NouvelleInterface
                 SignalerIncompletude(txtPrenomDonateur, "", lblPrenomDonateur, lblMessageDonateur, "Prénom :");
 
             }
+         
 
             else if (!telephoneRegex.IsMatch(mskTxtBoxTel.Text))
             {
@@ -358,7 +362,7 @@ namespace NouvelleInterface
 
                     saveListDonateurs.WriteLine(IDD + "/" + nom + "/" + prenom + "/" + telephone + "/" + courriel + "/" + typeDeCarte + "/" + numeroDeCarte + "/" + dateDexpiration);
             }
-            foreach (Donateur listDonateur in gestionnaireSTE.donateurs)//autre methode,stand-by
+            foreach (Donateur listDonateur in gestionnaireSTE.donateurs)//TODO changer pour commanditAIRE.
             {
                 string donateur = listDonateur.ToString();
                 saveListdonateur.WriteLine(donateur);
@@ -513,24 +517,25 @@ namespace NouvelleInterface
         {
             TxtNoir(lblQuatitePrix, "Quantité :");
         }
+
         #endregion
 
-        private void BtnEnregistre_Click(object sender, EventArgs e)
-        {
+        private void btnValider_Click(object sender, EventArgs e)
+        {   
+            radAmex.Checked = false;
+            radMC.Checked = false;
+            radVisa.Checked = false;
+            txtBoxCvc.Text = string.Empty;
             txtNomDonateur.Text = string.Empty;
-            txtPrenomDonateur.Text= string.Empty;
-            txtCourrielDonateur.Text= string.Empty;
-            mskTxtBoxTel.Text= string.Empty;
-            mskTxtNumeroCarte.Text= string.Empty;
+            txtPrenomDonateur.Text = string.Empty;
+            txtCourrielDonateur.Text = string.Empty;
+            mskTxtBoxTel.Text = string.Empty;
+            mskTxtNumeroCarte.Text = string.Empty;
             pnlCarteCredit.Visible = false;
             pnlDon.Visible = false;
             pnlInfoDonateur.Visible = true;
-            pnlPrix.Visible = false; 
-            
-
            
         }
-
     }
 
 }
