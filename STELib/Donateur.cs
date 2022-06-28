@@ -44,7 +44,7 @@ namespace STELib
             }
             else Carte = "AMEX";
 
-            return "VALIDER INFO DU DONATEUR \n\r\r"+base.ToString()+"\n\rIDD: "+ idDonateur + "\n\rTél : " + telephone+"\n\rCourriel: "+ courriel + "\n\rCarte de crédit :"+Carte+"  #"+numeroDeCarte+ "\n\rExp: "+dateExpiration+"  CVC: "+CVC; 
+            return base.ToString()+"\n\rIDD: "+ idDonateur + "\n\rTél : " + telephone+"\n\rCourriel: "+ courriel + "\n\rCarte de crédit :"+Carte+"  #"+numeroDeCarte+ "\n\rExp: "+dateExpiration+"  CVC: "+CVC; 
         }
         public string getId()
         {
