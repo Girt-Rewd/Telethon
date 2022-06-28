@@ -31,7 +31,6 @@
             this.components = new System.ComponentModel.Container();
             this.tabEntrees = new System.Windows.Forms.TabControl();
             this.tabDonateur = new System.Windows.Forms.TabPage();
-            this.textBox1 = new System.Windows.Forms.TextBox();
             this.btnEnregistre = new System.Windows.Forms.Button();
             this.dgvDonateurs = new System.Windows.Forms.DataGridView();
             this.Column5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -61,15 +60,11 @@
             this.lblNoCredit = new System.Windows.Forms.Label();
             this.lblCarteCredit = new System.Windows.Forms.Label();
             this.lblDateExp = new System.Windows.Forms.Label();
-            this.pnlPrix = new System.Windows.Forms.Panel();
-            this.lblqte = new System.Windows.Forms.Label();
             this.txtRecompense = new System.Windows.Forms.TextBox();
             this.btnCalculRecompense = new System.Windows.Forms.Button();
             this.lblRecompense = new System.Windows.Forms.Label();
             this.pnlDon = new System.Windows.Forms.Panel();
-            this.lblIDDon = new System.Windows.Forms.Label();
             this.lblMontant = new System.Windows.Forms.Label();
-            this.txtIDDon = new System.Windows.Forms.TextBox();
             this.txtMontant = new System.Windows.Forms.TextBox();
             this.btnAjouterDon = new System.Windows.Forms.Button();
             this.lblInfoDon = new System.Windows.Forms.Label();
@@ -137,7 +132,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.numAnnee)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.numMois)).BeginInit();
             this.grRadioCarte.SuspendLayout();
-            this.pnlPrix.SuspendLayout();
             this.pnlDon.SuspendLayout();
             this.pnlInfoDonateur.SuspendLayout();
             this.tabCommanditaire.SuspendLayout();
@@ -160,11 +154,8 @@
             // tabDonateur
             // 
             this.tabDonateur.BackColor = System.Drawing.Color.LightSalmon;
-            this.tabDonateur.Controls.Add(this.textBox1);
-            this.tabDonateur.Controls.Add(this.btnEnregistre);
             this.tabDonateur.Controls.Add(this.dgvDonateurs);
             this.tabDonateur.Controls.Add(this.pnlCarteCredit);
-            this.tabDonateur.Controls.Add(this.pnlPrix);
             this.tabDonateur.Controls.Add(this.pnlDon);
             this.tabDonateur.Controls.Add(this.pnlInfoDonateur);
             this.tabDonateur.Controls.Add(this.btnAfficherDonateur);
@@ -178,18 +169,11 @@
             this.tabDonateur.TabIndex = 0;
             this.tabDonateur.Text = "Donateur";
             // 
-            // textBox1
-            // 
-            this.textBox1.Location = new System.Drawing.Point(688, 395);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(125, 27);
-            this.textBox1.TabIndex = 24;
-            // 
             // btnEnregistre
             // 
-            this.btnEnregistre.Location = new System.Drawing.Point(474, 497);
+            this.btnEnregistre.Location = new System.Drawing.Point(473, 152);
             this.btnEnregistre.Name = "btnEnregistre";
-            this.btnEnregistre.Size = new System.Drawing.Size(94, 29);
+            this.btnEnregistre.Size = new System.Drawing.Size(108, 36);
             this.btnEnregistre.TabIndex = 23;
             this.btnEnregistre.Text = "Enregister";
             this.btnEnregistre.UseVisualStyleBackColor = true;
@@ -525,31 +509,9 @@
             this.lblDateExp.TabIndex = 0;
             this.lblDateExp.Text = "Date d’expiration :";
             // 
-            // pnlPrix
-            // 
-            this.pnlPrix.Controls.Add(this.lblqte);
-            this.pnlPrix.Controls.Add(this.txtRecompense);
-            this.pnlPrix.Controls.Add(this.btnCalculRecompense);
-            this.pnlPrix.Controls.Add(this.lblRecompense);
-            this.pnlPrix.Location = new System.Drawing.Point(679, 16);
-            this.pnlPrix.Name = "pnlPrix";
-            this.pnlPrix.Size = new System.Drawing.Size(283, 204);
-            this.pnlPrix.TabIndex = 5;
-            this.pnlPrix.Visible = false;
-            // 
-            // lblqte
-            // 
-            this.lblqte.AutoSize = true;
-            this.lblqte.Location = new System.Drawing.Point(33, 132);
-            this.lblqte.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
-            this.lblqte.Name = "lblqte";
-            this.lblqte.Size = new System.Drawing.Size(101, 20);
-            this.lblqte.TabIndex = 0;
-            this.lblqte.Text = "Récompense :";
-            // 
             // txtRecompense
             // 
-            this.txtRecompense.Location = new System.Drawing.Point(135, 128);
+            this.txtRecompense.Location = new System.Drawing.Point(261, 113);
             this.txtRecompense.Margin = new System.Windows.Forms.Padding(5);
             this.txtRecompense.Name = "txtRecompense";
             this.txtRecompense.Size = new System.Drawing.Size(118, 27);
@@ -557,12 +519,12 @@
             // 
             // btnCalculRecompense
             // 
-            this.btnCalculRecompense.Location = new System.Drawing.Point(33, 75);
+            this.btnCalculRecompense.Location = new System.Drawing.Point(261, 152);
             this.btnCalculRecompense.Margin = new System.Windows.Forms.Padding(5, 4, 5, 4);
             this.btnCalculRecompense.Name = "btnCalculRecompense";
-            this.btnCalculRecompense.Size = new System.Drawing.Size(221, 35);
+            this.btnCalculRecompense.Size = new System.Drawing.Size(171, 35);
             this.btnCalculRecompense.TabIndex = 0;
-            this.btnCalculRecompense.Text = "Afficher la récompense";
+            this.btnCalculRecompense.Text = "Afficher récompense";
             this.btnCalculRecompense.UseVisualStyleBackColor = true;
             this.btnCalculRecompense.Click += new System.EventHandler(this.BtnCalculRecompense_Click);
             // 
@@ -570,71 +532,56 @@
             // 
             this.lblRecompense.AutoSize = true;
             this.lblRecompense.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.lblRecompense.Location = new System.Drawing.Point(14, 11);
+            this.lblRecompense.Location = new System.Drawing.Point(261, 73);
             this.lblRecompense.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
             this.lblRecompense.Name = "lblRecompense";
             this.lblRecompense.Size = new System.Drawing.Size(107, 18);
             this.lblRecompense.TabIndex = 2;
             this.lblRecompense.Text = "Récompense";
+            this.lblRecompense.Click += new System.EventHandler(this.lblRecompense_Click);
             // 
             // pnlDon
             // 
-            this.pnlDon.Controls.Add(this.lblIDDon);
+            this.pnlDon.Controls.Add(this.btnEnregistre);
+            this.pnlDon.Controls.Add(this.txtRecompense);
             this.pnlDon.Controls.Add(this.lblMontant);
-            this.pnlDon.Controls.Add(this.txtIDDon);
+            this.pnlDon.Controls.Add(this.btnCalculRecompense);
             this.pnlDon.Controls.Add(this.txtMontant);
+            this.pnlDon.Controls.Add(this.lblRecompense);
             this.pnlDon.Controls.Add(this.btnAjouterDon);
             this.pnlDon.Controls.Add(this.lblInfoDon);
             this.pnlDon.Location = new System.Drawing.Point(39, 380);
             this.pnlDon.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.pnlDon.Name = "pnlDon";
-            this.pnlDon.Size = new System.Drawing.Size(283, 204);
+            this.pnlDon.Size = new System.Drawing.Size(643, 204);
             this.pnlDon.TabIndex = 5;
             this.pnlDon.Visible = false;
-            // 
-            // lblIDDon
-            // 
-            this.lblIDDon.AutoSize = true;
-            this.lblIDDon.Location = new System.Drawing.Point(24, 51);
-            this.lblIDDon.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
-            this.lblIDDon.Name = "lblIDDon";
-            this.lblIDDon.Size = new System.Drawing.Size(61, 20);
-            this.lblIDDon.TabIndex = 0;
-            this.lblIDDon.Text = "ID don :";
             // 
             // lblMontant
             // 
             this.lblMontant.AutoSize = true;
-            this.lblMontant.Location = new System.Drawing.Point(24, 96);
+            this.lblMontant.Location = new System.Drawing.Point(16, 54);
             this.lblMontant.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
             this.lblMontant.Name = "lblMontant";
             this.lblMontant.Size = new System.Drawing.Size(72, 20);
             this.lblMontant.TabIndex = 0;
             this.lblMontant.Text = "Montant :";
             // 
-            // txtIDDon
-            // 
-            this.txtIDDon.Location = new System.Drawing.Point(114, 45);
-            this.txtIDDon.Margin = new System.Windows.Forms.Padding(5);
-            this.txtIDDon.Name = "txtIDDon";
-            this.txtIDDon.Size = new System.Drawing.Size(142, 27);
-            this.txtIDDon.TabIndex = 6;
-            // 
             // txtMontant
             // 
-            this.txtMontant.Location = new System.Drawing.Point(114, 92);
+            this.txtMontant.Location = new System.Drawing.Point(98, 54);
             this.txtMontant.Margin = new System.Windows.Forms.Padding(5);
             this.txtMontant.Name = "txtMontant";
-            this.txtMontant.Size = new System.Drawing.Size(142, 27);
+            this.txtMontant.Size = new System.Drawing.Size(130, 27);
             this.txtMontant.TabIndex = 1;
             this.txtMontant.Text = "2500";
             // 
             // btnAjouterDon
             // 
-            this.btnAjouterDon.Location = new System.Drawing.Point(114, 132);
+            this.btnAjouterDon.Location = new System.Drawing.Point(98, 113);
             this.btnAjouterDon.Margin = new System.Windows.Forms.Padding(5);
             this.btnAjouterDon.Name = "btnAjouterDon";
-            this.btnAjouterDon.Size = new System.Drawing.Size(143, 45);
+            this.btnAjouterDon.Size = new System.Drawing.Size(130, 45);
             this.btnAjouterDon.TabIndex = 8;
             this.btnAjouterDon.Text = "Ajouter un don";
             this.btnAjouterDon.UseVisualStyleBackColor = true;
@@ -1250,7 +1197,6 @@
             this.Load += new System.EventHandler(this.Interface_temp_Load);
             this.tabEntrees.ResumeLayout(false);
             this.tabDonateur.ResumeLayout(false);
-            this.tabDonateur.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvDonateurs)).EndInit();
             this.pnlCarteCredit.ResumeLayout(false);
             this.pnlCarteCredit.PerformLayout();
@@ -1258,8 +1204,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.numMois)).EndInit();
             this.grRadioCarte.ResumeLayout(false);
             this.grRadioCarte.PerformLayout();
-            this.pnlPrix.ResumeLayout(false);
-            this.pnlPrix.PerformLayout();
             this.pnlDon.ResumeLayout(false);
             this.pnlDon.PerformLayout();
             this.pnlInfoDonateur.ResumeLayout(false);
@@ -1289,14 +1233,12 @@
         private Label lblNoCredit;
         private Label lblDateExp;
         private TextBox txtMontant;
-        private TextBox txtIDDon;
         private TextBox txtCourrielDonateur;
         private TextBox txtNomDonateur;
         private TextBox txtPrenomDonateur;
         private Label lblMontant;
         private Label lblTelephone;
         private Label lblCourriel;
-        private Label lblIDDon;
         private Label lblNomDonateur;
         private Label lblPrenomDonateur;
         private Label lblInfoDon;
@@ -1331,9 +1273,7 @@
         private Label lblMessageCredit;
         private Panel pnlCarteCredit;
         private Label lblCarteCredit;
-        private Panel pnlPrix;
         private Label lblRecompense;
-        private Label lblqte;
         private TextBox txtRecompense;
         private Button btnCalculRecompense;
         private TabPage tabAPropos;
@@ -1370,7 +1310,6 @@
         private DataGridViewTextBoxColumn Column11;
         private DataGridViewTextBoxColumn Column12;
         private DataGridViewTextBoxColumn cvc;
-        private TextBox textBox1;
         private DataGridView dgvCommanditaires;
         private DataGridViewTextBoxColumn dataGridViewTextBoxColumn2;
         private DataGridViewTextBoxColumn dataGridViewTextBoxColumn3;

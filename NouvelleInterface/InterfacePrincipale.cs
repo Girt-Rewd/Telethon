@@ -122,8 +122,11 @@ namespace NouvelleInterface
                 MessageBox.Show("Veuillez utiliser une virgule pour les décimales", "Attention", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 txtMontant.Focus();
             }
+           
+
             dgvDonateurs.Rows.Add("DNTR" + dgvDonateurs.RowCount + 1, txtNomDonateur.Text, txtPrenomDonateur.Text, mskTxtBoxTel.Text, txtCourrielDonateur.Text, typeCarte, mskTxtNumeroCarte.Text, numMois.Text + "/" + numAnnee.Text, txtBoxCvc.Text);
         }
+
 
 
         /// <summary>
@@ -517,21 +520,16 @@ namespace NouvelleInterface
 
         private void BtnEnregistre_Click(object sender, EventArgs e)
         {
-            txtBoxCvc.Text = string.Empty;
-            txtNomDonateur.Text = string.Empty;
-            txtPrenomDonateur.Text= string.Empty;
-            txtCourrielDonateur.Text= string.Empty;
-            mskTxtBoxTel.Text= string.Empty;
-            mskTxtNumeroCarte.Text= string.Empty;
-            pnlCarteCredit.Visible = false;
-            pnlDon.Visible = false;
-            pnlInfoDonateur.Visible = true;
-            pnlPrix.Visible = false; 
+            
             
 
            
         }
 
+        private void lblRecompense_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 
 }
