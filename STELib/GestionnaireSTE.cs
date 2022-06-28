@@ -25,9 +25,16 @@ namespace STELib
         // Constructeur par défaut
         public GestionnaireSTE()
         {
-            StreamReader readList = new StreamReader("listeDons.txt");
-            double DonsEnregistrer = double.Parse(readList.ReadLine());
-            readList.Close();
+            try
+            {
+                StreamReader readList = new StreamReader("listeDons.txt");
+                double DonsEnregistrer = double.Parse(readList.ReadLine());
+                readList.Close();
+            }
+            catch (Exception ex) {
+                //On ne fait rien le fichier n’existe pas encore mais il sera créé lors de l’enregistrement
+
+            }
             this.donateurs = new List<Donateur>();
             this.commanditaires = new List<Commanditaire>();
             this.dons = new List<Don>();
