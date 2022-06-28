@@ -20,7 +20,7 @@ namespace NouvelleInterface
         /// Bloc de déclaration des variables globales
         /// </summary>
         GestionnaireSTE gestionnaireSTE = new();
-    
+
 
 
         /// <summary>
@@ -87,7 +87,7 @@ namespace NouvelleInterface
                     typeCarte = 'V';
                 }
 
- 
+
                 gestionnaireSTE.AjouterDonateur(txtNomDonateur.Text, txtPrenomDonateur.Text, txtCourrielDonateur.Text, mskTxtBoxTel.Text, typeCarte, mskTxtNumeroCarte.Text, numMois.Text + "/" + numAnnee.Text, dgvDonateurs.RowCount + 1, txtBoxCvc.Text);
                 MessageBox.Show("VALIDER INFO DU DONATEUR \n\r\r" + gestionnaireSTE.donateurs.Last().ToString());
 
@@ -95,7 +95,7 @@ namespace NouvelleInterface
 
                 //Passage au prochain sous menu
                 pnlDon.Visible = true;
-               
+
                 pnlCarteCredit.Visible = false;
 
             }
@@ -108,21 +108,22 @@ namespace NouvelleInterface
         /// <param name="e"></param>
         private void BtnAjouterDon_Click(object sender, EventArgs e)
         {
-            
+            if (txtMontant.Text != null)
+            {
+                Accueil parent = (Accueil)this.Owner;
+                parent.GetTotalDon("" + (gestionnaireSTE.SommeDons()+ double.Parse(Accueil.montantPasse)));
+            }
             string dateExpiration = numMois.Value.ToString("00") + "/" + numAnnee.Value.ToString();
             try
             {
-                gestionnaireSTE.AjouterDon(dateExpiration,  double.Parse(txtMontant.Text), gestionnaireSTE.dons.Count);
+                gestionnaireSTE.AjouterDon(dateExpiration, double.Parse(txtMontant.Text), gestionnaireSTE.dons.Count);
             }
             catch (FormatException)
             {
                 MessageBox.Show("Veuillez utiliser une virgule pour les décimales", "Attention", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 txtMontant.Focus();
             }
-            if (txtMontant.Text != null) {
-                Accueil parent = (Accueil)this.Owner;
-                parent.GetTotalDon("" + gestionnaireSTE.SommeDons());
-            }
+
 
             dgvDonateurs.Rows.Add("DNTR" + dgvDonateurs.RowCount + 1, txtNomDonateur.Text, txtPrenomDonateur.Text, mskTxtBoxTel.Text, txtCourrielDonateur.Text, typeCarte, mskTxtNumeroCarte.Text, numMois.Text + "/" + numAnnee.Text, txtBoxCvc.Text);
         }
@@ -137,16 +138,7 @@ namespace NouvelleInterface
         /// <param name="e"></param>
         private void BtnAjouterComm_Click(object sender, EventArgs e)
         {
-            if (txtPrenomCommanditaire.Text == "" || txtNomCommanditaire.Text == "")
-            {
-                SignalerIncompletude(txtNomCommanditaire, "", lblNomCommanditaire, lblMessageCommanditaire, "Nom :");
-                SignalerIncompletude(txtPrenomCommanditaire, "", lblPrenomCommanditaire, lblMessageCommanditaire, "Prénom :");
 
-            }
-            else
-            {
-                gestionnaireSTE.AjouterCommanditaire(txtPrenomCommanditaire.Text, txtNomCommanditaire.Text, gestionnaireSTE.commanditaires.Count);
-            }
         }
 
         /// <summary>
@@ -156,31 +148,38 @@ namespace NouvelleInterface
         /// <param name="e"></param>
         private void BtnAjouterPrix_Click(object sender, EventArgs e)
         {
-            //insister pour que les champs relatifs aux prix soient complets
-            if (txtQuantitePrix.Text == "")
+            if (txtPrenomCommanditaire.Text == "" || txtNomCommanditaire.Text == "")
+            {
+                SignalerIncompletude(txtNomCommanditaire, "", lblNomCommanditaire, lblMessageCommanditaire, "Nom :");
+                SignalerIncompletude(txtPrenomCommanditaire, "", lblPrenomCommanditaire, lblMessageCommanditaire, "Prénom :");
+                //MessageBox.Show
+            }
+            else if (txtQuantitePrix.Text == "" || cbbPrix.SelectedIndex <= -1)
             {
                 SignalerIncompletude(txtQuantitePrix, "", lblQuatitePrix, lblMessagePrix, "Quantité :");
-              
+                if (cbbPrix.SelectedIndex <= -1)
+                {
+                    lblChoixPrix.ForeColor = Color.Maroon;
+
+                    if (lblChoixPrix.Text == "Choix Prix :")
+                    {
+                        lblChoixPrix.Text += "*";
+                        cbbPrix.Focus();
+                    }
+                    else
+                    {
+                        lblChoixPrix.ForeColor = Color.Black;
+                        lblChoixPrix.Text = "Choix Prix :";
+                    }
+                }
             }
             else
             {
-                try
-                {
-                    gestionnaireSTE.AjouterPrix(cbbPrix.Text, double.Parse(txtValeurPrix.Text), int.Parse(txtQuantitePrix.Text), "CMDT098",  gestionnaireSTE.commanditaires.Count);
-                    lblPrenomDonateur.ForeColor = Color.Maroon;
-                    if (lblMessageDonateur.Text == "Prénom :") lblPrenomDonateur.Text += "*";
-
-                }              
-
-                catch (FormatException)
-                {
-                    MessageBox.Show("Veuillez utiliser une virgule pour les décimales", "Attention", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                    txtValeurPrix.Focus();
-                }
-                
-                  MessageBox.Show("CMDT"+gestionnaireSTE.commanditaires.Last()+"Valeur de commandite "+ int.Parse(txtValeurPrix.Text)*int.Parse(txtQuantitePrix.Text)+"$");
-
+                gestionnaireSTE.AjouterCommanditaire(txtPrenomCommanditaire.Text, txtNomCommanditaire.Text, gestionnaireSTE.commanditaires.Count);
+                gestionnaireSTE.AjouterPrix(cbbPrix.Text, double.Parse(txtValeurPrix.Text), int.Parse(txtQuantitePrix.Text), gestionnaireSTE.commanditaires.Last().getIdc(), gestionnaireSTE.prix.Count);
+                MessageBox.Show(gestionnaireSTE.commanditaires.Last().ToString() + " Valeur de commandite " + int.Parse(txtValeurPrix.Text) * int.Parse(txtQuantitePrix.Text) + "$");
             }
+         
 
         }
         #endregion
@@ -226,10 +225,10 @@ namespace NouvelleInterface
         /// <param name="e"></param>
         private void BtnAfficherCommanditaire_Click(object sender, EventArgs e)
         {
-            txtBoxCommanditaires.Text= gestionnaireSTE.AfficherCommanditaires();
+            txtBoxCommanditaire.Text = gestionnaireSTE.AfficherCommanditaires();
         }
 
-        #endregion 
+        #endregion
 
         /// <summary>
         /// BtnSuivantDonateur_Click effectue un ensemble de validation sur la complétude et le format des informations personnelles du donateurs. Si les critères sont bien
@@ -251,7 +250,7 @@ namespace NouvelleInterface
                 SignalerIncompletude(txtPrenomDonateur, "", lblPrenomDonateur, lblMessageDonateur, "Prénom :");
 
             }
-         
+
 
             else if (!telephoneRegex.IsMatch(mskTxtBoxTel.Text))
             {
@@ -272,7 +271,7 @@ namespace NouvelleInterface
             {
                 pnlInfoDonateur.Visible = false;
                 pnlCarteCredit.Visible = true;
-                lblID.Text = "IDD: DNTR" + (dgvDonateurs.RowCount + 1) + "\n\rNom :" + txtPrenomDonateur.Text+" "+txtNomDonateur.Text;
+                lblID.Text = "IDD: DNTR" + (dgvDonateurs.RowCount + 1) + "\n\rNom :" + txtPrenomDonateur.Text + " " + txtNomDonateur.Text;
             }
         }
 
@@ -283,7 +282,7 @@ namespace NouvelleInterface
         /// <param name="e"></param>
         private void BtnQuitter_Click(object sender, EventArgs e)
         {
-            StreamWriter saveListdonateur = new("ListeDDonateur.txt", false);//autre methode,stand-by
+            StreamWriter saveListCommaditaires = new("ListeCommanditaires.txt", false);
             StreamWriter saveListDon = new("ListeDon.txt", false);
             StreamWriter saveListDonateurs = new("ListeDonateurs.txt", false);
 
@@ -347,20 +346,20 @@ namespace NouvelleInterface
 
                     saveListDonateurs.WriteLine(IDD + "/" + nom + "/" + prenom + "/" + telephone + "/" + courriel + "/" + typeDeCarte + "/" + numeroDeCarte + "/" + dateDexpiration);
             }
-            foreach (Donateur listDonateur in gestionnaireSTE.donateurs)//TODO changer pour commanditAIRE.
+            foreach (Donateur listDonateur in gestionnaireSTE.donateurs)
             {
-                string donateur = listDonateur.ToString();
-                saveListdonateur.WriteLine(donateur);
-            }
-           
 
-            double total=0;
+                saveListCommaditaires.WriteLine(listDonateur.ToString());
+            }
+
+
+            double total = double.Parse(Accueil.montantPasse);
             foreach (Don listDons in gestionnaireSTE.dons)
-            {              
+            {
                 total += listDons.getMontantDon();
             }
             saveListDon.WriteLine(total.ToString());
-            saveListdonateur.Close();//autre methode,stand-by
+            saveListCommaditaires.Close();
             saveListDon.Close();
             saveListDonateurs.Close();
             this.Close();
@@ -409,10 +408,10 @@ namespace NouvelleInterface
         /// <param name="e"></param>
         private void Interface_temp_Load(object sender, EventArgs e)
         {
-      
+
         }
 
-        
+
         /// <summary>
         /// Permet d'afficher une infoBulle , lorsque le curseur survol les textbox des champs obligatoires, info donnateur.
         /// </summary>
@@ -490,7 +489,7 @@ namespace NouvelleInterface
 
         private void TxtDescription_Click(object sender, EventArgs e)
         {
-            TxtNoir(lblDescPrix, "Description :");
+            TxtNoir(lblChoixPrix, "Description :");
         }
 
         private void TxtValeurPrix_Click(object sender, EventArgs e)
@@ -506,7 +505,7 @@ namespace NouvelleInterface
         #endregion
 
         private void btnValider_Click(object sender, EventArgs e)
-        {   
+        {
             radAmex.Checked = false;
             radMC.Checked = false;
             radVisa.Checked = false;
@@ -519,7 +518,7 @@ namespace NouvelleInterface
             pnlCarteCredit.Visible = false;
             pnlDon.Visible = false;
             pnlInfoDonateur.Visible = true;
-           
+
         }
 
         private void cbbPrix_SelectedIndexChanged(object sender, EventArgs e)
@@ -528,7 +527,7 @@ namespace NouvelleInterface
             switch (prix)
             {
                 case "Calendrier":
-                    txtValeurPrix.Text = "10" ;
+                    txtValeurPrix.Text = "10";
                     break;
                 case "Repas pour 2":
                     txtValeurPrix.Text = "100";
@@ -539,9 +538,11 @@ namespace NouvelleInterface
                 default:
                     txtValeurPrix.Text = "1000";
                     break;
-            }       
+            }
 
         }
+
+
     }
 
 }

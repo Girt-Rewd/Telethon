@@ -9,6 +9,7 @@ using System.Threading.Tasks;
 
 namespace STELib
 {
+
     public class GestionnaireSTE
     {
         /// <summary>
@@ -20,21 +21,12 @@ namespace STELib
         public List<Commanditaire> commanditaires;
         public List<Don> dons;
         public List<Prix> prix;
-
+        public double DonsEnregistrer;
 
         // Constructeur par défaut
         public GestionnaireSTE()
         {
-            try
-            {
-                StreamReader readList = new StreamReader("listeDons.txt");
-                double DonsEnregistrer = double.Parse(readList.ReadLine());
-                readList.Close();
-            }
-            catch (Exception ex) {
-                //On ne fait rien le fichier n’existe pas encore mais il sera créé lors de l’enregistrement
-
-            }
+           
             this.donateurs = new List<Donateur>();
             this.commanditaires = new List<Commanditaire>();
             this.dons = new List<Don>();
