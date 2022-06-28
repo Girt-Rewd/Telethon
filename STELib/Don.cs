@@ -29,7 +29,7 @@ namespace STELib
         }
 
         // Constructeur à arguments
-        public Don(string dateDon, string idDonateur, double montantDon, int nbDon)
+        public Don(string dateDon, double montantDon, int nbDon)
         {
             this.idDon = "DON" + nbDon;
             this.dateDon = dateDon;

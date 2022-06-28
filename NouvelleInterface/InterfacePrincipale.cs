@@ -115,7 +115,7 @@ namespace NouvelleInterface
             string dateExpiration = numMois.Value.ToString("00") + "/" + numAnnee.Value.ToString();
             try
             {
-                gestionnaireSTE.AjouterDon(dateExpiration, txtIDDon.Text, double.Parse(txtMontant.Text), gestionnaireSTE.dons.Count);
+                gestionnaireSTE.AjouterDon(dateExpiration,  double.Parse(txtMontant.Text), gestionnaireSTE.dons.Count);
             }
             catch (FormatException)
             {
@@ -266,6 +266,7 @@ namespace NouvelleInterface
                 SignalerIncompletude(txtPrenomDonateur, "", lblPrenomDonateur, lblMessageDonateur, "Prénom :");
 
             }
+         
 
             else if (!telephoneRegex.IsMatch(mskTxtBoxTel.Text))
             {
@@ -361,7 +362,7 @@ namespace NouvelleInterface
 
                     saveListDonateurs.WriteLine(IDD + "/" + nom + "/" + prenom + "/" + telephone + "/" + courriel + "/" + typeDeCarte + "/" + numeroDeCarte + "/" + dateDexpiration);
             }
-            foreach (Donateur listDonateur in gestionnaireSTE.donateurs)//autre methode,stand-by
+            foreach (Donateur listDonateur in gestionnaireSTE.donateurs)//TODO changer pour commanditAIRE.
             {
                 string donateur = listDonateur.ToString();
                 saveListdonateur.WriteLine(donateur);
@@ -516,16 +517,25 @@ namespace NouvelleInterface
         {
             TxtNoir(lblQuatitePrix, "Quantité :");
         }
+
         #endregion
 
-        private void BtnEnregistre_Click(object sender, EventArgs e)
-        {
-            
-            
-
+        private void btnValider_Click(object sender, EventArgs e)
+        {   
+            radAmex.Checked = false;
+            radMC.Checked = false;
+            radVisa.Checked = false;
+            txtBoxCvc.Text = string.Empty;
+            txtNomDonateur.Text = string.Empty;
+            txtPrenomDonateur.Text = string.Empty;
+            txtCourrielDonateur.Text = string.Empty;
+            mskTxtBoxTel.Text = string.Empty;
+            mskTxtNumeroCarte.Text = string.Empty;
+            pnlCarteCredit.Visible = false;
+            pnlDon.Visible = false;
+            pnlInfoDonateur.Visible = true;
            
         }
-
     }
 
 }
