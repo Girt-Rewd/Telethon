@@ -37,6 +37,7 @@ namespace NouvelleInterface
 
         private void txtMontant_TextChanged(object sender, EventArgs e)
         {
+            double facteurConversion = 1010 / (double)panelAccueil.Width;
             if (txtMontant.Text == null) {
                 txtMontant.Text = "0";
             }
@@ -65,6 +66,8 @@ namespace NouvelleInterface
                 position = picArbre01.Location;
                 position.X = 68 - ((23  * (pourcentage + 1))) / 20;
                 position.Y = 291 - tall;
+                position.X = (int)(position.X * facteurConversion);
+                position.Y = (int)(position.Y * facteurConversion);
                 picArbre01.Location = position;
 
             }
@@ -85,6 +88,8 @@ namespace NouvelleInterface
                 position = picArbre02.Location;
                 position.X = 63 - (10 * (pourcentage + 1) / 20);
                 position.Y = 292 - tall;
+                position.X = (int)(position.X * facteurConversion);
+                position.Y = (int)(position.Y * facteurConversion);
                 picArbre02.Location = position;
 
             }
@@ -105,6 +110,8 @@ namespace NouvelleInterface
                 position = picArbre03.Location;
                 position.X = 72 - (16 * (pourcentage + 1) / 20);
                 position.Y = 290 - tall;
+                position.X = (int)(position.X * facteurConversion);
+                position.Y = (int)(position.Y * facteurConversion);
                 picArbre03.Location = position;
 
             }
@@ -125,6 +132,8 @@ namespace NouvelleInterface
                 position = picArbre04.Location;
                 position.X = 105 - (22 * (pourcentage + 1) / 20);
                 position.Y = 291 - tall;
+                position.X = (int)(position.X * facteurConversion);
+                position.Y = (int)(position.Y * facteurConversion);
                 picArbre04.Location = position;
 
             }
@@ -145,6 +154,8 @@ namespace NouvelleInterface
                 position = picArbre02.Location;
                 position.X = 10 - (12 * (pourcentage - 79) / 20);
                 position.Y = 51 - (47 * (pourcentage - 79 ) / 20);
+                position.X = (int)(position.X * facteurConversion);
+                position.Y = (int)(position.Y * facteurConversion);
                 picArbre05.Location = position;
 
             }
