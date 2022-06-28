@@ -29,9 +29,9 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(InterfacePrincipale));
             this.tabEntrees = new System.Windows.Forms.TabControl();
             this.tabDonateur = new System.Windows.Forms.TabPage();
+            this.textBox1 = new System.Windows.Forms.TextBox();
             this.btnEnregistre = new System.Windows.Forms.Button();
             this.dgvDonateurs = new System.Windows.Forms.DataGridView();
             this.Column5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -89,6 +89,11 @@
             this.btnQuitter = new System.Windows.Forms.Button();
             this.btnAfficheDon = new System.Windows.Forms.Button();
             this.tabCommanditaire = new System.Windows.Forms.TabPage();
+            this.dgvCommanditaires = new System.Windows.Forms.DataGridView();
+            this.dataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn10 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.lblMessagePrix = new System.Windows.Forms.Label();
             this.lblMessageCommanditaire = new System.Windows.Forms.Label();
             this.btnAffichePrix = new System.Windows.Forms.Button();
@@ -136,6 +141,7 @@
             this.pnlDon.SuspendLayout();
             this.pnlInfoDonateur.SuspendLayout();
             this.tabCommanditaire.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvCommanditaires)).BeginInit();
             this.tabAPropos.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -154,6 +160,7 @@
             // tabDonateur
             // 
             this.tabDonateur.BackColor = System.Drawing.Color.LightSalmon;
+            this.tabDonateur.Controls.Add(this.textBox1);
             this.tabDonateur.Controls.Add(this.btnEnregistre);
             this.tabDonateur.Controls.Add(this.dgvDonateurs);
             this.tabDonateur.Controls.Add(this.pnlCarteCredit);
@@ -164,12 +171,19 @@
             this.tabDonateur.Controls.Add(this.btnQuitter);
             this.tabDonateur.Controls.Add(this.btnAfficheDon);
             this.tabDonateur.Location = new System.Drawing.Point(4, 29);
-            this.tabDonateur.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
+            this.tabDonateur.Margin = new System.Windows.Forms.Padding(5);
             this.tabDonateur.Name = "tabDonateur";
-            this.tabDonateur.Padding = new System.Windows.Forms.Padding(5, 5, 5, 5);
+            this.tabDonateur.Padding = new System.Windows.Forms.Padding(5);
             this.tabDonateur.Size = new System.Drawing.Size(1286, 958);
             this.tabDonateur.TabIndex = 0;
             this.tabDonateur.Text = "Donateur";
+            // 
+            // textBox1
+            // 
+            this.textBox1.Location = new System.Drawing.Point(688, 395);
+            this.textBox1.Name = "textBox1";
+            this.textBox1.Size = new System.Drawing.Size(125, 27);
+            this.textBox1.TabIndex = 24;
             // 
             // btnEnregistre
             // 
@@ -202,6 +216,7 @@
             this.dgvDonateurs.RowTemplate.Height = 29;
             this.dgvDonateurs.Size = new System.Drawing.Size(686, 245);
             this.dgvDonateurs.TabIndex = 14;
+            this.dgvDonateurs.Visible = false;
             // 
             // Column5
             // 
@@ -411,7 +426,7 @@
             // btnAjoutreDonateur
             // 
             this.btnAjoutreDonateur.Location = new System.Drawing.Point(256, 327);
-            this.btnAjoutreDonateur.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
+            this.btnAjoutreDonateur.Margin = new System.Windows.Forms.Padding(5);
             this.btnAjoutreDonateur.Name = "btnAjoutreDonateur";
             this.btnAjoutreDonateur.Size = new System.Drawing.Size(202, 45);
             this.btnAjoutreDonateur.TabIndex = 10;
@@ -436,9 +451,9 @@
             this.grRadioCarte.Controls.Add(this.radMC);
             this.grRadioCarte.Controls.Add(this.radVisa);
             this.grRadioCarte.Location = new System.Drawing.Point(109, 44);
-            this.grRadioCarte.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
+            this.grRadioCarte.Margin = new System.Windows.Forms.Padding(5);
             this.grRadioCarte.Name = "grRadioCarte";
-            this.grRadioCarte.Padding = new System.Windows.Forms.Padding(5, 5, 5, 5);
+            this.grRadioCarte.Padding = new System.Windows.Forms.Padding(5);
             this.grRadioCarte.Size = new System.Drawing.Size(367, 67);
             this.grRadioCarte.TabIndex = 0;
             this.grRadioCarte.TabStop = false;
@@ -448,7 +463,7 @@
             // 
             this.radAmex.AutoSize = true;
             this.radAmex.Location = new System.Drawing.Point(267, 29);
-            this.radAmex.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
+            this.radAmex.Margin = new System.Windows.Forms.Padding(5);
             this.radAmex.Name = "radAmex";
             this.radAmex.Size = new System.Drawing.Size(68, 24);
             this.radAmex.TabIndex = 2;
@@ -459,7 +474,7 @@
             // 
             this.radMC.AutoSize = true;
             this.radMC.Location = new System.Drawing.Point(147, 29);
-            this.radMC.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
+            this.radMC.Margin = new System.Windows.Forms.Padding(5);
             this.radMC.Name = "radMC";
             this.radMC.Size = new System.Drawing.Size(52, 24);
             this.radMC.TabIndex = 1;
@@ -471,7 +486,7 @@
             this.radVisa.AutoSize = true;
             this.radVisa.Checked = true;
             this.radVisa.Location = new System.Drawing.Point(25, 29);
-            this.radVisa.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
+            this.radVisa.Margin = new System.Windows.Forms.Padding(5);
             this.radVisa.Name = "radVisa";
             this.radVisa.Size = new System.Drawing.Size(57, 24);
             this.radVisa.TabIndex = 0;
@@ -535,7 +550,7 @@
             // txtRecompense
             // 
             this.txtRecompense.Location = new System.Drawing.Point(135, 128);
-            this.txtRecompense.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
+            this.txtRecompense.Margin = new System.Windows.Forms.Padding(5);
             this.txtRecompense.Name = "txtRecompense";
             this.txtRecompense.Size = new System.Drawing.Size(118, 27);
             this.txtRecompense.TabIndex = 2;
@@ -600,7 +615,7 @@
             // txtIDDon
             // 
             this.txtIDDon.Location = new System.Drawing.Point(114, 45);
-            this.txtIDDon.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
+            this.txtIDDon.Margin = new System.Windows.Forms.Padding(5);
             this.txtIDDon.Name = "txtIDDon";
             this.txtIDDon.Size = new System.Drawing.Size(142, 27);
             this.txtIDDon.TabIndex = 6;
@@ -608,7 +623,7 @@
             // txtMontant
             // 
             this.txtMontant.Location = new System.Drawing.Point(114, 92);
-            this.txtMontant.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
+            this.txtMontant.Margin = new System.Windows.Forms.Padding(5);
             this.txtMontant.Name = "txtMontant";
             this.txtMontant.Size = new System.Drawing.Size(142, 27);
             this.txtMontant.TabIndex = 1;
@@ -617,7 +632,7 @@
             // btnAjouterDon
             // 
             this.btnAjouterDon.Location = new System.Drawing.Point(114, 132);
-            this.btnAjouterDon.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
+            this.btnAjouterDon.Margin = new System.Windows.Forms.Padding(5);
             this.btnAjouterDon.Name = "btnAjouterDon";
             this.btnAjouterDon.Size = new System.Drawing.Size(143, 45);
             this.btnAjouterDon.TabIndex = 8;
@@ -692,7 +707,7 @@
             // btnSuivant
             // 
             this.btnSuivant.Location = new System.Drawing.Point(401, 231);
-            this.btnSuivant.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
+            this.btnSuivant.Margin = new System.Windows.Forms.Padding(5);
             this.btnSuivant.Name = "btnSuivant";
             this.btnSuivant.Size = new System.Drawing.Size(115, 45);
             this.btnSuivant.TabIndex = 5;
@@ -703,7 +718,7 @@
             // txtPrenomDonateur
             // 
             this.txtPrenomDonateur.Location = new System.Drawing.Point(129, 117);
-            this.txtPrenomDonateur.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
+            this.txtPrenomDonateur.Margin = new System.Windows.Forms.Padding(5);
             this.txtPrenomDonateur.Name = "txtPrenomDonateur";
             this.txtPrenomDonateur.Size = new System.Drawing.Size(191, 27);
             this.txtPrenomDonateur.TabIndex = 1;
@@ -744,7 +759,7 @@
             // txtNomDonateur
             // 
             this.txtNomDonateur.Location = new System.Drawing.Point(129, 160);
-            this.txtNomDonateur.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
+            this.txtNomDonateur.Margin = new System.Windows.Forms.Padding(5);
             this.txtNomDonateur.Name = "txtNomDonateur";
             this.txtNomDonateur.Size = new System.Drawing.Size(191, 27);
             this.txtNomDonateur.TabIndex = 2;
@@ -754,7 +769,7 @@
             // txtCourrielDonateur
             // 
             this.txtCourrielDonateur.Location = new System.Drawing.Point(129, 203);
-            this.txtCourrielDonateur.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
+            this.txtCourrielDonateur.Margin = new System.Windows.Forms.Padding(5);
             this.txtCourrielDonateur.Name = "txtCourrielDonateur";
             this.txtCourrielDonateur.PlaceholderText = "votrenom@domain.com";
             this.txtCourrielDonateur.Size = new System.Drawing.Size(191, 27);
@@ -775,7 +790,7 @@
             // btnAfficherDonateur
             // 
             this.btnAfficherDonateur.Location = new System.Drawing.Point(970, 200);
-            this.btnAfficherDonateur.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
+            this.btnAfficherDonateur.Margin = new System.Windows.Forms.Padding(5);
             this.btnAfficherDonateur.Name = "btnAfficherDonateur";
             this.btnAfficherDonateur.Size = new System.Drawing.Size(216, 45);
             this.btnAfficherDonateur.TabIndex = 11;
@@ -786,7 +801,7 @@
             // btnQuitter
             // 
             this.btnQuitter.Location = new System.Drawing.Point(970, 293);
-            this.btnQuitter.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
+            this.btnQuitter.Margin = new System.Windows.Forms.Padding(5);
             this.btnQuitter.Name = "btnQuitter";
             this.btnQuitter.Size = new System.Drawing.Size(216, 45);
             this.btnQuitter.TabIndex = 2;
@@ -797,7 +812,7 @@
             // btnAfficheDon
             // 
             this.btnAfficheDon.Location = new System.Drawing.Point(970, 144);
-            this.btnAfficheDon.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
+            this.btnAfficheDon.Margin = new System.Windows.Forms.Padding(5);
             this.btnAfficheDon.Name = "btnAfficheDon";
             this.btnAfficheDon.Size = new System.Drawing.Size(216, 45);
             this.btnAfficheDon.TabIndex = 1;
@@ -808,6 +823,7 @@
             // tabCommanditaire
             // 
             this.tabCommanditaire.BackColor = System.Drawing.Color.PaleGreen;
+            this.tabCommanditaire.Controls.Add(this.dgvCommanditaires);
             this.tabCommanditaire.Controls.Add(this.lblMessagePrix);
             this.tabCommanditaire.Controls.Add(this.lblMessageCommanditaire);
             this.tabCommanditaire.Controls.Add(this.btnAffichePrix);
@@ -831,12 +847,62 @@
             this.tabCommanditaire.Controls.Add(this.lblInfoCommanditaire);
             this.tabCommanditaire.Controls.Add(this.lblIDCommanditaire);
             this.tabCommanditaire.Location = new System.Drawing.Point(4, 29);
-            this.tabCommanditaire.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
+            this.tabCommanditaire.Margin = new System.Windows.Forms.Padding(5);
             this.tabCommanditaire.Name = "tabCommanditaire";
             this.tabCommanditaire.Padding = new System.Windows.Forms.Padding(5, 4, 5, 4);
             this.tabCommanditaire.Size = new System.Drawing.Size(1286, 958);
             this.tabCommanditaire.TabIndex = 1;
             this.tabCommanditaire.Text = "Commanditaires";
+            // 
+            // dgvCommanditaires
+            // 
+            this.dgvCommanditaires.AllowUserToAddRows = false;
+            this.dgvCommanditaires.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvCommanditaires.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.dataGridViewTextBoxColumn2,
+            this.dataGridViewTextBoxColumn3,
+            this.dataGridViewTextBoxColumn4,
+            this.dataGridViewTextBoxColumn10});
+            this.dgvCommanditaires.Location = new System.Drawing.Point(139, 538);
+            this.dgvCommanditaires.Name = "dgvCommanditaires";
+            this.dgvCommanditaires.ReadOnly = true;
+            this.dgvCommanditaires.RowHeadersWidth = 51;
+            this.dgvCommanditaires.RowTemplate.Height = 29;
+            this.dgvCommanditaires.Size = new System.Drawing.Size(555, 245);
+            this.dgvCommanditaires.TabIndex = 19;
+            // 
+            // dataGridViewTextBoxColumn2
+            // 
+            this.dataGridViewTextBoxColumn2.DataPropertyName = "idd";
+            this.dataGridViewTextBoxColumn2.HeaderText = "IDC";
+            this.dataGridViewTextBoxColumn2.MinimumWidth = 6;
+            this.dataGridViewTextBoxColumn2.Name = "dataGridViewTextBoxColumn2";
+            this.dataGridViewTextBoxColumn2.ReadOnly = true;
+            this.dataGridViewTextBoxColumn2.Width = 125;
+            // 
+            // dataGridViewTextBoxColumn3
+            // 
+            this.dataGridViewTextBoxColumn3.HeaderText = "Nom";
+            this.dataGridViewTextBoxColumn3.MinimumWidth = 6;
+            this.dataGridViewTextBoxColumn3.Name = "dataGridViewTextBoxColumn3";
+            this.dataGridViewTextBoxColumn3.ReadOnly = true;
+            this.dataGridViewTextBoxColumn3.Width = 125;
+            // 
+            // dataGridViewTextBoxColumn4
+            // 
+            this.dataGridViewTextBoxColumn4.HeaderText = "Prénom";
+            this.dataGridViewTextBoxColumn4.MinimumWidth = 6;
+            this.dataGridViewTextBoxColumn4.Name = "dataGridViewTextBoxColumn4";
+            this.dataGridViewTextBoxColumn4.ReadOnly = true;
+            this.dataGridViewTextBoxColumn4.Width = 125;
+            // 
+            // dataGridViewTextBoxColumn10
+            // 
+            this.dataGridViewTextBoxColumn10.HeaderText = "Valeur de Commandite";
+            this.dataGridViewTextBoxColumn10.MinimumWidth = 6;
+            this.dataGridViewTextBoxColumn10.Name = "dataGridViewTextBoxColumn10";
+            this.dataGridViewTextBoxColumn10.ReadOnly = true;
+            this.dataGridViewTextBoxColumn10.Width = 125;
             // 
             // lblMessagePrix
             // 
@@ -906,7 +972,7 @@
             // txtQuantitePrix
             // 
             this.txtQuantitePrix.Location = new System.Drawing.Point(673, 275);
-            this.txtQuantitePrix.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
+            this.txtQuantitePrix.Margin = new System.Windows.Forms.Padding(5);
             this.txtQuantitePrix.Name = "txtQuantitePrix";
             this.txtQuantitePrix.Size = new System.Drawing.Size(191, 27);
             this.txtQuantitePrix.TabIndex = 10;
@@ -916,7 +982,7 @@
             // txtValeurPrix
             // 
             this.txtValeurPrix.Location = new System.Drawing.Point(673, 229);
-            this.txtValeurPrix.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
+            this.txtValeurPrix.Margin = new System.Windows.Forms.Padding(5);
             this.txtValeurPrix.Name = "txtValeurPrix";
             this.txtValeurPrix.Size = new System.Drawing.Size(191, 27);
             this.txtValeurPrix.TabIndex = 11;
@@ -926,7 +992,7 @@
             // txtNomCommanditaire
             // 
             this.txtNomCommanditaire.Location = new System.Drawing.Point(183, 229);
-            this.txtNomCommanditaire.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
+            this.txtNomCommanditaire.Margin = new System.Windows.Forms.Padding(5);
             this.txtNomCommanditaire.Name = "txtNomCommanditaire";
             this.txtNomCommanditaire.Size = new System.Drawing.Size(191, 27);
             this.txtNomCommanditaire.TabIndex = 11;
@@ -936,7 +1002,7 @@
             // txtDescription
             // 
             this.txtDescription.Location = new System.Drawing.Point(673, 183);
-            this.txtDescription.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
+            this.txtDescription.Margin = new System.Windows.Forms.Padding(5);
             this.txtDescription.Name = "txtDescription";
             this.txtDescription.Size = new System.Drawing.Size(191, 27);
             this.txtDescription.TabIndex = 12;
@@ -946,7 +1012,7 @@
             // txtPrenomCommanditaire
             // 
             this.txtPrenomCommanditaire.Location = new System.Drawing.Point(183, 183);
-            this.txtPrenomCommanditaire.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
+            this.txtPrenomCommanditaire.Margin = new System.Windows.Forms.Padding(5);
             this.txtPrenomCommanditaire.Name = "txtPrenomCommanditaire";
             this.txtPrenomCommanditaire.Size = new System.Drawing.Size(191, 27);
             this.txtPrenomCommanditaire.TabIndex = 12;
@@ -956,7 +1022,7 @@
             // txtIDPrix
             // 
             this.txtIDPrix.Location = new System.Drawing.Point(673, 137);
-            this.txtIDPrix.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
+            this.txtIDPrix.Margin = new System.Windows.Forms.Padding(5);
             this.txtIDPrix.Name = "txtIDPrix";
             this.txtIDPrix.Size = new System.Drawing.Size(191, 27);
             this.txtIDPrix.TabIndex = 13;
@@ -964,7 +1030,7 @@
             // txtIDCommanditaire
             // 
             this.txtIDCommanditaire.Location = new System.Drawing.Point(183, 137);
-            this.txtIDCommanditaire.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
+            this.txtIDCommanditaire.Margin = new System.Windows.Forms.Padding(5);
             this.txtIDCommanditaire.Name = "txtIDCommanditaire";
             this.txtIDCommanditaire.Size = new System.Drawing.Size(191, 27);
             this.txtIDCommanditaire.TabIndex = 13;
@@ -1071,7 +1137,7 @@
             this.tabAPropos.Controls.Add(this.lblInfoProjetSTE);
             this.tabAPropos.Location = new System.Drawing.Point(4, 29);
             this.tabAPropos.Name = "tabAPropos";
-            this.tabAPropos.Padding = new System.Windows.Forms.Padding(3, 3, 3, 3);
+            this.tabAPropos.Padding = new System.Windows.Forms.Padding(3);
             this.tabAPropos.Size = new System.Drawing.Size(1286, 958);
             this.tabAPropos.TabIndex = 2;
             this.tabAPropos.Text = "À propros";
@@ -1083,7 +1149,7 @@
             this.richTextBox1.Name = "richTextBox1";
             this.richTextBox1.Size = new System.Drawing.Size(562, 251);
             this.richTextBox1.TabIndex = 1;
-            this.richTextBox1.Text = resources.GetString("richTextBox1.Text");
+            this.richTextBox1.Text = "";
             // 
             // lblOlivier
             // 
@@ -1171,20 +1237,20 @@
             this.Column4.MinimumWidth = 6;
             this.Column4.Name = "Column4";
             this.Column4.Width = 125;
-
             // 
-            // Interface_temp
+            // InterfacePrincipale
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1345, 1024);
             this.Controls.Add(this.tabEntrees);
-            this.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
-            this.Name = "Interface_temp";
+            this.Margin = new System.Windows.Forms.Padding(5);
+            this.Name = "InterfacePrincipale";
             this.Text = "Système de téléthon électronique";
             this.Load += new System.EventHandler(this.Interface_temp_Load);
             this.tabEntrees.ResumeLayout(false);
             this.tabDonateur.ResumeLayout(false);
+            this.tabDonateur.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvDonateurs)).EndInit();
             this.pnlCarteCredit.ResumeLayout(false);
             this.pnlCarteCredit.PerformLayout();
@@ -1200,6 +1266,7 @@
             this.pnlInfoDonateur.PerformLayout();
             this.tabCommanditaire.ResumeLayout(false);
             this.tabCommanditaire.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvCommanditaires)).EndInit();
             this.tabAPropos.ResumeLayout(false);
             this.tabAPropos.PerformLayout();
             this.ResumeLayout(false);
@@ -1303,5 +1370,11 @@
         private DataGridViewTextBoxColumn Column11;
         private DataGridViewTextBoxColumn Column12;
         private DataGridViewTextBoxColumn cvc;
+        private TextBox textBox1;
+        private DataGridView dgvCommanditaires;
+        private DataGridViewTextBoxColumn dataGridViewTextBoxColumn2;
+        private DataGridViewTextBoxColumn dataGridViewTextBoxColumn3;
+        private DataGridViewTextBoxColumn dataGridViewTextBoxColumn4;
+        private DataGridViewTextBoxColumn dataGridViewTextBoxColumn10;
     }
 }

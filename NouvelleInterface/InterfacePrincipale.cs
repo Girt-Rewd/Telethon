@@ -29,7 +29,7 @@ namespace NouvelleInterface
             InitializeComponent();
 
         }
-
+        char typeCarte;
         /// <summary>
         /// BtnAjouterDonateur_Click effectue un ensemble de validation sur des champs correspondants aux informations de la carte de crédit, tant au niveau
         /// de leur complétude que de leur format. Si les critères nécessaires sont remplis elle crée l’objet donateur correspondant aux informations personnelles 
@@ -39,7 +39,7 @@ namespace NouvelleInterface
         /// <param name="e"></param>
         private void BtnAjouterDonateur_Click(object sender, EventArgs e)
         {
-            char typeCarte = 'O';
+            typeCarte = 'O';
             // insister sur la complétude des champs des informations de la carte de crédit
             if (!(radAmex.Checked || radMC.Checked || radVisa.Checked) || mskTxtNumeroCarte.Text == "               " || !mskTxtNumeroCarte.MaskCompleted)
             {
@@ -85,11 +85,11 @@ namespace NouvelleInterface
                     typeCarte = 'V';
                 }
 
-                dgvDonateurs.Rows.Add("DNTR" + dgvDonateurs.RowCount + 1, txtNomDonateur.Text, txtPrenomDonateur.Text, mskTxtBoxTel.Text, txtCourrielDonateur.Text, typeCarte, mskTxtNumeroCarte.Text, numMois.Text + "/" + numAnnee.Text, txtBoxCvc.Text);
-                MessageBox.Show("Donateur créer.");
+               
+               
 
                 gestionnaireSTE.AjouterDonateur(txtNomDonateur.Text, txtPrenomDonateur.Text, txtCourrielDonateur.Text, mskTxtBoxTel.Text, typeCarte, mskTxtNumeroCarte.Text, numMois.Text + "/" + numAnnee.Text, dgvDonateurs.RowCount + 1);
-
+                MessageBox.Show("Donateur créer.");
 
 
 
@@ -118,6 +118,7 @@ namespace NouvelleInterface
                 MessageBox.Show("Veuillez utiliser une virgule pour les décimales", "Attention", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 txtMontant.Focus();
             }
+            dgvDonateurs.Rows.Add("DNTR" + dgvDonateurs.RowCount + 1, txtNomDonateur.Text, txtPrenomDonateur.Text, mskTxtBoxTel.Text, txtCourrielDonateur.Text, typeCarte, mskTxtNumeroCarte.Text, numMois.Text + "/" + numAnnee.Text, txtBoxCvc.Text);
         }
 
 
@@ -160,7 +161,7 @@ namespace NouvelleInterface
             {
                 try
                 {
-                    gestionnaireSTE.AjouterPrix(txtDescription.Text, double.Parse(txtValeurPrix.Text), int.Parse(txtQuantitePrix.Text), "CMDT098", dgvCommanditaires.RowCount + 1);
+                    gestionnaireSTE.AjouterPrix(txtDescription.Text, double.Parse(txtValeurPrix.Text), int.Parse(txtQuantitePrix.Text), "CMDT098",  gestionnaireSTE.commanditaires.Count);
                     lblPrenomDonateur.ForeColor = Color.Maroon;
                     if (lblMessageDonateur.Text == "Prénom :") lblPrenomDonateur.Text += "*";
 
@@ -171,7 +172,7 @@ namespace NouvelleInterface
                     MessageBox.Show("Veuillez utiliser une virgule pour les décimales", "Attention", MessageBoxButtons.OK, MessageBoxIcon.Error);
                     txtValeurPrix.Focus();
                 }
-               // dgvCommanditaires.Rows.Add(Commanditaire.ToString(), int.Parse(txtValeurPrix.Text)*int.Parse(txtQuantitePrix.Text)+"$");
+                dgvCommanditaires.Rows.Add("CMDT"+gestionnaireSTE.commanditaires.Count,txtPrenomCommanditaire.Text, txtNomCommanditaire.Text, int.Parse(txtValeurPrix.Text)*int.Parse(txtQuantitePrix.Text)+"$");
                 MessageBox.Show("Commandite créer.");
 
             }
@@ -220,7 +221,20 @@ namespace NouvelleInterface
         /// <param name="e"></param>
         private void BtnAfficherCommanditaire_Click(object sender, EventArgs e)
         {
-            //   textBoxOutput.Text = gestionnaireSTE.AfficherCommanditaires();
+            if (dgvCommanditaires.Visible == false)
+            {
+                StreamReader readList = new StreamReader("listecommanditaires.txt");
+                string ligne = string.Empty;
+                while ((ligne = readList.ReadLine()) != null)
+                {
+                    string[] tabLigne = ligne.Split('/');
+
+                    dgvCommanditaires.Rows.Add(tabLigne);
+
+                }
+                readList.Close();
+                dgvDonateurs.Visible = true;
+            }
         }
 
         #endregion 
@@ -265,7 +279,7 @@ namespace NouvelleInterface
             {
                 pnlInfoDonateur.Visible = false;
                 pnlCarteCredit.Visible = true;
-                lblID.Text = "ID Temp : DNTR" + (dgvDonateurs.RowCount + 1) + "\n\rNom :" + txtPrenomDonateur.Text;
+                lblID.Text = "IDD: DNTR" + (dgvDonateurs.RowCount + 1) + "\n\rNom :" + txtPrenomDonateur.Text+" "+txtNomDonateur.Text;
             }
         }
 
@@ -420,69 +434,7 @@ namespace NouvelleInterface
         private void BtnEnregistre_Click(object sender, EventArgs e)
         {
 
-            StreamWriter saveListDonateurs = new("ListeDonateurs.txt", false);
-
-            foreach (DataGridViewRow colonne in dgvDonateurs.Rows)
-            {
-                string? IDD;
-                string? nom;
-                string? prenom;
-                string? telephone;
-                string? courriel;
-                string? typeDeCarte;
-                string? numeroDeCarte;
-                string? dateDexpiration;
-
-                if (colonne.Cells[0].Value.ToString() != null)
-                    IDD = colonne.Cells[0].Value.ToString();
-                else
-                    IDD = "";
-
-                if (colonne.Cells[1].Value.ToString() != null)
-                    nom = colonne.Cells[1].Value.ToString();
-                else
-                    nom = "";
-
-                if (colonne.Cells[2].Value.ToString() != null)
-                    prenom = colonne.Cells[2].Value.ToString();
-                else
-                    prenom = "";
-
-                if (colonne.Cells[2].Value.ToString() != null)
-                    telephone = colonne.Cells[4].Value.ToString();
-                else
-                    telephone = "";
-
-                if (colonne.Cells[2].Value.ToString() != null)
-                    courriel = colonne.Cells[3].Value.ToString();
-                else
-                    courriel = "";
-
-                if (colonne.Cells[2].Value.ToString() != null)
-                    typeDeCarte = colonne.Cells[5].Value.ToString();
-                else
-                    typeDeCarte = "";
-
-                if (colonne.Cells[2].Value.ToString() != null)
-                    numeroDeCarte = colonne.Cells[6].Value.ToString();
-                else
-                    numeroDeCarte = "";
-
-                if (colonne.Cells[2].Value.ToString() != null)
-                    dateDexpiration = colonne.Cells[7].Value.ToString();
-                else
-                    dateDexpiration = "";
-                if (IDD != "" ||
-                    nom != "" ||
-                    prenom != "" ||
-                    telephone != "" ||
-                    typeDeCarte != "" ||
-                    numeroDeCarte != "" ||
-                    dateDexpiration != "")
-                   
-                    saveListDonateurs.WriteLine(IDD + "/" + nom + "/" + prenom + "/" + telephone + "/" + courriel + "/" + typeDeCarte + "/" + numeroDeCarte + "/" + dateDexpiration);
-            }
-            saveListDonateurs.Close();
+           
         }
 
     }

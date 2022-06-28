@@ -15,7 +15,7 @@ namespace STELib
         /// La classe Gestionnaire est le moteur de ce projet. On y retrouve l’ensemble des fonctions qui permettent l’ajout et l’affichage des 
         /// éléments du projets.  Elle stocke les données jusqu’à leur remisage. Elle contient aussi des méthodes de calcul qui lient les autres objets
         /// </summary>
-        
+          
         public List<Donateur> donateurs;
         public List<Commanditaire> commanditaires;
         public List<Don> dons;
