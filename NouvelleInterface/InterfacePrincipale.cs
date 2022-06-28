@@ -85,11 +85,9 @@ namespace NouvelleInterface
                     typeCarte = 'V';
                 }
 
-               
-               
-
-                gestionnaireSTE.AjouterDonateur(txtNomDonateur.Text, txtPrenomDonateur.Text, txtCourrielDonateur.Text, mskTxtBoxTel.Text, typeCarte, mskTxtNumeroCarte.Text, numMois.Text + "/" + numAnnee.Text, dgvDonateurs.RowCount + 1);
-                MessageBox.Show("Donateur créer.");
+ 
+                gestionnaireSTE.AjouterDonateur(txtNomDonateur.Text, txtPrenomDonateur.Text, txtCourrielDonateur.Text, mskTxtBoxTel.Text, typeCarte, mskTxtNumeroCarte.Text, numMois.Text + "/" + numAnnee.Text, dgvDonateurs.RowCount + 1, txtBoxCvc.Text);
+                MessageBox.Show(gestionnaireSTE.donateurs.Last().ToString());
 
 
 
@@ -339,7 +337,7 @@ namespace NouvelleInterface
       
         }
 
-        // TODO ’infoBulle
+        
         /// <summary>
         /// Permet d'afficher une infoBulle , lorsque le curseur survol les textbox des champs obligatoires, info donnateur.
         /// </summary>
@@ -433,6 +431,15 @@ namespace NouvelleInterface
 
         private void BtnEnregistre_Click(object sender, EventArgs e)
         {
+            txtNomDonateur.Text = string.Empty;
+            txtPrenomDonateur.Text= string.Empty;
+            txtCourrielDonateur.Text= string.Empty;
+            mskTxtBoxTel.Text= string.Empty;
+            mskTxtNumeroCarte.Text= string.Empty;
+             pnlCarteCredit.Visible = false;
+            pnlDon.Visible = false;
+            pnlInfoDonateur.Visible = true;
+            pnlPrix.Visible = false;    
 
            
         }

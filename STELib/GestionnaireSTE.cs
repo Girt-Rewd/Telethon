@@ -48,10 +48,10 @@ namespace STELib
         /// <param name="numeroCarte"></param>
         /// <param name="dateExpiration"></param>
         /// <param name="nbDonateur"></param>
-        public void AjouterDonateur(string prenom, string nom, string adresse, string telephone, char typeCarte, string numeroCarte, string dateExpiration, int nbDonateur)
+        public void AjouterDonateur(string prenom, string nom, string adresse, string telephone, char typeCarte, string numeroCarte, string dateExpiration, int nbDonateur, string CVC)
         {
          
-            donateurs.Add(new Donateur(prenom, nom, adresse, telephone, typeCarte, numeroCarte, dateExpiration, nbDonateur));
+            donateurs.Add(new Donateur(prenom, nom, adresse, telephone, typeCarte, numeroCarte, dateExpiration, nbDonateur,CVC));
         }
 
         /// <summary>
