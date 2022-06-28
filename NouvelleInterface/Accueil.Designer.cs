@@ -140,7 +140,7 @@
             // picArbre01
             // 
             this.picArbre01.Image = global::NouvelleInterface.Properties.Resources.Arbre1;
-            this.picArbre01.Location = new System.Drawing.Point(68, 201);
+            this.picArbre01.Location = new System.Drawing.Point(68, 202);
             this.picArbre01.Name = "picArbre01";
             this.picArbre01.Size = new System.Drawing.Size(54, 88);
             this.picArbre01.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -151,7 +151,7 @@
             // 
             this.picArbre02.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
             this.picArbre02.Image = global::NouvelleInterface.Properties.Resources.Arbre2;
-            this.picArbre02.Location = new System.Drawing.Point(53, 155);
+            this.picArbre02.Location = new System.Drawing.Point(53, 156);
             this.picArbre02.Name = "picArbre02";
             this.picArbre02.Size = new System.Drawing.Size(96, 134);
             this.picArbre02.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -162,7 +162,7 @@
             // picArbre03
             // 
             this.picArbre03.Image = global::NouvelleInterface.Properties.Resources.Arbre3;
-            this.picArbre03.Location = new System.Drawing.Point(43, 118);
+            this.picArbre03.Location = new System.Drawing.Point(43, 119);
             this.picArbre03.Name = "picArbre03";
             this.picArbre03.Size = new System.Drawing.Size(117, 171);
             this.picArbre03.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -174,7 +174,7 @@
             // 
             this.picArbre04.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
             this.picArbre04.Image = global::NouvelleInterface.Properties.Resources.Arbre4;
-            this.picArbre04.Location = new System.Drawing.Point(34, 78);
+            this.picArbre04.Location = new System.Drawing.Point(34, 79);
             this.picArbre04.Name = "picArbre04";
             this.picArbre04.Size = new System.Drawing.Size(157, 211);
             this.picArbre04.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -186,7 +186,7 @@
             // 
             this.picArbre05.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
             this.picArbre05.Image = global::NouvelleInterface.Properties.Resources.Arbre5;
-            this.picArbre05.Location = new System.Drawing.Point(10, 44);
+            this.picArbre05.Location = new System.Drawing.Point(10, 45);
             this.picArbre05.Name = "picArbre05";
             this.picArbre05.Size = new System.Drawing.Size(203, 245);
             this.picArbre05.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;

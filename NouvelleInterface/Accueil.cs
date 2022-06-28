@@ -43,7 +43,7 @@ namespace NouvelleInterface
             int wide;
             int tall;
 
-            if (pourcentage >= 0 && pourcentage < 19)
+            if (pourcentage >= 0 && pourcentage < 20)
             {
 
 
@@ -54,14 +54,14 @@ namespace NouvelleInterface
                 picArbre05.Visible = false;
                 picArbre06.Visible = false;
 
-                wide = 36 + 36 / 20 * (int)(pourcentage + 1);
-                tall = 58 + 58 / 20 * ((int)(pourcentage + 1));
+                wide = (33 + (63  * (pourcentage + 1)) / 20);
+                tall = (65 + (69  * (pourcentage + 1)) / 20);
                 picArbre01.Width = wide;
                 picArbre01.Height = tall;
 
                 position = picArbre01.Location;
-                position.Y = 391 - tall;
-                position.X = (324 - wide) / 2;
+                position.X = 75 - (22  * (pourcentage + 1)/ 20);
+                position.Y = 290 - tall;
                 picArbre01.Location = position;
 
             }
@@ -74,14 +74,14 @@ namespace NouvelleInterface
                 picArbre05.Visible = false;
                 picArbre06.Visible = false;
 
-                wide = 72 + (55 / 20 * (int)(pourcentage - 19));
-                tall = 116 + (62 / 20 * ((int)(pourcentage - 19)));
+                wide = (96 + (21 * (pourcentage -19)) / 20);
+                tall = (134 + (37 * (pourcentage -19)) / 20);
                 picArbre02.Width = wide;
                 picArbre02.Height = tall;
 
                 position = picArbre02.Location;
-                position.Y = 391 - tall;
-                position.X = (324 - wide) / 2;
+                position.X = 53 - (10 * (pourcentage + 1) / 20);
+                position.Y = 290 - tall;
                 picArbre02.Location = position;
 
             }
@@ -94,14 +94,14 @@ namespace NouvelleInterface
                 picArbre05.Visible = false;
                 picArbre06.Visible = false;
 
-                wide = 127 + 28 / 20 * (int)(pourcentage - 39);
-                tall = 178 + 49 / 20 * ((int)(pourcentage - 39));
+                wide = (117 + (40 * (pourcentage - 39)) / 20);
+                tall = (171 + (39 * (pourcentage - 39)) / 20);
                 picArbre03.Width = wide;
                 picArbre03.Height = tall;
 
                 position = picArbre03.Location;
-                position.Y = 391 - tall;
-                position.X = (324 - wide) / 2;
+                position.X = 43 - (9 * (pourcentage + 1) / 20);
+                position.Y = 290 - tall;
                 picArbre03.Location = position;
 
             }
@@ -114,14 +114,14 @@ namespace NouvelleInterface
                 picArbre05.Visible = false;
                 picArbre06.Visible = false;
 
-                wide = 155 + 54 / 20 * (int)(pourcentage - 59);
-                tall = 227 + 52 / 20 * ((int)(pourcentage) - 59);
+                wide = (157 + (35 * (pourcentage - 59)) / 20);
+                tall = (210 + (37 * (pourcentage - 59)) / 20);
                 picArbre04.Width = wide;
                 picArbre04.Height = tall;
 
                 position = picArbre04.Location;
-                position.Y = 391 - tall;
-                position.X = (324 - wide) / 2;
+                position.X = 34 - (24 * (pourcentage + 1) / 20);
+                position.Y = 290 - tall;
                 picArbre04.Location = position;
 
             }
@@ -134,14 +134,14 @@ namespace NouvelleInterface
                 picArbre05.Visible = true;
                 picArbre06.Visible = false;
 
-                wide = 209 + 61 / 20 * (int)(pourcentage - 79);
-                tall = 279 + 46 / 20 * ((int)(pourcentage - 79));
+                wide = (203 + (18 * (pourcentage - 79)) / 20);
+                tall = (245 + (45 * (pourcentage - 79)) / 20);
                 picArbre05.Width = wide;
                 picArbre05.Height = tall;
 
                 position = picArbre02.Location;
-                position.Y = 391 - tall;
-                position.X = (324 - wide) / 2;
+                position.X = 10 - (10 * (pourcentage - 79) / 20);
+                position.Y = 45 - (45 * (pourcentage - 79 ) / 20);
                 picArbre05.Location = position;
 
             }
