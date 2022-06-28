@@ -108,10 +108,7 @@ namespace NouvelleInterface
         /// <param name="e"></param>
         private void BtnAjouterDon_Click(object sender, EventArgs e)
         {
-            if (txtMontant.Text != null) {
-                Accueil parent = (Accueil)this.Owner;
-                parent.GetTotalDon("" + gestionnaireSTE.SommeDons());
-            }
+            
             string dateExpiration = numMois.Value.ToString("00") + "/" + numAnnee.Value.ToString();
             try
             {
@@ -122,7 +119,10 @@ namespace NouvelleInterface
                 MessageBox.Show("Veuillez utiliser une virgule pour les décimales", "Attention", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 txtMontant.Focus();
             }
-           
+            if (txtMontant.Text != null) {
+                Accueil parent = (Accueil)this.Owner;
+                parent.GetTotalDon("" + gestionnaireSTE.SommeDons());
+            }
 
             dgvDonateurs.Rows.Add("DNTR" + dgvDonateurs.RowCount + 1, txtNomDonateur.Text, txtPrenomDonateur.Text, mskTxtBoxTel.Text, txtCourrielDonateur.Text, typeCarte, mskTxtNumeroCarte.Text, numMois.Text + "/" + numAnnee.Text, txtBoxCvc.Text);
         }
