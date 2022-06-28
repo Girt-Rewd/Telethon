@@ -537,23 +537,23 @@ namespace NouvelleInterface
 
         private void cbbPrix_SelectedIndexChanged(object sender, EventArgs e)
         {
-            //cbbPrix.Select();
-            //switch ()
-            //{
-            //    case "Calendrier":
-            //        txtValeurPrix.Text =case "$";
-            //        break;
-            //    case "Repas pour 2":
-            //        txtValeurPrix.Text =case "$";
-            //        break;
-            //    case "BBQ":
-            //        txtValeurPrix.Text =case "$";
-            //        break;
-            //    case "Téléviseur":
-            //        txtValeurPrix.Text =case "$";
-            //        break;
-            //}
-                
+            string prix = cbbPrix.Text;
+            switch (prix)
+            {
+                case "Calendrier":
+                    txtValeurPrix.Text = "10" ;
+                    break;
+                case "Repas pour 2":
+                    txtValeurPrix.Text = "100";
+                    break;
+                case "BBQ":
+                    txtValeurPrix.Text = "300";
+                    break;
+                default:
+                    txtValeurPrix.Text = "1000";
+                    break;
+            }       
+
         }
     }
 

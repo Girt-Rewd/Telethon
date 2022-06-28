@@ -100,14 +100,13 @@
             this.txtValeurPrix = new System.Windows.Forms.TextBox();
             this.txtNomCommanditaire = new System.Windows.Forms.TextBox();
             this.txtPrenomCommanditaire = new System.Windows.Forms.TextBox();
-            this.txtIDPrix = new System.Windows.Forms.TextBox();
             this.lblQuatitePrix = new System.Windows.Forms.Label();
             this.lblValeur = new System.Windows.Forms.Label();
             this.lblNomCommanditaire = new System.Windows.Forms.Label();
             this.lblDescPrix = new System.Windows.Forms.Label();
             this.lblPrenomCommanditaire = new System.Windows.Forms.Label();
             this.lblInfoPrix = new System.Windows.Forms.Label();
-            this.lblIDPrix = new System.Windows.Forms.Label();
+            this.lblDollard = new System.Windows.Forms.Label();
             this.lblInfoCommanditaire = new System.Windows.Forms.Label();
             this.lblIDCommanditaire = new System.Windows.Forms.Label();
             this.tabAPropos = new System.Windows.Forms.TabPage();
@@ -787,14 +786,13 @@
             this.tabCommanditaire.Controls.Add(this.txtValeurPrix);
             this.tabCommanditaire.Controls.Add(this.txtNomCommanditaire);
             this.tabCommanditaire.Controls.Add(this.txtPrenomCommanditaire);
-            this.tabCommanditaire.Controls.Add(this.txtIDPrix);
             this.tabCommanditaire.Controls.Add(this.lblQuatitePrix);
             this.tabCommanditaire.Controls.Add(this.lblValeur);
             this.tabCommanditaire.Controls.Add(this.lblNomCommanditaire);
             this.tabCommanditaire.Controls.Add(this.lblDescPrix);
             this.tabCommanditaire.Controls.Add(this.lblPrenomCommanditaire);
             this.tabCommanditaire.Controls.Add(this.lblInfoPrix);
-            this.tabCommanditaire.Controls.Add(this.lblIDPrix);
+            this.tabCommanditaire.Controls.Add(this.lblDollard);
             this.tabCommanditaire.Controls.Add(this.lblInfoCommanditaire);
             this.tabCommanditaire.Controls.Add(this.lblIDCommanditaire);
             this.tabCommanditaire.Location = new System.Drawing.Point(4, 29);
@@ -807,6 +805,7 @@
             // 
             // cbbPrix
             // 
+            this.cbbPrix.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cbbPrix.FormattingEnabled = true;
             this.cbbPrix.Items.AddRange(new object[] {
             "Calendrier",
@@ -818,7 +817,6 @@
             this.cbbPrix.Name = "cbbPrix";
             this.cbbPrix.Size = new System.Drawing.Size(209, 28);
             this.cbbPrix.TabIndex = 20;
-            this.cbbPrix.Text = "choisir...";
             this.cbbPrix.SelectedIndexChanged += new System.EventHandler(this.cbbPrix_SelectedIndexChanged);
             // 
             // dgvCommanditaires
@@ -951,10 +949,11 @@
             // 
             // txtValeurPrix
             // 
+            this.txtValeurPrix.Enabled = false;
             this.txtValeurPrix.Location = new System.Drawing.Point(736, 215);
             this.txtValeurPrix.Margin = new System.Windows.Forms.Padding(5);
             this.txtValeurPrix.Name = "txtValeurPrix";
-            this.txtValeurPrix.Size = new System.Drawing.Size(209, 27);
+            this.txtValeurPrix.Size = new System.Drawing.Size(92, 27);
             this.txtValeurPrix.TabIndex = 11;
             this.txtValeurPrix.Text = "500";
             this.txtValeurPrix.Click += new System.EventHandler(this.TxtValeurPrix_Click);
@@ -978,14 +977,6 @@
             this.txtPrenomCommanditaire.TabIndex = 12;
             this.txtPrenomCommanditaire.Text = "Jacquier";
             this.txtPrenomCommanditaire.Click += new System.EventHandler(this.TxtPrenomCommanditaire_Click);
-            // 
-            // txtIDPrix
-            // 
-            this.txtIDPrix.Location = new System.Drawing.Point(736, 129);
-            this.txtIDPrix.Margin = new System.Windows.Forms.Padding(5);
-            this.txtIDPrix.Name = "txtIDPrix";
-            this.txtIDPrix.Size = new System.Drawing.Size(209, 27);
-            this.txtIDPrix.TabIndex = 13;
             // 
             // lblQuatitePrix
             // 
@@ -1048,15 +1039,16 @@
             this.lblInfoPrix.TabIndex = 7;
             this.lblInfoPrix.Text = "Informations prix";
             // 
-            // lblIDPrix
+            // lblDollard
             // 
-            this.lblIDPrix.AutoSize = true;
-            this.lblIDPrix.Location = new System.Drawing.Point(612, 132);
-            this.lblIDPrix.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
-            this.lblIDPrix.Name = "lblIDPrix";
-            this.lblIDPrix.Size = new System.Drawing.Size(31, 20);
-            this.lblIDPrix.TabIndex = 8;
-            this.lblIDPrix.Text = "ID :";
+            this.lblDollard.AutoSize = true;
+            this.lblDollard.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.lblDollard.Location = new System.Drawing.Point(834, 218);
+            this.lblDollard.Margin = new System.Windows.Forms.Padding(1, 0, 5, 0);
+            this.lblDollard.Name = "lblDollard";
+            this.lblDollard.Size = new System.Drawing.Size(19, 23);
+            this.lblDollard.TabIndex = 8;
+            this.lblDollard.Text = "$";
             // 
             // lblInfoCommanditaire
             // 
@@ -1265,14 +1257,13 @@
         private TextBox txtValeurPrix;
         private TextBox txtNomCommanditaire;
         private TextBox txtPrenomCommanditaire;
-        private TextBox txtIDPrix;
         private Label lblQuatitePrix;
         private Label lblValeur;
         private Label lblNomCommanditaire;
         private Label lblDescPrix;
         private Label lblPrenomCommanditaire;
         private Label lblInfoPrix;
-        private Label lblIDPrix;
+        private Label lblDollard;
         private Label lblInfoCommanditaire;
         private Label lblIDCommanditaire;
         private Label lblInfoProjetSTE;
