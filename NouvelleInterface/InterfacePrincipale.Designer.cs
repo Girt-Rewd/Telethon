@@ -898,7 +898,6 @@
             this.txtQuantitePrix.Location = new System.Drawing.Point(152, 489);
             this.txtQuantitePrix.Margin = new System.Windows.Forms.Padding(6);
             this.txtQuantitePrix.Name = "txtQuantitePrix";
-            this.txtQuantitePrix.Size = new System.Drawing.Size(92, 23);
             this.txtQuantitePrix.Size = new System.Drawing.Size(114, 27);
             this.txtQuantitePrix.TabIndex = 10;
             this.txtQuantitePrix.Text = "12";
@@ -971,7 +970,7 @@
             this.lblChoixPrix.Location = new System.Drawing.Point(21, 324);
             this.lblChoixPrix.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
             this.lblChoixPrix.Name = "lblChoixPrix";
-            this.lblChoixPrix.Size = new System.Drawing.Size(67, 15);
+            this.lblChoixPrix.Size = new System.Drawing.Size(81, 20);
             this.lblChoixPrix.TabIndex = 6;
             this.lblChoixPrix.Text = "Choix Prix :";
             // 
@@ -1003,9 +1002,9 @@
             this.lblDollard.Location = new System.Drawing.Point(255, 412);
             this.lblDollard.Margin = new System.Windows.Forms.Padding(1, 0, 6, 0);
             this.lblDollard.Name = "lblDollard";
-            this.lblDollard.Size = new System.Drawing.Size(20, 23);
+            this.lblDollard.Size = new System.Drawing.Size(19, 23);
             this.lblDollard.TabIndex = 8;
-            this.lblDollard.Text = "q";
+            this.lblDollard.Text = "$";
             // 
             // lblInfoCommanditaire
             // 
