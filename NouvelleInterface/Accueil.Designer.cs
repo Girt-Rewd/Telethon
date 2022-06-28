@@ -33,12 +33,12 @@
             this.logoEcoHor = new System.Windows.Forms.PictureBox();
             this.panelAccueil = new System.Windows.Forms.Panel();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.picArbre06 = new System.Windows.Forms.PictureBox();
             this.picArbre01 = new System.Windows.Forms.PictureBox();
             this.picArbre02 = new System.Windows.Forms.PictureBox();
             this.picArbre03 = new System.Windows.Forms.PictureBox();
             this.picArbre04 = new System.Windows.Forms.PictureBox();
             this.picArbre05 = new System.Windows.Forms.PictureBox();
+            this.picArbre06 = new System.Windows.Forms.PictureBox();
             this.cadreMontant = new System.Windows.Forms.Panel();
             this.symboleDollar = new System.Windows.Forms.Label();
             this.txtAccueilDons = new System.Windows.Forms.Label();
@@ -52,12 +52,12 @@
             ((System.ComponentModel.ISupportInitialize)(this.logoEcoHor)).BeginInit();
             this.panelAccueil.SuspendLayout();
             this.panel1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.picArbre06)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.picArbre01)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.picArbre02)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.picArbre03)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.picArbre04)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.picArbre05)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.picArbre06)).BeginInit();
             this.cadreMontant.SuspendLayout();
             this.contenuGroup.SuspendLayout();
             this.SuspendLayout();
@@ -125,18 +125,6 @@
             this.panel1.Size = new System.Drawing.Size(221, 290);
             this.panel1.TabIndex = 7;
             // 
-            // picArbre06
-            // 
-            this.picArbre06.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
-            this.picArbre06.Image = global::NouvelleInterface.Properties.Resources.Arbre6;
-            this.picArbre06.Location = new System.Drawing.Point(0, 0);
-            this.picArbre06.Name = "picArbre06";
-            this.picArbre06.Size = new System.Drawing.Size(221, 290);
-            this.picArbre06.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.picArbre06.TabIndex = 0;
-            this.picArbre06.TabStop = false;
-            this.picArbre06.Visible = false;
-            // 
             // picArbre01
             // 
             this.picArbre01.Image = global::NouvelleInterface.Properties.Resources.Arbre1;
@@ -194,6 +182,18 @@
             this.picArbre05.TabStop = false;
             this.picArbre05.Visible = false;
             // 
+            // picArbre06
+            // 
+            this.picArbre06.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
+            this.picArbre06.Image = global::NouvelleInterface.Properties.Resources.Arbre6;
+            this.picArbre06.Location = new System.Drawing.Point(0, 0);
+            this.picArbre06.Name = "picArbre06";
+            this.picArbre06.Size = new System.Drawing.Size(221, 290);
+            this.picArbre06.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.picArbre06.TabIndex = 0;
+            this.picArbre06.TabStop = false;
+            this.picArbre06.Visible = false;
+            // 
             // cadreMontant
             // 
             this.cadreMontant.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
@@ -242,6 +242,7 @@
             // 
             this.txtMontant.BackColor = System.Drawing.Color.White;
             this.txtMontant.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.txtMontant.Enabled = false;
             this.txtMontant.Font = new System.Drawing.Font("Bahnschrift", 45F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.txtMontant.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(154)))), ((int)(((byte)(25)))), ((int)(((byte)(34)))));
             this.txtMontant.HideSelection = false;
@@ -250,6 +251,7 @@
             this.txtMontant.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.txtMontant.Size = new System.Drawing.Size(285, 73);
             this.txtMontant.TabIndex = 4;
+            this.txtMontant.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             this.txtMontant.TextChanged += new System.EventHandler(this.txtMontant_TextChanged);
             // 
             // contourMontant
@@ -317,12 +319,12 @@
             this.panelAccueil.ResumeLayout(false);
             this.panelAccueil.PerformLayout();
             this.panel1.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.picArbre06)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.picArbre01)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.picArbre02)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.picArbre03)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.picArbre04)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.picArbre05)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.picArbre06)).EndInit();
             this.cadreMontant.ResumeLayout(false);
             this.cadreMontant.PerformLayout();
             this.contenuGroup.ResumeLayout(false);
