@@ -21,5 +21,15 @@ namespace NouvelleInterface
         {
 
         }
+
+        private void txtNom_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void icoUser_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }//

@@ -133,6 +133,26 @@ namespace NouvelleInterface.Properties {
         /// <summary>
         ///   Recherche une ressource localisée de type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap btnAnnuler {
+            get {
+                object obj = ResourceManager.GetObject("btnAnnuler", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Recherche une ressource localisée de type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap btnContour {
+            get {
+                object obj = ResourceManager.GetObject("btnContour", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Recherche une ressource localisée de type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap btnInscription {
             get {
                 object obj = ResourceManager.GetObject("btnInscription", resourceCulture);
@@ -173,6 +193,36 @@ namespace NouvelleInterface.Properties {
         /// <summary>
         ///   Recherche une ressource localisée de type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap forme2 {
+            get {
+                object obj = ResourceManager.GetObject("forme2", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Recherche une ressource localisée de type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap forme3 {
+            get {
+                object obj = ResourceManager.GetObject("forme3", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Recherche une ressource localisée de type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap formeRouge {
+            get {
+                object obj = ResourceManager.GetObject("formeRouge", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Recherche une ressource localisée de type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap icoCadenas {
             get {
                 object obj = ResourceManager.GetObject("icoCadenas", resourceCulture);
@@ -183,9 +233,29 @@ namespace NouvelleInterface.Properties {
         /// <summary>
         ///   Recherche une ressource localisée de type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap icoCadenas2 {
+            get {
+                object obj = ResourceManager.GetObject("icoCadenas2", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Recherche une ressource localisée de type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap icoUser {
             get {
                 object obj = ResourceManager.GetObject("icoUser", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Recherche une ressource localisée de type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap icoUser2 {
+            get {
+                object obj = ResourceManager.GetObject("icoUser2", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

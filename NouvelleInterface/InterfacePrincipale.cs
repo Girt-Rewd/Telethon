@@ -478,6 +478,16 @@ namespace NouvelleInterface
                     saveListDonateurs.WriteLine(IDD + "/" + nom + "/" + prenom + "/" + telephone + "/" + courriel + "/" + typeDeCarte + "/" + numeroDeCarte + "/" + dateDexpiration);
             }
         }
+
+        private void grRadioCarte_Enter(object sender, EventArgs e)
+        {
+
+        }
+
+        private void tabDonateur_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 
 }
