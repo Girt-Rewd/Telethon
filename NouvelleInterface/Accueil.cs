@@ -89,7 +89,7 @@ namespace NouvelleInterface
 
                 position = picArbre01.Location;
                 position.X = 68 - ((23  * (pourcentage + 1))) / 20;
-                position.Y = 291 - hauteur;
+                position.Y = hauteurPanelParent - hauteur;
                 position.X = (int)(position.X * facteurConversion);
                 picArbre01.Location = position;
 
@@ -173,7 +173,7 @@ namespace NouvelleInterface
 
                 position = picArbre05.Location;
                 position.X = 10 - (12 * (pourcentage - 79) / 20);
-                position.Y = hauteurPanelParent - hauteur;
+                position.Y = hauteurPanelParent - (int)((double)hauteur*0.95);
                 position.X = (int)(position.X * facteurConversion);
                 picArbre05.Location = position;
 
