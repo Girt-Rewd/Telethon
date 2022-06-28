@@ -38,7 +38,7 @@ namespace NouvelleInterface
         private void txtMontant_TextChanged(object sender, EventArgs e)
         {
             int [,] dimensions= new int[2,6];
-            
+            int hauteurPanelParent = panel1.Height;
              
             double facteurConversion =  (double)panelAccueil.Width / 1010;
             if (txtMontant.Text == null) {
@@ -65,8 +65,8 @@ namespace NouvelleInterface
             dimensions[0, 4] = picArbre05.Width;
             dimensions[1, 4] = picArbre05.Height;
 
-            dimensions[0, 5] = picArbre05.Width;
-            dimensions[1, 5] = picArbre05.Height;
+            dimensions[0, 5] = picArbre06.Width;
+            dimensions[1, 5] = picArbre06.Height;
 
 
 
@@ -111,9 +111,8 @@ namespace NouvelleInterface
 
                 position = picArbre02.Location;
                 position.X = 63 - (10 * (pourcentage + 1) / 20);
-                position.Y = 292 - hauteur;
+                position.Y = hauteurPanelParent - hauteur;
                 position.X = (int)(position.X * facteurConversion);
-                position.Y = (int)(position.Y * facteurConversion);
                 picArbre02.Location = position;
 
             }
@@ -133,9 +132,8 @@ namespace NouvelleInterface
 
                 position = picArbre03.Location;
                 position.X = 72 - (16 * (pourcentage + 1) / 20);
-                position.Y = 290 - hauteur;
+                position.Y = hauteurPanelParent - hauteur;
                 position.X = (int)(position.X * facteurConversion);
-                position.Y = (int)(position.Y * facteurConversion);
                 picArbre03.Location = position;
 
             }
@@ -155,9 +153,8 @@ namespace NouvelleInterface
 
                 position = picArbre04.Location;
                 position.X = 105 - (22 * (pourcentage + 1) / 20);
-                position.Y = (int)((double)291 *facteurConversion) - hauteur;
+                position.Y = hauteurPanelParent - hauteur;
                 position.X = (int)(position.X * facteurConversion);
-                position.Y = (int)(position.Y * facteurConversion);
                 picArbre04.Location = position;
 
             }
@@ -170,16 +167,15 @@ namespace NouvelleInterface
                 picArbre05.Visible = true;
                 picArbre06.Visible = false;
 
-                largeur = (dimensions[0, 4] + ((dimensions[0, 5] - dimensions[0, 4]) *( pourcentage -  79)) / 20);
+                largeur = (dimensions[0, 4] + ((dimensions[0, 5] - dimensions[0, 4]) * (pourcentage -  79)) / 20);
                 hauteur = (dimensions[1, 4] + ((dimensions[1, 5] - dimensions[1, 4]) *  (pourcentage - 79)) / 20);
                 picArbre05.Width = largeur;
                 picArbre05.Height = hauteur;
 
-                position = picArbre02.Location;
+                position = picArbre05.Location;
                 position.X = 10 - (12 * (pourcentage - 79) / 20);
-                position.Y = 51 - (47 * (pourcentage - 79 ) / 20);
+                position.Y = hauteurPanelParent - hauteur;
                 position.X = (int)(position.X * facteurConversion);
-                position.Y = (int)(position.Y * facteurConversion);
                 picArbre05.Location = position;
 
             }
