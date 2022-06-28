@@ -50,7 +50,7 @@
             // 
             // txtAccueil2
             // 
-            txtAccueil2.Font = new System.Drawing.Font("Bahnschrift Light", 21F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            txtAccueil2.Font = new System.Drawing.Font("Bahnschrift SemiLight", 21F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             txtAccueil2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(154)))), ((int)(((byte)(25)))), ((int)(((byte)(34)))));
             txtAccueil2.Location = new System.Drawing.Point(0, 73);
             txtAccueil2.Name = "txtAccueil2";
