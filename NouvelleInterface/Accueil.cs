@@ -37,6 +37,9 @@ namespace NouvelleInterface
 
         private void txtMontant_TextChanged(object sender, EventArgs e)
         {
+            if (txtMontant.Text == null) {
+                txtMontant.Text = "0";
+            }
             int montant = (int)double.Parse(txtMontant.Text)*100;
             int pourcentage = montant / 1000000;
             Point position;
@@ -54,14 +57,14 @@ namespace NouvelleInterface
                 picArbre05.Visible = false;
                 picArbre06.Visible = false;
 
-                wide = (33 + (63  * (pourcentage + 1)) / 20);
-                tall = (65 + (69  * (pourcentage + 1)) / 20);
+                wide = (54 + (42  * (pourcentage + 1)) / 20);
+                tall = (88 + (46  * (pourcentage + 1)) / 20);
                 picArbre01.Width = wide;
                 picArbre01.Height = tall;
 
                 position = picArbre01.Location;
-                position.X = 75 - (22  * (pourcentage + 1)/ 20);
-                position.Y = 290 - tall;
+                position.X = 68 - ((23  * (pourcentage + 1))) / 20;
+                position.Y = 291 - tall;
                 picArbre01.Location = position;
 
             }
@@ -80,8 +83,8 @@ namespace NouvelleInterface
                 picArbre02.Height = tall;
 
                 position = picArbre02.Location;
-                position.X = 53 - (10 * (pourcentage + 1) / 20);
-                position.Y = 290 - tall;
+                position.X = 63 - (10 * (pourcentage + 1) / 20);
+                position.Y = 292 - tall;
                 picArbre02.Location = position;
 
             }
@@ -100,7 +103,7 @@ namespace NouvelleInterface
                 picArbre03.Height = tall;
 
                 position = picArbre03.Location;
-                position.X = 43 - (9 * (pourcentage + 1) / 20);
+                position.X = 72 - (16 * (pourcentage + 1) / 20);
                 position.Y = 290 - tall;
                 picArbre03.Location = position;
 
@@ -120,8 +123,8 @@ namespace NouvelleInterface
                 picArbre04.Height = tall;
 
                 position = picArbre04.Location;
-                position.X = 34 - (24 * (pourcentage + 1) / 20);
-                position.Y = 290 - tall;
+                position.X = 105 - (22 * (pourcentage + 1) / 20);
+                position.Y = 291 - tall;
                 picArbre04.Location = position;
 
             }
@@ -134,14 +137,14 @@ namespace NouvelleInterface
                 picArbre05.Visible = true;
                 picArbre06.Visible = false;
 
-                wide = (203 + (18 * (pourcentage - 79)) / 20);
-                tall = (245 + (45 * (pourcentage - 79)) / 20);
+                wide = (203 + (25 * (pourcentage - 79)) / 20);
+                tall = (245 + (55 * (pourcentage - 79)) / 20);
                 picArbre05.Width = wide;
                 picArbre05.Height = tall;
 
                 position = picArbre02.Location;
-                position.X = 10 - (10 * (pourcentage - 79) / 20);
-                position.Y = 45 - (45 * (pourcentage - 79 ) / 20);
+                position.X = 10 - (12 * (pourcentage - 79) / 20);
+                position.Y = 51 - (47 * (pourcentage - 79 ) / 20);
                 picArbre05.Location = position;
 
             }
