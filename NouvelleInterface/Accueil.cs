@@ -160,8 +160,11 @@ namespace NouvelleInterface
 
         private void btnInscription_Click_1(object sender, EventArgs e)
         {
-            InterfacePrincipale monPrincipal = new();
-            monPrincipal.Show();
+            using (InterfacePrincipale monPrincipal = new())
+            {
+
+                monPrincipal.ShowDialog(this);
+            }
         }
 
         public void GetTotalDon(string reponse) { 
