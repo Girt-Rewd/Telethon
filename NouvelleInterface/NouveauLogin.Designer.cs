@@ -72,6 +72,7 @@
             this.btnOk.TabIndex = 2;
             this.btnOk.Text = "VALIDER";
             this.btnOk.UseVisualStyleBackColor = true;
+            this.btnOk.Click += new System.EventHandler(this.btnOk_Click);
             // 
             // btnAnnuler
             // 

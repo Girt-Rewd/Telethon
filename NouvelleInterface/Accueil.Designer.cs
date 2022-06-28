@@ -32,6 +32,13 @@
             System.Windows.Forms.Label txtAccueil;
             this.logoEcoHor = new System.Windows.Forms.PictureBox();
             this.panelAccueil = new System.Windows.Forms.Panel();
+            this.panel1 = new System.Windows.Forms.Panel();
+            this.picArbre06 = new System.Windows.Forms.PictureBox();
+            this.picArbre01 = new System.Windows.Forms.PictureBox();
+            this.picArbre02 = new System.Windows.Forms.PictureBox();
+            this.picArbre03 = new System.Windows.Forms.PictureBox();
+            this.picArbre04 = new System.Windows.Forms.PictureBox();
+            this.picArbre05 = new System.Windows.Forms.PictureBox();
             this.cadreMontant = new System.Windows.Forms.Panel();
             this.symboleDollar = new System.Windows.Forms.Label();
             this.txtAccueilDons = new System.Windows.Forms.Label();
@@ -44,6 +51,13 @@
             txtAccueil = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.logoEcoHor)).BeginInit();
             this.panelAccueil.SuspendLayout();
+            this.panel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.picArbre06)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.picArbre01)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.picArbre02)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.picArbre03)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.picArbre04)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.picArbre05)).BeginInit();
             this.cadreMontant.SuspendLayout();
             this.contenuGroup.SuspendLayout();
             this.SuspendLayout();
@@ -86,6 +100,7 @@
             this.panelAccueil.BackColor = System.Drawing.Color.Transparent;
             this.panelAccueil.BackgroundImage = global::NouvelleInterface.Properties.Resources.pannelAccueil;
             this.panelAccueil.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.panelAccueil.Controls.Add(this.panel1);
             this.panelAccueil.Controls.Add(this.cadreMontant);
             this.panelAccueil.Controls.Add(this.txtObjectif);
             this.panelAccueil.Controls.Add(this.contenuGroup);
@@ -96,6 +111,88 @@
             this.panelAccueil.Name = "panelAccueil";
             this.panelAccueil.Size = new System.Drawing.Size(1010, 781);
             this.panelAccueil.TabIndex = 1;
+            // 
+            // panel1
+            // 
+            this.panel1.Controls.Add(this.picArbre01);
+            this.panel1.Controls.Add(this.picArbre02);
+            this.panel1.Controls.Add(this.picArbre03);
+            this.panel1.Controls.Add(this.picArbre04);
+            this.panel1.Controls.Add(this.picArbre05);
+            this.panel1.Controls.Add(this.picArbre06);
+            this.panel1.Location = new System.Drawing.Point(737, 333);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(221, 290);
+            this.panel1.TabIndex = 7;
+            // 
+            // picArbre06
+            // 
+            this.picArbre06.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
+            this.picArbre06.Image = global::NouvelleInterface.Properties.Resources.Arbre6;
+            this.picArbre06.Location = new System.Drawing.Point(0, 0);
+            this.picArbre06.Name = "picArbre06";
+            this.picArbre06.Size = new System.Drawing.Size(221, 290);
+            this.picArbre06.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.picArbre06.TabIndex = 0;
+            this.picArbre06.TabStop = false;
+            this.picArbre06.Visible = false;
+            // 
+            // picArbre01
+            // 
+            this.picArbre01.Image = global::NouvelleInterface.Properties.Resources.Arbre1;
+            this.picArbre01.Location = new System.Drawing.Point(68, 202);
+            this.picArbre01.Name = "picArbre01";
+            this.picArbre01.Size = new System.Drawing.Size(54, 88);
+            this.picArbre01.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.picArbre01.TabIndex = 0;
+            this.picArbre01.TabStop = false;
+            // 
+            // picArbre02
+            // 
+            this.picArbre02.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
+            this.picArbre02.Image = global::NouvelleInterface.Properties.Resources.Arbre2;
+            this.picArbre02.Location = new System.Drawing.Point(53, 156);
+            this.picArbre02.Name = "picArbre02";
+            this.picArbre02.Size = new System.Drawing.Size(96, 134);
+            this.picArbre02.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.picArbre02.TabIndex = 0;
+            this.picArbre02.TabStop = false;
+            this.picArbre02.Visible = false;
+            // 
+            // picArbre03
+            // 
+            this.picArbre03.Image = global::NouvelleInterface.Properties.Resources.Arbre3;
+            this.picArbre03.Location = new System.Drawing.Point(43, 119);
+            this.picArbre03.Name = "picArbre03";
+            this.picArbre03.Size = new System.Drawing.Size(117, 171);
+            this.picArbre03.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.picArbre03.TabIndex = 0;
+            this.picArbre03.TabStop = false;
+            this.picArbre03.Visible = false;
+            // 
+            // picArbre04
+            // 
+            this.picArbre04.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
+            this.picArbre04.Image = global::NouvelleInterface.Properties.Resources.Arbre4;
+            this.picArbre04.Location = new System.Drawing.Point(34, 79);
+            this.picArbre04.Name = "picArbre04";
+            this.picArbre04.Size = new System.Drawing.Size(157, 211);
+            this.picArbre04.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.picArbre04.TabIndex = 0;
+            this.picArbre04.TabStop = false;
+            this.picArbre04.Visible = false;
+            // 
+            // picArbre05
+            // 
+            this.picArbre05.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
+            this.picArbre05.Image = global::NouvelleInterface.Properties.Resources.Arbre5;
+            this.picArbre05.Location = new System.Drawing.Point(10, 45);
+            this.picArbre05.Name = "picArbre05";
+            this.picArbre05.Size = new System.Drawing.Size(203, 245);
+            this.picArbre05.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.picArbre05.TabIndex = 0;
+            this.picArbre05.TabStop = false;
+            this.picArbre05.Visible = false;
             // 
             // cadreMontant
             // 
@@ -153,6 +250,7 @@
             this.txtMontant.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.txtMontant.Size = new System.Drawing.Size(285, 73);
             this.txtMontant.TabIndex = 4;
+            this.txtMontant.TextChanged += new System.EventHandler(this.txtMontant_TextChanged);
             // 
             // contourMontant
             // 
@@ -201,6 +299,7 @@
             this.btnInscription.TabIndex = 1;
             this.btnInscription.Text = "&INSCRIPTION\r\nDons et Commandites";
             this.btnInscription.UseVisualStyleBackColor = false;
+            this.btnInscription.Click += new System.EventHandler(this.btnInscription_Click_1);
             // 
             // Accueil
             // 
@@ -217,6 +316,13 @@
             ((System.ComponentModel.ISupportInitialize)(this.logoEcoHor)).EndInit();
             this.panelAccueil.ResumeLayout(false);
             this.panelAccueil.PerformLayout();
+            this.panel1.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.picArbre06)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.picArbre01)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.picArbre02)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.picArbre03)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.picArbre04)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.picArbre05)).EndInit();
             this.cadreMontant.ResumeLayout(false);
             this.cadreMontant.PerformLayout();
             this.contenuGroup.ResumeLayout(false);
@@ -239,5 +345,12 @@
         private Panel cadreMontant;
         private Panel contourMontant;
         private GroupBox contenuGroup;
+        private Panel panel1;
+        private PictureBox picArbre05;
+        private PictureBox picArbre01;
+        private PictureBox picArbre02;
+        private PictureBox picArbre03;
+        private PictureBox picArbre04;
+        private PictureBox picArbre06;
     }
 }

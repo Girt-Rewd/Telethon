@@ -72,7 +72,7 @@
             // pictureBox3
             // 
             this.pictureBox3.Image = global::NouvelleInterface.Properties.Resources.Arbre3;
-            this.pictureBox3.Location = new System.Drawing.Point(71, 164);
+            this.pictureBox3.Location = new System.Drawing.Point(0,0);
             this.pictureBox3.Name = "pictureBox3";
             this.pictureBox3.Size = new System.Drawing.Size(155, 227);
             this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -141,7 +141,7 @@
             this.panel1.Controls.Add(this.pictureBox4);
             this.panel1.Controls.Add(this.pictureBox5);
             this.panel1.Controls.Add(this.pictureBox6);
-            this.panel1.Location = new System.Drawing.Point(389, 12);
+            this.panel1.Location = new System.Drawing.Point(339, 12);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(324, 391);
             this.panel1.TabIndex = 3;

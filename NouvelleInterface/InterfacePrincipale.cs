@@ -14,6 +14,7 @@ namespace NouvelleInterface
 {
     public partial class InterfacePrincipale : Form
     {
+        public static string TotalDon = "0";
 
         /// <summary>
         /// Bloc de déclaration des variables globales
@@ -107,6 +108,10 @@ namespace NouvelleInterface
         /// <param name="e"></param>
         private void BtnAjouterDon_Click(object sender, EventArgs e)
         {
+            if (txtMontant.Text != null) {
+                Accueil parent = (Accueil)this.Owner;
+                parent.GetTotalDon(txtMontant.Text);
+            }
             string dateExpiration = numMois.Value.ToString("00") + "/" + numAnnee.Value.ToString();
             try
             {

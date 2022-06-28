@@ -244,5 +244,15 @@ namespace STELib
             
             return prixNonTrouve;
         }
+        public double SommeDons() {
+            double total = 0;
+            
+            for (int i = 0; i < dons.Count; i++)
+                {
+                total += dons[i].MontantDon;
+            }
+                        
+            return total;
+        }
     }
 }
