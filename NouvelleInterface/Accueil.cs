@@ -37,6 +37,9 @@ namespace NouvelleInterface
 
         private void txtMontant_TextChanged(object sender, EventArgs e)
         {
+            int [,] dimensions= new int[2,6];
+            
+             
             double facteurConversion =  (double)panelAccueil.Width / 1010;
             if (txtMontant.Text == null) {
                 txtMontant.Text = "0";
@@ -46,6 +49,27 @@ namespace NouvelleInterface
             Point position;
             int largeur;
             int hauteur;
+           
+            dimensions[0, 0] = picArbre01.Width;
+            dimensions[1, 0] = picArbre01.Height;
+
+            dimensions[0, 1] = picArbre02.Width;
+            dimensions[1, 1] = picArbre02.Height;
+
+            dimensions[0, 2] = picArbre03.Width;
+            dimensions[1, 2] = picArbre03.Height;
+
+            dimensions[0, 3] = picArbre04.Width;
+            dimensions[1, 3] = picArbre04.Height;
+
+            dimensions[0, 4] = picArbre05.Width;
+            dimensions[1, 4] = picArbre05.Height;
+
+            dimensions[0, 5] = picArbre05.Width;
+            dimensions[1, 5] = picArbre05.Height;
+
+
+
 
             if (pourcentage >= 0 && pourcentage < 20)
             {
@@ -58,8 +82,8 @@ namespace NouvelleInterface
                 picArbre05.Visible = false;
                 picArbre06.Visible = false;
 
-                largeur = (picArbre01.Width + ((picArbre02.Width - picArbre01.Width)  * (pourcentage + 1)) / 20);
-                hauteur = (picArbre01.Height + ((picArbre02.Height - picArbre01.Height)  * (pourcentage + 1)) / 20);
+                largeur = (dimensions[0,0] + ((dimensions[0, 1] - dimensions[0, 0])  * (pourcentage + 1)) / 20);
+                hauteur = (dimensions[1,0] + ((dimensions[1, 1] - dimensions[1, 0])  * (pourcentage + 1)) / 20);
                 picArbre01.Width = largeur;
                 picArbre01.Height = hauteur;
 
@@ -80,8 +104,8 @@ namespace NouvelleInterface
                 picArbre05.Visible = false;
                 picArbre06.Visible = false;
 
-                largeur = (picArbre02.Width + ((picArbre03.Width - picArbre02.Width) * (pourcentage - 19)) / 20);
-                hauteur = (picArbre02.Height + ((picArbre03.Height - picArbre02.Height) * (pourcentage - 19)) / 20);
+                largeur = (dimensions[0, 1] + ((dimensions[0, 2] - dimensions[0, 1]) * (pourcentage - 19)) / 20);
+                hauteur = (dimensions[1, 1] + ((dimensions[1, 2] - dimensions[1, 1]) * (pourcentage - 19)) / 20);
                 picArbre02.Width = largeur;
                 picArbre02.Height = hauteur;
 
@@ -102,8 +126,8 @@ namespace NouvelleInterface
                 picArbre05.Visible = false;
                 picArbre06.Visible = false;
 
-                largeur = (picArbre03.Width + ((picArbre04.Width - picArbre03.Width) * (pourcentage - 39)) / 20);
-                hauteur = (picArbre03.Height + ((picArbre04.Height - picArbre03.Height) * (pourcentage - 39)) / 20);
+                largeur = (dimensions[0, 2] + ((dimensions[0, 3] - dimensions[0, 2]) * (pourcentage - 39)) / 20);
+                hauteur = (dimensions[1, 2] + ((dimensions[1, 3] - dimensions[1, 2]) * (pourcentage - 39)) / 20);
                 picArbre03.Width = largeur;
                 picArbre03.Height = hauteur;
 
@@ -124,14 +148,14 @@ namespace NouvelleInterface
                 picArbre05.Visible = false;
                 picArbre06.Visible = false;
 
-                largeur = (picArbre04.Width + ((picArbre05.Width - picArbre04.Width) * (pourcentage - 59)) / 20);
-                hauteur = (picArbre04.Height + ((picArbre05.Height - picArbre04.Height) * (pourcentage - 59)) / 20);
+                largeur = (dimensions[0, 3] + ((dimensions[0, 4] - dimensions[0, 3]) * (pourcentage - 59)) / 20);
+                hauteur = (dimensions[1, 3] + ((dimensions[1, 4] - dimensions[1, 3]) * (pourcentage - 59)) / 20);
                 picArbre04.Width = largeur;
                 picArbre04.Height = hauteur;
 
                 position = picArbre04.Location;
                 position.X = 105 - (22 * (pourcentage + 1) / 20);
-                position.Y = 291 - hauteur;
+                position.Y = (int)((double)291 *facteurConversion) - hauteur;
                 position.X = (int)(position.X * facteurConversion);
                 position.Y = (int)(position.Y * facteurConversion);
                 picArbre04.Location = position;
@@ -146,8 +170,8 @@ namespace NouvelleInterface
                 picArbre05.Visible = true;
                 picArbre06.Visible = false;
 
-                largeur = (picArbre05.Width + ((picArbre06.Width - picArbre05.Width) * (pourcentage - 79)) / 20);
-                hauteur = (picArbre05.Height + ((picArbre06.Height - picArbre05.Height) * (pourcentage -79)) / 20);
+                largeur = (dimensions[0, 4] + ((dimensions[0, 5] - dimensions[0, 4]) *( pourcentage -  79)) / 20);
+                hauteur = (dimensions[1, 4] + ((dimensions[1, 5] - dimensions[1, 4]) *  (pourcentage - 79)) / 20);
                 picArbre05.Width = largeur;
                 picArbre05.Height = hauteur;
 
