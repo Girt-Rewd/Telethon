@@ -334,7 +334,7 @@ namespace NouvelleInterface
         /// <param name="e"></param>
         private void BtnQuitter_Click(object sender, EventArgs e)
         {
-            StreamWriter saveListCommaditaires = new("ListeCommanditaires.txt", false);
+           
             StreamWriter saveListDon = new("ListeDon.txt", false);
             StreamWriter saveListDonateurs = new("ListeDonateurs.txt", false);
 
@@ -398,11 +398,7 @@ namespace NouvelleInterface
 
                     saveListDonateurs.WriteLine(IDD + "/" + nom + "/" + prenom + "/" + telephone + "/" + courriel + "/" + typeDeCarte + "/" + numeroDeCarte + "/" + dateDexpiration);
             }
-            foreach (Donateur listDonateur in gestionnaireSTE.donateurs)
-            {
-
-                saveListCommaditaires.WriteLine(listDonateur.ToString());
-            }
+           
 
 
             double total = double.Parse(Accueil.montantPasse);
