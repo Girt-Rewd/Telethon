@@ -37,5 +37,11 @@ namespace NouvelleInterface
                 MessageBox.Show("Identifiant ou mot de passe invalide", "Attention", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
+
+        private void btnAnnuler_Click(object sender, EventArgs e)
+        {
+            txtMotDePasse.Text = "";
+            txtNom.Text = "";
+        }
     }
 }//

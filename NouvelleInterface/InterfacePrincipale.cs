@@ -407,7 +407,7 @@ namespace NouvelleInterface
                 total += listDons.getMontantDon();
             }
             saveListDon.WriteLine(total.ToString());
-            saveListCommaditaires.Close();
+            //saveListCommaditaires.Close();
             saveListDon.Close();
             saveListDonateurs.Close();
             this.Close();
