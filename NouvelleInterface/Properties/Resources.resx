@@ -118,17 +118,20 @@
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
-  <data name="Arbre1" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Arbre1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="Arbre2" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Arbre2.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="btnContour" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\btnContour.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="panneAccueil" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\panneAccueil.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="icoCadenas2" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\icoCadenas2.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="Ecolothon" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Ecolothon.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="forme2" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\forme2.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="Arbre1" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Arbre1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -136,17 +139,29 @@
   <data name="Arbre3" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Arbre3.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="pannelAccueil" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\pannelAccueil.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="Arbre2" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Arbre2.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="btnInscription" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\btnInscription.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="forme3" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\forme3.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="btnAnnuler" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\btnAnnuler.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Fond" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Fond.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="Arbre6" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Arbre6.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="Arbre4" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Arbre4.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="pannelAccueil" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\pannelAccueil.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="icoCadenas" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\icoCadenas.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -160,6 +175,9 @@
   <data name="Arbre5" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Arbre5.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="icoUser2" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\icoUser2.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="Background150pp" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Background150pp.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
@@ -169,13 +187,13 @@
   <data name="pannelAccueil1" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\pannelAccueil1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="icoUser" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\icoUser.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
   <data name="Fichier 17150ppi" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Fichier 17150ppi.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-	  <data name="Arbre6" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Arbre6.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="icoUser" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\icoUser.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="formeRouge" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\formeRouge.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
 </root>
