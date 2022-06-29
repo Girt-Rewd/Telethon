@@ -14,7 +14,6 @@ namespace NouvelleInterface
 {
     public partial class InterfacePrincipale : Form
     {
-        public static string TotalDon = "0";
 
         /// <summary>
         /// Bloc de déclaration des variables globales
@@ -225,6 +224,11 @@ namespace NouvelleInterface
                 txtBoxOut.Text = string.Empty;
                 txtBoxOut.Text = gestionnaireSTE.AfficherDons();
             }
+        }
+        private void btnAffichePrix_Click(object sender, EventArgs e)
+        {
+            txtBoxOut.Text = string.Empty;
+            txtBoxOut.Text = gestionnaireSTE.AfficherDons();
         }
         /// <summary>
         /// BtnAfficherCommanditaire_Click présente la liste de tous les commanditaires préservés en mémoire vive sous la forme d’une sympatiques chaine de caractères
@@ -551,25 +555,6 @@ namespace NouvelleInterface
 
         }
 
-        private void richTextBox1_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void grRadioCarte_Enter(object sender, EventArgs e)
-        {
-
-        }
-
-        private void tabDonateur_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void pnInfoDonTitre2_Paint(object sender, PaintEventArgs e)
-        {
-
-        }
     }
 
 }
