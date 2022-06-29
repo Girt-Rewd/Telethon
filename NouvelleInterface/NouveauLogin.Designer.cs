@@ -64,6 +64,7 @@
             this.txtMotDePasse.Location = new System.Drawing.Point(138, 363);
             this.txtMotDePasse.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.txtMotDePasse.Name = "txtMotDePasse";
+            this.txtMotDePasse.Text = "Don@2022";
             this.txtMotDePasse.Size = new System.Drawing.Size(252, 20);
             this.txtMotDePasse.TabIndex = 1;
             // 
