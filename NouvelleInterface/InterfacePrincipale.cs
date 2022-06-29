@@ -19,7 +19,7 @@ namespace NouvelleInterface
         /// <summary>
         /// Bloc de déclaration des variables globales
         /// </summary>
-        GestionnaireSTE gestionnaireSTE = new();
+        readonly GestionnaireSTE gestionnaireSTE = new();
 
         /// <summary>
         /// Constructeur
@@ -109,8 +109,13 @@ namespace NouvelleInterface
             if (txtMontant.Text != null)
             {
                 Accueil parent = (Accueil)this.Owner;
-                parent.GetTotalDon("" + (gestionnaireSTE.SommeDons()+ double.Parse(Accueil.montantPasse)));
+                parent.GetTotalDon("" + (gestionnaireSTE.SommeDons() + double.Parse(Accueil.montantPasse)));
             }
+            else
+            {
+                txtMontant.Text = "0";
+            }
+
             string dateExpiration = numMois.Value.ToString("00") + "/" + numAnnee.Value.ToString();
             try
             {
@@ -168,7 +173,7 @@ namespace NouvelleInterface
                 gestionnaireSTE.AjouterPrix(cbbPrix.Text, double.Parse(txtValeurPrix.Text), int.Parse(txtQuantitePrix.Text), gestionnaireSTE.commanditaires.Last().getIdc(), gestionnaireSTE.prix.Count);
                 MessageBox.Show(gestionnaireSTE.commanditaires.Last().ToString() + " Valeur de commandite " + int.Parse(txtValeurPrix.Text) * int.Parse(txtQuantitePrix.Text) + "$");
             }
-         
+
 
         }
 
@@ -180,23 +185,30 @@ namespace NouvelleInterface
         /// <param name="sender"></param>
         /// <param name="e"></param>
         private void BtnAfficherDonateur_Click(object sender, EventArgs e)
-        {  if (txtBoxOut.Visible == true)
+        {
+            if (txtBoxOut.Visible == true)
             {
                 txtBoxOut.Visible = false;
             }
             if (dgvDonateurs.Visible == false)
-            {   
-                StreamReader readList = new StreamReader("listeDonateurs.txt");
-                string ligne = string.Empty;
-                while ((ligne = readList.ReadLine()) != null)
+            {
+                try
                 {
-                    string[] tabLigne = ligne.Split('/');
+                    StreamReader readList = new("listeDonateurs.txt");
+                    string ligne;
+                    while ((ligne = readList.ReadLine()) != null)
+                    {
+                        string[] tabLigne = ligne.Split('/');
 
-                    dgvDonateurs.Rows.Add(tabLigne);
+                        dgvDonateurs.Rows.Add(tabLigne);
 
+                    }
+                    readList.Close();
+                    dgvDonateurs.Visible = true;
+                } catch {
+                    MessageBox.Show("Impossible de lire le fichiers", "Erreur", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
-                readList.Close();
-                dgvDonateurs.Visible = true;
+
             }
         }
 
@@ -211,7 +223,7 @@ namespace NouvelleInterface
             {
                 dgvDonateurs.Visible = false;
             }
-            if (txtBoxOut.Visible = false)
+            if (txtBoxOut.Visible == false)
             {
                 txtBoxOut.Text = string.Empty;
                 txtBoxOut.Text = gestionnaireSTE.AfficherDons();
@@ -228,8 +240,8 @@ namespace NouvelleInterface
         /// <param name="sender"></param>
         /// <param name="e"></param>
         private void BtnAfficherCommanditaire_Click(object sender, EventArgs e)
-        {          
-            txtBoxOutput.Text = string.Empty;          
+        {
+            txtBoxOutput.Text = string.Empty;
             txtBoxOutput.Text = gestionnaireSTE.AfficherCommanditaires();
         }
 
@@ -446,7 +458,7 @@ namespace NouvelleInterface
 
         }
         // TODO Commentaire Olivier
-        private void TxtNoir(Control lblAchange, string chaineAchange)
+        private static void TxtNoir(Control lblAchange, string chaineAchange)
         {
             lblAchange.ForeColor = Color.Black;
             lblAchange.Text = chaineAchange;
@@ -533,10 +545,10 @@ namespace NouvelleInterface
             string prix = cbbPrix.Text;
             txtValeurPrix.Text = prix switch
             {
-                "Calendrier"    => "10",
-                "Repas pour 2"  => "100",
-                "BBQ"           => "300",
-                _               => "1000",
+                "Calendrier" => "10",
+                "Repas pour 2" => "100",
+                "BBQ" => "300",
+                _ => "1000",
             };
         }
 
