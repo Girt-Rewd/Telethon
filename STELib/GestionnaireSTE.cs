@@ -219,9 +219,9 @@ namespace STELib
         /// <param name="prixCherche"></param>
         /// <returns></returns>
         public string chercherPrix(string prixCherche) {
-            string[] prixPossible = { "Téléviseur", "BBQ", "Repas pour deux", "Calendrier" };
+            string[] prixPossible = { "Téléviseur", "BBQ", "Repas pour deux", "Calendrier", "" };
             int indicePrix = Array.IndexOf(prixPossible, prixCherche);
-            string prixNonTrouve = "Désolé nous n’avons plus de récompenses";
+            string prixNonTrouve = "pas de récompenses";
 
             //Chercher dans le tableau prix la chaine prix determiner
             //pour chaque éléments de prix[]
