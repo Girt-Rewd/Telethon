@@ -15,6 +15,7 @@ namespace NouvelleInterface
     public partial class InterfacePrincipale : Form
     {
 
+
         /// <summary>
         /// Bloc de déclaration des variables globales
         /// </summary>
@@ -127,16 +128,7 @@ namespace NouvelleInterface
 
 
 
-        /// <summary>
-        /// BtnAjouterComm_Click appelle la fonction qui crée une nouvelle instance de la classe Commanditaire à partir des paramètres fournis par l’utilisateur
-        /// via l’interface. Elle est activée par l’événement click du bouton btnAjouterComm
-        /// </summary>
-        /// <param name="sender"></param>
-        /// <param name="e"></param>
-        private void BtnAjouterComm_Click(object sender, EventArgs e)
-        {
 
-        }
 
         /// <summary>
         /// BtnAjouterPrix_Click vérifier les champs des prix donnés par les commanditaire et enregistre un objet correspondant dans le tableau approprié
@@ -179,9 +171,9 @@ namespace NouvelleInterface
          
 
         }
-        #endregion
+
         // TODO boutton afficher prix.
-        #region Affiche les objets.
+
         /// <summary>
         /// BtnAfficherDonateur_Click affiche la liste des donateurs temporairement stockés par l’application dans la RAM
         /// </summary>
@@ -414,16 +406,6 @@ namespace NouvelleInterface
         }
 
 
-        /// <summary>
-        /// Interface_temp_Load Fonction qui gère ce qui doit être fait au moment du chargement de notre formulaire
-        /// </summary>
-        /// <param name="sender"></param>
-        /// <param name="e"></param>
-        private void Interface_temp_Load(object sender, EventArgs e)
-        {
-
-        }
-
 
         /// <summary>
         /// Permet d'afficher une infoBulle , lorsque le curseur survol les textbox des champs obligatoires, info donnateur.
@@ -463,7 +445,7 @@ namespace NouvelleInterface
             }
 
         }
-        // TODO Commentaire
+        // TODO Commentaire Olivier
         private void TxtNoir(Control lblAchange, string chaineAchange)
         {
             lblAchange.ForeColor = Color.Black;
@@ -485,11 +467,13 @@ namespace NouvelleInterface
             TxtNoir(lblCourriel, "Courriel :");
         }
 
-        private void MskTxtNumeroCarte_MaskInputRejected(object sender, MaskInputRejectedEventArgs e)
-        {
 
-        }
-        #region ensemble de fonction qui remette le texte des labels des champs erronés en Noir et qui réinitialise leur valeur
+        /// <summary>
+        /// ensemble de fonction qui remette le texte des labels des champs erronés en Noir et qui réinitialise leur valeur
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        #region
         private void TxtPrenomCommanditaire_Click(object sender, EventArgs e)
         {
             TxtNoir(lblPrenomCommanditaire, "Prénom :");
@@ -517,6 +501,11 @@ namespace NouvelleInterface
 
         #endregion
 
+        /// <summary>
+        /// Fonction qui reinitialiser les champs et retourner au panel infodonateur
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void btnValider_Click(object sender, EventArgs e)
         {
             radAmex.Checked = false;
@@ -531,9 +520,14 @@ namespace NouvelleInterface
             pnlCarteCredit.Visible = false;
             pnlDon.Visible = false;
             pnlInfoDonateur.Visible = true;
-
         }
 
+
+        /// <summary>
+        /// Fonction qui renvoie la valeur unitaire du prix choisi dans le ComboBox
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void cbbPrix_SelectedIndexChanged(object sender, EventArgs e)
         {
             string prix = cbbPrix.Text;
