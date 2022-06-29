@@ -54,7 +54,7 @@
             this.txtNom.Size = new System.Drawing.Size(252, 20);
             this.txtNom.TabIndex = 0;
             this.txtNom.Text = "Telethon2022";
-            this.txtNom.TextChanged += new System.EventHandler(this.txtNom_TextChanged);
+
             // 
             // txtMotDePasse
             // 
