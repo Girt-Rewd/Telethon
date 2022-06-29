@@ -54,7 +54,6 @@
             this.txtNom.Size = new System.Drawing.Size(252, 20);
             this.txtNom.TabIndex = 0;
             this.txtNom.Text = "Telethon2022";
-            this.txtNom.TextChanged += new System.EventHandler(this.txtNom_TextChanged);
             // 
             // txtMotDePasse
             // 
@@ -138,7 +137,6 @@
             this.icoUser.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
             this.icoUser.TabIndex = 5;
             this.icoUser.TabStop = false;
-            this.icoUser.Click += new System.EventHandler(this.icoUser_Click);
             // 
             // LogoEcoLogin
             // 
