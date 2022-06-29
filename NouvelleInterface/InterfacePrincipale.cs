@@ -9,7 +9,12 @@ using System.Text.RegularExpressions;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using STELib;
-
+//TODO Afficher <à propos> à partir de l'accueil.
+//TODO Les messageBox.show affichés lorsqu'on presse les btn Ajouter donateur dans panel info paiment et ajouter Commanditaire ...Amélioré l'apparence
+//TODO Le btn precedent du panel info paiement ne fait rien. Il pourrais revenir au panel info donateur sans le reinitialiser.
+//TODO completer l'AFFICHAGE DES DONS dans interface principal.
+//TODO présentation des string prix lorsqu'on presse btn affiche prix.
+//TODO reinitialiser les champs dans commanditaire lorque le btn ajouter accepte et l'enregistre.
 namespace NouvelleInterface
 {
     public partial class InterfacePrincipale : Form
