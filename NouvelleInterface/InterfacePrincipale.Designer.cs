@@ -154,6 +154,7 @@
             // tabDonateur
             // 
             this.tabDonateur.BackColor = System.Drawing.Color.LightSalmon;
+            this.tabDonateur.Controls.Add(this.pnlInfoDonateur);
             this.tabDonateur.Controls.Add(this.txtBoxOut);
             this.tabDonateur.Controls.Add(this.dgvDonateurs);
             this.tabDonateur.Controls.Add(this.btnAfficherDonateur);
@@ -161,7 +162,6 @@
             this.tabDonateur.Controls.Add(this.btnQuitter);
             this.tabDonateur.Controls.Add(this.btnAfficheDon);
             this.tabDonateur.Controls.Add(this.pnlCarteCredit);
-            this.tabDonateur.Controls.Add(this.pnlInfoDonateur);
             this.tabDonateur.Controls.Add(this.pnlDon);
             this.tabDonateur.Location = new System.Drawing.Point(4, 34);
             this.tabDonateur.Margin = new System.Windows.Forms.Padding(4);
@@ -596,7 +596,6 @@
             this.mskTxtBoxTel.Name = "mskTxtBoxTel";
             this.mskTxtBoxTel.Size = new System.Drawing.Size(235, 27);
             this.mskTxtBoxTel.TabIndex = 4;
-            this.mskTxtBoxTel.Text = "5141112222";
             this.mskTxtBoxTel.Click += new System.EventHandler(this.MskTxtBoxTel_Click);
             // 
             // lblMessageDonateur
@@ -635,7 +634,6 @@
             this.txtPrenomDonateur.Name = "txtPrenomDonateur";
             this.txtPrenomDonateur.Size = new System.Drawing.Size(235, 27);
             this.txtPrenomDonateur.TabIndex = 1;
-            this.txtPrenomDonateur.Text = "Cafredoli";
             this.txtPrenomDonateur.Click += new System.EventHandler(this.TxtPrenomDonateurNoir_Click);
             this.txtPrenomDonateur.MouseHover += new System.EventHandler(this.TxtDonnateurChampsObligatoire_mouseHover);
             // 
@@ -683,7 +681,6 @@
             this.txtNomDonateur.Name = "txtNomDonateur";
             this.txtNomDonateur.Size = new System.Drawing.Size(235, 27);
             this.txtNomDonateur.TabIndex = 2;
-            this.txtNomDonateur.Text = "Godfaimond";
             this.txtNomDonateur.Click += new System.EventHandler(this.TxtNomDonateur_Click);
             // 
             // txtCourrielDonateur
@@ -695,7 +692,6 @@
             this.txtCourrielDonateur.PlaceholderText = "votrenom@domain.com";
             this.txtCourrielDonateur.Size = new System.Drawing.Size(235, 27);
             this.txtCourrielDonateur.TabIndex = 3;
-            this.txtCourrielDonateur.Text = "votrenom@domain.com";
             this.txtCourrielDonateur.Click += new System.EventHandler(this.TxtCourrielDonateur_Click);
             // 
             // lblTelephone
@@ -954,7 +950,6 @@
             this.txtQuantitePrix.Name = "txtQuantitePrix";
             this.txtQuantitePrix.Size = new System.Drawing.Size(168, 27);
             this.txtQuantitePrix.TabIndex = 10;
-            this.txtQuantitePrix.Text = "12";
             this.txtQuantitePrix.Click += new System.EventHandler(this.TxtQuantitePrix_Click);
             // 
             // txtValeurPrix
@@ -964,7 +959,6 @@
             this.txtValeurPrix.Name = "txtValeurPrix";
             this.txtValeurPrix.Size = new System.Drawing.Size(168, 27);
             this.txtValeurPrix.TabIndex = 11;
-            this.txtValeurPrix.Text = "500";
             this.txtValeurPrix.Click += new System.EventHandler(this.TxtValeurPrix_Click);
             // 
             // txtNomCommanditaire
