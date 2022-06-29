@@ -64,7 +64,7 @@
             // 
             // txtAccueil2
             // 
-            txtAccueil2.Font = new System.Drawing.Font("Bahnschrift Light", 21F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            txtAccueil2.Font = new System.Drawing.Font("Bahnschrift SemiLight", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             txtAccueil2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(154)))), ((int)(((byte)(25)))), ((int)(((byte)(34)))));
             txtAccueil2.Location = new System.Drawing.Point(0, 73);
             txtAccueil2.Name = "txtAccueil2";
@@ -90,7 +90,7 @@
             this.logoEcoHor.Image = global::NouvelleInterface.Properties.Resources.Logo2_150ppi;
             this.logoEcoHor.Location = new System.Drawing.Point(52, 72);
             this.logoEcoHor.Name = "logoEcoHor";
-            this.logoEcoHor.Size = new System.Drawing.Size(377, 78);
+            this.logoEcoHor.Size = new System.Drawing.Size(368, 72);
             this.logoEcoHor.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.logoEcoHor.TabIndex = 0;
             this.logoEcoHor.TabStop = false;

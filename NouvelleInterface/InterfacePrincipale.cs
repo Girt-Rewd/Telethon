@@ -555,6 +555,21 @@ namespace NouvelleInterface
         {
 
         }
+
+        private void grRadioCarte_Enter(object sender, EventArgs e)
+        {
+
+        }
+
+        private void tabDonateur_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void pnInfoDonTitre2_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
     }
 
 }
