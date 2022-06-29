@@ -162,11 +162,11 @@
             tabEntrees.Controls.Add(this.tabAPropos);
             tabEntrees.Font = new System.Drawing.Font("Bahnschrift", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             tabEntrees.ItemSize = new System.Drawing.Size(73, 30);
-            tabEntrees.Location = new System.Drawing.Point(13, 12);
+            tabEntrees.Location = new System.Drawing.Point(0, 0);
             tabEntrees.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             tabEntrees.Name = "tabEntrees";
             tabEntrees.SelectedIndex = 0;
-            tabEntrees.Size = new System.Drawing.Size(1258, 881);
+            tabEntrees.Size = new System.Drawing.Size(1287, 824);
             tabEntrees.TabIndex = 0;
             // 
             // tabCommanditaire
@@ -178,7 +178,7 @@
             this.tabCommanditaire.Margin = new System.Windows.Forms.Padding(4);
             this.tabCommanditaire.Name = "tabCommanditaire";
             this.tabCommanditaire.Padding = new System.Windows.Forms.Padding(4, 3, 4, 3);
-            this.tabCommanditaire.Size = new System.Drawing.Size(1250, 843);
+            this.tabCommanditaire.Size = new System.Drawing.Size(1279, 786);
             this.tabCommanditaire.TabIndex = 1;
             this.tabCommanditaire.Text = "Commanditaires";
             // 
