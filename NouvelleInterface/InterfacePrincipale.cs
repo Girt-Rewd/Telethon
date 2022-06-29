@@ -579,5 +579,4 @@ namespace NouvelleInterface
 
         }
     }
-
 }
