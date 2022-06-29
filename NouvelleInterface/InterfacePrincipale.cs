@@ -44,7 +44,11 @@ namespace NouvelleInterface
         /// <param name="e"></param>
         private void BtnAjouterDonateur_Click(object sender, EventArgs e)
         {
+
+
+            Regex CVCRegex = new(@"^(\d{3}\d?)$");
             typeCarte = 'O';
+            bool donneesValide = false;
             // insister sur la complétude des champs des informations de la carte de crédit
             if (!(radAmex.Checked || radMC.Checked || radVisa.Checked) || mskTxtNumeroCarte.Text == "               " || !mskTxtNumeroCarte.MaskCompleted)
             {
@@ -69,11 +73,23 @@ namespace NouvelleInterface
                     lblMessageCredit.Visible = true;
                     mskTxtNumeroCarte.Focus();
                 }
-
+                donneesValide = true;
             }
 
+            
+            else if (txtBoxCvc.Text != "")
+            {
+                if (!CVCRegex.IsMatch(txtBoxCvc.Text))
+                {
+                    MessageBox.Show("Le CVC doit comporter seulement des chiffres (3 ou 4)");
+                    donneesValide = false;
+                }
+                else {
+                    donneesValide = true;
+                }
+            }
             // Tous le champs sont complets et valides
-            else
+            if (donneesValide  == true)
             {
                 //Récupère le type de carte choisi
                 if (radAmex.Checked)
@@ -211,7 +227,9 @@ namespace NouvelleInterface
                     }
                     readList.Close();
                     dgvDonateurs.Visible = true;
-                } catch {
+                }
+                catch
+                {
                     MessageBox.Show("Impossible de lire le fichiers", "Erreur", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
 
