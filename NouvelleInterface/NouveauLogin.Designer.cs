@@ -34,13 +34,13 @@
             this.btnOk = new System.Windows.Forms.Button();
             this.btnAnnuler = new System.Windows.Forms.Button();
             this.panelLogin = new System.Windows.Forms.Panel();
-            this.icoCadenas = new System.Windows.Forms.PictureBox();
-            this.icoUser = new System.Windows.Forms.PictureBox();
             this.LogoEcoLogin = new System.Windows.Forms.PictureBox();
+            this.icoUser = new System.Windows.Forms.PictureBox();
+            this.icoCadenas = new System.Windows.Forms.PictureBox();
             this.panelLogin.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.icoCadenas)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.icoUser)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.LogoEcoLogin)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.icoUser)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.icoCadenas)).BeginInit();
             this.SuspendLayout();
             // 
             // txtNom
@@ -54,7 +54,6 @@
             this.txtNom.Size = new System.Drawing.Size(252, 20);
             this.txtNom.TabIndex = 0;
             this.txtNom.Text = "Telethon2022";
-
             // 
             // txtMotDePasse
             // 
@@ -64,21 +63,24 @@
             this.txtMotDePasse.Location = new System.Drawing.Point(138, 363);
             this.txtMotDePasse.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.txtMotDePasse.Name = "txtMotDePasse";
-            this.txtMotDePasse.Text = "Don@2022";
             this.txtMotDePasse.Size = new System.Drawing.Size(252, 20);
             this.txtMotDePasse.TabIndex = 1;
+            this.txtMotDePasse.Text = "Don@2022";
             // 
             // btnOk
             // 
             this.btnOk.BackgroundImage = global::NouvelleInterface.Properties.Resources.btnContour;
-            this.btnOk.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.btnOk.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.btnOk.FlatAppearance.BorderSize = 0;
-            this.btnOk.Font = new System.Drawing.Font("Consolas", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.btnOk.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(213)))), ((int)(((byte)(147)))));
+            this.btnOk.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(213)))), ((int)(((byte)(147)))));
+            this.btnOk.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnOk.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.btnOk.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(154)))), ((int)(((byte)(25)))), ((int)(((byte)(34)))));
             this.btnOk.Location = new System.Drawing.Point(134, 439);
             this.btnOk.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.btnOk.Name = "btnOk";
-            this.btnOk.Size = new System.Drawing.Size(108, 38);
+            this.btnOk.Size = new System.Drawing.Size(108, 35);
             this.btnOk.TabIndex = 2;
             this.btnOk.Text = "VALIDER";
             this.btnOk.UseVisualStyleBackColor = true;
@@ -87,15 +89,17 @@
             // btnAnnuler
             // 
             this.btnAnnuler.BackgroundImage = global::NouvelleInterface.Properties.Resources.btnAnnuler;
-            this.btnAnnuler.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.btnAnnuler.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(203)))), ((int)(((byte)(86)))), ((int)(((byte)(62)))));
+            this.btnAnnuler.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.btnAnnuler.FlatAppearance.BorderSize = 0;
-            this.btnAnnuler.Font = new System.Drawing.Font("Consolas", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.btnAnnuler.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(178)))), ((int)(((byte)(209)))), ((int)(((byte)(54)))));
+            this.btnAnnuler.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(178)))), ((int)(((byte)(209)))), ((int)(((byte)(54)))));
+            this.btnAnnuler.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnAnnuler.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.btnAnnuler.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(154)))), ((int)(((byte)(25)))), ((int)(((byte)(34)))));
             this.btnAnnuler.Location = new System.Drawing.Point(252, 439);
             this.btnAnnuler.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.btnAnnuler.Name = "btnAnnuler";
-            this.btnAnnuler.Size = new System.Drawing.Size(108, 38);
+            this.btnAnnuler.Size = new System.Drawing.Size(108, 35);
             this.btnAnnuler.TabIndex = 3;
             this.btnAnnuler.Text = "ANNULER";
             this.btnAnnuler.UseVisualStyleBackColor = true;
@@ -117,16 +121,16 @@
             this.panelLogin.Size = new System.Drawing.Size(491, 541);
             this.panelLogin.TabIndex = 4;
             // 
-            // icoCadenas
+            // LogoEcoLogin
             // 
-            this.icoCadenas.BackgroundImage = global::NouvelleInterface.Properties.Resources.icoCadenas2;
-            this.icoCadenas.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
-            this.icoCadenas.Location = new System.Drawing.Point(103, 364);
-            this.icoCadenas.Name = "icoCadenas";
-            this.icoCadenas.Size = new System.Drawing.Size(295, 25);
-            this.icoCadenas.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
-            this.icoCadenas.TabIndex = 6;
-            this.icoCadenas.TabStop = false;
+            this.LogoEcoLogin.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.LogoEcoLogin.Image = global::NouvelleInterface.Properties.Resources.Logo150ppi;
+            this.LogoEcoLogin.Location = new System.Drawing.Point(150, 74);
+            this.LogoEcoLogin.Name = "LogoEcoLogin";
+            this.LogoEcoLogin.Size = new System.Drawing.Size(190, 174);
+            this.LogoEcoLogin.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
+            this.LogoEcoLogin.TabIndex = 4;
+            this.LogoEcoLogin.TabStop = false;
             // 
             // icoUser
             // 
@@ -139,16 +143,16 @@
             this.icoUser.TabIndex = 5;
             this.icoUser.TabStop = false;
             // 
-            // LogoEcoLogin
+            // icoCadenas
             // 
-            this.LogoEcoLogin.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
-            this.LogoEcoLogin.Image = global::NouvelleInterface.Properties.Resources.Logo150ppi;
-            this.LogoEcoLogin.Location = new System.Drawing.Point(150, 74);
-            this.LogoEcoLogin.Name = "LogoEcoLogin";
-            this.LogoEcoLogin.Size = new System.Drawing.Size(190, 174);
-            this.LogoEcoLogin.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
-            this.LogoEcoLogin.TabIndex = 4;
-            this.LogoEcoLogin.TabStop = false;
+            this.icoCadenas.BackgroundImage = global::NouvelleInterface.Properties.Resources.icoCadenas2;
+            this.icoCadenas.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.icoCadenas.Location = new System.Drawing.Point(103, 364);
+            this.icoCadenas.Name = "icoCadenas";
+            this.icoCadenas.Size = new System.Drawing.Size(295, 25);
+            this.icoCadenas.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
+            this.icoCadenas.TabIndex = 6;
+            this.icoCadenas.TabStop = false;
             // 
             // NouveauLogin
             // 
@@ -161,14 +165,17 @@
             this.Controls.Add(this.panelLogin);
             this.DoubleBuffered = true;
             this.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
+            this.MaximizeBox = false;
+            this.MinimizeBox = false;
             this.Name = "NouveauLogin";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Autentification";
             this.Load += new System.EventHandler(this.NouveauLogin_Load);
             this.panelLogin.ResumeLayout(false);
             this.panelLogin.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.icoCadenas)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.icoUser)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.LogoEcoLogin)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.icoUser)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.icoCadenas)).EndInit();
             this.ResumeLayout(false);
 
         }

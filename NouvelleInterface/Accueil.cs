@@ -215,5 +215,10 @@ namespace NouvelleInterface
         public void GetTotalDon(string reponse) { 
             txtMontant.Text = reponse;  
         }
+
+        private void txtAccueil2_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
