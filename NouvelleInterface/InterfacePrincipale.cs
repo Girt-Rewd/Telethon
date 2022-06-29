@@ -121,10 +121,11 @@ namespace NouvelleInterface
                 txtMontant.Text = "0";
             }
 
-            string dateExpiration = numMois.Value.ToString("00") + "/" + numAnnee.Value.ToString();
+            DateTime now = DateTime.Now;
+            string date = now.ToShortDateString(); 
             try
             {
-                gestionnaireSTE.AjouterDon(dateExpiration, double.Parse(txtMontant.Text), gestionnaireSTE.dons.Count);
+                gestionnaireSTE.AjouterDon(date, double.Parse(txtMontant.Text), gestionnaireSTE.dons.Count);
             }
             catch (FormatException)
             {
@@ -133,7 +134,7 @@ namespace NouvelleInterface
             }
 
 
-            dgvDonateurs.Rows.Add("DNTR" + dgvDonateurs.RowCount + 1, txtNomDonateur.Text, txtPrenomDonateur.Text, mskTxtBoxTel.Text, txtCourrielDonateur.Text, typeCarte, mskTxtNumeroCarte.Text, numMois.Text + "/" + numAnnee.Text, txtBoxCvc.Text);
+            dgvDonateurs.Rows.Add("DNTR" + dgvDonateurs.RowCount + 1, txtNomDonateur.Text, txtPrenomDonateur.Text, mskTxtBoxTel.Text, txtCourrielDonateur.Text, typeCarte, mskTxtNumeroCarte.Text, numMois.Text + "-" + numAnnee.Text, txtBoxCvc.Text);
         }
 
 
@@ -230,9 +231,12 @@ namespace NouvelleInterface
             }
             if (txtBoxOut.Visible == false)
             {
+                txtBoxOut.Visible = true;
                 txtBoxOut.Text = string.Empty;
                 txtBoxOut.Text = gestionnaireSTE.AfficherDons();
-            }
+            }else
+                txtBoxOut.Text = string.Empty;
+                txtBoxOut.Text = gestionnaireSTE.AfficherDons();
         }
         private void btnAffichePrix_Click(object sender, EventArgs e)
         {
