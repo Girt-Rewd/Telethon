@@ -154,12 +154,14 @@
             // tabDonateur
             // 
             this.tabDonateur.BackColor = System.Drawing.Color.LightSalmon;
+            this.tabDonateur.Controls.Add(this.pnlInfoDonateur);
             this.tabDonateur.Controls.Add(this.txtBoxOut);
             this.tabDonateur.Controls.Add(this.dgvDonateurs);
             this.tabDonateur.Controls.Add(this.btnAfficherDonateur);
             this.tabDonateur.Controls.Add(this.lblID);
             this.tabDonateur.Controls.Add(this.btnQuitter);
             this.tabDonateur.Controls.Add(this.btnAfficheDon);
+            this.tabDonateur.Controls.Add(this.pnlCarteCredit);
             this.tabDonateur.Controls.Add(this.pnlDon);
             this.tabDonateur.Location = new System.Drawing.Point(4, 34);
             this.tabDonateur.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
@@ -480,7 +482,6 @@
             this.mskTxtNumeroCarte.PromptChar = ' ';
             this.mskTxtNumeroCarte.Size = new System.Drawing.Size(154, 27);
             this.mskTxtNumeroCarte.TabIndex = 4;
-            this.mskTxtNumeroCarte.Text = "1234123412341234";
             this.mskTxtNumeroCarte.Click += new System.EventHandler(this.TxtNumeroCarte_Click);
             // 
             // btnAjoutreDonateur
@@ -558,14 +559,12 @@
             // radVisa
             // 
             this.radVisa.AutoSize = true;
-            this.radVisa.Checked = true;
             this.radVisa.Font = new System.Drawing.Font("Bahnschrift", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.radVisa.Location = new System.Drawing.Point(22, 32);
             this.radVisa.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.radVisa.Name = "radVisa";
             this.radVisa.Size = new System.Drawing.Size(57, 23);
             this.radVisa.TabIndex = 0;
-            this.radVisa.TabStop = true;
             this.radVisa.Text = "Visa";
             this.radVisa.UseVisualStyleBackColor = true;
             // 
@@ -950,7 +949,6 @@
             this.txtQuantitePrix.Name = "txtQuantitePrix";
             this.txtQuantitePrix.Size = new System.Drawing.Size(168, 27);
             this.txtQuantitePrix.TabIndex = 10;
-            this.txtQuantitePrix.Text = "12";
             this.txtQuantitePrix.Click += new System.EventHandler(this.TxtQuantitePrix_Click);
             // 
             // txtValeurPrix
@@ -960,7 +958,6 @@
             this.txtValeurPrix.Name = "txtValeurPrix";
             this.txtValeurPrix.Size = new System.Drawing.Size(168, 27);
             this.txtValeurPrix.TabIndex = 11;
-            this.txtValeurPrix.Text = "500";
             this.txtValeurPrix.Click += new System.EventHandler(this.TxtValeurPrix_Click);
             // 
             // txtNomCommanditaire
@@ -970,7 +967,6 @@
             this.txtNomCommanditaire.Name = "txtNomCommanditaire";
             this.txtNomCommanditaire.Size = new System.Drawing.Size(168, 27);
             this.txtNomCommanditaire.TabIndex = 11;
-            this.txtNomCommanditaire.Text = "Descartes";
             this.txtNomCommanditaire.Click += new System.EventHandler(this.TxtNomCommanditaire_Click);
             // 
             // txtPrenomCommanditaire
@@ -980,7 +976,6 @@
             this.txtPrenomCommanditaire.Name = "txtPrenomCommanditaire";
             this.txtPrenomCommanditaire.Size = new System.Drawing.Size(168, 27);
             this.txtPrenomCommanditaire.TabIndex = 12;
-            this.txtPrenomCommanditaire.Text = "Jacquier";
             this.txtPrenomCommanditaire.Click += new System.EventHandler(this.TxtPrenomCommanditaire_Click);
             // 
             // lblQuatitePrix
