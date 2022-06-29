@@ -66,7 +66,6 @@
             this.txtMotDePasse.Name = "txtMotDePasse";
             this.txtMotDePasse.Size = new System.Drawing.Size(252, 20);
             this.txtMotDePasse.TabIndex = 1;
-            this.txtMotDePasse.Text = "Don@2022";
             // 
             // btnOk
             // 
@@ -138,7 +137,6 @@
             this.icoUser.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
             this.icoUser.TabIndex = 5;
             this.icoUser.TabStop = false;
-            this.icoUser.Click += new System.EventHandler(this.icoUser_Click);
             // 
             // LogoEcoLogin
             // 
