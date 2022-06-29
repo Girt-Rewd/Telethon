@@ -20,7 +20,7 @@ namespace NouvelleInterface
             
             try
             {
-                StreamReader readList = new StreamReader("listeDon.txt");
+                StreamReader readList = new StreamReader("listeTotalDon.txt");
                 montantPasse = (readList.ReadLine());
                 readList.Close();
             }
