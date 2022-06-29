@@ -53,7 +53,6 @@
             this.txtNom.Name = "txtNom";
             this.txtNom.Size = new System.Drawing.Size(252, 20);
             this.txtNom.TabIndex = 0;
-            this.txtNom.Text = "Telethon2022";
             // 
             // txtMotDePasse
             // 
@@ -65,7 +64,6 @@
             this.txtMotDePasse.Name = "txtMotDePasse";
             this.txtMotDePasse.Size = new System.Drawing.Size(252, 20);
             this.txtMotDePasse.TabIndex = 1;
-            this.txtMotDePasse.Text = "Don@2022";
             // 
             // btnOk
             // 
