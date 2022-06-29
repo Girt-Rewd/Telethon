@@ -433,13 +433,13 @@
             this.tabAPropos.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.tabAPropos.Name = "tabAPropos";
             this.tabAPropos.Padding = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.tabAPropos.Size = new System.Drawing.Size(1250, 843);
+            this.tabAPropos.Size = new System.Drawing.Size(1160, 786);
             this.tabAPropos.TabIndex = 2;
             this.tabAPropos.Text = "À propros";
             // 
             // richTextBox1
             // 
-            this.richTextBox1.Location = new System.Drawing.Point(233, 36);
+            this.richTextBox1.Location = new System.Drawing.Point(265, 69);
             this.richTextBox1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.richTextBox1.Name = "richTextBox1";
             this.richTextBox1.Size = new System.Drawing.Size(626, 318);
@@ -449,7 +449,7 @@
             // lblOlivier
             // 
             this.lblOlivier.AutoSize = true;
-            this.lblOlivier.Location = new System.Drawing.Point(65, 110);
+            this.lblOlivier.Location = new System.Drawing.Point(97, 143);
             this.lblOlivier.Name = "lblOlivier";
             this.lblOlivier.Size = new System.Drawing.Size(128, 19);
             this.lblOlivier.TabIndex = 0;
@@ -458,7 +458,7 @@
             // lblCatherine
             // 
             this.lblCatherine.AutoSize = true;
-            this.lblCatherine.Location = new System.Drawing.Point(65, 90);
+            this.lblCatherine.Location = new System.Drawing.Point(97, 123);
             this.lblCatherine.Name = "lblCatherine";
             this.lblCatherine.Size = new System.Drawing.Size(125, 19);
             this.lblCatherine.TabIndex = 0;
@@ -467,7 +467,7 @@
             // lblFred
             // 
             this.lblFred.AutoSize = true;
-            this.lblFred.Location = new System.Drawing.Point(65, 71);
+            this.lblFred.Location = new System.Drawing.Point(97, 104);
             this.lblFred.Name = "lblFred";
             this.lblFred.Size = new System.Drawing.Size(123, 19);
             this.lblFred.TabIndex = 0;
@@ -476,7 +476,7 @@
             // lblAuteur01
             // 
             this.lblAuteur01.AutoSize = true;
-            this.lblAuteur01.Location = new System.Drawing.Point(42, 52);
+            this.lblAuteur01.Location = new System.Drawing.Point(74, 85);
             this.lblAuteur01.Name = "lblAuteur01";
             this.lblAuteur01.Size = new System.Drawing.Size(74, 19);
             this.lblAuteur01.TabIndex = 0;
@@ -485,7 +485,7 @@
             // lblInfoProjetSTE
             // 
             this.lblInfoProjetSTE.AutoSize = true;
-            this.lblInfoProjetSTE.Location = new System.Drawing.Point(42, 36);
+            this.lblInfoProjetSTE.Location = new System.Drawing.Point(74, 69);
             this.lblInfoProjetSTE.Name = "lblInfoProjetSTE";
             this.lblInfoProjetSTE.Size = new System.Drawing.Size(67, 19);
             this.lblInfoProjetSTE.TabIndex = 0;
