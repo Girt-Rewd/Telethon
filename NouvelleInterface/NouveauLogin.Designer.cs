@@ -53,6 +53,8 @@
             this.txtNom.Name = "txtNom";
             this.txtNom.Size = new System.Drawing.Size(252, 20);
             this.txtNom.TabIndex = 0;
+            this.txtNom.Text = "Telethon2022";
+
             // 
             // txtMotDePasse
             // 
