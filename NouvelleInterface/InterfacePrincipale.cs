@@ -531,22 +531,13 @@ namespace NouvelleInterface
         private void cbbPrix_SelectedIndexChanged(object sender, EventArgs e)
         {
             string prix = cbbPrix.Text;
-            switch (prix)
+            txtValeurPrix.Text = prix switch
             {
-                case "Calendrier":
-                    txtValeurPrix.Text = "10";
-                    break;
-                case "Repas pour 2":
-                    txtValeurPrix.Text = "100";
-                    break;
-                case "BBQ":
-                    txtValeurPrix.Text = "300";
-                    break;
-                default:
-                    txtValeurPrix.Text = "1000";
-                    break;
-            }
-
+                "Calendrier"    => "10",
+                "Repas pour 2"  => "100",
+                "BBQ"           => "300",
+                _               => "1000",
+            };
         }
 
         private void panel4_Paint(object sender, PaintEventArgs e)
