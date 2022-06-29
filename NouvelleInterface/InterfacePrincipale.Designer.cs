@@ -89,7 +89,7 @@
             this.btnQuitter = new System.Windows.Forms.Button();
             this.btnAfficheDon = new System.Windows.Forms.Button();
             this.tabCommanditaire = new System.Windows.Forms.TabPage();
-            this.txtBoxCommanditaire = new System.Windows.Forms.RichTextBox();
+            this.txtBoxOutput = new System.Windows.Forms.RichTextBox();
             this.cbbPrix = new System.Windows.Forms.ComboBox();
             this.lblMessagePrix = new System.Windows.Forms.Label();
             this.lblMessageCommanditaire = new System.Windows.Forms.Label();
@@ -126,6 +126,7 @@
             this.Column4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.panel1 = new System.Windows.Forms.Panel();
             this.label1 = new System.Windows.Forms.Label();
+            this.txtBoxOut = new System.Windows.Forms.RichTextBox();
             this.tabEntrees.SuspendLayout();
             this.tabDonateur.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvDonateurs)).BeginInit();
@@ -160,6 +161,8 @@
             // tabDonateur
             // 
             this.tabDonateur.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(178)))), ((int)(((byte)(209)))), ((int)(((byte)(54)))));
+            this.tabDonateur.BackColor = System.Drawing.Color.LightSalmon;
+            this.tabDonateur.Controls.Add(this.txtBoxOut);
             this.tabDonateur.Controls.Add(this.dgvDonateurs);
             this.tabDonateur.Controls.Add(this.btnAfficherDonateur);
             this.tabDonateur.Controls.Add(this.lblID);
@@ -978,6 +981,8 @@
             this.tabCommanditaire.BackColor = System.Drawing.Color.PaleGreen;
             this.tabCommanditaire.BackgroundImage = global::NouvelleInterface.Properties.Resources.Background150pp;
             this.tabCommanditaire.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.tabCommanditaire.Controls.Add(this.txtBoxOutput);
+            this.tabCommanditaire.Controls.Add(this.cbbPrix);
             this.tabCommanditaire.Controls.Add(this.lblMessagePrix);
             this.tabCommanditaire.Controls.Add(this.lblMessageCommanditaire);
             this.tabCommanditaire.Controls.Add(this.btnAffichePrix);
@@ -1005,14 +1010,14 @@
             this.tabCommanditaire.TabIndex = 1;
             this.tabCommanditaire.Text = "Commanditaires";
             // 
-            // txtBoxCommanditaire
+            // txtBoxOutput
             // 
-            this.txtBoxCommanditaire.Location = new System.Drawing.Point(672, 121);
-            this.txtBoxCommanditaire.Margin = new System.Windows.Forms.Padding(4);
-            this.txtBoxCommanditaire.Name = "txtBoxCommanditaire";
-            this.txtBoxCommanditaire.Size = new System.Drawing.Size(616, 180);
-            this.txtBoxCommanditaire.TabIndex = 21;
-            this.txtBoxCommanditaire.Text = "";
+            this.txtBoxOutput.Location = new System.Drawing.Point(672, 121);
+            this.txtBoxOutput.Margin = new System.Windows.Forms.Padding(4);
+            this.txtBoxOutput.Name = "txtBoxOutput";
+            this.txtBoxOutput.Size = new System.Drawing.Size(616, 180);
+            this.txtBoxOutput.TabIndex = 21;
+            this.txtBoxOutput.Text = "";
             // 
             // cbbPrix
             // 
@@ -1070,7 +1075,7 @@
             this.btnAjouterPrix.Name = "btnAjouterPrix";
             this.btnAjouterPrix.Size = new System.Drawing.Size(182, 41);
             this.btnAjouterPrix.TabIndex = 15;
-            this.btnAjouterPrix.Text = "Ajouter un prix";
+            this.btnAjouterPrix.Text = "Ajouter Commandite";
             this.btnAjouterPrix.UseVisualStyleBackColor = true;
             this.btnAjouterPrix.Click += new System.EventHandler(this.BtnAjouterPrix_Click);
             // 
@@ -1390,6 +1395,15 @@
             this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             */
             // 
+            // txtBoxOut
+            // 
+            this.txtBoxOut.Location = new System.Drawing.Point(684, 30);
+            this.txtBoxOut.Name = "txtBoxOut";
+            this.txtBoxOut.Size = new System.Drawing.Size(336, 307);
+            this.txtBoxOut.TabIndex = 15;
+            this.txtBoxOut.Text = "";
+            this.txtBoxOut.Visible = false;
+            // 
             // InterfacePrincipale
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
@@ -1525,5 +1539,7 @@
         private Button btnPrecedent;
         private Panel panel1;
         private Label label1;
+        private RichTextBox txtBoxOutput;
+        private RichTextBox txtBoxOut;
     }
 }
