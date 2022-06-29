@@ -44,7 +44,11 @@ namespace NouvelleInterface
         /// <param name="e"></param>
         private void BtnAjouterDonateur_Click(object sender, EventArgs e)
         {
+
+
+            Regex CVCRegex = new(@"^(\d{3}\d?)$");
             typeCarte = 'O';
+            bool donneesValide = false;
             // insister sur la complétude des champs des informations de la carte de crédit
             if (!(radAmex.Checked || radMC.Checked || radVisa.Checked) || mskTxtNumeroCarte.Text == "               " || !mskTxtNumeroCarte.MaskCompleted)
             {
@@ -69,11 +73,24 @@ namespace NouvelleInterface
                     lblMessageCredit.Visible = true;
                     mskTxtNumeroCarte.Focus();
                 }
-
+                donneesValide = true;
             }
 
+
+            else if (txtBoxCvc.Text != "")
+            {
+                if (!CVCRegex.IsMatch(txtBoxCvc.Text))
+                {
+                    MessageBox.Show("Le CVC doit comporter seulement des chiffres (3 ou 4)");
+                    donneesValide = false;
+                }
+                else
+                {
+                    donneesValide = true;
+                }
+            }
             // Tous le champs sont complets et valides
-            else
+            if (donneesValide == true)
             {
                 //Récupère le type de carte choisi
                 if (radAmex.Checked)
@@ -122,7 +139,7 @@ namespace NouvelleInterface
             }
 
             DateTime now = DateTime.Now;
-            string date = now.ToShortDateString(); 
+            string date = now.ToShortDateString();
             try
             {
                 gestionnaireSTE.AjouterDon(date, double.Parse(txtMontant.Text), gestionnaireSTE.dons.Count);
@@ -148,14 +165,11 @@ namespace NouvelleInterface
         /// <param name="e"></param>
         private void BtnAjouterPrix_Click(object sender, EventArgs e)
         {
-            if (txtPrenomCommanditaire.Text == "" || txtNomCommanditaire.Text == "")
+            int qte;
+            if (txtPrenomCommanditaire.Text == "" || txtNomCommanditaire.Text == "" || txtQuantitePrix.Text == "" || cbbPrix.SelectedIndex <= -1)
             {
                 SignalerIncompletude(txtNomCommanditaire, "", lblNomCommanditaire, lblMessageCommanditaire, "Nom :");
                 SignalerIncompletude(txtPrenomCommanditaire, "", lblPrenomCommanditaire, lblMessageCommanditaire, "Prénom :");
-                //MessageBox.Show
-            }
-            else if (txtQuantitePrix.Text == "" || cbbPrix.SelectedIndex <= -1)
-            {
                 SignalerIncompletude(txtQuantitePrix, "", lblQuatitePrix, lblMessagePrix, "Quantité :");
                 if (cbbPrix.SelectedIndex <= -1)
                 {
@@ -172,12 +186,21 @@ namespace NouvelleInterface
                         lblChoixPrix.Text = "Choix Prix :";
                     }
                 }
+
             }
             else
             {
-                gestionnaireSTE.AjouterCommanditaire(txtPrenomCommanditaire.Text, txtNomCommanditaire.Text, gestionnaireSTE.commanditaires.Count);
-                gestionnaireSTE.AjouterPrix(cbbPrix.Text, double.Parse(txtValeurPrix.Text), int.Parse(txtQuantitePrix.Text), gestionnaireSTE.commanditaires.Last().getIdc(), gestionnaireSTE.prix.Count);
-                MessageBox.Show(gestionnaireSTE.commanditaires.Last().ToString() + " Valeur de commandite " + int.Parse(txtValeurPrix.Text) * int.Parse(txtQuantitePrix.Text) + "$");
+                if (int.TryParse(txtQuantitePrix.Text, out qte))
+                {
+                    gestionnaireSTE.AjouterCommanditaire(txtPrenomCommanditaire.Text, txtNomCommanditaire.Text, gestionnaireSTE.commanditaires.Count);
+                    gestionnaireSTE.AjouterPrix(cbbPrix.Text, double.Parse(txtValeurPrix.Text), qte, gestionnaireSTE.commanditaires.Last().getIdc(), gestionnaireSTE.prix.Count);
+                    MessageBox.Show(gestionnaireSTE.commanditaires.Last().ToString() + " Valeur de commandite " + int.Parse(txtValeurPrix.Text) * int.Parse(txtQuantitePrix.Text) + "$");
+                }
+                else 
+                {
+                    MessageBox.Show("Corriger la quantité", "Erreur", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    txtQuantitePrix.Focus(); 
+                }
             }
 
 
@@ -211,7 +234,9 @@ namespace NouvelleInterface
                     }
                     readList.Close();
                     dgvDonateurs.Visible = true;
-                } catch {
+                }
+                catch
+                {
                     MessageBox.Show("Impossible de lire le fichiers", "Erreur", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
 
@@ -234,9 +259,10 @@ namespace NouvelleInterface
                 txtBoxOut.Visible = true;
                 txtBoxOut.Text = string.Empty;
                 txtBoxOut.Text = gestionnaireSTE.AfficherDons();
-            }else
+            }
+            else
                 txtBoxOut.Text = string.Empty;
-                txtBoxOut.Text = gestionnaireSTE.AfficherDons();
+            txtBoxOut.Text = gestionnaireSTE.AfficherDons();
         }
         private void btnAffichePrix_Click(object sender, EventArgs e)
         {
@@ -575,6 +601,10 @@ namespace NouvelleInterface
         {
 
         }
-    }
 
+        private void dgvDonateurs_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
+    }
 }

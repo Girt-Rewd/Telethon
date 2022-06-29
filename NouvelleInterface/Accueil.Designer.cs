@@ -260,12 +260,12 @@
             // 
             this.txtMontant.BackColor = System.Drawing.Color.White;
             this.txtMontant.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.txtMontant.Enabled = false;
             this.txtMontant.Font = new System.Drawing.Font("Bahnschrift", 45F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.txtMontant.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(154)))), ((int)(((byte)(25)))), ((int)(((byte)(34)))));
             this.txtMontant.HideSelection = false;
-            this.txtMontant.Location = new System.Drawing.Point(374, 14);
+            this.txtMontant.Location = new System.Drawing.Point(380, 14);
             this.txtMontant.Name = "txtMontant";
+            this.txtMontant.ReadOnly = true;
             this.txtMontant.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.txtMontant.Size = new System.Drawing.Size(285, 73);
             this.txtMontant.TabIndex = 4;
@@ -322,6 +322,8 @@
             this.ClientSize = new System.Drawing.Size(1183, 842);
             this.Controls.Add(this.panelAccueil);
             this.DoubleBuffered = true;
+            this.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(57)))), ((int)(((byte)(56)))), ((int)(((byte)(57)))));
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "Accueil";
             this.Text = "EcoGreen - pour un avenir meilleur";
