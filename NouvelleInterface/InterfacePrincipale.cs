@@ -227,8 +227,8 @@ namespace NouvelleInterface
         }
         private void btnAffichePrix_Click(object sender, EventArgs e)
         {
-            txtBoxOut.Text = string.Empty;
-            txtBoxOut.Text = gestionnaireSTE.AfficherDons();
+            txtBoxOutput.Text = string.Empty;
+            txtBoxOutput.Text = gestionnaireSTE.AfficherPrix();
         }
         /// <summary>
         /// BtnAfficherCommanditaire_Click présente la liste de tous les commanditaires préservés en mémoire vive sous la forme d’une sympatiques chaine de caractères
@@ -237,7 +237,7 @@ namespace NouvelleInterface
         /// <param name="e"></param>
         private void BtnAfficherCommanditaire_Click(object sender, EventArgs e)
         {          
-            txtBoxOutput.Text=string.Empty;          
+            txtBoxOutput.Text = string.Empty;          
             txtBoxOutput.Text = gestionnaireSTE.AfficherCommanditaires();
         }
 
