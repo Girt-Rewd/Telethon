@@ -42,7 +42,7 @@ namespace STELib
         /// </summary>
         /// <returns>string</returns>
         public new string ToString() {
-            return "Identifiant du don : " + idDon + " date du don : " + dateDon + " montant : " + montantDon;
+            return  idDon + " date " + dateDon + " montant : " + montantDon;
         }
         public double getMontantDon()
         {

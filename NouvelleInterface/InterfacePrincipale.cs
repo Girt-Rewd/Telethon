@@ -21,8 +21,6 @@ namespace NouvelleInterface
         /// </summary>
         GestionnaireSTE gestionnaireSTE = new();
 
-
-
         /// <summary>
         /// Constructeur
         /// </summary>
@@ -191,9 +189,12 @@ namespace NouvelleInterface
         /// <param name="sender"></param>
         /// <param name="e"></param>
         private void BtnAfficherDonateur_Click(object sender, EventArgs e)
-        {
-            if (dgvDonateurs.Visible == false)
+        {  if (txtBoxOut.Visible == true)
             {
+                txtBoxOut.Visible = false;
+            }
+            if (dgvDonateurs.Visible == false)
+            {   
                 StreamReader readList = new StreamReader("listeDonateurs.txt");
                 string ligne = string.Empty;
                 while ((ligne = readList.ReadLine()) != null)
@@ -215,17 +216,25 @@ namespace NouvelleInterface
         /// <param name="e"></param>
         private void BtnAfficheDon_Click(object sender, EventArgs e)
         {
-            //textBoxOutput.Text = gestionnaireSTE.AfficherDons();
+            if (dgvDonateurs.Visible == true)
+            {
+                dgvDonateurs.Visible = false;
+            }
+            if (txtBoxOut.Visible = false)
+            {
+                txtBoxOut.Text = string.Empty;
+                txtBoxOut.Text = gestionnaireSTE.AfficherDons();
+            }
         }
-
         /// <summary>
         /// BtnAfficherCommanditaire_Click présente la liste de tous les commanditaires préservés en mémoire vive sous la forme d’une sympatiques chaine de caractères
         /// </summary>
         /// <param name="sender"></param>
         /// <param name="e"></param>
         private void BtnAfficherCommanditaire_Click(object sender, EventArgs e)
-        {
-            txtBoxCommanditaire.Text = gestionnaireSTE.AfficherCommanditaires();
+        {          
+            txtBoxOutput.Text=string.Empty;          
+            txtBoxOutput.Text = gestionnaireSTE.AfficherCommanditaires();
         }
 
         #endregion

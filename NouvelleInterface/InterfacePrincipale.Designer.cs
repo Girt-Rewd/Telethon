@@ -85,7 +85,7 @@
             this.btnQuitter = new System.Windows.Forms.Button();
             this.btnAfficheDon = new System.Windows.Forms.Button();
             this.tabCommanditaire = new System.Windows.Forms.TabPage();
-            this.txtBoxCommanditaire = new System.Windows.Forms.RichTextBox();
+            this.txtBoxOutput = new System.Windows.Forms.RichTextBox();
             this.cbbPrix = new System.Windows.Forms.ComboBox();
             this.lblMessagePrix = new System.Windows.Forms.Label();
             this.lblMessageCommanditaire = new System.Windows.Forms.Label();
@@ -120,6 +120,7 @@
             this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.txtBoxOut = new System.Windows.Forms.RichTextBox();
             this.tabEntrees.SuspendLayout();
             this.tabDonateur.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvDonateurs)).BeginInit();
@@ -148,6 +149,7 @@
             // tabDonateur
             // 
             this.tabDonateur.BackColor = System.Drawing.Color.LightSalmon;
+            this.tabDonateur.Controls.Add(this.txtBoxOut);
             this.tabDonateur.Controls.Add(this.dgvDonateurs);
             this.tabDonateur.Controls.Add(this.pnlCarteCredit);
             this.tabDonateur.Controls.Add(this.pnlDon);
@@ -771,7 +773,7 @@
             // tabCommanditaire
             // 
             this.tabCommanditaire.BackColor = System.Drawing.Color.PaleGreen;
-            this.tabCommanditaire.Controls.Add(this.txtBoxCommanditaire);
+            this.tabCommanditaire.Controls.Add(this.txtBoxOutput);
             this.tabCommanditaire.Controls.Add(this.cbbPrix);
             this.tabCommanditaire.Controls.Add(this.lblMessagePrix);
             this.tabCommanditaire.Controls.Add(this.lblMessageCommanditaire);
@@ -800,14 +802,14 @@
             this.tabCommanditaire.TabIndex = 1;
             this.tabCommanditaire.Text = "Commanditaires";
             // 
-            // txtBoxCommanditaire
+            // txtBoxOutput
             // 
-            this.txtBoxCommanditaire.Location = new System.Drawing.Point(672, 121);
-            this.txtBoxCommanditaire.Margin = new System.Windows.Forms.Padding(4);
-            this.txtBoxCommanditaire.Name = "txtBoxCommanditaire";
-            this.txtBoxCommanditaire.Size = new System.Drawing.Size(616, 180);
-            this.txtBoxCommanditaire.TabIndex = 21;
-            this.txtBoxCommanditaire.Text = "";
+            this.txtBoxOutput.Location = new System.Drawing.Point(672, 121);
+            this.txtBoxOutput.Margin = new System.Windows.Forms.Padding(4);
+            this.txtBoxOutput.Name = "txtBoxOutput";
+            this.txtBoxOutput.Size = new System.Drawing.Size(616, 180);
+            this.txtBoxOutput.TabIndex = 21;
+            this.txtBoxOutput.Text = "";
             // 
             // cbbPrix
             // 
@@ -862,12 +864,12 @@
             // 
             // btnAjouterPrix
             // 
-            this.btnAjouterPrix.Location = new System.Drawing.Point(129, 646);
+            this.btnAjouterPrix.Location = new System.Drawing.Point(103, 610);
             this.btnAjouterPrix.Margin = new System.Windows.Forms.Padding(6, 5, 6, 5);
             this.btnAjouterPrix.Name = "btnAjouterPrix";
             this.btnAjouterPrix.Size = new System.Drawing.Size(228, 51);
             this.btnAjouterPrix.TabIndex = 15;
-            this.btnAjouterPrix.Text = "Ajouter un prix";
+            this.btnAjouterPrix.Text = "Ajouter Commandite";
             this.btnAjouterPrix.UseVisualStyleBackColor = true;
             this.btnAjouterPrix.Click += new System.EventHandler(this.BtnAjouterPrix_Click);
             // 
@@ -957,7 +959,7 @@
             // lblNomCommanditaire
             // 
             this.lblNomCommanditaire.AutoSize = true;
-            this.lblNomCommanditaire.Location = new System.Drawing.Point(45, 152);
+            this.lblNomCommanditaire.Location = new System.Drawing.Point(63, 159);
             this.lblNomCommanditaire.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
             this.lblNomCommanditaire.Name = "lblNomCommanditaire";
             this.lblNomCommanditaire.Size = new System.Drawing.Size(49, 20);
@@ -1146,6 +1148,15 @@
             this.Column4.Name = "Column4";
             this.Column4.Width = 125;
             // 
+            // txtBoxOut
+            // 
+            this.txtBoxOut.Location = new System.Drawing.Point(684, 30);
+            this.txtBoxOut.Name = "txtBoxOut";
+            this.txtBoxOut.Size = new System.Drawing.Size(336, 307);
+            this.txtBoxOut.TabIndex = 15;
+            this.txtBoxOut.Text = "";
+            this.txtBoxOut.Visible = false;
+            // 
             // InterfacePrincipale
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(120F, 120F);
@@ -1268,6 +1279,7 @@
         private DataGridViewTextBoxColumn Column12;
         private DataGridViewTextBoxColumn cvc;
         private ComboBox cbbPrix;
-        private RichTextBox txtBoxCommanditaire;
+        private RichTextBox txtBoxOutput;
+        private RichTextBox txtBoxOut;
     }
 }
