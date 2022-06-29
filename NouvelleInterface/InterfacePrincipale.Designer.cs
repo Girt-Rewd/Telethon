@@ -166,7 +166,7 @@
             tabEntrees.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             tabEntrees.Name = "tabEntrees";
             tabEntrees.SelectedIndex = 0;
-            tabEntrees.Size = new System.Drawing.Size(1287, 824);
+            tabEntrees.Size = new System.Drawing.Size(1168, 824);
             tabEntrees.TabIndex = 0;
             // 
             // tabCommanditaire
@@ -178,7 +178,7 @@
             this.tabCommanditaire.Margin = new System.Windows.Forms.Padding(4);
             this.tabCommanditaire.Name = "tabCommanditaire";
             this.tabCommanditaire.Padding = new System.Windows.Forms.Padding(4, 3, 4, 3);
-            this.tabCommanditaire.Size = new System.Drawing.Size(1279, 786);
+            this.tabCommanditaire.Size = new System.Drawing.Size(1160, 786);
             this.tabCommanditaire.TabIndex = 1;
             this.tabCommanditaire.Text = "Commanditaires";
             // 
@@ -214,7 +214,7 @@
             // 
             // txtBoxOutput
             // 
-            this.txtBoxOutput.Location = new System.Drawing.Point(482, 262);
+            this.txtBoxOutput.Location = new System.Drawing.Point(476, 257);
             this.txtBoxOutput.Margin = new System.Windows.Forms.Padding(4);
             this.txtBoxOutput.Name = "txtBoxOutput";
             this.txtBoxOutput.Size = new System.Drawing.Size(420, 254);
@@ -223,7 +223,7 @@
             // 
             // txtPrenomCommanditaire
             // 
-            this.txtPrenomCommanditaire.Location = new System.Drawing.Point(260, 153);
+            this.txtPrenomCommanditaire.Location = new System.Drawing.Point(258, 146);
             this.txtPrenomCommanditaire.Margin = new System.Windows.Forms.Padding(4);
             this.txtPrenomCommanditaire.Name = "txtPrenomCommanditaire";
             this.txtPrenomCommanditaire.Size = new System.Drawing.Size(168, 27);
@@ -240,7 +240,7 @@
             "BBQ",
             "Téléviseur 32\"",
             ""});
-            this.cbbPrix.Location = new System.Drawing.Point(264, 334);
+            this.cbbPrix.Location = new System.Drawing.Point(258, 329);
             this.cbbPrix.Margin = new System.Windows.Forms.Padding(4);
             this.cbbPrix.Name = "cbbPrix";
             this.cbbPrix.Size = new System.Drawing.Size(168, 27);
@@ -250,7 +250,7 @@
             // lblIDCommanditaire
             // 
             this.lblIDCommanditaire.AutoSize = true;
-            this.lblIDCommanditaire.Location = new System.Drawing.Point(135, 117);
+            this.lblIDCommanditaire.Location = new System.Drawing.Point(129, 112);
             this.lblIDCommanditaire.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblIDCommanditaire.Name = "lblIDCommanditaire";
             this.lblIDCommanditaire.Size = new System.Drawing.Size(32, 19);
@@ -260,10 +260,11 @@
             // lblMessagePrix
             // 
             this.lblMessagePrix.AutoSize = true;
+            this.lblMessagePrix.Font = new System.Drawing.Font("Bahnschrift", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.lblMessagePrix.ForeColor = System.Drawing.Color.Maroon;
-            this.lblMessagePrix.Location = new System.Drawing.Point(264, 472);
+            this.lblMessagePrix.Location = new System.Drawing.Point(295, 456);
             this.lblMessagePrix.Name = "lblMessagePrix";
-            this.lblMessagePrix.Size = new System.Drawing.Size(166, 19);
+            this.lblMessagePrix.Size = new System.Drawing.Size(132, 16);
             this.lblMessagePrix.TabIndex = 18;
             this.lblMessagePrix.Text = "*Champs obligatoires";
             this.lblMessagePrix.Visible = false;
@@ -272,7 +273,7 @@
             // 
             this.lblInfoCommanditaire.AutoSize = true;
             this.lblInfoCommanditaire.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.lblInfoCommanditaire.Location = new System.Drawing.Point(135, 80);
+            this.lblInfoCommanditaire.Location = new System.Drawing.Point(129, 75);
             this.lblInfoCommanditaire.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblInfoCommanditaire.Name = "lblInfoCommanditaire";
             this.lblInfoCommanditaire.Size = new System.Drawing.Size(189, 15);
@@ -282,24 +283,25 @@
             // lblMessageCommanditaire
             // 
             this.lblMessageCommanditaire.AutoSize = true;
+            this.lblMessageCommanditaire.Font = new System.Drawing.Font("Bahnschrift", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.lblMessageCommanditaire.ForeColor = System.Drawing.Color.Maroon;
-            this.lblMessageCommanditaire.Location = new System.Drawing.Point(264, 240);
+            this.lblMessageCommanditaire.Location = new System.Drawing.Point(294, 223);
             this.lblMessageCommanditaire.Name = "lblMessageCommanditaire";
-            this.lblMessageCommanditaire.Size = new System.Drawing.Size(166, 19);
+            this.lblMessageCommanditaire.Size = new System.Drawing.Size(132, 16);
             this.lblMessageCommanditaire.TabIndex = 18;
             this.lblMessageCommanditaire.Text = "*Champs obligatoires";
             this.lblMessageCommanditaire.Visible = false;
             // 
             // lblDollard
             // 
-            this.lblDollard.Location = new System.Drawing.Point(492, 294);
+            this.lblDollard.Location = new System.Drawing.Point(486, 289);
             this.lblDollard.Name = "lblDollard";
             this.lblDollard.Size = new System.Drawing.Size(100, 23);
             this.lblDollard.TabIndex = 22;
             // 
             // btnAffichePrix
             // 
-            this.btnAffichePrix.Location = new System.Drawing.Point(530, 530);
+            this.btnAffichePrix.Location = new System.Drawing.Point(524, 525);
             this.btnAffichePrix.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.btnAffichePrix.Name = "btnAffichePrix";
             this.btnAffichePrix.Size = new System.Drawing.Size(182, 50);
@@ -312,7 +314,7 @@
             // 
             this.lblInfoPrix.AutoSize = true;
             this.lblInfoPrix.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.lblInfoPrix.Location = new System.Drawing.Point(135, 305);
+            this.lblInfoPrix.Location = new System.Drawing.Point(129, 300);
             this.lblInfoPrix.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblInfoPrix.Name = "lblInfoPrix";
             this.lblInfoPrix.Size = new System.Drawing.Size(115, 15);
@@ -321,7 +323,7 @@
             // 
             // btnAjouterPrix
             // 
-            this.btnAjouterPrix.Location = new System.Drawing.Point(250, 530);
+            this.btnAjouterPrix.Location = new System.Drawing.Point(244, 525);
             this.btnAjouterPrix.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.btnAjouterPrix.Name = "btnAjouterPrix";
             this.btnAjouterPrix.Size = new System.Drawing.Size(182, 50);
@@ -333,7 +335,7 @@
             // lblPrenomCommanditaire
             // 
             this.lblPrenomCommanditaire.AutoSize = true;
-            this.lblPrenomCommanditaire.Location = new System.Drawing.Point(135, 156);
+            this.lblPrenomCommanditaire.Location = new System.Drawing.Point(129, 149);
             this.lblPrenomCommanditaire.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblPrenomCommanditaire.Name = "lblPrenomCommanditaire";
             this.lblPrenomCommanditaire.Size = new System.Drawing.Size(75, 19);
@@ -342,7 +344,7 @@
             // 
             // btnAfficherComm
             // 
-            this.btnAfficherComm.Location = new System.Drawing.Point(720, 530);
+            this.btnAfficherComm.Location = new System.Drawing.Point(714, 525);
             this.btnAfficherComm.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.btnAfficherComm.Name = "btnAfficherComm";
             this.btnAfficherComm.Size = new System.Drawing.Size(182, 50);
@@ -354,7 +356,7 @@
             // lblChoixPrix
             // 
             this.lblChoixPrix.AutoSize = true;
-            this.lblChoixPrix.Location = new System.Drawing.Point(135, 337);
+            this.lblChoixPrix.Location = new System.Drawing.Point(129, 332);
             this.lblChoixPrix.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblChoixPrix.Name = "lblChoixPrix";
             this.lblChoixPrix.Size = new System.Drawing.Size(100, 19);
@@ -363,7 +365,7 @@
             // 
             // txtQuantitePrix
             // 
-            this.txtQuantitePrix.Location = new System.Drawing.Point(264, 430);
+            this.txtQuantitePrix.Location = new System.Drawing.Point(258, 425);
             this.txtQuantitePrix.Margin = new System.Windows.Forms.Padding(4);
             this.txtQuantitePrix.Name = "txtQuantitePrix";
             this.txtQuantitePrix.Size = new System.Drawing.Size(168, 27);
@@ -373,7 +375,7 @@
             // lblNomCommanditaire
             // 
             this.lblNomCommanditaire.AutoSize = true;
-            this.lblNomCommanditaire.Location = new System.Drawing.Point(135, 201);
+            this.lblNomCommanditaire.Location = new System.Drawing.Point(129, 192);
             this.lblNomCommanditaire.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblNomCommanditaire.Name = "lblNomCommanditaire";
             this.lblNomCommanditaire.Size = new System.Drawing.Size(51, 19);
@@ -382,7 +384,7 @@
             // 
             // txtValeurPrix
             // 
-            this.txtValeurPrix.Location = new System.Drawing.Point(264, 382);
+            this.txtValeurPrix.Location = new System.Drawing.Point(258, 377);
             this.txtValeurPrix.Margin = new System.Windows.Forms.Padding(4);
             this.txtValeurPrix.Name = "txtValeurPrix";
             this.txtValeurPrix.Size = new System.Drawing.Size(168, 27);
@@ -392,7 +394,7 @@
             // lblValeur
             // 
             this.lblValeur.AutoSize = true;
-            this.lblValeur.Location = new System.Drawing.Point(135, 385);
+            this.lblValeur.Location = new System.Drawing.Point(129, 380);
             this.lblValeur.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblValeur.Name = "lblValeur";
             this.lblValeur.Size = new System.Drawing.Size(125, 19);
@@ -401,7 +403,7 @@
             // 
             // txtNomCommanditaire
             // 
-            this.txtNomCommanditaire.Location = new System.Drawing.Point(260, 201);
+            this.txtNomCommanditaire.Location = new System.Drawing.Point(258, 192);
             this.txtNomCommanditaire.Margin = new System.Windows.Forms.Padding(4);
             this.txtNomCommanditaire.Name = "txtNomCommanditaire";
             this.txtNomCommanditaire.Size = new System.Drawing.Size(168, 27);
@@ -411,7 +413,7 @@
             // lblQuatitePrix
             // 
             this.lblQuatitePrix.AutoSize = true;
-            this.lblQuatitePrix.Location = new System.Drawing.Point(135, 433);
+            this.lblQuatitePrix.Location = new System.Drawing.Point(129, 428);
             this.lblQuatitePrix.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblQuatitePrix.Name = "lblQuatitePrix";
             this.lblQuatitePrix.Size = new System.Drawing.Size(78, 19);
@@ -503,7 +505,7 @@
             this.tabDonateur.Margin = new System.Windows.Forms.Padding(4);
             this.tabDonateur.Name = "tabDonateur";
             this.tabDonateur.Padding = new System.Windows.Forms.Padding(4);
-            this.tabDonateur.Size = new System.Drawing.Size(1250, 843);
+            this.tabDonateur.Size = new System.Drawing.Size(1160, 786);
             this.tabDonateur.TabIndex = 0;
             this.tabDonateur.Text = "Donateur";
             // 
@@ -1445,7 +1447,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(96F, 96F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Dpi;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(213)))), ((int)(((byte)(147)))));
-            this.ClientSize = new System.Drawing.Size(1284, 818);
+            this.ClientSize = new System.Drawing.Size(1164, 818);
             this.Controls.Add(tabEntrees);
             this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "InterfacePrincipale";
