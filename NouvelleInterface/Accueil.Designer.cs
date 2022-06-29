@@ -322,6 +322,8 @@
             this.ClientSize = new System.Drawing.Size(1183, 842);
             this.Controls.Add(this.panelAccueil);
             this.DoubleBuffered = true;
+            this.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(57)))), ((int)(((byte)(56)))), ((int)(((byte)(57)))));
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "Accueil";
             this.Text = "EcoGreen - pour un avenir meilleur";
