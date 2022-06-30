@@ -599,5 +599,15 @@ namespace NouvelleInterface
             saveListDon.Close();
             saveListDonateurs.Close();
         }
+
+        private void radAmex_Click(object sender, EventArgs e)
+        {
+            grRadioCarte.ForeColor = Color.Black;
+        }
+
+        private void radMC_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

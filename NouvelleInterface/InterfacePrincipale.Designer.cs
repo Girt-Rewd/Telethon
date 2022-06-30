@@ -35,7 +35,6 @@
             this.pnlFondListes = new System.Windows.Forms.Panel();
             this.pnlTitreListes = new System.Windows.Forms.Panel();
             this.labTitreListes = new System.Windows.Forms.Label();
-            this.btnQuitter = new System.Windows.Forms.Button();
             this.btnAfficheDon = new System.Windows.Forms.Button();
             this.btnAfficherDonateur = new System.Windows.Forms.Button();
             this.dgvDonateurs = new System.Windows.Forms.DataGridView();
@@ -62,6 +61,7 @@
             this.txtNomDonateur = new System.Windows.Forms.TextBox();
             this.txtCourrielDonateur = new System.Windows.Forms.TextBox();
             this.lblTelephone = new System.Windows.Forms.Label();
+            this.btnQuitter = new System.Windows.Forms.Button();
             this.pnlCarteCredit = new System.Windows.Forms.Panel();
             this.lblID = new System.Windows.Forms.Label();
             this.btnPrecedent = new System.Windows.Forms.Button();
@@ -91,9 +91,9 @@
             this.txtRecompense = new System.Windows.Forms.TextBox();
             this.lblMontant = new System.Windows.Forms.Label();
             this.btnCalculRecompense = new System.Windows.Forms.Button();
-            this.btnValider = new System.Windows.Forms.Button();
             this.txtMontant = new System.Windows.Forms.TextBox();
             this.btnAjouterDon = new System.Windows.Forms.Button();
+            this.btnValider = new System.Windows.Forms.Button();
             this.tabCommanditaire = new System.Windows.Forms.TabPage();
             this.pnlCommandites = new System.Windows.Forms.Panel();
             this.panel2 = new System.Windows.Forms.Panel();
@@ -218,26 +218,6 @@
             this.labTitreListes.TabIndex = 26;
             this.labTitreListes.Text = "Listes des DONATEURS et DONS reçus";
             this.infoBulle.SetToolTip(this.labTitreListes, "Donateurs et montants des dons");
-            // 
-            // btnQuitter
-            // 
-            this.btnQuitter.BackColor = System.Drawing.Color.Transparent;
-            this.btnQuitter.BackgroundImage = global::NouvelleInterface.Properties.Resources.btn6;
-            this.btnQuitter.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.btnQuitter.FlatAppearance.BorderSize = 0;
-            this.btnQuitter.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(247)))), ((int)(((byte)(155)))), ((int)(((byte)(121)))));
-            this.btnQuitter.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(247)))), ((int)(((byte)(155)))), ((int)(((byte)(121)))));
-            this.btnQuitter.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnQuitter.Font = new System.Drawing.Font("Bahnschrift SemiBold SemiConden", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.btnQuitter.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(154)))), ((int)(((byte)(25)))), ((int)(((byte)(34)))));
-            this.btnQuitter.Location = new System.Drawing.Point(949, 703);
-            this.btnQuitter.Margin = new System.Windows.Forms.Padding(4);
-            this.btnQuitter.Name = "btnQuitter";
-            this.btnQuitter.Size = new System.Drawing.Size(162, 35);
-            this.btnQuitter.TabIndex = 2;
-            this.btnQuitter.Text = "Retour à l’accueil";
-            this.btnQuitter.UseVisualStyleBackColor = false;
-            this.btnQuitter.Click += new System.EventHandler(this.BtnQuitter_Click);
             // 
             // btnAfficheDon
             // 
@@ -563,6 +543,26 @@
             this.lblTelephone.TabIndex = 0;
             this.lblTelephone.Text = "Téléphone :";
             // 
+            // btnQuitter
+            // 
+            this.btnQuitter.BackColor = System.Drawing.Color.Transparent;
+            this.btnQuitter.BackgroundImage = global::NouvelleInterface.Properties.Resources.btn6;
+            this.btnQuitter.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btnQuitter.FlatAppearance.BorderSize = 0;
+            this.btnQuitter.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(247)))), ((int)(((byte)(155)))), ((int)(((byte)(121)))));
+            this.btnQuitter.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(247)))), ((int)(((byte)(155)))), ((int)(((byte)(121)))));
+            this.btnQuitter.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnQuitter.Font = new System.Drawing.Font("Bahnschrift SemiBold SemiConden", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.btnQuitter.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(154)))), ((int)(((byte)(25)))), ((int)(((byte)(34)))));
+            this.btnQuitter.Location = new System.Drawing.Point(949, 703);
+            this.btnQuitter.Margin = new System.Windows.Forms.Padding(4);
+            this.btnQuitter.Name = "btnQuitter";
+            this.btnQuitter.Size = new System.Drawing.Size(162, 35);
+            this.btnQuitter.TabIndex = 2;
+            this.btnQuitter.Text = "Retour à l’accueil";
+            this.btnQuitter.UseVisualStyleBackColor = false;
+            this.btnQuitter.Click += new System.EventHandler(this.BtnQuitter_Click);
+            // 
             // pnlCarteCredit
             // 
             this.pnlCarteCredit.BackColor = System.Drawing.Color.Transparent;
@@ -696,6 +696,7 @@
             this.radAmex.TabIndex = 2;
             this.radAmex.Text = "Amex";
             this.radAmex.UseVisualStyleBackColor = true;
+            this.radAmex.Click += new System.EventHandler(this.radAmex_Click);
             // 
             // radMC
             // 
@@ -710,6 +711,7 @@
             this.radMC.TabIndex = 1;
             this.radMC.Text = "MC";
             this.radMC.UseVisualStyleBackColor = false;
+            this.radMC.Click += new System.EventHandler(this.radMC_Click);
             // 
             // radVisa
             // 
@@ -998,23 +1000,6 @@
             this.btnCalculRecompense.UseVisualStyleBackColor = true;
             this.btnCalculRecompense.Click += new System.EventHandler(this.BtnCalculRecompense_Click);
             // 
-            // btnValider
-            // 
-            this.btnValider.BackgroundImage = global::NouvelleInterface.Properties.Resources.btn6;
-            this.btnValider.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.btnValider.FlatAppearance.BorderSize = 0;
-            this.btnValider.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnValider.Font = new System.Drawing.Font("Bahnschrift SemiBold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.btnValider.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(154)))), ((int)(((byte)(25)))), ((int)(((byte)(34)))));
-            this.btnValider.Location = new System.Drawing.Point(591, 190);
-            this.btnValider.Margin = new System.Windows.Forms.Padding(4);
-            this.btnValider.Name = "btnValider";
-            this.btnValider.Size = new System.Drawing.Size(135, 45);
-            this.btnValider.TabIndex = 23;
-            this.btnValider.Text = "Valider";
-            this.btnValider.UseVisualStyleBackColor = true;
-            this.btnValider.Click += new System.EventHandler(this.btnValider_Click);
-            // 
             // txtMontant
             // 
             this.txtMontant.BackColor = System.Drawing.Color.Cornsilk;
@@ -1045,6 +1030,23 @@
             this.btnAjouterDon.Text = "Ajouter";
             this.btnAjouterDon.UseVisualStyleBackColor = true;
             this.btnAjouterDon.Click += new System.EventHandler(this.BtnAjouterDon_Click);
+            // 
+            // btnValider
+            // 
+            this.btnValider.BackgroundImage = global::NouvelleInterface.Properties.Resources.btn6;
+            this.btnValider.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btnValider.FlatAppearance.BorderSize = 0;
+            this.btnValider.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnValider.Font = new System.Drawing.Font("Bahnschrift SemiBold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.btnValider.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(154)))), ((int)(((byte)(25)))), ((int)(((byte)(34)))));
+            this.btnValider.Location = new System.Drawing.Point(591, 190);
+            this.btnValider.Margin = new System.Windows.Forms.Padding(4);
+            this.btnValider.Name = "btnValider";
+            this.btnValider.Size = new System.Drawing.Size(135, 45);
+            this.btnValider.TabIndex = 23;
+            this.btnValider.Text = "Valider";
+            this.btnValider.UseVisualStyleBackColor = true;
+            this.btnValider.Click += new System.EventHandler(this.btnValider_Click);
             // 
             // tabCommanditaire
             // 
