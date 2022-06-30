@@ -111,24 +111,25 @@ namespace NouvelleInterface
         /// <param name="e"></param>
         private void BtnAjouterDon_Click(object sender, EventArgs e)
         {
-            if (txtMontant.Text != null)
-            {
-                Accueil parent = (Accueil)this.Owner;
-                if (Accueil.montantPasse == "") {
-                    Accueil.montantPasse = "0";
-                }
-                parent.GetTotalDon("" + (gestionnaireSTE.SommeDons() + double.Parse(Accueil.montantPasse)));
-            }
-            else
-            {
-                txtMontant.Text = "0";
-            }
 
             DateTime now = DateTime.Now;
-            string date = now.ToShortDateString(); 
+            string date = now.ToShortDateString();
             try
             {
                 gestionnaireSTE.AjouterDon(date, double.Parse(txtMontant.Text), gestionnaireSTE.dons.Count);
+                if (txtMontant.Text != null)
+                {
+                    Accueil parent = (Accueil)this.Owner;
+                    if (Accueil.montantPasse == "")
+                    {
+                        Accueil.montantPasse = "0";
+                    }
+                    parent.GetTotalDon("" + (gestionnaireSTE.SommeDons() + double.Parse(Accueil.montantPasse)));
+                }
+                else
+                {
+                    txtMontant.Text = "0";
+                }
             }
             catch (FormatException)
             {
@@ -138,6 +139,7 @@ namespace NouvelleInterface
 
 
             dgvDonateurs.Rows.Add("DNTR" + dgvDonateurs.RowCount + 1, txtNomDonateur.Text, txtPrenomDonateur.Text, mskTxtBoxTel.Text, txtCourrielDonateur.Text, typeCarte, mskTxtNumeroCarte.Text, numMois.Text + "-" + numAnnee.Text, txtBoxCvc.Text);
+            MessageBox.Show("VALIDER INFO DU DON \n\r\r" + gestionnaireSTE.dons.Last().ToString());
         }
 
 
@@ -216,7 +218,9 @@ namespace NouvelleInterface
                     }
                     readList.Close();
                     dgvDonateurs.Visible = true;
-                } catch {
+                }
+                catch
+                {
                     MessageBox.Show("Impossible de lire le fichiers", "Erreur", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
 
@@ -239,9 +243,10 @@ namespace NouvelleInterface
                 txtBoxOut.Visible = true;
                 txtBoxOut.Text = string.Empty;
                 txtBoxOut.Text = gestionnaireSTE.AfficherDons();
-            }else
+            }
+            else
                 txtBoxOut.Text = string.Empty;
-                txtBoxOut.Text = gestionnaireSTE.AfficherDons();
+            txtBoxOut.Text = gestionnaireSTE.AfficherDons();
         }
         private void btnAffichePrix_Click(object sender, EventArgs e)
         {

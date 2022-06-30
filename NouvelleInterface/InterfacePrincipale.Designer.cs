@@ -30,7 +30,6 @@
         {
             this.components = new System.ComponentModel.Container();
             System.Windows.Forms.TabControl tabEntrees;
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(InterfacePrincipale));
             this.tabDonateur = new System.Windows.Forms.TabPage();
             this.txtBoxOut = new System.Windows.Forms.RichTextBox();
             this.pnlCarteCredit = new System.Windows.Forms.Panel();
@@ -38,7 +37,7 @@
             this.btnPrecedent = new System.Windows.Forms.Button();
             this.pnTitrePaiement = new System.Windows.Forms.Panel();
             this.labPaiement = new System.Windows.Forms.Label();
-            this.btnAjoutreDonateur = new System.Windows.Forms.Button();
+            this.btnAjouterDonateur = new System.Windows.Forms.Button();
             this.lblMessageCredit = new System.Windows.Forms.Label();
             this.grRadioCarte = new System.Windows.Forms.GroupBox();
             this.radAmex = new System.Windows.Forms.RadioButton();
@@ -116,13 +115,6 @@
             this.lblValeur = new System.Windows.Forms.Label();
             this.txtNomCommanditaire = new System.Windows.Forms.TextBox();
             this.lblQuatitePrix = new System.Windows.Forms.Label();
-            this.tabAPropos = new System.Windows.Forms.TabPage();
-            this.richTextBox1 = new System.Windows.Forms.RichTextBox();
-            this.lblOlivier = new System.Windows.Forms.Label();
-            this.lblCatherine = new System.Windows.Forms.Label();
-            this.lblFred = new System.Windows.Forms.Label();
-            this.lblAuteur01 = new System.Windows.Forms.Label();
-            this.lblInfoProjetSTE = new System.Windows.Forms.Label();
             this.lblCarteCredit = new System.Windows.Forms.Label();
             this.lblnfoDonateur = new System.Windows.Forms.Label();
             this.infoBulle = new System.Windows.Forms.ToolTip(this.components);
@@ -152,7 +144,6 @@
             this.panel5.SuspendLayout();
             this.tabCommanditaire.SuspendLayout();
             this.panel6.SuspendLayout();
-            this.tabAPropos.SuspendLayout();
             this.SuspendLayout();
             // 
             // tabEntrees
@@ -160,7 +151,6 @@
             tabEntrees.Appearance = System.Windows.Forms.TabAppearance.Buttons;
             tabEntrees.Controls.Add(this.tabDonateur);
             tabEntrees.Controls.Add(this.tabCommanditaire);
-            tabEntrees.Controls.Add(this.tabAPropos);
             tabEntrees.Font = new System.Drawing.Font("Bahnschrift", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             tabEntrees.ItemSize = new System.Drawing.Size(73, 30);
             tabEntrees.Location = new System.Drawing.Point(0, 0);
@@ -175,11 +165,11 @@
             this.tabDonateur.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(178)))), ((int)(((byte)(209)))), ((int)(((byte)(54)))));
             this.tabDonateur.BackgroundImage = global::NouvelleInterface.Properties.Resources.Background150pp;
             this.tabDonateur.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.tabDonateur.Controls.Add(this.pnlCarteCredit);
             this.tabDonateur.Controls.Add(this.txtBoxOut);
             this.tabDonateur.Controls.Add(this.pnlDon);
             this.tabDonateur.Controls.Add(this.pnlInfoDonateur);
             this.tabDonateur.Controls.Add(this.panel4);
+            this.tabDonateur.Controls.Add(this.pnlCarteCredit);
             this.tabDonateur.Location = new System.Drawing.Point(4, 34);
             this.tabDonateur.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
             this.tabDonateur.Name = "tabDonateur";
@@ -206,7 +196,7 @@
             this.pnlCarteCredit.Controls.Add(this.lblID);
             this.pnlCarteCredit.Controls.Add(this.btnPrecedent);
             this.pnlCarteCredit.Controls.Add(this.pnTitrePaiement);
-            this.pnlCarteCredit.Controls.Add(this.btnAjoutreDonateur);
+            this.pnlCarteCredit.Controls.Add(this.btnAjouterDonateur);
             this.pnlCarteCredit.Controls.Add(this.lblMessageCredit);
             this.pnlCarteCredit.Controls.Add(this.grRadioCarte);
             this.pnlCarteCredit.Controls.Add(this.panel3);
@@ -273,25 +263,25 @@
             this.labPaiement.TabIndex = 26;
             this.labPaiement.Text = "INFORMATIONS PAIEMENT";
             // 
-            // btnAjoutreDonateur
+            // btnAjouterDonateur
             // 
-            this.btnAjoutreDonateur.BackColor = System.Drawing.Color.White;
-            this.btnAjoutreDonateur.BackgroundImage = global::NouvelleInterface.Properties.Resources.btnContour;
-            this.btnAjoutreDonateur.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.btnAjoutreDonateur.FlatAppearance.BorderSize = 0;
-            this.btnAjoutreDonateur.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(213)))), ((int)(((byte)(147)))));
-            this.btnAjoutreDonateur.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(213)))), ((int)(((byte)(147)))));
-            this.btnAjoutreDonateur.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnAjoutreDonateur.Font = new System.Drawing.Font("Consolas", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.btnAjoutreDonateur.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(154)))), ((int)(((byte)(25)))), ((int)(((byte)(34)))));
-            this.btnAjoutreDonateur.Location = new System.Drawing.Point(366, 492);
-            this.btnAjoutreDonateur.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
-            this.btnAjoutreDonateur.Name = "btnAjoutreDonateur";
-            this.btnAjoutreDonateur.Size = new System.Drawing.Size(131, 44);
-            this.btnAjoutreDonateur.TabIndex = 10;
-            this.btnAjoutreDonateur.Text = "AJOUTER";
-            this.btnAjoutreDonateur.UseVisualStyleBackColor = false;
-            this.btnAjoutreDonateur.Click += new System.EventHandler(this.BtnAjouterDonateur_Click);
+            this.btnAjouterDonateur.BackColor = System.Drawing.Color.White;
+            this.btnAjouterDonateur.BackgroundImage = global::NouvelleInterface.Properties.Resources.btnContour;
+            this.btnAjouterDonateur.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btnAjouterDonateur.FlatAppearance.BorderSize = 0;
+            this.btnAjouterDonateur.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(213)))), ((int)(((byte)(147)))));
+            this.btnAjouterDonateur.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(213)))), ((int)(((byte)(147)))));
+            this.btnAjouterDonateur.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnAjouterDonateur.Font = new System.Drawing.Font("Consolas", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.btnAjouterDonateur.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(154)))), ((int)(((byte)(25)))), ((int)(((byte)(34)))));
+            this.btnAjouterDonateur.Location = new System.Drawing.Point(293, 394);
+            this.btnAjouterDonateur.Margin = new System.Windows.Forms.Padding(4);
+            this.btnAjouterDonateur.Name = "btnAjouterDonateur";
+            this.btnAjouterDonateur.Size = new System.Drawing.Size(105, 35);
+            this.btnAjouterDonateur.TabIndex = 10;
+            this.btnAjouterDonateur.Text = "AJOUTER";
+            this.btnAjouterDonateur.UseVisualStyleBackColor = false;
+            this.btnAjouterDonateur.Click += new System.EventHandler(this.BtnAjouterDonateur_Click);
             // 
             // lblMessageCredit
             // 
@@ -1312,83 +1302,6 @@
             this.lblQuatitePrix.TabIndex = 4;
             this.lblQuatitePrix.Text = "Quantité :";
             // 
-            // tabAPropos
-            // 
-            this.tabAPropos.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(213)))), ((int)(((byte)(147)))));
-            this.tabAPropos.Controls.Add(this.richTextBox1);
-            this.tabAPropos.Controls.Add(this.lblOlivier);
-            this.tabAPropos.Controls.Add(this.lblCatherine);
-            this.tabAPropos.Controls.Add(this.lblFred);
-            this.tabAPropos.Controls.Add(this.lblAuteur01);
-            this.tabAPropos.Controls.Add(this.lblInfoProjetSTE);
-            this.tabAPropos.Location = new System.Drawing.Point(4, 34);
-            this.tabAPropos.Margin = new System.Windows.Forms.Padding(4, 2, 4, 2);
-            this.tabAPropos.Name = "tabAPropos";
-            this.tabAPropos.Padding = new System.Windows.Forms.Padding(4, 2, 4, 2);
-            this.tabAPropos.Size = new System.Drawing.Size(1452, 992);
-            this.tabAPropos.TabIndex = 2;
-            this.tabAPropos.Text = "À propros";
-            // 
-            // richTextBox1
-            // 
-            this.richTextBox1.Font = new System.Drawing.Font("Bahnschrift", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.richTextBox1.Location = new System.Drawing.Point(331, 86);
-            this.richTextBox1.Margin = new System.Windows.Forms.Padding(4, 2, 4, 2);
-            this.richTextBox1.Name = "richTextBox1";
-            this.richTextBox1.Size = new System.Drawing.Size(782, 396);
-            this.richTextBox1.TabIndex = 1;
-            this.richTextBox1.Text = resources.GetString("richTextBox1.Text");
-            // 
-            // lblOlivier
-            // 
-            this.lblOlivier.AutoSize = true;
-            this.lblOlivier.Location = new System.Drawing.Point(121, 179);
-            this.lblOlivier.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.lblOlivier.Name = "lblOlivier";
-            this.lblOlivier.Size = new System.Drawing.Size(158, 24);
-            this.lblOlivier.TabIndex = 0;
-            this.lblOlivier.Text = "Olivier Raymond";
-            // 
-            // lblCatherine
-            // 
-            this.lblCatherine.AutoSize = true;
-            this.lblCatherine.Location = new System.Drawing.Point(121, 154);
-            this.lblCatherine.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.lblCatherine.Name = "lblCatherine";
-            this.lblCatherine.Size = new System.Drawing.Size(154, 24);
-            this.lblCatherine.TabIndex = 0;
-            this.lblCatherine.Text = "Catherine Godin";
-            // 
-            // lblFred
-            // 
-            this.lblFred.AutoSize = true;
-            this.lblFred.Location = new System.Drawing.Point(121, 130);
-            this.lblFred.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.lblFred.Name = "lblFred";
-            this.lblFred.Size = new System.Drawing.Size(153, 24);
-            this.lblFred.TabIndex = 0;
-            this.lblFred.Text = "Frédérick Faidit";
-            // 
-            // lblAuteur01
-            // 
-            this.lblAuteur01.AutoSize = true;
-            this.lblAuteur01.Location = new System.Drawing.Point(92, 106);
-            this.lblAuteur01.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.lblAuteur01.Name = "lblAuteur01";
-            this.lblAuteur01.Size = new System.Drawing.Size(92, 24);
-            this.lblAuteur01.TabIndex = 0;
-            this.lblAuteur01.Text = "Auteurs :";
-            // 
-            // lblInfoProjetSTE
-            // 
-            this.lblInfoProjetSTE.AutoSize = true;
-            this.lblInfoProjetSTE.Location = new System.Drawing.Point(92, 86);
-            this.lblInfoProjetSTE.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.lblInfoProjetSTE.Name = "lblInfoProjetSTE";
-            this.lblInfoProjetSTE.Size = new System.Drawing.Size(81, 24);
-            this.lblInfoProjetSTE.TabIndex = 0;
-            this.lblInfoProjetSTE.Text = "STE v1.0";
-            // 
             // lblCarteCredit
             // 
             this.lblCarteCredit.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
@@ -1509,8 +1422,6 @@
             this.tabCommanditaire.ResumeLayout(false);
             this.panel6.ResumeLayout(false);
             this.panel6.PerformLayout();
-            this.tabAPropos.ResumeLayout(false);
-            this.tabAPropos.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -1551,7 +1462,6 @@
         private Label lblDollard;
         private Label lblInfoCommanditaire;
         private Label lblIDCommanditaire;
-        private Label lblInfoProjetSTE;
         private Panel pnlInfoDonateur;
         private Button btnSuivant;
         private Panel pnlDon;
@@ -1559,12 +1469,6 @@
         private Label lblRecompense;
         private TextBox txtRecompense;
         private Button btnCalculRecompense;
-        private TabPage tabAPropos;
-        private RichTextBox richTextBox1;
-        private Label lblOlivier;
-        private Label lblCatherine;
-        private Label lblFred;
-        private Label lblAuteur01;
         private MaskedTextBox mskTxtBoxTel;
         private ToolTip infoBulle;
         private Label lblMessageCommanditaire;
@@ -1603,7 +1507,7 @@
         private Button btnPrecedent;
         private Panel pnTitrePaiement;
         private Label labPaiement;
-        private Button btnAjoutreDonateur;
+        private Button btnAjouterDonateur;
         private Label lblMessageCredit;
         private GroupBox grRadioCarte;
         private RadioButton radAmex;

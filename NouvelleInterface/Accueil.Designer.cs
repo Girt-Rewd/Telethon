@@ -84,7 +84,6 @@
             txtAccueil2.TabIndex = 2;
             txtAccueil2.Text = "Faites GRANDIR cet arbre \r\net collaborez à la \r\nsauvegarde de \r\nla planète !";
             txtAccueil2.UseMnemonic = false;
-            txtAccueil2.Click += new System.EventHandler(this.txtAccueil2_Click);
             // 
             // logoEcoHor
             // 
@@ -129,6 +128,7 @@
             this.btnApropos.TabIndex = 8;
             this.btnApropos.Text = "À propos";
             this.btnApropos.UseVisualStyleBackColor = true;
+            this.btnApropos.Click += new System.EventHandler(this.btnApropos_Click);
             // 
             // panel1
             // 
@@ -260,12 +260,12 @@
             // 
             this.txtMontant.BackColor = System.Drawing.Color.White;
             this.txtMontant.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.txtMontant.Enabled = false;
             this.txtMontant.Font = new System.Drawing.Font("Bahnschrift", 45F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.txtMontant.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(154)))), ((int)(((byte)(25)))), ((int)(((byte)(34)))));
             this.txtMontant.HideSelection = false;
             this.txtMontant.Location = new System.Drawing.Point(374, 14);
             this.txtMontant.Name = "txtMontant";
+            this.txtMontant.ReadOnly = true;
             this.txtMontant.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.txtMontant.Size = new System.Drawing.Size(285, 73);
             this.txtMontant.TabIndex = 4;
@@ -325,7 +325,6 @@
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "Accueil";
             this.Text = "EcoGreen - pour un avenir meilleur";
-            this.Load += new System.EventHandler(this.Accueil_Load);
             ((System.ComponentModel.ISupportInitialize)(this.logoEcoHor)).EndInit();
             this.panelAccueil.ResumeLayout(false);
             this.panelAccueil.PerformLayout();
