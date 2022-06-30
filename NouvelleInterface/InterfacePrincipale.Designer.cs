@@ -725,6 +725,7 @@
             this.radVisa.TabIndex = 0;
             this.radVisa.Text = "Visa";
             this.radVisa.UseVisualStyleBackColor = true;
+            this.radVisa.Click += new System.EventHandler(this.radVisa_Click);
             // 
             // panel3
             // 
