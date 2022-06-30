@@ -572,6 +572,9 @@ namespace NouvelleInterface
         pnlDon.Visible = false;
     }
 
+        private void InterfacePrincipale_Load(object sender, EventArgs e)
+        {
 
-}
+        }
+    }
 }

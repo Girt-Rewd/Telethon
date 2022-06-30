@@ -1374,6 +1374,7 @@
             this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "InterfacePrincipale";
             this.Text = "Système de téléthon électronique";
+            this.Load += new System.EventHandler(this.InterfacePrincipale_Load);
             tabEntrees.ResumeLayout(false);
             this.tabDonateur.ResumeLayout(false);
             this.panel4.ResumeLayout(false);
