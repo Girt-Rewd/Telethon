@@ -9,6 +9,9 @@
         private string prenom;
         private string nom;
 
+        public string Prenom { get { return prenom; } }
+        public string Nom { get { return nom; } }
+
         /// <summary>
         /// Retourne le nom complet de la personne
         /// </summary>
