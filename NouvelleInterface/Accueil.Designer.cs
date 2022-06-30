@@ -84,7 +84,6 @@
             txtAccueil2.TabIndex = 2;
             txtAccueil2.Text = "Faites GRANDIR cet arbre \r\net collaborez à la \r\nsauvegarde de \r\nla planète !";
             txtAccueil2.UseMnemonic = false;
-            txtAccueil2.Click += new System.EventHandler(this.txtAccueil2_Click);
             // 
             // logoEcoHor
             // 
