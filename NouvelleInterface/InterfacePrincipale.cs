@@ -392,7 +392,10 @@ namespace NouvelleInterface
     /// <param name="e"></param>
     private void BtnCalculRecompense_Click(object sender, EventArgs e)
     {
-        txtRecompense.Text = gestionnaireSTE.AttribuerPrix(double.Parse(txtMontant.Text));
+            if (txtMontant.Text == null || txtMontant.Text == String.Empty) { 
+                 txtMontant.Text = "0";
+            }
+            txtRecompense.Text = gestionnaireSTE.AttribuerPrix(double.Parse(txtMontant.Text));
     }
 
 
@@ -567,6 +570,34 @@ namespace NouvelleInterface
 
                 MessageBox.Show("La base de données est vide", "Erreur", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
+        }
+
+        private void InterfacePrincipale_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            StreamWriter saveListCommaditaires = new("ListeCommanditaires.txt", false);
+            StreamWriter saveListDon = new("ListeDon.txt", false);
+            StreamWriter saveListDonateurs = new("ListeDonateurs.txt", false);
+
+            foreach (Donateur donateurCourant in gestionnaireSTE.donateurs)
+            {
+                saveListDonateurs.WriteLine(donateurCourant.FormatterStyleFichier());
+            }
+            foreach (Donateur listDonateur in gestionnaireSTE.donateurs)
+            {
+
+                saveListCommaditaires.WriteLine(listDonateur.ToString());
+            }
+
+
+            double total = double.Parse(Accueil.montantPasse);
+            foreach (Don listDons in gestionnaireSTE.dons)
+            {
+                total += listDons.getMontantDon();
+            }
+            saveListDon.WriteLine(total.ToString());
+            saveListCommaditaires.Close();
+            saveListDon.Close();
+            saveListDonateurs.Close();
         }
     }
 }
