@@ -90,8 +90,8 @@ namespace NouvelleInterface
                     typeCarte = 'V';
                 }
 
-
-                gestionnaireSTE.AjouterDonateur(txtNomDonateur.Text, txtPrenomDonateur.Text, txtCourrielDonateur.Text, mskTxtBoxTel.Text, typeCarte, mskTxtNumeroCarte.Text, numMois.Text + "/" + numAnnee.Text, (gestionnaireSTE.donateurs.Count + 1), txtBoxCvc.Text);
+                int indice = gestionnaireSTE.donateurs.Count + 1;
+                gestionnaireSTE.AjouterDonateur(indice, txtNomDonateur.Text, txtPrenomDonateur.Text, txtCourrielDonateur.Text, mskTxtBoxTel.Text, typeCarte, mskTxtNumeroCarte.Text, numMois.Text + "-" + numAnnee.Text, txtBoxCvc.Text);
                 MessageBox.Show("VALIDER INFO DU DONATEUR \n\r\r" + gestionnaireSTE.donateurs.Last().ToString());
 
 
@@ -116,11 +116,24 @@ namespace NouvelleInterface
             string date = now.ToShortDateString();
             try
             {
+                radAmex.Checked = false;
+                radMC.Checked = false;
+                radVisa.Checked = false;
+                txtBoxCvc.Text = string.Empty;
+                txtNomDonateur.Text = string.Empty;
+                txtPrenomDonateur.Text = string.Empty;
+                txtCourrielDonateur.Text = string.Empty;
+                mskTxtBoxTel.Text = string.Empty;
+                mskTxtNumeroCarte.Text = string.Empty;
+                txtBoxCvc.Text = String.Empty;
+                pnlCarteCredit.Visible = false;
+                pnlDon.Visible = false;
+                pnlInfoDonateur.Visible = true;
                 gestionnaireSTE.AjouterDon(date, double.Parse(txtMontant.Text), gestionnaireSTE.dons.Count);
                 if (txtMontant.Text != null)
                 {
                     Accueil parent = (Accueil)this.Owner;
-                    if (Accueil.montantPasse == "")
+                    if (Accueil.montantPasse == ""||Accueil.montantPasse == null)
                     {
                         Accueil.montantPasse = "0";
                     }
@@ -133,12 +146,9 @@ namespace NouvelleInterface
             }
             catch (FormatException)
             {
-                MessageBox.Show("Veuillez utiliser une virgule pour les décimales", "Attention", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show("Mauvais format numérique", "Attention", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 txtMontant.Focus();
             }
-
-
-            dgvDonateurs.Rows.Add("DNTR" + dgvDonateurs.RowCount + 1, txtNomDonateur.Text, txtPrenomDonateur.Text, mskTxtBoxTel.Text, txtCourrielDonateur.Text, typeCarte, mskTxtNumeroCarte.Text, numMois.Text + "-" + numAnnee.Text, txtBoxCvc.Text);
             MessageBox.Show("Nouveau don! \n\r\r" + gestionnaireSTE.dons.Last().ToString());
         }
 
@@ -199,6 +209,7 @@ namespace NouvelleInterface
         /// <param name="e"></param>
         private void BtnAfficherDonateur_Click(object sender, EventArgs e)
         {
+            dgvDonateurs.Rows.Clear();
             for (int i = 0; i < gestionnaireSTE.donateurs.Count; i++)
             {
                 string[] tabLigne = gestionnaireSTE.donateursToStringTab(i);
@@ -311,65 +322,9 @@ namespace NouvelleInterface
         StreamWriter saveListDon = new("ListeDon.txt", false);
         StreamWriter saveListDonateurs = new("ListeDonateurs.txt", false);
 
-        foreach (DataGridViewRow colonne in dgvDonateurs.Rows)
+        foreach (Donateur donateurCourant in gestionnaireSTE.donateurs)
         {
-            string? IDD;
-            string? nom;
-            string? prenom;
-            string? telephone;
-            string? courriel;
-            string? typeDeCarte;
-            string? numeroDeCarte;
-            string? dateDexpiration;
-
-            if (colonne.Cells[0].Value.ToString() != null)
-                IDD = colonne.Cells[0].Value.ToString();
-            else
-                IDD = "";
-
-            if (colonne.Cells[1].Value.ToString() != null)
-                nom = colonne.Cells[1].Value.ToString();
-            else
-                nom = "";
-
-            if (colonne.Cells[2].Value.ToString() != null)
-                prenom = colonne.Cells[2].Value.ToString();
-            else
-                prenom = "";
-
-            if (colonne.Cells[2].Value.ToString() != null)
-                telephone = colonne.Cells[4].Value.ToString();
-            else
-                telephone = "";
-
-            if (colonne.Cells[2].Value.ToString() != null)
-                courriel = colonne.Cells[3].Value.ToString();
-            else
-                courriel = "";
-
-            if (colonne.Cells[2].Value.ToString() != null)
-                typeDeCarte = colonne.Cells[5].Value.ToString();
-            else
-                typeDeCarte = "";
-
-            if (colonne.Cells[2].Value.ToString() != null)
-                numeroDeCarte = colonne.Cells[6].Value.ToString();
-            else
-                numeroDeCarte = "";
-
-            if (colonne.Cells[2].Value.ToString() != null)
-                dateDexpiration = colonne.Cells[7].Value.ToString();
-            else
-                dateDexpiration = "";
-            if (IDD != "" ||
-                nom != "" ||
-                prenom != "" ||
-                telephone != "" ||
-                typeDeCarte != "" ||
-                numeroDeCarte != "" ||
-                dateDexpiration != "")
-
-                saveListDonateurs.WriteLine(IDD + "/" + nom + "/" + prenom + "/" + telephone + "/" + courriel + "/" + typeDeCarte + "/" + numeroDeCarte + "/" + dateDexpiration);
+                saveListDonateurs.WriteLine(donateurCourant.FormatterStyleFichier());
         }
         foreach (Donateur listDonateur in gestionnaireSTE.donateurs)
         {
@@ -537,9 +492,11 @@ namespace NouvelleInterface
         txtCourrielDonateur.Text = string.Empty;
         mskTxtBoxTel.Text = string.Empty;
         mskTxtNumeroCarte.Text = string.Empty;
+        txtBoxCvc.Text = String.Empty;
         pnlCarteCredit.Visible = false;
         pnlDon.Visible = false;
         pnlInfoDonateur.Visible = true;
+
     }
 
 
@@ -574,7 +531,27 @@ namespace NouvelleInterface
 
         private void InterfacePrincipale_Load(object sender, EventArgs e)
         {
+            int i = 0;
+            try
+            {
+                StreamReader readList = new("listeDonateurs.txt");
+                string ligne;
+                while ((ligne = readList.ReadLine()) != null)
+                {
+                    i++;
+                    string[] tabLigne = ligne.Split('/');
 
+                    gestionnaireSTE.AjouterDonateur(i, tabLigne[1], tabLigne[2], tabLigne[3], tabLigne[4], tabLigne[5][0], tabLigne[6], tabLigne[7], tabLigne[8]);
+
+                }
+                readList.Close();
+                dgvDonateurs.Visible = true;
+            }
+            catch
+            {
+
+                MessageBox.Show("La base de données est vide", "Erreur", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
         }
     }
 }

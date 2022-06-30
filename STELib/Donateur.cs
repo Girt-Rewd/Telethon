@@ -34,7 +34,7 @@ namespace STELib
         public string Cvc { get => CVC; }
     
     // Constructeur à arguments
-    public Donateur(string nom, string prenom, string courriel, string telephone, char typeDeCarte, string numeroCarte, string dateExpiration, int nbDonateurs, string CVC) : base(prenom, nom)
+    public Donateur(int nbDonateurs, string nom, string prenom, string courriel, string telephone, char typeDeCarte, string numeroCarte, string dateExpiration, string CVC) : base(prenom, nom)
     {
 
         this.idDonateur = "DNTR" + nbDonateurs;
@@ -65,6 +65,9 @@ namespace STELib
     {
         return idDonateur;
     }
+        public string FormatterStyleFichier() {
+            return idDonateur + "/" + Nom + "/" + Prenom + "/" + telephone + "/" + courriel + "/" + typeCarte + "/" + numeroCarte + "/" + dateExpiration + "/" + CVC;
+        }
 
 
 }
