@@ -42,10 +42,10 @@
             // richTextBox1
             // 
             this.richTextBox1.Font = new System.Drawing.Font("Bahnschrift", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.richTextBox1.Location = new System.Drawing.Point(213, 33);
+            this.richTextBox1.Location = new System.Drawing.Point(207, 33);
             this.richTextBox1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.richTextBox1.Name = "richTextBox1";
-            this.richTextBox1.Size = new System.Drawing.Size(626, 318);
+            this.richTextBox1.Size = new System.Drawing.Size(626, 430);
             this.richTextBox1.TabIndex = 7;
             this.richTextBox1.Text = resources.GetString("richTextBox1.Text");
             // 
@@ -106,7 +106,7 @@
             this.panel1.Controls.Add(this.lblFred);
             this.panel1.Controls.Add(this.lblAuteur01);
             this.panel1.Controls.Add(this.lblInfoProjetSTE);
-            this.panel1.Location = new System.Drawing.Point(55, 33);
+            this.panel1.Location = new System.Drawing.Point(49, 33);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(141, 142);
             this.panel1.TabIndex = 8;
@@ -120,6 +120,7 @@
             this.ClientSize = new System.Drawing.Size(884, 506);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.richTextBox1);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Name = "Apropos";
             this.Text = "Apropos";
             this.panel1.ResumeLayout(false);
