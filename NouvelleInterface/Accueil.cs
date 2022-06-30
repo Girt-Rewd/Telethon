@@ -223,7 +223,8 @@ namespace NouvelleInterface
 
         private void btnApropos_Click(object sender, EventArgs e)
         {
-            Apropos monAPropos = new();
+            Apropos apropos = new Apropos();
+            apropos.ShowDialog(this);
 
         }
     }
