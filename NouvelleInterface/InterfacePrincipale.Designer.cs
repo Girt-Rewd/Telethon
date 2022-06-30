@@ -414,7 +414,7 @@
             this.btnPrecedent2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnPrecedent2.Font = new System.Drawing.Font("Bahnschrift SemiBold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.btnPrecedent2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(154)))), ((int)(((byte)(25)))), ((int)(((byte)(34)))));
-            this.btnPrecedent2.Location = new System.Drawing.Point(97, 360);
+            this.btnPrecedent2.Location = new System.Drawing.Point(89, 343);
             this.btnPrecedent2.Margin = new System.Windows.Forms.Padding(4);
             this.btnPrecedent2.Name = "btnPrecedent2";
             this.btnPrecedent2.Size = new System.Drawing.Size(111, 35);
@@ -425,7 +425,7 @@
             // 
             // txtRecompense
             // 
-            this.txtRecompense.Location = new System.Drawing.Point(221, 246);
+            this.txtRecompense.Location = new System.Drawing.Point(220, 199);
             this.txtRecompense.Margin = new System.Windows.Forms.Padding(4);
             this.txtRecompense.Name = "txtRecompense";
             this.txtRecompense.Size = new System.Drawing.Size(170, 27);
@@ -451,7 +451,7 @@
             this.btnCalculRecompense.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnCalculRecompense.Font = new System.Drawing.Font("Bahnschrift SemiBold", 13F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.btnCalculRecompense.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(154)))), ((int)(((byte)(25)))), ((int)(((byte)(34)))));
-            this.btnCalculRecompense.Location = new System.Drawing.Point(221, 196);
+            this.btnCalculRecompense.Location = new System.Drawing.Point(220, 154);
             this.btnCalculRecompense.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.btnCalculRecompense.Name = "btnCalculRecompense";
             this.btnCalculRecompense.Size = new System.Drawing.Size(170, 38);
@@ -468,10 +468,10 @@
             this.btnValider.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnValider.Font = new System.Drawing.Font("Bahnschrift SemiBold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.btnValider.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(154)))), ((int)(((byte)(25)))), ((int)(((byte)(34)))));
-            this.btnValider.Location = new System.Drawing.Point(285, 403);
+            this.btnValider.Location = new System.Drawing.Point(277, 386);
             this.btnValider.Margin = new System.Windows.Forms.Padding(4);
             this.btnValider.Name = "btnValider";
-            this.btnValider.Size = new System.Drawing.Size(113, 35);
+            this.btnValider.Size = new System.Drawing.Size(111, 35);
             this.btnValider.TabIndex = 23;
             this.btnValider.Text = "Valider";
             this.btnValider.UseVisualStyleBackColor = false;
@@ -481,7 +481,7 @@
             // 
             this.txtMontant.Font = new System.Drawing.Font("Bahnschrift", 13F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.txtMontant.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(57)))), ((int)(((byte)(56)))), ((int)(((byte)(57)))));
-            this.txtMontant.Location = new System.Drawing.Point(221, 119);
+            this.txtMontant.Location = new System.Drawing.Point(220, 119);
             this.txtMontant.Margin = new System.Windows.Forms.Padding(4);
             this.txtMontant.Name = "txtMontant";
             this.txtMontant.Size = new System.Drawing.Size(170, 28);
@@ -498,7 +498,7 @@
             this.btnAjouterDon.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnAjouterDon.Font = new System.Drawing.Font("Bahnschrift SemiBold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.btnAjouterDon.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(154)))), ((int)(((byte)(25)))), ((int)(((byte)(34)))));
-            this.btnAjouterDon.Location = new System.Drawing.Point(285, 360);
+            this.btnAjouterDon.Location = new System.Drawing.Point(277, 343);
             this.btnAjouterDon.Margin = new System.Windows.Forms.Padding(4);
             this.btnAjouterDon.Name = "btnAjouterDon";
             this.btnAjouterDon.Size = new System.Drawing.Size(111, 35);
@@ -1147,13 +1147,18 @@
             // 
             // btnAffichePrix
             // 
+            this.btnAffichePrix.BackColor = System.Drawing.Color.Transparent;
+            this.btnAffichePrix.BackgroundImage = global::NouvelleInterface.Properties.Resources.btnContour;
+            this.btnAffichePrix.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btnAffichePrix.FlatAppearance.BorderSize = 0;
+            this.btnAffichePrix.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnAffichePrix.Location = new System.Drawing.Point(518, 510);
             this.btnAffichePrix.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.btnAffichePrix.Name = "btnAffichePrix";
             this.btnAffichePrix.Size = new System.Drawing.Size(182, 50);
             this.btnAffichePrix.TabIndex = 6;
             this.btnAffichePrix.Text = "Afficher les prix";
-            this.btnAffichePrix.UseVisualStyleBackColor = true;
+            this.btnAffichePrix.UseVisualStyleBackColor = false;
             this.btnAffichePrix.Click += new System.EventHandler(this.btnAffichePrix_Click);
             // 
             // lblInfoPrix
@@ -1169,6 +1174,10 @@
             // 
             // btnAjouterPrix
             // 
+            this.btnAjouterPrix.BackgroundImage = global::NouvelleInterface.Properties.Resources.btnContour;
+            this.btnAjouterPrix.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btnAjouterPrix.FlatAppearance.BorderSize = 0;
+            this.btnAjouterPrix.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnAjouterPrix.Location = new System.Drawing.Point(238, 510);
             this.btnAjouterPrix.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.btnAjouterPrix.Name = "btnAjouterPrix";
@@ -1190,6 +1199,10 @@
             // 
             // btnAfficherComm
             // 
+            this.btnAfficherComm.BackgroundImage = global::NouvelleInterface.Properties.Resources.btnContour;
+            this.btnAfficherComm.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btnAfficherComm.FlatAppearance.BorderSize = 0;
+            this.btnAfficherComm.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnAfficherComm.Location = new System.Drawing.Point(708, 510);
             this.btnAfficherComm.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.btnAfficherComm.Name = "btnAfficherComm";
@@ -1233,6 +1246,7 @@
             this.txtValeurPrix.Location = new System.Drawing.Point(252, 408);
             this.txtValeurPrix.Margin = new System.Windows.Forms.Padding(4);
             this.txtValeurPrix.Name = "txtValeurPrix";
+            this.txtValeurPrix.ReadOnly = true;
             this.txtValeurPrix.Size = new System.Drawing.Size(168, 27);
             this.txtValeurPrix.TabIndex = 3;
             this.txtValeurPrix.Click += new System.EventHandler(this.TxtValeurPrix_Click);
