@@ -59,12 +59,12 @@
   </resheader>
   <data name="richTextBox1.Text" xml:space="preserve">
     <value>Ce programme sert à la gestion d’un événement téléthon. L’utilisateur ciblé est un téléphoniste dont le travail sera:
-    1. Entrer les informations personnelles d’un donateur (personne qui contribue avec 
-        un don en argent)  
+    1. Entrer les informations personnelle d’un donateur (personne qui contribue avec un don 
+        en argent)  
     2. Entrer les informations sur les dons en argent
-    3. Entrer les informations sur les commanditaires (Personne ou organisme qui 
-        contribue sous forme de don de produits ou services)
-    4. Entrer les informations sur les commandites
+    3. Entrer les informations sur les commanditaires (Personne ou organisme qui contribue 
+        sous forme de don de produits ou services)
+    4. Entrer les informations sur les dons sous forme de produits
 
 Un système de récompenses est établi et gérer par l’application pour encourager les donateurs.
  </value>

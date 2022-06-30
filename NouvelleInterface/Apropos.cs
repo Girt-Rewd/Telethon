@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace NouvelleInterface
 {
-    public partial class Form1 : Form
+    public partial class Apropos : Form
     {
-        public Form1()
+        public Apropos()
         {
             InitializeComponent();
         }
