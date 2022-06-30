@@ -220,5 +220,12 @@ namespace NouvelleInterface
         {
 
         }
+
+        private void btnApropos_Click(object sender, EventArgs e)
+        {
+            Apropos apropos = new Apropos();
+            apropos.ShowDialog(this);
+
+        }
     }
 }
