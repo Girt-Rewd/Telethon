@@ -140,7 +140,6 @@ namespace NouvelleInterface
 
             dgvDonateurs.Rows.Add("DNTR" + dgvDonateurs.RowCount + 1, txtNomDonateur.Text, txtPrenomDonateur.Text, mskTxtBoxTel.Text, txtCourrielDonateur.Text, typeCarte, mskTxtNumeroCarte.Text, numMois.Text + "-" + numAnnee.Text, txtBoxCvc.Text);
             MessageBox.Show("Nouveau don! \n\r\r" + gestionnaireSTE.dons.Last().ToString());
-            MessageBox.Show("VALIDER INFO DU DON \n\r\r" + gestionnaireSTE.dons.Last().ToString());
 
             radAmex.Checked = false;
             radMC.Checked = false;
@@ -405,13 +404,7 @@ namespace NouvelleInterface
                     cvc !="")
 
                     saveListDonateurs.WriteLine(IDD + "/" + nom + "/" + prenom + "/" + telephone + "/" + courriel + "/" + typeDeCarte + "/" + numeroDeCarte + "/" + dateDexpiration+"/"+cvc);
-            }
-            foreach (Donateur listDonateur in gestionnaireSTE.donateurs)
-            {
-
-                saveListCommaditaires.WriteLine(listDonateur.ToString());
-            }
-
+            }       
 
             double total = double.Parse(Accueil.montantPasse);
             foreach (Don listDons in gestionnaireSTE.dons)
@@ -556,26 +549,8 @@ namespace NouvelleInterface
 
         #endregion
 
-        /// <summary>
-        /// Fonction qui reinitialiser les champs et retourner au panel infodonateur
-        /// </summary>
-        /// <param name="sender"></param>
-        /// <param name="e"></param>
-        //private void btnValider_Click(object sender, EventArgs e)
-        //{
-        //    radAmex.Checked = false;
-        //    radMC.Checked = false;
-        //    radVisa.Checked = false;
-        //    txtBoxCvc.Text = string.Empty;
-        //    txtNomDonateur.Text = string.Empty;
-        //    txtPrenomDonateur.Text = string.Empty;
-        //    txtCourrielDonateur.Text = string.Empty;
-        //    mskTxtBoxTel.Text = string.Empty;
-        //    mskTxtNumeroCarte.Text = string.Empty;
-        //    pnlCarteCredit.Visible = false;
-        //    pnlDon.Visible = false;
-        //    pnlInfoDonateur.Visible = true;
-        //}
+  
+       
 
 
         /// <summary>
