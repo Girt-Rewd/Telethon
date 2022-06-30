@@ -117,14 +117,15 @@
             // 
             // btnApropos
             // 
+            this.btnApropos.BackgroundImage = global::NouvelleInterface.Properties.Resources.btnGris2;
             this.btnApropos.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.btnApropos.FlatAppearance.BorderSize = 0;
             this.btnApropos.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnApropos.Font = new System.Drawing.Font("Segoe UI Black", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.btnApropos.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(57)))), ((int)(((byte)(56)))), ((int)(((byte)(57)))));
-            this.btnApropos.Location = new System.Drawing.Point(393, 657);
+            this.btnApropos.Font = new System.Drawing.Font("Bahnschrift SemiCondensed", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.btnApropos.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(200)))), ((int)(((byte)(147)))));
+            this.btnApropos.Location = new System.Drawing.Point(393, 664);
             this.btnApropos.Name = "btnApropos";
-            this.btnApropos.Size = new System.Drawing.Size(167, 43);
+            this.btnApropos.Size = new System.Drawing.Size(104, 36);
             this.btnApropos.TabIndex = 8;
             this.btnApropos.Text = "À propos";
             this.btnApropos.UseVisualStyleBackColor = true;
@@ -322,6 +323,7 @@
             this.ClientSize = new System.Drawing.Size(1183, 842);
             this.Controls.Add(this.panelAccueil);
             this.DoubleBuffered = true;
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "Accueil";
             this.Text = "EcoGreen - pour un avenir meilleur";
