@@ -139,6 +139,7 @@ namespace NouvelleInterface
 
 
             dgvDonateurs.Rows.Add("DNTR" + dgvDonateurs.RowCount + 1, txtNomDonateur.Text, txtPrenomDonateur.Text, mskTxtBoxTel.Text, txtCourrielDonateur.Text, typeCarte, mskTxtNumeroCarte.Text, numMois.Text + "-" + numAnnee.Text, txtBoxCvc.Text);
+            MessageBox.Show("Nouveau don! \n\r\r" + gestionnaireSTE.dons.Last().ToString());
             MessageBox.Show("VALIDER INFO DU DON \n\r\r" + gestionnaireSTE.dons.Last().ToString());
 
             radAmex.Checked = false;
@@ -594,19 +595,18 @@ namespace NouvelleInterface
             };
         }
 
-        private void panel4_Paint(object sender, PaintEventArgs e)
+        private void btnPrecedent_Click(object sender, EventArgs e)
         {
-
+            pnlInfoDonateur.Visible = true;
+            pnlCarteCredit.Visible = false;
         }
 
-        private void label2_Click(object sender, EventArgs e)
+        private void btnPrecedent2_Click(object sender, EventArgs e)
         {
-
+            pnlCarteCredit.Visible = true;
+            pnlDon.Visible = false;
         }
 
-        private void panel5_Paint(object sender, PaintEventArgs e)
-        {
-
-        }
+        
     }
 }
