@@ -570,5 +570,17 @@ namespace NouvelleInterface
                 _ => "1000",
             };
         }
+
+        private void btnPrecedent_Click(object sender, EventArgs e)
+        {
+            pnlInfoDonateur.Visible = true;
+            pnlCarteCredit.Visible = false;
+        }
+
+        private void btnPrecedent2_Click(object sender, EventArgs e)
+        {
+            pnlCarteCredit.Visible = true;
+            pnlDon.Visible = false;
+        }
     }
 }
