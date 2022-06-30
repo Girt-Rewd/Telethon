@@ -129,6 +129,7 @@
             this.btnApropos.TabIndex = 8;
             this.btnApropos.Text = "À propos";
             this.btnApropos.UseVisualStyleBackColor = true;
+            this.btnApropos.Click += new System.EventHandler(this.btnApropos_Click);
             // 
             // panel1
             // 
