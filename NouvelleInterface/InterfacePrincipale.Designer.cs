@@ -1471,7 +1471,6 @@
 
         #endregion
 
-        private TabControl tabEntrees;
         private TabPage tabDonateur;
         private TabPage tabCommanditaire;
         private Button btnAfficherDonateur;
