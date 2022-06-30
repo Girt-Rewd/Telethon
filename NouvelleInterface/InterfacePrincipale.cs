@@ -607,7 +607,12 @@ namespace NouvelleInterface
 
         private void radMC_Click(object sender, EventArgs e)
         {
+            grRadioCarte.ForeColor = Color.Black;
+        }
 
+        private void radVisa_Click(object sender, EventArgs e)
+        {
+            grRadioCarte.ForeColor = Color.Black;
         }
     }
 }
