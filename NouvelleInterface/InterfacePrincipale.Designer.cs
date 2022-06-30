@@ -31,7 +31,6 @@
             this.components = new System.ComponentModel.Container();
             System.Windows.Forms.TabControl tabEntrees;
             this.tabDonateur = new System.Windows.Forms.TabPage();
-            this.txtBoxOut = new System.Windows.Forms.RichTextBox();
             this.pnlDon = new System.Windows.Forms.Panel();
             this.panel2 = new System.Windows.Forms.Panel();
             this.lblInfoDon = new System.Windows.Forms.Label();
@@ -57,6 +56,7 @@
             this.txtCourrielDonateur = new System.Windows.Forms.TextBox();
             this.lblTelephone = new System.Windows.Forms.Label();
             this.panel4 = new System.Windows.Forms.Panel();
+            this.txtBoxOut = new System.Windows.Forms.RichTextBox();
             this.dgvDonateurs = new System.Windows.Forms.DataGridView();
             this.Column5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column6 = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -176,16 +176,6 @@
             this.tabDonateur.Size = new System.Drawing.Size(1452, 992);
             this.tabDonateur.TabIndex = 0;
             this.tabDonateur.Text = "Donateur";
-            // 
-            // txtBoxOut
-            // 
-            this.txtBoxOut.Location = new System.Drawing.Point(69, 235);
-            this.txtBoxOut.Margin = new System.Windows.Forms.Padding(4, 2, 4, 2);
-            this.txtBoxOut.Name = "txtBoxOut";
-            this.txtBoxOut.Size = new System.Drawing.Size(607, 226);
-            this.txtBoxOut.TabIndex = 15;
-            this.txtBoxOut.Text = "";
-            this.txtBoxOut.Visible = false;
             // 
             // pnlDon
             // 
@@ -334,7 +324,6 @@
             this.btnValider.TabIndex = 23;
             this.btnValider.Text = "Valider";
             this.btnValider.UseVisualStyleBackColor = true;
-            this.btnValider.Click += new System.EventHandler(this.btnValider_Click);
             // 
             // pnlInfoDonateur
             // 
@@ -518,18 +507,28 @@
             this.panel4.BackColor = System.Drawing.Color.Transparent;
             this.panel4.BackgroundImage = global::NouvelleInterface.Properties.Resources.panel3;
             this.panel4.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.panel4.Controls.Add(this.txtBoxOut);
             this.panel4.Controls.Add(this.dgvDonateurs);
             this.panel4.Controls.Add(this.panel5);
             this.panel4.Controls.Add(this.btnQuitter);
             this.panel4.Controls.Add(this.btnAfficheDon);
             this.panel4.Controls.Add(this.btnAfficherDonateur);
+            this.panel4.Controls.Add(this.txtBoxOut);
             this.panel4.Location = new System.Drawing.Point(632, 11);
             this.panel4.Margin = new System.Windows.Forms.Padding(4);
             this.panel4.Name = "panel4";
             this.panel4.Size = new System.Drawing.Size(756, 685);
             this.panel4.TabIndex = 16;
             this.panel4.Paint += new System.Windows.Forms.PaintEventHandler(this.panel4_Paint);
+            // 
+            // txtBoxOut
+            // 
+            this.txtBoxOut.Location = new System.Drawing.Point(69, 235);
+            this.txtBoxOut.Margin = new System.Windows.Forms.Padding(4, 2, 4, 2);
+            this.txtBoxOut.Name = "txtBoxOut";
+            this.txtBoxOut.Size = new System.Drawing.Size(607, 226);
+            this.txtBoxOut.TabIndex = 15;
+            this.txtBoxOut.Text = "";
+            this.txtBoxOut.Visible = false;
             // 
             // dgvDonateurs
             // 

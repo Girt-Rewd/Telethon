@@ -120,7 +120,7 @@ namespace NouvelleInterface
                 if (txtMontant.Text != null)
                 {
                     Accueil parent = (Accueil)this.Owner;
-                    if (Accueil.montantPasse == "")
+                    if (Accueil.montantPasse == "" || Accueil.montantPasse == null)
                     {
                         Accueil.montantPasse = "0";
                     }
@@ -140,6 +140,20 @@ namespace NouvelleInterface
 
             dgvDonateurs.Rows.Add("DNTR" + dgvDonateurs.RowCount + 1, txtNomDonateur.Text, txtPrenomDonateur.Text, mskTxtBoxTel.Text, txtCourrielDonateur.Text, typeCarte, mskTxtNumeroCarte.Text, numMois.Text + "-" + numAnnee.Text, txtBoxCvc.Text);
             MessageBox.Show("VALIDER INFO DU DON \n\r\r" + gestionnaireSTE.dons.Last().ToString());
+
+            radAmex.Checked = false;
+            radMC.Checked = false;
+            radVisa.Checked = false;
+            txtBoxCvc.Text = string.Empty;
+            txtNomDonateur.Text = string.Empty;
+            txtPrenomDonateur.Text = string.Empty;
+            txtCourrielDonateur.Text = string.Empty;
+            mskTxtBoxTel.Text = string.Empty;
+            mskTxtNumeroCarte.Text = string.Empty;
+            pnlCarteCredit.Visible = false;
+            pnlDon.Visible = false;
+            pnlInfoDonateur.Visible = true;
+            txtMontant.Text = string.Empty;
         }
 
 
@@ -157,7 +171,7 @@ namespace NouvelleInterface
             {
                 SignalerIncompletude(txtNomCommanditaire, "", lblNomCommanditaire, lblMessageCommanditaire, "Nom :");
                 SignalerIncompletude(txtPrenomCommanditaire, "", lblPrenomCommanditaire, lblMessageCommanditaire, "Prénom :");
-                
+
             }
             else if (txtQuantitePrix.Text == "" || cbbPrix.SelectedIndex <= -1)
             {
@@ -184,7 +198,7 @@ namespace NouvelleInterface
                 gestionnaireSTE.AjouterPrix(cbbPrix.Text, double.Parse(txtValeurPrix.Text), int.Parse(txtQuantitePrix.Text), gestionnaireSTE.commanditaires.Last().getIdc(), gestionnaireSTE.prix.Count);
                 MessageBox.Show(gestionnaireSTE.commanditaires.Last().ToString() + " Valeur de commandite " + int.Parse(txtValeurPrix.Text) * int.Parse(txtQuantitePrix.Text) + "$");
                 txtPrenomCommanditaire.Text = "";
-                
+
             }
 
 
@@ -332,55 +346,64 @@ namespace NouvelleInterface
                 string? typeDeCarte;
                 string? numeroDeCarte;
                 string? dateDexpiration;
+                string? cvc;
 
                 if (colonne.Cells[0].Value.ToString() != null)
                     IDD = colonne.Cells[0].Value.ToString();
                 else
-                    IDD = "";
+                    IDD = " ";
 
                 if (colonne.Cells[1].Value.ToString() != null)
                     nom = colonne.Cells[1].Value.ToString();
                 else
-                    nom = "";
+                    nom = " ";
 
-                if (colonne.Cells[2].Value.ToString() != null)
+                if (colonne.Cells[2].Value.ToString()!= null)
                     prenom = colonne.Cells[2].Value.ToString();
                 else
-                    prenom = "";
+                    prenom = " ";
 
-                if (colonne.Cells[2].Value.ToString() != null)
-                    telephone = colonne.Cells[4].Value.ToString();
+                if (colonne.Cells[3].Value.ToString() != null)
+                    telephone = colonne.Cells[3].Value.ToString();
                 else
-                    telephone = "";
+                    telephone = " ";
 
-                if (colonne.Cells[2].Value.ToString() != null)
-                    courriel = colonne.Cells[3].Value.ToString();
+                if (colonne.Cells[4].Value.ToString() != null)
+                    courriel = colonne.Cells[4].Value.ToString();
                 else
-                    courriel = "";
+                    courriel = " ";
 
-                if (colonne.Cells[2].Value.ToString() != null)
+                if (colonne.Cells[5].Value.ToString() != null)
                     typeDeCarte = colonne.Cells[5].Value.ToString();
                 else
-                    typeDeCarte = "";
+                    typeDeCarte = " ";
 
-                if (colonne.Cells[2].Value.ToString() != null)
+                if (colonne.Cells[6].Value.ToString() != null)
                     numeroDeCarte = colonne.Cells[6].Value.ToString();
                 else
-                    numeroDeCarte = "";
+                    numeroDeCarte = " ";
 
-                if (colonne.Cells[2].Value.ToString() != null)
+                if (colonne.Cells[7].Value.ToString() != null)
                     dateDexpiration = colonne.Cells[7].Value.ToString();
                 else
-                    dateDexpiration = "";
+                    dateDexpiration = " ";
+
+                if (colonne.Cells[8].Value.ToString() != null)
+                    cvc = colonne.Cells[8].Value.ToString();
+                else
+                    cvc = " ";
+                
+                   
                 if (IDD != "" ||
                     nom != "" ||
                     prenom != "" ||
                     telephone != "" ||
                     typeDeCarte != "" ||
                     numeroDeCarte != "" ||
-                    dateDexpiration != "")
+                    dateDexpiration != "" ||
+                    cvc !="")
 
-                    saveListDonateurs.WriteLine(IDD + "/" + nom + "/" + prenom + "/" + telephone + "/" + courriel + "/" + typeDeCarte + "/" + numeroDeCarte + "/" + dateDexpiration);
+                    saveListDonateurs.WriteLine(IDD + "/" + nom + "/" + prenom + "/" + telephone + "/" + courriel + "/" + typeDeCarte + "/" + numeroDeCarte + "/" + dateDexpiration+"/"+cvc);
             }
             foreach (Donateur listDonateur in gestionnaireSTE.donateurs)
             {
@@ -537,21 +560,21 @@ namespace NouvelleInterface
         /// </summary>
         /// <param name="sender"></param>
         /// <param name="e"></param>
-        private void btnValider_Click(object sender, EventArgs e)
-        {
-            radAmex.Checked = false;
-            radMC.Checked = false;
-            radVisa.Checked = false;
-            txtBoxCvc.Text = string.Empty;
-            txtNomDonateur.Text = string.Empty;
-            txtPrenomDonateur.Text = string.Empty;
-            txtCourrielDonateur.Text = string.Empty;
-            mskTxtBoxTel.Text = string.Empty;
-            mskTxtNumeroCarte.Text = string.Empty;
-            pnlCarteCredit.Visible = false;
-            pnlDon.Visible = false;
-            pnlInfoDonateur.Visible = true;
-        }
+        //private void btnValider_Click(object sender, EventArgs e)
+        //{
+        //    radAmex.Checked = false;
+        //    radMC.Checked = false;
+        //    radVisa.Checked = false;
+        //    txtBoxCvc.Text = string.Empty;
+        //    txtNomDonateur.Text = string.Empty;
+        //    txtPrenomDonateur.Text = string.Empty;
+        //    txtCourrielDonateur.Text = string.Empty;
+        //    mskTxtBoxTel.Text = string.Empty;
+        //    mskTxtNumeroCarte.Text = string.Empty;
+        //    pnlCarteCredit.Visible = false;
+        //    pnlDon.Visible = false;
+        //    pnlInfoDonateur.Visible = true;
+        //}
 
 
         /// <summary>
