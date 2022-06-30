@@ -49,10 +49,10 @@ namespace STELib
         /// <param name="numeroCarte"></param>
         /// <param name="dateExpiration"></param>
         /// <param name="nbDonateur"></param>
-        public void AjouterDonateur(string prenom, string nom, string adresse, string telephone, char typeCarte, string numeroCarte, string dateExpiration, int nbDonateur, string CVC)
+        public void AjouterDonateur(int nbDonateur, string prenom, string nom, string adresse, string telephone, char typeCarte, string numeroCarte, string dateExpiration, string CVC)
         {
          
-            donateurs.Add(new Donateur(prenom, nom, adresse, telephone, typeCarte, numeroCarte, dateExpiration, nbDonateur,CVC));
+            donateurs.Add(new Donateur(nbDonateur, nom, prenom, adresse, telephone, typeCarte, numeroCarte, dateExpiration, CVC));
         }
 
         /// <summary>
@@ -250,6 +250,22 @@ namespace STELib
             }
                         
             return total;
+        }
+
+        public string[] donateursToStringTab(int i)
+        {
+            string[] unDonateur = { 
+                donateurs[i].IdDonateur, 
+                donateurs[i].Nom,
+                donateurs[i].Prenom,
+                donateurs[i].Courriel,
+                donateurs[i].Telephone, 
+                donateurs[i].TypeCarte.ToString(), 
+                donateurs[i].NumeroCarte, 
+                donateurs[i].DateExpiration, 
+                donateurs[i].Cvc  
+            };
+            return unDonateur;
         }
     }
 }

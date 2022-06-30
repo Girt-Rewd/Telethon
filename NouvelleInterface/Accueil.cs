@@ -206,5 +206,11 @@ namespace NouvelleInterface
             Apropos apropos = new Apropos();
             apropos.ShowDialog(this);
         }
+
+        private void Accueil_Load(object sender, EventArgs e)
+        {
+            montantPasse = "0";
+            txtMontant.Text = "0";
+        }
     }
 }
