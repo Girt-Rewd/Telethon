@@ -32,21 +32,6 @@ namespace NouvelleInterface
             txtMontant.Text = montantPasse;
         }
 
-        private void Accueil_Load(object sender, EventArgs e)
-        {
-
-        }
-
-        private void btnInscription_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label1_Click(object sender, EventArgs e)
-        {
-
-        }
-
         private void txtMontant_TextChanged(object sender, EventArgs e)
         {
             int [,] dimensions= new int[2,6];
@@ -216,16 +201,10 @@ namespace NouvelleInterface
             txtMontant.Text = reponse;  
         }
 
-        private void txtAccueil2_Click(object sender, EventArgs e)
-        {
-
-        }
-
         private void btnApropos_Click(object sender, EventArgs e)
         {
             Apropos apropos = new Apropos();
             apropos.ShowDialog(this);
-
         }
     }
 }

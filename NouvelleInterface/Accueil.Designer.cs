@@ -84,7 +84,6 @@
             txtAccueil2.TabIndex = 2;
             txtAccueil2.Text = "Faites GRANDIR cet arbre \r\net collaborez à la \r\nsauvegarde de \r\nla planète !";
             txtAccueil2.UseMnemonic = false;
-            txtAccueil2.Click += new System.EventHandler(this.txtAccueil2_Click);
             // 
             // logoEcoHor
             // 
@@ -326,7 +325,6 @@
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "Accueil";
             this.Text = "EcoGreen - pour un avenir meilleur";
-            this.Load += new System.EventHandler(this.Accueil_Load);
             ((System.ComponentModel.ISupportInitialize)(this.logoEcoHor)).EndInit();
             this.panelAccueil.ResumeLayout(false);
             this.panelAccueil.PerformLayout();

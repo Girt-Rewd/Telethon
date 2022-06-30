@@ -30,7 +30,6 @@
         {
             this.components = new System.ComponentModel.Container();
             System.Windows.Forms.TabControl tabEntrees;
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(InterfacePrincipale));
             this.tabDonateur = new System.Windows.Forms.TabPage();
             this.txtBoxOut = new System.Windows.Forms.RichTextBox();
             this.pnlCarteCredit = new System.Windows.Forms.Panel();
@@ -116,13 +115,6 @@
             this.lblValeur = new System.Windows.Forms.Label();
             this.txtNomCommanditaire = new System.Windows.Forms.TextBox();
             this.lblQuatitePrix = new System.Windows.Forms.Label();
-            this.tabAPropos = new System.Windows.Forms.TabPage();
-            this.richTextBox1 = new System.Windows.Forms.RichTextBox();
-            this.lblOlivier = new System.Windows.Forms.Label();
-            this.lblCatherine = new System.Windows.Forms.Label();
-            this.lblFred = new System.Windows.Forms.Label();
-            this.lblAuteur01 = new System.Windows.Forms.Label();
-            this.lblInfoProjetSTE = new System.Windows.Forms.Label();
             this.lblCarteCredit = new System.Windows.Forms.Label();
             this.lblnfoDonateur = new System.Windows.Forms.Label();
             this.infoBulle = new System.Windows.Forms.ToolTip(this.components);
@@ -152,7 +144,6 @@
             this.panel5.SuspendLayout();
             this.tabCommanditaire.SuspendLayout();
             this.panel6.SuspendLayout();
-            this.tabAPropos.SuspendLayout();
             this.SuspendLayout();
             // 
             // tabEntrees
@@ -160,7 +151,6 @@
             tabEntrees.Appearance = System.Windows.Forms.TabAppearance.Buttons;
             tabEntrees.Controls.Add(this.tabDonateur);
             tabEntrees.Controls.Add(this.tabCommanditaire);
-            tabEntrees.Controls.Add(this.tabAPropos);
             tabEntrees.Font = new System.Drawing.Font("Bahnschrift", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             tabEntrees.ItemSize = new System.Drawing.Size(73, 30);
             tabEntrees.Location = new System.Drawing.Point(0, 0);
@@ -176,10 +166,10 @@
             this.tabDonateur.BackgroundImage = global::NouvelleInterface.Properties.Resources.Background150pp;
             this.tabDonateur.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.tabDonateur.Controls.Add(this.txtBoxOut);
-            this.tabDonateur.Controls.Add(this.pnlCarteCredit);
             this.tabDonateur.Controls.Add(this.pnlDon);
             this.tabDonateur.Controls.Add(this.pnlInfoDonateur);
             this.tabDonateur.Controls.Add(this.panel4);
+            this.tabDonateur.Controls.Add(this.pnlCarteCredit);
             this.tabDonateur.Location = new System.Drawing.Point(4, 34);
             this.tabDonateur.Margin = new System.Windows.Forms.Padding(4);
             this.tabDonateur.Name = "tabDonateur";
@@ -1292,78 +1282,6 @@
             this.lblQuatitePrix.TabIndex = 4;
             this.lblQuatitePrix.Text = "Quantité :";
             // 
-            // tabAPropos
-            // 
-            this.tabAPropos.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(213)))), ((int)(((byte)(147)))));
-            this.tabAPropos.Controls.Add(this.richTextBox1);
-            this.tabAPropos.Controls.Add(this.lblOlivier);
-            this.tabAPropos.Controls.Add(this.lblCatherine);
-            this.tabAPropos.Controls.Add(this.lblFred);
-            this.tabAPropos.Controls.Add(this.lblAuteur01);
-            this.tabAPropos.Controls.Add(this.lblInfoProjetSTE);
-            this.tabAPropos.Location = new System.Drawing.Point(4, 34);
-            this.tabAPropos.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.tabAPropos.Name = "tabAPropos";
-            this.tabAPropos.Padding = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.tabAPropos.Size = new System.Drawing.Size(1160, 786);
-            this.tabAPropos.TabIndex = 2;
-            this.tabAPropos.Text = "À propros";
-            // 
-            // richTextBox1
-            // 
-            this.richTextBox1.Font = new System.Drawing.Font("Bahnschrift", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.richTextBox1.Location = new System.Drawing.Point(265, 69);
-            this.richTextBox1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.richTextBox1.Name = "richTextBox1";
-            this.richTextBox1.Size = new System.Drawing.Size(626, 318);
-            this.richTextBox1.TabIndex = 1;
-            this.richTextBox1.Text = resources.GetString("richTextBox1.Text");
-            // 
-            // lblOlivier
-            // 
-            this.lblOlivier.AutoSize = true;
-            this.lblOlivier.Location = new System.Drawing.Point(97, 143);
-            this.lblOlivier.Name = "lblOlivier";
-            this.lblOlivier.Size = new System.Drawing.Size(128, 19);
-            this.lblOlivier.TabIndex = 0;
-            this.lblOlivier.Text = "Olivier Raymond";
-            // 
-            // lblCatherine
-            // 
-            this.lblCatherine.AutoSize = true;
-            this.lblCatherine.Location = new System.Drawing.Point(97, 123);
-            this.lblCatherine.Name = "lblCatherine";
-            this.lblCatherine.Size = new System.Drawing.Size(125, 19);
-            this.lblCatherine.TabIndex = 0;
-            this.lblCatherine.Text = "Catherine Godin";
-            // 
-            // lblFred
-            // 
-            this.lblFred.AutoSize = true;
-            this.lblFred.Location = new System.Drawing.Point(97, 104);
-            this.lblFred.Name = "lblFred";
-            this.lblFred.Size = new System.Drawing.Size(123, 19);
-            this.lblFred.TabIndex = 0;
-            this.lblFred.Text = "Frédérick Faidit";
-            // 
-            // lblAuteur01
-            // 
-            this.lblAuteur01.AutoSize = true;
-            this.lblAuteur01.Location = new System.Drawing.Point(74, 85);
-            this.lblAuteur01.Name = "lblAuteur01";
-            this.lblAuteur01.Size = new System.Drawing.Size(74, 19);
-            this.lblAuteur01.TabIndex = 0;
-            this.lblAuteur01.Text = "Auteurs :";
-            // 
-            // lblInfoProjetSTE
-            // 
-            this.lblInfoProjetSTE.AutoSize = true;
-            this.lblInfoProjetSTE.Location = new System.Drawing.Point(74, 69);
-            this.lblInfoProjetSTE.Name = "lblInfoProjetSTE";
-            this.lblInfoProjetSTE.Size = new System.Drawing.Size(67, 19);
-            this.lblInfoProjetSTE.TabIndex = 0;
-            this.lblInfoProjetSTE.Text = "STE v1.0";
-            // 
             // lblCarteCredit
             // 
             this.lblCarteCredit.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
@@ -1484,8 +1402,6 @@
             this.tabCommanditaire.ResumeLayout(false);
             this.panel6.ResumeLayout(false);
             this.panel6.PerformLayout();
-            this.tabAPropos.ResumeLayout(false);
-            this.tabAPropos.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -1526,7 +1442,6 @@
         private Label lblDollard;
         private Label lblInfoCommanditaire;
         private Label lblIDCommanditaire;
-        private Label lblInfoProjetSTE;
         private Panel pnlInfoDonateur;
         private Button btnSuivant;
         private Panel pnlDon;
@@ -1534,12 +1449,6 @@
         private Label lblRecompense;
         private TextBox txtRecompense;
         private Button btnCalculRecompense;
-        private TabPage tabAPropos;
-        private RichTextBox richTextBox1;
-        private Label lblOlivier;
-        private Label lblCatherine;
-        private Label lblFred;
-        private Label lblAuteur01;
         private MaskedTextBox mskTxtBoxTel;
         private ToolTip infoBulle;
         private Label lblMessageCommanditaire;
