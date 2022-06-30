@@ -567,7 +567,6 @@
             this.pnlInfoDonateur.Name = "pnlInfoDonateur";
             this.pnlInfoDonateur.Size = new System.Drawing.Size(442, 513);
             this.pnlInfoDonateur.TabIndex = 0;
-            this.pnlInfoDonateur.Paint += new System.Windows.Forms.PaintEventHandler(this.pnlInfoDonateur_Paint);
             // 
             // pnlDonnateur
             // 
