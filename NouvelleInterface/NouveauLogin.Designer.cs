@@ -29,6 +29,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(NouveauLogin));
             this.txtNom = new System.Windows.Forms.TextBox();
             this.txtMotDePasse = new System.Windows.Forms.TextBox();
             this.btnOk = new System.Windows.Forms.Button();
@@ -88,11 +89,11 @@
             // 
             // btnAnnuler
             // 
-            this.btnAnnuler.BackgroundImage = global::NouvelleInterface.Properties.Resources.btnAnnuler;
+            this.btnAnnuler.BackgroundImage = global::NouvelleInterface.Properties.Resources.btnContours5;
             this.btnAnnuler.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.btnAnnuler.FlatAppearance.BorderSize = 0;
-            this.btnAnnuler.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(178)))), ((int)(((byte)(209)))), ((int)(((byte)(54)))));
-            this.btnAnnuler.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(178)))), ((int)(((byte)(209)))), ((int)(((byte)(54)))));
+            this.btnAnnuler.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(211)))), ((int)(((byte)(230)))), ((int)(((byte)(111)))));
+            this.btnAnnuler.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(211)))), ((int)(((byte)(230)))), ((int)(((byte)(111)))));
             this.btnAnnuler.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnAnnuler.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.btnAnnuler.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(154)))), ((int)(((byte)(25)))), ((int)(((byte)(34)))));
@@ -117,7 +118,7 @@
             this.panelLogin.Controls.Add(this.txtMotDePasse);
             this.panelLogin.Controls.Add(this.icoUser);
             this.panelLogin.Controls.Add(this.icoCadenas);
-            this.panelLogin.Location = new System.Drawing.Point(174, 37);
+            this.panelLogin.Location = new System.Drawing.Point(174, 44);
             this.panelLogin.Name = "panelLogin";
             this.panelLogin.Size = new System.Drawing.Size(491, 541);
             this.panelLogin.TabIndex = 4;
@@ -165,6 +166,8 @@
             this.ClientSize = new System.Drawing.Size(839, 628);
             this.Controls.Add(this.panelLogin);
             this.DoubleBuffered = true;
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.MaximizeBox = false;
             this.MinimizeBox = false;
