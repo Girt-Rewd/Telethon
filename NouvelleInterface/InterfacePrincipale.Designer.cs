@@ -38,7 +38,7 @@
             this.btnPrecedent = new System.Windows.Forms.Button();
             this.pnTitrePaiement = new System.Windows.Forms.Panel();
             this.labPaiement = new System.Windows.Forms.Label();
-            this.btnAjoutreDonateur = new System.Windows.Forms.Button();
+            this.btnAjouterDonateur = new System.Windows.Forms.Button();
             this.lblMessageCredit = new System.Windows.Forms.Label();
             this.grRadioCarte = new System.Windows.Forms.GroupBox();
             this.radAmex = new System.Windows.Forms.RadioButton();
@@ -206,7 +206,7 @@
             this.pnlCarteCredit.Controls.Add(this.lblID);
             this.pnlCarteCredit.Controls.Add(this.btnPrecedent);
             this.pnlCarteCredit.Controls.Add(this.pnTitrePaiement);
-            this.pnlCarteCredit.Controls.Add(this.btnAjoutreDonateur);
+            this.pnlCarteCredit.Controls.Add(this.btnAjouterDonateur);
             this.pnlCarteCredit.Controls.Add(this.lblMessageCredit);
             this.pnlCarteCredit.Controls.Add(this.grRadioCarte);
             this.pnlCarteCredit.Controls.Add(this.panel3);
@@ -271,25 +271,25 @@
             this.labPaiement.TabIndex = 26;
             this.labPaiement.Text = "INFORMATIONS PAIEMENT";
             // 
-            // btnAjoutreDonateur
+            // btnAjouterDonateur
             // 
-            this.btnAjoutreDonateur.BackColor = System.Drawing.Color.White;
-            this.btnAjoutreDonateur.BackgroundImage = global::NouvelleInterface.Properties.Resources.btnContour;
-            this.btnAjoutreDonateur.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.btnAjoutreDonateur.FlatAppearance.BorderSize = 0;
-            this.btnAjoutreDonateur.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(213)))), ((int)(((byte)(147)))));
-            this.btnAjoutreDonateur.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(213)))), ((int)(((byte)(147)))));
-            this.btnAjoutreDonateur.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnAjoutreDonateur.Font = new System.Drawing.Font("Consolas", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.btnAjoutreDonateur.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(154)))), ((int)(((byte)(25)))), ((int)(((byte)(34)))));
-            this.btnAjoutreDonateur.Location = new System.Drawing.Point(293, 394);
-            this.btnAjoutreDonateur.Margin = new System.Windows.Forms.Padding(4);
-            this.btnAjoutreDonateur.Name = "btnAjoutreDonateur";
-            this.btnAjoutreDonateur.Size = new System.Drawing.Size(105, 35);
-            this.btnAjoutreDonateur.TabIndex = 10;
-            this.btnAjoutreDonateur.Text = "AJOUTER";
-            this.btnAjoutreDonateur.UseVisualStyleBackColor = false;
-            this.btnAjoutreDonateur.Click += new System.EventHandler(this.BtnAjouterDonateur_Click);
+            this.btnAjouterDonateur.BackColor = System.Drawing.Color.White;
+            this.btnAjouterDonateur.BackgroundImage = global::NouvelleInterface.Properties.Resources.btnContour;
+            this.btnAjouterDonateur.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btnAjouterDonateur.FlatAppearance.BorderSize = 0;
+            this.btnAjouterDonateur.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(213)))), ((int)(((byte)(147)))));
+            this.btnAjouterDonateur.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(213)))), ((int)(((byte)(147)))));
+            this.btnAjouterDonateur.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnAjouterDonateur.Font = new System.Drawing.Font("Consolas", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.btnAjouterDonateur.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(154)))), ((int)(((byte)(25)))), ((int)(((byte)(34)))));
+            this.btnAjouterDonateur.Location = new System.Drawing.Point(293, 394);
+            this.btnAjouterDonateur.Margin = new System.Windows.Forms.Padding(4);
+            this.btnAjouterDonateur.Name = "btnAjouterDonateur";
+            this.btnAjouterDonateur.Size = new System.Drawing.Size(105, 35);
+            this.btnAjouterDonateur.TabIndex = 10;
+            this.btnAjouterDonateur.Text = "AJOUTER";
+            this.btnAjouterDonateur.UseVisualStyleBackColor = false;
+            this.btnAjouterDonateur.Click += new System.EventHandler(this.BtnAjouterDonateur_Click);
             // 
             // lblMessageCredit
             // 
@@ -1578,7 +1578,7 @@
         private Button btnPrecedent;
         private Panel pnTitrePaiement;
         private Label labPaiement;
-        private Button btnAjoutreDonateur;
+        private Button btnAjouterDonateur;
         private Label lblMessageCredit;
         private GroupBox grRadioCarte;
         private RadioButton radAmex;
