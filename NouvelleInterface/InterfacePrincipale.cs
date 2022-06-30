@@ -155,7 +155,7 @@ namespace NouvelleInterface
             {
                 SignalerIncompletude(txtNomCommanditaire, "", lblNomCommanditaire, lblMessageCommanditaire, "Nom :");
                 SignalerIncompletude(txtPrenomCommanditaire, "", lblPrenomCommanditaire, lblMessageCommanditaire, "Prénom :");
-                //MessageBox.Show
+                
             }
             else if (txtQuantitePrix.Text == "" || cbbPrix.SelectedIndex <= -1)
             {
@@ -181,12 +181,14 @@ namespace NouvelleInterface
                 gestionnaireSTE.AjouterCommanditaire(txtPrenomCommanditaire.Text, txtNomCommanditaire.Text, gestionnaireSTE.commanditaires.Count);
                 gestionnaireSTE.AjouterPrix(cbbPrix.Text, double.Parse(txtValeurPrix.Text), int.Parse(txtQuantitePrix.Text), gestionnaireSTE.commanditaires.Last().getIdc(), gestionnaireSTE.prix.Count);
                 MessageBox.Show(gestionnaireSTE.commanditaires.Last().ToString() + " Valeur de commandite " + int.Parse(txtValeurPrix.Text) * int.Parse(txtQuantitePrix.Text) + "$");
+                txtPrenomCommanditaire.Text = "";
+                
             }
 
 
         }
 
-        // TODO boutton afficher prix.
+
 
         /// <summary>
         /// BtnAfficherDonateur_Click affiche la liste des donateurs temporairement stockés par l’application dans la RAM
