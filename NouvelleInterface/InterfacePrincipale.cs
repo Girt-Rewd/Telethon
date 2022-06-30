@@ -588,5 +588,10 @@ namespace NouvelleInterface
                 MessageBox.Show("Impossible de lire le fichiers", "Erreur", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
+
+        private void pnlInfoDonateur_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
     }
 }

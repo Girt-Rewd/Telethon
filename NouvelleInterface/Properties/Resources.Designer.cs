@@ -283,6 +283,16 @@ namespace NouvelleInterface.Properties {
         /// <summary>
         ///   Recherche une ressource localisée de type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap Fichier_99150ppi {
+            get {
+                object obj = ResourceManager.GetObject("Fichier 99150ppi", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Recherche une ressource localisée de type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap forme {
             get {
                 object obj = ResourceManager.GetObject("forme", resourceCulture);
@@ -446,6 +456,16 @@ namespace NouvelleInterface.Properties {
         internal static System.Drawing.Bitmap pannelAccueil {
             get {
                 object obj = ResourceManager.GetObject("pannelAccueil", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Recherche une ressource localisée de type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap pnDon5 {
+            get {
+                object obj = ResourceManager.GetObject("pnDon5", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

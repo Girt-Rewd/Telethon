@@ -67,7 +67,7 @@
             txtAccueil.AutoSize = true;
             txtAccueil.Font = new System.Drawing.Font("Bahnschrift", 21.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             txtAccueil.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(57)))), ((int)(((byte)(56)))), ((int)(((byte)(57)))));
-            txtAccueil.Location = new System.Drawing.Point(48, 392);
+            txtAccueil.Location = new System.Drawing.Point(48, 387);
             txtAccueil.Name = "txtAccueil";
             txtAccueil.Size = new System.Drawing.Size(406, 35);
             txtAccueil.TabIndex = 1;
@@ -78,7 +78,7 @@
             // 
             txtAccueil2.Font = new System.Drawing.Font("Bahnschrift SemiLight", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             txtAccueil2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(82)))), ((int)(((byte)(24)))), ((int)(((byte)(31)))));
-            txtAccueil2.Location = new System.Drawing.Point(48, 454);
+            txtAccueil2.Location = new System.Drawing.Point(48, 449);
             txtAccueil2.Name = "txtAccueil2";
             txtAccueil2.Size = new System.Drawing.Size(403, 138);
             txtAccueil2.TabIndex = 2;
@@ -110,7 +110,7 @@
             this.panelAccueil.Controls.Add(this.btnInscription);
             this.panelAccueil.Controls.Add(this.logoEcoHor);
             this.panelAccueil.Font = new System.Drawing.Font("Bahnschrift", 45F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.panelAccueil.Location = new System.Drawing.Point(86, 56);
+            this.panelAccueil.Location = new System.Drawing.Point(85, 53);
             this.panelAccueil.Name = "panelAccueil";
             this.panelAccueil.Size = new System.Drawing.Size(1010, 781);
             this.panelAccueil.TabIndex = 1;
@@ -121,9 +121,9 @@
             this.btnApropos.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.btnApropos.FlatAppearance.BorderSize = 0;
             this.btnApropos.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnApropos.Font = new System.Drawing.Font("Bahnschrift SemiCondensed", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.btnApropos.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(200)))), ((int)(((byte)(147)))));
-            this.btnApropos.Location = new System.Drawing.Point(393, 664);
+            this.btnApropos.Font = new System.Drawing.Font("Bahnschrift SemiBold SemiConden", 13F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.btnApropos.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(211)))), ((int)(((byte)(230)))), ((int)(((byte)(111)))));
+            this.btnApropos.Location = new System.Drawing.Point(396, 664);
             this.btnApropos.Name = "btnApropos";
             this.btnApropos.Size = new System.Drawing.Size(104, 36);
             this.btnApropos.TabIndex = 8;
