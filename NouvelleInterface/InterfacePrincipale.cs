@@ -109,6 +109,9 @@ namespace NouvelleInterface
             if (txtMontant.Text != null)
             {
                 Accueil parent = (Accueil)this.Owner;
+                if (Accueil.montantPasse == "") {
+                    Accueil.montantPasse = "0";
+                }
                 parent.GetTotalDon("" + (gestionnaireSTE.SommeDons() + double.Parse(Accueil.montantPasse)));
             }
             else
