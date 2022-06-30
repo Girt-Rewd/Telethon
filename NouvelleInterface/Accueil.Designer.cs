@@ -67,7 +67,7 @@
             txtAccueil.AutoSize = true;
             txtAccueil.Font = new System.Drawing.Font("Bahnschrift", 21.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             txtAccueil.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(57)))), ((int)(((byte)(56)))), ((int)(((byte)(57)))));
-            txtAccueil.Location = new System.Drawing.Point(48, 387);
+            txtAccueil.Location = new System.Drawing.Point(48, 384);
             txtAccueil.Name = "txtAccueil";
             txtAccueil.Size = new System.Drawing.Size(406, 35);
             txtAccueil.TabIndex = 1;
@@ -123,7 +123,7 @@
             this.btnApropos.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnApropos.Font = new System.Drawing.Font("Bahnschrift SemiBold SemiConden", 13F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.btnApropos.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(211)))), ((int)(((byte)(230)))), ((int)(((byte)(111)))));
-            this.btnApropos.Location = new System.Drawing.Point(396, 664);
+            this.btnApropos.Location = new System.Drawing.Point(404, 664);
             this.btnApropos.Name = "btnApropos";
             this.btnApropos.Size = new System.Drawing.Size(104, 36);
             this.btnApropos.TabIndex = 8;

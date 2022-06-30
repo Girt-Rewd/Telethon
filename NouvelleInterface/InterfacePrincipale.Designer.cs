@@ -129,6 +129,8 @@
             this.Column4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.panel1 = new System.Windows.Forms.Panel();
             this.label1 = new System.Windows.Forms.Label();
+            this.labDollar = new System.Windows.Forms.Label();
+            this.labRecompense = new System.Windows.Forms.Label();
             tabEntrees = new System.Windows.Forms.TabControl();
             tabEntrees.SuspendLayout();
             this.tabDonateur.SuspendLayout();
@@ -170,10 +172,10 @@
             this.tabDonateur.BackgroundImage = global::NouvelleInterface.Properties.Resources.Background150pp;
             this.tabDonateur.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.tabDonateur.Controls.Add(this.pnlFondListes);
-            this.tabDonateur.Controls.Add(this.pnlInfoDonateur);
             this.tabDonateur.Controls.Add(this.btnQuitter);
-            this.tabDonateur.Controls.Add(this.pnlCarteCredit);
             this.tabDonateur.Controls.Add(this.pnlDon);
+            this.tabDonateur.Controls.Add(this.pnlInfoDonateur);
+            this.tabDonateur.Controls.Add(this.pnlCarteCredit);
             this.tabDonateur.Location = new System.Drawing.Point(4, 34);
             this.tabDonateur.Margin = new System.Windows.Forms.Padding(4);
             this.tabDonateur.Name = "tabDonateur";
@@ -376,7 +378,6 @@
             this.pnlInfoDonateur.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.pnlInfoDonateur.Controls.Add(this.pnlDonnateur);
             this.pnlInfoDonateur.Controls.Add(this.mskTxtBoxTel);
-            this.pnlInfoDonateur.Controls.Add(this.lblMessageDonateur);
             this.pnlInfoDonateur.Controls.Add(this.btnSuivant);
             this.pnlInfoDonateur.Controls.Add(this.txtPrenomDonateur);
             this.pnlInfoDonateur.Controls.Add(this.lblPrenomDonateur);
@@ -385,6 +386,7 @@
             this.pnlInfoDonateur.Controls.Add(this.txtNomDonateur);
             this.pnlInfoDonateur.Controls.Add(this.txtCourrielDonateur);
             this.pnlInfoDonateur.Controls.Add(this.lblTelephone);
+            this.pnlInfoDonateur.Controls.Add(this.lblMessageDonateur);
             this.pnlInfoDonateur.Font = new System.Drawing.Font("Bahnschrift", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.pnlInfoDonateur.Location = new System.Drawing.Point(41, 40);
             this.pnlInfoDonateur.Name = "pnlInfoDonateur";
@@ -607,7 +609,7 @@
             this.btnPrecedent.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnPrecedent.Font = new System.Drawing.Font("Consolas", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.btnPrecedent.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(154)))), ((int)(((byte)(25)))), ((int)(((byte)(34)))));
-            this.btnPrecedent.Location = new System.Drawing.Point(175, 397);
+            this.btnPrecedent.Location = new System.Drawing.Point(172, 397);
             this.btnPrecedent.Margin = new System.Windows.Forms.Padding(4);
             this.btnPrecedent.Name = "btnPrecedent";
             this.btnPrecedent.Size = new System.Drawing.Size(108, 35);
@@ -908,6 +910,8 @@
             this.pnlDon.BackColor = System.Drawing.Color.Transparent;
             this.pnlDon.BackgroundImage = global::NouvelleInterface.Properties.Resources.pnldon3;
             this.pnlDon.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.pnlDon.Controls.Add(this.labRecompense);
+            this.pnlDon.Controls.Add(this.labDollar);
             this.pnlDon.Controls.Add(this.pnlTitreDonnateur);
             this.pnlDon.Controls.Add(this.btnPrecedent2);
             this.pnlDon.Controls.Add(this.txtRecompense);
@@ -955,7 +959,7 @@
             this.btnPrecedent2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnPrecedent2.Font = new System.Drawing.Font("Bahnschrift SemiBold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.btnPrecedent2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(154)))), ((int)(((byte)(25)))), ((int)(((byte)(34)))));
-            this.btnPrecedent2.Location = new System.Drawing.Point(175, 397);
+            this.btnPrecedent2.Location = new System.Drawing.Point(172, 397);
             this.btnPrecedent2.Margin = new System.Windows.Forms.Padding(4);
             this.btnPrecedent2.Name = "btnPrecedent2";
             this.btnPrecedent2.Size = new System.Drawing.Size(108, 35);
@@ -966,7 +970,7 @@
             // 
             // txtRecompense
             // 
-            this.txtRecompense.Location = new System.Drawing.Point(220, 199);
+            this.txtRecompense.Location = new System.Drawing.Point(235, 282);
             this.txtRecompense.Margin = new System.Windows.Forms.Padding(4);
             this.txtRecompense.Name = "txtRecompense";
             this.txtRecompense.Size = new System.Drawing.Size(170, 27);
@@ -975,42 +979,43 @@
             // lblMontant
             // 
             this.lblMontant.AutoSize = true;
-            this.lblMontant.Font = new System.Drawing.Font("Bahnschrift SemiBold", 13F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.lblMontant.Font = new System.Drawing.Font("Bahnschrift SemiBold", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.lblMontant.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(154)))), ((int)(((byte)(25)))), ((int)(((byte)(34)))));
-            this.lblMontant.Location = new System.Drawing.Point(123, 122);
+            this.lblMontant.Location = new System.Drawing.Point(45, 117);
             this.lblMontant.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblMontant.Name = "lblMontant";
-            this.lblMontant.Size = new System.Drawing.Size(85, 22);
+            this.lblMontant.Size = new System.Drawing.Size(94, 24);
             this.lblMontant.TabIndex = 0;
             this.lblMontant.Text = "Montant :";
             // 
             // btnCalculRecompense
             // 
-            this.btnCalculRecompense.BackgroundImage = global::NouvelleInterface.Properties.Resources.btnContour;
-            this.btnCalculRecompense.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btnCalculRecompense.BackgroundImage = global::NouvelleInterface.Properties.Resources.btnContours9;
+            this.btnCalculRecompense.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.btnCalculRecompense.FlatAppearance.BorderSize = 0;
             this.btnCalculRecompense.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnCalculRecompense.Font = new System.Drawing.Font("Bahnschrift SemiBold", 13F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.btnCalculRecompense.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(154)))), ((int)(((byte)(25)))), ((int)(((byte)(34)))));
-            this.btnCalculRecompense.Location = new System.Drawing.Point(220, 154);
+            this.btnCalculRecompense.Location = new System.Drawing.Point(297, 112);
             this.btnCalculRecompense.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.btnCalculRecompense.Name = "btnCalculRecompense";
-            this.btnCalculRecompense.Size = new System.Drawing.Size(170, 38);
+            this.btnCalculRecompense.Size = new System.Drawing.Size(108, 35);
             this.btnCalculRecompense.TabIndex = 0;
-            this.btnCalculRecompense.Text = "Récompense";
+            this.btnCalculRecompense.Text = "Valider";
             this.btnCalculRecompense.UseVisualStyleBackColor = true;
             this.btnCalculRecompense.Click += new System.EventHandler(this.BtnCalculRecompense_Click);
             // 
             // txtMontant
             // 
             this.txtMontant.BackColor = System.Drawing.Color.Cornsilk;
-            this.txtMontant.Font = new System.Drawing.Font("Bahnschrift", 13F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.txtMontant.Font = new System.Drawing.Font("Bahnschrift SemiBold", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.txtMontant.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(57)))), ((int)(((byte)(56)))), ((int)(((byte)(57)))));
-            this.txtMontant.Location = new System.Drawing.Point(220, 119);
+            this.txtMontant.Location = new System.Drawing.Point(140, 114);
             this.txtMontant.Margin = new System.Windows.Forms.Padding(4);
             this.txtMontant.Name = "txtMontant";
-            this.txtMontant.Size = new System.Drawing.Size(170, 28);
+            this.txtMontant.Size = new System.Drawing.Size(95, 30);
             this.txtMontant.TabIndex = 1;
+            this.txtMontant.Text = "585585";
             this.txtMontant.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             // 
             // btnAjouterDon
@@ -1026,7 +1031,7 @@
             this.btnAjouterDon.Location = new System.Drawing.Point(291, 397);
             this.btnAjouterDon.Margin = new System.Windows.Forms.Padding(4);
             this.btnAjouterDon.Name = "btnAjouterDon";
-            this.btnAjouterDon.Size = new System.Drawing.Size(111, 35);
+            this.btnAjouterDon.Size = new System.Drawing.Size(108, 35);
             this.btnAjouterDon.TabIndex = 8;
             this.btnAjouterDon.Text = "Ajouter";
             this.btnAjouterDon.UseVisualStyleBackColor = true;
@@ -1422,6 +1427,27 @@
             this.label1.Size = new System.Drawing.Size(100, 23);
             this.label1.TabIndex = 0;
             // 
+            // labDollar
+            // 
+            this.labDollar.AutoSize = true;
+            this.labDollar.Font = new System.Drawing.Font("Bahnschrift SemiBold", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.labDollar.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(154)))), ((int)(((byte)(25)))), ((int)(((byte)(34)))));
+            this.labDollar.Location = new System.Drawing.Point(237, 117);
+            this.labDollar.Name = "labDollar";
+            this.labDollar.Size = new System.Drawing.Size(21, 23);
+            this.labDollar.TabIndex = 28;
+            this.labDollar.Text = "$";
+            // 
+            // labRecompense
+            // 
+            this.labRecompense.AutoSize = true;
+            this.labRecompense.Font = new System.Drawing.Font("Bahnschrift SemiBold", 13F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.labRecompense.Location = new System.Drawing.Point(41, 287);
+            this.labRecompense.Name = "labRecompense";
+            this.labRecompense.Size = new System.Drawing.Size(195, 22);
+            this.labRecompense.TabIndex = 29;
+            this.labRecompense.Text = "Récompense obtenue :";
+            // 
             // InterfacePrincipale
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(96F, 96F);
@@ -1571,5 +1597,7 @@
         private Label lblAnnee;
         private Panel panel2;
         private Label label2;
+        private Label labRecompense;
+        private Label labDollar;
     }
 }
