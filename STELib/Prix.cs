@@ -48,7 +48,7 @@ namespace STELib
         /// </summary>
         /// <returns>string</returns>
         public new string ToString() { 
-            string chaine = "idPrix: " + idPrix + ", description: " + description + ", valeur: "+ valeur +", quantite restante: " + quantiteActuelle + ", idCommanditaire: " + idCommanditaire;
+            string chaine = idPrix + ", " + description + ", valeur: "+ valeur +", quantite restante: " + quantiteActuelle + ", idCommanditaire: " + idCommanditaire+"\n\r";
             return chaine;
         }
 

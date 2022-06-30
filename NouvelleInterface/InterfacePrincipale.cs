@@ -35,6 +35,7 @@ namespace NouvelleInterface
 
         }
         char typeCarte;
+       
         /// <summary>
         /// BtnAjouterDonateur_Click effectue un ensemble de validation sur des champs correspondants aux informations de la carte de crédit, tant au niveau
         /// de leur complétude que de leur format. Si les critères nécessaires sont remplis elle crée l’objet donateur correspondant aux informations personnelles 
@@ -219,24 +220,8 @@ namespace NouvelleInterface
             }
             if (dgvDonateurs.Visible == false)
             {
-                try
-                {
-                    StreamReader readList = new("listeDonateurs.txt");
-                    string ligne;
-                    while ((ligne = readList.ReadLine()) != null)
-                    {
-                        string[] tabLigne = ligne.Split('/');
-
-                        dgvDonateurs.Rows.Add(tabLigne);
-
-                    }
-                    readList.Close();
-                    dgvDonateurs.Visible = true;
-                }
-                catch
-                {
-                    MessageBox.Show("Impossible de lire le fichiers", "Erreur", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                }
+                dgvDonateurs.Visible = true;
+               
 
             }
         }
@@ -582,6 +567,26 @@ namespace NouvelleInterface
             pnlDon.Visible = false;
         }
 
-        
+        private void InterfacePrincipale_Load(object sender, EventArgs e)
+        {
+            try
+            {
+                StreamReader readList = new("listeDonateurs.txt");
+                string ligne;
+                while ((ligne = readList.ReadLine()) != null)
+                {
+                    string[] tabLigne = ligne.Split('/');
+
+                    dgvDonateurs.Rows.Add(tabLigne);
+
+                }
+                readList.Close();
+
+            }
+            catch
+            {
+                MessageBox.Show("Impossible de lire le fichiers", "Erreur", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
     }
 }
