@@ -30,35 +30,6 @@
         {
             this.components = new System.ComponentModel.Container();
             System.Windows.Forms.TabControl tabEntrees;
-            this.tabCommanditaire = new System.Windows.Forms.TabPage();
-            this.panel6 = new System.Windows.Forms.Panel();
-            this.txtBoxOutput = new System.Windows.Forms.RichTextBox();
-            this.txtPrenomCommanditaire = new System.Windows.Forms.TextBox();
-            this.cbbPrix = new System.Windows.Forms.ComboBox();
-            this.lblIDCommanditaire = new System.Windows.Forms.Label();
-            this.lblMessagePrix = new System.Windows.Forms.Label();
-            this.lblInfoCommanditaire = new System.Windows.Forms.Label();
-            this.lblMessageCommanditaire = new System.Windows.Forms.Label();
-            this.lblDollard = new System.Windows.Forms.Label();
-            this.btnAffichePrix = new System.Windows.Forms.Button();
-            this.lblInfoPrix = new System.Windows.Forms.Label();
-            this.btnAjouterPrix = new System.Windows.Forms.Button();
-            this.lblPrenomCommanditaire = new System.Windows.Forms.Label();
-            this.btnAfficherComm = new System.Windows.Forms.Button();
-            this.lblChoixPrix = new System.Windows.Forms.Label();
-            this.txtQuantitePrix = new System.Windows.Forms.TextBox();
-            this.lblNomCommanditaire = new System.Windows.Forms.Label();
-            this.txtValeurPrix = new System.Windows.Forms.TextBox();
-            this.lblValeur = new System.Windows.Forms.Label();
-            this.txtNomCommanditaire = new System.Windows.Forms.TextBox();
-            this.lblQuatitePrix = new System.Windows.Forms.Label();
-            this.tabAPropos = new System.Windows.Forms.TabPage();
-            this.richTextBox1 = new System.Windows.Forms.RichTextBox();
-            this.lblOlivier = new System.Windows.Forms.Label();
-            this.lblCatherine = new System.Windows.Forms.Label();
-            this.lblFred = new System.Windows.Forms.Label();
-            this.lblAuteur01 = new System.Windows.Forms.Label();
-            this.lblInfoProjetSTE = new System.Windows.Forms.Label();
             this.tabDonateur = new System.Windows.Forms.TabPage();
             this.txtBoxOut = new System.Windows.Forms.RichTextBox();
             this.pnlCarteCredit = new System.Windows.Forms.Panel();
@@ -122,6 +93,35 @@
             this.btnQuitter = new System.Windows.Forms.Button();
             this.btnAfficheDon = new System.Windows.Forms.Button();
             this.btnAfficherDonateur = new System.Windows.Forms.Button();
+            this.tabCommanditaire = new System.Windows.Forms.TabPage();
+            this.panel6 = new System.Windows.Forms.Panel();
+            this.txtBoxOutput = new System.Windows.Forms.RichTextBox();
+            this.txtPrenomCommanditaire = new System.Windows.Forms.TextBox();
+            this.cbbPrix = new System.Windows.Forms.ComboBox();
+            this.lblIDCommanditaire = new System.Windows.Forms.Label();
+            this.lblMessagePrix = new System.Windows.Forms.Label();
+            this.lblInfoCommanditaire = new System.Windows.Forms.Label();
+            this.lblMessageCommanditaire = new System.Windows.Forms.Label();
+            this.lblDollard = new System.Windows.Forms.Label();
+            this.btnAffichePrix = new System.Windows.Forms.Button();
+            this.lblInfoPrix = new System.Windows.Forms.Label();
+            this.btnAjouterPrix = new System.Windows.Forms.Button();
+            this.lblPrenomCommanditaire = new System.Windows.Forms.Label();
+            this.btnAfficherComm = new System.Windows.Forms.Button();
+            this.lblChoixPrix = new System.Windows.Forms.Label();
+            this.txtQuantitePrix = new System.Windows.Forms.TextBox();
+            this.lblNomCommanditaire = new System.Windows.Forms.Label();
+            this.txtValeurPrix = new System.Windows.Forms.TextBox();
+            this.lblValeur = new System.Windows.Forms.Label();
+            this.txtNomCommanditaire = new System.Windows.Forms.TextBox();
+            this.lblQuatitePrix = new System.Windows.Forms.Label();
+            this.tabAPropos = new System.Windows.Forms.TabPage();
+            this.richTextBox1 = new System.Windows.Forms.RichTextBox();
+            this.lblOlivier = new System.Windows.Forms.Label();
+            this.lblCatherine = new System.Windows.Forms.Label();
+            this.lblFred = new System.Windows.Forms.Label();
+            this.lblAuteur01 = new System.Windows.Forms.Label();
+            this.lblInfoProjetSTE = new System.Windows.Forms.Label();
             this.lblCarteCredit = new System.Windows.Forms.Label();
             this.lblnfoDonateur = new System.Windows.Forms.Label();
             this.infoBulle = new System.Windows.Forms.ToolTip(this.components);
@@ -135,9 +135,6 @@
             this.label1 = new System.Windows.Forms.Label();
             tabEntrees = new System.Windows.Forms.TabControl();
             tabEntrees.SuspendLayout();
-            this.tabCommanditaire.SuspendLayout();
-            this.panel6.SuspendLayout();
-            this.tabAPropos.SuspendLayout();
             this.tabDonateur.SuspendLayout();
             this.pnlCarteCredit.SuspendLayout();
             this.pnTitrePaiement.SuspendLayout();
@@ -152,6 +149,9 @@
             this.panel4.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvDonateurs)).BeginInit();
             this.panel5.SuspendLayout();
+            this.tabCommanditaire.SuspendLayout();
+            this.panel6.SuspendLayout();
+            this.tabAPropos.SuspendLayout();
             this.SuspendLayout();
             // 
             // tabEntrees
@@ -168,328 +168,6 @@
             tabEntrees.SelectedIndex = 0;
             tabEntrees.Size = new System.Drawing.Size(1168, 824);
             tabEntrees.TabIndex = 0;
-            // 
-            // tabCommanditaire
-            // 
-            this.tabCommanditaire.BackgroundImage = global::NouvelleInterface.Properties.Resources.Background150pp;
-            this.tabCommanditaire.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.tabCommanditaire.Controls.Add(this.panel6);
-            this.tabCommanditaire.Location = new System.Drawing.Point(4, 34);
-            this.tabCommanditaire.Margin = new System.Windows.Forms.Padding(4);
-            this.tabCommanditaire.Name = "tabCommanditaire";
-            this.tabCommanditaire.Padding = new System.Windows.Forms.Padding(4, 3, 4, 3);
-            this.tabCommanditaire.Size = new System.Drawing.Size(1160, 786);
-            this.tabCommanditaire.TabIndex = 1;
-            this.tabCommanditaire.Text = "Commanditaires";
-            // 
-            // panel6
-            // 
-            this.panel6.BackColor = System.Drawing.Color.Transparent;
-            this.panel6.BackgroundImage = global::NouvelleInterface.Properties.Resources.panel3;
-            this.panel6.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.panel6.Controls.Add(this.txtBoxOutput);
-            this.panel6.Controls.Add(this.txtPrenomCommanditaire);
-            this.panel6.Controls.Add(this.cbbPrix);
-            this.panel6.Controls.Add(this.lblIDCommanditaire);
-            this.panel6.Controls.Add(this.lblMessagePrix);
-            this.panel6.Controls.Add(this.lblInfoCommanditaire);
-            this.panel6.Controls.Add(this.lblMessageCommanditaire);
-            this.panel6.Controls.Add(this.lblDollard);
-            this.panel6.Controls.Add(this.btnAffichePrix);
-            this.panel6.Controls.Add(this.lblInfoPrix);
-            this.panel6.Controls.Add(this.btnAjouterPrix);
-            this.panel6.Controls.Add(this.lblPrenomCommanditaire);
-            this.panel6.Controls.Add(this.btnAfficherComm);
-            this.panel6.Controls.Add(this.lblChoixPrix);
-            this.panel6.Controls.Add(this.txtQuantitePrix);
-            this.panel6.Controls.Add(this.lblNomCommanditaire);
-            this.panel6.Controls.Add(this.txtValeurPrix);
-            this.panel6.Controls.Add(this.lblValeur);
-            this.panel6.Controls.Add(this.txtNomCommanditaire);
-            this.panel6.Controls.Add(this.lblQuatitePrix);
-            this.panel6.Location = new System.Drawing.Point(28, 46);
-            this.panel6.Name = "panel6";
-            this.panel6.Size = new System.Drawing.Size(1019, 657);
-            this.panel6.TabIndex = 23;
-            // 
-            // txtBoxOutput
-            // 
-            this.txtBoxOutput.Location = new System.Drawing.Point(476, 257);
-            this.txtBoxOutput.Margin = new System.Windows.Forms.Padding(4);
-            this.txtBoxOutput.Name = "txtBoxOutput";
-            this.txtBoxOutput.Size = new System.Drawing.Size(420, 254);
-            this.txtBoxOutput.TabIndex = 5;
-            this.txtBoxOutput.Text = "";
-            // 
-            // txtPrenomCommanditaire
-            // 
-            this.txtPrenomCommanditaire.Location = new System.Drawing.Point(258, 146);
-            this.txtPrenomCommanditaire.Margin = new System.Windows.Forms.Padding(4);
-            this.txtPrenomCommanditaire.Name = "txtPrenomCommanditaire";
-            this.txtPrenomCommanditaire.Size = new System.Drawing.Size(168, 27);
-            this.txtPrenomCommanditaire.TabIndex = 0;
-            this.txtPrenomCommanditaire.Click += new System.EventHandler(this.TxtPrenomCommanditaire_Click);
-            // 
-            // cbbPrix
-            // 
-            this.cbbPrix.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.cbbPrix.FormattingEnabled = true;
-            this.cbbPrix.Items.AddRange(new object[] {
-            "Calendrier",
-            "Repas pour 2",
-            "BBQ",
-            "Téléviseur 32\"",
-            ""});
-            this.cbbPrix.Location = new System.Drawing.Point(258, 329);
-            this.cbbPrix.Margin = new System.Windows.Forms.Padding(4);
-            this.cbbPrix.Name = "cbbPrix";
-            this.cbbPrix.Size = new System.Drawing.Size(168, 27);
-            this.cbbPrix.TabIndex = 2;
-            this.cbbPrix.SelectedIndexChanged += new System.EventHandler(this.cbbPrix_SelectedIndexChanged);
-            // 
-            // lblIDCommanditaire
-            // 
-            this.lblIDCommanditaire.AutoSize = true;
-            this.lblIDCommanditaire.Location = new System.Drawing.Point(129, 112);
-            this.lblIDCommanditaire.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.lblIDCommanditaire.Name = "lblIDCommanditaire";
-            this.lblIDCommanditaire.Size = new System.Drawing.Size(32, 19);
-            this.lblIDCommanditaire.TabIndex = 8;
-            this.lblIDCommanditaire.Text = "ID :";
-            // 
-            // lblMessagePrix
-            // 
-            this.lblMessagePrix.AutoSize = true;
-            this.lblMessagePrix.Font = new System.Drawing.Font("Bahnschrift", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.lblMessagePrix.ForeColor = System.Drawing.Color.Maroon;
-            this.lblMessagePrix.Location = new System.Drawing.Point(295, 456);
-            this.lblMessagePrix.Name = "lblMessagePrix";
-            this.lblMessagePrix.Size = new System.Drawing.Size(132, 16);
-            this.lblMessagePrix.TabIndex = 18;
-            this.lblMessagePrix.Text = "*Champs obligatoires";
-            this.lblMessagePrix.Visible = false;
-            // 
-            // lblInfoCommanditaire
-            // 
-            this.lblInfoCommanditaire.AutoSize = true;
-            this.lblInfoCommanditaire.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.lblInfoCommanditaire.Location = new System.Drawing.Point(129, 75);
-            this.lblInfoCommanditaire.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.lblInfoCommanditaire.Name = "lblInfoCommanditaire";
-            this.lblInfoCommanditaire.Size = new System.Drawing.Size(189, 15);
-            this.lblInfoCommanditaire.TabIndex = 7;
-            this.lblInfoCommanditaire.Text = "Informations Commanditaire";
-            // 
-            // lblMessageCommanditaire
-            // 
-            this.lblMessageCommanditaire.AutoSize = true;
-            this.lblMessageCommanditaire.Font = new System.Drawing.Font("Bahnschrift", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.lblMessageCommanditaire.ForeColor = System.Drawing.Color.Maroon;
-            this.lblMessageCommanditaire.Location = new System.Drawing.Point(294, 223);
-            this.lblMessageCommanditaire.Name = "lblMessageCommanditaire";
-            this.lblMessageCommanditaire.Size = new System.Drawing.Size(132, 16);
-            this.lblMessageCommanditaire.TabIndex = 18;
-            this.lblMessageCommanditaire.Text = "*Champs obligatoires";
-            this.lblMessageCommanditaire.Visible = false;
-            // 
-            // lblDollard
-            // 
-            this.lblDollard.Location = new System.Drawing.Point(486, 289);
-            this.lblDollard.Name = "lblDollard";
-            this.lblDollard.Size = new System.Drawing.Size(100, 23);
-            this.lblDollard.TabIndex = 22;
-            // 
-            // btnAffichePrix
-            // 
-            this.btnAffichePrix.Location = new System.Drawing.Point(524, 525);
-            this.btnAffichePrix.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
-            this.btnAffichePrix.Name = "btnAffichePrix";
-            this.btnAffichePrix.Size = new System.Drawing.Size(182, 50);
-            this.btnAffichePrix.TabIndex = 6;
-            this.btnAffichePrix.Text = "Afficher les prix";
-            this.btnAffichePrix.UseVisualStyleBackColor = true;
-            this.btnAffichePrix.Click += new System.EventHandler(this.btnAffichePrix_Click);
-            // 
-            // lblInfoPrix
-            // 
-            this.lblInfoPrix.AutoSize = true;
-            this.lblInfoPrix.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.lblInfoPrix.Location = new System.Drawing.Point(129, 300);
-            this.lblInfoPrix.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.lblInfoPrix.Name = "lblInfoPrix";
-            this.lblInfoPrix.Size = new System.Drawing.Size(115, 15);
-            this.lblInfoPrix.TabIndex = 7;
-            this.lblInfoPrix.Text = "Informations prix";
-            // 
-            // btnAjouterPrix
-            // 
-            this.btnAjouterPrix.Location = new System.Drawing.Point(244, 525);
-            this.btnAjouterPrix.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
-            this.btnAjouterPrix.Name = "btnAjouterPrix";
-            this.btnAjouterPrix.Size = new System.Drawing.Size(182, 50);
-            this.btnAjouterPrix.TabIndex = 15;
-            this.btnAjouterPrix.Text = "Ajouter Commandite";
-            this.btnAjouterPrix.UseVisualStyleBackColor = true;
-            this.btnAjouterPrix.Click += new System.EventHandler(this.BtnAjouterPrix_Click);
-            // 
-            // lblPrenomCommanditaire
-            // 
-            this.lblPrenomCommanditaire.AutoSize = true;
-            this.lblPrenomCommanditaire.Location = new System.Drawing.Point(129, 149);
-            this.lblPrenomCommanditaire.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.lblPrenomCommanditaire.Name = "lblPrenomCommanditaire";
-            this.lblPrenomCommanditaire.Size = new System.Drawing.Size(75, 19);
-            this.lblPrenomCommanditaire.TabIndex = 6;
-            this.lblPrenomCommanditaire.Text = "Prénom :";
-            // 
-            // btnAfficherComm
-            // 
-            this.btnAfficherComm.Location = new System.Drawing.Point(714, 525);
-            this.btnAfficherComm.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
-            this.btnAfficherComm.Name = "btnAfficherComm";
-            this.btnAfficherComm.Size = new System.Drawing.Size(182, 50);
-            this.btnAfficherComm.TabIndex = 7;
-            this.btnAfficherComm.Text = "Afficher les Commanditaires";
-            this.btnAfficherComm.UseVisualStyleBackColor = true;
-            this.btnAfficherComm.Click += new System.EventHandler(this.BtnAfficherCommanditaire_Click);
-            // 
-            // lblChoixPrix
-            // 
-            this.lblChoixPrix.AutoSize = true;
-            this.lblChoixPrix.Location = new System.Drawing.Point(129, 332);
-            this.lblChoixPrix.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.lblChoixPrix.Name = "lblChoixPrix";
-            this.lblChoixPrix.Size = new System.Drawing.Size(100, 19);
-            this.lblChoixPrix.TabIndex = 6;
-            this.lblChoixPrix.Text = "Description :";
-            // 
-            // txtQuantitePrix
-            // 
-            this.txtQuantitePrix.Location = new System.Drawing.Point(258, 425);
-            this.txtQuantitePrix.Margin = new System.Windows.Forms.Padding(4);
-            this.txtQuantitePrix.Name = "txtQuantitePrix";
-            this.txtQuantitePrix.Size = new System.Drawing.Size(168, 27);
-            this.txtQuantitePrix.TabIndex = 4;
-            this.txtQuantitePrix.Click += new System.EventHandler(this.TxtQuantitePrix_Click);
-            // 
-            // lblNomCommanditaire
-            // 
-            this.lblNomCommanditaire.AutoSize = true;
-            this.lblNomCommanditaire.Location = new System.Drawing.Point(129, 192);
-            this.lblNomCommanditaire.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.lblNomCommanditaire.Name = "lblNomCommanditaire";
-            this.lblNomCommanditaire.Size = new System.Drawing.Size(51, 19);
-            this.lblNomCommanditaire.TabIndex = 5;
-            this.lblNomCommanditaire.Text = "Nom :";
-            // 
-            // txtValeurPrix
-            // 
-            this.txtValeurPrix.Location = new System.Drawing.Point(258, 377);
-            this.txtValeurPrix.Margin = new System.Windows.Forms.Padding(4);
-            this.txtValeurPrix.Name = "txtValeurPrix";
-            this.txtValeurPrix.Size = new System.Drawing.Size(168, 27);
-            this.txtValeurPrix.TabIndex = 3;
-            this.txtValeurPrix.Click += new System.EventHandler(this.TxtValeurPrix_Click);
-            // 
-            // lblValeur
-            // 
-            this.lblValeur.AutoSize = true;
-            this.lblValeur.Location = new System.Drawing.Point(129, 380);
-            this.lblValeur.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.lblValeur.Name = "lblValeur";
-            this.lblValeur.Size = new System.Drawing.Size(125, 19);
-            this.lblValeur.TabIndex = 5;
-            this.lblValeur.Text = "Valeur unitaire :";
-            // 
-            // txtNomCommanditaire
-            // 
-            this.txtNomCommanditaire.Location = new System.Drawing.Point(258, 192);
-            this.txtNomCommanditaire.Margin = new System.Windows.Forms.Padding(4);
-            this.txtNomCommanditaire.Name = "txtNomCommanditaire";
-            this.txtNomCommanditaire.Size = new System.Drawing.Size(168, 27);
-            this.txtNomCommanditaire.TabIndex = 1;
-            this.txtNomCommanditaire.Click += new System.EventHandler(this.TxtNomCommanditaire_Click);
-            // 
-            // lblQuatitePrix
-            // 
-            this.lblQuatitePrix.AutoSize = true;
-            this.lblQuatitePrix.Location = new System.Drawing.Point(129, 428);
-            this.lblQuatitePrix.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.lblQuatitePrix.Name = "lblQuatitePrix";
-            this.lblQuatitePrix.Size = new System.Drawing.Size(78, 19);
-            this.lblQuatitePrix.TabIndex = 4;
-            this.lblQuatitePrix.Text = "Quantité :";
-            // 
-            // tabAPropos
-            // 
-            this.tabAPropos.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(213)))), ((int)(((byte)(147)))));
-            this.tabAPropos.Controls.Add(this.richTextBox1);
-            this.tabAPropos.Controls.Add(this.lblOlivier);
-            this.tabAPropos.Controls.Add(this.lblCatherine);
-            this.tabAPropos.Controls.Add(this.lblFred);
-            this.tabAPropos.Controls.Add(this.lblAuteur01);
-            this.tabAPropos.Controls.Add(this.lblInfoProjetSTE);
-            this.tabAPropos.Location = new System.Drawing.Point(4, 34);
-            this.tabAPropos.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.tabAPropos.Name = "tabAPropos";
-            this.tabAPropos.Padding = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.tabAPropos.Size = new System.Drawing.Size(1160, 786);
-            this.tabAPropos.TabIndex = 2;
-            this.tabAPropos.Text = "À propros";
-            // 
-            // richTextBox1
-            // 
-            this.richTextBox1.Location = new System.Drawing.Point(265, 69);
-            this.richTextBox1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.richTextBox1.Name = "richTextBox1";
-            this.richTextBox1.Size = new System.Drawing.Size(626, 318);
-            this.richTextBox1.TabIndex = 1;
-            this.richTextBox1.Text = "";
-            // 
-            // lblOlivier
-            // 
-            this.lblOlivier.AutoSize = true;
-            this.lblOlivier.Location = new System.Drawing.Point(97, 143);
-            this.lblOlivier.Name = "lblOlivier";
-            this.lblOlivier.Size = new System.Drawing.Size(128, 19);
-            this.lblOlivier.TabIndex = 0;
-            this.lblOlivier.Text = "Olivier Raymond";
-            // 
-            // lblCatherine
-            // 
-            this.lblCatherine.AutoSize = true;
-            this.lblCatherine.Location = new System.Drawing.Point(97, 123);
-            this.lblCatherine.Name = "lblCatherine";
-            this.lblCatherine.Size = new System.Drawing.Size(125, 19);
-            this.lblCatherine.TabIndex = 0;
-            this.lblCatherine.Text = "Catherine Godin";
-            // 
-            // lblFred
-            // 
-            this.lblFred.AutoSize = true;
-            this.lblFred.Location = new System.Drawing.Point(97, 104);
-            this.lblFred.Name = "lblFred";
-            this.lblFred.Size = new System.Drawing.Size(123, 19);
-            this.lblFred.TabIndex = 0;
-            this.lblFred.Text = "Frédérick Faidit";
-            // 
-            // lblAuteur01
-            // 
-            this.lblAuteur01.AutoSize = true;
-            this.lblAuteur01.Location = new System.Drawing.Point(74, 85);
-            this.lblAuteur01.Name = "lblAuteur01";
-            this.lblAuteur01.Size = new System.Drawing.Size(74, 19);
-            this.lblAuteur01.TabIndex = 0;
-            this.lblAuteur01.Text = "Auteurs :";
-            // 
-            // lblInfoProjetSTE
-            // 
-            this.lblInfoProjetSTE.AutoSize = true;
-            this.lblInfoProjetSTE.Location = new System.Drawing.Point(74, 69);
-            this.lblInfoProjetSTE.Name = "lblInfoProjetSTE";
-            this.lblInfoProjetSTE.Size = new System.Drawing.Size(67, 19);
-            this.lblInfoProjetSTE.TabIndex = 0;
-            this.lblInfoProjetSTE.Text = "STE v1.0";
             // 
             // tabDonateur
             // 
@@ -657,6 +335,7 @@
             // 
             this.radMC.AutoSize = true;
             this.radMC.BackColor = System.Drawing.Color.Transparent;
+            this.radMC.Checked = true;
             this.radMC.Font = new System.Drawing.Font("Bahnschrift", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.radMC.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(57)))), ((int)(((byte)(56)))), ((int)(((byte)(57)))));
             this.radMC.Location = new System.Drawing.Point(122, 32);
@@ -664,6 +343,7 @@
             this.radMC.Name = "radMC";
             this.radMC.Size = new System.Drawing.Size(49, 23);
             this.radMC.TabIndex = 1;
+            this.radMC.TabStop = true;
             this.radMC.Text = "MC";
             this.radMC.UseVisualStyleBackColor = false;
             // 
@@ -745,6 +425,7 @@
             this.mskTxtNumeroCarte.PromptChar = ' ';
             this.mskTxtNumeroCarte.Size = new System.Drawing.Size(168, 27);
             this.mskTxtNumeroCarte.TabIndex = 4;
+            this.mskTxtNumeroCarte.Text = "1234123412341234";
             this.mskTxtNumeroCarte.Click += new System.EventHandler(this.TxtNumeroCarte_Click);
             // 
             // lblMoisExpiration
@@ -1359,6 +1040,328 @@
             this.btnAfficherDonateur.UseVisualStyleBackColor = false;
             this.btnAfficherDonateur.Click += new System.EventHandler(this.BtnAfficherDonateur_Click);
             // 
+            // tabCommanditaire
+            // 
+            this.tabCommanditaire.BackgroundImage = global::NouvelleInterface.Properties.Resources.Background150pp;
+            this.tabCommanditaire.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.tabCommanditaire.Controls.Add(this.panel6);
+            this.tabCommanditaire.Location = new System.Drawing.Point(4, 34);
+            this.tabCommanditaire.Margin = new System.Windows.Forms.Padding(4);
+            this.tabCommanditaire.Name = "tabCommanditaire";
+            this.tabCommanditaire.Padding = new System.Windows.Forms.Padding(4, 3, 4, 3);
+            this.tabCommanditaire.Size = new System.Drawing.Size(1160, 786);
+            this.tabCommanditaire.TabIndex = 1;
+            this.tabCommanditaire.Text = "Commanditaires";
+            // 
+            // panel6
+            // 
+            this.panel6.BackColor = System.Drawing.Color.Transparent;
+            this.panel6.BackgroundImage = global::NouvelleInterface.Properties.Resources.panel3;
+            this.panel6.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.panel6.Controls.Add(this.txtBoxOutput);
+            this.panel6.Controls.Add(this.txtPrenomCommanditaire);
+            this.panel6.Controls.Add(this.cbbPrix);
+            this.panel6.Controls.Add(this.lblIDCommanditaire);
+            this.panel6.Controls.Add(this.lblMessagePrix);
+            this.panel6.Controls.Add(this.lblInfoCommanditaire);
+            this.panel6.Controls.Add(this.lblMessageCommanditaire);
+            this.panel6.Controls.Add(this.lblDollard);
+            this.panel6.Controls.Add(this.btnAffichePrix);
+            this.panel6.Controls.Add(this.lblInfoPrix);
+            this.panel6.Controls.Add(this.btnAjouterPrix);
+            this.panel6.Controls.Add(this.lblPrenomCommanditaire);
+            this.panel6.Controls.Add(this.btnAfficherComm);
+            this.panel6.Controls.Add(this.lblChoixPrix);
+            this.panel6.Controls.Add(this.txtQuantitePrix);
+            this.panel6.Controls.Add(this.lblNomCommanditaire);
+            this.panel6.Controls.Add(this.txtValeurPrix);
+            this.panel6.Controls.Add(this.lblValeur);
+            this.panel6.Controls.Add(this.txtNomCommanditaire);
+            this.panel6.Controls.Add(this.lblQuatitePrix);
+            this.panel6.Location = new System.Drawing.Point(28, 46);
+            this.panel6.Name = "panel6";
+            this.panel6.Size = new System.Drawing.Size(1019, 657);
+            this.panel6.TabIndex = 23;
+            // 
+            // txtBoxOutput
+            // 
+            this.txtBoxOutput.Location = new System.Drawing.Point(476, 257);
+            this.txtBoxOutput.Margin = new System.Windows.Forms.Padding(4);
+            this.txtBoxOutput.Name = "txtBoxOutput";
+            this.txtBoxOutput.Size = new System.Drawing.Size(420, 254);
+            this.txtBoxOutput.TabIndex = 5;
+            this.txtBoxOutput.Text = "";
+            // 
+            // txtPrenomCommanditaire
+            // 
+            this.txtPrenomCommanditaire.Location = new System.Drawing.Point(258, 146);
+            this.txtPrenomCommanditaire.Margin = new System.Windows.Forms.Padding(4);
+            this.txtPrenomCommanditaire.Name = "txtPrenomCommanditaire";
+            this.txtPrenomCommanditaire.Size = new System.Drawing.Size(168, 27);
+            this.txtPrenomCommanditaire.TabIndex = 0;
+            this.txtPrenomCommanditaire.Click += new System.EventHandler(this.TxtPrenomCommanditaire_Click);
+            // 
+            // cbbPrix
+            // 
+            this.cbbPrix.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cbbPrix.FormattingEnabled = true;
+            this.cbbPrix.Items.AddRange(new object[] {
+            "Calendrier",
+            "Repas pour 2",
+            "BBQ",
+            "Téléviseur 32\"",
+            ""});
+            this.cbbPrix.Location = new System.Drawing.Point(258, 329);
+            this.cbbPrix.Margin = new System.Windows.Forms.Padding(4);
+            this.cbbPrix.Name = "cbbPrix";
+            this.cbbPrix.Size = new System.Drawing.Size(168, 27);
+            this.cbbPrix.TabIndex = 2;
+            this.cbbPrix.SelectedIndexChanged += new System.EventHandler(this.cbbPrix_SelectedIndexChanged);
+            // 
+            // lblIDCommanditaire
+            // 
+            this.lblIDCommanditaire.AutoSize = true;
+            this.lblIDCommanditaire.Location = new System.Drawing.Point(129, 112);
+            this.lblIDCommanditaire.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lblIDCommanditaire.Name = "lblIDCommanditaire";
+            this.lblIDCommanditaire.Size = new System.Drawing.Size(32, 19);
+            this.lblIDCommanditaire.TabIndex = 8;
+            this.lblIDCommanditaire.Text = "ID :";
+            // 
+            // lblMessagePrix
+            // 
+            this.lblMessagePrix.AutoSize = true;
+            this.lblMessagePrix.Font = new System.Drawing.Font("Bahnschrift", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.lblMessagePrix.ForeColor = System.Drawing.Color.Maroon;
+            this.lblMessagePrix.Location = new System.Drawing.Point(295, 456);
+            this.lblMessagePrix.Name = "lblMessagePrix";
+            this.lblMessagePrix.Size = new System.Drawing.Size(132, 16);
+            this.lblMessagePrix.TabIndex = 18;
+            this.lblMessagePrix.Text = "*Champs obligatoires";
+            this.lblMessagePrix.Visible = false;
+            // 
+            // lblInfoCommanditaire
+            // 
+            this.lblInfoCommanditaire.AutoSize = true;
+            this.lblInfoCommanditaire.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.lblInfoCommanditaire.Location = new System.Drawing.Point(129, 75);
+            this.lblInfoCommanditaire.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lblInfoCommanditaire.Name = "lblInfoCommanditaire";
+            this.lblInfoCommanditaire.Size = new System.Drawing.Size(189, 15);
+            this.lblInfoCommanditaire.TabIndex = 7;
+            this.lblInfoCommanditaire.Text = "Informations Commanditaire";
+            // 
+            // lblMessageCommanditaire
+            // 
+            this.lblMessageCommanditaire.AutoSize = true;
+            this.lblMessageCommanditaire.Font = new System.Drawing.Font("Bahnschrift", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.lblMessageCommanditaire.ForeColor = System.Drawing.Color.Maroon;
+            this.lblMessageCommanditaire.Location = new System.Drawing.Point(294, 223);
+            this.lblMessageCommanditaire.Name = "lblMessageCommanditaire";
+            this.lblMessageCommanditaire.Size = new System.Drawing.Size(132, 16);
+            this.lblMessageCommanditaire.TabIndex = 18;
+            this.lblMessageCommanditaire.Text = "*Champs obligatoires";
+            this.lblMessageCommanditaire.Visible = false;
+            // 
+            // lblDollard
+            // 
+            this.lblDollard.Location = new System.Drawing.Point(486, 289);
+            this.lblDollard.Name = "lblDollard";
+            this.lblDollard.Size = new System.Drawing.Size(100, 23);
+            this.lblDollard.TabIndex = 22;
+            // 
+            // btnAffichePrix
+            // 
+            this.btnAffichePrix.Location = new System.Drawing.Point(524, 525);
+            this.btnAffichePrix.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
+            this.btnAffichePrix.Name = "btnAffichePrix";
+            this.btnAffichePrix.Size = new System.Drawing.Size(182, 50);
+            this.btnAffichePrix.TabIndex = 6;
+            this.btnAffichePrix.Text = "Afficher les prix";
+            this.btnAffichePrix.UseVisualStyleBackColor = true;
+            this.btnAffichePrix.Click += new System.EventHandler(this.btnAffichePrix_Click);
+            // 
+            // lblInfoPrix
+            // 
+            this.lblInfoPrix.AutoSize = true;
+            this.lblInfoPrix.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.lblInfoPrix.Location = new System.Drawing.Point(129, 300);
+            this.lblInfoPrix.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lblInfoPrix.Name = "lblInfoPrix";
+            this.lblInfoPrix.Size = new System.Drawing.Size(115, 15);
+            this.lblInfoPrix.TabIndex = 7;
+            this.lblInfoPrix.Text = "Informations prix";
+            // 
+            // btnAjouterPrix
+            // 
+            this.btnAjouterPrix.Location = new System.Drawing.Point(244, 525);
+            this.btnAjouterPrix.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
+            this.btnAjouterPrix.Name = "btnAjouterPrix";
+            this.btnAjouterPrix.Size = new System.Drawing.Size(182, 50);
+            this.btnAjouterPrix.TabIndex = 15;
+            this.btnAjouterPrix.Text = "Ajouter Commandite";
+            this.btnAjouterPrix.UseVisualStyleBackColor = true;
+            this.btnAjouterPrix.Click += new System.EventHandler(this.BtnAjouterPrix_Click);
+            // 
+            // lblPrenomCommanditaire
+            // 
+            this.lblPrenomCommanditaire.AutoSize = true;
+            this.lblPrenomCommanditaire.Location = new System.Drawing.Point(129, 149);
+            this.lblPrenomCommanditaire.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lblPrenomCommanditaire.Name = "lblPrenomCommanditaire";
+            this.lblPrenomCommanditaire.Size = new System.Drawing.Size(75, 19);
+            this.lblPrenomCommanditaire.TabIndex = 6;
+            this.lblPrenomCommanditaire.Text = "Prénom :";
+            // 
+            // btnAfficherComm
+            // 
+            this.btnAfficherComm.Location = new System.Drawing.Point(714, 525);
+            this.btnAfficherComm.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
+            this.btnAfficherComm.Name = "btnAfficherComm";
+            this.btnAfficherComm.Size = new System.Drawing.Size(182, 50);
+            this.btnAfficherComm.TabIndex = 7;
+            this.btnAfficherComm.Text = "Afficher les Commanditaires";
+            this.btnAfficherComm.UseVisualStyleBackColor = true;
+            this.btnAfficherComm.Click += new System.EventHandler(this.BtnAfficherCommanditaire_Click);
+            // 
+            // lblChoixPrix
+            // 
+            this.lblChoixPrix.AutoSize = true;
+            this.lblChoixPrix.Location = new System.Drawing.Point(129, 332);
+            this.lblChoixPrix.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lblChoixPrix.Name = "lblChoixPrix";
+            this.lblChoixPrix.Size = new System.Drawing.Size(100, 19);
+            this.lblChoixPrix.TabIndex = 6;
+            this.lblChoixPrix.Text = "Description :";
+            // 
+            // txtQuantitePrix
+            // 
+            this.txtQuantitePrix.Location = new System.Drawing.Point(258, 425);
+            this.txtQuantitePrix.Margin = new System.Windows.Forms.Padding(4);
+            this.txtQuantitePrix.Name = "txtQuantitePrix";
+            this.txtQuantitePrix.Size = new System.Drawing.Size(168, 27);
+            this.txtQuantitePrix.TabIndex = 4;
+            this.txtQuantitePrix.Click += new System.EventHandler(this.TxtQuantitePrix_Click);
+            // 
+            // lblNomCommanditaire
+            // 
+            this.lblNomCommanditaire.AutoSize = true;
+            this.lblNomCommanditaire.Location = new System.Drawing.Point(129, 192);
+            this.lblNomCommanditaire.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lblNomCommanditaire.Name = "lblNomCommanditaire";
+            this.lblNomCommanditaire.Size = new System.Drawing.Size(51, 19);
+            this.lblNomCommanditaire.TabIndex = 5;
+            this.lblNomCommanditaire.Text = "Nom :";
+            // 
+            // txtValeurPrix
+            // 
+            this.txtValeurPrix.Location = new System.Drawing.Point(258, 377);
+            this.txtValeurPrix.Margin = new System.Windows.Forms.Padding(4);
+            this.txtValeurPrix.Name = "txtValeurPrix";
+            this.txtValeurPrix.Size = new System.Drawing.Size(168, 27);
+            this.txtValeurPrix.TabIndex = 3;
+            this.txtValeurPrix.Click += new System.EventHandler(this.TxtValeurPrix_Click);
+            // 
+            // lblValeur
+            // 
+            this.lblValeur.AutoSize = true;
+            this.lblValeur.Location = new System.Drawing.Point(129, 380);
+            this.lblValeur.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lblValeur.Name = "lblValeur";
+            this.lblValeur.Size = new System.Drawing.Size(125, 19);
+            this.lblValeur.TabIndex = 5;
+            this.lblValeur.Text = "Valeur unitaire :";
+            // 
+            // txtNomCommanditaire
+            // 
+            this.txtNomCommanditaire.Location = new System.Drawing.Point(258, 192);
+            this.txtNomCommanditaire.Margin = new System.Windows.Forms.Padding(4);
+            this.txtNomCommanditaire.Name = "txtNomCommanditaire";
+            this.txtNomCommanditaire.Size = new System.Drawing.Size(168, 27);
+            this.txtNomCommanditaire.TabIndex = 1;
+            this.txtNomCommanditaire.Click += new System.EventHandler(this.TxtNomCommanditaire_Click);
+            // 
+            // lblQuatitePrix
+            // 
+            this.lblQuatitePrix.AutoSize = true;
+            this.lblQuatitePrix.Location = new System.Drawing.Point(129, 428);
+            this.lblQuatitePrix.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lblQuatitePrix.Name = "lblQuatitePrix";
+            this.lblQuatitePrix.Size = new System.Drawing.Size(78, 19);
+            this.lblQuatitePrix.TabIndex = 4;
+            this.lblQuatitePrix.Text = "Quantité :";
+            // 
+            // tabAPropos
+            // 
+            this.tabAPropos.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(213)))), ((int)(((byte)(147)))));
+            this.tabAPropos.Controls.Add(this.richTextBox1);
+            this.tabAPropos.Controls.Add(this.lblOlivier);
+            this.tabAPropos.Controls.Add(this.lblCatherine);
+            this.tabAPropos.Controls.Add(this.lblFred);
+            this.tabAPropos.Controls.Add(this.lblAuteur01);
+            this.tabAPropos.Controls.Add(this.lblInfoProjetSTE);
+            this.tabAPropos.Location = new System.Drawing.Point(4, 34);
+            this.tabAPropos.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.tabAPropos.Name = "tabAPropos";
+            this.tabAPropos.Padding = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.tabAPropos.Size = new System.Drawing.Size(1160, 786);
+            this.tabAPropos.TabIndex = 2;
+            this.tabAPropos.Text = "À propros";
+            // 
+            // richTextBox1
+            // 
+            this.richTextBox1.Location = new System.Drawing.Point(265, 69);
+            this.richTextBox1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.richTextBox1.Name = "richTextBox1";
+            this.richTextBox1.Size = new System.Drawing.Size(626, 318);
+            this.richTextBox1.TabIndex = 1;
+            this.richTextBox1.Text = "";
+            // 
+            // lblOlivier
+            // 
+            this.lblOlivier.AutoSize = true;
+            this.lblOlivier.Location = new System.Drawing.Point(97, 143);
+            this.lblOlivier.Name = "lblOlivier";
+            this.lblOlivier.Size = new System.Drawing.Size(128, 19);
+            this.lblOlivier.TabIndex = 0;
+            this.lblOlivier.Text = "Olivier Raymond";
+            // 
+            // lblCatherine
+            // 
+            this.lblCatherine.AutoSize = true;
+            this.lblCatherine.Location = new System.Drawing.Point(97, 123);
+            this.lblCatherine.Name = "lblCatherine";
+            this.lblCatherine.Size = new System.Drawing.Size(125, 19);
+            this.lblCatherine.TabIndex = 0;
+            this.lblCatherine.Text = "Catherine Godin";
+            // 
+            // lblFred
+            // 
+            this.lblFred.AutoSize = true;
+            this.lblFred.Location = new System.Drawing.Point(97, 104);
+            this.lblFred.Name = "lblFred";
+            this.lblFred.Size = new System.Drawing.Size(123, 19);
+            this.lblFred.TabIndex = 0;
+            this.lblFred.Text = "Frédérick Faidit";
+            // 
+            // lblAuteur01
+            // 
+            this.lblAuteur01.AutoSize = true;
+            this.lblAuteur01.Location = new System.Drawing.Point(74, 85);
+            this.lblAuteur01.Name = "lblAuteur01";
+            this.lblAuteur01.Size = new System.Drawing.Size(74, 19);
+            this.lblAuteur01.TabIndex = 0;
+            this.lblAuteur01.Text = "Auteurs :";
+            // 
+            // lblInfoProjetSTE
+            // 
+            this.lblInfoProjetSTE.AutoSize = true;
+            this.lblInfoProjetSTE.Location = new System.Drawing.Point(74, 69);
+            this.lblInfoProjetSTE.Name = "lblInfoProjetSTE";
+            this.lblInfoProjetSTE.Size = new System.Drawing.Size(67, 19);
+            this.lblInfoProjetSTE.TabIndex = 0;
+            this.lblInfoProjetSTE.Text = "STE v1.0";
+            // 
             // lblCarteCredit
             // 
             this.lblCarteCredit.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
@@ -1453,11 +1456,6 @@
             this.Name = "InterfacePrincipale";
             this.Text = "Système de téléthon électronique";
             tabEntrees.ResumeLayout(false);
-            this.tabCommanditaire.ResumeLayout(false);
-            this.panel6.ResumeLayout(false);
-            this.panel6.PerformLayout();
-            this.tabAPropos.ResumeLayout(false);
-            this.tabAPropos.PerformLayout();
             this.tabDonateur.ResumeLayout(false);
             this.pnlCarteCredit.ResumeLayout(false);
             this.pnlCarteCredit.PerformLayout();
@@ -1481,6 +1479,11 @@
             ((System.ComponentModel.ISupportInitialize)(this.dgvDonateurs)).EndInit();
             this.panel5.ResumeLayout(false);
             this.panel5.PerformLayout();
+            this.tabCommanditaire.ResumeLayout(false);
+            this.panel6.ResumeLayout(false);
+            this.panel6.PerformLayout();
+            this.tabAPropos.ResumeLayout(false);
+            this.tabAPropos.PerformLayout();
             this.ResumeLayout(false);
 
         }
