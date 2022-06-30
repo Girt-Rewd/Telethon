@@ -139,7 +139,7 @@ namespace NouvelleInterface
 
 
             dgvDonateurs.Rows.Add("DNTR" + dgvDonateurs.RowCount + 1, txtNomDonateur.Text, txtPrenomDonateur.Text, mskTxtBoxTel.Text, txtCourrielDonateur.Text, typeCarte, mskTxtNumeroCarte.Text, numMois.Text + "-" + numAnnee.Text, txtBoxCvc.Text);
-            MessageBox.Show("VALIDER INFO DU DON \n\r\r" + gestionnaireSTE.dons.Last().ToString());
+            MessageBox.Show("Nouveau don! \n\r\r" + gestionnaireSTE.dons.Last().ToString());
         }
 
 
@@ -582,5 +582,7 @@ namespace NouvelleInterface
             pnlCarteCredit.Visible = true;
             pnlDon.Visible = false;
         }
+
+        
     }
 }
