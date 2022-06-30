@@ -29,6 +29,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(NouveauLogin));
             this.txtNom = new System.Windows.Forms.TextBox();
             this.txtMotDePasse = new System.Windows.Forms.TextBox();
             this.btnOk = new System.Windows.Forms.Button();
@@ -69,18 +70,18 @@
             // 
             // btnOk
             // 
-            this.btnOk.BackgroundImage = global::NouvelleInterface.Properties.Resources.btnContour;
+            this.btnOk.BackgroundImage = global::NouvelleInterface.Properties.Resources.btnContours2;
             this.btnOk.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.btnOk.FlatAppearance.BorderSize = 0;
-            this.btnOk.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(213)))), ((int)(((byte)(147)))));
-            this.btnOk.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(213)))), ((int)(((byte)(147)))));
+            this.btnOk.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(211)))), ((int)(((byte)(230)))), ((int)(((byte)(111)))));
+            this.btnOk.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(211)))), ((int)(((byte)(230)))), ((int)(((byte)(111)))));
             this.btnOk.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnOk.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.btnOk.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(154)))), ((int)(((byte)(25)))), ((int)(((byte)(34)))));
-            this.btnOk.Location = new System.Drawing.Point(134, 439);
+            this.btnOk.Location = new System.Drawing.Point(136, 439);
             this.btnOk.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.btnOk.Name = "btnOk";
-            this.btnOk.Size = new System.Drawing.Size(108, 35);
+            this.btnOk.Size = new System.Drawing.Size(102, 35);
             this.btnOk.TabIndex = 2;
             this.btnOk.Text = "VALIDER";
             this.btnOk.UseVisualStyleBackColor = true;
@@ -88,21 +89,22 @@
             // 
             // btnAnnuler
             // 
-            this.btnAnnuler.BackgroundImage = global::NouvelleInterface.Properties.Resources.btnAnnuler;
+            this.btnAnnuler.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(213)))), ((int)(((byte)(147)))));
+            this.btnAnnuler.BackgroundImage = global::NouvelleInterface.Properties.Resources.btnContours2;
             this.btnAnnuler.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.btnAnnuler.FlatAppearance.BorderSize = 0;
-            this.btnAnnuler.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(178)))), ((int)(((byte)(209)))), ((int)(((byte)(54)))));
-            this.btnAnnuler.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(178)))), ((int)(((byte)(209)))), ((int)(((byte)(54)))));
+            this.btnAnnuler.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(211)))), ((int)(((byte)(230)))), ((int)(((byte)(111)))));
+            this.btnAnnuler.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(211)))), ((int)(((byte)(230)))), ((int)(((byte)(111)))));
             this.btnAnnuler.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnAnnuler.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.btnAnnuler.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(154)))), ((int)(((byte)(25)))), ((int)(((byte)(34)))));
-            this.btnAnnuler.Location = new System.Drawing.Point(252, 439);
+            this.btnAnnuler.Location = new System.Drawing.Point(253, 439);
             this.btnAnnuler.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.btnAnnuler.Name = "btnAnnuler";
-            this.btnAnnuler.Size = new System.Drawing.Size(108, 35);
+            this.btnAnnuler.Size = new System.Drawing.Size(102, 35);
             this.btnAnnuler.TabIndex = 3;
             this.btnAnnuler.Text = "ANNULER";
-            this.btnAnnuler.UseVisualStyleBackColor = true;
+            this.btnAnnuler.UseVisualStyleBackColor = false;
             this.btnAnnuler.Click += new System.EventHandler(this.btnAnnuler_Click);
             // 
             // panelLogin
@@ -117,7 +119,7 @@
             this.panelLogin.Controls.Add(this.txtMotDePasse);
             this.panelLogin.Controls.Add(this.icoUser);
             this.panelLogin.Controls.Add(this.icoCadenas);
-            this.panelLogin.Location = new System.Drawing.Point(174, 37);
+            this.panelLogin.Location = new System.Drawing.Point(174, 44);
             this.panelLogin.Name = "panelLogin";
             this.panelLogin.Size = new System.Drawing.Size(491, 541);
             this.panelLogin.TabIndex = 4;
@@ -165,6 +167,8 @@
             this.ClientSize = new System.Drawing.Size(839, 628);
             this.Controls.Add(this.panelLogin);
             this.DoubleBuffered = true;
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.MaximizeBox = false;
             this.MinimizeBox = false;

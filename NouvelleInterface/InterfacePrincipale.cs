@@ -35,6 +35,7 @@ namespace NouvelleInterface
 
         }
         char typeCarte;
+       
         /// <summary>
         /// BtnAjouterDonateur_Click effectue un ensemble de validation sur des champs correspondants aux informations de la carte de crédit, tant au niveau
         /// de leur complétude que de leur format. Si les critères nécessaires sont remplis elle crée l’objet donateur correspondant aux informations personnelles 
@@ -133,7 +134,7 @@ namespace NouvelleInterface
                 if (txtMontant.Text != null)
                 {
                     Accueil parent = (Accueil)this.Owner;
-                    if (Accueil.montantPasse == ""||Accueil.montantPasse == null)
+                    if (Accueil.montantPasse == "" || Accueil.montantPasse == null)
                     {
                         Accueil.montantPasse = "0";
                     }
@@ -150,6 +151,20 @@ namespace NouvelleInterface
                 txtMontant.Focus();
             }
             MessageBox.Show("Nouveau don! \n\r\r" + gestionnaireSTE.dons.Last().ToString());
+
+            radAmex.Checked = false;
+            radMC.Checked = false;
+            radVisa.Checked = false;
+            txtBoxCvc.Text = string.Empty;
+            txtNomDonateur.Text = string.Empty;
+            txtPrenomDonateur.Text = string.Empty;
+            txtCourrielDonateur.Text = string.Empty;
+            mskTxtBoxTel.Text = string.Empty;
+            mskTxtNumeroCarte.Text = string.Empty;
+            pnlCarteCredit.Visible = false;
+            pnlDon.Visible = false;
+            pnlInfoDonateur.Visible = true;
+            txtMontant.Text = string.Empty;
         }
 
 

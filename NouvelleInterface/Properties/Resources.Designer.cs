@@ -203,6 +203,76 @@ namespace NouvelleInterface.Properties {
         /// <summary>
         ///   Recherche une ressource localisée de type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap btnContours2 {
+            get {
+                object obj = ResourceManager.GetObject("btnContours2", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Recherche une ressource localisée de type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap btnContours5 {
+            get {
+                object obj = ResourceManager.GetObject("btnContours5", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Recherche une ressource localisée de type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap btnContours6 {
+            get {
+                object obj = ResourceManager.GetObject("btnContours6", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Recherche une ressource localisée de type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap btnContours7 {
+            get {
+                object obj = ResourceManager.GetObject("btnContours7", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Recherche une ressource localisée de type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap btnContours8 {
+            get {
+                object obj = ResourceManager.GetObject("btnContours8", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Recherche une ressource localisée de type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap btnContours9 {
+            get {
+                object obj = ResourceManager.GetObject("btnContours9", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Recherche une ressource localisée de type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap btnGris2 {
+            get {
+                object obj = ResourceManager.GetObject("btnGris2", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Recherche une ressource localisée de type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap btnInscription {
             get {
                 object obj = ResourceManager.GetObject("btnInscription", resourceCulture);
@@ -216,6 +286,26 @@ namespace NouvelleInterface.Properties {
         internal static System.Drawing.Bitmap cadre {
             get {
                 object obj = ResourceManager.GetObject("cadre", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Recherche une ressource localisée de type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Fichier_100150ppi {
+            get {
+                object obj = ResourceManager.GetObject("Fichier 100150ppi", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Recherche une ressource localisée de type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Fichier_99150ppi {
+            get {
+                object obj = ResourceManager.GetObject("Fichier 99150ppi", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -246,6 +336,16 @@ namespace NouvelleInterface.Properties {
         internal static System.Drawing.Bitmap forme21 {
             get {
                 object obj = ResourceManager.GetObject("forme21", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Recherche une ressource localisée de type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap formeGris {
+            get {
+                object obj = ResourceManager.GetObject("formeGris", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -376,6 +476,56 @@ namespace NouvelleInterface.Properties {
         internal static System.Drawing.Bitmap pannelAccueil {
             get {
                 object obj = ResourceManager.GetObject("pannelAccueil", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Recherche une ressource localisée de type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap pnDon5 {
+            get {
+                object obj = ResourceManager.GetObject("pnDon5", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Recherche une ressource localisée de type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap pnlCommandites {
+            get {
+                object obj = ResourceManager.GetObject("pnlCommandites", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Recherche une ressource localisée de type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap pnlCommandites2 {
+            get {
+                object obj = ResourceManager.GetObject("pnlCommandites2", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Recherche une ressource localisée de type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap pnldon3 {
+            get {
+                object obj = ResourceManager.GetObject("pnldon3", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Recherche une ressource localisée de type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap pnldon4 {
+            get {
+                object obj = ResourceManager.GetObject("pnldon4", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
