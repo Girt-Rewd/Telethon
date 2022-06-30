@@ -166,10 +166,10 @@
             this.tabDonateur.BackgroundImage = global::NouvelleInterface.Properties.Resources.Background150pp;
             this.tabDonateur.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.tabDonateur.Controls.Add(this.txtBoxOut);
-            this.tabDonateur.Controls.Add(this.pnlCarteCredit);
             this.tabDonateur.Controls.Add(this.pnlDon);
             this.tabDonateur.Controls.Add(this.pnlInfoDonateur);
             this.tabDonateur.Controls.Add(this.panel4);
+            this.tabDonateur.Controls.Add(this.pnlCarteCredit);
             this.tabDonateur.Location = new System.Drawing.Point(4, 34);
             this.tabDonateur.Margin = new System.Windows.Forms.Padding(4);
             this.tabDonateur.Name = "tabDonateur";
