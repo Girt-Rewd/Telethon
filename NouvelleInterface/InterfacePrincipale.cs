@@ -636,5 +636,10 @@ namespace NouvelleInterface
         {
             grRadioCarte.ForeColor = Color.FromArgb(57, 56, 57);
         }
+
+        private void label3_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
