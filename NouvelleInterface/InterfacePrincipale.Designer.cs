@@ -196,7 +196,7 @@
             this.pnlFondListes.Controls.Add(this.btnAfficherDonateur);
             this.pnlFondListes.Controls.Add(this.txtBoxOut);
             this.pnlFondListes.Controls.Add(this.dgvDonateurs);
-            this.pnlFondListes.Location = new System.Drawing.Point(510, 41);
+            this.pnlFondListes.Location = new System.Drawing.Point(510, 58);
             this.pnlFondListes.Name = "pnlFondListes";
             this.pnlFondListes.Size = new System.Drawing.Size(610, 513);
             this.pnlFondListes.TabIndex = 16;
@@ -404,7 +404,7 @@
             this.pnlInfoDonateur.Controls.Add(this.lblTelephone);
             this.pnlInfoDonateur.Controls.Add(this.lblMessageDonateur);
             this.pnlInfoDonateur.Font = new System.Drawing.Font("Bahnschrift", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.pnlInfoDonateur.Location = new System.Drawing.Point(41, 40);
+            this.pnlInfoDonateur.Location = new System.Drawing.Point(41, 57);
             this.pnlInfoDonateur.Name = "pnlInfoDonateur";
             this.pnlInfoDonateur.Size = new System.Drawing.Size(442, 513);
             this.pnlInfoDonateur.TabIndex = 0;
