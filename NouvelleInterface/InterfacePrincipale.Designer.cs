@@ -575,6 +575,7 @@
             // 
             this.panel3.BackgroundImage = global::NouvelleInterface.Properties.Resources.cadre;
             this.panel3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.panel3.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.panel3.Controls.Add(this.lblAnnee);
             this.panel3.Controls.Add(this.lblNoCredit);
             this.panel3.Controls.Add(this.lblDateExp);
@@ -639,6 +640,7 @@
             // mskTxtNumeroCarte
             // 
             this.mskTxtNumeroCarte.BackColor = System.Drawing.Color.Cornsilk;
+            this.mskTxtNumeroCarte.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.mskTxtNumeroCarte.Font = new System.Drawing.Font("Bahnschrift Light", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.mskTxtNumeroCarte.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(57)))), ((int)(((byte)(56)))), ((int)(((byte)(57)))));
             this.mskTxtNumeroCarte.Location = new System.Drawing.Point(177, 17);
@@ -705,7 +707,7 @@
             // txtBoxCvc
             // 
             this.txtBoxCvc.BackColor = System.Drawing.Color.Cornsilk;
-            this.txtBoxCvc.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.txtBoxCvc.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.txtBoxCvc.Font = new System.Drawing.Font("Bahnschrift SemiLight", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.txtBoxCvc.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(65)))), ((int)(((byte)(62)))), ((int)(((byte)(66)))));
             this.txtBoxCvc.Location = new System.Drawing.Point(298, 98);
@@ -713,7 +715,7 @@
             this.txtBoxCvc.MaxLength = 4;
             this.txtBoxCvc.Name = "txtBoxCvc";
             this.txtBoxCvc.PasswordChar = '*';
-            this.txtBoxCvc.Size = new System.Drawing.Size(31, 20);
+            this.txtBoxCvc.Size = new System.Drawing.Size(31, 27);
             this.txtBoxCvc.TabIndex = 20;
             this.txtBoxCvc.Tag = "";
             this.txtBoxCvc.Text = "123";
@@ -833,6 +835,7 @@
             // 
             // txtRecompense
             // 
+            this.txtRecompense.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.txtRecompense.Font = new System.Drawing.Font("Bahnschrift Light", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.txtRecompense.Location = new System.Drawing.Point(235, 282);
             this.txtRecompense.Margin = new System.Windows.Forms.Padding(4);
@@ -855,6 +858,7 @@
             // txtMontant
             // 
             this.txtMontant.BackColor = System.Drawing.Color.Cornsilk;
+            this.txtMontant.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.txtMontant.Font = new System.Drawing.Font("Bahnschrift SemiBold", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.txtMontant.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(57)))), ((int)(((byte)(56)))), ((int)(((byte)(57)))));
             this.txtMontant.Location = new System.Drawing.Point(139, 116);
@@ -997,6 +1001,7 @@
             // txtPrenomDonateur
             // 
             this.txtPrenomDonateur.BackColor = System.Drawing.Color.Cornsilk;
+            this.txtPrenomDonateur.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.txtPrenomDonateur.Font = new System.Drawing.Font("Bahnschrift Light", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.txtPrenomDonateur.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(57)))), ((int)(((byte)(56)))), ((int)(((byte)(57)))));
             this.txtPrenomDonateur.Location = new System.Drawing.Point(152, 138);
@@ -1046,6 +1051,7 @@
             // txtNomDonateur
             // 
             this.txtNomDonateur.BackColor = System.Drawing.Color.Cornsilk;
+            this.txtNomDonateur.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.txtNomDonateur.Font = new System.Drawing.Font("Bahnschrift Light", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.txtNomDonateur.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(57)))), ((int)(((byte)(56)))), ((int)(((byte)(57)))));
             this.txtNomDonateur.Location = new System.Drawing.Point(152, 190);
@@ -1058,6 +1064,7 @@
             // txtCourrielDonateur
             // 
             this.txtCourrielDonateur.BackColor = System.Drawing.Color.Cornsilk;
+            this.txtCourrielDonateur.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.txtCourrielDonateur.Font = new System.Drawing.Font("Bahnschrift Light", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.txtCourrielDonateur.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(57)))), ((int)(((byte)(56)))), ((int)(((byte)(57)))));
             this.txtCourrielDonateur.Location = new System.Drawing.Point(152, 242);
@@ -1154,6 +1161,7 @@
             // 
             // txtBoxOutput
             // 
+            this.txtBoxOutput.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.txtBoxOutput.Location = new System.Drawing.Point(617, 100);
             this.txtBoxOutput.Margin = new System.Windows.Forms.Padding(4);
             this.txtBoxOutput.Name = "txtBoxOutput";
@@ -1297,7 +1305,8 @@
             // txtQuantitePrix
             // 
             this.txtQuantitePrix.BackColor = System.Drawing.Color.Cornsilk;
-            this.txtQuantitePrix.Location = new System.Drawing.Point(376, 97);
+            this.txtQuantitePrix.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.txtQuantitePrix.Location = new System.Drawing.Point(258, 425);
             this.txtQuantitePrix.Margin = new System.Windows.Forms.Padding(4);
             this.txtQuantitePrix.Name = "txtQuantitePrix";
             this.txtQuantitePrix.Size = new System.Drawing.Size(72, 27);
@@ -1318,7 +1327,8 @@
             // txtValeurPrix
             // 
             this.txtValeurPrix.BackColor = System.Drawing.Color.Cornsilk;
-            this.txtValeurPrix.Location = new System.Drawing.Point(163, 97);
+            this.txtValeurPrix.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.txtValeurPrix.Location = new System.Drawing.Point(258, 377);
             this.txtValeurPrix.Margin = new System.Windows.Forms.Padding(4);
             this.txtValeurPrix.Name = "txtValeurPrix";
             this.txtValeurPrix.ReadOnly = true;
