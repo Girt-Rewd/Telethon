@@ -463,7 +463,7 @@ namespace NouvelleInterface
     // TODO Commentaire Olivier
     private static void TxtNoir(Control lblAchange, string chaineAchange)
     {
-        lblAchange.ForeColor = Color.Black;
+        lblAchange.ForeColor = Color.FromArgb(57, 56, 57);
         lblAchange.Text = chaineAchange;
     }
 

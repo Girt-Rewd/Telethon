@@ -1030,9 +1030,9 @@
             this.lblNomDonateur.Location = new System.Drawing.Point(45, 191);
             this.lblNomDonateur.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblNomDonateur.Name = "lblNomDonateur";
-            this.lblNomDonateur.Size = new System.Drawing.Size(62, 22);
+            this.lblNomDonateur.Size = new System.Drawing.Size(57, 22);
             this.lblNomDonateur.TabIndex = 0;
-            this.lblNomDonateur.Text = "Nom : ";
+            this.lblNomDonateur.Text = "Nom :";
             // 
             // lblCourriel
             // 
