@@ -50,19 +50,6 @@
             this.cvc = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.txtBoxOut = new System.Windows.Forms.RichTextBox();
             this.btnQuitter = new System.Windows.Forms.Button();
-            this.pnlInfoDonateur = new System.Windows.Forms.Panel();
-            this.pnlDonnateur = new System.Windows.Forms.Panel();
-            this.labDonnateur = new System.Windows.Forms.Label();
-            this.mskTxtBoxTel = new System.Windows.Forms.MaskedTextBox();
-            this.btnSuivant = new System.Windows.Forms.Button();
-            this.txtPrenomDonateur = new System.Windows.Forms.TextBox();
-            this.lblPrenomDonateur = new System.Windows.Forms.Label();
-            this.lblNomDonateur = new System.Windows.Forms.Label();
-            this.lblCourriel = new System.Windows.Forms.Label();
-            this.txtNomDonateur = new System.Windows.Forms.TextBox();
-            this.txtCourrielDonateur = new System.Windows.Forms.TextBox();
-            this.lblTelephone = new System.Windows.Forms.Label();
-            this.lblMessageDonateur = new System.Windows.Forms.Label();
             this.pnlCarteCredit = new System.Windows.Forms.Panel();
             this.lblID = new System.Windows.Forms.Label();
             this.btnPrecedent = new System.Windows.Forms.Button();
@@ -97,6 +84,19 @@
             this.btnValider = new System.Windows.Forms.Button();
             this.btnCalculRecompense = new System.Windows.Forms.Button();
             this.btnAjouterDon = new System.Windows.Forms.Button();
+            this.pnlInfoDonateur = new System.Windows.Forms.Panel();
+            this.pnlDonnateur = new System.Windows.Forms.Panel();
+            this.labDonnateur = new System.Windows.Forms.Label();
+            this.mskTxtBoxTel = new System.Windows.Forms.MaskedTextBox();
+            this.btnSuivant = new System.Windows.Forms.Button();
+            this.txtPrenomDonateur = new System.Windows.Forms.TextBox();
+            this.lblPrenomDonateur = new System.Windows.Forms.Label();
+            this.lblNomDonateur = new System.Windows.Forms.Label();
+            this.lblCourriel = new System.Windows.Forms.Label();
+            this.txtNomDonateur = new System.Windows.Forms.TextBox();
+            this.txtCourrielDonateur = new System.Windows.Forms.TextBox();
+            this.lblTelephone = new System.Windows.Forms.Label();
+            this.lblMessageDonateur = new System.Windows.Forms.Label();
             this.tabCommanditaire = new System.Windows.Forms.TabPage();
             this.pnlCommandites = new System.Windows.Forms.Panel();
             this.panel2 = new System.Windows.Forms.Panel();
@@ -137,8 +137,6 @@
             this.pnlFondListes.SuspendLayout();
             this.pnlTitreListes.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvDonateurs)).BeginInit();
-            this.pnlInfoDonateur.SuspendLayout();
-            this.pnlDonnateur.SuspendLayout();
             this.pnlCarteCredit.SuspendLayout();
             this.pnTitrePaiement.SuspendLayout();
             this.grRadioCarte.SuspendLayout();
@@ -147,6 +145,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.numMois)).BeginInit();
             this.pnlDon.SuspendLayout();
             this.pnlTitreDonnateur.SuspendLayout();
+            this.pnlInfoDonateur.SuspendLayout();
+            this.pnlDonnateur.SuspendLayout();
             this.tabCommanditaire.SuspendLayout();
             this.pnlCommandites.SuspendLayout();
             this.panel2.SuspendLayout();
@@ -405,180 +405,6 @@
             this.btnQuitter.UseVisualStyleBackColor = false;
             this.btnQuitter.Click += new System.EventHandler(this.BtnQuitter_Click);
             // 
-            // pnlInfoDonateur
-            // 
-            this.pnlInfoDonateur.BackColor = System.Drawing.Color.Transparent;
-            this.pnlInfoDonateur.BackgroundImage = global::NouvelleInterface.Properties.Resources.pnldon3;
-            this.pnlInfoDonateur.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.pnlInfoDonateur.Controls.Add(this.pnlDonnateur);
-            this.pnlInfoDonateur.Controls.Add(this.mskTxtBoxTel);
-            this.pnlInfoDonateur.Controls.Add(this.btnSuivant);
-            this.pnlInfoDonateur.Controls.Add(this.txtPrenomDonateur);
-            this.pnlInfoDonateur.Controls.Add(this.lblPrenomDonateur);
-            this.pnlInfoDonateur.Controls.Add(this.lblNomDonateur);
-            this.pnlInfoDonateur.Controls.Add(this.lblCourriel);
-            this.pnlInfoDonateur.Controls.Add(this.txtNomDonateur);
-            this.pnlInfoDonateur.Controls.Add(this.txtCourrielDonateur);
-            this.pnlInfoDonateur.Controls.Add(this.lblTelephone);
-            this.pnlInfoDonateur.Controls.Add(this.lblMessageDonateur);
-            this.pnlInfoDonateur.Font = new System.Drawing.Font("Bahnschrift", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.pnlInfoDonateur.Location = new System.Drawing.Point(41, 40);
-            this.pnlInfoDonateur.Name = "pnlInfoDonateur";
-            this.pnlInfoDonateur.Size = new System.Drawing.Size(442, 513);
-            this.pnlInfoDonateur.TabIndex = 0;
-            // 
-            // pnlDonnateur
-            // 
-            this.pnlDonnateur.BackgroundImage = global::NouvelleInterface.Properties.Resources.formeRouge;
-            this.pnlDonnateur.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.pnlDonnateur.Controls.Add(this.labDonnateur);
-            this.pnlDonnateur.Location = new System.Drawing.Point(32, 22);
-            this.pnlDonnateur.Name = "pnlDonnateur";
-            this.pnlDonnateur.Size = new System.Drawing.Size(315, 55);
-            this.pnlDonnateur.TabIndex = 26;
-            // 
-            // labDonnateur
-            // 
-            this.labDonnateur.AutoSize = true;
-            this.labDonnateur.Font = new System.Drawing.Font("Bahnschrift", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.labDonnateur.ForeColor = System.Drawing.Color.White;
-            this.labDonnateur.Location = new System.Drawing.Point(22, 15);
-            this.labDonnateur.Name = "labDonnateur";
-            this.labDonnateur.Size = new System.Drawing.Size(271, 24);
-            this.labDonnateur.TabIndex = 26;
-            this.labDonnateur.Text = "INFORMATIONS DONNATEUR";
-            // 
-            // mskTxtBoxTel
-            // 
-            this.mskTxtBoxTel.BackColor = System.Drawing.Color.Cornsilk;
-            this.mskTxtBoxTel.Font = new System.Drawing.Font("Bahnschrift Light", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.mskTxtBoxTel.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(57)))), ((int)(((byte)(56)))), ((int)(((byte)(57)))));
-            this.mskTxtBoxTel.Location = new System.Drawing.Point(152, 294);
-            this.mskTxtBoxTel.Mask = "\\(000\\) 000\\-0000";
-            this.mskTxtBoxTel.Name = "mskTxtBoxTel";
-            this.mskTxtBoxTel.Size = new System.Drawing.Size(246, 27);
-            this.mskTxtBoxTel.TabIndex = 4;
-            this.mskTxtBoxTel.Text = "5141112222";
-            this.mskTxtBoxTel.Click += new System.EventHandler(this.MskTxtBoxTel_Click);
-            // 
-            // btnSuivant
-            // 
-            this.btnSuivant.BackgroundImage = global::NouvelleInterface.Properties.Resources.btnContours2;
-            this.btnSuivant.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.btnSuivant.FlatAppearance.BorderSize = 0;
-            this.btnSuivant.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(211)))), ((int)(((byte)(230)))), ((int)(((byte)(111)))));
-            this.btnSuivant.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(211)))), ((int)(((byte)(230)))), ((int)(((byte)(111)))));
-            this.btnSuivant.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnSuivant.Font = new System.Drawing.Font("Bahnschrift SemiCondensed", 13F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.btnSuivant.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(154)))), ((int)(((byte)(25)))), ((int)(((byte)(34)))));
-            this.btnSuivant.Location = new System.Drawing.Point(291, 397);
-            this.btnSuivant.Margin = new System.Windows.Forms.Padding(4);
-            this.btnSuivant.Name = "btnSuivant";
-            this.btnSuivant.Size = new System.Drawing.Size(108, 35);
-            this.btnSuivant.TabIndex = 5;
-            this.btnSuivant.Text = "Suivant";
-            this.btnSuivant.UseVisualStyleBackColor = true;
-            this.btnSuivant.Click += new System.EventHandler(this.BtnSuivantDonateur_Click);
-            // 
-            // txtPrenomDonateur
-            // 
-            this.txtPrenomDonateur.BackColor = System.Drawing.Color.Cornsilk;
-            this.txtPrenomDonateur.Font = new System.Drawing.Font("Bahnschrift Light", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.txtPrenomDonateur.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(57)))), ((int)(((byte)(56)))), ((int)(((byte)(57)))));
-            this.txtPrenomDonateur.Location = new System.Drawing.Point(152, 138);
-            this.txtPrenomDonateur.Margin = new System.Windows.Forms.Padding(4);
-            this.txtPrenomDonateur.Name = "txtPrenomDonateur";
-            this.txtPrenomDonateur.Size = new System.Drawing.Size(246, 27);
-            this.txtPrenomDonateur.TabIndex = 1;
-            this.txtPrenomDonateur.Click += new System.EventHandler(this.TxtPrenomDonateurNoir_Click);
-            this.txtPrenomDonateur.MouseHover += new System.EventHandler(this.TxtDonnateurChampsObligatoire_mouseHover);
-            // 
-            // lblPrenomDonateur
-            // 
-            this.lblPrenomDonateur.AutoSize = true;
-            this.lblPrenomDonateur.Font = new System.Drawing.Font("Bahnschrift SemiBold", 13F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.lblPrenomDonateur.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(57)))), ((int)(((byte)(56)))), ((int)(((byte)(57)))));
-            this.lblPrenomDonateur.Location = new System.Drawing.Point(45, 139);
-            this.lblPrenomDonateur.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.lblPrenomDonateur.Name = "lblPrenomDonateur";
-            this.lblPrenomDonateur.Size = new System.Drawing.Size(83, 22);
-            this.lblPrenomDonateur.TabIndex = 0;
-            this.lblPrenomDonateur.Text = "Prénom :";
-            // 
-            // lblNomDonateur
-            // 
-            this.lblNomDonateur.AutoSize = true;
-            this.lblNomDonateur.Font = new System.Drawing.Font("Bahnschrift SemiBold", 13F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.lblNomDonateur.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(57)))), ((int)(((byte)(56)))), ((int)(((byte)(57)))));
-            this.lblNomDonateur.Location = new System.Drawing.Point(45, 191);
-            this.lblNomDonateur.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.lblNomDonateur.Name = "lblNomDonateur";
-            this.lblNomDonateur.Size = new System.Drawing.Size(62, 22);
-            this.lblNomDonateur.TabIndex = 0;
-            this.lblNomDonateur.Text = "Nom : ";
-            // 
-            // lblCourriel
-            // 
-            this.lblCourriel.AutoSize = true;
-            this.lblCourriel.Font = new System.Drawing.Font("Bahnschrift SemiBold", 13F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.lblCourriel.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(57)))), ((int)(((byte)(56)))), ((int)(((byte)(57)))));
-            this.lblCourriel.Location = new System.Drawing.Point(45, 243);
-            this.lblCourriel.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.lblCourriel.Name = "lblCourriel";
-            this.lblCourriel.Size = new System.Drawing.Size(86, 22);
-            this.lblCourriel.TabIndex = 0;
-            this.lblCourriel.Text = "Courriel :";
-            // 
-            // txtNomDonateur
-            // 
-            this.txtNomDonateur.BackColor = System.Drawing.Color.Cornsilk;
-            this.txtNomDonateur.Font = new System.Drawing.Font("Bahnschrift Light", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.txtNomDonateur.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(57)))), ((int)(((byte)(56)))), ((int)(((byte)(57)))));
-            this.txtNomDonateur.Location = new System.Drawing.Point(152, 190);
-            this.txtNomDonateur.Margin = new System.Windows.Forms.Padding(4);
-            this.txtNomDonateur.Name = "txtNomDonateur";
-            this.txtNomDonateur.Size = new System.Drawing.Size(246, 27);
-            this.txtNomDonateur.TabIndex = 2;
-            this.txtNomDonateur.Click += new System.EventHandler(this.TxtNomDonateur_Click);
-            // 
-            // txtCourrielDonateur
-            // 
-            this.txtCourrielDonateur.BackColor = System.Drawing.Color.Cornsilk;
-            this.txtCourrielDonateur.Font = new System.Drawing.Font("Bahnschrift Light", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.txtCourrielDonateur.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(57)))), ((int)(((byte)(56)))), ((int)(((byte)(57)))));
-            this.txtCourrielDonateur.Location = new System.Drawing.Point(152, 242);
-            this.txtCourrielDonateur.Margin = new System.Windows.Forms.Padding(4);
-            this.txtCourrielDonateur.Name = "txtCourrielDonateur";
-            this.txtCourrielDonateur.PlaceholderText = "votrenom@domain.com";
-            this.txtCourrielDonateur.Size = new System.Drawing.Size(246, 27);
-            this.txtCourrielDonateur.TabIndex = 3;
-            this.txtCourrielDonateur.Text = "votrenom@domain.com";
-            this.txtCourrielDonateur.Click += new System.EventHandler(this.TxtCourrielDonateur_Click);
-            // 
-            // lblTelephone
-            // 
-            this.lblTelephone.AutoSize = true;
-            this.lblTelephone.Font = new System.Drawing.Font("Bahnschrift SemiBold", 13F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.lblTelephone.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(57)))), ((int)(((byte)(56)))), ((int)(((byte)(57)))));
-            this.lblTelephone.Location = new System.Drawing.Point(45, 295);
-            this.lblTelephone.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.lblTelephone.Name = "lblTelephone";
-            this.lblTelephone.Size = new System.Drawing.Size(102, 22);
-            this.lblTelephone.TabIndex = 0;
-            this.lblTelephone.Text = "Téléphone :";
-            // 
-            // lblMessageDonateur
-            // 
-            this.lblMessageDonateur.AutoSize = true;
-            this.lblMessageDonateur.Font = new System.Drawing.Font("Bahnschrift SemiBold SemiConden", 12.5F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.lblMessageDonateur.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(156)))), ((int)(((byte)(202)))), ((int)(((byte)(61)))));
-            this.lblMessageDonateur.Location = new System.Drawing.Point(44, 343);
-            this.lblMessageDonateur.Name = "lblMessageDonateur";
-            this.lblMessageDonateur.Size = new System.Drawing.Size(165, 21);
-            this.lblMessageDonateur.TabIndex = 16;
-            this.lblMessageDonateur.Text = "* Champs obligatoire(s)";
-            this.lblMessageDonateur.Visible = false;
-            // 
             // pnlCarteCredit
             // 
             this.pnlCarteCredit.BackColor = System.Drawing.Color.Transparent;
@@ -747,6 +573,7 @@
             // 
             this.panel3.BackgroundImage = global::NouvelleInterface.Properties.Resources.cadre;
             this.panel3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.panel3.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.panel3.Controls.Add(this.lblAnnee);
             this.panel3.Controls.Add(this.lblNoCredit);
             this.panel3.Controls.Add(this.lblDateExp);
@@ -811,6 +638,7 @@
             // mskTxtNumeroCarte
             // 
             this.mskTxtNumeroCarte.BackColor = System.Drawing.Color.Cornsilk;
+            this.mskTxtNumeroCarte.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.mskTxtNumeroCarte.Font = new System.Drawing.Font("Bahnschrift Light", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.mskTxtNumeroCarte.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(57)))), ((int)(((byte)(56)))), ((int)(((byte)(57)))));
             this.mskTxtNumeroCarte.Location = new System.Drawing.Point(177, 17);
@@ -877,7 +705,7 @@
             // txtBoxCvc
             // 
             this.txtBoxCvc.BackColor = System.Drawing.Color.Cornsilk;
-            this.txtBoxCvc.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.txtBoxCvc.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.txtBoxCvc.Font = new System.Drawing.Font("Bahnschrift SemiLight", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.txtBoxCvc.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(65)))), ((int)(((byte)(62)))), ((int)(((byte)(66)))));
             this.txtBoxCvc.Location = new System.Drawing.Point(298, 98);
@@ -885,7 +713,7 @@
             this.txtBoxCvc.MaxLength = 4;
             this.txtBoxCvc.Name = "txtBoxCvc";
             this.txtBoxCvc.PasswordChar = '*';
-            this.txtBoxCvc.Size = new System.Drawing.Size(31, 20);
+            this.txtBoxCvc.Size = new System.Drawing.Size(31, 27);
             this.txtBoxCvc.TabIndex = 20;
             this.txtBoxCvc.Tag = "";
             this.txtBoxCvc.Text = "123";
@@ -1005,6 +833,7 @@
             // 
             // txtRecompense
             // 
+            this.txtRecompense.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.txtRecompense.Font = new System.Drawing.Font("Bahnschrift Light", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.txtRecompense.Location = new System.Drawing.Point(235, 282);
             this.txtRecompense.Margin = new System.Windows.Forms.Padding(4);
@@ -1027,6 +856,7 @@
             // txtMontant
             // 
             this.txtMontant.BackColor = System.Drawing.Color.Cornsilk;
+            this.txtMontant.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.txtMontant.Font = new System.Drawing.Font("Bahnschrift SemiBold", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.txtMontant.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(57)))), ((int)(((byte)(56)))), ((int)(((byte)(57)))));
             this.txtMontant.Location = new System.Drawing.Point(139, 116);
@@ -1090,6 +920,183 @@
             this.btnAjouterDon.Text = "Ajouter";
             this.btnAjouterDon.UseVisualStyleBackColor = true;
             this.btnAjouterDon.Click += new System.EventHandler(this.BtnAjouterDon_Click);
+            // 
+            // pnlInfoDonateur
+            // 
+            this.pnlInfoDonateur.BackColor = System.Drawing.Color.Transparent;
+            this.pnlInfoDonateur.BackgroundImage = global::NouvelleInterface.Properties.Resources.pnldon3;
+            this.pnlInfoDonateur.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.pnlInfoDonateur.Controls.Add(this.pnlDonnateur);
+            this.pnlInfoDonateur.Controls.Add(this.mskTxtBoxTel);
+            this.pnlInfoDonateur.Controls.Add(this.btnSuivant);
+            this.pnlInfoDonateur.Controls.Add(this.txtPrenomDonateur);
+            this.pnlInfoDonateur.Controls.Add(this.lblPrenomDonateur);
+            this.pnlInfoDonateur.Controls.Add(this.lblNomDonateur);
+            this.pnlInfoDonateur.Controls.Add(this.lblCourriel);
+            this.pnlInfoDonateur.Controls.Add(this.txtNomDonateur);
+            this.pnlInfoDonateur.Controls.Add(this.txtCourrielDonateur);
+            this.pnlInfoDonateur.Controls.Add(this.lblTelephone);
+            this.pnlInfoDonateur.Controls.Add(this.lblMessageDonateur);
+            this.pnlInfoDonateur.Font = new System.Drawing.Font("Bahnschrift", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.pnlInfoDonateur.Location = new System.Drawing.Point(41, 40);
+            this.pnlInfoDonateur.Name = "pnlInfoDonateur";
+            this.pnlInfoDonateur.Size = new System.Drawing.Size(442, 513);
+            this.pnlInfoDonateur.TabIndex = 0;
+            // 
+            // pnlDonnateur
+            // 
+            this.pnlDonnateur.BackgroundImage = global::NouvelleInterface.Properties.Resources.formeRouge;
+            this.pnlDonnateur.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.pnlDonnateur.Controls.Add(this.labDonnateur);
+            this.pnlDonnateur.Location = new System.Drawing.Point(32, 22);
+            this.pnlDonnateur.Name = "pnlDonnateur";
+            this.pnlDonnateur.Size = new System.Drawing.Size(315, 55);
+            this.pnlDonnateur.TabIndex = 26;
+            // 
+            // labDonnateur
+            // 
+            this.labDonnateur.AutoSize = true;
+            this.labDonnateur.Font = new System.Drawing.Font("Bahnschrift", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.labDonnateur.ForeColor = System.Drawing.Color.White;
+            this.labDonnateur.Location = new System.Drawing.Point(22, 15);
+            this.labDonnateur.Name = "labDonnateur";
+            this.labDonnateur.Size = new System.Drawing.Size(271, 24);
+            this.labDonnateur.TabIndex = 26;
+            this.labDonnateur.Text = "INFORMATIONS DONNATEUR";
+            // 
+            // mskTxtBoxTel
+            // 
+            this.mskTxtBoxTel.BackColor = System.Drawing.Color.Cornsilk;
+            this.mskTxtBoxTel.Font = new System.Drawing.Font("Bahnschrift Light", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.mskTxtBoxTel.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(57)))), ((int)(((byte)(56)))), ((int)(((byte)(57)))));
+            this.mskTxtBoxTel.Location = new System.Drawing.Point(152, 294);
+            this.mskTxtBoxTel.Mask = "\\(000\\) 000\\-0000";
+            this.mskTxtBoxTel.Name = "mskTxtBoxTel";
+            this.mskTxtBoxTel.Size = new System.Drawing.Size(246, 27);
+            this.mskTxtBoxTel.TabIndex = 4;
+            this.mskTxtBoxTel.Text = "5141112222";
+            this.mskTxtBoxTel.Click += new System.EventHandler(this.MskTxtBoxTel_Click);
+            // 
+            // btnSuivant
+            // 
+            this.btnSuivant.BackgroundImage = global::NouvelleInterface.Properties.Resources.btnContours2;
+            this.btnSuivant.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btnSuivant.FlatAppearance.BorderSize = 0;
+            this.btnSuivant.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(211)))), ((int)(((byte)(230)))), ((int)(((byte)(111)))));
+            this.btnSuivant.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(211)))), ((int)(((byte)(230)))), ((int)(((byte)(111)))));
+            this.btnSuivant.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnSuivant.Font = new System.Drawing.Font("Bahnschrift SemiCondensed", 13F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.btnSuivant.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(154)))), ((int)(((byte)(25)))), ((int)(((byte)(34)))));
+            this.btnSuivant.Location = new System.Drawing.Point(291, 397);
+            this.btnSuivant.Margin = new System.Windows.Forms.Padding(4);
+            this.btnSuivant.Name = "btnSuivant";
+            this.btnSuivant.Size = new System.Drawing.Size(108, 35);
+            this.btnSuivant.TabIndex = 5;
+            this.btnSuivant.Text = "Suivant";
+            this.btnSuivant.UseVisualStyleBackColor = true;
+            this.btnSuivant.Click += new System.EventHandler(this.BtnSuivantDonateur_Click);
+            // 
+            // txtPrenomDonateur
+            // 
+            this.txtPrenomDonateur.BackColor = System.Drawing.Color.Cornsilk;
+            this.txtPrenomDonateur.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.txtPrenomDonateur.Font = new System.Drawing.Font("Bahnschrift Light", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.txtPrenomDonateur.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(57)))), ((int)(((byte)(56)))), ((int)(((byte)(57)))));
+            this.txtPrenomDonateur.Location = new System.Drawing.Point(152, 138);
+            this.txtPrenomDonateur.Margin = new System.Windows.Forms.Padding(4);
+            this.txtPrenomDonateur.Name = "txtPrenomDonateur";
+            this.txtPrenomDonateur.Size = new System.Drawing.Size(246, 27);
+            this.txtPrenomDonateur.TabIndex = 1;
+            this.txtPrenomDonateur.Click += new System.EventHandler(this.TxtPrenomDonateurNoir_Click);
+            this.txtPrenomDonateur.MouseHover += new System.EventHandler(this.TxtDonnateurChampsObligatoire_mouseHover);
+            // 
+            // lblPrenomDonateur
+            // 
+            this.lblPrenomDonateur.AutoSize = true;
+            this.lblPrenomDonateur.Font = new System.Drawing.Font("Bahnschrift SemiBold", 13F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.lblPrenomDonateur.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(57)))), ((int)(((byte)(56)))), ((int)(((byte)(57)))));
+            this.lblPrenomDonateur.Location = new System.Drawing.Point(45, 139);
+            this.lblPrenomDonateur.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lblPrenomDonateur.Name = "lblPrenomDonateur";
+            this.lblPrenomDonateur.Size = new System.Drawing.Size(83, 22);
+            this.lblPrenomDonateur.TabIndex = 0;
+            this.lblPrenomDonateur.Text = "Prénom :";
+            // 
+            // lblNomDonateur
+            // 
+            this.lblNomDonateur.AutoSize = true;
+            this.lblNomDonateur.Font = new System.Drawing.Font("Bahnschrift SemiBold", 13F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.lblNomDonateur.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(57)))), ((int)(((byte)(56)))), ((int)(((byte)(57)))));
+            this.lblNomDonateur.Location = new System.Drawing.Point(45, 191);
+            this.lblNomDonateur.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lblNomDonateur.Name = "lblNomDonateur";
+            this.lblNomDonateur.Size = new System.Drawing.Size(62, 22);
+            this.lblNomDonateur.TabIndex = 0;
+            this.lblNomDonateur.Text = "Nom : ";
+            // 
+            // lblCourriel
+            // 
+            this.lblCourriel.AutoSize = true;
+            this.lblCourriel.Font = new System.Drawing.Font("Bahnschrift SemiBold", 13F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.lblCourriel.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(57)))), ((int)(((byte)(56)))), ((int)(((byte)(57)))));
+            this.lblCourriel.Location = new System.Drawing.Point(45, 243);
+            this.lblCourriel.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lblCourriel.Name = "lblCourriel";
+            this.lblCourriel.Size = new System.Drawing.Size(86, 22);
+            this.lblCourriel.TabIndex = 0;
+            this.lblCourriel.Text = "Courriel :";
+            // 
+            // txtNomDonateur
+            // 
+            this.txtNomDonateur.BackColor = System.Drawing.Color.Cornsilk;
+            this.txtNomDonateur.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.txtNomDonateur.Font = new System.Drawing.Font("Bahnschrift Light", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.txtNomDonateur.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(57)))), ((int)(((byte)(56)))), ((int)(((byte)(57)))));
+            this.txtNomDonateur.Location = new System.Drawing.Point(152, 190);
+            this.txtNomDonateur.Margin = new System.Windows.Forms.Padding(4);
+            this.txtNomDonateur.Name = "txtNomDonateur";
+            this.txtNomDonateur.Size = new System.Drawing.Size(246, 27);
+            this.txtNomDonateur.TabIndex = 2;
+            this.txtNomDonateur.Click += new System.EventHandler(this.TxtNomDonateur_Click);
+            // 
+            // txtCourrielDonateur
+            // 
+            this.txtCourrielDonateur.BackColor = System.Drawing.Color.Cornsilk;
+            this.txtCourrielDonateur.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.txtCourrielDonateur.Font = new System.Drawing.Font("Bahnschrift Light", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.txtCourrielDonateur.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(57)))), ((int)(((byte)(56)))), ((int)(((byte)(57)))));
+            this.txtCourrielDonateur.Location = new System.Drawing.Point(152, 242);
+            this.txtCourrielDonateur.Margin = new System.Windows.Forms.Padding(4);
+            this.txtCourrielDonateur.Name = "txtCourrielDonateur";
+            this.txtCourrielDonateur.PlaceholderText = "votrenom@domain.com";
+            this.txtCourrielDonateur.Size = new System.Drawing.Size(246, 27);
+            this.txtCourrielDonateur.TabIndex = 3;
+            this.txtCourrielDonateur.Text = "votrenom@domain.com";
+            this.txtCourrielDonateur.Click += new System.EventHandler(this.TxtCourrielDonateur_Click);
+            // 
+            // lblTelephone
+            // 
+            this.lblTelephone.AutoSize = true;
+            this.lblTelephone.Font = new System.Drawing.Font("Bahnschrift SemiBold", 13F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.lblTelephone.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(57)))), ((int)(((byte)(56)))), ((int)(((byte)(57)))));
+            this.lblTelephone.Location = new System.Drawing.Point(45, 295);
+            this.lblTelephone.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lblTelephone.Name = "lblTelephone";
+            this.lblTelephone.Size = new System.Drawing.Size(102, 22);
+            this.lblTelephone.TabIndex = 0;
+            this.lblTelephone.Text = "Téléphone :";
+            // 
+            // lblMessageDonateur
+            // 
+            this.lblMessageDonateur.AutoSize = true;
+            this.lblMessageDonateur.Font = new System.Drawing.Font("Bahnschrift SemiBold SemiConden", 12.5F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.lblMessageDonateur.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(156)))), ((int)(((byte)(202)))), ((int)(((byte)(61)))));
+            this.lblMessageDonateur.Location = new System.Drawing.Point(44, 343);
+            this.lblMessageDonateur.Name = "lblMessageDonateur";
+            this.lblMessageDonateur.Size = new System.Drawing.Size(165, 21);
+            this.lblMessageDonateur.TabIndex = 16;
+            this.lblMessageDonateur.Text = "* Champs obligatoire(s)";
+            this.lblMessageDonateur.Visible = false;
             // 
             // tabCommanditaire
             // 
@@ -1159,6 +1166,7 @@
             // 
             // txtBoxOutput
             // 
+            this.txtBoxOutput.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.txtBoxOutput.Location = new System.Drawing.Point(617, 100);
             this.txtBoxOutput.Margin = new System.Windows.Forms.Padding(4);
             this.txtBoxOutput.Name = "txtBoxOutput";
@@ -1169,6 +1177,7 @@
             // txtPrenomCommanditaire
             // 
             this.txtPrenomCommanditaire.BackColor = System.Drawing.Color.Cornsilk;
+            this.txtPrenomCommanditaire.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.txtPrenomCommanditaire.Location = new System.Drawing.Point(170, 173);
             this.txtPrenomCommanditaire.Margin = new System.Windows.Forms.Padding(4);
             this.txtPrenomCommanditaire.Name = "txtPrenomCommanditaire";
@@ -1308,6 +1317,7 @@
             // txtQuantitePrix
             // 
             this.txtQuantitePrix.BackColor = System.Drawing.Color.Cornsilk;
+            this.txtQuantitePrix.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.txtQuantitePrix.Location = new System.Drawing.Point(258, 425);
             this.txtQuantitePrix.Margin = new System.Windows.Forms.Padding(4);
             this.txtQuantitePrix.Name = "txtQuantitePrix";
@@ -1329,6 +1339,7 @@
             // txtValeurPrix
             // 
             this.txtValeurPrix.BackColor = System.Drawing.Color.Cornsilk;
+            this.txtValeurPrix.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.txtValeurPrix.Location = new System.Drawing.Point(258, 377);
             this.txtValeurPrix.Margin = new System.Windows.Forms.Padding(4);
             this.txtValeurPrix.Name = "txtValeurPrix";
@@ -1351,6 +1362,7 @@
             // txtNomCommanditaire
             // 
             this.txtNomCommanditaire.BackColor = System.Drawing.Color.Cornsilk;
+            this.txtNomCommanditaire.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.txtNomCommanditaire.Location = new System.Drawing.Point(170, 219);
             this.txtNomCommanditaire.Margin = new System.Windows.Forms.Padding(4);
             this.txtNomCommanditaire.Name = "txtNomCommanditaire";
@@ -1472,10 +1484,6 @@
             this.pnlTitreListes.ResumeLayout(false);
             this.pnlTitreListes.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvDonateurs)).EndInit();
-            this.pnlInfoDonateur.ResumeLayout(false);
-            this.pnlInfoDonateur.PerformLayout();
-            this.pnlDonnateur.ResumeLayout(false);
-            this.pnlDonnateur.PerformLayout();
             this.pnlCarteCredit.ResumeLayout(false);
             this.pnlCarteCredit.PerformLayout();
             this.pnTitrePaiement.ResumeLayout(false);
@@ -1490,6 +1498,10 @@
             this.pnlDon.PerformLayout();
             this.pnlTitreDonnateur.ResumeLayout(false);
             this.pnlTitreDonnateur.PerformLayout();
+            this.pnlInfoDonateur.ResumeLayout(false);
+            this.pnlInfoDonateur.PerformLayout();
+            this.pnlDonnateur.ResumeLayout(false);
+            this.pnlDonnateur.PerformLayout();
             this.tabCommanditaire.ResumeLayout(false);
             this.pnlCommandites.ResumeLayout(false);
             this.pnlCommandites.PerformLayout();
