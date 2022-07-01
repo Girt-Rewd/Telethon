@@ -135,7 +135,7 @@ namespace NouvelleInterface
             }
             else carte = "AMEX";
             string chaine = txtPrenomDonateur.Text + " " + txtNomDonateur.Text
-                + "\n\rIDD: " + idDonateur + "\n\rTél : " + mskTxtBoxTel.Text + "\n\rCourriel: " + txtCourrielDonateur + "\n\rCarte de crédit :" + carte + "  #" + mskTxtNumeroCarte.Text + "\n\rExp: " + numMois.Text + "-" + numAnnee.Text + "  CVC: " + txtBoxCvc.Text;
+                + "\n\rIDD: " + idDonateur + "\n\rTél : " + mskTxtBoxTel.Text + "\n\rCourriel: " + txtCourrielDonateur.Text + "\n\rCarte de crédit :" + carte + "  #" + mskTxtNumeroCarte.Text + "\n\rExp: " + numMois.Text + "-" + numAnnee.Text + "  CVC: " + txtBoxCvc.Text;
             return chaine;
         }
 
