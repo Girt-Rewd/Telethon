@@ -107,11 +107,8 @@ namespace NouvelleInterface
                     mskTxtNumeroCarte.Text = string.Empty;
                     txtBoxCvc.Text = String.Empty;
                     pnlCarteCredit.Visible = false;
-                    pnlDon.Visible = false;
-                    pnlInfoDonateur.Visible = true;
+                    pnlInfoDonateur.Visible = false;
                     pnlDon.Visible = true;
-
-                    pnlCarteCredit.Visible = false;
                 }
                 else {
                     pnlInfoDonateur.Visible = true;
