@@ -66,9 +66,6 @@
   <metadata name="tabDonateur.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>True</value>
   </metadata>
-  <metadata name="labTitreListes.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>True</value>
-  </metadata>
   <metadata name="infoBulle.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>17, 17</value>
   </metadata>
@@ -78,16 +75,19 @@
   <metadata name="txtBoxOut.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>True</value>
   </metadata>
+  <metadata name="pnlInfoDonateur.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <metadata name="labDonnateur.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <metadata name="lblMessageDonateur.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
   <metadata name="pnlCarteCredit.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>True</value>
   </metadata>
   <metadata name="lblID.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>True</value>
-  </metadata>
-  <metadata name="pnTitrePaiement.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>True</value>
-  </metadata>
-  <metadata name="labPaiement.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>True</value>
   </metadata>
   <metadata name="lblMessageCredit.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
@@ -129,30 +129,34 @@
   <metadata name="btnValider.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>True</value>
   </metadata>
-  <metadata name="pnlInfoDonateur.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>True</value>
-  </metadata>
-  <metadata name="labDonnateur.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>True</value>
-  </metadata>
-  <metadata name="lblMessageDonateur.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>True</value>
-  </metadata>
   <metadata name="tabCommanditaire.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>True</value>
   </metadata>
-  <metadata name="lblMessagePrix.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+  <metadata name="label6.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>True</value>
   </metadata>
-  <metadata name="btnAffichePrix.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>True</value>
-  </metadata>
-  <metadata name="btnAjouterPrix.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>True</value>
-  </metadata>
-  <metadata name="btnAfficherComm.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>True</value>
-  </metadata>
+  <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+  <data name="panel2.BackgroundImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        iVBORw0KGgoAAAANSUhEUgAAAjkAAABRCAYAAAAw07dzAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
+        YQUAAAAJcEhZcwAAFxEAABcRAcom8z8AAAOASURBVHhe7d29deJAFIBRl+B0M44roARK2BJcAiVQAulm
+        LsElUIJLoAR34H2PBRaEjPkVM3NucEk0kgi/MzOSnv78ehmHBQDACeZhFqZhEkZfX19PJcrIyT/4BQBw
+        hQygjJ9JX3A8gsgBAO7hPbyG574AGYLIAQDu7S0MPsMjcgCAoSzDa1+Q3IPIAQCGNkjsiBwA4FE+wt2W
+        sUQOAPBo+Vj6zTcoixwAoAS5hHXTWR2RAwCUZNYXLJcQOQBAafLFglcvX4kcAKBEuSn5qk9GiBwAoFSf
+        YdwXMKcQOQBAyS4OHZEDAJTuotAROQBADTJ0ztqMLHIAgFrkZuSTQ0fkAAA1ee8Lmj4iBwCozbQvarpE
+        DgBQox83IoscAKBG+a2ro/tzRA4AUKuj37kSOQBAzb799IPIAQBqtugLnCRyAIDaTUQOANCi3tkckQMA
+        tOBgNkfkAAAtOJjNETkAQCv2nrQSOQBAK+YiBwBo0VLkAACt2n7TSuQAAC3ZLlmJHACgJdslK5EDALRm
+        9ZSVyAEAWvMqcgCAFq325YgcAKA1q7cfixwAoDmryMmfvoMAABV7FjkAQIsmm8j56BwAAKjZNnLeOwcA
+        AGo23UTOrHMAAKBms03keMIKAGjJNnKeOwcAAGr2L3LWoWPzMQDQir3IsS8HAGjFXuSMOwcBAGr1P3LW
+        obPsDAAAqNFB5Mw7AwAAanQQOaPOAACAGu1Hzjp0Fp1BAAC16Y0cLwYEAGp3GDnr0LEBGQCo2beR89oZ
+        CABQk/7ISXHQ3hwAoFZHI8feHACgVt9HTooBb50TAABq8GPk5NfJP3dOAACowfHISTHod+ckAIDS/Rw5
+        KQZatgIAanJy5OSy1cfOiQAAJTstclIMHgf7cwCAGpweOSlOyNDpuxAAQEnOi5wUJ3kbMgBQuvMjJ8WJ
+        QgcAKNllkZPiZKEDAJTq8shJcQGhAwCU6LrISXERT10BAKW5PnJSXGgUvEcHACjFbSJnIy4479wAAOAR
+        bhs5KS46CcudmwAADO32kZPiwvkZCLM6AMCj3CdyNuIGuSl5sXNDAIAh3DdyNuJGuYQldgCAoQwTORtx
+        w5zZedv5AwAA9zBs5GzEjXPPzjR47BwAuIfHRM6u+BP5jp18c/J78FJBAOAWHh85XfGnckkro2cWch+P
+        2R4A4FzlRc4x8YdzmSs3MQMAHPEy+gs5EzDrNaGF0gAAAABJRU5ErkJggg==
+</value>
+  </data>
   <metadata name="lblCarteCredit.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>True</value>
   </metadata>
@@ -168,7 +172,6 @@
   <metadata name="$this.TrayHeight" type="System.Int32, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>25</value>
   </metadata>
-  <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
   <data name="$this.Icon" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         AAABAAEAM0oAAAEAIABwPQAAFgAAACgAAAAzAAAAlAAAAAEAIAAAAAAA+DoAABEXAAARFwAAAAAAAAAA
