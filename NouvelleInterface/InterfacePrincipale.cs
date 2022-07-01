@@ -92,15 +92,37 @@ namespace NouvelleInterface
                 }
 
                 int indice = gestionnaireSTE.donateurs.Count + 1;
-                gestionnaireSTE.AjouterDonateur(indice, txtNomDonateur.Text, txtPrenomDonateur.Text, txtCourrielDonateur.Text, mskTxtBoxTel.Text, typeCarte, mskTxtNumeroCarte.Text, numMois.Text + "-" + numAnnee.Text, txtBoxCvc.Text);
-                MessageBox.Show("VALIDER INFO DU DONATEUR \n\r\r" + gestionnaireSTE.donateurs.Last().ToString());
+                DialogResult confirmationAjoutDonateur = MessageBox.Show("VALIDER INFO DU DONATEUR \n\r\r" + gestionnaireSTE.donateurs.Last().ToString(), "Important", MessageBoxButtons.YesNo);
+                if (confirmationAjoutDonateur == DialogResult.Yes)
+                {
+                    gestionnaireSTE.AjouterDonateur(indice, txtNomDonateur.Text, txtPrenomDonateur.Text, txtCourrielDonateur.Text, mskTxtBoxTel.Text, typeCarte, mskTxtNumeroCarte.Text, numMois.Text + "-" + numAnnee.Text, txtBoxCvc.Text);
+                    radAmex.Checked = false;
+                    radMC.Checked = false;
+                    radVisa.Checked = false;
+                    txtBoxCvc.Text = string.Empty;
+                    txtNomDonateur.Text = string.Empty;
+                    txtPrenomDonateur.Text = string.Empty;
+                    txtCourrielDonateur.Text = string.Empty;
+                    mskTxtBoxTel.Text = string.Empty;
+                    mskTxtNumeroCarte.Text = string.Empty;
+                    txtBoxCvc.Text = String.Empty;
+                    pnlCarteCredit.Visible = false;
+                    pnlDon.Visible = false;
+                    pnlInfoDonateur.Visible = true;
+                    pnlDon.Visible = true;
+
+                    pnlCarteCredit.Visible = false;
+                }
+                else {
+                    pnlInfoDonateur.Visible = true;
+                    pnlCarteCredit.Visible = false;
+                    MessageBox.Show("Veuillez apporter les changements désirés", "SVP", MessageBoxButtons.OK);
+                }
 
 
 
                 //Passage au prochain sous menu
-                pnlDon.Visible = true;
-
-                pnlCarteCredit.Visible = false;
+               
 
             }
         }
