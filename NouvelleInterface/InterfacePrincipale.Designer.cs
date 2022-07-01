@@ -63,7 +63,6 @@
             this.lblTelephone = new System.Windows.Forms.Label();
             this.lblMessageDonateur = new System.Windows.Forms.Label();
             this.pnlCarteCredit = new System.Windows.Forms.Panel();
-            this.lblID = new System.Windows.Forms.Label();
             this.btnPrecedent = new System.Windows.Forms.Button();
             this.pnTitrePaiement = new System.Windows.Forms.Panel();
             this.labPaiement = new System.Windows.Forms.Label();
@@ -114,7 +113,6 @@
             this.label2 = new System.Windows.Forms.Label();
             this.txtPrenomCommanditaire = new System.Windows.Forms.TextBox();
             this.txtQuantitePrix = new System.Windows.Forms.TextBox();
-            this.lblIDCommanditaire = new System.Windows.Forms.Label();
             this.lblChoixPrix = new System.Windows.Forms.Label();
             this.lblMessageCommanditaire = new System.Windows.Forms.Label();
             this.lblMessagePrix = new System.Windows.Forms.Label();
@@ -571,7 +569,6 @@
             this.pnlCarteCredit.BackColor = System.Drawing.Color.Transparent;
             this.pnlCarteCredit.BackgroundImage = global::NouvelleInterface.Properties.Resources.pnlBlanc;
             this.pnlCarteCredit.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.pnlCarteCredit.Controls.Add(this.lblID);
             this.pnlCarteCredit.Controls.Add(this.btnPrecedent);
             this.pnlCarteCredit.Controls.Add(this.pnTitrePaiement);
             this.pnlCarteCredit.Controls.Add(this.btnAjouterDonateur);
@@ -584,17 +581,6 @@
             this.pnlCarteCredit.Size = new System.Drawing.Size(442, 513);
             this.pnlCarteCredit.TabIndex = 13;
             this.pnlCarteCredit.Visible = false;
-            // 
-            // lblID
-            // 
-            this.lblID.AutoSize = true;
-            this.lblID.BackColor = System.Drawing.Color.Transparent;
-            this.lblID.Font = new System.Drawing.Font("Bahnschrift SemiLight", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.lblID.Location = new System.Drawing.Point(39, 68);
-            this.lblID.Name = "lblID";
-            this.lblID.Size = new System.Drawing.Size(0, 19);
-            this.lblID.TabIndex = 7;
-            this.lblID.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // btnPrecedent
             // 
@@ -1177,7 +1163,6 @@
             this.pnlCommandites.Controls.Add(this.panel2);
             this.pnlCommandites.Controls.Add(this.txtPrenomCommanditaire);
             this.pnlCommandites.Controls.Add(this.txtQuantitePrix);
-            this.pnlCommandites.Controls.Add(this.lblIDCommanditaire);
             this.pnlCommandites.Controls.Add(this.lblChoixPrix);
             this.pnlCommandites.Controls.Add(this.lblMessageCommanditaire);
             this.pnlCommandites.Controls.Add(this.lblMessagePrix);
@@ -1316,17 +1301,6 @@
             this.txtQuantitePrix.TabIndex = 4;
             this.txtQuantitePrix.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.txtQuantitePrix.Click += new System.EventHandler(this.TxtQuantitePrix_Click);
-            // 
-            // lblIDCommanditaire
-            // 
-            this.lblIDCommanditaire.AutoSize = true;
-            this.lblIDCommanditaire.Font = new System.Drawing.Font("Bahnschrift SemiLight", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.lblIDCommanditaire.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(57)))), ((int)(((byte)(56)))), ((int)(((byte)(57)))));
-            this.lblIDCommanditaire.Location = new System.Drawing.Point(39, 87);
-            this.lblIDCommanditaire.Name = "lblIDCommanditaire";
-            this.lblIDCommanditaire.Size = new System.Drawing.Size(32, 19);
-            this.lblIDCommanditaire.TabIndex = 8;
-            this.lblIDCommanditaire.Text = "ID :";
             // 
             // lblChoixPrix
             // 
@@ -1567,7 +1541,6 @@
         private Label lblNomDonateur;
         private Label lblPrenomDonateur;
         private Label lblInfoDon;
-        private Label lblID;
         private Button btnAffichePrix;
         private Button btnAjouterPrix;
         private Button btnAfficherComm;
@@ -1581,7 +1554,6 @@
         private Label lblChoixPrix;
         private Label lblPrenomCommanditaire;
         private Label lblInfoPrix;
-        private Label lblIDCommanditaire;
         private Panel pnlInfoDonateur;
         private Button btnSuivant;
         private Panel pnlDon;
