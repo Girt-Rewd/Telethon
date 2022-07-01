@@ -166,10 +166,12 @@
             this.Controls.Add(this.lblAuteur01);
             this.Controls.Add(this.lblInfoProjetSTE);
             this.Controls.Add(this.pictureBox1);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Name = "Apropos";
             this.Text = "Apropos";
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 

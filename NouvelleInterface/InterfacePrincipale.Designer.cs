@@ -49,7 +49,6 @@
             this.Column12 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.cvc = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.txtBoxOut = new System.Windows.Forms.RichTextBox();
-            this.btnQuitter = new System.Windows.Forms.Button();
             this.pnlInfoDonateur = new System.Windows.Forms.Panel();
             this.pnlDonnateur = new System.Windows.Forms.Panel();
             this.labDonnateur = new System.Windows.Forms.Label();
@@ -75,6 +74,9 @@
             this.radMC = new System.Windows.Forms.RadioButton();
             this.radVisa = new System.Windows.Forms.RadioButton();
             this.panel3 = new System.Windows.Forms.Panel();
+            this.txtBoxCvc = new System.Windows.Forms.TextBox();
+            this.numAnnee = new System.Windows.Forms.NumericUpDown();
+            this.numMois = new System.Windows.Forms.NumericUpDown();
             this.lblAnnee = new System.Windows.Forms.Label();
             this.lblNoCredit = new System.Windows.Forms.Label();
             this.lblDateExp = new System.Windows.Forms.Label();
@@ -82,15 +84,11 @@
             this.mskTxtNumeroCarte = new System.Windows.Forms.MaskedTextBox();
             this.lblMoisExpiration = new System.Windows.Forms.Label();
             this.lblCVC = new System.Windows.Forms.Label();
-            this.numAnnee = new System.Windows.Forms.NumericUpDown();
-            this.txtBoxCvc = new System.Windows.Forms.TextBox();
-            this.numMois = new System.Windows.Forms.NumericUpDown();
             this.pnlDon = new System.Windows.Forms.Panel();
             this.labRecompense = new System.Windows.Forms.Label();
             this.labDollar = new System.Windows.Forms.Label();
             this.pnlTitreDonnateur = new System.Windows.Forms.Panel();
             this.lblInfoDon = new System.Windows.Forms.Label();
-            this.btnPrecedent2 = new System.Windows.Forms.Button();
             this.txtRecompense = new System.Windows.Forms.TextBox();
             this.lblMontant = new System.Windows.Forms.Label();
             this.txtMontant = new System.Windows.Forms.TextBox();
@@ -174,10 +172,9 @@
             this.tabDonateur.BackgroundImage = global::NouvelleInterface.Properties.Resources.Background150pp;
             this.tabDonateur.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.tabDonateur.Controls.Add(this.pnlFondListes);
-            this.tabDonateur.Controls.Add(this.btnQuitter);
-            this.tabDonateur.Controls.Add(this.pnlInfoDonateur);
             this.tabDonateur.Controls.Add(this.pnlCarteCredit);
             this.tabDonateur.Controls.Add(this.pnlDon);
+            this.tabDonateur.Controls.Add(this.pnlInfoDonateur);
             this.tabDonateur.Location = new System.Drawing.Point(4, 34);
             this.tabDonateur.Margin = new System.Windows.Forms.Padding(4);
             this.tabDonateur.Name = "tabDonateur";
@@ -387,26 +384,6 @@
             this.txtBoxOut.Text = "";
             this.txtBoxOut.Visible = false;
             // 
-            // btnQuitter
-            // 
-            this.btnQuitter.BackColor = System.Drawing.Color.Transparent;
-            this.btnQuitter.BackgroundImage = global::NouvelleInterface.Properties.Resources.btn6;
-            this.btnQuitter.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.btnQuitter.FlatAppearance.BorderSize = 0;
-            this.btnQuitter.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(247)))), ((int)(((byte)(155)))), ((int)(((byte)(121)))));
-            this.btnQuitter.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(247)))), ((int)(((byte)(155)))), ((int)(((byte)(121)))));
-            this.btnQuitter.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnQuitter.Font = new System.Drawing.Font("Bahnschrift SemiBold SemiConden", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.btnQuitter.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(154)))), ((int)(((byte)(25)))), ((int)(((byte)(34)))));
-            this.btnQuitter.Location = new System.Drawing.Point(949, 703);
-            this.btnQuitter.Margin = new System.Windows.Forms.Padding(4);
-            this.btnQuitter.Name = "btnQuitter";
-            this.btnQuitter.Size = new System.Drawing.Size(162, 35);
-            this.btnQuitter.TabIndex = 2;
-            this.btnQuitter.Text = "Retour à l’accueil";
-            this.btnQuitter.UseVisualStyleBackColor = false;
-            this.btnQuitter.Click += new System.EventHandler(this.BtnQuitter_Click);
-            // 
             // pnlInfoDonateur
             // 
             this.pnlInfoDonateur.BackColor = System.Drawing.Color.Transparent;
@@ -456,7 +433,7 @@
             this.mskTxtBoxTel.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.mskTxtBoxTel.Font = new System.Drawing.Font("Bahnschrift Light", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.mskTxtBoxTel.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(57)))), ((int)(((byte)(56)))), ((int)(((byte)(57)))));
-            this.mskTxtBoxTel.Location = new System.Drawing.Point(152, 294);
+            this.mskTxtBoxTel.Location = new System.Drawing.Point(149, 294);
             this.mskTxtBoxTel.Mask = "\\(000\\) 000\\-0000";
             this.mskTxtBoxTel.Name = "mskTxtBoxTel";
             this.mskTxtBoxTel.Size = new System.Drawing.Size(246, 27);
@@ -474,7 +451,7 @@
             this.btnSuivant.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnSuivant.Font = new System.Drawing.Font("Bahnschrift SemiCondensed", 13F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.btnSuivant.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(154)))), ((int)(((byte)(25)))), ((int)(((byte)(34)))));
-            this.btnSuivant.Location = new System.Drawing.Point(291, 397);
+            this.btnSuivant.Location = new System.Drawing.Point(287, 397);
             this.btnSuivant.Margin = new System.Windows.Forms.Padding(4);
             this.btnSuivant.Name = "btnSuivant";
             this.btnSuivant.Size = new System.Drawing.Size(108, 35);
@@ -489,7 +466,7 @@
             this.txtPrenomDonateur.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.txtPrenomDonateur.Font = new System.Drawing.Font("Bahnschrift Light", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.txtPrenomDonateur.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(57)))), ((int)(((byte)(56)))), ((int)(((byte)(57)))));
-            this.txtPrenomDonateur.Location = new System.Drawing.Point(152, 138);
+            this.txtPrenomDonateur.Location = new System.Drawing.Point(149, 138);
             this.txtPrenomDonateur.Margin = new System.Windows.Forms.Padding(4);
             this.txtPrenomDonateur.Name = "txtPrenomDonateur";
             this.txtPrenomDonateur.Size = new System.Drawing.Size(246, 27);
@@ -502,7 +479,7 @@
             this.lblPrenomDonateur.AutoSize = true;
             this.lblPrenomDonateur.Font = new System.Drawing.Font("Bahnschrift SemiBold", 13F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.lblPrenomDonateur.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(57)))), ((int)(((byte)(56)))), ((int)(((byte)(57)))));
-            this.lblPrenomDonateur.Location = new System.Drawing.Point(45, 139);
+            this.lblPrenomDonateur.Location = new System.Drawing.Point(42, 139);
             this.lblPrenomDonateur.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblPrenomDonateur.Name = "lblPrenomDonateur";
             this.lblPrenomDonateur.Size = new System.Drawing.Size(83, 22);
@@ -514,7 +491,7 @@
             this.lblNomDonateur.AutoSize = true;
             this.lblNomDonateur.Font = new System.Drawing.Font("Bahnschrift SemiBold", 13F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.lblNomDonateur.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(57)))), ((int)(((byte)(56)))), ((int)(((byte)(57)))));
-            this.lblNomDonateur.Location = new System.Drawing.Point(45, 191);
+            this.lblNomDonateur.Location = new System.Drawing.Point(42, 191);
             this.lblNomDonateur.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblNomDonateur.Name = "lblNomDonateur";
             this.lblNomDonateur.Size = new System.Drawing.Size(62, 22);
@@ -526,7 +503,7 @@
             this.lblCourriel.AutoSize = true;
             this.lblCourriel.Font = new System.Drawing.Font("Bahnschrift SemiBold", 13F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.lblCourriel.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(57)))), ((int)(((byte)(56)))), ((int)(((byte)(57)))));
-            this.lblCourriel.Location = new System.Drawing.Point(45, 243);
+            this.lblCourriel.Location = new System.Drawing.Point(42, 243);
             this.lblCourriel.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblCourriel.Name = "lblCourriel";
             this.lblCourriel.Size = new System.Drawing.Size(86, 22);
@@ -539,7 +516,7 @@
             this.txtNomDonateur.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.txtNomDonateur.Font = new System.Drawing.Font("Bahnschrift Light", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.txtNomDonateur.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(57)))), ((int)(((byte)(56)))), ((int)(((byte)(57)))));
-            this.txtNomDonateur.Location = new System.Drawing.Point(152, 190);
+            this.txtNomDonateur.Location = new System.Drawing.Point(149, 190);
             this.txtNomDonateur.Margin = new System.Windows.Forms.Padding(4);
             this.txtNomDonateur.Name = "txtNomDonateur";
             this.txtNomDonateur.Size = new System.Drawing.Size(246, 27);
@@ -552,7 +529,7 @@
             this.txtCourrielDonateur.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.txtCourrielDonateur.Font = new System.Drawing.Font("Bahnschrift Light", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.txtCourrielDonateur.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(57)))), ((int)(((byte)(56)))), ((int)(((byte)(57)))));
-            this.txtCourrielDonateur.Location = new System.Drawing.Point(152, 242);
+            this.txtCourrielDonateur.Location = new System.Drawing.Point(149, 242);
             this.txtCourrielDonateur.Margin = new System.Windows.Forms.Padding(4);
             this.txtCourrielDonateur.Name = "txtCourrielDonateur";
             this.txtCourrielDonateur.PlaceholderText = "votrenom@domain.com";
@@ -566,7 +543,7 @@
             this.lblTelephone.AutoSize = true;
             this.lblTelephone.Font = new System.Drawing.Font("Bahnschrift SemiBold", 13F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.lblTelephone.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(57)))), ((int)(((byte)(56)))), ((int)(((byte)(57)))));
-            this.lblTelephone.Location = new System.Drawing.Point(45, 295);
+            this.lblTelephone.Location = new System.Drawing.Point(42, 295);
             this.lblTelephone.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblTelephone.Name = "lblTelephone";
             this.lblTelephone.Size = new System.Drawing.Size(102, 22);
@@ -578,7 +555,7 @@
             this.lblMessageDonateur.AutoSize = true;
             this.lblMessageDonateur.Font = new System.Drawing.Font("Bahnschrift SemiBold SemiConden", 12.5F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.lblMessageDonateur.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(156)))), ((int)(((byte)(202)))), ((int)(((byte)(61)))));
-            this.lblMessageDonateur.Location = new System.Drawing.Point(44, 343);
+            this.lblMessageDonateur.Location = new System.Drawing.Point(43, 343);
             this.lblMessageDonateur.Name = "lblMessageDonateur";
             this.lblMessageDonateur.Size = new System.Drawing.Size(165, 21);
             this.lblMessageDonateur.TabIndex = 16;
@@ -629,7 +606,7 @@
             this.btnPrecedent.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnPrecedent.Font = new System.Drawing.Font("Bahnschrift SemiCondensed", 13F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.btnPrecedent.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(154)))), ((int)(((byte)(25)))), ((int)(((byte)(34)))));
-            this.btnPrecedent.Location = new System.Drawing.Point(172, 397);
+            this.btnPrecedent.Location = new System.Drawing.Point(167, 397);
             this.btnPrecedent.Margin = new System.Windows.Forms.Padding(4);
             this.btnPrecedent.Name = "btnPrecedent";
             this.btnPrecedent.Size = new System.Drawing.Size(108, 35);
@@ -670,7 +647,7 @@
             this.btnAjouterDonateur.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnAjouterDonateur.Font = new System.Drawing.Font("Bahnschrift SemiCondensed", 13F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.btnAjouterDonateur.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(154)))), ((int)(((byte)(25)))), ((int)(((byte)(34)))));
-            this.btnAjouterDonateur.Location = new System.Drawing.Point(291, 397);
+            this.btnAjouterDonateur.Location = new System.Drawing.Point(287, 397);
             this.btnAjouterDonateur.Name = "btnAjouterDonateur";
             this.btnAjouterDonateur.Size = new System.Drawing.Size(108, 35);
             this.btnAjouterDonateur.TabIndex = 10;
@@ -754,6 +731,9 @@
             this.panel3.BackgroundImage = global::NouvelleInterface.Properties.Resources.cadre;
             this.panel3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.panel3.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.panel3.Controls.Add(this.txtBoxCvc);
+            this.panel3.Controls.Add(this.numAnnee);
+            this.panel3.Controls.Add(this.numMois);
             this.panel3.Controls.Add(this.lblAnnee);
             this.panel3.Controls.Add(this.lblNoCredit);
             this.panel3.Controls.Add(this.lblDateExp);
@@ -761,13 +741,83 @@
             this.panel3.Controls.Add(this.mskTxtNumeroCarte);
             this.panel3.Controls.Add(this.lblMoisExpiration);
             this.panel3.Controls.Add(this.lblCVC);
-            this.panel3.Controls.Add(this.numAnnee);
-            this.panel3.Controls.Add(this.txtBoxCvc);
-            this.panel3.Controls.Add(this.numMois);
             this.panel3.Location = new System.Drawing.Point(44, 193);
             this.panel3.Name = "panel3";
             this.panel3.Size = new System.Drawing.Size(354, 142);
             this.panel3.TabIndex = 24;
+            // 
+            // txtBoxCvc
+            // 
+            this.txtBoxCvc.BackColor = System.Drawing.Color.Cornsilk;
+            this.txtBoxCvc.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.txtBoxCvc.Font = new System.Drawing.Font("Bahnschrift SemiLight", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.txtBoxCvc.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(65)))), ((int)(((byte)(62)))), ((int)(((byte)(66)))));
+            this.txtBoxCvc.Location = new System.Drawing.Point(298, 95);
+            this.txtBoxCvc.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.txtBoxCvc.MaxLength = 4;
+            this.txtBoxCvc.Name = "txtBoxCvc";
+            this.txtBoxCvc.PasswordChar = '*';
+            this.txtBoxCvc.Size = new System.Drawing.Size(31, 27);
+            this.txtBoxCvc.TabIndex = 20;
+            this.txtBoxCvc.Tag = "";
+            this.txtBoxCvc.Text = "123";
+            this.txtBoxCvc.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
+            // numAnnee
+            // 
+            this.numAnnee.BackColor = System.Drawing.Color.Cornsilk;
+            this.numAnnee.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.numAnnee.Font = new System.Drawing.Font("Bahnschrift SemiLight", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.numAnnee.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(65)))), ((int)(((byte)(62)))), ((int)(((byte)(66)))));
+            this.numAnnee.Location = new System.Drawing.Point(191, 96);
+            this.numAnnee.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.numAnnee.Maximum = new decimal(new int[] {
+            99,
+            0,
+            0,
+            0});
+            this.numAnnee.Minimum = new decimal(new int[] {
+            22,
+            0,
+            0,
+            0});
+            this.numAnnee.Name = "numAnnee";
+            this.numAnnee.Size = new System.Drawing.Size(47, 25);
+            this.numAnnee.TabIndex = 21;
+            this.numAnnee.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.numAnnee.Value = new decimal(new int[] {
+            22,
+            0,
+            0,
+            0});
+            // 
+            // numMois
+            // 
+            this.numMois.BackColor = System.Drawing.Color.Cornsilk;
+            this.numMois.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.numMois.Font = new System.Drawing.Font("Bahnschrift SemiLight", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.numMois.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(65)))), ((int)(((byte)(62)))), ((int)(((byte)(66)))));
+            this.numMois.Location = new System.Drawing.Point(66, 96);
+            this.numMois.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.numMois.Maximum = new decimal(new int[] {
+            12,
+            0,
+            0,
+            0});
+            this.numMois.Minimum = new decimal(new int[] {
+            1,
+            0,
+            0,
+            0});
+            this.numMois.Name = "numMois";
+            this.numMois.Size = new System.Drawing.Size(47, 25);
+            this.numMois.TabIndex = 23;
+            this.numMois.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.numMois.Value = new decimal(new int[] {
+            1,
+            0,
+            0,
+            0});
             // 
             // lblAnnee
             // 
@@ -854,79 +904,6 @@
             this.lblCVC.TabIndex = 19;
             this.lblCVC.Text = "CVC :";
             // 
-            // numAnnee
-            // 
-            this.numAnnee.BackColor = System.Drawing.Color.Cornsilk;
-            this.numAnnee.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.numAnnee.Font = new System.Drawing.Font("Bahnschrift SemiLight", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.numAnnee.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(65)))), ((int)(((byte)(62)))), ((int)(((byte)(66)))));
-            this.numAnnee.Location = new System.Drawing.Point(191, 97);
-            this.numAnnee.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.numAnnee.Maximum = new decimal(new int[] {
-            99,
-            0,
-            0,
-            0});
-            this.numAnnee.Minimum = new decimal(new int[] {
-            22,
-            0,
-            0,
-            0});
-            this.numAnnee.Name = "numAnnee";
-            this.numAnnee.Size = new System.Drawing.Size(47, 21);
-            this.numAnnee.TabIndex = 21;
-            this.numAnnee.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.numAnnee.Value = new decimal(new int[] {
-            22,
-            0,
-            0,
-            0});
-            // 
-            // txtBoxCvc
-            // 
-            this.txtBoxCvc.BackColor = System.Drawing.Color.Cornsilk;
-            this.txtBoxCvc.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.txtBoxCvc.Font = new System.Drawing.Font("Bahnschrift SemiLight", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.txtBoxCvc.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(65)))), ((int)(((byte)(62)))), ((int)(((byte)(66)))));
-            this.txtBoxCvc.Location = new System.Drawing.Point(298, 98);
-            this.txtBoxCvc.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.txtBoxCvc.MaxLength = 4;
-            this.txtBoxCvc.Name = "txtBoxCvc";
-            this.txtBoxCvc.PasswordChar = '*';
-            this.txtBoxCvc.Size = new System.Drawing.Size(31, 27);
-            this.txtBoxCvc.TabIndex = 20;
-            this.txtBoxCvc.Tag = "";
-            this.txtBoxCvc.Text = "123";
-            this.txtBoxCvc.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            // 
-            // numMois
-            // 
-            this.numMois.BackColor = System.Drawing.Color.Cornsilk;
-            this.numMois.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.numMois.Font = new System.Drawing.Font("Bahnschrift SemiLight", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.numMois.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(65)))), ((int)(((byte)(62)))), ((int)(((byte)(66)))));
-            this.numMois.Location = new System.Drawing.Point(66, 97);
-            this.numMois.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.numMois.Maximum = new decimal(new int[] {
-            12,
-            0,
-            0,
-            0});
-            this.numMois.Minimum = new decimal(new int[] {
-            1,
-            0,
-            0,
-            0});
-            this.numMois.Name = "numMois";
-            this.numMois.Size = new System.Drawing.Size(47, 21);
-            this.numMois.TabIndex = 23;
-            this.numMois.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.numMois.Value = new decimal(new int[] {
-            1,
-            0,
-            0,
-            0});
-            // 
             // pnlDon
             // 
             this.pnlDon.BackColor = System.Drawing.Color.Transparent;
@@ -935,7 +912,6 @@
             this.pnlDon.Controls.Add(this.labRecompense);
             this.pnlDon.Controls.Add(this.labDollar);
             this.pnlDon.Controls.Add(this.pnlTitreDonnateur);
-            this.pnlDon.Controls.Add(this.btnPrecedent2);
             this.pnlDon.Controls.Add(this.txtRecompense);
             this.pnlDon.Controls.Add(this.lblMontant);
             this.pnlDon.Controls.Add(this.txtMontant);
@@ -963,7 +939,7 @@
             this.labDollar.AutoSize = true;
             this.labDollar.Font = new System.Drawing.Font("Bahnschrift SemiBold", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.labDollar.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(154)))), ((int)(((byte)(25)))), ((int)(((byte)(34)))));
-            this.labDollar.Location = new System.Drawing.Point(249, 119);
+            this.labDollar.Location = new System.Drawing.Point(253, 119);
             this.labDollar.Name = "labDollar";
             this.labDollar.Size = new System.Drawing.Size(22, 24);
             this.labDollar.TabIndex = 28;
@@ -991,34 +967,14 @@
             this.lblInfoDon.TabIndex = 0;
             this.lblInfoDon.Text = "INFORMATIONS DON";
             // 
-            // btnPrecedent2
-            // 
-            this.btnPrecedent2.BackColor = System.Drawing.Color.White;
-            this.btnPrecedent2.BackgroundImage = global::NouvelleInterface.Properties.Resources.btnContours2;
-            this.btnPrecedent2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.btnPrecedent2.FlatAppearance.BorderSize = 0;
-            this.btnPrecedent2.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(213)))), ((int)(((byte)(147)))));
-            this.btnPrecedent2.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(213)))), ((int)(((byte)(147)))));
-            this.btnPrecedent2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnPrecedent2.Font = new System.Drawing.Font("Bahnschrift SemiCondensed", 13F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.btnPrecedent2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(154)))), ((int)(((byte)(25)))), ((int)(((byte)(34)))));
-            this.btnPrecedent2.Location = new System.Drawing.Point(172, 397);
-            this.btnPrecedent2.Margin = new System.Windows.Forms.Padding(4);
-            this.btnPrecedent2.Name = "btnPrecedent2";
-            this.btnPrecedent2.Size = new System.Drawing.Size(108, 35);
-            this.btnPrecedent2.TabIndex = 26;
-            this.btnPrecedent2.Text = "Précédent";
-            this.btnPrecedent2.UseVisualStyleBackColor = false;
-            this.btnPrecedent2.Click += new System.EventHandler(this.btnPrecedent2_Click);
-            // 
             // txtRecompense
             // 
             this.txtRecompense.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.txtRecompense.Font = new System.Drawing.Font("Bahnschrift Light", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.txtRecompense.Location = new System.Drawing.Point(235, 282);
+            this.txtRecompense.Location = new System.Drawing.Point(45, 318);
             this.txtRecompense.Margin = new System.Windows.Forms.Padding(4);
             this.txtRecompense.Name = "txtRecompense";
-            this.txtRecompense.Size = new System.Drawing.Size(170, 27);
+            this.txtRecompense.Size = new System.Drawing.Size(230, 27);
             this.txtRecompense.TabIndex = 2;
             // 
             // lblMontant
@@ -1069,11 +1025,12 @@
             this.btnCalculRecompense.BackgroundImage = global::NouvelleInterface.Properties.Resources.btnContour3;
             this.btnCalculRecompense.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.btnCalculRecompense.FlatAppearance.BorderSize = 0;
-            this.btnCalculRecompense.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(221)))), ((int)(((byte)(221)))), ((int)(((byte)(62)))));
+            this.btnCalculRecompense.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(211)))), ((int)(((byte)(225)))), ((int)(((byte)(114)))));
+            this.btnCalculRecompense.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(211)))), ((int)(((byte)(225)))), ((int)(((byte)(114)))));
             this.btnCalculRecompense.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnCalculRecompense.Font = new System.Drawing.Font("Bahnschrift SemiBold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.btnCalculRecompense.Font = new System.Drawing.Font("Bahnschrift SemiBold", 12.5F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.btnCalculRecompense.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(124)))), ((int)(((byte)(179)))), ((int)(((byte)(63)))));
-            this.btnCalculRecompense.Location = new System.Drawing.Point(291, 116);
+            this.btnCalculRecompense.Location = new System.Drawing.Point(287, 116);
             this.btnCalculRecompense.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.btnCalculRecompense.Name = "btnCalculRecompense";
             this.btnCalculRecompense.Size = new System.Drawing.Size(108, 35);
@@ -1090,9 +1047,9 @@
             this.btnAjouterDon.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(213)))), ((int)(((byte)(147)))));
             this.btnAjouterDon.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(213)))), ((int)(((byte)(147)))));
             this.btnAjouterDon.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnAjouterDon.Font = new System.Drawing.Font("Bahnschrift", 13F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.btnAjouterDon.Font = new System.Drawing.Font("Bahnschrift SemiCondensed", 13F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.btnAjouterDon.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(154)))), ((int)(((byte)(25)))), ((int)(((byte)(34)))));
-            this.btnAjouterDon.Location = new System.Drawing.Point(291, 397);
+            this.btnAjouterDon.Location = new System.Drawing.Point(287, 397);
             this.btnAjouterDon.Margin = new System.Windows.Forms.Padding(4);
             this.btnAjouterDon.Name = "btnAjouterDon";
             this.btnAjouterDon.Size = new System.Drawing.Size(108, 35);
@@ -1168,12 +1125,12 @@
             // lblInfoPrix
             // 
             this.lblInfoPrix.AutoSize = true;
-            this.lblInfoPrix.Font = new System.Drawing.Font("Bahnschrift SemiBold", 15F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Underline))), System.Drawing.GraphicsUnit.Point);
+            this.lblInfoPrix.Font = new System.Drawing.Font("Bahnschrift SemiBold", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.lblInfoPrix.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(154)))), ((int)(((byte)(25)))), ((int)(((byte)(34)))));
             this.lblInfoPrix.Location = new System.Drawing.Point(19, 17);
             this.lblInfoPrix.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblInfoPrix.Name = "lblInfoPrix";
-            this.lblInfoPrix.Size = new System.Drawing.Size(165, 24);
+            this.lblInfoPrix.Size = new System.Drawing.Size(156, 23);
             this.lblInfoPrix.TabIndex = 7;
             this.lblInfoPrix.Text = "Informations prix";
             // 
@@ -1343,13 +1300,17 @@
             // 
             // btnAjouterPrix
             // 
-            this.btnAjouterPrix.Font = new System.Drawing.Font("Bahnschrift SemiBold", 13F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.btnAjouterPrix.Location = new System.Drawing.Point(196, 216);
+            this.btnAjouterPrix.BackgroundImage = global::NouvelleInterface.Properties.Resources.btnContours2;
+            this.btnAjouterPrix.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.btnAjouterPrix.FlatAppearance.BorderSize = 0;
+            this.btnAjouterPrix.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnAjouterPrix.Font = new System.Drawing.Font("Bahnschrift SemiCondensed", 13F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.btnAjouterPrix.Location = new System.Drawing.Point(255, 216);
             this.btnAjouterPrix.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.btnAjouterPrix.Name = "btnAjouterPrix";
-            this.btnAjouterPrix.Size = new System.Drawing.Size(232, 41);
+            this.btnAjouterPrix.Size = new System.Drawing.Size(108, 35);
             this.btnAjouterPrix.TabIndex = 15;
-            this.btnAjouterPrix.Text = "Ajouter Commandite";
+            this.btnAjouterPrix.Text = "Ajouter";
             this.btnAjouterPrix.UseVisualStyleBackColor = true;
             this.btnAjouterPrix.Click += new System.EventHandler(this.BtnAjouterPrix_Click);
             // 
@@ -1547,7 +1508,6 @@
         private Label lblPrenomDonateur;
         private Label lblInfoDon;
         private Label lblID;
-        private Button btnQuitter;
         private Button btnAffichePrix;
         private Button btnAjouterPrix;
         private Button btnAfficherComm;
@@ -1599,7 +1559,6 @@
         private RichTextBox txtBoxOutput;
         private RichTextBox txtBoxOut;
         private Panel pnlTitreDonnateur;
-        private Button btnPrecedent2;
         private Panel pnlDonnateur;
         private Label labDonnateur;
         private Panel pnlCarteCredit;
