@@ -107,11 +107,8 @@ namespace NouvelleInterface
                     mskTxtNumeroCarte.Text = string.Empty;
                     txtBoxCvc.Text = String.Empty;
                     pnlCarteCredit.Visible = false;
-                    pnlDon.Visible = false;
-                    pnlInfoDonateur.Visible = true;
+                    pnlInfoDonateur.Visible = false;
                     pnlDon.Visible = true;
-
-                    pnlCarteCredit.Visible = false;
                 }
                 else {
                     pnlInfoDonateur.Visible = true;
@@ -344,7 +341,7 @@ namespace NouvelleInterface
         {
             pnlInfoDonateur.Visible = false;
             pnlCarteCredit.Visible = true;
-            lblID.Text = "IDD: DNTR" + (dgvDonateurs.RowCount + 1) + "\n\rNom :" + txtPrenomDonateur.Text + " " + txtNomDonateur.Text;
+            lblID.Text = "IDD: DNTR" + (dgvDonateurs.RowCount + 1) + "  Nom :" + txtPrenomDonateur.Text + " " + txtNomDonateur.Text;
         }
     }
 
