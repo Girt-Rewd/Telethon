@@ -511,7 +511,7 @@ namespace NouvelleInterface
 
     private void TxtQuantitePrix_Click(object sender, EventArgs e)
     {
-        TxtNoir(lblQuatitePrix, "Quantité :");
+        TxtNoir(lblQuatitePrix, "Qté :");
     }
 
     #endregion
