@@ -344,7 +344,6 @@ namespace NouvelleInterface
         {
             pnlInfoDonateur.Visible = false;
             pnlCarteCredit.Visible = true;
-            lblID.Text = "IDD: DNTR" + (dgvDonateurs.RowCount + 1) + "  Nom :" + txtPrenomDonateur.Text + " " + txtNomDonateur.Text;
         }
     }
 
@@ -511,7 +510,7 @@ namespace NouvelleInterface
 
     private void TxtQuantitePrix_Click(object sender, EventArgs e)
     {
-        TxtNoir(lblQuatitePrix, "Quantité :");
+        TxtNoir(lblQuatitePrix, "Qté :");
     }
 
     #endregion
@@ -621,5 +620,7 @@ namespace NouvelleInterface
             saveListDon.Close();
             saveListDonateurs.Close();
         }
+
+       
     }
 }
