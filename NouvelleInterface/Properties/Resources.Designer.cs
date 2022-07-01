@@ -203,6 +203,16 @@ namespace NouvelleInterface.Properties {
         /// <summary>
         ///   Recherche une ressource localisée de type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap btnContour3 {
+            get {
+                object obj = ResourceManager.GetObject("btnContour3", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Recherche une ressource localisée de type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap btnContours2 {
             get {
                 object obj = ResourceManager.GetObject("btnContours2", resourceCulture);
