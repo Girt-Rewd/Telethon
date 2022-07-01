@@ -92,7 +92,8 @@ namespace NouvelleInterface
                 }
 
                 int indice = gestionnaireSTE.donateurs.Count + 1;
-                DialogResult confirmationAjoutDonateur = MessageBox.Show("VALIDER INFO DU DONATEUR \n\r\r" + gestionnaireSTE.donateurs.Last().ToString(), "Important", MessageBoxButtons.YesNo);
+                string idDonator = "DNTR" + indice;
+                DialogResult confirmationAjoutDonateur = MessageBox.Show("VALIDER INFO DU DONATEUR \n\r\r" + informationsDonateurToString(idDonator), "Important", MessageBoxButtons.YesNo);
                 if (confirmationAjoutDonateur == DialogResult.Yes)
                 {
                     gestionnaireSTE.AjouterDonateur(indice, txtNomDonateur.Text, txtPrenomDonateur.Text, txtCourrielDonateur.Text, mskTxtBoxTel.Text, typeCarte, mskTxtNumeroCarte.Text, numMois.Text + "-" + numAnnee.Text, txtBoxCvc.Text);
@@ -124,6 +125,20 @@ namespace NouvelleInterface
             }
         }
 
+        private string informationsDonateurToString(string idDonateur)
+        {
+            string carte = "";
+            if (this.typeCarte.Equals("V")) carte = "VISA";
+            if (this.typeCarte.Equals("M"))
+            {
+                carte = "MASTERCARD";
+            }
+            else carte = "AMEX";
+            string chaine = txtPrenomDonateur.Text + " " + txtNomDonateur.Text
+                + "\n\rIDD: " + idDonateur + "\n\rTél : " + mskTxtBoxTel.Text + "\n\rCourriel: " + txtCourrielDonateur + "\n\rCarte de crédit :" + carte + "  #" + mskTxtNumeroCarte.Text + "\n\rExp: " + numMois.Text + "-" + numAnnee.Text + "  CVC: " + txtBoxCvc.Text;
+            return chaine;
+        }
+
         /// <summary>
         /// BtnAjouterDon_Click effectue un ensemble de validation par rapport à un don avant de le transférer dans le tableau aménagé à cet effet
         /// </summary>
@@ -136,20 +151,8 @@ namespace NouvelleInterface
             string date = now.ToShortDateString();
             try
             {
-                radAmex.Checked = false;
-                radMC.Checked = false;
-                radVisa.Checked = false;
-                txtBoxCvc.Text = string.Empty;
-                txtNomDonateur.Text = string.Empty;
-                txtPrenomDonateur.Text = string.Empty;
-                txtCourrielDonateur.Text = string.Empty;
-                mskTxtBoxTel.Text = string.Empty;
-                mskTxtNumeroCarte.Text = string.Empty;
-                txtBoxCvc.Text = String.Empty;
-                pnlCarteCredit.Visible = false;
-                pnlDon.Visible = false;
-                pnlInfoDonateur.Visible = true;
-                gestionnaireSTE.AjouterDon(date, double.Parse(txtMontant.Text), gestionnaireSTE.dons.Count);
+               
+                gestionnaireSTE.AjouterDon(date, double.Parse(txtMontant.Text), gestionnaireSTE.dons.Count, gestionnaireSTE.donateurs.Last().IdDonateur);
                 if (txtMontant.Text != null)
                 {
                     Accueil parent = (Accueil)this.Owner;

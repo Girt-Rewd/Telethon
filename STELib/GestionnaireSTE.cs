@@ -85,9 +85,9 @@ namespace STELib
         /// <param name="idDonateur"></param>
         /// <param name="montantDon"></param>
         /// <param name="nbDon"></param>
-        public void AjouterDon(string date, double montantDon, int nbDon)
+        public void AjouterDon(string date, double montantDon, int nbDon, string idDonateur)
         {
-            dons.Add(new Don(date, montantDon, nbDon));
+            dons.Add(new Don(date, montantDon, nbDon, idDonateur));
             
         }
 
