@@ -341,7 +341,7 @@ namespace NouvelleInterface
         {
             pnlInfoDonateur.Visible = false;
             pnlCarteCredit.Visible = true;
-            lblID.Text = "IDD: DNTR" + (dgvDonateurs.RowCount + 1) + "\n\rNom :" + txtPrenomDonateur.Text + " " + txtNomDonateur.Text;
+            lblID.Text = "IDD: DNTR" + (dgvDonateurs.RowCount + 1) + "  Nom :" + txtPrenomDonateur.Text + " " + txtNomDonateur.Text;
         }
     }
 
