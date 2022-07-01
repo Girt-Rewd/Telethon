@@ -176,9 +176,9 @@
             this.tabDonateur.BackgroundImage = global::NouvelleInterface.Properties.Resources.Background150pp;
             this.tabDonateur.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.tabDonateur.Controls.Add(this.pnlFondListes);
+            this.tabDonateur.Controls.Add(this.pnlInfoDonateur);
             this.tabDonateur.Controls.Add(this.pnlCarteCredit);
             this.tabDonateur.Controls.Add(this.pnlDon);
-            this.tabDonateur.Controls.Add(this.pnlInfoDonateur);
             this.tabDonateur.Location = new System.Drawing.Point(4, 34);
             this.tabDonateur.Margin = new System.Windows.Forms.Padding(4);
             this.tabDonateur.Name = "tabDonateur";
@@ -820,7 +820,6 @@
             this.txtMontant.Name = "txtMontant";
             this.txtMontant.Size = new System.Drawing.Size(111, 32);
             this.txtMontant.TabIndex = 1;
-            this.txtMontant.Text = "585585";
             this.txtMontant.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             // 
             // btnValider
@@ -930,9 +929,9 @@
             this.mskTxtBoxTel.Location = new System.Drawing.Point(149, 294);
             this.mskTxtBoxTel.Mask = "\\(000\\) 000\\-0000";
             this.mskTxtBoxTel.Name = "mskTxtBoxTel";
+            this.mskTxtBoxTel.PromptChar = '.';
             this.mskTxtBoxTel.Size = new System.Drawing.Size(246, 28);
             this.mskTxtBoxTel.TabIndex = 4;
-            this.mskTxtBoxTel.Text = "5141112222";
             this.mskTxtBoxTel.Click += new System.EventHandler(this.MskTxtBoxTel_Click);
             // 
             // btnSuivant
@@ -1029,7 +1028,6 @@
             this.txtCourrielDonateur.PlaceholderText = "votrenom@domain.com";
             this.txtCourrielDonateur.Size = new System.Drawing.Size(246, 28);
             this.txtCourrielDonateur.TabIndex = 3;
-            this.txtCourrielDonateur.Text = "votrenom@domain.com";
             this.txtCourrielDonateur.Click += new System.EventHandler(this.TxtCourrielDonateur_Click);
             // 
             // lblTelephone
