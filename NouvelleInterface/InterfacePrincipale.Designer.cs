@@ -215,6 +215,7 @@
             this.btnAccueil.TabIndex = 25;
             this.btnAccueil.Text = "> Retour à l\'accueil";
             this.btnAccueil.UseVisualStyleBackColor = true;
+            this.btnAccueil.Click += new System.EventHandler(this.BtnQuitter_Click);
             // 
             // pnlTitreListes
             // 
@@ -498,9 +499,9 @@
             this.lblNomDonateur.Location = new System.Drawing.Point(42, 185);
             this.lblNomDonateur.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblNomDonateur.Name = "lblNomDonateur";
-            this.lblNomDonateur.Size = new System.Drawing.Size(62, 22);
+            this.lblNomDonateur.Size = new System.Drawing.Size(57, 22);
             this.lblNomDonateur.TabIndex = 0;
-            this.lblNomDonateur.Text = "Nom : ";
+            this.lblNomDonateur.Text = "Nom :";
             // 
             // lblCourriel
             // 
